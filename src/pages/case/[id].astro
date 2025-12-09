@@ -1,0 +1,81 @@
+---
+import { db } from '../../db'
+import { clinicalCases, type QuestionData } from '../../db/schema'
+import { eq } from 'drizzle-orm'
+import CaseStudyClient from '../../components/CaseStudyClient'
+import { fetchCaseIdsByTagSlug, fetchTagPathBySlug } from '../../db/queries'
+
+const idParam = Astro.params.id
+if (!idParam) return Astro.redirect('/404')
+
+const rows = await db.select().from(clinicalCases).where(eq(clinicalCases.id, idParam))
+const rawCase = rows[0]
+
+if (!rawCase) return Astro.redirect('/404')
+
+const qData = rawCase.questions as QuestionData
+
+const url = new URL(Astro.request.url)
+const topic = url.searchParams.get('topic')
+const sub = url.searchParams.get('sub')
+const filterSlug = sub || topic || undefined
+
+const orderedIds = await fetchCaseIdsByTagSlug(db, filterSlug)
+let prevId: string | null = null
+let nextId: string | null = null
+if (orderedIds.length) {
+  const idx = orderedIds.findIndex((x) => x === idParam)
+  if (idx !== -1) {
+    prevId = idx > 0 ? orderedIds[idx - 1] : null
+    nextId = idx < orderedIds.length - 1 ? orderedIds[idx + 1] : null
+  }
+}
+
+const breadcrumbPath = filterSlug ? await fetchTagPathBySlug(db, filterSlug) : []
+
+const publicCaseData = {
+  id: rawCase.id,
+  title: rawCase.title,
+  vignette: qData.vignette,
+  questionText: qData.question,
+  prevId,
+  nextId,
+  searchParams: url.search
+}
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>{publicCaseData.title}</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 font-sans text-gray-900">
+    <main class="max-w-3xl mx-auto p-6 py-12">
+      <a href="/" class="text-sm text-gray-500 hover:text-black mb-6 block">&larr; Voltar para Casos</a>
+      
+      <h1 class="text-3xl font-bold mb-4">{publicCaseData.title}</h1>
+      {breadcrumbPath.length > 0 && (
+        <nav class="text-sm text-gray-600 mb-6">
+          {breadcrumbPath.map((t, i) => (
+            <>
+              <a href={`/case/${idParam}?topic=${t.slug}`} class="hover:underline">
+                {t.name}
+              </a>
+              {i < breadcrumbPath.length - 1 && ' > '}
+            </>
+          ))}
+        </nav>
+      )}
+      
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8">
+        <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Contexto/Cenário:</h2>
+        <div class="text-gray-800 text-lg leading-relaxed whitespace-pre-line">
+          {publicCaseData.vignette}
+        </div>
+      </div>
+
+      <CaseStudyClient client:load data={publicCaseData} />
+    </main>
+  </body>
+</html>
