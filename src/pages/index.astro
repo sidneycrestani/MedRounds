@@ -1,10 +1,16 @@
 ---
-import { db } from '../db'
+import { getDb } from '../db' // Importe a função, não o objeto
 import { clinicalCases, tags } from '../db/schema'
 import { fetchCaseIdsByTagSlug } from '../db/queries'
 import { inArray, isNull, eq } from 'drizzle-orm'
 
-// 1. Obter parâmetro da URL
+// --- LÓGICA DE CONEXÃO SEGURA ---
+const runtime = Astro.locals.runtime as any
+// Tenta pegar do Runtime (Cloudflare) ou fallback para .env local
+const dbUrl = runtime?.env?.DATABASE_URL ?? import.meta.env.DATABASE_URL
+const db = getDb(dbUrl)
+// ---------------------------------
+
 const url = new URL(Astro.request.url)
 const activeTagSlug = url.searchParams.get('tag')
 

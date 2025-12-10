@@ -1,50 +1,70 @@
-import { useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
-import { CheckCircle2, XCircle, BookOpen } from 'lucide-react'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import { useState } from "react";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import { CheckCircle2, XCircle, BookOpen } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-const supabase = createClient(
-  import.meta.env.PUBLIC_SUPABASE_URL,
-  import.meta.env.PUBLIC_SUPABASE_ANON_KEY
-)
+// Removemos a inicialização global que causava o crash
+// const supabase = createClient(...)
 
 interface PublicCaseData {
-  id: string
-  questionText: string
-  prevId: string | null
-  nextId: string | null
-  searchParams: string
+  id: string;
+  questionText: string;
+  prevId: string | null;
+  nextId: string | null;
+  searchParams: string;
 }
 
 interface ResultData {
-  isCorrect: boolean
-  feedback: string
-  score: number
-  officialAnswer: string // Novo campo vindo da API
+  isCorrect: boolean;
+  feedback: string;
+  score: number;
+  officialAnswer: string;
 }
 
-export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
-  const [answer, setAnswer] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState<ResultData | null>(null)
+// Interface para as variáveis de ambiente necessárias
+interface EnvConfig {
+  supabaseUrl: string;
+  supabaseAnonKey: string;
+}
+
+export default function CaseStudyClient({
+  data,
+  env,
+}: {
+  data: PublicCaseData;
+  env: EnvConfig;
+}) {
+  // Inicializa o cliente UMA vez usando Lazy Initialization do useState
+  // Isso garante que ele tenha acesso às props 'env' vindas do servidor
+  const [supabase] = useState<SupabaseClient>(() =>
+    createClient(env.supabaseUrl, env.supabaseAnonKey)
+  );
+
+  const [answer, setAnswer] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<ResultData | null>(null);
 
   async function submit() {
-    if (!answer.trim()) return
-    setLoading(true)
-    setResult(null)
+    if (!answer.trim()) return;
+    setLoading(true);
+    setResult(null);
 
-    const { data: responseData, error } = await supabase.functions.invoke('check-answer', {
-      body: { caseId: data.id, userAnswer: answer },
-    })
+    // Usa a instância local 'supabase'
+    const { data: responseData, error } = await supabase.functions.invoke(
+      "check-answer",
+      {
+        body: { caseId: data.id, userAnswer: answer },
+      }
+    );
 
     if (error) {
-      console.error(error)
-      alert('Erro ao corrigir. Tente novamente.')
+      console.error(error);
+      alert("Erro ao corrigir. Tente novamente.");
     } else {
-      setResult(responseData)
+      setResult(responseData);
     }
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
@@ -67,7 +87,7 @@ export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
           placeholder="Resposta..."
-          disabled={loading || !!result} // Trava após responder para forçar revisão
+          disabled={loading || !!result}
         />
         <div className="absolute bottom-4 right-4 text-xs text-gray-400 pointer-events-none">
           {answer.length} caracteres
@@ -81,14 +101,24 @@ export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
             onClick={submit}
             disabled={loading || !answer}
           >
-            {loading ? 'Consultando IA...' : 'Enviar Resposta'}
+            {loading ? "Consultando IA..." : "Enviar Resposta"}
           </button>
           <div className="ml-auto flex items-center gap-2 text-sm">
             {data.prevId && (
-              <a href={`/case/${data.prevId}${data.searchParams}`} className="text-gray-600 hover:text-black underline">Anterior</a>
+              <a
+                href={`/case/${data.prevId}${data.searchParams}`}
+                className="text-gray-600 hover:text-black underline"
+              >
+                Anterior
+              </a>
             )}
             {data.nextId && (
-              <a href={`/case/${data.nextId}${data.searchParams}`} className="text-gray-600 hover:text-black underline">Próxima</a>
+              <a
+                href={`/case/${data.nextId}${data.searchParams}`}
+                className="text-gray-600 hover:text-black underline"
+              >
+                Próxima
+              </a>
             )}
           </div>
         </div>
@@ -98,7 +128,9 @@ export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
       {result && (
         <div className="space-y-6">
           {/* Feedback da IA */}
-          <div className={`border rounded-xl p-6 shadow-sm ${result.isCorrect ? 'bg-green-50 border-green-200' : 'bg-orange-50 border-orange-200'}`}>
+          <div
+            className={`border rounded-xl p-6 shadow-sm ${result.isCorrect ? "bg-green-50 border-green-200" : "bg-orange-50 border-orange-200"}`}
+          >
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-3">
                 {result.isCorrect ? (
@@ -107,10 +139,16 @@ export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
                   <XCircle className="w-8 h-8 text-orange-600" />
                 )}
                 <div>
-                  <h4 className={`text-lg font-bold ${result.isCorrect ? 'text-green-800' : 'text-orange-800'}`}>
-                    {result.isCorrect ? 'Conduta Adequada' : 'Pontos de Atenção'}
+                  <h4
+                    className={`text-lg font-bold ${result.isCorrect ? "text-green-800" : "text-orange-800"}`}
+                  >
+                    {result.isCorrect
+                      ? "Conduta Adequada"
+                      : "Pontos de Atenção"}
                   </h4>
-                  <span className="text-sm text-gray-500">Nota: {result.score}/100</span>
+                  <span className="text-sm text-gray-500">
+                    Nota: {result.score}/100
+                  </span>
                 </div>
               </div>
             </div>
@@ -119,17 +157,22 @@ export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
             </div>
           </div>
 
-          {/* Gabarito Oficial (Só aparece agora) */}
+          {/* Gabarito Oficial */}
           <div className="bg-gray-100 border border-gray-200 rounded-xl p-6">
             <h4 className="font-bold text-gray-700 mb-3 text-sm uppercase tracking-wide">
               Gabarito / Resposta Ideal
             </h4>
             <div className="prose prose-sm max-w-none text-gray-800 bg-white p-4 rounded border border-gray-200">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{result.officialAnswer}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {result.officialAnswer}
+              </ReactMarkdown>
             </div>
-            
-            <button 
-              onClick={() => { setResult(null); setAnswer(''); }}
+
+            <button
+              onClick={() => {
+                setResult(null);
+                setAnswer("");
+              }}
               className="mt-4 text-sm text-gray-500 hover:text-black underline"
             >
               Tentar outro caso ou refazer
@@ -138,5 +181,5 @@ export default function CaseStudyClient({ data }: { data: PublicCaseData }) {
         </div>
       )}
     </div>
-  )
+  );
 }

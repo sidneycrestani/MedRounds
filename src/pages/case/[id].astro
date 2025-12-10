@@ -1,9 +1,22 @@
 ---
-import { db } from '../../db'
+import { getDb } from '../../db' // Importe a função
 import { clinicalCases, type QuestionData } from '../../db/schema'
 import { eq } from 'drizzle-orm'
 import CaseStudyClient from '../../components/CaseStudyClient'
 import { fetchCaseIdsByTagSlug, fetchTagPathBySlug } from '../../db/queries'
+
+// --- LÓGICA DE CONEXÃO SEGURA ---
+const runtime = Astro.locals.runtime as any
+const dbUrl = runtime?.env?.DATABASE_URL ?? import.meta.env.DATABASE_URL
+const db = getDb(dbUrl)
+
+// --- LÓGICA DE PASSAGEM DE ENV PARA O CLIENTE ---
+// Precisamos passar as chaves públicas para o componente React
+const envForClient = {
+  supabaseUrl: runtime?.env?.PUBLIC_SUPABASE_URL ?? import.meta.env.PUBLIC_SUPABASE_URL,
+  supabaseAnonKey: runtime?.env?.PUBLIC_SUPABASE_ANON_KEY ?? import.meta.env.PUBLIC_SUPABASE_ANON_KEY
+}
+// ---------------------------------
 
 const idParam = Astro.params.id
 if (!idParam) return Astro.redirect('/404')
@@ -75,7 +88,7 @@ const publicCaseData = {
         </div>
       </div>
 
-      <CaseStudyClient client:load data={publicCaseData} />
+      <CaseStudyClient client:load data={publicCaseData} env={envForClient} />
     </main>
   </body>
 </html>

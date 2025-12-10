@@ -1,7 +1,23 @@
-import postgres from 'postgres'
-import { drizzle } from 'drizzle-orm/postgres-js'
+// src/db/index.ts
+import postgres from "postgres";
+import { drizzle } from "drizzle-orm/postgres-js";
+import * as schema from "./schema";
 
-const connectionString = (import.meta.env.DATABASE_URL || process.env.DATABASE_URL) as string
-if (!connectionString) throw new Error('DATABASE_URL not found')
-const client = postgres(connectionString, { max: 1, prepare: false })
-export const db = drizzle(client)
+// Cache da conexão para reutilização (Singleton)
+let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
+
+export function getDb(connectionString: string) {
+  if (_db) return _db;
+
+  if (!connectionString) {
+    throw new Error(
+      "DATABASE_URL not found. Verifique as variáveis de ambiente."
+    );
+  }
+
+  // prepare: false é obrigatório para Supabase Transaction Mode (porta 6543)
+  const client = postgres(connectionString, { prepare: false });
+
+  _db = drizzle(client, { schema });
+  return _db;
+}
