@@ -3,11 +3,12 @@ import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
 import * as schema from "./schema";
 
-// Cache da conexão para reutilização (Singleton)
-let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
+// REMOVA a variável global de cache (_db)
+// let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
 
 export function getDb(connectionString: string) {
-  if (_db) return _db;
+  // REMOVA a checagem de cache
+  // if (_db) return _db;
 
   if (!connectionString) {
     throw new Error(
@@ -15,9 +16,13 @@ export function getDb(connectionString: string) {
     );
   }
 
-  // prepare: false é obrigatório para Supabase Transaction Mode (porta 6543)
-  const client = postgres(connectionString, { prepare: false });
+  // Crie o client A CADA requisição.
+  // O Supabase Transaction Pooler (porta 6543) foi feito para lidar com isso.
+  const client = postgres(connectionString, {
+    prepare: false, // CRÍTICO: Desabilita prepared statements
+    ssl: "require", // Boa prática para garantir a conexão SSL correta
+  });
 
-  _db = drizzle(client, { schema });
-  return _db;
+  // Retorna uma nova instância do Drizzle
+  return drizzle(client, { schema });
 }
