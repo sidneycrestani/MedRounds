@@ -9,15 +9,12 @@ export function getDb(connectionString: string) {
   }
 
   const client = postgres(connectionString, {
-    // prepare: false, <--- COMENTE ou REMOVA isso na porta 5432.
-    // Na porta 5432, prepared statements funcionam e deixam a query mais rápida.
-
-    max: 1, // Limita a 1 conexão por requisição
-    idle_timeout: 0, // Fecha a conexão assim que a query termina
-    connect_timeout: 5, // Falha rápido se demorar
-
-    // Configuração de SSL permissiva para o Cloudflare aceitar o certificado do Supabase
-    ssl: { rejectUnauthorized: false },
+    prepare: false, // OBRIGATÓRIO: O erro 'PostgresJsPreparedQuery' prova que precisamos disso desligado.
+    max: 1, // Impede criar pool fantasma
+    idle_timeout: 0, // Mata a conexão assim que termina a query
+    connect_timeout: 10, // Não deixa o request pendurado se o banco demorar
+    ssl: { rejectUnauthorized: false }, // Permite conexão direta do Cloudflare pro Supabase
+    fetch_types: false, // Remove query extra de inicialização
   });
 
   return drizzle(client, { schema });
