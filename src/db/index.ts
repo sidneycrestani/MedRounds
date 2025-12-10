@@ -3,19 +3,19 @@ import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
 import * as schema from "./schema";
 
-// REMOVA a variável global de cache (_db)
-// let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
-
 export function getDb(connectionString: string) {
   if (!connectionString) {
     throw new Error("DATABASE_URL not found.");
   }
 
+  // Configuração Agressiva para Serverless
   const client = postgres(connectionString, {
-    prepare: false, // CRÍTICO: Mantém desabilitado para Transaction Mode
-    ssl: { rejectUnauthorized: false }, // AJUSTE: Evita erros de handshake SSL comuns no Edge
-    connect_timeout: 10, // AJUSTE: Fail-fast se não conectar rápido
-    idle_timeout: 0, // AJUSTE: Evita manter conexões mortas no pool do worker
+    prepare: false, // Desabilita prepared statements (CRUCIAL para pgbouncer/6543)
+    max: 1, // Apenas 1 conexão por execução do Worker
+    idle_timeout: 0, // Fecha a conexão IMEDIATAMENTE após o uso (sem esperar idle)
+    connect_timeout: 10, // Timeout curto para falhar rápido se der erro
+    ssl: "require", // Obrigatório para Supabase
+    fetch_types: false, // Desabilita cache de tipos do banco (evita queries extras na inicialização)
   });
 
   return drizzle(client, { schema });
