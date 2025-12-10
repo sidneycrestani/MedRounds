@@ -8,14 +8,16 @@ export function getDb(connectionString: string) {
     throw new Error("DATABASE_URL not found.");
   }
 
-  // Configuração Agressiva para Serverless
   const client = postgres(connectionString, {
-    prepare: false, // Desabilita prepared statements (CRUCIAL para pgbouncer/6543)
-    max: 1, // Apenas 1 conexão por execução do Worker
-    idle_timeout: 0, // Fecha a conexão IMEDIATAMENTE após o uso (sem esperar idle)
-    connect_timeout: 10, // Timeout curto para falhar rápido se der erro
-    ssl: "require", // Obrigatório para Supabase
-    fetch_types: false, // Desabilita cache de tipos do banco (evita queries extras na inicialização)
+    // prepare: false, <--- COMENTE ou REMOVA isso na porta 5432.
+    // Na porta 5432, prepared statements funcionam e deixam a query mais rápida.
+
+    max: 1, // Limita a 1 conexão por requisição
+    idle_timeout: 0, // Fecha a conexão assim que a query termina
+    connect_timeout: 5, // Falha rápido se demorar
+
+    // Configuração de SSL permissiva para o Cloudflare aceitar o certificado do Supabase
+    ssl: { rejectUnauthorized: false },
   });
 
   return drizzle(client, { schema });
