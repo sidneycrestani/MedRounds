@@ -7,22 +7,16 @@ import * as schema from "./schema";
 // let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
 
 export function getDb(connectionString: string) {
-  // REMOVA a checagem de cache
-  // if (_db) return _db;
-
   if (!connectionString) {
-    throw new Error(
-      "DATABASE_URL not found. Verifique as variáveis de ambiente."
-    );
+    throw new Error("DATABASE_URL not found.");
   }
 
-  // Crie o client A CADA requisição.
-  // O Supabase Transaction Pooler (porta 6543) foi feito para lidar com isso.
   const client = postgres(connectionString, {
-    prepare: false, // CRÍTICO: Desabilita prepared statements
-    ssl: "require", // Boa prática para garantir a conexão SSL correta
+    prepare: false, // CRÍTICO: Mantém desabilitado para Transaction Mode
+    ssl: { rejectUnauthorized: false }, // AJUSTE: Evita erros de handshake SSL comuns no Edge
+    connect_timeout: 10, // AJUSTE: Fail-fast se não conectar rápido
+    idle_timeout: 0, // AJUSTE: Evita manter conexões mortas no pool do worker
   });
 
-  // Retorna uma nova instância do Drizzle
   return drizzle(client, { schema });
 }
