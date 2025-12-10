@@ -2,3 +2,7 @@ name = "medrounds"
 pages_build_output_dir = "dist"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
+
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "19b68688072f4ab080490689a9a58d49"

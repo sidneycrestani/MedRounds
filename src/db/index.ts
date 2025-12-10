@@ -3,28 +3,24 @@ import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
 import * as schema from "./schema";
 
-// Mantemos a conexão viva fora da função (Singleton)
-// Isso evita o erro de recriar conexão a cada milissegundo
-let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
+// Define um tipo união: pode ser string (local) ou o objeto do Hyperdrive (prod)
+type ConnectionParams = string | { connectionString: string };
 
-export function getDb(connectionString: string) {
-  // Se já existe conexão ativa, reutiliza (Performance + Estabilidade)
-  if (_db) return _db;
+export function getDb(connection: ConnectionParams) {
+  // Extrai a string correta
+  const url =
+    typeof connection === "string" ? connection : connection.connectionString;
 
-  if (!connectionString) {
-    throw new Error("DATABASE_URL not found.");
+  if (!url) {
+    throw new Error("Database connection string not found.");
   }
 
-  const client = postgres(connectionString, {
-    prepare: false, // Diz ao Drizzle/Postgres para NÃO tentar preparar/cachear queries complexas
-
-    // Configurações para manter a conexão saudável no Global Scope:
-    idle_timeout: 20, // Mantém a conexão aberta por 20s (ajuda na navegação rápida)
-    max: 10, // Permite um pequeno pool se houver cliques simultâneos
+  // Configuração otimizada para Hyperdrive + Postgres.js
+  const client = postgres(url, {
+    prepare: false, // Drizzle + Hyperdrive funciona melhor sem cache de statements
+    max: 10, // O Hyperdrive aguenta conexões, então podemos relaxar o limite aqui
     connect_timeout: 10,
-    ssl: { rejectUnauthorized: false }, // Garante que o SSL não bloqueie
   });
 
-  _db = drizzle(client, { schema });
-  return _db;
+  return drizzle(client, { schema });
 }

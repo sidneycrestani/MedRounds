@@ -1,14 +1,14 @@
 ---
-import { getDb } from '../../db' // Importe a função
+import { getDb } from '../../db'
 import { clinicalCases, type QuestionData } from '../../db/schema'
 import { eq } from 'drizzle-orm'
 import CaseStudyClient from '../../components/CaseStudyClient'
 import { fetchCaseIdsByTagSlug, fetchTagPathBySlug } from '../../db/queries'
 
-// --- LÓGICA DE CONEXÃO SEGURA ---
+// --- LÓGICA DE CONEXÃO ATUALIZADA ---
 const runtime = Astro.locals.runtime as any
-const dbUrl = runtime?.env?.DATABASE_URL ?? import.meta.env.DATABASE_URL
-const db = getDb(dbUrl)
+const connection = runtime?.env?.HYPERDRIVE || import.meta.env.DATABASE_URL
+const db = getDb(connection)
 
 // --- LÓGICA DE PASSAGEM DE ENV PARA O CLIENTE ---
 // Precisamos passar as chaves públicas para o componente React
