@@ -1,23 +1,23 @@
-import { sql, isNull } from "drizzle-orm";
-import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import { tags } from "@/db/schema";
+import { isNull, sql } from "drizzle-orm";
+import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 
 type DB = PostgresJsDatabase;
 
 export async function getCaseIdsByTagSlug(
-  db: DB,
-  slug?: string,
+	db: DB,
+	slug?: string,
 ): Promise<string[]> {
-  if (!slug) {
-    const res = await db.execute(
-      sql`SELECT id FROM clinical_cases ORDER BY title ASC`,
-    );
-    type IdRow = { id: string };
-    const rows = res as unknown as IdRow[];
-    return rows.map((r) => r.id);
-  }
+	if (!slug) {
+		const res = await db.execute(
+			sql`SELECT id FROM clinical_cases ORDER BY title ASC`,
+		);
+		type IdRow = { id: string };
+		const rows = res as unknown as IdRow[];
+		return rows.map((r) => r.id);
+	}
 
-  const res = await db.execute(sql`
+	const res = await db.execute(sql`
     WITH RECURSIVE tag_tree AS (
       SELECT id, slug, name, parent_id FROM tags WHERE slug = ${slug}
       UNION ALL
@@ -33,16 +33,16 @@ export async function getCaseIdsByTagSlug(
     ORDER BY MIN(c.title) ASC
   `);
 
-  type IdRow = { id: string };
-  const rows = res as unknown as IdRow[];
-  return rows.map((r) => r.id);
+	type IdRow = { id: string };
+	const rows = res as unknown as IdRow[];
+	return rows.map((r) => r.id);
 }
 
 export async function getTagPathBySlug(
-  db: DB,
-  slug: string,
+	db: DB,
+	slug: string,
 ): Promise<{ id: string; slug: string; name: string }[]> {
-  const res = await db.execute(sql`
+	const res = await db.execute(sql`
     WITH RECURSIVE path AS (
       SELECT id, slug, name, parent_id, 0 as depth FROM tags WHERE slug = ${slug}
       UNION ALL
@@ -53,11 +53,11 @@ export async function getTagPathBySlug(
     SELECT id, slug, name, depth FROM path ORDER BY depth DESC
   `);
 
-  type PathRow = { id: string; slug: string; name: string };
-  const rows = res as unknown as PathRow[];
-  return rows.map((r) => ({ id: r.id, slug: r.slug, name: r.name }));
+	type PathRow = { id: string; slug: string; name: string };
+	const rows = res as unknown as PathRow[];
+	return rows.map((r) => ({ id: r.id, slug: r.slug, name: r.name }));
 }
 
 export async function getRootTags(db: DB) {
-  return await db.select().from(tags).where(isNull(tags.parentId));
+	return await db.select().from(tags).where(isNull(tags.parentId));
 }

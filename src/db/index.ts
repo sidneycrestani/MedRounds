@@ -1,6 +1,6 @@
+import { drizzle } from "drizzle-orm/postgres-js";
 // src/db/index.ts
 import postgres from "postgres";
-import { drizzle } from "drizzle-orm/postgres-js";
 import * as schema from "./schema";
 
 // Define um tipo união: pode ser string (local) ou o objeto do Hyperdrive (prod)
@@ -9,25 +9,25 @@ type ConnectionParams = string | { connectionString: string };
 const clientCache = new Map<string, ReturnType<typeof drizzle>>();
 
 export function getDb(connection: ConnectionParams) {
-  // Extrai a string correta
-  const url =
-    typeof connection === "string" ? connection : connection.connectionString;
+	// Extrai a string correta
+	const url =
+		typeof connection === "string" ? connection : connection.connectionString;
 
-  if (!url) {
-    throw new Error("Database connection string not found.");
-  }
+	if (!url) {
+		throw new Error("Database connection string not found.");
+	}
 
-  if (clientCache.has(url)) {
-    return clientCache.get(url)!;
-  }
+	if (clientCache.has(url)) {
+		return clientCache.get(url)!;
+	}
 
-  const client = postgres(url, {
-    prepare: false,
-    max: 10,
-    connect_timeout: 10,
-  });
+	const client = postgres(url, {
+		prepare: false,
+		max: 10,
+		connect_timeout: 10,
+	});
 
-  const db = drizzle(client, { schema });
-  clientCache.set(url, db);
-  return db;
+	const db = drizzle(client, { schema });
+	clientCache.set(url, db);
+	return db;
 }

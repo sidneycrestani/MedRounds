@@ -1,53 +1,60 @@
 ---
-import { getDb } from '@/db'
-import CaseStudyClient from '@/modules/clinical-cases/components/CaseStudyClient'
-import { getCaseById } from '@/modules/clinical-cases/cases.repository'
-import { getCaseIdsByTagSlug, getTagPathBySlug } from '@/modules/taxonomy/services'
-import { getServerEnv, getConnectionFromEnv, getPublicClientEnv } from '@/config/env'
+import {
+	getConnectionFromEnv,
+	getPublicClientEnv,
+	getServerEnv,
+} from "@/config/env";
+import { getDb } from "@/db";
+import { getCaseById } from "@/modules/clinical-cases/cases.repository";
+import CaseStudyClient from "@/modules/clinical-cases/components/CaseStudyClient";
+import {
+	getCaseIdsByTagSlug,
+	getTagPathBySlug,
+} from "@/modules/taxonomy/services";
 
 // --- LÓGICA DE CONEXÃO ATUALIZADA ---
-const runtime = Astro.locals.runtime
-const env = getServerEnv(runtime)
-const db = getDb(getConnectionFromEnv(env))
+const runtime = Astro.locals.runtime;
+const env = getServerEnv(runtime);
+const db = getDb(getConnectionFromEnv(env));
 
 // --- LÓGICA DE PASSAGEM DE ENV PARA O CLIENTE ---
 // Precisamos passar as chaves públicas para o componente React
-const envForClient = getPublicClientEnv(runtime)
+const envForClient = getPublicClientEnv(runtime);
 // ---------------------------------
 
-const idParam = Astro.params.id
-if (!idParam) return Astro.redirect('/404')
+const idParam = Astro.params.id;
+if (!idParam) return Astro.redirect("/404");
 
-const clinicalCase = await getCaseById(db, idParam)
-if (!clinicalCase) return Astro.redirect('/404')
+const clinicalCase = await getCaseById(db, idParam);
+if (!clinicalCase) return Astro.redirect("/404");
 
-const url = new URL(Astro.request.url)
-const topic = url.searchParams.get('topic')
-const sub = url.searchParams.get('sub')
-const filterSlug = sub || topic || undefined
+const url = new URL(Astro.request.url);
+const topic = url.searchParams.get("topic");
+const sub = url.searchParams.get("sub");
+const filterSlug = sub || topic || undefined;
 
-const orderedIds = await getCaseIdsByTagSlug(db, filterSlug)
-let prevId: string | null = null
-let nextId: string | null = null
+const orderedIds = await getCaseIdsByTagSlug(db, filterSlug);
+let prevId: string | null = null;
+let nextId: string | null = null;
 if (orderedIds.length) {
-  const idx = orderedIds.findIndex((x) => x === idParam)
-  if (idx !== -1) {
-    prevId = idx > 0 ? orderedIds[idx - 1] : null
-    nextId = idx < orderedIds.length - 1 ? orderedIds[idx + 1] : null
-  }
+	const idx = orderedIds.findIndex((x) => x === idParam);
+	if (idx !== -1) {
+		prevId = idx > 0 ? orderedIds[idx - 1] : null;
+		nextId = idx < orderedIds.length - 1 ? orderedIds[idx + 1] : null;
+	}
 }
 
-const breadcrumbPath = filterSlug ? await getTagPathBySlug(db, filterSlug) : []
+const breadcrumbPath = filterSlug ? await getTagPathBySlug(db, filterSlug) : [];
 
 const publicCaseData = {
-  id: clinicalCase.id,
-  title: clinicalCase.title,
-  vignette: clinicalCase.vignette,
-  questionText: clinicalCase.questionText,
-  prevId,
-  nextId,
-  searchParams: url.search
-}
+	id: clinicalCase.id,
+	title: clinicalCase.title,
+	vignette: clinicalCase.vignette,
+	questionText: clinicalCase.questionText,
+	prevId,
+	nextId,
+	searchParams: url.search,
+};
 ---
 
 <html lang="pt-br">
