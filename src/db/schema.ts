@@ -8,22 +8,22 @@ import {
 	uuid,
 } from "drizzle-orm/pg-core";
 
-// Estrutura unificada da "Questão" (Cenário + Pergunta)
-export interface QuestionData {
-	vignette: string; // O caso clínico completo
-	question: string; // A pergunta específica feita ao aluno
-}
-
 export const clinicalCases = pgTable("clinical_cases", {
 	id: uuid("id").defaultRandom().primaryKey(),
 	title: text("title").notNull(),
-	description: text("description"), // Resumo para a home page
+	description: text("description"),
+	vignette: text("vignette").notNull(),
+	mainImageUrl: text("main_image_url"),
+});
 
-	// Coluna 'questions': Contém Vignette + Pergunta
-	questions: jsonb("questions").$type<QuestionData>().notNull(),
-
-	// Coluna 'answers': O gabarito oficial (Texto puro ou Markdown)
-	answers: text("answers").notNull(),
+export const caseQuestions = pgTable("case_questions", {
+	id: uuid("id").defaultRandom().primaryKey(),
+	caseId: uuid("case_id").references(() => clinicalCases.id),
+	orderIndex: integer("order_index"),
+	questionText: text("question_text").notNull(),
+	correctAnswerText: text("correct_answer_text").notNull(),
+	mustIncludeKeywords: jsonb("must_include_keywords").$type<string[]>(),
+	contextImageUrl: text("context_image_url"),
 });
 
 export const tags = pgTable(

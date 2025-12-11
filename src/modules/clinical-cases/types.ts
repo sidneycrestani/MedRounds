@@ -1,25 +1,19 @@
 import { z } from "zod";
 
-export const QuestionDataSchema = z.object({
-	vignette: z.string(),
-	question: z.string(),
+export const PublicQuestionSchema = z.object({
+	id: z.string(),
+	text: z.string(),
+	media: z.string().url().optional(),
 });
 
-export const CaseRowSchema = z.object({
-	id: z.string().uuid(),
-	title: z.string(),
-	description: z.string().optional(),
-	questions: QuestionDataSchema,
-	answers: z.string(),
-});
-
-export const CaseDTO = z.object({
-	id: z.string().uuid(),
+export const FullCaseSchema = z.object({
+	id: z.string(),
 	title: z.string(),
 	vignette: z.string(),
-	questionText: z.string(),
+	media: z.string().url().optional(),
+	questions: z.array(PublicQuestionSchema),
 });
-export type CaseDTO = z.infer<typeof CaseDTO>;
+export type FullCaseDTO = z.infer<typeof FullCaseSchema>;
 
 export const CaseListItemDTO = z.object({
 	id: z.string().uuid(),

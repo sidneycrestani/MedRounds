@@ -1,31 +1,39 @@
-import { clinicalCases } from "@/db/schema";
+import { caseQuestions, clinicalCases } from "@/db/schema";
 import { getCaseIdsByTagSlug } from "@/modules/taxonomy/services";
-import { eq, inArray } from "drizzle-orm";
+import { asc, eq, inArray } from "drizzle-orm";
 import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import {
-	CaseDTO as CaseDTOSchema,
 	CaseListItemDTO as CaseListItemDTOSchema,
-	QuestionDataSchema,
+	FullCaseSchema,
 } from "./types";
 
 type DB = PostgresJsDatabase;
 
 export async function getCaseById(db: DB, id: string) {
-	const rows = await db
+	const caseRows = await db
 		.select()
 		.from(clinicalCases)
 		.where(eq(clinicalCases.id, id));
-	const raw = rows[0];
-	if (!raw) return null;
+	const c = caseRows[0];
+	if (!c) return null;
 
-	const q = QuestionDataSchema.parse(raw.questions);
-	const parsed = CaseDTOSchema.parse({
-		id: raw.id,
-		title: raw.title,
-		vignette: q.vignette,
-		questionText: q.question,
+	const qs = await db
+		.select()
+		.from(caseQuestions)
+		.where(eq(caseQuestions.caseId, id))
+		.orderBy(asc(caseQuestions.orderIndex));
+
+	const parsed = FullCaseSchema.parse({
+		id: c.id,
+		title: c.title,
+		vignette: c.vignette,
+		media: c.mainImageUrl ?? undefined,
+		questions: qs.map((q) => ({
+			id: q.id,
+			text: q.questionText,
+			media: q.contextImageUrl ?? undefined,
+		})),
 	});
-
 	return parsed;
 }
 
