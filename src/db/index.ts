@@ -17,8 +17,9 @@ export function getDb(connection: ConnectionParams) {
 		throw new Error("Database connection string not found.");
 	}
 
-	if (clientCache.has(url)) {
-		return clientCache.get(url)!;
+	const cached = clientCache.get(url);
+	if (cached) {
+		return cached;
 	}
 
 	const client = postgres(url, {

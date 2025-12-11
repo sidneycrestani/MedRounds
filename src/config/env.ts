@@ -1,4 +1,5 @@
 import { z } from "zod";
+type RuntimeLike = { env?: unknown };
 
 const PublicEnvSchema = z.object({
 	PUBLIC_SUPABASE_URL: z.string().min(1),
@@ -14,13 +15,13 @@ const ServerEnvSchema = z
 		message: "Missing DATABASE_URL or HYPERDRIVE.connectionString",
 	});
 
-export function getServerEnv(runtime?: any) {
-	const base = runtime?.env ?? (import.meta as any).env ?? {};
+export function getServerEnv(runtime?: RuntimeLike) {
+	const base = runtime?.env ?? import.meta.env ?? {};
 	return ServerEnvSchema.parse(base);
 }
 
-export function getPublicClientEnv(runtime?: any) {
-	const base = runtime?.env ?? (import.meta as any).env ?? {};
+export function getPublicClientEnv(runtime?: RuntimeLike) {
+	const base = runtime?.env ?? import.meta.env ?? {};
 	const parsed = PublicEnvSchema.parse(base);
 	return {
 		supabaseUrl: parsed.PUBLIC_SUPABASE_URL,

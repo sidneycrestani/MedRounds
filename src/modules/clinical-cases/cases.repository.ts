@@ -30,7 +30,7 @@ export async function getCaseById(db: DB, id: string) {
 }
 
 export async function getCasesByTag(db: DB, slug?: string) {
-	let rows: any[] = [];
+	let rows: (typeof clinicalCases.$inferSelect)[] = [];
 	if (slug) {
 		const ids = await getCaseIdsByTagSlug(db, slug);
 		if (ids.length === 0) return [];

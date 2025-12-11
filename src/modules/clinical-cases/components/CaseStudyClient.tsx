@@ -88,6 +88,7 @@ export default function CaseStudyClient({
 			{!result && (
 				<div className="flex items-center gap-4">
 					<button
+						type="button"
 						className="px-8 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 disabled:opacity-70 disabled:cursor-not-allowed transition-all shadow-md"
 						onClick={submit}
 						disabled={loading || !answer}
@@ -157,6 +158,7 @@ export default function CaseStudyClient({
 						</div>
 
 						<button
+							type="button"
 							onClick={() => {
 								setResult(null);
 								setAnswer("");
