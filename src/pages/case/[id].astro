@@ -1,39 +1,32 @@
 ---
-import { getDb } from '../../db'
-import { clinicalCases, type QuestionData } from '../../db/schema'
-import { eq } from 'drizzle-orm'
-import CaseStudyClient from '../../components/CaseStudyClient'
-import { fetchCaseIdsByTagSlug, fetchTagPathBySlug } from '../../db/queries'
+import { getDb } from '@/db'
+import CaseStudyClient from '@/modules/clinical-cases/components/CaseStudyClient'
+import { getCaseById } from '@/modules/clinical-cases/cases.repository'
+import { getCaseIdsByTagSlug, getTagPathBySlug } from '@/modules/taxonomy/services'
+import { getServerEnv, getConnectionFromEnv, getPublicClientEnv } from '@/config/env'
 
 // --- LÓGICA DE CONEXÃO ATUALIZADA ---
-const runtime = Astro.locals.runtime as any
-const connection = runtime?.env?.HYPERDRIVE || import.meta.env.DATABASE_URL
-const db = getDb(connection)
+const runtime = Astro.locals.runtime
+const env = getServerEnv(runtime)
+const db = getDb(getConnectionFromEnv(env))
 
 // --- LÓGICA DE PASSAGEM DE ENV PARA O CLIENTE ---
 // Precisamos passar as chaves públicas para o componente React
-const envForClient = {
-  supabaseUrl: runtime?.env?.PUBLIC_SUPABASE_URL ?? import.meta.env.PUBLIC_SUPABASE_URL,
-  supabaseAnonKey: runtime?.env?.PUBLIC_SUPABASE_ANON_KEY ?? import.meta.env.PUBLIC_SUPABASE_ANON_KEY
-}
+const envForClient = getPublicClientEnv(runtime)
 // ---------------------------------
 
 const idParam = Astro.params.id
 if (!idParam) return Astro.redirect('/404')
 
-const rows = await db.select().from(clinicalCases).where(eq(clinicalCases.id, idParam))
-const rawCase = rows[0]
-
-if (!rawCase) return Astro.redirect('/404')
-
-const qData = rawCase.questions as QuestionData
+const clinicalCase = await getCaseById(db, idParam)
+if (!clinicalCase) return Astro.redirect('/404')
 
 const url = new URL(Astro.request.url)
 const topic = url.searchParams.get('topic')
 const sub = url.searchParams.get('sub')
 const filterSlug = sub || topic || undefined
 
-const orderedIds = await fetchCaseIdsByTagSlug(db, filterSlug)
+const orderedIds = await getCaseIdsByTagSlug(db, filterSlug)
 let prevId: string | null = null
 let nextId: string | null = null
 if (orderedIds.length) {
@@ -44,13 +37,13 @@ if (orderedIds.length) {
   }
 }
 
-const breadcrumbPath = filterSlug ? await fetchTagPathBySlug(db, filterSlug) : []
+const breadcrumbPath = filterSlug ? await getTagPathBySlug(db, filterSlug) : []
 
 const publicCaseData = {
-  id: rawCase.id,
-  title: rawCase.title,
-  vignette: qData.vignette,
-  questionText: qData.question,
+  id: clinicalCase.id,
+  title: clinicalCase.title,
+  vignette: clinicalCase.vignette,
+  questionText: clinicalCase.questionText,
   prevId,
   nextId,
   searchParams: url.search

@@ -1,41 +1,21 @@
 ---
-import { getDb } from '../db'
-import { clinicalCases, tags } from '../db/schema'
-import { fetchCaseIdsByTagSlug } from '../db/queries'
-import { inArray, isNull } from 'drizzle-orm'
+import { getServerEnv, getConnectionFromEnv } from "@/config/env";
+import { getDb } from "@/db";
+import { getCasesByTag } from "@/modules/clinical-cases/cases.repository";
+import { getRootTags } from "@/modules/taxonomy/services";
 
 // --- LÓGICA DE CONEXÃO ATUALIZADA ---
-const runtime = Astro.locals.runtime as any
-
-// 1. Tenta pegar o HYPERDRIVE do ambiente Cloudflare
-// 2. Se não existir (rodando localmente), pega DATABASE_URL do .env
-const connection = runtime?.env?.HYPERDRIVE || import.meta.env.DATABASE_URL
-
-const db = getDb(connection)
+const runtime = Astro.locals.runtime;
+const env = getServerEnv(runtime);
+const db = getDb(getConnectionFromEnv(env));
 // ---------------------------------
 
-const url = new URL(Astro.request.url)
-const activeTagSlug = url.searchParams.get('tag')
+const url = new URL(Astro.request.url);
+const activeTagSlug = url.searchParams.get("tag");
 
-// 2. Buscar Tags "Raiz" (sem pai) para o menu lateral
-const rootTags = await db.select().from(tags).where(isNull(tags.parentId))
+const rootTags = await getRootTags(db);
 
-// 3. Lógica de filtragem dos casos
-let cases = []
-
-if (activeTagSlug) {
-  // Se tem tag, busca os IDs recursivamente e depois os casos
-  const ids = await fetchCaseIdsByTagSlug(db, activeTagSlug)
-  
-  if (ids.length > 0) {
-    cases = await db.select()
-      .from(clinicalCases)
-      .where(inArray(clinicalCases.id, ids))
-  }
-} else {
-  // Se não tem tag, busca tudo
-  cases = await db.select().from(clinicalCases)
-}
+const cases = await getCasesByTag(db, activeTagSlug || undefined);
 ---
 
 <html lang="pt-br">

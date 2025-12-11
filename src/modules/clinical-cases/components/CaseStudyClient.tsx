@@ -4,9 +4,6 @@ import { CheckCircle2, XCircle, BookOpen } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-// Removemos a inicialização global que causava o crash
-// const supabase = createClient(...)
-
 interface PublicCaseData {
   id: string;
   questionText: string;
@@ -22,7 +19,6 @@ interface ResultData {
   officialAnswer: string;
 }
 
-// Interface para as variáveis de ambiente necessárias
 interface EnvConfig {
   supabaseUrl: string;
   supabaseAnonKey: string;
@@ -35,10 +31,8 @@ export default function CaseStudyClient({
   data: PublicCaseData;
   env: EnvConfig;
 }) {
-  // Inicializa o cliente UMA vez usando Lazy Initialization do useState
-  // Isso garante que ele tenha acesso às props 'env' vindas do servidor
   const [supabase] = useState<SupabaseClient>(() =>
-    createClient(env.supabaseUrl, env.supabaseAnonKey)
+    createClient(env.supabaseUrl, env.supabaseAnonKey),
   );
 
   const [answer, setAnswer] = useState("");
@@ -50,12 +44,11 @@ export default function CaseStudyClient({
     setLoading(true);
     setResult(null);
 
-    // Usa a instância local 'supabase'
     const { data: responseData, error } = await supabase.functions.invoke(
       "check-answer",
       {
         body: { caseId: data.id, userAnswer: answer },
-      }
+      },
     );
 
     if (error) {
@@ -69,7 +62,6 @@ export default function CaseStudyClient({
 
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
-      {/* Bloco da Pergunta */}
       <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-sm">
         <h3 className="font-bold text-blue-900 mb-3 flex items-center gap-2">
           <BookOpen className="w-5 h-5" />
@@ -80,7 +72,6 @@ export default function CaseStudyClient({
         </p>
       </div>
 
-      {/* Área de Resposta */}
       <div className="relative">
         <textarea
           className="w-full min-h-[200px] border border-gray-300 rounded-xl p-5 text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none shadow-sm resize-y transition-all"
@@ -124,10 +115,8 @@ export default function CaseStudyClient({
         </div>
       )}
 
-      {/* Resultado */}
       {result && (
         <div className="space-y-6">
-          {/* Feedback da IA */}
           <div
             className={`border rounded-xl p-6 shadow-sm ${result.isCorrect ? "bg-green-50 border-green-200" : "bg-orange-50 border-orange-200"}`}
           >
@@ -157,7 +146,6 @@ export default function CaseStudyClient({
             </div>
           </div>
 
-          {/* Gabarito Oficial */}
           <div className="bg-gray-100 border border-gray-200 rounded-xl p-6">
             <h4 className="font-bold text-gray-700 mb-3 text-sm uppercase tracking-wide">
               Gabarito / Resposta Ideal

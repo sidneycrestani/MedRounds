@@ -6,6 +6,8 @@ import * as schema from "./schema";
 // Define um tipo união: pode ser string (local) ou o objeto do Hyperdrive (prod)
 type ConnectionParams = string | { connectionString: string };
 
+const clientCache = new Map<string, ReturnType<typeof drizzle>>();
+
 export function getDb(connection: ConnectionParams) {
   // Extrai a string correta
   const url =
@@ -15,12 +17,17 @@ export function getDb(connection: ConnectionParams) {
     throw new Error("Database connection string not found.");
   }
 
-  // Configuração otimizada para Hyperdrive + Postgres.js
+  if (clientCache.has(url)) {
+    return clientCache.get(url)!;
+  }
+
   const client = postgres(url, {
-    prepare: false, // Drizzle + Hyperdrive funciona melhor sem cache de statements
-    max: 10, // O Hyperdrive aguenta conexões, então podemos relaxar o limite aqui
+    prepare: false,
+    max: 10,
     connect_timeout: 10,
   });
 
-  return drizzle(client, { schema });
+  const db = drizzle(client, { schema });
+  clientCache.set(url, db);
+  return db;
 }

@@ -1,5 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "drizzle.config.ts", "supabase/functions/**"]
+  "exclude": [
+    "dist",
+    "drizzle.config.ts",
+    "supabase/functions/**",
+    "src/db/schema.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }
