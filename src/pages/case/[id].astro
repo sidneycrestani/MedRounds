@@ -24,8 +24,10 @@ const envForClient = getPublicClientEnv(runtime);
 
 const idParam = Astro.params.id;
 if (!idParam) return Astro.redirect("/404");
+const id = Number(idParam);
+if (!Number.isInteger(id)) return Astro.redirect("/404");
 
-const clinicalCase = await getCaseById(db, idParam);
+const clinicalCase = await getCaseById(db, id);
 if (!clinicalCase) return Astro.redirect("/404");
 
 const url = new URL(Astro.request.url);
@@ -34,10 +36,10 @@ const sub = url.searchParams.get("sub");
 const filterSlug = sub || topic || undefined;
 
 const orderedIds = await getCaseIdsByTagSlug(db, filterSlug);
-let prevId: string | null = null;
-let nextId: string | null = null;
+let prevId: number | null = null;
+let nextId: number | null = null;
 if (orderedIds.length) {
-	const idx = orderedIds.findIndex((x) => x === idParam);
+	const idx = orderedIds.findIndex((x) => x === id);
 	if (idx !== -1) {
 		prevId = idx > 0 ? orderedIds[idx - 1] : null;
 		nextId = idx < orderedIds.length - 1 ? orderedIds[idx + 1] : null;
@@ -73,7 +75,7 @@ const publicCaseData = {
         <nav class="text-sm text-gray-600 mb-6">
           {breadcrumbPath.map((t, i) => (
             <>
-              <a href={`/case/${idParam}?topic=${t.slug}`} class="hover:underline">
+              <a href={`/case/${id}?topic=${t.slug}`} class="hover:underline">
                 {t.name}
               </a>
               {i < breadcrumbPath.length - 1 && ' > '}

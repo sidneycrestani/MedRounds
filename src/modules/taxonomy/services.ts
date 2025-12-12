@@ -7,12 +7,12 @@ type DB = PostgresJsDatabase;
 export async function getCaseIdsByTagSlug(
 	db: DB,
 	slug?: string,
-): Promise<string[]> {
+): Promise<number[]> {
 	if (!slug) {
 		const res = await db.execute(
-			sql`SELECT id FROM clinical_cases ORDER BY title ASC`,
+			sql`SELECT id FROM clinical_cases WHERE status = 'published' ORDER BY title ASC`,
 		);
-		type IdRow = { id: string };
+		type IdRow = { id: number };
 		const rows = res as unknown as IdRow[];
 		return rows.map((r) => r.id);
 	}
@@ -29,11 +29,12 @@ export async function getCaseIdsByTagSlug(
     FROM clinical_cases c
     INNER JOIN cases_tags ct ON ct.case_id = c.id
     INNER JOIN tag_tree tt ON tt.id = ct.tag_id
+    WHERE c.status = 'published'
     GROUP BY c.id
     ORDER BY MIN(c.title) ASC
   `);
 
-	type IdRow = { id: string };
+	type IdRow = { id: number };
 	const rows = res as unknown as IdRow[];
 	return rows.map((r) => r.id);
 }
@@ -41,7 +42,7 @@ export async function getCaseIdsByTagSlug(
 export async function getTagPathBySlug(
 	db: DB,
 	slug: string,
-): Promise<{ id: string; slug: string; name: string }[]> {
+): Promise<{ id: number; slug: string; name: string }[]> {
 	const res = await db.execute(sql`
     WITH RECURSIVE path AS (
       SELECT id, slug, name, parent_id, 0 as depth FROM tags WHERE slug = ${slug}
@@ -53,7 +54,7 @@ export async function getTagPathBySlug(
     SELECT id, slug, name, depth FROM path ORDER BY depth DESC
   `);
 
-	type PathRow = { id: string; slug: string; name: string };
+	type PathRow = { id: number; slug: string; name: string };
 	const rows = res as unknown as PathRow[];
 	return rows.map((r) => ({ id: r.id, slug: r.slug, name: r.name }));
 }

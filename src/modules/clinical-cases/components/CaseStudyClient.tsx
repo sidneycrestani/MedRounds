@@ -5,19 +5,19 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 interface PublicCaseQuestion {
-	id: string;
+	id: number;
 	text: string;
 	media?: string;
 }
 
 interface PublicCaseData {
-	id: string;
+	id: number;
 	title: string;
 	vignette: string;
 	media?: string;
 	questions: PublicCaseQuestion[];
-	prevId: string | null;
-	nextId: string | null;
+	prevId: number | null;
+	nextId: number | null;
 	searchParams: string;
 }
 

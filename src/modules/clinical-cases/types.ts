@@ -1,13 +1,13 @@
 import { z } from "zod";
 
 export const PublicQuestionSchema = z.object({
-	id: z.string(),
+	id: z.number(),
 	text: z.string(),
 	media: z.string().url().optional(),
 });
 
 export const FullCaseSchema = z.object({
-	id: z.string(),
+	id: z.number(),
 	title: z.string(),
 	vignette: z.string(),
 	media: z.string().url().optional(),
@@ -16,7 +16,7 @@ export const FullCaseSchema = z.object({
 export type FullCaseDTO = z.infer<typeof FullCaseSchema>;
 
 export const CaseListItemDTO = z.object({
-	id: z.string().uuid(),
+	id: z.number(),
 	title: z.string(),
 	description: z.string().optional(),
 });

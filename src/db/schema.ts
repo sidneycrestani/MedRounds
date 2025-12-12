@@ -1,24 +1,49 @@
 import {
+	doublePrecision,
 	foreignKey,
 	integer,
 	jsonb,
+	pgEnum,
 	pgTable,
+	serial,
 	text,
+	timestamp,
 	uniqueIndex,
-	uuid,
 } from "drizzle-orm/pg-core";
 
+export const caseStatusEnum = pgEnum("case_status", [
+	"draft",
+	"review",
+	"published",
+]);
+
+export const caseDifficultyEnum = pgEnum("case_difficulty", [
+	"student",
+	"general_practitioner",
+	"specialist",
+]);
+
+export const tagCategoryEnum = pgEnum("tag_category", [
+	"specialty",
+	"system",
+	"pathology",
+	"drug",
+	"other",
+]);
+
 export const clinicalCases = pgTable("clinical_cases", {
-	id: uuid("id").defaultRandom().primaryKey(),
+	id: serial("id").primaryKey(),
 	title: text("title").notNull(),
 	description: text("description"),
 	vignette: text("vignette").notNull(),
 	mainImageUrl: text("main_image_url"),
+	status: caseStatusEnum("status").notNull().default("draft"),
+	difficulty: caseDifficultyEnum("difficulty"),
 });
 
 export const caseQuestions = pgTable("case_questions", {
-	id: uuid("id").defaultRandom().primaryKey(),
-	caseId: uuid("case_id").references(() => clinicalCases.id),
+	id: serial("id").primaryKey(),
+	caseId: integer("case_id").references(() => clinicalCases.id),
 	orderIndex: integer("order_index"),
 	questionText: text("question_text").notNull(),
 	correctAnswerText: text("correct_answer_text").notNull(),
@@ -29,10 +54,11 @@ export const caseQuestions = pgTable("case_questions", {
 export const tags = pgTable(
 	"tags",
 	{
-		id: uuid("id").defaultRandom().primaryKey(),
+		id: serial("id").primaryKey(),
 		slug: text("slug").notNull(),
 		name: text("name").notNull(),
-		parentId: uuid("parent_id"),
+		parentId: integer("parent_id"),
+		category: tagCategoryEnum("category").notNull(),
 	},
 	(table) => {
 		return {
@@ -49,10 +75,10 @@ export const tags = pgTable(
 export const casesTags = pgTable(
 	"cases_tags",
 	{
-		caseId: uuid("case_id")
+		caseId: integer("case_id")
 			.references(() => clinicalCases.id, { onDelete: "cascade" })
 			.notNull(),
-		tagId: uuid("tag_id")
+		tagId: integer("tag_id")
 			.references(() => tags.id, { onDelete: "cascade" })
 			.notNull(),
 	},
@@ -66,8 +92,33 @@ export const casesTags = pgTable(
 	},
 );
 
-export const userProgress = pgTable("user_progress", {
-	userId: text("user_id"),
-	caseId: uuid("case_id"),
+export const userCaseHistory = pgTable("user_case_history", {
+	id: serial("id").primaryKey(),
+	userId: text("user_id").notNull(),
+	caseId: integer("case_id")
+		.references(() => clinicalCases.id, { onDelete: "cascade" })
+		.notNull(),
 	score: integer("score"),
+	attemptedAt: timestamp("attempted_at", { withTimezone: true })
+		.notNull()
+		.defaultNow(),
 });
+
+export const userCaseState = pgTable(
+	"user_case_state",
+	{
+		userId: text("user_id").notNull(),
+		caseId: integer("case_id")
+			.references(() => clinicalCases.id, { onDelete: "cascade" })
+			.notNull(),
+		nextReviewAt: timestamp("next_review_at", { withTimezone: true }),
+		easeFactor: doublePrecision("ease_factor"),
+		learningStatus: text("learning_status"),
+	},
+	(table) => ({
+		uq: uniqueIndex("user_case_state_user_case_unique").on(
+			table.userId,
+			table.caseId,
+		),
+	}),
+);

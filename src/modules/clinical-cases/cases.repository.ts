@@ -1,6 +1,6 @@
 import { caseQuestions, clinicalCases } from "@/db/schema";
 import { getCaseIdsByTagSlug } from "@/modules/taxonomy/services";
-import { asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray } from "drizzle-orm";
 import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import {
 	CaseListItemDTO as CaseListItemDTOSchema,
@@ -9,11 +9,13 @@ import {
 
 type DB = PostgresJsDatabase;
 
-export async function getCaseById(db: DB, id: string) {
+export async function getCaseById(db: DB, id: number) {
 	const caseRows = await db
 		.select()
 		.from(clinicalCases)
-		.where(eq(clinicalCases.id, id));
+		.where(
+			and(eq(clinicalCases.id, id), eq(clinicalCases.status, "published")),
+		);
 	const c = caseRows[0];
 	if (!c) return null;
 
@@ -45,9 +47,17 @@ export async function getCasesByTag(db: DB, slug?: string) {
 		rows = await db
 			.select()
 			.from(clinicalCases)
-			.where(inArray(clinicalCases.id, ids));
+			.where(
+				and(
+					inArray(clinicalCases.id, ids),
+					eq(clinicalCases.status, "published"),
+				),
+			);
 	} else {
-		rows = await db.select().from(clinicalCases);
+		rows = await db
+			.select()
+			.from(clinicalCases)
+			.where(eq(clinicalCases.status, "published"));
 	}
 
 	return rows.map((r) =>
