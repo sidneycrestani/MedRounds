@@ -63,13 +63,16 @@ DROP POLICY IF EXISTS user_case_history_update ON user_case_history;
 DROP POLICY IF EXISTS user_case_history_delete ON user_case_history;
 
 CREATE POLICY user_case_history_select ON user_case_history
-  FOR SELECT USING (auth.uid() = user_id);
+  FOR SELECT USING (auth.uid()::text = user_id);
+
 CREATE POLICY user_case_history_insert ON user_case_history
-  FOR INSERT WITH CHECK (auth.uid() = user_id);
+  FOR INSERT WITH CHECK (auth.uid()::text = user_id);
+
 CREATE POLICY user_case_history_update ON user_case_history
-  FOR UPDATE USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  FOR UPDATE USING (auth.uid()::text = user_id) WITH CHECK (auth.uid()::text = user_id);
+
 CREATE POLICY user_case_history_delete ON user_case_history
-  FOR DELETE USING (auth.uid() = user_id);
+  FOR DELETE USING (auth.uid()::text = user_id);
 
 DROP POLICY IF EXISTS user_case_state_select ON user_case_state;
 DROP POLICY IF EXISTS user_case_state_insert ON user_case_state;
@@ -77,13 +80,16 @@ DROP POLICY IF EXISTS user_case_state_update ON user_case_state;
 DROP POLICY IF EXISTS user_case_state_delete ON user_case_state;
 
 CREATE POLICY user_case_state_select ON user_case_state
-  FOR SELECT USING (auth.uid() = user_id);
+  FOR SELECT USING (auth.uid()::text = user_id);
+
 CREATE POLICY user_case_state_insert ON user_case_state
-  FOR INSERT WITH CHECK (auth.uid() = user_id);
+  FOR INSERT WITH CHECK (auth.uid()::text = user_id);
+
 CREATE POLICY user_case_state_update ON user_case_state
-  FOR UPDATE USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+  FOR UPDATE USING (auth.uid()::text = user_id) WITH CHECK (auth.uid()::text = user_id);
+
 CREATE POLICY user_case_state_delete ON user_case_state
-  FOR DELETE USING (auth.uid() = user_id);
+  FOR DELETE USING (auth.uid()::text = user_id);
 
 ALTER TABLE clinical_cases ADD COLUMN IF NOT EXISTS created_by uuid;
 ALTER TABLE clinical_cases ADD COLUMN IF NOT EXISTS last_updated timestamptz NOT NULL DEFAULT now();
