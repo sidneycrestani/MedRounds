@@ -1,6 +1,7 @@
 import {
 	doublePrecision,
 	foreignKey,
+	index,
 	integer,
 	jsonb,
 	pgEnum,
@@ -9,6 +10,7 @@ import {
 	text,
 	timestamp,
 	uniqueIndex,
+	uuid,
 } from "drizzle-orm/pg-core";
 
 export const caseStatusEnum = pgEnum("case_status", [
@@ -39,6 +41,11 @@ export const clinicalCases = pgTable("clinical_cases", {
 	mainImageUrl: text("main_image_url"),
 	status: caseStatusEnum("status").notNull().default("draft"),
 	difficulty: caseDifficultyEnum("difficulty"),
+	createdBy: uuid("created_by"),
+	lastUpdated: timestamp("last_updated", { withTimezone: true })
+		.notNull()
+		.defaultNow(),
+	version: integer("version").notNull().default(1),
 });
 
 export const caseQuestions = pgTable("case_questions", {
@@ -92,17 +99,27 @@ export const casesTags = pgTable(
 	},
 );
 
-export const userCaseHistory = pgTable("user_case_history", {
-	id: serial("id").primaryKey(),
-	userId: text("user_id").notNull(),
-	caseId: integer("case_id")
-		.references(() => clinicalCases.id, { onDelete: "cascade" })
-		.notNull(),
-	score: integer("score"),
-	attemptedAt: timestamp("attempted_at", { withTimezone: true })
-		.notNull()
-		.defaultNow(),
-});
+export const userCaseHistory = pgTable(
+	"user_case_history",
+	{
+		id: serial("id").primaryKey(),
+		userId: text("user_id").notNull(),
+		caseId: integer("case_id")
+			.references(() => clinicalCases.id, { onDelete: "cascade" })
+			.notNull(),
+		score: integer("score"),
+		attemptedAt: timestamp("attempted_at", { withTimezone: true })
+			.notNull()
+			.defaultNow(),
+	},
+	(table) => ({
+		recentIdx: index("user_case_history_recent_idx").on(
+			table.userId,
+			table.caseId,
+			table.attemptedAt,
+		),
+	}),
+);
 
 export const userCaseState = pgTable(
 	"user_case_state",
@@ -119,6 +136,10 @@ export const userCaseState = pgTable(
 		uq: uniqueIndex("user_case_state_user_case_unique").on(
 			table.userId,
 			table.caseId,
+		),
+		nextReviewIdx: index("user_case_state_next_review_idx").on(
+			table.userId,
+			table.nextReviewAt,
 		),
 	}),
 );

@@ -1,6 +1,6 @@
 import { caseQuestions, clinicalCases } from "@/db/schema";
 import { getCaseIdsByTagSlug } from "@/modules/taxonomy/services";
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import {
 	CaseListItemDTO as CaseListItemDTOSchema,
@@ -67,4 +67,17 @@ export async function getCasesByTag(db: DB, slug?: string) {
 			description: r.description,
 		}),
 	);
+}
+
+export async function getNextBestCaseForUser(
+	db: DB,
+	userId: string,
+	tagSlug?: string,
+) {
+	const res = await db.execute(sql`
+        SELECT select_next_case(${userId}, ${tagSlug ?? null}) AS case_id
+    `);
+	type Row = { case_id: number | null };
+	const rows = res as unknown as Row[];
+	return rows[0]?.case_id ?? null;
 }

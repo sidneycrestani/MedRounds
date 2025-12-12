@@ -12,45 +12,45 @@ Deno.serve(async (req) => {
 		});
 	}
 
-    try {
-        const { userAnswer, questionId } = await req.json();
+	try {
+		const { userAnswer, questionId } = await req.json();
 
 		const supabaseClient = createClient(
 			Deno.env.get("SUPABASE_URL") ?? "",
 			Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 		);
 
-        // 1. Busca dados normalizados: pergunta específica + caso pai
-        const { data: questionRow, error: qErr } = await supabaseClient
-            .from("case_questions")
-            .select(
-                "id, case_id, question_text, correct_answer_text, must_include_keywords, context_image_url",
-            )
-            .eq("id", questionId)
-            .single();
+		// 1. Busca dados normalizados: pergunta específica + caso pai
+		const { data: questionRow, error: qErr } = await supabaseClient
+			.from("case_questions")
+			.select(
+				"id, case_id, question_text, correct_answer_text, must_include_keywords, context_image_url",
+			)
+			.eq("id", questionId)
+			.single();
 
-        if (qErr || !questionRow) {
-            throw new Error("Pergunta não encontrada.");
-        }
+		if (qErr || !questionRow) {
+			throw new Error("Pergunta não encontrada.");
+		}
 
-        const { data: caseRow, error: cErr } = await supabaseClient
-            .from("clinical_cases")
-            .select("id, vignette, main_image_url")
-            .eq("id", questionRow.case_id)
-            .single();
+		const { data: caseRow, error: cErr } = await supabaseClient
+			.from("clinical_cases")
+			.select("id, vignette, main_image_url")
+			.eq("id", questionRow.case_id)
+			.single();
 
-        if (cErr || !caseRow) {
-            throw new Error("Caso clínico não encontrado.");
-        }
+		if (cErr || !caseRow) {
+			throw new Error("Caso clínico não encontrado.");
+		}
 
 		const apiKey = Deno.env.get("GEMINI_API_KEY") as string;
 		const genAI = new GoogleGenerativeAI(apiKey);
 		const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-        const keywords = (questionRow.must_include_keywords ?? []) as string[];
-        const idealAnswer = questionRow.correct_answer_text as string;
+		const keywords = (questionRow.must_include_keywords ?? []) as string[];
+		const idealAnswer = questionRow.correct_answer_text as string;
 
-        const prompt = `
+		const prompt = `
       ATUE COMO: Preceptor Médico Sênior.
 
       CONTEXTO DO CASO: ${caseRow.vignette}
@@ -77,18 +77,18 @@ Deno.serve(async (req) => {
 		const aiPayload = JSON.parse(textResp);
 
 		// 2. Retorna o feedback da IA + O Gabarito Oficial para o frontend exibir
-        return new Response(
-            JSON.stringify({
-                ...aiPayload,
-                officialAnswer: idealAnswer,
-            }),
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                },
-            },
-        );
+		return new Response(
+			JSON.stringify({
+				...aiPayload,
+				officialAnswer: idealAnswer,
+			}),
+			{
+				headers: {
+					"Content-Type": "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
+			},
+		);
 	} catch (err) {
 		return new Response(JSON.stringify({ error: err.message }), {
 			status: 500,
