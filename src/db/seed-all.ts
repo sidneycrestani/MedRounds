@@ -63,7 +63,7 @@ async function main() {
 	console.log(`📂 Processando ${files.length} arquivos...`);
 
 	for (const file of files) {
-		const filePath = path.join(dataDir, file);
+		const filePath = file;
 		console.log(`\n📄 Lendo arquivo: ${file}`);
 
 		try {
