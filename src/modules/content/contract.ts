@@ -8,7 +8,8 @@ export const StrictQuestionSchema = z.object({
 	image: z.string().url().nullable().optional(),
 });
 
-const tagPattern = /^(?:[A-Za-z][A-Za-z0-9_ ]*)(?:::[A-Za-z][A-Za-z0-9_ ]*)*$/;
+const tagPattern =
+	/^(?:[A-Za-z\u00C0-\u00FF][A-Za-z0-9_ \u00C0-\u00FF]*)(?:::[A-Za-z\u00C0-\u00FF][A-Za-z0-9_ \u00C0-\u00FF]*)*$/;
 
 export const StrictCaseSchema = z.object({
 	id: z.number().int().positive(),

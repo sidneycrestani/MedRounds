@@ -1,5 +1,6 @@
 [
 	{
+		"id": 1,
 		"title": "Hemodinâmica da Regurgitação Mitral: Aguda vs. Crônica",
 		"vignette": "Análise comparativa da fisiopatologia valvar: Paciente A apresenta ruptura abrupta de cordoalha tendínea (RM Aguda), enquanto Paciente B possui prolapso valvar mitral de longa data com adaptação ventricular (RM Crônica Compensada). O foco é a diferenciação das alterações hemodinâmicas e remodelamento cardíaco.",
 		"status": "published",
@@ -35,6 +36,7 @@
 		]
 	},
 	{
+		"id": 2,
 		"title": "Transposição das Grandes Artérias (TGA) em Neonato",
 		"vignette": "Um recém-nascido é diagnosticado com D-Transposição das Grandes Artérias (TGA). O ecocardiograma mostra a aorta saindo do ventrículo direito e a artéria pulmonar do ventrículo esquerdo. O quadro é de cianose central progressiva.",
 		"status": "published",
@@ -77,6 +79,7 @@
 		]
 	},
 	{
+		"id": 3,
 		"title": "Anatomia Coronariana e Ciclo Cardíaco",
 		"vignette": "Durante um cateterismo cardíaco diagnóstico, o hemodinamicista observa que a artéria que irriga o nó atrioventricular (AV) e dá origem à artéria descendente posterior (PDA) nasce da artéria coronária direita.",
 		"status": "published",
