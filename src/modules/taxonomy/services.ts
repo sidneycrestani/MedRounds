@@ -9,7 +9,7 @@ export async function getCaseIdsByTagSlug(
 ): Promise<number[]> {
 	if (!slug) {
 		const res = await db.execute(
-			sql`SELECT id FROM clinical_cases WHERE status = 'published' ORDER BY title ASC`,
+			sql`SELECT id FROM content.clinical_cases WHERE status = 'published' ORDER BY title ASC`,
 		);
 		type IdRow = { id: number };
 		const rows = res as unknown as IdRow[];
@@ -18,13 +18,13 @@ export async function getCaseIdsByTagSlug(
 
 	const res = await db.execute(sql`
     SELECT DISTINCT c.id
-    FROM clinical_cases c
-    JOIN cases_tags ct ON ct.case_id = c.id
-    JOIN tags t ON t.id = ct.tag_id
+    FROM content.clinical_cases c
+    JOIN content.cases_tags ct ON ct.case_id = c.id
+    JOIN content.tags t ON t.id = ct.tag_id
     WHERE c.status = 'published'
       AND (
-        t.path = (SELECT path FROM tags WHERE slug = ${slug})
-        OR t.path LIKE (SELECT path FROM tags WHERE slug = ${slug}) || '.%'
+        t.path = (SELECT path FROM content.tags WHERE slug = ${slug})
+        OR t.path LIKE (SELECT path FROM content.tags WHERE slug = ${slug}) || '.%'
       )
     ORDER BY c.title ASC
   `);
@@ -40,10 +40,10 @@ export async function getTagPathBySlug(
 ): Promise<{ id: number; slug: string; name: string }[]> {
 	const res = await db.execute(sql`
     WITH root AS (
-      SELECT id, path FROM tags WHERE slug = ${slug}
+      SELECT id, path FROM content.tags WHERE slug = ${slug}
     )
     SELECT t.id, t.slug, t.name, 0 AS depth
-    FROM tags t, root r
+    FROM content.tags t, root r
     WHERE t.path = r.path OR t.path LIKE r.path || '.%'
     ORDER BY length(t.path) - length(replace(t.path, '.', '')) DESC
   `);
@@ -115,11 +115,11 @@ export async function getCaseIdsByTag(
 ): Promise<number[]> {
 	const res = await db.execute(sql`
     SELECT DISTINCT c.id
-    FROM clinical_cases c
-    JOIN cases_tags ct ON c.id = ct.case_id
-    JOIN tags t ON t.id = ct.tag_id
-    WHERE t.path = (SELECT path FROM tags WHERE slug = ${rootSlug})
-       OR t.path LIKE (SELECT path FROM tags WHERE slug = ${rootSlug}) || '.%'
+    FROM content.clinical_cases c
+    JOIN content.cases_tags ct ON c.id = ct.case_id
+    JOIN content.tags t ON t.id = ct.tag_id
+    WHERE t.path = (SELECT path FROM content.tags WHERE slug = ${rootSlug})
+       OR t.path LIKE (SELECT path FROM content.tags WHERE slug = ${rootSlug}) || '.%'
   `);
 	type Row = { id: number };
 	const rows = res as unknown as Row[];

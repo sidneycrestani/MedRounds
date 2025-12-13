@@ -4,14 +4,16 @@ import {
 	doublePrecision,
 	index,
 	integer,
-	pgTable,
+	pgSchema,
 	serial,
 	text,
 	timestamp,
 	uniqueIndex,
 } from "drizzle-orm/pg-core";
 
-export const userCaseHistory = pgTable(
+const app = pgSchema("app");
+
+export const userCaseHistory = app.table(
 	"user_case_history",
 	{
 		id: serial("id").primaryKey(),
@@ -33,7 +35,7 @@ export const userCaseHistory = pgTable(
 	}),
 );
 
-export const userCaseState = pgTable(
+export const userCaseState = app.table(
 	"user_case_state",
 	{
 		userId: text("user_id").notNull(),

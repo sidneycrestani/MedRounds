@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { FileSchema } from "@/modules/content/contract";
@@ -96,43 +97,68 @@ async function main() {
 				const existingCase = await db
 					.select()
 					.from(clinicalCases)
-					.where(eq(clinicalCases.title, caseData.title))
+					.where(eq(clinicalCases.id, caseData.id))
 					.limit(1);
 
 				let caseId: number;
 
-				if (existingCase.length > 0) {
-					console.log(`🔄 Atualizando: "${caseData.title}"`);
-					caseId = existingCase[0].id;
-
-					await db
-						.update(clinicalCases)
-						.set({
-							description: descriptionToSave,
-							vignette: caseData.vignette,
-							mainImageUrl: caseData.mainImageUrl ?? null,
-							status: caseData.status,
-							difficulty: caseData.difficulty,
-							lastUpdated: new Date(),
-						})
-						.where(eq(clinicalCases.id, caseId));
-
-					// Limpa relações antigas para recriar
-					await db
-						.delete(caseQuestions)
-						.where(eq(caseQuestions.caseId, caseId));
-					await db.delete(casesTags).where(eq(casesTags.caseId, caseId));
-				} else {
-					console.log(`✨ Criando novo: "${caseData.title}"`);
-					const inserted = await db
-						.insert(clinicalCases)
-						.values({
+				const contentHash = crypto
+					.createHash("sha1")
+					.update(
+						JSON.stringify({
+							id: caseData.id,
 							title: caseData.title,
 							description: descriptionToSave,
 							vignette: caseData.vignette,
 							mainImageUrl: caseData.mainImageUrl ?? null,
 							status: caseData.status,
 							difficulty: caseData.difficulty,
+							tags: [...(caseData.tags ?? [])].sort(),
+							questions: caseData.questions.map((q) => ({
+								text: q.text,
+								correctAnswer: q.correctAnswer,
+								order: q.order,
+								image: q.image ?? null,
+								keywords: q.keywords ?? [],
+							})),
+						}),
+					)
+					.digest("hex");
+
+				if (existingCase.length > 0) {
+					caseId = existingCase[0].id;
+					const unchanged = existingCase[0].contentHash === contentHash;
+					if (!unchanged) {
+						await db
+							.update(clinicalCases)
+							.set({
+								title: caseData.title,
+								description: descriptionToSave,
+								vignette: caseData.vignette,
+								mainImageUrl: caseData.mainImageUrl ?? null,
+								status: caseData.status,
+								difficulty: caseData.difficulty,
+								lastUpdated: new Date(),
+								contentHash,
+							})
+							.where(eq(clinicalCases.id, caseId));
+						await db
+							.delete(caseQuestions)
+							.where(eq(caseQuestions.caseId, caseId));
+						await db.delete(casesTags).where(eq(casesTags.caseId, caseId));
+					}
+				} else {
+					const inserted = await db
+						.insert(clinicalCases)
+						.values({
+							id: caseData.id,
+							title: caseData.title,
+							description: descriptionToSave,
+							vignette: caseData.vignette,
+							mainImageUrl: caseData.mainImageUrl ?? null,
+							status: caseData.status,
+							difficulty: caseData.difficulty,
+							contentHash,
 						})
 						.returning({ id: clinicalCases.id });
 					caseId = inserted[0].id;

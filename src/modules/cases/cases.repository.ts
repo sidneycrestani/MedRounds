@@ -5,7 +5,9 @@ import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import {
 	CaseListItemDTO as CaseListItemDTOSchema,
 	FullCaseSchema,
+	SearchFilterSchema,
 } from "./types";
+import type { TagNode } from "./types";
 
 export async function getCaseById(db: Database, id: number) {
 	const caseRows = await db
@@ -78,4 +80,62 @@ export async function getNextBestCaseForUser(
 	type Row = { case_id: number | null };
 	const rows = res as unknown as Row[];
 	return rows[0]?.case_id ?? null;
+}
+
+function isSlugNode(expr: TagNode): expr is { slug: string } {
+	return (expr as { slug?: string }).slug !== undefined;
+}
+
+function isOpNode(
+	expr: TagNode,
+): expr is { op: "AND" | "OR"; nodes: TagNode[] } {
+	const e = expr as { op?: "AND" | "OR"; nodes?: unknown };
+	return e.op !== undefined && Array.isArray(e.nodes);
+}
+
+function buildTagExists(expr?: TagNode): string {
+	if (!expr) return "TRUE";
+	if (isSlugNode(expr)) {
+		return `EXISTS (
+            SELECT 1 FROM content.cases_tags ct
+            JOIN content.tags t ON t.id = ct.tag_id
+            WHERE ct.case_id = c.id AND (
+              t.path = (SELECT path FROM content.tags WHERE slug = ${sql.param(expr.slug)})
+              OR t.path LIKE (SELECT path FROM content.tags WHERE slug = ${sql.param(expr.slug)}) || '.%'
+            )
+        )`;
+	}
+	if (isOpNode(expr) && expr.op === "AND") {
+		return expr.nodes.map((n: TagNode) => buildTagExists(n)).join(" AND ");
+	}
+	if (isOpNode(expr) && expr.op === "OR") {
+		return `(${expr.nodes.map((n: TagNode) => buildTagExists(n)).join(" OR ")})`;
+	}
+	return "TRUE";
+}
+
+export async function searchCases(
+	db: Database,
+	filter: unknown,
+): Promise<{ id: number; title: string; description: string | null }[]> {
+	const parsed = SearchFilterSchema.parse(filter);
+	const base = `SELECT c.id, c.title, c.description
+        FROM content.clinical_cases c
+        WHERE c.status = 'published'`;
+	const tagCond = buildTagExists(parsed.tags);
+	const parts: string[] = [base, "AND", tagCond];
+	if (parsed.exclusion_rules?.srs) {
+		const s = parsed.exclusion_rules.srs;
+		const uid = parsed.exclusion_rules.userId;
+		parts.push(
+			"AND NOT EXISTS (",
+			`SELECT 1 FROM app.user_case_history h WHERE h.case_id = c.id AND h.user_id = ${sql.param(uid)} AND h.score > ${sql.param(s.scoreThreshold)} AND h.attempted_at > now() - interval '${s.windowDays} days'`,
+			")",
+		);
+	}
+	const query = parts.join(" ");
+	const res = await db.execute(sql.raw(query));
+	type Row = { id: number; title: string; description: string | null };
+	const rows = res as unknown as Row[];
+	return rows;
 }

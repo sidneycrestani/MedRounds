@@ -2,7 +2,7 @@ import {
 	integer,
 	jsonb,
 	pgEnum,
-	pgTable,
+	pgSchema,
 	serial,
 	text,
 	timestamp,
@@ -21,7 +21,9 @@ export const caseDifficultyEnum = pgEnum("case_difficulty", [
 	"specialist",
 ]);
 
-export const clinicalCases = pgTable("clinical_cases", {
+const content = pgSchema("content");
+
+export const clinicalCases = content.table("clinical_cases", {
 	id: serial("id").primaryKey(),
 	title: text("title").notNull(),
 	description: text("description"),
@@ -34,9 +36,10 @@ export const clinicalCases = pgTable("clinical_cases", {
 		.notNull()
 		.defaultNow(),
 	version: integer("version").notNull().default(1),
+	contentHash: text("content_hash"),
 });
 
-export const caseQuestions = pgTable("case_questions", {
+export const caseQuestions = content.table("case_questions", {
 	id: serial("id").primaryKey(),
 	caseId: integer("case_id").references(() => clinicalCases.id),
 	orderIndex: integer("order_index"),

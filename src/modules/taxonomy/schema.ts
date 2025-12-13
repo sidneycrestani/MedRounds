@@ -1,9 +1,11 @@
 import { clinicalCases } from "@/modules/content/schema";
+import { sql } from "drizzle-orm";
 import {
 	foreignKey,
+	index,
 	integer,
 	pgEnum,
-	pgTable,
+	pgSchema,
 	serial,
 	text,
 	uniqueIndex,
@@ -17,7 +19,9 @@ export const tagCategoryEnum = pgEnum("tag_category", [
 	"other",
 ]);
 
-export const tags = pgTable(
+const content = pgSchema("content");
+
+export const tags = content.table(
 	"tags",
 	{
 		id: serial("id").primaryKey(),
@@ -39,10 +43,14 @@ export const tags = pgTable(
 			foreignColumns: [table.id],
 			name: "tags_parent_fk",
 		}).onDelete("set null"),
+		pathTrgmIdx: index("tags_path_trgm_idx").using(
+			"gin",
+			sql`${table.path} gin_trgm_ops`,
+		),
 	}),
 );
 
-export const casesTags = pgTable(
+export const casesTags = content.table(
 	"cases_tags",
 	{
 		caseId: integer("case_id")

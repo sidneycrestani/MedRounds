@@ -11,6 +11,7 @@ export const StrictQuestionSchema = z.object({
 const tagPattern = /^(?:[A-Za-z][A-Za-z0-9_ ]*)(?:::[A-Za-z][A-Za-z0-9_ ]*)*$/;
 
 export const StrictCaseSchema = z.object({
+	id: z.number().int().positive(),
 	title: z.string().min(1),
 	description: z.string().optional(),
 	vignette: z.string().min(1),

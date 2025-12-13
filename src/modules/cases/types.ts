@@ -30,3 +30,31 @@ export const CaseFeedbackSchema = z.object({
 	keywords: z.array(z.string()).optional(),
 });
 export type CaseFeedbackDTO = z.infer<typeof CaseFeedbackSchema>;
+
+export type TagNode = { slug: string } | { op: "AND" | "OR"; nodes: TagNode[] };
+
+export const TagNodeSchema: z.ZodType<TagNode> = z.lazy(() =>
+	z.union([
+		z.object({ slug: z.string() }),
+		z.object({
+			op: z.enum(["AND", "OR"]),
+			nodes: z.array(TagNodeSchema).min(1),
+		}),
+	]),
+);
+
+export const SearchFilterSchema = z.object({
+	tags: TagNodeSchema.optional(),
+	exclusion_rules: z
+		.object({
+			userId: z.string().min(1),
+			srs: z
+				.object({
+					scoreThreshold: z.number().int().min(0).max(100).default(80),
+					windowDays: z.number().int().positive().default(30),
+				})
+				.optional(),
+		})
+		.optional(),
+});
+export type SearchFilter = z.infer<typeof SearchFilterSchema>;
