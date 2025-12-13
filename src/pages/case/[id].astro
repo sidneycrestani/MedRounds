@@ -84,13 +84,6 @@ const publicCaseData = {
         </nav>
       )}
       
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8">
-        <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Contexto/Cenário:</h2>
-        <div class="text-gray-800 text-lg leading-relaxed whitespace-pre-line">
-          {publicCaseData.vignette}
-        </div>
-      </div>
-
       <CaseStudyClient client:load data={publicCaseData} env={envForClient} />
     </main>
   </body>
