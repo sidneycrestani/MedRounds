@@ -1,10 +1,10 @@
 ---
+import { getDb } from "@/core/db";
 import {
 	getConnectionFromEnv,
 	getPublicClientEnv,
 	getServerEnv,
-} from "@/config/env";
-import { getDb } from "@/db";
+} from "@/core/env";
 import { getCaseById } from "@/modules/cases/cases.repository";
 import CaseStudyClient from "@/modules/cases/components/CaseStudyClient";
 import {

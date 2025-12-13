@@ -1,6 +1,6 @@
 ---
-import { getConnectionFromEnv, getServerEnv } from "@/config/env";
-import { getDb } from "@/db";
+import { getDb } from "@/core/db";
+import { getConnectionFromEnv, getServerEnv } from "@/core/env";
 import { getCasesByTag } from "@/modules/cases/cases.repository";
 import { getRootTags } from "@/modules/taxonomy/services";
 

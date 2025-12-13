@@ -1,6 +1,7 @@
-import { tags } from "@/db/schema";
-import { isNull, sql } from "drizzle-orm";
+import { tags } from "@/modules/taxonomy/schema";
+import { and, eq, isNull, sql } from "drizzle-orm";
 import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
+import { ensureUniqueSlug, makeBaseSlug } from "./utils";
 
 type DB = PostgresJsDatabase;
 
@@ -61,4 +62,73 @@ export async function getTagPathBySlug(
 
 export async function getRootTags(db: DB) {
 	return await db.select().from(tags).where(isNull(tags.parentId));
+}
+
+export async function upsertTagHierarchy(
+	db: DB,
+	path: string,
+): Promise<number> {
+	const segments = path
+		.split("::")
+		.map((s) => s.trim())
+		.filter(Boolean);
+	let parentId: number | null = null;
+	let leafId: number | null = null;
+
+	for (const raw of segments) {
+		const name = raw.replace(/_/g, " ");
+		const existingRows: (typeof tags.$inferSelect)[] = await db
+			.select()
+			.from(tags)
+			.where(
+				and(
+					eq(tags.name, name),
+					parentId === null
+						? isNull(tags.parentId)
+						: eq(tags.parentId, parentId),
+				),
+			)
+			.limit(1);
+		const existing = existingRows[0];
+		if (existing) {
+			parentId = existing.id;
+			leafId = existing.id;
+			continue;
+		}
+
+		const base = makeBaseSlug(name);
+		const slug = await ensureUniqueSlug(db, base);
+
+		const inserted: { id: number }[] = await db
+			.insert(tags)
+			.values({ name, slug, parentId, category: "other" })
+			.returning({ id: tags.id });
+
+		parentId = inserted[0].id;
+		leafId = inserted[0].id;
+	}
+
+	if (leafId === null) throw new Error("Empty hierarchy path");
+	return leafId;
+}
+
+export async function getCaseIdsByTag(
+	db: DB,
+	rootSlug: string,
+): Promise<number[]> {
+	const res = await db.execute(sql`
+    WITH RECURSIVE tag_tree AS (
+      SELECT id FROM tags WHERE slug = ${rootSlug}
+      UNION ALL
+      SELECT t.id FROM tags t
+      INNER JOIN tag_tree tt ON t.parent_id = tt.id
+    )
+    SELECT DISTINCT c.id
+    FROM clinical_cases c
+    JOIN cases_tags ct ON c.id = ct.case_id
+    WHERE ct.tag_id IN (SELECT id FROM tag_tree);
+  `);
+	type Row = { id: number };
+	const rows = res as unknown as Row[];
+	return rows.map((r) => r.id);
 }

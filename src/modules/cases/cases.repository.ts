@@ -1,5 +1,5 @@
-import { caseQuestions, clinicalCases } from "@/db/schema";
-import { getCaseIdsByTagSlug } from "@/modules/taxonomy/services";
+import { caseQuestions, clinicalCases } from "@/modules/content/schema";
+import { getCaseIdsByTag } from "@/modules/taxonomy/services";
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import {
@@ -42,7 +42,7 @@ export async function getCaseById(db: DB, id: number) {
 export async function getCasesByTag(db: DB, slug?: string) {
 	let rows: (typeof clinicalCases.$inferSelect)[] = [];
 	if (slug) {
-		const ids = await getCaseIdsByTagSlug(db, slug);
+		const ids = await getCaseIdsByTag(db, slug);
 		if (ids.length === 0) return [];
 		rows = await db
 			.select()
