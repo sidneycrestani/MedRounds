@@ -93,7 +93,7 @@ export async function upsertTagHierarchy(
 
 		const base = makeBaseSlug(name);
 		const slug = await ensureUniqueSlug(db, base);
-		const nodePath = parentPath ? `${parentPath}.${slug}` : slug;
+		const nodePath: string = parentPath ? `${parentPath}.${slug}` : slug;
 
 		const inserted: { id: number }[] = await db
 			.insert(tags)

@@ -24,7 +24,7 @@ export const caseDifficultyEnum = pgEnum("case_difficulty", [
 const content = pgSchema("content");
 
 export const clinicalCases = content.table("clinical_cases", {
-	id: serial("id").primaryKey(),
+	id: integer("id").primaryKey(),
 	title: text("title").notNull(),
 	description: text("description"),
 	vignette: text("vignette").notNull(),

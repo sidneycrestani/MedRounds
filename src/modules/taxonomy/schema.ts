@@ -28,7 +28,7 @@ export const tags = content.table(
 		slug: text("slug").notNull(),
 		name: text("name").notNull(),
 		parentId: integer("parent_id"),
-		path: text("path"),
+		path: text("path").notNull(),
 		category: tagCategoryEnum("category").notNull(),
 	},
 	(table) => ({
@@ -42,7 +42,7 @@ export const tags = content.table(
 			columns: [table.parentId],
 			foreignColumns: [table.id],
 			name: "tags_parent_fk",
-		}).onDelete("set null"),
+		}).onDelete("cascade"),
 		pathTrgmIdx: index("tags_path_trgm_idx").using(
 			"gin",
 			sql`${table.path} gin_trgm_ops`,
