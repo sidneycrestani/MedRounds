@@ -34,6 +34,7 @@ CREATE TABLE "tags" (
 	"slug" text NOT NULL,
 	"name" text NOT NULL,
 	"parent_id" integer,
+	"path" text,
 	"category" "tag_category" NOT NULL
 );
 --> statement-breakpoint
@@ -65,6 +66,7 @@ ALTER TABLE "user_case_state" ADD CONSTRAINT "user_case_state_case_id_clinical_c
 CREATE UNIQUE INDEX "cases_tags_case_tag_unique" ON "cases_tags" USING btree ("case_id","tag_id");--> statement-breakpoint
 CREATE UNIQUE INDEX "tags_slug_unique" ON "tags" USING btree ("slug");--> statement-breakpoint
 CREATE UNIQUE INDEX "tags_parent_name_unique" ON "tags" USING btree ("parent_id","name");--> statement-breakpoint
+CREATE UNIQUE INDEX "tags_path_unique" ON "tags" USING btree ("path");--> statement-breakpoint
 CREATE INDEX "user_case_history_recent_idx" ON "user_case_history" USING btree ("user_id","case_id","attempted_at");--> statement-breakpoint
 CREATE UNIQUE INDEX "user_case_state_user_case_unique" ON "user_case_state" USING btree ("user_id","case_id");--> statement-breakpoint
 CREATE INDEX "user_case_state_next_review_idx" ON "user_case_state" USING btree ("user_id","next_review_at");

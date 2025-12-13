@@ -24,6 +24,7 @@ export const tags = pgTable(
 		slug: text("slug").notNull(),
 		name: text("name").notNull(),
 		parentId: integer("parent_id"),
+		path: text("path"),
 		category: tagCategoryEnum("category").notNull(),
 	},
 	(table) => ({
@@ -32,6 +33,7 @@ export const tags = pgTable(
 			table.parentId,
 			table.name,
 		),
+		pathUnique: uniqueIndex("tags_path_unique").on(table.path),
 		parentFk: foreignKey({
 			columns: [table.parentId],
 			foreignColumns: [table.id],

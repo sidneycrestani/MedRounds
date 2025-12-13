@@ -17,20 +17,16 @@ export async function getCaseIdsByTagSlug(
 	}
 
 	const res = await db.execute(sql`
-    WITH RECURSIVE tag_tree AS (
-      SELECT id, slug, name, parent_id FROM tags WHERE slug = ${slug}
-      UNION ALL
-      SELECT t.id, t.slug, t.name, t.parent_id
-      FROM tags t
-      INNER JOIN tag_tree tt ON t.parent_id = tt.id
-    )
-    SELECT c.id
+    SELECT DISTINCT c.id
     FROM clinical_cases c
-    INNER JOIN cases_tags ct ON ct.case_id = c.id
-    INNER JOIN tag_tree tt ON tt.id = ct.tag_id
+    JOIN cases_tags ct ON ct.case_id = c.id
+    JOIN tags t ON t.id = ct.tag_id
     WHERE c.status = 'published'
-    GROUP BY c.id
-    ORDER BY MIN(c.title) ASC
+      AND (
+        t.path = (SELECT path FROM tags WHERE slug = ${slug})
+        OR t.path LIKE (SELECT path FROM tags WHERE slug = ${slug}) || '.%'
+      )
+    ORDER BY c.title ASC
   `);
 
 	type IdRow = { id: number };
@@ -43,14 +39,13 @@ export async function getTagPathBySlug(
 	slug: string,
 ): Promise<{ id: number; slug: string; name: string }[]> {
 	const res = await db.execute(sql`
-    WITH RECURSIVE path AS (
-      SELECT id, slug, name, parent_id, 0 as depth FROM tags WHERE slug = ${slug}
-      UNION ALL
-      SELECT t.id, t.slug, t.name, t.parent_id, p.depth + 1
-      FROM tags t
-      INNER JOIN path p ON p.parent_id = t.id
+    WITH root AS (
+      SELECT id, path FROM tags WHERE slug = ${slug}
     )
-    SELECT id, slug, name, depth FROM path ORDER BY depth DESC
+    SELECT t.id, t.slug, t.name, 0 AS depth
+    FROM tags t, root r
+    WHERE t.path = r.path OR t.path LIKE r.path || '.%'
+    ORDER BY length(t.path) - length(replace(t.path, '.', '')) DESC
   `);
 
 	type PathRow = { id: number; slug: string; name: string };
@@ -71,6 +66,7 @@ export async function upsertTagHierarchy(
 		.map((s) => s.trim())
 		.filter(Boolean);
 	let parentId: number | null = null;
+	let parentPath: string | null = null;
 	let leafId: number | null = null;
 
 	for (const raw of segments) {
@@ -90,19 +86,22 @@ export async function upsertTagHierarchy(
 		const existing = existingRows[0];
 		if (existing) {
 			parentId = existing.id;
+			parentPath = existing.path ?? parentPath;
 			leafId = existing.id;
 			continue;
 		}
 
 		const base = makeBaseSlug(name);
 		const slug = await ensureUniqueSlug(db, base);
+		const nodePath = parentPath ? `${parentPath}.${slug}` : slug;
 
 		const inserted: { id: number }[] = await db
 			.insert(tags)
-			.values({ name, slug, parentId, category: "other" })
+			.values({ name, slug, parentId, path: nodePath, category: "other" })
 			.returning({ id: tags.id });
 
 		parentId = inserted[0].id;
+		parentPath = nodePath;
 		leafId = inserted[0].id;
 	}
 
@@ -115,16 +114,12 @@ export async function getCaseIdsByTag(
 	rootSlug: string,
 ): Promise<number[]> {
 	const res = await db.execute(sql`
-    WITH RECURSIVE tag_tree AS (
-      SELECT id FROM tags WHERE slug = ${rootSlug}
-      UNION ALL
-      SELECT t.id FROM tags t
-      INNER JOIN tag_tree tt ON t.parent_id = tt.id
-    )
     SELECT DISTINCT c.id
     FROM clinical_cases c
     JOIN cases_tags ct ON c.id = ct.case_id
-    WHERE ct.tag_id IN (SELECT id FROM tag_tree);
+    JOIN tags t ON t.id = ct.tag_id
+    WHERE t.path = (SELECT path FROM tags WHERE slug = ${rootSlug})
+       OR t.path LIKE (SELECT path FROM tags WHERE slug = ${rootSlug}) || '.%'
   `);
 	type Row = { id: number };
 	const rows = res as unknown as Row[];

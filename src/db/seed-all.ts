@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
+import { FileSchema } from "@/modules/content/contract";
 import * as dotenv from "dotenv";
 import { eq } from "drizzle-orm";
-import { z } from "zod";
 
 // Imports da Nova Arquitetura
 import { getDb } from "@/core/db";
@@ -23,43 +23,41 @@ if (!DATABASE_URL) {
 // Inicializa DB
 const db = getDb(DATABASE_URL);
 
-// --- Zod Schemas Atualizados ---
+function listJsonFilesRecursive(dir: string): string[] {
+	const entries = fs.readdirSync(dir, { withFileTypes: true });
+	const files: string[] = [];
+	for (const e of entries) {
+		const full = path.join(dir, e.name);
+		if (e.isDirectory()) files.push(...listJsonFilesRecursive(full));
+		else if (e.isFile() && e.name.endsWith(".json")) files.push(full);
+	}
+	return files.sort();
+}
 
-const QuestionSchema = z.object({
-	text: z.string(),
-	correctAnswer: z.string(),
-	keywords: z.array(z.string()),
-	order: z.number(),
-	image: z.string().nullable().optional(),
-});
-
-const CaseSchema = z.object({
-	title: z.string(),
-	description: z.string().optional(),
-	vignette: z.string(),
-	mainImageUrl: z.string().nullable().optional(),
-	// Validação frouxa para string, o DB valida o enum depois
-	status: z.enum(["draft", "review", "published"]),
-	difficulty: z.enum(["student", "general_practitioner", "specialist"]),
-	// ATENÇÃO: Agora aceita array de strings (Formato Anki: "Cardio::Anato::Vaso")
-	tags: z.array(z.string()),
-	questions: z.array(QuestionSchema),
-});
-
-const FileSchema = z.array(CaseSchema);
+function locateIssueLine(
+	raw: string,
+	issuePath: (string | number)[],
+): number | null {
+	const lines = raw.split(/\r?\n/);
+	const lastKey = issuePath.filter((p) => typeof p === "string").pop() as
+		| string
+		| undefined;
+	if (!lastKey) return null;
+	for (let i = 0; i < lines.length; i++) {
+		if (lines[i].includes(`"${lastKey}"`)) return i + 1;
+	}
+	return null;
+}
 
 async function main() {
-	const dataDir = path.join(process.cwd(), "src", "data");
+	const dataDir = path.join(process.cwd(), "src", "content", "database");
 
 	if (!fs.existsSync(dataDir)) {
 		console.error(`❌ Diretório ${dataDir} não encontrado.`);
 		process.exit(1);
 	}
 
-	const files = fs
-		.readdirSync(dataDir)
-		.filter((f) => f.endsWith(".json"))
-		.sort();
+	const files = listJsonFilesRecursive(dataDir);
 
 	console.log(`📂 Processando ${files.length} arquivos...`);
 
@@ -72,10 +70,14 @@ async function main() {
 			const json = JSON.parse(rawContent);
 
 			const validationResult = FileSchema.safeParse(json);
-
 			if (!validationResult.success) {
-				console.error(`❌ Erro de Validação (Zod) em '${file}':`);
-				console.error(JSON.stringify(validationResult.error.format(), null, 2));
+				const formatted = validationResult.error.errors.map((e) => ({
+					path: e.path.join("."),
+					message: e.message,
+					line: locateIssueLine(rawContent, e.path) ?? undefined,
+				}));
+				console.error(`❌ Erro de Validação em '${file}':`);
+				console.error(JSON.stringify(formatted, null, 2));
 				continue;
 			}
 

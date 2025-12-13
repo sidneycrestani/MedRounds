@@ -1,5 +1,5 @@
 {
-  "id": "f50ac356-2add-44d7-892c-7acdb561e6c8",
+  "id": "c0f5c5e8-c0e1-4732-80e7-4acca6c3147d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -253,6 +253,12 @@
           "primaryKey": false,
           "notNull": false
         },
+        "path": {
+          "name": "path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "category": {
           "name": "category",
           "type": "tag_category",
@@ -288,6 +294,21 @@
             },
             {
               "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "tags_path_unique": {
+          "name": "tags_path_unique",
+          "columns": [
+            {
+              "expression": "path",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
