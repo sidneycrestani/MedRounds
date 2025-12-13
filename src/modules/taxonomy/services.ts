@@ -1,12 +1,10 @@
+import type { Database } from "@/core/db";
 import { tags } from "@/modules/taxonomy/schema";
 import { and, eq, isNull, sql } from "drizzle-orm";
-import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import { ensureUniqueSlug, makeBaseSlug } from "./utils";
 
-type DB = PostgresJsDatabase<any>;
-
 export async function getCaseIdsByTagSlug(
-	db: DB,
+	db: Database,
 	slug?: string,
 ): Promise<number[]> {
 	if (!slug) {
@@ -41,7 +39,7 @@ export async function getCaseIdsByTagSlug(
 }
 
 export async function getTagPathBySlug(
-	db: DB,
+	db: Database,
 	slug: string,
 ): Promise<{ id: number; slug: string; name: string }[]> {
 	const res = await db.execute(sql`
@@ -60,12 +58,12 @@ export async function getTagPathBySlug(
 	return rows.map((r) => ({ id: r.id, slug: r.slug, name: r.name }));
 }
 
-export async function getRootTags(db: DB) {
+export async function getRootTags(db: Database) {
 	return await db.select().from(tags).where(isNull(tags.parentId));
 }
 
 export async function upsertTagHierarchy(
-	db: DB,
+	db: Database,
 	path: string,
 ): Promise<number> {
 	const segments = path
@@ -113,7 +111,7 @@ export async function upsertTagHierarchy(
 }
 
 export async function getCaseIdsByTag(
-	db: DB,
+	db: Database,
 	rootSlug: string,
 ): Promise<number[]> {
 	const res = await db.execute(sql`

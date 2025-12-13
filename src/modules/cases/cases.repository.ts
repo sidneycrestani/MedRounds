@@ -1,15 +1,13 @@
+import type { Database } from "@/core/db";
 import { caseQuestions, clinicalCases } from "@/modules/content/schema";
 import { getCaseIdsByTag } from "@/modules/taxonomy/services";
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
-import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import {
 	CaseListItemDTO as CaseListItemDTOSchema,
 	FullCaseSchema,
 } from "./types";
 
-type DB = PostgresJsDatabase;
-
-export async function getCaseById(db: DB, id: number) {
+export async function getCaseById(db: Database, id: number) {
 	const caseRows = await db
 		.select()
 		.from(clinicalCases)
@@ -39,7 +37,7 @@ export async function getCaseById(db: DB, id: number) {
 	return parsed;
 }
 
-export async function getCasesByTag(db: DB, slug?: string) {
+export async function getCasesByTag(db: Database, slug?: string) {
 	let rows: (typeof clinicalCases.$inferSelect)[] = [];
 	if (slug) {
 		const ids = await getCaseIdsByTag(db, slug);
@@ -70,7 +68,7 @@ export async function getCasesByTag(db: DB, slug?: string) {
 }
 
 export async function getNextBestCaseForUser(
-	db: DB,
+	db: Database,
 	userId: string,
 	tagSlug?: string,
 ) {

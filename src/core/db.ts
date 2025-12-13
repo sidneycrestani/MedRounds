@@ -1,6 +1,8 @@
 import schema from "@/core/schema";
-import { drizzle } from "drizzle-orm/postgres-js";
+import { type PostgresJsDatabase, drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
+
+export type Database = PostgresJsDatabase<typeof schema>;
 
 type ConnectionParams = string | { connectionString: string };
 

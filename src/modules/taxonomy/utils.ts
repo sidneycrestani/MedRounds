@@ -1,8 +1,6 @@
+import type { Database } from "@/core/db";
 import { eq } from "drizzle-orm";
-import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import { tags } from "./schema";
-
-type DB = PostgresJsDatabase;
 
 export function makeBaseSlug(name: string): string {
 	const normalized = name
@@ -20,7 +18,10 @@ export function makeBaseSlug(name: string): string {
 	return normalized;
 }
 
-export async function ensureUniqueSlug(db: DB, base: string): Promise<string> {
+export async function ensureUniqueSlug(
+	db: Database,
+	base: string,
+): Promise<string> {
 	let candidate = base;
 	let suffix = 1;
 	const existsRows = await db
