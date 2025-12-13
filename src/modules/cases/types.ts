@@ -21,3 +21,12 @@ export const CaseListItemDTO = z.object({
 	description: z.string().optional(),
 });
 export type CaseListItemDTO = z.infer<typeof CaseListItemDTO>;
+
+export const CaseFeedbackSchema = z.object({
+	isCorrect: z.boolean(),
+	feedback: z.string(),
+	score: z.number().min(0).max(100),
+	officialAnswer: z.string(),
+	keywords: z.array(z.string()).optional(),
+});
+export type CaseFeedbackDTO = z.infer<typeof CaseFeedbackSchema>;
