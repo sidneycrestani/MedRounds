@@ -1,6 +1,6 @@
 {
-  "id": "18d34a2d-4820-4c0d-b308-248437af394a",
-  "prevId": "f522cbaa-a615-4dde-b404-43c09d5dcb29",
+  "id": "f50ac356-2add-44d7-892c-7acdb561e6c8",
+  "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -64,80 +64,6 @@
             "id"
           ],
           "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
-    "public.cases_tags": {
-      "name": "cases_tags",
-      "schema": "",
-      "columns": {
-        "case_id": {
-          "name": "case_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "tag_id": {
-          "name": "tag_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true
-        }
-      },
-      "indexes": {
-        "cases_tags_case_tag_unique": {
-          "name": "cases_tags_case_tag_unique",
-          "columns": [
-            {
-              "expression": "case_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "tag_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {
-        "cases_tags_case_id_clinical_cases_id_fk": {
-          "name": "cases_tags_case_id_clinical_cases_id_fk",
-          "tableFrom": "cases_tags",
-          "tableTo": "clinical_cases",
-          "columnsFrom": [
-            "case_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        },
-        "cases_tags_tag_id_tags_id_fk": {
-          "name": "cases_tags_tag_id_tags_id_fk",
-          "tableFrom": "cases_tags",
-          "tableTo": "tags",
-          "columnsFrom": [
-            "tag_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
@@ -225,6 +151,80 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
+    "public.cases_tags": {
+      "name": "cases_tags",
+      "schema": "",
+      "columns": {
+        "case_id": {
+          "name": "case_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tag_id": {
+          "name": "tag_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "cases_tags_case_tag_unique": {
+          "name": "cases_tags_case_tag_unique",
+          "columns": [
+            {
+              "expression": "case_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "tag_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "cases_tags_case_id_clinical_cases_id_fk": {
+          "name": "cases_tags_case_id_clinical_cases_id_fk",
+          "tableFrom": "cases_tags",
+          "tableTo": "clinical_cases",
+          "columnsFrom": [
+            "case_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "cases_tags_tag_id_tags_id_fk": {
+          "name": "cases_tags_tag_id_tags_id_fk",
+          "tableFrom": "cases_tags",
+          "tableTo": "tags",
+          "columnsFrom": [
+            "tag_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.tags": {
       "name": "tags",
       "schema": "",
@@ -267,6 +267,27 @@
           "columns": [
             {
               "expression": "slug",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "tags_parent_name_unique": {
+          "name": "tags_parent_name_unique",
+          "columns": [
+            {
+              "expression": "parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "name",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -416,6 +437,25 @@
         "learning_status": {
           "name": "learning_status",
           "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_mastered": {
+          "name": "is_mastered",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "last_score": {
+          "name": "last_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "consecutive_correct": {
+          "name": "consecutive_correct",
+          "type": "integer",
           "primaryKey": false,
           "notNull": false
         }

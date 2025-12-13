@@ -2,30 +2,28 @@ import fs from "node:fs";
 import path from "node:path";
 import * as dotenv from "dotenv";
 import { eq } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/postgres-js";
-import postgres from "postgres";
 import { z } from "zod";
-import * as schema from "./schema";
 
-// 1. Carregar variáveis de ambiente
+// Imports da Nova Arquitetura
+import { getDb } from "@/core/db";
+import { caseQuestions, clinicalCases } from "@/modules/content/schema";
+import { casesTags } from "@/modules/taxonomy/schema";
+import { upsertTagHierarchy } from "@/modules/taxonomy/services";
+
+// 1. Carregar variáveis
 dotenv.config();
 
-if (!process.env.DATABASE_URL) {
+// Fallback manual para o script de seed caso o helper de env não esteja acessível via tsx
+const DATABASE_URL = process.env.DATABASE_URL;
+if (!DATABASE_URL) {
 	console.error("❌ ERRO CRÍTICO: DATABASE_URL não encontrada no .env");
 	process.exit(1);
 }
 
-// Configura conexão
-const client = postgres(process.env.DATABASE_URL, { max: 1 });
-const db = drizzle(client, { schema });
+// Inicializa DB
+const db = getDb(DATABASE_URL);
 
-// --- Schemas ---
-const TagSchema = z.object({
-	name: z.string(),
-	slug: z.string(),
-	category: z.enum(["specialty", "system", "pathology", "drug", "other"]),
-	parentSlug: z.string().optional(),
-});
+// --- Zod Schemas Atualizados ---
 
 const QuestionSchema = z.object({
 	text: z.string(),
@@ -37,56 +35,18 @@ const QuestionSchema = z.object({
 
 const CaseSchema = z.object({
 	title: z.string(),
-	// Adicionado description como opcional no JSON
 	description: z.string().optional(),
 	vignette: z.string(),
 	mainImageUrl: z.string().nullable().optional(),
+	// Validação frouxa para string, o DB valida o enum depois
 	status: z.enum(["draft", "review", "published"]),
 	difficulty: z.enum(["student", "general_practitioner", "specialist"]),
-	tags: z.array(TagSchema),
+	// ATENÇÃO: Agora aceita array de strings (Formato Anki: "Cardio::Anato::Vaso")
+	tags: z.array(z.string()),
 	questions: z.array(QuestionSchema),
 });
 
 const FileSchema = z.array(CaseSchema);
-
-// Cache
-const tagCache = new Map<string, number>();
-
-async function upsertTag(tagData: z.infer<typeof TagSchema>) {
-	const cached = tagCache.get(tagData.slug);
-	if (cached !== undefined) return cached;
-
-	const existing = await db.query.tags.findFirst({
-		where: eq(schema.tags.slug, tagData.slug),
-	});
-
-	if (existing) {
-		tagCache.set(existing.slug, existing.id);
-		return existing.id;
-	}
-
-	let parentId: number | null = null;
-	if (tagData.parentSlug) {
-		const parent = await db.query.tags.findFirst({
-			where: eq(schema.tags.slug, tagData.parentSlug),
-		});
-		if (parent) parentId = parent.id;
-	}
-
-	const inserted = await db
-		.insert(schema.tags)
-		.values({
-			name: tagData.name,
-			slug: tagData.slug,
-			category: tagData.category,
-			parentId: parentId,
-		})
-		.returning({ id: schema.tags.id });
-
-	console.log(`🏷️  Tag criada: ${tagData.name}`);
-	tagCache.set(tagData.slug, inserted[0].id);
-	return inserted[0].id;
-}
 
 async function main() {
 	const dataDir = path.join(process.cwd(), "src", "data");
@@ -105,6 +65,7 @@ async function main() {
 
 	for (const file of files) {
 		const filePath = path.join(dataDir, file);
+		console.log(`\n📄 Lendo arquivo: ${file}`);
 
 		try {
 			const rawContent = fs.readFileSync(filePath, "utf-8");
@@ -121,70 +82,83 @@ async function main() {
 			const cases = validationResult.data;
 
 			for (const caseData of cases) {
-				// LÓGICA DE DESCRIÇÃO AUTOMÁTICA
-				// Se não houver descrição no JSON, cria uma a partir do Vignette
-				// Isso garante que nunca será NULL no banco
+				// --- 1. Upsert do Caso Clínico ---
+
+				// Garante que description não seja null
 				const descriptionToSave =
 					caseData.description ??
 					(caseData.vignette.length > 150
 						? `${caseData.vignette.substring(0, 150)}...`
 						: caseData.vignette);
 
-				const existingCase = await db.query.clinicalCases.findFirst({
-					where: eq(schema.clinicalCases.title, caseData.title),
-				});
+				const existingCase = await db
+					.select()
+					.from(clinicalCases)
+					.where(eq(clinicalCases.title, caseData.title))
+					.limit(1);
 
 				let caseId: number;
 
-				if (existingCase) {
-					console.log(
-						`🔄 Atualizando caso: "${caseData.title}" (ID: ${existingCase.id})`,
-					);
-					caseId = existingCase.id;
+				if (existingCase.length > 0) {
+					console.log(`🔄 Atualizando: "${caseData.title}"`);
+					caseId = existingCase[0].id;
 
 					await db
-						.update(schema.clinicalCases)
+						.update(clinicalCases)
 						.set({
-							description: descriptionToSave, // Agora sempre tem valor
+							description: descriptionToSave,
 							vignette: caseData.vignette,
 							mainImageUrl: caseData.mainImageUrl ?? null,
 							status: caseData.status,
 							difficulty: caseData.difficulty,
+							lastUpdated: new Date(),
 						})
-						.where(eq(schema.clinicalCases.id, caseId));
+						.where(eq(clinicalCases.id, caseId));
 
+					// Limpa relações antigas para recriar
 					await db
-						.delete(schema.caseQuestions)
-						.where(eq(schema.caseQuestions.caseId, caseId));
-					await db
-						.delete(schema.casesTags)
-						.where(eq(schema.casesTags.caseId, caseId));
+						.delete(caseQuestions)
+						.where(eq(caseQuestions.caseId, caseId));
+					await db.delete(casesTags).where(eq(casesTags.caseId, caseId));
 				} else {
-					console.log(`✨ Criando novo caso: "${caseData.title}"`);
+					console.log(`✨ Criando novo: "${caseData.title}"`);
 					const inserted = await db
-						.insert(schema.clinicalCases)
+						.insert(clinicalCases)
 						.values({
 							title: caseData.title,
-							description: descriptionToSave, // Agora sempre tem valor
+							description: descriptionToSave,
 							vignette: caseData.vignette,
 							mainImageUrl: caseData.mainImageUrl ?? null,
 							status: caseData.status,
 							difficulty: caseData.difficulty,
 						})
-						.returning({ id: schema.clinicalCases.id });
+						.returning({ id: clinicalCases.id });
 					caseId = inserted[0].id;
 				}
 
-				for (const t of caseData.tags) {
-					const tagId = await upsertTag(t);
-					await db
-						.insert(schema.casesTags)
-						.values({ caseId, tagId })
-						.onConflictDoNothing();
+				// --- 2. Processamento de Tags (Hierarquia Anki) ---
+				if (caseData.tags && caseData.tags.length > 0) {
+					for (const tagPath of caseData.tags) {
+						try {
+							// Chama o serviço que faz o split "A::B::C" e upsert recursivo
+							const leafTagId = await upsertTagHierarchy(db, tagPath);
+
+							// Vincula o caso à tag folha
+							await db
+								.insert(casesTags)
+								.values({ caseId, tagId: leafTagId })
+								.onConflictDoNothing();
+
+							// console.log(`   🏷️  Tag vinculada: ${tagPath} -> ID ${leafTagId}`);
+						} catch (err) {
+							console.error(`   ⚠️  Erro ao processar tag "${tagPath}":`, err);
+						}
+					}
 				}
 
+				// --- 3. Inserção de Perguntas ---
 				if (caseData.questions.length > 0) {
-					await db.insert(schema.caseQuestions).values(
+					await db.insert(caseQuestions).values(
 						caseData.questions.map((q) => ({
 							caseId,
 							questionText: q.text,
@@ -198,15 +172,11 @@ async function main() {
 			}
 		} catch (error) {
 			console.error(`❌ ERRO FATAL ao processar '${file}':`);
-			if (error instanceof Error) {
-				console.error(`Mensagem: ${error.message}`);
-			} else {
-				console.error(String(error));
-			}
+			console.error(error);
 		}
 	}
 
-	console.log("\n✅ Processo finalizado.");
+	console.log("\n✅ Seed finalizado com sucesso.");
 	process.exit(0);
 }
 

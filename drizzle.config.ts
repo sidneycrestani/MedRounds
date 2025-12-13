@@ -1,5 +1,5 @@
-import { defineConfig } from "drizzle-kit";
 import * as dotenv from "dotenv";
+import { defineConfig } from "drizzle-kit";
 
 // 1. Load the environment variables
 dotenv.config();
@@ -9,7 +9,11 @@ if (!process.env.DATABASE_URL) {
 }
 
 export default defineConfig({
-	schema: "./src/db/schema.ts",
+	schema: [
+		"./src/modules/content/schema.ts",
+		"./src/modules/taxonomy/schema.ts",
+		"./src/modules/srs/schema.ts",
+	],
 	out: "./drizzle",
 	// 2. Use 'postgresql' dialect
 	dialect: "postgresql",

@@ -3,7 +3,7 @@ import { and, eq, isNull, sql } from "drizzle-orm";
 import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import { ensureUniqueSlug, makeBaseSlug } from "./utils";
 
-type DB = PostgresJsDatabase;
+type DB = PostgresJsDatabase<any>;
 
 export async function getCaseIdsByTagSlug(
 	db: DB,

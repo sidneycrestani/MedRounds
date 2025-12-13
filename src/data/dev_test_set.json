@@ -6,18 +6,8 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			{ "name": "Cardiologia", "slug": "cardiologia", "category": "specialty" },
-			{
-				"name": "Insuficiência Mitral",
-				"slug": "insuficiencia-mitral",
-				"category": "pathology",
-				"parentSlug": "cardiologia"
-			},
-			{
-				"name": "Fisiologia Cardiovascular",
-				"slug": "fisiologia-cardio",
-				"category": "other"
-			}
+			"Cardiologia::Valvulopatias::Insuficiência Mitral::Fisiopatologia",
+			"Ciclo Básico::Fisiologia::Hemodinâmica::Ciclo Cardíaco"
 		],
 		"questions": [
 			{
@@ -51,15 +41,9 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			{ "name": "Pediatria", "slug": "pediatria", "category": "specialty" },
-			{
-				"name": "Cardiopatia Congênita",
-				"slug": "cardiopatia-congenita",
-				"category": "pathology",
-				"parentSlug": "pediatria"
-			},
-			{ "name": "Embriologia", "slug": "embriologia", "category": "other" },
-			{ "name": "Alprostadil", "slug": "prostaglandina-e1", "category": "drug" }
+			"Pediatria::Cardiologia Pediátrica::Cardiopatias Congênitas::Cianóticas::Transposição das Grandes Artérias",
+			"Ciclo Básico::Embriologia::Sistema Cardiovascular::Septação::Tronco Arterioso",
+			"Farmacologia::Cardiovascular::Vasodilatadores::Prostaglandinas"
 		],
 		"questions": [
 			{
@@ -99,13 +83,8 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			{ "name": "Cardiologia", "slug": "cardiologia", "category": "specialty" },
-			{ "name": "Anatomia", "slug": "anatomia", "category": "other" },
-			{
-				"name": "Sistema Cardiovascular",
-				"slug": "cardiovascular",
-				"category": "system"
-			}
+			"Cardiologia::Anatomia::Circulação Coronariana",
+			"Ciclo Básico::Anatomia::Tórax::Coração::Irrigação"
 		],
 		"questions": [
 			{
