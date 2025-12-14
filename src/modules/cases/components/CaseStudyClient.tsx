@@ -50,7 +50,7 @@ export default function CaseStudyClient({
 	activeQuestionIndices: number[];
 	userProgress: Record<
 		number,
-		{ isDue: boolean; nextReview: string | null; isMastered: boolean }
+		{ isDue: boolean; nextReview: Date | null; isMastered: boolean }
 	> | null;
 }) {
 	const [supabase] = useState<SupabaseClient>(() =>
