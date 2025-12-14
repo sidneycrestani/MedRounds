@@ -62,13 +62,17 @@ export async function upsertTagHierarchy(
 		.split("::")
 		.map((s) => s.trim())
 		.filter(Boolean);
+
 	let parentId: number | null = null;
 	let parentPath: string | null = null;
+	let parentSlug: string | null = null;
 	let leafId: number | null = null;
 
 	for (const raw of segments) {
-		const name = raw.replace(/_/g, " ");
-		const existingRows: (typeof tags.$inferSelect)[] = await db
+		const name = raw.replace(/_/g, " "); // Normaliza Display Name
+
+		// 1. Verifica se este segmento já existe como filho do pai atual
+		const existingRows = await db
 			.select()
 			.from(tags)
 			.where(
@@ -80,29 +84,55 @@ export async function upsertTagHierarchy(
 				),
 			)
 			.limit(1);
-		const existing = existingRows[0];
-		if (existing) {
-			parentId = existing.id;
-			parentPath = existing.path ?? parentPath;
-			leafId = existing.id;
+
+		if (existingRows[0]) {
+			// Já existe, apenas avança o ponteiro
+			parentId = existingRows[0].id;
+			parentPath = existingRows[0].path;
+			parentSlug = existingRows[0].slug;
+			leafId = existingRows[0].id;
 			continue;
 		}
 
-		const base = makeBaseSlug(name);
-		const slug = await ensureUniqueSlug(db, base);
+		// 2. Não existe: Criação com Slug Inteligente
+		const baseName = makeBaseSlug(name);
+		let candidate = baseName;
+
+		// Verifica se o slug "simples" já está ocupado globalmente
+		const globalExists = await db
+			.select({ id: tags.id })
+			.from(tags)
+			.where(eq(tags.slug, candidate))
+			.limit(1);
+
+		// Se já existe e temos um pai, prefixamos: 'pai_filho'
+		if (globalExists.length > 0 && parentSlug) {
+			candidate = `${parentSlug}_${baseName}`;
+		}
+
+		// Garante unicidade final (caso 'pai_filho' tbm exista, vira 'pai_filho_1')
+		const slug = await ensureUniqueSlug(db, candidate);
+
 		const nodePath: string = parentPath ? `${parentPath}.${slug}` : slug;
 
-		const inserted: { id: number }[] = await db
+		const inserted: { id: number; slug: string }[] = await db
 			.insert(tags)
-			.values({ name, slug, parentId, path: nodePath, category: "other" })
-			.returning({ id: tags.id });
+			.values({
+				name,
+				slug,
+				parentId,
+				path: nodePath,
+				category: "other",
+			})
+			.returning({ id: tags.id, slug: tags.slug });
 
 		parentId = inserted[0].id;
 		parentPath = nodePath;
+		parentSlug = inserted[0].slug;
 		leafId = inserted[0].id;
 	}
 
-	if (leafId === null) throw new Error("Empty hierarchy path");
+	if (leafId === null) throw new Error(`Invalid tag path: ${path}`);
 	return leafId;
 }
 

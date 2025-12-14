@@ -70,6 +70,11 @@ function locateIssueLine(
 	return null;
 }
 
+function readJsonFileSimple(filePath: string) {
+	if (!fs.existsSync(filePath)) return null;
+	return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
+
 async function main() {
 	const dataDir = path.join(process.cwd(), "src", "content", "database");
 
@@ -79,6 +84,52 @@ async function main() {
 	}
 
 	const files = listJsonFilesRecursive(dataDir);
+
+	console.log("🛡️  Validando Taxonomia (Allowlist)...");
+	const masterPath = path.join(
+		process.cwd(),
+		"src",
+		"modules",
+		"taxonomy",
+		"master.json",
+	);
+	const masterList = readJsonFileSimple(masterPath);
+	if (!Array.isArray(masterList)) {
+		console.error("❌ master.json inválido ou não encontrado.");
+		process.exit(1);
+	}
+	const allowedTags = new Set(masterList);
+	let taxonomyError = false;
+
+	for (const file of files) {
+		const rawContent = fs.readFileSync(file, "utf-8");
+		const json = JSON.parse(rawContent);
+		// Parse seguro apenas para pegar as tags, ignorando erros de schema por enquanto (serão pegos na Fase 1)
+		const parsed = FileSchema.safeParse(json);
+
+		if (parsed.success) {
+			for (const kase of parsed.data) {
+				if (kase.tags) {
+					for (const t of kase.tags) {
+						if (!allowedTags.has(t)) {
+							console.error(`⛔ TAG PROIBIDA: "${t}"`);
+							console.error(`   Arquivo: ${path.basename(file)}`);
+							console.error(
+								"   Solução: Adicione ao master.json ou corrija o caso.",
+							);
+							taxonomyError = true;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if (taxonomyError) {
+		console.error("\n🚫 Abortando seed por violação de taxonomia.");
+		process.exit(1);
+	}
+	console.log("✅ Taxonomia validada.");
 
 	console.log(`📂 Processando ${files.length} arquivos...`);
 
@@ -209,8 +260,6 @@ async function main() {
 								.insert(casesTags)
 								.values({ caseId, tagId: leafTagId })
 								.onConflictDoNothing();
-
-							// console.log(`   🏷️  Tag vinculada: ${tagPath} -> ID ${leafTagId}`);
 						} catch (err) {
 							console.error(`   ⚠️  Erro ao processar tag "${tagPath}":`, err);
 						}
@@ -218,7 +267,11 @@ async function main() {
 				}
 
 				// --- 3. Inserção de Perguntas ---
-				if (caseData.questions.length > 0) {
+				const needsInsertions =
+					existingCase.length === 0 ||
+					existingCase[0].contentHash !== contentHash;
+
+				if (needsInsertions && caseData.questions.length > 0) {
 					await db.insert(caseQuestions).values(
 						caseData.questions.map((q) => ({
 							caseId,
