@@ -7,7 +7,7 @@ import {
 	getPublicClientEnv,
 	getServerEnv,
 } from "@/core/env";
-import { getRootTags } from "@/modules/taxonomy/services";
+import { getAllTagsAsTree } from "@/modules/taxonomy/services";
 
 // --- LÓGICA DE CONEXÃO ATUALIZADA ---
 const runtime = Astro.locals.runtime;
@@ -17,7 +17,8 @@ const envForClient = getPublicClientEnv(runtime);
 const currentUser = Astro.locals.user;
 // ---------------------------------
 
-const rootTags = await getRootTags(db);
+// Mudança: Buscamos a árvore completa, não apenas as raízes
+const treeData = await getAllTagsAsTree(db);
 ---
 
 <html lang="pt-br">
@@ -41,7 +42,8 @@ const rootTags = await getRootTags(db);
     </header>
 
     <div class="flex-1 max-w-6xl mx-auto w-full p-6">
-      <SessionManager client:only="react" rootTags={rootTags} />
+      {/* Passamos treeData para o novo SessionManager */}
+      <SessionManager client:only="react" treeData={treeData} />
     </div>
 
   </body>
