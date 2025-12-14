@@ -1,6 +1,6 @@
 import type { Database } from "@/core/db";
 import { tags } from "@/modules/taxonomy/schema";
-import { and, eq, isNull, sql } from "drizzle-orm";
+import { and, asc, eq, isNull, sql } from "drizzle-orm";
 import { ensureUniqueSlug, makeBaseSlug } from "./utils";
 
 export async function getCaseIdsByTagSlug(
@@ -150,4 +150,51 @@ export async function getCaseIdsByTag(
 	type Row = { id: number };
 	const rows = res as unknown as Row[];
 	return rows.map((r) => r.id);
+}
+export type TagTreeItem = {
+	id: number;
+	label: string;
+	value: number; // Usaremos o ID como value para facilitar a seleção
+	slug: string;
+	children: TagTreeItem[];
+};
+
+export async function getAllTagsAsTree(db: Database): Promise<TagTreeItem[]> {
+	// 1. Busca todas as tags ordenadas por nome
+	const allTags = await db.select().from(tags).orderBy(asc(tags.name));
+
+	// 2. Mapa auxiliar para construção da árvore
+	const tagMap = new Map<number, TagTreeItem>();
+	const roots: TagTreeItem[] = [];
+
+	// Inicializa os objetos (sem children preenchido ainda)
+	for (const tag of allTags) {
+		tagMap.set(tag.id, {
+			id: tag.id,
+			label: tag.name,
+			value: tag.id,
+			slug: tag.slug,
+			children: [],
+		});
+	}
+
+	// 3. Monta a hierarquia
+	for (const tag of allTags) {
+		const node = tagMap.get(tag.id);
+		if (!node) continue;
+
+		if (tag.parentId) {
+			const parent = tagMap.get(tag.parentId);
+			if (parent) {
+				parent.children.push(node);
+			} else {
+				// Se o pai não existe (erro de integridade ou lógica), trata como raiz
+				roots.push(node);
+			}
+		} else {
+			roots.push(node);
+		}
+	}
+
+	return roots;
 }
