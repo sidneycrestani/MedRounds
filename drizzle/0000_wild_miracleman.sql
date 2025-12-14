@@ -1,6 +1,8 @@
+CREATE EXTENSION IF NOT EXISTS ltree;
+
 CREATE SCHEMA IF NOT EXISTS "content";
-CREATE SCHEMA IF NOT EXISTS "app";CREATE TYPE "public"."case_difficulty" AS ENUM('student', 'general_practitioner', 'specialist');--> statement-breakpoint
-CREATE EXTENSION IF NOT EXISTS pg_trgm;
+CREATE SCHEMA IF NOT EXISTS "app";
+CREATE TYPE "public"."case_difficulty" AS ENUM('student', 'general_practitioner', 'specialist');--> statement-breakpoint
 CREATE TYPE "public"."case_status" AS ENUM('draft', 'review', 'published');--> statement-breakpoint
 CREATE TYPE "public"."tag_category" AS ENUM('specialty', 'system', 'pathology', 'drug', 'other');--> statement-breakpoint
 CREATE TABLE "content"."case_questions" (
@@ -37,7 +39,7 @@ CREATE TABLE "content"."tags" (
 	"slug" text NOT NULL,
 	"name" text NOT NULL,
 	"parent_id" integer,
-	"path" text NOT NULL,
+	"path" "ltree" NOT NULL,
 	"category" "tag_category" NOT NULL
 );
 --> statement-breakpoint
@@ -69,8 +71,7 @@ ALTER TABLE "app"."user_case_state" ADD CONSTRAINT "user_case_state_case_id_clin
 CREATE UNIQUE INDEX "cases_tags_case_tag_unique" ON "content"."cases_tags" USING btree ("case_id","tag_id");--> statement-breakpoint
 CREATE UNIQUE INDEX "tags_slug_unique" ON "content"."tags" USING btree ("slug");--> statement-breakpoint
 CREATE UNIQUE INDEX "tags_parent_name_unique" ON "content"."tags" USING btree ("parent_id","name");--> statement-breakpoint
-CREATE UNIQUE INDEX "tags_path_unique" ON "content"."tags" USING btree ("path");--> statement-breakpoint
-CREATE INDEX "tags_path_trgm_idx" ON "content"."tags" USING gin ("path" gin_trgm_ops);--> statement-breakpoint
+CREATE INDEX "tags_path_gist_idx" ON "content"."tags" USING gist ("path");--> statement-breakpoint
 CREATE INDEX "user_case_history_recent_idx" ON "app"."user_case_history" USING btree ("user_id","case_id","attempted_at");--> statement-breakpoint
 CREATE UNIQUE INDEX "user_case_state_user_case_unique" ON "app"."user_case_state" USING btree ("user_id","case_id");--> statement-breakpoint
 CREATE INDEX "user_case_state_next_review_idx" ON "app"."user_case_state" USING btree ("user_id","next_review_at");

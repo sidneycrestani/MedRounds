@@ -22,10 +22,7 @@ export async function getCaseIdsByTagSlug(
     JOIN content.cases_tags ct ON ct.case_id = c.id
     JOIN content.tags t ON t.id = ct.tag_id
     WHERE c.status = 'published'
-      AND (
-        t.path = (SELECT path FROM content.tags WHERE slug = ${slug})
-        OR t.path LIKE (SELECT path FROM content.tags WHERE slug = ${slug}) || '.%'
-      )
+      AND t.path <@ (SELECT path FROM content.tags WHERE slug = ${slug})
     ORDER BY c.title ASC
   `);
 
@@ -42,10 +39,10 @@ export async function getTagPathBySlug(
     WITH root AS (
       SELECT id, path FROM content.tags WHERE slug = ${slug}
     )
-    SELECT t.id, t.slug, t.name, 0 AS depth
+    SELECT t.id, t.slug, t.name
     FROM content.tags t, root r
-    WHERE t.path = r.path OR t.path LIKE r.path || '.%'
-    ORDER BY length(t.path) - length(replace(t.path, '.', '')) DESC
+    WHERE t.path @> r.path
+    ORDER BY nlevel(t.path) ASC
   `);
 
 	type PathRow = { id: number; slug: string; name: string };
@@ -118,8 +115,7 @@ export async function getCaseIdsByTag(
     FROM content.clinical_cases c
     JOIN content.cases_tags ct ON c.id = ct.case_id
     JOIN content.tags t ON t.id = ct.tag_id
-    WHERE t.path = (SELECT path FROM content.tags WHERE slug = ${rootSlug})
-       OR t.path LIKE (SELECT path FROM content.tags WHERE slug = ${rootSlug}) || '.%'
+    WHERE t.path <@ (SELECT path FROM content.tags WHERE slug = ${rootSlug})
   `);
 	type Row = { id: number };
 	const rows = res as unknown as Row[];

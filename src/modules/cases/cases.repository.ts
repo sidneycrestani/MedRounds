@@ -97,13 +97,10 @@ function buildTagExists(expr?: TagNode): string {
 	if (!expr) return "TRUE";
 	if (isSlugNode(expr)) {
 		return `EXISTS (
-            SELECT 1 FROM content.cases_tags ct
-            JOIN content.tags t ON t.id = ct.tag_id
-            WHERE ct.case_id = c.id AND (
-              t.path = (SELECT path FROM content.tags WHERE slug = ${sql.param(expr.slug)})
-              OR t.path LIKE (SELECT path FROM content.tags WHERE slug = ${sql.param(expr.slug)}) || '.%'
-            )
-        )`;
+	            SELECT 1 FROM content.cases_tags ct
+	            JOIN content.tags t ON t.id = ct.tag_id
+	            WHERE ct.case_id = c.id AND t.path <@ (SELECT path FROM content.tags WHERE slug = ${sql.param(expr.slug)})
+	        )`;
 	}
 	if (isOpNode(expr) && expr.op === "AND") {
 		return expr.nodes.map((n: TagNode) => buildTagExists(n)).join(" AND ");

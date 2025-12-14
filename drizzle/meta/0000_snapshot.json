@@ -1,5 +1,5 @@
 {
-  "id": "353e60d5-1d03-4170-9bf7-ee1e2f1c2bb6",
+  "id": "b0f110f8-e669-4ca0-93ec-5f9a950af51b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -264,7 +264,7 @@
         },
         "path": {
           "name": "path",
-          "type": "text",
+          "type": "ltree",
           "primaryKey": false,
           "notNull": true
         },
@@ -313,26 +313,11 @@
           "method": "btree",
           "with": {}
         },
-        "tags_path_unique": {
-          "name": "tags_path_unique",
+        "tags_path_gist_idx": {
+          "name": "tags_path_gist_idx",
           "columns": [
             {
-              "expression": "path",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "tags_path_trgm_idx": {
-          "name": "tags_path_trgm_idx",
-          "columns": [
-            {
-              "expression": "\"path\" gin_trgm_ops",
+              "expression": "\"path\"",
               "asc": true,
               "isExpression": true,
               "nulls": "last"
@@ -340,7 +325,7 @@
           ],
           "isUnique": false,
           "concurrently": false,
-          "method": "gin",
+          "method": "gist",
           "with": {}
         }
       },

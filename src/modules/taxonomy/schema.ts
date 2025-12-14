@@ -1,6 +1,7 @@
 import { clinicalCases } from "@/modules/content/schema";
 import { sql } from "drizzle-orm";
 import {
+	customType,
 	foreignKey,
 	index,
 	integer,
@@ -21,6 +22,12 @@ export const tagCategoryEnum = pgEnum("tag_category", [
 
 const content = pgSchema("content");
 
+const ltree = customType<{ data: string; driverData: string }>({
+	dataType() {
+		return "ltree";
+	},
+});
+
 export const tags = content.table(
 	"tags",
 	{
@@ -28,7 +35,7 @@ export const tags = content.table(
 		slug: text("slug").notNull(),
 		name: text("name").notNull(),
 		parentId: integer("parent_id"),
-		path: text("path").notNull(),
+		path: ltree("path").notNull(),
 		category: tagCategoryEnum("category").notNull(),
 	},
 	(table) => ({
@@ -37,16 +44,12 @@ export const tags = content.table(
 			table.parentId,
 			table.name,
 		),
-		pathUnique: uniqueIndex("tags_path_unique").on(table.path),
 		parentFk: foreignKey({
 			columns: [table.parentId],
 			foreignColumns: [table.id],
 			name: "tags_parent_fk",
 		}).onDelete("cascade"),
-		pathTrgmIdx: index("tags_path_trgm_idx").using(
-			"gin",
-			sql`${table.path} gin_trgm_ops`,
-		),
+		pathGistIdx: index("tags_path_gist_idx").using("gist", sql`${table.path}`),
 	}),
 );
 
