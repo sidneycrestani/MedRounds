@@ -1,6 +1,11 @@
 ---
+import LoginButton from "@/components/auth/LoginButton";
 import { getDb } from "@/core/db";
-import { getConnectionFromEnv, getServerEnv } from "@/core/env";
+import {
+	getConnectionFromEnv,
+	getPublicClientEnv,
+	getServerEnv,
+} from "@/core/env";
 import { getCasesByTag } from "@/modules/cases/cases.repository";
 import { getRootTags } from "@/modules/taxonomy/services";
 
@@ -8,6 +13,8 @@ import { getRootTags } from "@/modules/taxonomy/services";
 const runtime = Astro.locals.runtime;
 const env = getServerEnv(runtime);
 const db = getDb(getConnectionFromEnv(env));
+const envForClient = getPublicClientEnv(runtime);
+const currentUser = Astro.locals.user;
 // ---------------------------------
 
 const url = new URL(Astro.request.url);
@@ -34,6 +41,7 @@ const cases = await getCasesByTag(db, activeTagSlug || undefined);
         <a href="/" class="text-2xl font-bold text-blue-900 flex items-center gap-2">
           🩺 MedSim
         </a>
+        <LoginButton client:load env={envForClient} userName={currentUser?.email} />
       </div>
     </header>
 

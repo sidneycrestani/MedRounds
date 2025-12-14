@@ -15,7 +15,9 @@ interface ImportMeta {
 type Runtime = import("@astrojs/cloudflare").Runtime<Env>;
 
 declare namespace App {
-	interface Locals extends Runtime {}
+	interface Locals extends Runtime {
+		user?: import("@supabase/supabase-js").User | null;
+	}
 }
 
 // Definição da interface do Hyperdrive
