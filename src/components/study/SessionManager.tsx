@@ -231,7 +231,7 @@ export default function SessionManager({
 					className="hover:text-red-600 flex items-center gap-1 transition-colors"
 				>
 					{/* Se quiser ícone: <XCircle size={16} /> */}
-					Encerrar Sessão
+					Encerrar Estudo
 				</button>
 			</div>
 

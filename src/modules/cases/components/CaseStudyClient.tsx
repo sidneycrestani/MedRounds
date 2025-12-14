@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { NavigationTabs } from "@/components/ui/navigation-tabs";
-import { type SupabaseClient, createClient } from "@supabase/supabase-js";
+import { createBrowserClient } from "@supabase/ssr";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import { useState } from "react";
 import { CaseFeedbackSchema } from "../types";
 import AnswerInput from "./AnswerInput";
@@ -56,7 +57,7 @@ export default function CaseStudyClient({
 	onCaseCompleted?: () => void;
 }) {
 	const [supabase] = useState<SupabaseClient>(() =>
-		createClient(env.supabaseUrl, env.supabaseAnonKey),
+		createBrowserClient(env.supabaseUrl, env.supabaseAnonKey),
 	);
 
 	const activeOrdersSet = new Set(activeQuestionIndices);

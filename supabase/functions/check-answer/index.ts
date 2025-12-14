@@ -14,15 +14,19 @@ Deno.serve(async (req) => {
 
   try {
     const { userAnswer, questionId } = await req.json();
-
+    const authHeader = req.headers.get('Authorization')!;
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+      Deno.env.get("SUPABASE_ANON_KEY") ?? "", // Use ANON KEY aqui para validar o JWT do user
       {
+        global: { headers: { Authorization: authHeader } },
         db: { schema: "content" },
       }
     );
-
+    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
+    if (authError || !user) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
+    }
     // 1. Busca dados normalizados: pergunta específica + caso pai
     const { data: questionRow, error: qErr } = await supabaseClient
       .from("case_questions")

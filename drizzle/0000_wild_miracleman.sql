@@ -78,4 +78,49 @@ CREATE INDEX "user_case_state_next_review_idx" ON "app"."user_case_state" USING 
 
 GRANT USAGE ON SCHEMA "content" TO anon, authenticated, service_role;
 GRANT ALL ON ALL TABLES IN SCHEMA "content" TO service_role;
+GRANT SELECT ON ALL TABLES IN SCHEMA "content" TO authenticated;
+GRANT USAGE ON SCHEMA "content" TO anon, authenticated;
+
+-- CONCEDE permissão de SELECT (Leitura) em TODAS as tabelas atuais
+-- Isso inclui 'case_questions' e o gabarito. O front poderá ler livremente.
 GRANT SELECT ON ALL TABLES IN SCHEMA "content" TO anon, authenticated;
+
+-- REVOGA permissões de escrita (Insert, Update, Delete)
+-- Isso garante que ninguém abra o console e altere uma pergunta ou case.
+REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON ALL TABLES IN SCHEMA "content" FROM anon, authenticated;
+
+-- Opcional: Garante que tabelas futuras criadas neste schema sigam a mesma regra
+ALTER DEFAULT PRIVILEGES IN SCHEMA "content" GRANT SELECT ON TABLES TO anon, authenticated;
+
+
+-- 1. Ativar RLS nas tabelas de usuário
+ALTER TABLE "app"."user_case_history" ENABLE ROW LEVEL SECURITY;
+ALTER TABLE "app"."user_case_state" ENABLE ROW LEVEL SECURITY;
+
+-- 2. Criar política: Usuário só pode ver/editar seus PRÓPRIOS dados
+-- Política para SELECT (Ler)
+CREATE POLICY "Users can only see their own history"
+ON "app"."user_case_history"
+FOR SELECT
+USING (auth.uid()::text = user_id);
+
+CREATE POLICY "Users can only see their own state"
+ON "app"."user_case_state"
+FOR SELECT
+USING (auth.uid()::text = user_id);
+
+-- Política para INSERT/UPDATE (Escrever)
+-- Nota: Como seu backend Astro usa a conexão direta (postgres://), ele ignora essas regras.
+-- Essas regras servem para bloquear o acesso via NAVEGADOR (Supabase Client).
+CREATE POLICY "Users can only insert their own history"
+ON "app"."user_case_history"
+FOR INSERT
+WITH CHECK (auth.uid()::text = user_id);
+
+CREATE POLICY "Users can insert own state" ON "app"."user_case_state"
+FOR INSERT WITH CHECK (auth.uid()::text = user_id);
+
+CREATE POLICY "Users can only update their own state"
+ON "app"."user_case_state"
+FOR UPDATE
+USING (auth.uid()::text = user_id);

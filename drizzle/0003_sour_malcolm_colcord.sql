@@ -16,3 +16,21 @@ CREATE TABLE "app"."user_preferences" (
 	"settings" jsonb,
 	"updated_at" timestamp with time zone DEFAULT now() NOT NULL
 );
+
+ALTER TABLE "app"."study_sessions" ENABLE ROW LEVEL SECURITY;
+ALTER TABLE "app"."user_preferences" ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can manage their own study sessions"
+ON "app"."study_sessions"
+FOR ALL
+TO authenticated
+USING (auth.uid()::text = user_id)
+WITH CHECK (auth.uid()::text = user_id);
+
+-- 3. Criar Políticas para 'user_preferences'
+CREATE POLICY "Users can manage their own preferences"
+ON "app"."user_preferences"
+FOR ALL
+TO authenticated
+USING (auth.uid()::text = user_id)
+WITH CHECK (auth.uid()::text = user_id);
