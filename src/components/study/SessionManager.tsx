@@ -85,6 +85,7 @@ export default function SessionManager({
 	// 2. Iniciar nova sessão (Disparado pelo Dashboard)
 	async function handleStartSession(tagIds: number[], quantity: number) {
 		setIsProcessing(true);
+		setInitialSelectedTags(tagIds);
 		try {
 			const res = await fetch("/api/study/session", {
 				method: "POST",
@@ -94,8 +95,7 @@ export default function SessionManager({
 
 			if (!res.ok) throw new Error("Failed to create session");
 
-			// Após criar, recarregamos o estado da sessão (poderíamos otimizar retornando a fila no POST,
-			// mas por consistência com o refresh, vamos buscar o GET novamente ou forçar reload)
+			// Recarrega estado
 			const checkRes = await fetch("/api/study/session");
 			const data: SessionResponse = await checkRes.json();
 
@@ -106,8 +106,31 @@ export default function SessionManager({
 			}
 		} catch (error) {
 			console.error(error);
-			alert("Erro ao iniciar sessão. Tente novamente.");
+			alert("Erro ao iniciar sessão.");
 		} finally {
+			setIsProcessing(false);
+		}
+	}
+
+	async function handleEndSession() {
+		if (
+			!confirm(
+				"Tem certeza que deseja encerrar a sessão? O progresso não salvo será perdido.",
+			)
+		)
+			return;
+
+		setIsProcessing(true);
+		try {
+			// Chama a API para limpar a sessão no banco
+			await fetch("/api/study/session", { method: "DELETE" });
+		} catch (error) {
+			console.error("Erro ao encerrar sessão remota", error);
+		} finally {
+			setMode("dashboard");
+			setQueue([]);
+			setCurrentIndex(0);
+			setCurrentCaseData(null);
 			setIsProcessing(false);
 		}
 	}
@@ -204,9 +227,10 @@ export default function SessionManager({
 				</span>
 				<button
 					type="button"
-					onClick={() => setMode("dashboard")} // TODO: Confirmar abandono
-					className="hover:text-red-600"
+					onClick={handleEndSession} // USAR A NOVA FUNÇÃO AQUI
+					className="hover:text-red-600 flex items-center gap-1 transition-colors"
 				>
+					{/* Se quiser ícone: <XCircle size={16} /> */}
 					Encerrar Sessão
 				</button>
 			</div>
