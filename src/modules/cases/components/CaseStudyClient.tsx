@@ -55,6 +55,18 @@ export default function CaseStudyClient({
 		Array.from({ length: data.questions.length }, () => null),
 	);
 
+	async function persistSrsAttempt(caseId: number, score: number) {
+		try {
+			await fetch("/api/srs/process-attempt", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ caseId, score }),
+			});
+		} catch (err) {
+			console.error("Failed to persist SRS data:", err);
+		}
+	}
+
 	async function submit() {
 		const current = answers[activeIndex];
 		if (!current.trim()) return;
@@ -79,6 +91,7 @@ export default function CaseStudyClient({
 					next[activeIndex] = parsed;
 					return next;
 				});
+				persistSrsAttempt(data.id, parsed.score);
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");
