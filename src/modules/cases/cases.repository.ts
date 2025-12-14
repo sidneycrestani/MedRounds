@@ -1,5 +1,6 @@
 import type { Database } from "@/core/db";
 import { caseQuestions, clinicalCases } from "@/modules/content/schema";
+import { userCaseState } from "@/modules/srs/schema";
 import { getCaseIdsByTag } from "@/modules/taxonomy/services";
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import {
@@ -81,6 +82,60 @@ export async function getNextBestCaseForUser(
 	type Row = { case_id: number | null };
 	const rows = res as unknown as Row[];
 	return rows[0]?.case_id ?? null;
+}
+
+export async function getUserCaseProgress(
+	db: Database,
+	userId: string,
+	caseId: number,
+): Promise<
+	Record<
+		number,
+		{ isDue: boolean; nextReview: Date | null; isMastered: boolean }
+	>
+> {
+	const qs = await db
+		.select({ orderIndex: caseQuestions.orderIndex })
+		.from(caseQuestions)
+		.where(eq(caseQuestions.caseId, caseId));
+	const questionIndices = qs.map((q) => q.orderIndex).filter((n) => n != null);
+
+	const states =
+		questionIndices.length > 0
+			? await db
+					.select()
+					.from(userCaseState)
+					.where(
+						and(
+							eq(userCaseState.userId, userId),
+							eq(userCaseState.caseId, caseId),
+							inArray(userCaseState.questionIndex, questionIndices),
+						),
+					)
+			: [];
+
+	const byIndex = new Map<number, (typeof states)[number]>();
+	for (const s of states) byIndex.set(s.questionIndex, s);
+
+	const now = new Date();
+	const result: Record<
+		number,
+		{ isDue: boolean; nextReview: Date | null; isMastered: boolean }
+	> = {};
+
+	for (const idx of questionIndices) {
+		const st = byIndex.get(idx);
+		if (!st) {
+			result[idx] = { isDue: true, nextReview: null, isMastered: false };
+		} else {
+			const next = st.nextReviewAt ?? null;
+			const mastered = !!st.isMastered;
+			const due = next ? next <= now : false;
+			result[idx] = { isDue: due, nextReview: next, isMastered: mastered };
+		}
+	}
+
+	return result;
 }
 
 function isSlugNode(expr: TagNode): expr is { slug: string } {

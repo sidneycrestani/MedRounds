@@ -42,12 +42,22 @@ interface EnvConfig {
 export default function CaseStudyClient({
 	data,
 	env,
-}: { data: PublicCaseData; env: EnvConfig }) {
+	activeQuestionIndices,
+}: { data: PublicCaseData; env: EnvConfig; activeQuestionIndices: number[] }) {
 	const [supabase] = useState<SupabaseClient>(() =>
 		createClient(env.supabaseUrl, env.supabaseAnonKey),
 	);
 
-	const [activeIndex, setActiveIndex] = useState(0);
+	const activeOrdersSet = new Set(activeQuestionIndices);
+	const initialOrder =
+		activeQuestionIndices.length > 0
+			? Math.min(...activeQuestionIndices)
+			: (data.questions[0]?.order ?? 0);
+	const initialIndex = Math.max(
+		data.questions.findIndex((q) => q.order === initialOrder),
+		0,
+	);
+	const [activeIndex, setActiveIndex] = useState(initialIndex);
 	const [answers, setAnswers] = useState<string[]>(() =>
 		Array.from({ length: data.questions.length }, () => ""),
 	);
@@ -97,6 +107,14 @@ export default function CaseStudyClient({
 					return next;
 				});
 				persistSrsAttempt(data.id, parsed.score, question.order);
+				const sorted = [...activeQuestionIndices].sort((a, b) => a - b);
+				const nextOrder = sorted.find((o) => o > question.order);
+				if (nextOrder !== undefined) {
+					const nextIdx = data.questions.findIndex(
+						(q) => q.order === nextOrder,
+					);
+					if (nextIdx >= 0) setActiveIndex(nextIdx);
+				}
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");
@@ -117,11 +135,24 @@ export default function CaseStudyClient({
 				items={data.questions.map((q, idx) => ({
 					id: q.id,
 					label: `Questão ${idx + 1}`,
-					disabled: idx > 0 && !results[idx - 1],
+					disabled: !activeOrdersSet.has(q.order),
 				}))}
 				activeIndex={activeIndex}
 				onChange={(idx) => setActiveIndex(idx)}
 			/>
+
+			<div className="flex items-center gap-2">
+				{activeQuestionIndices.length > 0 && (
+					<span className="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
+						Modo de Revisão: Respondendo {(() => {
+							const sorted = [...activeQuestionIndices].sort((a, b) => a - b);
+							const currentOrder = data.questions[activeIndex]?.order ?? 0;
+							const pos = sorted.indexOf(currentOrder);
+							return `${pos >= 0 ? pos + 1 : 0} de ${sorted.length} perguntas pendentes.`;
+						})()}
+					</span>
+				)}
+			</div>
 
 			<div className="space-y-4">
 				<QuestionDisplay

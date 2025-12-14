@@ -6,6 +6,7 @@ import {
 	getServerEnv,
 } from "@/core/env";
 import { getCaseById } from "@/modules/cases/cases.repository";
+import { getUserCaseProgress } from "@/modules/cases/cases.repository";
 import CaseStudyClient from "@/modules/cases/components/CaseStudyClient";
 import {
 	getCaseIdsByTagSlug,
@@ -30,6 +31,8 @@ if (!Number.isInteger(id)) return Astro.redirect("/404");
 const clinicalCase = await getCaseById(db, id);
 if (!clinicalCase) return Astro.redirect("/404");
 
+const currentUser = Astro.locals.user;
+
 const url = new URL(Astro.request.url);
 const topic = url.searchParams.get("topic");
 const sub = url.searchParams.get("sub");
@@ -47,6 +50,16 @@ if (orderedIds.length) {
 }
 
 const breadcrumbPath = filterSlug ? await getTagPathBySlug(db, filterSlug) : [];
+
+let activeQuestionIndices: number[] = [];
+if (currentUser) {
+	const progress = await getUserCaseProgress(db, currentUser.id, id);
+	activeQuestionIndices = clinicalCase.questions
+		.filter((q) => progress[q.order]?.isDue)
+		.map((q) => q.order);
+} else {
+	activeQuestionIndices = clinicalCase.questions.map((q) => q.order);
+}
 
 const publicCaseData = {
 	id: clinicalCase.id,
@@ -84,7 +97,7 @@ const publicCaseData = {
         </nav>
       )}
       
-      <CaseStudyClient client:load data={publicCaseData} env={envForClient} />
+      <CaseStudyClient client:load data={publicCaseData} env={envForClient} activeQuestionIndices={activeQuestionIndices} />
     </main>
   </body>
 </html>
