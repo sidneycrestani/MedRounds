@@ -192,3 +192,68 @@ export async function searchCases(
 	const rows = res as unknown as Row[];
 	return rows;
 }
+
+export async function generateStudySession(
+	db: Database,
+	userId: string,
+	tagSlugs: string[],
+): Promise<{ caseId: number; activeQuestionIndices: number[] }[]> {
+	// 1. Construímos o filtro de tags usando chunks sql`` para segurança e formatação correta
+	const tagFilterChunk =
+		tagSlugs.length > 0
+			? sql`AND EXISTS (
+        SELECT 1
+        FROM content.cases_tags ct2
+        JOIN content.tags t ON t.id = ct2.tag_id
+        WHERE ct2.case_id = c.id 
+        AND (${sql.join(
+					tagSlugs.map(
+						(slug) =>
+							sql`t.path <@ (SELECT path FROM content.tags WHERE slug = ${slug})`,
+					),
+					sql` OR `,
+				)})
+      )`
+			: sql``;
+
+	// 2. Construímos a query principal usando a tag `sql`.
+	// Note que passamos ${userId} diretamente aqui; o Drizzle cuidará de transformar em parâmetro ($1).
+	const query = sql`
+    WITH base AS (
+      SELECT c.id AS case_id, q.order_index AS question_index
+      FROM content.clinical_cases c
+      JOIN content.case_questions q ON q.case_id = c.id
+      WHERE c.status = 'published'
+      ${tagFilterChunk}
+    ),
+    joined AS (
+      SELECT b.case_id, b.question_index, s.is_mastered, s.next_review_at
+      FROM base b
+      LEFT JOIN app.user_case_state s
+        ON s.user_id = ${userId} 
+        AND s.case_id = b.case_id 
+        AND s.question_index = b.question_index
+    ),
+    eligible AS (
+      SELECT case_id, question_index
+      FROM joined
+      WHERE (next_review_at IS NULL AND is_mastered IS NULL)
+         OR (COALESCE(is_mastered, FALSE) = FALSE AND next_review_at <= now())
+    )
+    SELECT e.case_id,
+           ARRAY_AGG(e.question_index ORDER BY e.question_index) AS active_indices
+    FROM eligible e
+    GROUP BY e.case_id
+    ORDER BY RANDOM()
+  `;
+
+	const res = await db.execute(query);
+
+	type Row = { case_id: number; active_indices: number[] };
+	const rows = res as unknown as Row[];
+
+	return rows.map((r) => ({
+		caseId: r.case_id,
+		activeQuestionIndices: r.active_indices,
+	}));
+}

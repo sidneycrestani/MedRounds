@@ -44,6 +44,7 @@ export default function CaseStudyClient({
 	env,
 	activeQuestionIndices,
 	userProgress,
+	onCaseCompleted,
 }: {
 	data: PublicCaseData;
 	env: EnvConfig;
@@ -52,6 +53,7 @@ export default function CaseStudyClient({
 		number,
 		{ isDue: boolean; nextReview: Date | null; isMastered: boolean }
 	> | null;
+	onCaseCompleted?: () => void;
 }) {
 	const [supabase] = useState<SupabaseClient>(() =>
 		createClient(env.supabaseUrl, env.supabaseAnonKey),
@@ -233,6 +235,15 @@ export default function CaseStudyClient({
 							});
 						}}
 					/>
+				)}
+				{onCaseCompleted && (
+					<div className="flex items-center justify-end">
+						{activeQuestionIndices.length > 0 &&
+							activeQuestionIndices.every((order) => {
+								const idx = data.questions.findIndex((q) => q.order === order);
+								return idx >= 0 && !!results[idx];
+							}) && <Button onClick={onCaseCompleted}>Próximo Caso</Button>}
+					</div>
 				)}
 			</div>
 		</div>
