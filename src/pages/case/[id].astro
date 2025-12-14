@@ -52,10 +52,14 @@ if (orderedIds.length) {
 const breadcrumbPath = filterSlug ? await getTagPathBySlug(db, filterSlug) : [];
 
 let activeQuestionIndices: number[] = [];
+let userProgress: Record<
+	number,
+	{ isDue: boolean; nextReview: Date | null; isMastered: boolean }
+> | null = null;
 if (currentUser) {
-	const progress = await getUserCaseProgress(db, currentUser.id, id);
+	userProgress = await getUserCaseProgress(db, currentUser.id, id);
 	activeQuestionIndices = clinicalCase.questions
-		.filter((q) => progress[q.order]?.isDue)
+		.filter((q) => userProgress?.[q.order]?.isDue)
 		.map((q) => q.order);
 } else {
 	activeQuestionIndices = clinicalCase.questions.map((q) => q.order);
@@ -97,7 +101,7 @@ const publicCaseData = {
         </nav>
       )}
       
-      <CaseStudyClient client:load data={publicCaseData} env={envForClient} activeQuestionIndices={activeQuestionIndices} />
+      <CaseStudyClient client:load data={publicCaseData} env={envForClient} activeQuestionIndices={activeQuestionIndices} userProgress={userProgress} />
     </main>
   </body>
 </html>

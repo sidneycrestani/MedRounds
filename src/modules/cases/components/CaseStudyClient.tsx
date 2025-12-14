@@ -43,7 +43,16 @@ export default function CaseStudyClient({
 	data,
 	env,
 	activeQuestionIndices,
-}: { data: PublicCaseData; env: EnvConfig; activeQuestionIndices: number[] }) {
+	userProgress,
+}: {
+	data: PublicCaseData;
+	env: EnvConfig;
+	activeQuestionIndices: number[];
+	userProgress: Record<
+		number,
+		{ isDue: boolean; nextReview: string | null; isMastered: boolean }
+	> | null;
+}) {
 	const [supabase] = useState<SupabaseClient>(() =>
 		createClient(env.supabaseUrl, env.supabaseAnonKey),
 	);
@@ -132,27 +141,29 @@ export default function CaseStudyClient({
 			/>
 
 			<NavigationTabs
-				items={data.questions.map((q, idx) => ({
-					id: q.id,
-					label: `Questão ${idx + 1}`,
-					disabled: !activeOrdersSet.has(q.order),
-				}))}
+				items={data.questions.map((q, idx) => {
+					const prog = userProgress?.[q.order];
+					const hasLocalResult = !!results[idx];
+					let status: "locked" | "mastered" | "current" | "pending";
+					if (idx === activeIndex) {
+						status = "current";
+					} else if (prog?.isMastered || hasLocalResult) {
+						status = "mastered";
+					} else if (activeOrdersSet.has(q.order)) {
+						status = "pending";
+					} else {
+						status = "locked";
+					}
+					return {
+						id: q.id,
+						label: `Questão ${idx + 1}`,
+						status,
+						disabled: status === "locked",
+					};
+				})}
 				activeIndex={activeIndex}
 				onChange={(idx) => setActiveIndex(idx)}
 			/>
-
-			<div className="flex items-center gap-2">
-				{activeQuestionIndices.length > 0 && (
-					<span className="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
-						Modo de Revisão: Respondendo {(() => {
-							const sorted = [...activeQuestionIndices].sort((a, b) => a - b);
-							const currentOrder = data.questions[activeIndex]?.order ?? 0;
-							const pos = sorted.indexOf(currentOrder);
-							return `${pos >= 0 ? pos + 1 : 0} de ${sorted.length} perguntas pendentes.`;
-						})()}
-					</span>
-				)}
-			</div>
 
 			<div className="space-y-4">
 				<QuestionDisplay

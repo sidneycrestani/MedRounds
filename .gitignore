@@ -1,28 +1,41 @@
-# build output
+# --- Build & Dependencies ---
 dist/
-# generated types
+node_modules/
 .astro/
 
-repomix-output.xml
-superbase/.temp/
+# --- Environment & Secrets (Catch all .env) ---
+.env
+.env.*
+!.env.example
+.dev.vars
 
-# dependencies
-node_modules/
+# --- Supabase ---
+# Correção do typo
+supabase/.temp/
+# Caso use funções locais do supabase, as vezes gera pastas de cache
+supabase/.branches/
 
-# logs
+# --- Logs (Expandido) ---
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*-error.log
 
-
-# environment variables
-.env
-.env.production
-.dev.vars
-
-# macOS-specific files
+# --- System Junk (Muito importante se tiver devs usando Mac/Windows) ---
 .DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# jetbrains setting folder
+# --- IDEs & Editors (Geralmente preferência pessoal, não do repo) ---
 .idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# --- Tooling Temp Files ---
+repomix-output.xml
+coverage/
+.turbo/
