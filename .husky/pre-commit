@@ -1,1 +1,1 @@
-npm run content:lint && npm run lint && npm run typecheck
+npm run assign-ids && npm run content:lint && npm run lint && npm run typecheck

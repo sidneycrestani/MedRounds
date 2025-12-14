@@ -27,11 +27,27 @@ function loadAllowedTags(): Set<string> | null {
     }
 }
 
+function readRegistry(): { lastId: number; mappings: Record<string, number> } | null {
+    const file = path.join(process.cwd(), "id_registry.lock.json");
+    if (!fs.existsSync(file)) return null;
+    try {
+        const raw = fs.readFileSync(file, "utf-8");
+        const obj = JSON.parse(raw);
+        if (typeof obj.lastId === "number" && obj.mappings && typeof obj.mappings === "object") {
+            return obj as { lastId: number; mappings: Record<string, number> };
+        }
+        return null;
+    } catch {
+        return null;
+    }
+}
+
 function main() {
     const dataDir = path.join(process.cwd(), "src", "content", "database");
     const files = listJsonFilesRecursive(dataDir);
     const ids = new Map<number, string>();
     const allowed = loadAllowedTags();
+    const registry = readRegistry();
     const errors: string[] = [];
 
     for (const file of files) {
@@ -43,10 +59,15 @@ function main() {
             continue;
         }
         for (const c of parsed.data) {
-            if (ids.has(c.id)) {
-                errors.push(`Duplicate id ${c.id} in ${file} (also in ${ids.get(c.id)})`);
+            const effectiveId = c.id ?? (c.tempId && registry ? registry.mappings[c.tempId] : undefined);
+            if (typeof effectiveId !== "number") {
+                errors.push(`Unassigned ID for case in ${file}${c.tempId ? ` (tempId ${c.tempId})` : ""}`);
+                continue;
+            }
+            if (ids.has(effectiveId)) {
+                errors.push(`Duplicate id ${effectiveId} in ${file} (also in ${ids.get(effectiveId)})`);
             } else {
-                ids.set(c.id, file);
+                ids.set(effectiveId, file);
             }
             if (allowed) {
                 for (const t of c.tags) {

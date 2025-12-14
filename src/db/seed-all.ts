@@ -24,6 +24,26 @@ if (!DATABASE_URL) {
 // Inicializa DB
 const db = getDb(DATABASE_URL);
 
+type Registry = { lastId: number; mappings: Record<string, number> };
+function readRegistry(): Registry | null {
+	const file = path.join(process.cwd(), "id_registry.lock.json");
+	if (!fs.existsSync(file)) return null;
+	try {
+		const raw = fs.readFileSync(file, "utf-8");
+		const obj = JSON.parse(raw);
+		if (
+			typeof obj.lastId === "number" &&
+			obj.mappings &&
+			typeof obj.mappings === "object"
+		) {
+			return obj as Registry;
+		}
+		return null;
+	} catch {
+		return null;
+	}
+}
+
 function listJsonFilesRecursive(dir: string): string[] {
 	const entries = fs.readdirSync(dir, { withFileTypes: true });
 	const files: string[] = [];
@@ -83,6 +103,7 @@ async function main() {
 			}
 
 			const cases = validationResult.data;
+			const registry = readRegistry();
 
 			for (const caseData of cases) {
 				// --- 1. Upsert do Caso Clínico ---
@@ -94,10 +115,22 @@ async function main() {
 						? `${caseData.vignette.substring(0, 150)}...`
 						: caseData.vignette);
 
+				const effectiveId =
+					caseData.id ??
+					(caseData.tempId && registry
+						? registry.mappings[caseData.tempId]
+						: undefined);
+				if (typeof effectiveId !== "number") {
+					console.error(
+						`❌ Caso sem ID oficial atribuído: ${file} (tempId: ${caseData.tempId ?? ""})`,
+					);
+					continue;
+				}
+
 				const existingCase = await db
 					.select()
 					.from(clinicalCases)
-					.where(eq(clinicalCases.id, caseData.id))
+					.where(eq(clinicalCases.id, effectiveId))
 					.limit(1);
 
 				let caseId: number;
@@ -106,7 +139,7 @@ async function main() {
 					.createHash("sha1")
 					.update(
 						JSON.stringify({
-							id: caseData.id,
+							id: effectiveId,
 							title: caseData.title,
 							description: descriptionToSave,
 							vignette: caseData.vignette,
@@ -151,7 +184,7 @@ async function main() {
 					const inserted = await db
 						.insert(clinicalCases)
 						.values({
-							id: caseData.id,
+							id: effectiveId,
 							title: caseData.title,
 							description: descriptionToSave,
 							vignette: caseData.vignette,

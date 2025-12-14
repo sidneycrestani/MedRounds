@@ -14,7 +14,8 @@
 		"lint": "biome check --error-on-warnings src",
 		"format": "biome format .",
 		"db:seed": "tsx src/db/seed-all.ts",
-		"content:lint": "tsx scripts/content-lint.ts"
+		"content:lint": "tsx scripts/content-lint.ts",
+		"assign-ids": "tsx scripts/assign-official-ids.ts"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.6",
