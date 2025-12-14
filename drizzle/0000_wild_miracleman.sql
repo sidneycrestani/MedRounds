@@ -75,3 +75,7 @@ CREATE INDEX "tags_path_gist_idx" ON "content"."tags" USING gist ("path");--> st
 CREATE INDEX "user_case_history_recent_idx" ON "app"."user_case_history" USING btree ("user_id","case_id","attempted_at");--> statement-breakpoint
 CREATE UNIQUE INDEX "user_case_state_user_case_unique" ON "app"."user_case_state" USING btree ("user_id","case_id");--> statement-breakpoint
 CREATE INDEX "user_case_state_next_review_idx" ON "app"."user_case_state" USING btree ("user_id","next_review_at");
+
+GRANT USAGE ON SCHEMA "content" TO anon, authenticated, service_role;
+GRANT ALL ON ALL TABLES IN SCHEMA "content" TO service_role;
+GRANT SELECT ON ALL TABLES IN SCHEMA "content" TO anon, authenticated;
