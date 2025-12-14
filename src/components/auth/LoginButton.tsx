@@ -1,5 +1,6 @@
 import Button from "@/components/ui/button";
-import { createClient } from "@supabase/supabase-js";
+// MUDANÇA 1: Importe do SSR, não do supabase-js
+import { createBrowserClient } from "@supabase/ssr";
 import { useMemo, useState } from "react";
 
 type EnvConfig = { supabaseUrl: string; supabaseAnonKey: string };
@@ -9,12 +10,9 @@ export default function LoginButton({
 	userName,
 }: { env: EnvConfig; userName?: string | null }) {
 	const supabase = useMemo(
-		() =>
-			createClient(env.supabaseUrl, env.supabaseAnonKey, {
-				auth: {
-					flowType: "pkce",
-				},
-			}),
+		// MUDANÇA 2: Use createBrowserClient.
+		// Ele configura automaticamente os cookies para serem lidos pelo servidor.
+		() => createBrowserClient(env.supabaseUrl, env.supabaseAnonKey),
 		[env.supabaseUrl, env.supabaseAnonKey],
 	);
 	const [loading, setLoading] = useState(false);
@@ -28,6 +26,9 @@ export default function LoginButton({
 					"/api/auth/callback",
 					window.location.origin,
 				).toString(),
+				// O flowType PKCE é o padrão do createBrowserClient,
+				// mas não custa reforçar se quiser:
+				// flowType: 'pkce',
 			},
 		});
 		setLoading(false);
