@@ -116,14 +116,14 @@ export default function CaseStudyClient({
 					return next;
 				});
 				persistSrsAttempt(data.id, parsed.score, question.order);
-				const sorted = [...activeQuestionIndices].sort((a, b) => a - b);
-				const nextOrder = sorted.find((o) => o > question.order);
-				if (nextOrder !== undefined) {
-					const nextIdx = data.questions.findIndex(
-						(q) => q.order === nextOrder,
-					);
-					if (nextIdx >= 0) setActiveIndex(nextIdx);
-				}
+				// const sorted = [...activeQuestionIndices].sort((a, b) => a - b);
+				// const nextOrder = sorted.find((o) => o > question.order);
+				// if (nextOrder !== undefined) {
+				// 	const nextIdx = data.questions.findIndex(
+				// 		(q) => q.order === nextOrder,
+				// 	);
+				// 	if (nextIdx >= 0) setActiveIndex(nextIdx);
+				// }
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");
@@ -158,7 +158,7 @@ export default function CaseStudyClient({
 						id: q.id,
 						label: `Questão ${idx + 1}`,
 						status,
-						disabled: status === "locked",
+						disabled: status === "locked" || status === "mastered",
 					};
 				})}
 				activeIndex={activeIndex}

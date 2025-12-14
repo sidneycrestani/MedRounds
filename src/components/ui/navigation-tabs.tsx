@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { CheckCircle2, Circle, Lock } from "lucide-react";
+import { CheckCircle2, Circle, Clock } from "lucide-react";
 import type { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -57,8 +57,8 @@ export function NavigationTabs({
 					{item.status === "mastered" ? (
 						<CheckCircle2 size={14} />
 					) : item.status === "locked" ? (
-						<Lock size={14} />
-					) : item.status === "pending" ? (
+						<Clock size={14} />
+					) : item.status === "pending" || item.status === "current" ? (
 						<Circle size={14} />
 					) : null}
 					{item.label}
