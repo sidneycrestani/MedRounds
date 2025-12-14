@@ -30,7 +30,7 @@ const cases = await getCasesByTag(db, activeTagSlug || undefined);
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>MedSim - Casos Clínicos</title>
+    <title>MedRounds - Casos Clínicos</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body class="min-h-screen bg-gray-50 flex flex-col">
@@ -39,7 +39,7 @@ const cases = await getCasesByTag(db, activeTagSlug || undefined);
     <header class="bg-white border-b border-gray-200 py-4 px-6 sticky top-0 z-10">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-blue-900 flex items-center gap-2">
-          🩺 MedSim
+          🩺 MedRounds
         </a>
         <LoginButton client:load env={envForClient} userName={currentUser?.email} />
       </div>
