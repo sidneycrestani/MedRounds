@@ -13,6 +13,7 @@ export default defineConfig({
 		"./src/modules/content/schema.ts",
 		"./src/modules/taxonomy/schema.ts",
 		"./src/modules/srs/schema.ts",
+		"./src/modules/preferences/schema.ts",
 	],
 	out: "./drizzle",
 	// 2. Use 'postgresql' dialect
