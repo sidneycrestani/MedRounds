@@ -5,6 +5,7 @@ import {
 	index,
 	integer,
 	pgSchema,
+	primaryKey,
 	serial,
 	text,
 	timestamp,
@@ -21,6 +22,7 @@ export const userCaseHistory = app.table(
 		caseId: integer("case_id")
 			.references(() => clinicalCases.id, { onDelete: "cascade" })
 			.notNull(),
+		questionIndex: integer("question_index").notNull(),
 		score: integer("score"),
 		attemptedAt: timestamp("attempted_at", { withTimezone: true })
 			.notNull()
@@ -42,6 +44,7 @@ export const userCaseState = app.table(
 		caseId: integer("case_id")
 			.references(() => clinicalCases.id, { onDelete: "cascade" })
 			.notNull(),
+		questionIndex: integer("question_index").notNull(),
 		nextReviewAt: timestamp("next_review_at", { withTimezone: true }),
 		easeFactor: doublePrecision("ease_factor"),
 		learningStatus: text("learning_status"),
@@ -50,9 +53,13 @@ export const userCaseState = app.table(
 		consecutiveCorrect: integer("consecutive_correct"),
 	},
 	(table) => ({
+		pk: primaryKey({
+			columns: [table.userId, table.caseId, table.questionIndex],
+		}),
 		uq: uniqueIndex("user_case_state_user_case_unique").on(
 			table.userId,
 			table.caseId,
+			table.questionIndex,
 		),
 		nextReviewIdx: index("user_case_state_next_review_idx").on(
 			table.userId,

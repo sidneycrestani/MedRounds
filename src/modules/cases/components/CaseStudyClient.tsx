@@ -12,6 +12,7 @@ interface PublicCaseQuestion {
 	id: number;
 	text: string;
 	media?: string;
+	order: number;
 }
 
 interface PublicCaseData {
@@ -55,12 +56,16 @@ export default function CaseStudyClient({
 		Array.from({ length: data.questions.length }, () => null),
 	);
 
-	async function persistSrsAttempt(caseId: number, score: number) {
+	async function persistSrsAttempt(
+		caseId: number,
+		score: number,
+		questionIndex: number,
+	) {
 		try {
 			await fetch("/api/srs/process-attempt", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ caseId, score }),
+				body: JSON.stringify({ caseId, score, questionIndex }),
 			});
 		} catch (err) {
 			console.error("Failed to persist SRS data:", err);
@@ -91,7 +96,7 @@ export default function CaseStudyClient({
 					next[activeIndex] = parsed;
 					return next;
 				});
-				persistSrsAttempt(data.id, parsed.score);
+				persistSrsAttempt(data.id, parsed.score, question.order);
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");

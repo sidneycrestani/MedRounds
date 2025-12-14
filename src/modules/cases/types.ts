@@ -4,6 +4,7 @@ export const PublicQuestionSchema = z.object({
 	id: z.number(),
 	text: z.string(),
 	media: z.string().url().optional(),
+	order: z.number().int(),
 });
 
 export const FullCaseSchema = z.object({

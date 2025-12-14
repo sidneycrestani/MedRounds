@@ -13,7 +13,7 @@ export const POST: APIRoute = async (context) => {
 	}
 
 	// 2. Parse do Corpo da Requisição
-	let body: { caseId: number; score: number };
+	let body: { caseId: number; score: number; questionIndex: number };
 	try {
 		body = await context.request.json();
 	} catch (e) {
@@ -22,8 +22,12 @@ export const POST: APIRoute = async (context) => {
 		});
 	}
 
-	const { caseId, score } = body;
-	if (typeof caseId !== "number" || typeof score !== "number") {
+	const { caseId, score, questionIndex } = body;
+	if (
+		typeof caseId !== "number" ||
+		typeof score !== "number" ||
+		typeof questionIndex !== "number"
+	) {
 		return new Response(JSON.stringify({ error: "Invalid input types" }), {
 			status: 400,
 		});
@@ -63,6 +67,7 @@ export const POST: APIRoute = async (context) => {
 			await tx.insert(userCaseHistory).values({
 				userId: user.id,
 				caseId,
+				questionIndex,
 				score,
 				attemptedAt: now,
 			});
@@ -73,6 +78,7 @@ export const POST: APIRoute = async (context) => {
 				.values({
 					userId: user.id,
 					caseId,
+					questionIndex,
 					nextReviewAt: nextDate,
 					lastScore: score,
 					isMastered,
@@ -82,7 +88,11 @@ export const POST: APIRoute = async (context) => {
 					consecutiveCorrect: score > 50 ? 1 : 0,
 				})
 				.onConflictDoUpdate({
-					target: [userCaseState.userId, userCaseState.caseId],
+					target: [
+						userCaseState.userId,
+						userCaseState.caseId,
+						userCaseState.questionIndex,
+					],
 					set: {
 						nextReviewAt: nextDate,
 						lastScore: score,
