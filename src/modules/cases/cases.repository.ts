@@ -2,7 +2,7 @@ import type { Database } from "@/core/db";
 import { caseQuestions, clinicalCases } from "@/modules/content/schema";
 import { userCaseState } from "@/modules/srs/schema";
 import { getCaseIdsByTag } from "@/modules/taxonomy/services";
-import { and, asc, eq, inArray, sql } from "drizzle-orm";
+import { type SQL, and, asc, eq, inArray, sql } from "drizzle-orm";
 import {
 	CaseListItemDTO as CaseListItemDTOSchema,
 	FullCaseSchema,
@@ -194,15 +194,12 @@ export async function searchCases(
 	return rows;
 }
 
-export async function generateStudySession(
-	db: Database,
-	userId: string,
-	tagSlugs: string[],
-): Promise<{ caseId: number; activeQuestionIndices: number[] }[]> {
-	// 1. Construímos o filtro de tags usando chunks sql`` para segurança e formatação correta
-	const tagFilterChunk =
-		tagSlugs.length > 0
-			? sql`AND EXISTS (
+// --- Helpers para Queries de Sessão ---
+
+function buildTagFilterFragment(tagSlugs: string[]): SQL {
+	if (tagSlugs.length === 0) return sql``;
+
+	return sql`AND EXISTS (
         SELECT 1
         FROM content.cases_tags ct2
         JOIN content.tags t ON t.id = ct2.tag_id
@@ -214,12 +211,11 @@ export async function generateStudySession(
 					),
 					sql` OR `,
 				)})
-      )`
-			: sql``;
+    )`;
+}
 
-	// 2. Construímos a query principal usando a tag `sql`.
-	// Note que passamos ${userId} diretamente aqui; o Drizzle cuidará de transformar em parâmetro ($1).
-	const query = sql`
+function buildStudySessionCTEs(userId: string, tagFilterChunk: SQL): SQL {
+	return sql`
     WITH base AS (
       SELECT c.id AS case_id, q.order_index AS question_index
       FROM content.clinical_cases c
@@ -234,7 +230,21 @@ export async function generateStudySession(
         ON s.user_id = ${userId} 
         AND s.case_id = b.case_id 
         AND s.question_index = b.question_index
-    ),
+    )`;
+}
+
+// --- Funções Principais Refatoradas ---
+
+export async function generateStudySession(
+	db: Database,
+	userId: string,
+	tagSlugs: string[],
+): Promise<{ caseId: number; activeQuestionIndices: number[] }[]> {
+	const tagFilterChunk = buildTagFilterFragment(tagSlugs);
+	const ctes = buildStudySessionCTEs(userId, tagFilterChunk);
+
+	const query = sql`
+    ${ctes},
     eligible AS (
       SELECT case_id, question_index
       FROM joined
@@ -258,46 +268,17 @@ export async function generateStudySession(
 		activeQuestionIndices: r.active_indices,
 	}));
 }
+
 export async function getAvailableQuestionsCount(
 	db: Database,
 	userId: string,
 	tagSlugs: string[],
 ): Promise<number> {
-	// 1. Filtro de tags (Mesma lógica do generateStudySession)
-	const tagFilterChunk =
-		tagSlugs.length > 0
-			? sql`AND EXISTS (
-        SELECT 1
-        FROM content.cases_tags ct2
-        JOIN content.tags t ON t.id = ct2.tag_id
-        WHERE ct2.case_id = c.id 
-        AND (${sql.join(
-					tagSlugs.map(
-						(slug) =>
-							sql`t.path <@ (SELECT path FROM content.tags WHERE slug = ${slug})`,
-					),
-					sql` OR `,
-				)})
-      )`
-			: sql``;
+	const tagFilterChunk = buildTagFilterFragment(tagSlugs);
+	const ctes = buildStudySessionCTEs(userId, tagFilterChunk);
 
-	// 2. Query de contagem (Simplificada da generateStudySession)
 	const query = sql`
-    WITH base AS (
-      SELECT c.id AS case_id, q.order_index AS question_index
-      FROM content.clinical_cases c
-      JOIN content.case_questions q ON q.case_id = c.id
-      WHERE c.status = 'published'
-      ${tagFilterChunk}
-    ),
-    joined AS (
-      SELECT b.case_id, b.question_index, s.is_mastered, s.next_review_at
-      FROM base b
-      LEFT JOIN app.user_case_state s
-        ON s.user_id = ${userId} 
-        AND s.case_id = b.case_id 
-        AND s.question_index = b.question_index
-    )
+    ${ctes}
     SELECT COUNT(*) as total
     FROM joined
     WHERE (next_review_at IS NULL AND is_mastered IS NULL)
