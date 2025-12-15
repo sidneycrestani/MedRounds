@@ -554,7 +554,7 @@
 		"questions": [
 			{
 				"text": "Qual a fórmula padrão para o cálculo da PAM baseada nas pressões sistólica (PAS) e diastólica (PAD)?",
-				"correctAnswer": "A fórmula é baseada no fato de que a diástole dura aproximadamente dois terços do ciclo cardíaco: $$PAM = \\frac{2 \\times PAD + PAS}{3}$$ Alternativamente: $PAM = PAD + \\frac{1}{3}(PAS - PAD)$",
+				"correctAnswer": "A fórmula é baseada no fato de que a diástole dura aproximadamente dois terços do ciclo cardíaco: $$PAM = \\frac{2 \\times PAD + PAS}{3}$$\n Alternativamente: $PAM = PAD + \\frac{1}{3}(PAS - PAD)$",
 				"keywords": ["2/3 Diastólica + 1/3 Sistólica"],
 				"order": 1
 			},
