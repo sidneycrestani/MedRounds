@@ -51,7 +51,11 @@ export default function SessionManager({
 	const [currentCaseData, setCurrentCaseData] = useState<PublicCaseData | null>(
 		null,
 	);
-	const [userProgress, setUserProgress] = useState(null);
+
+	// Estado para armazenar os índices que REALMENTE faltam fazer neste caso
+	const [computedActiveIndices, setComputedActiveIndices] = useState<number[]>(
+		[],
+	);
 
 	// Estado do Dashboard (Pre-load)
 	const [initialSelectedTags, setInitialSelectedTags] = useState<number[]>([]);
@@ -148,15 +152,33 @@ export default function SessionManager({
 
 		setIsProcessing(true);
 		setCurrentCaseData(null);
-		setUserProgress(null);
+		setComputedActiveIndices([]);
 
-		// Busca dados do caso e progresso do usuário em paralelo
-		// (Nota: para sessões de estudo anonimas ou sem SRS complexo,
-		// o progresso visual pode ser apenas o da sessão atual, mas vamos manter a estrutura)
-		fetch(`/api/cases/${item.caseId}`)
-			.then((r) => r.json())
-			.then((d: PublicCaseData) => {
-				setCurrentCaseData(d);
+		// CORREÇÃO: Busca dados do caso E progresso atual em paralelo
+		Promise.all([
+			fetch(`/api/cases/${item.caseId}`).then((r) => r.json()),
+			fetch(`/api/cases/${item.caseId}/progress`).then((r) => r.json()),
+		])
+			.then(([caseData, progressData]) => {
+				const originalIndices = item.activeQuestionIndices;
+
+				// Filtra índices: Mantém apenas se NÃO tem progresso ou se está vencido (isDue: true).
+				// Se o usuário acabou de responder, isDue será false (agendado para futuro), então removemos da lista.
+				const remainingIndices = originalIndices.filter((idx: number) => {
+					const p = progressData[idx];
+					if (!p) return true; // Nunca visto -> mantém
+					return p.isDue; // Visto -> mantém só se estiver vencido
+				});
+
+				// Se não sobrou nenhuma questão (usuário já fez todas desse caso mas a sessão não avançou),
+				// avançamos automaticamente.
+				if (remainingIndices.length === 0 && originalIndices.length > 0) {
+					onCaseCompleted();
+					return;
+				}
+
+				setComputedActiveIndices(remainingIndices);
+				setCurrentCaseData(caseData);
 			})
 			.catch((e) => console.error(e))
 			.finally(() => setIsProcessing(false));
@@ -261,9 +283,8 @@ export default function SessionManager({
 						supabaseUrl: import.meta.env.PUBLIC_SUPABASE_URL,
 						supabaseAnonKey: import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
 					}}
-					activeQuestionIndices={
-						queue[currentIndex]?.activeQuestionIndices ?? []
-					}
+					// CORREÇÃO: Passamos os índices filtrados, não os originais da fila
+					activeQuestionIndices={computedActiveIndices}
 					// No modo sessão, focamos apenas na fila atual.
 					// Passamos null no userProgress para que o Client não bloqueie questões baseadas em SRS antigo,
 					// mas sim libere as que foram selecionadas para HOJE (activeQuestionIndices).
