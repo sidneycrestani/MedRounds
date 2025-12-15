@@ -2,7 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, XCircle } from "lucide-react";
 import type { HTMLAttributes } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex"; // Novo
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math"; // Novo
 
 type Props = HTMLAttributes<HTMLDivElement> & {
 	isCorrect: boolean;
@@ -52,7 +54,12 @@ export default function FeedbackSection({
 						</div>
 					</div>
 					<div className="text-gray-800 leading-relaxed whitespace-pre-line pl-11">
-						{feedback}
+						<ReactMarkdown
+							remarkPlugins={[remarkGfm, remarkMath]}
+							rehypePlugins={[rehypeKatex]}
+						>
+							{feedback}
+						</ReactMarkdown>
 					</div>
 				</CardContent>
 			</Card>
@@ -63,7 +70,10 @@ export default function FeedbackSection({
 						Gabarito / Resposta Ideal
 					</h4>
 					<div className="prose prose-sm max-w-none text-gray-800 bg-white p-4 rounded border border-gray-200">
-						<ReactMarkdown remarkPlugins={[remarkGfm]}>
+						<ReactMarkdown
+							remarkPlugins={[remarkGfm, remarkMath]}
+							rehypePlugins={[rehypeKatex]}
+						>
 							{officialAnswer}
 						</ReactMarkdown>
 					</div>

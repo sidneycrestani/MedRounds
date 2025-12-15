@@ -1,5 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { HTMLAttributes } from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 
 type Props = HTMLAttributes<HTMLDivElement> & {
 	text: string;
@@ -13,7 +17,14 @@ export default function QuestionDisplay({ text, media, ...props }: Props) {
 				<CardTitle>Enunciado</CardTitle>
 			</CardHeader>
 			<CardContent>
-				<p className="text-gray-800 leading-relaxed">{text}</p>
+				<div className="text-gray-800 leading-relaxed">
+					<ReactMarkdown
+						remarkPlugins={[remarkGfm, remarkMath]}
+						rehypePlugins={[rehypeKatex]}
+					>
+						{text}
+					</ReactMarkdown>
+				</div>
 				{media && (
 					<img
 						src={media}

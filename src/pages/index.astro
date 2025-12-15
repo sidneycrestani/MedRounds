@@ -8,7 +8,7 @@ import {
 	getServerEnv,
 } from "@/core/env";
 import { getAllTagsAsTree } from "@/modules/taxonomy/services";
-
+import "katex/dist/katex.min.css";
 // --- LÓGICA DE CONEXÃO ATUALIZADA ---
 const runtime = Astro.locals.runtime;
 const env = getServerEnv(runtime);

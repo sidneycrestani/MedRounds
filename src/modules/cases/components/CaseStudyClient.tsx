@@ -4,6 +4,10 @@ import { createBrowserClient } from "@supabase/ssr";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { Check, Eye, X } from "lucide-react";
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import { CaseFeedbackSchema } from "../types";
 import AnswerInput from "./AnswerInput";
 import CaseVignette from "./CaseVignette";
@@ -271,7 +275,12 @@ export default function CaseStudyClient({
 								Gabarito Oficial
 							</h4>
 							<div className="text-gray-900 whitespace-pre-line leading-relaxed">
-								{currentQuestion.correctAnswer}
+								<ReactMarkdown
+									remarkPlugins={[remarkGfm, remarkMath]}
+									rehypePlugins={[rehypeKatex]}
+								>
+									{currentQuestion.correctAnswer}
+								</ReactMarkdown>
 							</div>
 						</div>
 
