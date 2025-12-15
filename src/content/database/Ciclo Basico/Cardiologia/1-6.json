@@ -1,0 +1,599 @@
+[
+	{
+		"id": 1,
+		"title": "Cardiopatias Congênitas (Transposição das Grandes Artérias)",
+		"vignette": "Um recém-nascido apresenta cianose central importante nas primeiras horas de vida. O ecocardiograma diagnostica D-Transposição das Grandes Artérias (TGA), evidenciando a aorta emergindo do ventrículo direito e a artéria pulmonar do ventrículo esquerdo.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::22 Cardiopatias Congênitas Cianóticas::03 Transposição dos Grandes Vasos",
+			"Ciclo Básico::Cardiologia::01 Embriologia::02 Tronco Arterioso"
+		],
+		"questions": [
+			{
+				"text": "Descreva a falha embriológica específica responsável por esta anomalia.",
+				"correctAnswer": "A falha ocorreu no desenvolvimento do septo aorticopulmonar, que não realizou o movimento de espiralamento (falha em espiralar 180 graus) durante a divisão do tronco arterioso comum.",
+				"keywords": ["Falha no espiralamento do septo aorticopulmonar"],
+				"order": 1
+			},
+			{
+				"text": "Explique a necessidade fisiológica da administração imediata de Prostaglandina E1 (Alprostadil) neste cenário.",
+				"correctAnswer": "Na TGA, as circulações sistêmica e pulmonar operam em paralelo, e não em série. Isso significa que o sangue desoxigenado circula ciclicamente pelo corpo e o oxigenado apenas pelos pulmões. A vida é impossível sem um ponto de mistura (mixing). O Alprostadil é vital para manter o Ductus Arteriosus (Canal Arterial) patente, permitindo a mistura essencial de sangue oxigenado na circulação sistêmica até a correção cirúrgica (cirurgia de Jatene).",
+				"keywords": [
+					"Circulação em paralelo",
+					"Manutenção do Canal Arterial (Ductus Arteriosus)"
+				],
+				"order": 2
+			},
+			{
+				"text": "Classifique fisiologicamente o tipo de shunt predominante nesta patologia.",
+				"correctAnswer": "É classificada como uma cardiopatia cianótica com fisiologia de shunt direita-esquerda (ou fisiologia de mistura obrigatória).",
+				"keywords": ["Shunt Direita-Esquerda (Cianótica)"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "Anatomia e Fisiologia Coronariana",
+		"vignette": "Durante a análise de um cateterismo cardíaco (cineangiocoronariografia), observa-se que a artéria coronária direita dá origem tanto à artéria que irriga o nó atrioventricular (AV) quanto à artéria descendente posterior (PDA).",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::02 Anatomia::07 Anatomia da Artéria Coronária",
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::07 Fluxo Sanguíneo Coronariano e Autorregulação"
+		],
+		"questions": [
+			{
+				"text": "Qual é a classificação da dominância coronariana deste paciente?",
+				"correctAnswer": "O paciente apresenta Dominância Direita. Esta é a anatomia mais prevalente, presente em aproximadamente 85% da população. A dominância é definida pela artéria que emite a Descendente Posterior (Interventricular Posterior).",
+				"keywords": [
+					"Dominância Direita",
+					"Artéria Descendente Posterior (PDA)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Considerando a fisiologia do fluxo sanguíneo para o ventrículo esquerdo, identifique em qual fase do ciclo cardíaco ocorre a maior parte da perfusão miocárdica e explique o motivo.",
+				"correctAnswer": "A perfusão ocorre predominantemente na diástole. Durante a sístole, a vigorosa contração do miocárdio ventricular esquerdo gera uma pressão extravascular que comprime os vasos coronarianos intramurais, colabando-os e interrompendo o fluxo. A perfusão efetiva só é retomada quando o músculo relaxa e a pressão aórtica diastólica impulsiona o sangue para as coronárias.",
+				"keywords": [
+					"Perfusão Diastólica",
+					"Compressão extravascular sistólica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 3,
+		"title": "Doença Vascular Periférica (Síndrome do Roubo)",
+		"vignette": "Paciente de 65 anos refere episódios de tontura e vertigem (\"quase desmaio\") exclusivamente quando realiza atividades vigorosas com o braço esquerdo, como estender roupas ou pintar paredes. Ao exame físico, nota-se uma diferença de pressão arterial sistólica > 15 mmHg entre os membros superiores, sendo menor à esquerda.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::03 Sistema Vascular::02 Síndrome do Roubo da Subclávia"
+		],
+		"questions": [
+			{
+				"text": "Qual é a hipótese diagnóstica principal?",
+				"correctAnswer": "Síndrome do Roubo da Subclávia.",
+				"keywords": ["Síndrome do Roubo da Subclávia"],
+				"order": 1
+			},
+			{
+				"text": "Descreva a fisiopatologia que conecta o esforço do membro superior aos sintomas neurológicos apresentados.",
+				"correctAnswer": "O paciente possui uma estenose crítica na artéria subclávia proximal, antes da origem da artéria vertebral. Durante o repouso, o fluxo pode ser suficiente. Contudo, durante o exercício do braço, a vasodilatação muscular reduz a resistência vascular periférica no membro, fazendo a pressão distal à estenose cair. Devido ao gradiente de pressão, o sangue inverte seu fluxo na artéria vertebral ipsilateral, desviando (\"roubando\") sangue da circulação vertebrobasilar (que irriga o tronco encefálico e cerebelo) para suprir o braço, resultando em isquemia cerebral transitória.",
+				"keywords": [
+					"Estenose da Subclávia Proximal",
+					"Inversão de fluxo na Artéria Vertebral",
+					"Isquemia vertebrobasilar"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 4,
+		"title": "Fisiologia da Insuficiência Cardíaca (Curvas PV)",
+		"vignette": "Analise os perfis hemodinâmicos baseados nas curvas de Pressão-Volume (PV) de dois pacientes com insuficiência cardíaca. Paciente A: Curva PV deslocada para a direita, com perda de altura (menor pressão sistólica) e largura (menor volume sistólico). Apresenta Fração de Ejeção (FE) reduzida. Paciente B: Curva PV com largura preservada, porém deslocada para cima e para a esquerda na fase de enchimento, indicando pressões diastólicas elevadas para um mesmo volume. Apresenta FE preservada.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::17 Insuficiência Cardíaca::02 Insuficiência Cardíaca Sistólica",
+			"Ciclo Básico::Cardiologia::17 Insuficiência Cardíaca::03 Insuficiência Cardíaca Diastólica",
+			"Ciclo Básico::Cardiologia::06 Alças Pressão-Volume::04 Fisiopatologia Avançada"
+		],
+		"questions": [
+			{
+				"text": "Identifique o tipo de disfunção (Sistólica ou Diastólica) de cada paciente e associe à etiologia mais provável (Isquemia/DCM ou Hipertrofia Concêntrica).",
+				"correctAnswer": "Paciente A: Apresenta Disfunção Sistólica. Etiologia provável: Isquemia miocárdica, Infarto prévio ou Cardiomiopatia Dilatada. A falha na contratilidade impede a geração de pressão adequada e o esvaziamento ventricular, resultando em FE reduzida. Paciente B: Apresenta Disfunção Diastólica. Etiologia provável: Hipertrofia Concêntrica (comumente secundária à Hipertensão Arterial Sistêmica). O espessamento da parede ventricular reduz a complacência (aumenta a rigidez), exigindo pressões de enchimento atrial muito maiores para atingir o volume diastólico final, embora a capacidade de bombear (sístole) esteja mantida.",
+				"keywords": [
+					"Paciente A: Disfunção Sistólica (Falha de contratilidade)",
+					"Paciente B: Disfunção Diastólica (Redução da complacência)",
+					"Hipertrofia Concêntrica vs. Cardiomiopatia Dilatada"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 6,
+		"title": "Valvopatias e Hemodinâmica",
+		"vignette": "A estenose aórtica e a regurgitação aórtica impõem cargas hemodinâmicas distintas ao ventrículo esquerdo, resultando em adaptações estruturais específicas e alterações características na pressão arterial sistêmica. ",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::20 Doença Valvar::02 Estenose Aórtica",
+			"Ciclo Básico::Cardiologia::20 Doença Valvar::03 Regurgitação Aórtica",
+			"Ciclo Básico::Cardiologia::06 Alças Pressão-Volume::03 Doença Valvar",
+			"Cardiologia::06 Outros::02 Valvopatias"
+		],
+		"questions": [
+			{
+				"text": "Compare o comportamento da Pressão de Pulso (diferença entre sistólica e diastólica) na Estenose Aórtica versus Regurgitação Aórtica.",
+				"correctAnswer": "Na Estenose Aórtica, a pressão de pulso apresenta-se diminuída (pinçada) pois a obstrução fixa limita o débito sistólico, impedindo a elevação normal da pressão sistólica. Na Regurgitação Aórtica, a pressão de pulso apresenta-se aumentada (larga), pois o grande volume sistólico eleva a pressão sistólica, enquanto o refluxo diastólico para o ventrículo causa uma queda abrupta da pressão diastólica.",
+				"keywords": [
+					"Pressão de Pulso Pinçada (Estenose) vs. Larga (Regurgitação)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Classifique o tipo de hipertrofia ventricular esquerda (Concêntrica ou Excêntrica) esperada para cada valvopatia e identifique o estímulo fisiopatológico primário (pressão ou volume).",
+				"correctAnswer": "Na Estenose Aórtica ocorre Hipertrofia Concêntrica (espessamento da parede sem dilatação inicial), secundária à sobrecarga de pressão (pós-carga elevada). Na Regurgitação Aórtica ocorre Hipertrofia Excêntrica (dilatação da cavidade com aumento da massa), secundária à sobrecarga de volume (pré-carga elevada).",
+				"keywords": [
+					"Hipertrofia Concêntrica (Sobrecarga de Pressão)",
+					"Hipertrofia Excêntrica (Sobrecarga de Volume)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 7,
+		"title": "Anatomia Topográfica Femoral",
+		"vignette": "Durante o atendimento a um paciente em choque, é indicada a realização de punção venosa femoral de emergência, guiada por referências anatômicas, seguida da inserção de um cateter para monitorização invasiva. ",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::03 Sistema Vascular::05 Acesso Femoral",
+			"Ciclo Básico::Cardiologia::02 Anatomia::09 Cateterismo Cardíaco"
+		],
+		"questions": [
+			{
+				"text": "Descreva a relação anatômica da Veia Femoral em relação à Artéria Femoral, utilizando as referências do trígono femoral.",
+				"correctAnswer": "A organização anatômica no trígono femoral, de Lateral para Medial, segue a ordem: Nervo, Artéria, Veia, Linfáticos (mnemônico NAVeL). Portanto, a Veia Femoral é medial à Artéria Femoral.",
+				"keywords": [
+					"Veia Medial à Artéria",
+					"Mnemônico NAVeL (Lateral $\\rightarrow$ Medial)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Considerando a anatomia da Bainha Femoral (Femoral Sheath), qual estrutura neurovascular principal do trígono femoral encontra-se fora deste compartimento fascial?",
+				"correctAnswer": "O Nervo Femoral situa-se fora da bainha femoral. A bainha envolve apenas a artéria, a veia e o canal femoral (contendo linfáticos profundos).",
+				"keywords": ["Nervo Femoral (Retroperitoneal/Extra-bainha)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 8,
+		"title": "Circulação Fetal e Neonatal",
+		"vignette": "A transição da circulação fetal para a neonatal depende do fechamento funcional e anatômico do ducto arterioso (canal arterial). Falhas nesse processo ou a necessidade de manipulá-lo terapeuticamente são comuns na neonatologia. ",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::21 Cardiopatias Congênitas Acianóticas::05 Persistência do Canal Arterial",
+			"Ciclo Básico::Cardiologia::01 Embriologia::04 Derivados do Arco Aórtico e Arcos Faríngeos"
+		],
+		"questions": [
+			{
+				"text": "Cite os dois principais estímulos fisiológicos que ocorrem após o nascimento e desencadeiam o fechamento natural do canal arterial.",
+				"correctAnswer": "O fechamento é desencadeado pelo aumento da tensão de oxigênio ($PaO_2$) decorrente do início da respiração pulmonar e pela queda nos níveis de Prostaglandinas (PGE2) devido à remoção da placenta (principal fonte de produção fetal) e aumento do metabolismo pulmonar das mesmas.",
+				"keywords": ["Aumento da $PaO_2$", "Queda de Prostaglandinas"],
+				"order": 1
+			},
+			{
+				"text": "Em um recém-nascido prematuro com Persistência do Canal Arterial (PCA) hemodinamicamente significativa, qual classe farmacológica é indicada para induzir o fechamento e qual é o seu mecanismo de ação?",
+				"correctAnswer": "Indica-se o uso de AINEs (como Indometacina ou Ibuprofeno). O mecanismo de ação é a inibição da enzima Ciclooxigenase (COX), bloqueando a síntese de prostaglandinas que mantêm o ducto patente.",
+				"keywords": ["Indometacina (Inibidor da COX)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 9,
+		"title": "Comunicação Interatrial (CIA)",
+		"vignette": "Um paciente adulto, previamente assintomático, é avaliado por um sopro cardíaco sistólico. A ausculta revela uma alteração específica na segunda bulha (B2) e o ecocardiograma confirma um Defeito do Septo Atrial (DSA) tipo Ostium Secundum. ",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::21 Cardiopatias Congênitas Acianóticas::03 Defeito do Septo Atrial",
+			"Ciclo Básico::Cardiologia::09 Ciclo Cardíaco::02 Bulhas Cardíacas"
+		],
+		"questions": [
+			{
+				"text": "Descreva a característica semiológica do desdobramento da B2 neste paciente e explique o que o diferencia do desdobramento fisiológico.",
+				"correctAnswer": "Ocorre o desdobramento fixo e amplo de B2. Diferencia-se do fisiológico por não variar com os ciclos respiratórios (inspiração/expiração), devido à equalização das pressões atriais e ao volume diastólico aumentado constante no ventrículo direito, que atrasa o fechamento da valva pulmonar.",
+				"keywords": ["Desdobramento Fixo de B2", "Independente da Respiração"],
+				"order": 1
+			},
+			{
+				"text": "Em um defeito não complicado (sem hipertensão pulmonar grave), qual é a direção do fluxo sanguíneo (shunt) através do septo?",
+				"correctAnswer": "O fluxo ocorre da Esquerda para a Direita (Left-to-Right shunt), devido à maior complacência do ventrículo direito e pressões atriais esquerdas ligeiramente superiores, não causando cianose nas fases iniciais.",
+				"keywords": ["Shunt Esquerda-Direita"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 10,
+		"title": "Síndrome da Veia Cava Superior",
+		"vignette": "Um paciente oncológico apresenta quadro clássico de Síndrome da Veia Cava Superior (SVCS), manifestando pletora facial, edema em \"pelerine\" e distensão venosa jugular fixa. ",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::03 Sistema Vascular::03 Obstrução da Drenagem Venosa"
+		],
+		"questions": [
+			{
+				"text": "Excluindo a compressão extrínseca tumoral, cite a principal causa iatrogênica associada ao desenvolvimento desta síndrome na prática hospitalar moderna.",
+				"correctAnswer": "A principal causa iatrogênica é a trombose venosa associada a dispositivos intravasculares, como cateteres venosos centrais de longa permanência (Port-a-cath, Hickman) ou cabos de marcapasso.",
+				"keywords": ["Trombose por Cateter Venoso Central"],
+				"order": 1
+			},
+			{
+				"text": "Em casos de obstrução aguda grave, o aumento retrógrado da pressão venosa pode elevar a pressão intracraniana. Quais sintomas neurológicos devem ser monitorados como sinais de alarme?",
+				"correctAnswer": "Devem ser monitorados sinais de edema cerebral, manifestando-se principalmente como cefaleia, tontura, alterações visuais ou rebaixamento do nível de consciência.",
+				"keywords": ["Edema Cerebral", "Cefaleia e Alteração de Consciência"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 11,
+		"title": "Eletrofisiologia Cardíaca",
+		"vignette": "A sincronia e a eficiência da contração cardíaca dependem das variações na velocidade de condução do impulso elétrico através das diferentes estruturas do coração. Considere a fisiologia do sistema de condução para responder aos itens abaixo.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::12 Fisiologia Condutiva Cardíaca::01 Sistema de Condução Cardíaca"
+		],
+		"questions": [
+			{
+				"text": "Em qual estrutura do sistema de condução a velocidade é a mais lenta e qual é a função fisiológica desse atraso?",
+				"correctAnswer": "A velocidade é mais lenta no Nó Atrioventricular (AV) (aproximadamente 0,05 m/s). Esse atraso, de cerca de 100ms, é crucial para permitir que os átrios completem sua contração e ejetem sangue para os ventrículos antes que a sístole ventricular comece, otimizando o enchimento ventricular (contração atrial).",
+				"keywords": ["Nó AV", "Atraso fisiológico", "Enchimento ventricular"],
+				"order": 1
+			},
+			{
+				"text": "Em qual estrutura a velocidade de condução é a mais rápida e qual o objetivo fisiológico dessa característica?",
+				"correctAnswer": "A velocidade é mais rápida nas Fibras de Purkinje (até 4 m/s). A alta velocidade é necessária para garantir que o impulso elétrico atinja todas as porções dos ventrículos quase simultaneamente, resultando em uma contração ventricular coordenada e eficiente.",
+				"keywords": [
+					"Fibras de Purkinje",
+					"Contração sincrônica",
+					"Contração simultânea"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 12,
+		"title": "Embriologia Cardíaca",
+		"vignette": "Malformações congênitas frequentemente resultam de falhas no desenvolvimento de populações celulares embrionárias específicas. Correlacione as estruturas embrionárias listadas abaixo com as estruturas cardíacas definitivas que elas formam no adulto.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::01 Embriologia::01 Derivados Embriológicos"
+		],
+		"questions": [
+			{
+				"text": "Quais estruturas derivam das Almofadas Endocárdicas (Endocardial Cushions)?",
+				"correctAnswer": "As Almofadas Endocárdicas são fundamentais para a septação do coração. Elas formam o septo atrial (primum), a porção membranosa do septo interventricular e as válvulas atrioventriculares (mitral e tricúspide). Defeitos aqui causam defeitos do septo atrioventricular.",
+				"keywords": [
+					"Almofadas Endocárdicas",
+					"Septo atrial",
+					"Septo interventricular",
+					"Válvulas AV"
+				],
+				"order": 1
+			},
+			{
+				"text": "Quais estruturas derivam da interação entre Células da Crista Neural e Células Endocárdicas?",
+				"correctAnswer": "As células da Crista Neural migram e interagem para formar o Septo Aorticopulmonar. Elas são responsáveis pela divisão do tronco arterioso nos tratos de saída (Aorta ascendente e Tronco Pulmonar). Falhas aqui resultam em defeitos troncoconais (ex: Tetralogia de Fallot, Transposição das Grandes Artérias).",
+				"keywords": [
+					"Crista Neural",
+					"Septo Aorticopulmonar",
+					"Tratos de saída"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 13,
+		"title": "Ciclo Cardíaco (Pressão-Volume)",
+		"vignette": "No diagrama de Pressão-Volume do ventrículo esquerdo, identificam-se duas fases isovolumétricas, caracterizadas pela manutenção constante do volume sanguíneo intraventricular apesar da mudança de pressão. Descreva o estado (aberto ou fechado) das válvulas Mitral e Aórtica durante as fases abaixo.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::06 Alças Pressão-Volume::01 Princípios Básicos",
+			"Ciclo Básico::Cardiologia::09 Ciclo Cardíaco::03 Ciclo Cardíaco"
+		],
+		"questions": [
+			{
+				"text": "A Fase de Contração Isovolumétrica.",
+				"correctAnswer": "Contração Isovolumétrica: Ambas as válvulas estão FECHADAS. A pressão ventricular aumentou o suficiente para fechar a válvula Mitral, mas ainda não atingiu o nível necessário para abrir a válvula Aórtica.",
+				"keywords": ["Ambas fechadas", "Pressão ventricular < Aórtica"],
+				"order": 1
+			},
+			{
+				"text": "A Fase de Relaxamento Isovolumétrico.",
+				"correctAnswer": "Relaxamento Isovolumétrico: Ambas as válvulas estão FECHADAS. A pressão ventricular caiu abaixo da pressão aórtica (fechando a Aórtica), mas ainda não caiu o suficiente para permitir a abertura da válvula Mitral.",
+				"keywords": ["Ambas fechadas", "Pressão ventricular > Atrial"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 14,
+		"title": "Metabolismo e Circulação Coronariana",
+		"vignette": "O miocárdio possui uma demanda metabólica elevada e características únicas de perfusão. Sabe-se que o coração possui a taxa de extração de oxigênio mais alta entre os órgãos corporais, extraindo quase a totalidade do oxigênio disponível no sangue arterial mesmo em repouso.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::07 Fluxo Sanguíneo Coronariano e Autorregulação"
+		],
+		"questions": [
+			{
+				"text": "Diante de um aumento na demanda miocárdica de oxigênio (como no exercício), qual é o único mecanismo compensatório capaz de suprir essa necessidade? Justifique.",
+				"correctAnswer": "A compensação ocorre exclusivamente pelo aumento do Fluxo Sanguíneo Coronariano. Como a extração de oxigênio já é quase máxima em repouso (diferente do músculo esquelético, que pode aumentar a extração), o coração não consegue retirar mais oxigênio por unidade de sangue; portanto, deve aumentar a oferta de volume sanguíneo (vasodilatação).",
+				"keywords": ["Aumento do Fluxo Coronariano", "Extração de O2 máxima"],
+				"order": 1
+			},
+			{
+				"text": "Cite os dois principais metabólitos locais responsáveis pela regulação desse mecanismo (vasodilatação coronariana).",
+				"correctAnswer": "Os principais vasodilatadores locais são a Adenosina (produto da quebra de ATP) e o Óxido Nítrico (NO).",
+				"keywords": ["Adenosina", "Óxido Nítrico"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 15,
+		"title": "Anatomia Cirúrgica Vascular",
+		"vignette": "Durante um procedimento de acesso venoso por dissecção (flebotomia) ou para a retirada de enxerto vascular no nível do tornozelo, é necessário identificar corretamente a Veia Safena Magna.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::03 Sistema Vascular::04 Revascularização do Miocárdio"
+		],
+		"questions": [
+			{
+				"text": "Qual é a relação anatômica da Veia Safena Magna com o maléolo medial?",
+				"correctAnswer": "A Veia Safena Magna localiza-se ANTERIOR ao maléolo medial. Esta relação é constante e serve como ponto de referência crítico para procedimentos de dissecção venosa de urgência.",
+				"keywords": ["Anterior ao maléolo medial", "Veia Safena Magna"],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 16,
+		"title": "Correlação Anátomo-Clínica (Cardiologia)",
+		"vignette": "Um paciente diagnosticado com Estenose Mitral grave e de longa data evolui com sintomas compressivos extra-cardíacos, apresentando disfagia e rouquidão persistente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": ["Ciclo Básico::Cardiologia::20 Doença Valvar::04 Estenose Mitral"],
+		"questions": [
+			{
+				"text": "Qual alteração estrutural (remodelamento de câmara) é a causa desses sintomas?",
+				"correctAnswer": "Dilatação (aumento) do Átrio Esquerdo.",
+				"keywords": ["Átrio Esquerdo", "Dilatação atrial"],
+				"order": 1
+			},
+			{
+				"text": "Explique a base anatômica para a disfagia e a rouquidão (Síndrome de Ortner) neste contexto.",
+				"correctAnswer": "O átrio esquerdo é a estrutura mais posterior do coração. Sua dilatação severa comprime estruturas adjacentes: Disfagia ocorre pela compressão do esôfago, que cursa imediatamente posterior ao átrio. Rouquidão ocorre pela compressão do nervo laríngeo recorrente esquerdo (geralmente comprimido entre a artéria pulmonar dilatada e a aorta, ou diretamente pelo átrio elevado), causando paralisia da corda vocal.",
+				"keywords": [
+					"Compressão do Esôfago",
+					"Nervo Laríngeo Recorrente",
+					"Síndrome de Ortner"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 17,
+		"title": "Monitorização Hemodinâmica e Fisiologia Cardíaca",
+		"vignette": "Na unidade de terapia intensiva, a compreensão das variáveis fisiológicas é fundamental para a interpretação de ferramentas de monitoramento invasivo. Considere o uso do cateter de artéria pulmonar (Swan-Ganz) e o cálculo do débito cardíaco.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::02 Anatomia::09 Cateterismo Cardíaco",
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::05 Débito Cardíaco"
+		],
+		"questions": [
+			{
+				"text": "A Pressão de Oclusão da Artéria Pulmonar (POAP ou wedge pressure), obtida pelo cateter de Swan-Ganz, é considerada uma estimativa hemodinâmica da pressão de qual câmara cardíaca?",
+				"correctAnswer": "A POAP reflete a Pressão do Átrio Esquerdo. Quando o balão oclui a artéria pulmonar, cria-se uma coluna de sangue estática entre a ponta do cateter e o átrio esquerdo, permitindo a aferição indireta da pressão nesta câmara e, consequentemente, da pré-carga do ventrículo esquerdo (na ausência de estenose mitral).",
+				"keywords": ["Átrio Esquerdo", "Pressão Atrial Esquerda"],
+				"order": 1
+			},
+			{
+				"text": "Segundo o Princípio de Fick, quais são as três variáveis obrigatórias para o cálculo do Débito Cardíaco?",
+				"correctAnswer": "As variáveis necessárias são: (1) Consumo de oxigênio pelo organismo ($VO_2$), (2) Conteúdo arterial de oxigênio ($CaO_2$) e (3) Conteúdo venoso misto de oxigênio ($CvO_2$). A fórmula é expressa como: $$DC = \\frac{VO_2}{CaO_2 - CvO_2}$$",
+				"keywords": [
+					"Consumo de O2",
+					"VO2",
+					"Conteúdo Arterial de O2",
+					"Conteúdo Venoso Misto de O2"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 18,
+		"title": "Fisiopatologia do Débito Cardíaco e Retorno Venoso",
+		"vignette": "Diferentes condições patológicas podem cursar com estados hiperdinâmicos ou alterações significativas no Débito Cardíaco (DC). Compare a fisiopatologia do Retorno Venoso (RV) na Anemia Crônica severa e na Anafilaxia.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::05 Curvas de Função Cardíaca e Retorno Venoso::02 Curvas de Retorno Venoso",
+			"Ciclo Básico::Cardiologia::28 Choque::06 Choque Anafilático"
+		],
+		"questions": [
+			{
+				"text": "Na Anemia Crônica, como se comporta o Retorno Venoso? Justifique.",
+				"correctAnswer": "Na Anemia Crônica, o Retorno Venoso está aumentado. A redução da massa eritrocitária diminui a viscosidade sanguínea, reduzindo a resistência ao fluxo. Somado à vasodilatação periférica compensatória (para manter a oferta de O2), há um aumento do fluxo de sangue de volta ao coração.",
+				"keywords": [
+					"Aumentado",
+					"Menor viscosidade",
+					"Vasodilatação periférica"
+				],
+				"order": 1
+			},
+			{
+				"text": "Na Anafilaxia, como se comporta o Retorno Venoso? Justifique.",
+				"correctAnswer": "Na Anafilaxia, o Retorno Venoso está diminuído. Ocorre uma venodilatação massiva associada ao aumento da permeabilidade capilar. Isso provoca extravasamento de fluido para o terceiro espaço e represamento sanguíneo na periferia (diminuição do volume circulante efetivo), reduzindo a pré-carga cardíaca.",
+				"keywords": [
+					"Diminuído",
+					"Venodilatação",
+					"Aumento da permeabilidade capilar",
+					"sequestro de fluido"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 19,
+		"title": "Cardiologia Clínica e Defeitos Congênitos",
+		"vignette": "Responda objetivamente às questões abaixo referentes a arritmias e cardiopatias congênitas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::14 Arritmias Atriais::02 Flutter Atrial",
+			"Ciclo Básico::Cardiologia::22 Cardiopatias Congênitas Cianóticas::04 Tronco Arterioso Persistente"
+		],
+		"questions": [
+			{
+				"text": "Qual é o tratamento definitivo de escolha para o Flutter Atrial?",
+				"correctAnswer": "O tratamento definitivo é a Ablação por Cateter (radiofrequência) do istmo cavotricuspídeo, visando interromper o circuito de reentrada macroscópica.",
+				"keywords": ["Ablação por cateter", "radiofrequência"],
+				"order": 1
+			},
+			{
+				"text": "Qual a definição anatômica do Truncus Arteriosus Persistente?",
+				"correctAnswer": "O Truncus Arteriosus é caracterizado pela falha na septação do tronco conal, resultando em um único grande vaso que emerge de ambos os ventrículos, recebendo sangue misto do ventrículo direito e esquerdo, antes de se dividir nas artérias sistêmicas e pulmonares.",
+				"keywords": [
+					"Único vaso",
+					"tronco comum",
+					"Falha na septação aortopulmonar",
+					"Ventrículos direito e esquerdo"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 20,
+		"title": "Farmacologia Cardiovascular e Hemodinâmica",
+		"vignette": "A manipulação farmacológica da pré-carga e da pós-carga é essencial no manejo da insuficiência cardíaca e da hipertensão. Diferencie o mecanismo de ação hemodinâmico primário da Nitroglicerina e da Hidralazina.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::07 Vasodilatação e Vasoconstrição::04 Alvos Farmacológicos"
+		],
+		"questions": [
+			{
+				"text": "Qual a classificação vascular primária da Nitroglicerina e seu efeito predominante na mecânica cardíaca?",
+				"correctAnswer": "A Nitroglicerina é primariamente um venodilatador. Seu efeito principal é a redução da pré-carga, diminuindo o retorno venoso e a tensão na parede ventricular diastólica.",
+				"keywords": ["Venodilatador", "Redução de Pré-carga"],
+				"order": 1
+			},
+			{
+				"text": "Qual a classificação vascular primária da Hidralazina e seu efeito predominante na mecânica cardíaca?",
+				"correctAnswer": "A Hidralazina é um vasodilatador arterial (arteriolar) direto. Seu efeito principal é a redução da pós-carga, diminuindo a Resistência Vascular Sistêmica (RVS) contra a qual o ventrículo deve bombear.",
+				"keywords": ["Vasodilatador arterial", "Redução de Pós-carga"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 21,
+		"title": "Sinais Vitais e Pressão Arterial",
+		"vignette": "Um paciente apresenta, durante o exame físico, uma pressão arterial não invasiva de 120/90 mmHg. O cálculo preciso da Pressão Arterial Média (PAM) é necessário para estimar a perfusão tecidual.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::06 Pressão Arterial Média"
+		],
+		"questions": [
+			{
+				"text": "Qual a fórmula padrão para o cálculo da PAM baseada nas pressões sistólica (PAS) e diastólica (PAD)?",
+				"correctAnswer": "A fórmula é baseada no fato de que a diástole dura aproximadamente dois terços do ciclo cardíaco: $$PAM = \\frac{2 \\times PAD + PAS}{3}$$ Alternativamente: $PAM = PAD + \\frac{1}{3}(PAS - PAD)$",
+				"keywords": ["2/3 Diastólica + 1/3 Sistólica"],
+				"order": 1
+			},
+			{
+				"text": "Calcule a PAM do paciente citado.",
+				"correctAnswer": "Aplicando os valores (PAD = 90, PAS = 120): $$PAM = \\frac{2(90) + 120}{3} = \\frac{180 + 120}{3} = \\frac{300}{3} = 100 \\text{ mmHg}$$",
+				"keywords": ["100 mmHg"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 22,
+		"title": "Neurologia Vascular e Cardiopatia Estrutural",
+		"vignette": "Pacientes com Forame Oval Patente (FOP) podem apresentar eventos neurológicos isquêmicos agudos na vigência de trombose venosa profunda (TVP).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::21 Cardiopatias Congênitas Acianóticas::04 Forame Oval Patente"
+		],
+		"questions": [
+			{
+				"text": "Qual é o termo médico para o evento isquêmico (AVC) decorrente deste mecanismo?",
+				"correctAnswer": "Embolia Paradoxal.",
+				"keywords": ["Embolia Paradoxal"],
+				"order": 1
+			},
+			{
+				"text": "Explique a fisiopatologia que justifica o termo \"paradoxal\" nesta condição.",
+				"correctAnswer": "O termo \"paradoxal\" refere-se à passagem de um êmbolo de origem venosa (que fisiologicamente ficaria retido na circulação pulmonar) para a circulação arterial sistêmica. Isso ocorre através de um shunt direita-esquerda (como o FOP), permitindo que o coágulo \"pule\" o filtro pulmonar e cause oclusão em artérias cerebrais ou periféricas.",
+				"keywords": [
+					"Shunt direita-esquerda",
+					"passagem átrio direito para esquerdo",
+					"Êmbolo venoso na circulação arterial",
+					"Bypass pulmonar"
+				],
+				"order": 2
+			}
+		]
+	}
+]
