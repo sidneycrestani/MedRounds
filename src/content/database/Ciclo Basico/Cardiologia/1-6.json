@@ -595,5 +595,183 @@
 				"order": 2
 			}
 		]
+	},
+	{
+		"id": 30,
+		"title": "Dispositivos Cardíacos e Vasculares",
+		"vignette": "Durante a discussão de condutas terapêuticas invasivas em cardiologia e cirurgia vascular, abordam-se técnicas de implante de dispositivos de estimulação cardíaca e manejo de tromboembolismo venoso em situações complexas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::02 Anatomia::08 Seio Coronário",
+			"Ciclo Básico::Cardiologia::03 Sistema Vascular::06 Veia Cava Inferior"
+		],
+		"questions": [
+			{
+				"text": "Na terapia de ressincronização cardíaca (marcapasso biventricular), além dos eletrodos no átrio e ventrículo direitos, onde deve ser posicionado o terceiro eletrodo para estimular o ventrículo esquerdo?",
+				"correctAnswer": "O eletrodo ventricular esquerdo é inserido através do Seio Coronário. Esta via permite o acesso às veias epicárdicas póstero-laterais, possibilitando a estimulação da parede lateral do ventrículo esquerdo sem a necessidade de toracotomia.",
+				"keywords": ["Seio Coronário"],
+				"order": 1
+			},
+			{
+				"text": "Qual é a conduta intervencionista indicada para prevenção de embolia pulmonar em pacientes com TVP recorrente e contraindicação absoluta à anticoagulação?",
+				"correctAnswer": "Implante de Filtro de Veia Cava Inferior (VCI). O dispositivo impede mecanicamente que trombos formados nos membros inferiores migrem para a circulação pulmonar.",
+				"keywords": ["Filtro de Veia Cava Inferior"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 31,
+		"title": "Fisiologia da Pressão de Pulso",
+		"vignette": "A avaliação hemodinâmica à beira-leito inclui a análise da Pressão de Pulso (PP), definida como a diferença entre a pressão sistólica e a diastólica ($PP = PAS - PAD$).",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::01 Volume Sistólico",
+			"Ciclo Básico::Cardiologia::08 Fisiologia de Pressão e Fluxo::01 Complacência Vascular"
+		],
+		"questions": [
+			{
+				"text": "Baseando-se na fisiologia cardiovascular, a Pressão de Pulso é diretamente proporcional ao:",
+				"correctAnswer": "Volume Sistólico (Stroke Volume). Um maior volume ejetado distende mais a aorta, aumentando a pressão sistólica e, consequentemente, a pressão de pulso.",
+				"keywords": ["Volume Sistólico"],
+				"order": 1
+			},
+			{
+				"text": "Baseando-se na fisiologia cardiovascular, a Pressão de Pulso é inversamente proporcional à:",
+				"correctAnswer": "Complacência Arterial. Vasos mais rígidos (menor complacência, comum em idosos) têm menor capacidade de amortecimento, resultando em elevação da sistólica e queda da diastólica, o que amplia a pressão de pulso.",
+				"keywords": ["Complacência Arterial"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 32,
+		"title": "Farmacologia Cardiovascular - Dobutamina",
+		"vignette": "Paciente em choque cardiogênico inicia suporte inotrópico com Dobutamina.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Cardiologia::05 Farmacologia::01 Farmacologia Cardiovascular I",
+			"Ciclo Básico::Cardiologia::17 Insuficiência Cardíaca::05 Alvos Farmacológicos"
+		],
+		"questions": [
+			{
+				"text": "Qual é o receptor adrenérgico primário estimulado por este fármaco?",
+				"correctAnswer": "A Dobutamina é um agonista seletivo dos receptores Beta-1 ($\\beta_1$) adrenérgicos.",
+				"keywords": ["Agonista Beta-1"],
+				"order": 1
+			},
+			{
+				"text": "Cite os dois efeitos hemodinâmicos diretos resultantes dessa estimulação no miocárdio.",
+				"correctAnswer": "A estimulação $\\beta_1$ promove inotropismo positivo (aumento da força de contratilidade) e cronotropismo positivo (aumento da frequência cardíaca), elevando o débito cardíaco.",
+				"keywords": ["Inotropismo positivo", "Cronotropismo positivo"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 33,
+		"title": "Fisiologia da Perfusão Coronariana",
+		"vignette": "É um conceito estabelecido que o fluxo coronariano para o Ventrículo Esquerdo (VE) ocorre predominantemente durante a diástole, devido à compressão vascular intramural durante a sístole.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::07 Fluxo Sanguíneo Coronariano e Autorregulação"
+		],
+		"questions": [
+			{
+				"text": "Esse padrão de fluxo exclusivamente diastólico se aplica ao Ventrículo Direito (VD)?",
+				"correctAnswer": "Não. O fluxo coronariano para o VD é contínuo (ocorre tanto na sístole quanto na diástole).",
+				"keywords": ["Fluxo contínuo"],
+				"order": 1
+			},
+			{
+				"text": "Justifique sua resposta com base nas pressões cavitárias.",
+				"correctAnswer": "O VD trabalha com pressões sistólicas muito inferiores às do VE. A tensão gerada na parede do VD durante a sístole não é suficiente para superar a pressão arterial sistêmica nas coronárias, permitindo que o fluxo sanguíneo ocorra mesmo durante a contração ventricular.",
+				"keywords": ["Baixa pressão parietal", "Tensão sistólica reduzida"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 34,
+		"title": "Cardiopatias Congênitas e Fatores de Risco",
+		"vignette": "Durante a anamnese neonatal, identifica-se que a mãe é portadora de Diabetes Mellitus pré-gestacional mal controlado.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::22 Cardiopatias Congênitas Cianóticas::03 Transposição dos Grandes Vasos"
+		],
+		"questions": [
+			{
+				"text": "Além da Hipertrofia Septal Assimétrica e da CIV, qual é a cardiopatia congênita cianótica classicamente associada à diabetes materna?",
+				"correctAnswer": "A Transposição das Grandes Artérias (TGA). A exposição à hiperglicemia materna no período de organogênese é um fator de risco estabelecido para defeitos troncoconais, sendo a TGA a cardiopatia cianótica mais representativa nesse grupo.",
+				"keywords": ["Transposição das Grandes Artérias", "TGA"],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 35,
+		"title": "Cálculo de Função Ventricular",
+		"vignette": "Um ecocardiograma transtorácico apresenta os seguintes parâmetros volumétricos do ventrículo esquerdo: Volume Diastólico Final (EDV) = 120 mL e Volume Sistólico Final (ESV) = 50 mL.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::04 Parâmetros Cardíacos da Função Fisiológica::01 Volume Sistólico"
+		],
+		"questions": [
+			{
+				"text": "Calcule o Volume Sistólico (SV).",
+				"correctAnswer": "$SV = EDV - ESV \\rightarrow 120 - 50 = \\mathbf{70\\ mL}$.",
+				"keywords": ["70 mL"],
+				"order": 1
+			},
+			{
+				"text": "Calcule a Fração de Ejeção (EF) e demonstre a fórmula utilizada.",
+				"correctAnswer": "$EF = \\frac{SV}{EDV} \\times 100 \\rightarrow \\frac{70}{120} \\approx \\mathbf{58\\%}$.",
+				"keywords": ["58%"],
+				"order": 2
+			},
+			{
+				"text": "Este valor de EF é considerado preservado ou reduzido?",
+				"correctAnswer": "Preservado. Valores de Fração de Ejeção $\\geq 50-55\\%$ são considerados normais.",
+				"keywords": ["Normal", "Preservada"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 36,
+		"title": "Circulação Fetal e Anatomia",
+		"vignette": "Após o nascimento, as alterações nas resistências vasculares pulmonar e sistêmica levam ao fechamento funcional e anatômico de shunts fetais. Identifique a estrutura anatômica remanescente no adulto correspondente às seguintes estruturas fetais:",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Básico::Cardiologia::01 Embriologia::01 Derivados Embriológicos"
+		],
+		"questions": [
+			{
+				"text": "Ductus Arteriosus (Ducto Arterioso)",
+				"correctAnswer": "Ligamentum Arteriosum (Ligamento Arterioso). Conecta a artéria pulmonar esquerda ao arco aórtico.",
+				"keywords": ["Ligamento Arterioso"],
+				"order": 1
+			},
+			{
+				"text": "Foramen Ovale (Forame Oval)",
+				"correctAnswer": "Fossa Ovalis (Fossa Oval). Depressão localizada no septo interatrial.",
+				"keywords": ["Fossa Oval"],
+				"order": 2
+			}
+		]
 	}
 ]
