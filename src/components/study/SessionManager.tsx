@@ -11,6 +11,7 @@ type PublicCaseQuestion = {
 	text: string;
 	media?: string;
 	order: number;
+	correctAnswer: string; // Updated interface
 };
 type PublicCaseData = {
 	id: number;

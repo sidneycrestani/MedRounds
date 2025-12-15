@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { NavigationTabs } from "@/components/ui/navigation-tabs";
 import { createBrowserClient } from "@supabase/ssr";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { Check, Eye, X } from "lucide-react";
 import { useState } from "react";
 import { CaseFeedbackSchema } from "../types";
 import AnswerInput from "./AnswerInput";
@@ -14,6 +15,7 @@ interface PublicCaseQuestion {
 	text: string;
 	media?: string;
 	order: number;
+	correctAnswer: string; // Updated interface
 }
 
 interface PublicCaseData {
@@ -77,6 +79,9 @@ export default function CaseStudyClient({
 	const [results, setResults] = useState<(ResultData | null)[]>(() =>
 		Array.from({ length: data.questions.length }, () => null),
 	);
+	const [revealedQuestionIds, setRevealedQuestionIds] = useState<Set<number>>(
+		new Set(),
+	);
 
 	async function persistSrsAttempt(
 		caseId: number,
@@ -94,7 +99,7 @@ export default function CaseStudyClient({
 		}
 	}
 
-	async function submit() {
+	async function submitAI() {
 		const current = answers[activeIndex];
 		if (!current.trim()) return;
 		setLoading(true);
@@ -119,14 +124,6 @@ export default function CaseStudyClient({
 					return next;
 				});
 				persistSrsAttempt(data.id, parsed.score, question.order);
-				// const sorted = [...activeQuestionIndices].sort((a, b) => a - b);
-				// const nextOrder = sorted.find((o) => o > question.order);
-				// if (nextOrder !== undefined) {
-				// 	const nextIdx = data.questions.findIndex(
-				// 		(q) => q.order === nextOrder,
-				// 	);
-				// 	if (nextIdx >= 0) setActiveIndex(nextIdx);
-				// }
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");
@@ -134,6 +131,41 @@ export default function CaseStudyClient({
 		}
 		setLoading(false);
 	}
+
+	function handleReveal() {
+		const questionId = data.questions[activeIndex].id;
+		setRevealedQuestionIds((prev) => {
+			const next = new Set(prev);
+			next.add(questionId);
+			return next;
+		});
+	}
+
+	function handleSelfEvaluate(isCorrect: boolean) {
+		const question = data.questions[activeIndex];
+		const score = isCorrect ? 100 : 0;
+
+		// 1. Persist attempt
+		persistSrsAttempt(data.id, score, question.order);
+
+		// 2. Mock a result object to lock the UI and show feedback state
+		const mockResult: ResultData = {
+			isCorrect: isCorrect,
+			score: score,
+			feedback: "Auto-avaliação realizada.",
+			officialAnswer: question.correctAnswer,
+		};
+
+		setResults((prev) => {
+			const next = [...prev];
+			next[activeIndex] = mockResult;
+			return next;
+		});
+	}
+
+	const currentQuestion = data.questions[activeIndex];
+	const isRevealed = revealedQuestionIds.has(currentQuestion.id);
+	const hasResult = !!results[activeIndex];
 
 	return (
 		<div className="space-y-8 animate-in fade-in duration-500">
@@ -170,8 +202,8 @@ export default function CaseStudyClient({
 
 			<div className="space-y-4">
 				<QuestionDisplay
-					text={data.questions[activeIndex].text}
-					media={data.questions[activeIndex].media}
+					text={currentQuestion.text}
+					media={currentQuestion.media}
 				/>
 
 				<AnswerInput
@@ -183,19 +215,33 @@ export default function CaseStudyClient({
 							return next;
 						})
 					}
-					placeholder="Resposta..."
-					disabled={loading || !!results[activeIndex]}
+					placeholder="Sua resposta..."
+					disabled={loading || hasResult || isRevealed}
 				/>
 
-				{!results[activeIndex] && (
+				{/* ZONE OF ACTION */}
+
+				{/* 1. Initial State: Inputting */}
+				{!hasResult && !isRevealed && (
 					<div className="flex items-center gap-4">
 						<Button
-							onClick={submit}
+							onClick={submitAI}
 							loading={loading}
 							disabled={!answers[activeIndex]}
 						>
-							{loading ? "Consultando IA..." : "Enviar Resposta"}
+							{loading ? "Consultando IA..." : "Enviar para IA"}
 						</Button>
+
+						<Button
+							variant="ghost"
+							onClick={handleReveal}
+							disabled={loading}
+							className="text-gray-600"
+						>
+							<Eye className="w-4 h-4 mr-2" />
+							Ver Gabarito
+						</Button>
+
 						<div className="ml-auto flex items-center gap-2 text-sm">
 							{data.prevId && (
 								<a
@@ -217,13 +263,51 @@ export default function CaseStudyClient({
 					</div>
 				)}
 
-				{results[activeIndex] && (
+				{/* 2. Revealed State: Self-Evaluation */}
+				{!hasResult && isRevealed && (
+					<div className="space-y-6 animate-in fade-in slide-in-from-top-2">
+						<div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+							<h4 className="font-bold text-gray-700 text-sm uppercase mb-2">
+								Gabarito Oficial
+							</h4>
+							<div className="text-gray-900 whitespace-pre-line leading-relaxed">
+								{currentQuestion.correctAnswer}
+							</div>
+						</div>
+
+						<div className="flex items-center gap-3">
+							<span className="text-sm font-medium text-gray-600">
+								Como você se saiu?
+							</span>
+							<button
+								type="button"
+								onClick={() => handleSelfEvaluate(false)}
+								className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 font-medium transition-colors"
+							>
+								<X className="w-4 h-4" />
+								Errei / Revisar
+							</button>
+							<button
+								type="button"
+								onClick={() => handleSelfEvaluate(true)}
+								className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 font-medium transition-colors"
+							>
+								<Check className="w-4 h-4" />
+								Acertei
+							</button>
+						</div>
+					</div>
+				)}
+
+				{/* 3. Completed State: Feedback */}
+				{hasResult && results[activeIndex] && (
 					<FeedbackSection
 						isCorrect={!!results[activeIndex]?.isCorrect}
 						score={results[activeIndex]?.score ?? 0}
 						feedback={results[activeIndex]?.feedback ?? ""}
 						officialAnswer={results[activeIndex]?.officialAnswer ?? ""}
 						onRetry={() => {
+							// Reset logic
 							setResults((prev) => {
 								const next = [...prev];
 								next[activeIndex] = null;
@@ -234,9 +318,16 @@ export default function CaseStudyClient({
 								next[activeIndex] = "";
 								return next;
 							});
+							// Also clear reveal state if retrying
+							setRevealedQuestionIds((prev) => {
+								const next = new Set(prev);
+								next.delete(currentQuestion.id);
+								return next;
+							});
 						}}
 					/>
 				)}
+
 				{onCaseCompleted && (
 					<div className="flex items-center justify-end">
 						{activeQuestionIndices.length > 0 &&

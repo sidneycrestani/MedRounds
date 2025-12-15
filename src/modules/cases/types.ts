@@ -5,6 +5,7 @@ export const PublicQuestionSchema = z.object({
 	text: z.string(),
 	media: z.string().url().optional(),
 	order: z.number().int(),
+	correctAnswer: z.string(),
 });
 
 export const FullCaseSchema = z.object({

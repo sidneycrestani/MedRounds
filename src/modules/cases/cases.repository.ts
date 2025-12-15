@@ -36,6 +36,7 @@ export async function getCaseById(db: Database, id: number) {
 			text: q.questionText,
 			media: q.contextImageUrl ?? undefined,
 			order: q.orderIndex,
+			correctAnswer: q.correctAnswerText,
 		})),
 	});
 	return parsed;
