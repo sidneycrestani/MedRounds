@@ -2,31 +2,11 @@
 import { createBrowserClient } from "@supabase/ssr";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { useMemo, useState } from "react";
-import { CaseFeedbackSchema } from "../types";
+import { CaseFeedbackSchema, type PublicCaseDataDTO } from "../types";
 
-// Types needed for the hook (extracted from the component)
 export interface EnvConfig {
 	supabaseUrl: string;
 	supabaseAnonKey: string;
-}
-
-export interface PublicCaseQuestion {
-	id: number;
-	text: string;
-	media?: string;
-	order: number;
-	correctAnswer: string;
-}
-
-export interface PublicCaseData {
-	id: number;
-	title: string;
-	vignette: string;
-	media?: string;
-	questions: PublicCaseQuestion[];
-	prevId: number | null;
-	nextId: number | null;
-	searchParams: string;
 }
 
 export type ResultData = {
@@ -43,7 +23,7 @@ type UserProgress = Record<
 >;
 
 interface UseCaseSessionProps {
-	data: PublicCaseData;
+	data: PublicCaseDataDTO;
 	env: EnvConfig;
 	activeQuestionIndices: number[];
 	userProgress: UserProgress | null;

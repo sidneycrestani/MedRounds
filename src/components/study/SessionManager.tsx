@@ -1,28 +1,9 @@
 import StudyDashboard from "@/components/study/StudyDashboard";
 import { Skeleton } from "@/components/ui/skeleton";
 import CaseStudyClient from "@/modules/cases/components/CaseStudyClient";
+import type { PublicCaseDataDTO, QueueItemDTO } from "@/modules/cases/types";
 import type { TagTreeItem } from "@/modules/taxonomy/services";
 import { useEffect, useState } from "react";
-
-// Tipos alinhados com a API
-type QueueItem = { caseId: number; activeQuestionIndices: number[] };
-type PublicCaseQuestion = {
-	id: number;
-	text: string;
-	media?: string;
-	order: number;
-	correctAnswer: string; // Updated interface
-};
-type PublicCaseData = {
-	id: number;
-	title: string;
-	vignette: string;
-	media?: string;
-	questions: PublicCaseQuestion[];
-	prevId: number | null;
-	nextId: number | null;
-	searchParams: string;
-};
 
 type SessionMode = "loading" | "dashboard" | "running" | "summary";
 
@@ -30,7 +11,7 @@ type SessionResponse =
 	| {
 			status: "active";
 			sessionId: string;
-			queue: QueueItem[];
+			queue: QueueItemDTO[];
 			progress: { current: number; total: number };
 	  }
 	| {
@@ -46,11 +27,10 @@ export default function SessionManager({
 	const [mode, setMode] = useState<SessionMode>("loading");
 
 	// Estado da Sessão Ativa
-	const [queue, setQueue] = useState<QueueItem[]>([]);
+	const [queue, setQueue] = useState<QueueItemDTO[]>([]);
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [currentCaseData, setCurrentCaseData] = useState<PublicCaseData | null>(
-		null,
-	);
+	const [currentCaseData, setCurrentCaseData] =
+		useState<PublicCaseDataDTO | null>(null);
 
 	// Estado para armazenar os índices que REALMENTE faltam fazer neste caso
 	const [computedActiveIndices, setComputedActiveIndices] = useState<number[]>(

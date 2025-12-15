@@ -1,7 +1,7 @@
+import type { QueueItemDTO } from "@/modules/cases/types";
 import {
 	integer,
 	jsonb,
-	pgEnum,
 	pgSchema,
 	text,
 	timestamp,
@@ -29,12 +29,6 @@ export const userPreferences = app.table("user_preferences", {
 		.notNull(),
 });
 
-// Definição do tipo de item da fila para consistência com o SessionManager
-type QueueItem = {
-	caseId: number;
-	activeQuestionIndices: number[];
-};
-
 export const studySessions = app.table("study_sessions", {
 	id: uuid("id").defaultRandom().primaryKey(),
 	userId: text("user_id").notNull(),
@@ -42,7 +36,7 @@ export const studySessions = app.table("study_sessions", {
 	currentIndex: integer("current_index").default(0).notNull(),
 	totalQuestions: integer("total_questions").notNull(),
 	// Armazena o estado completo da fila gerada para esta sessão
-	queueState: jsonb("queue_state").$type<QueueItem[]>().notNull(),
+	queueState: jsonb("queue_state").$type<QueueItemDTO[]>().notNull(),
 	createdAt: timestamp("created_at", { withTimezone: true })
 		.defaultNow()
 		.notNull(),

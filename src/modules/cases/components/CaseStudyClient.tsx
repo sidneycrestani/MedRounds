@@ -6,11 +6,8 @@ import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import {
-	type EnvConfig,
-	type PublicCaseData,
-	useCaseSession,
-} from "../hooks/useCaseSession";
+import { type EnvConfig, useCaseSession } from "../hooks/useCaseSession";
+import type { PublicCaseDataDTO } from "../types";
 import AnswerInput from "./AnswerInput";
 import CaseVignette from "./CaseVignette";
 import FeedbackSection from "./FeedbackSection";
@@ -23,7 +20,7 @@ export default function CaseStudyClient({
 	userProgress,
 	onCaseCompleted,
 }: {
-	data: PublicCaseData;
+	data: PublicCaseDataDTO;
 	env: EnvConfig;
 	activeQuestionIndices: number[];
 	userProgress: Record<
