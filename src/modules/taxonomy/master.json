@@ -201,5 +201,186 @@
 				"07 Choque Neurogênico": {}
 			}
 		}
+	},
+	"Cardiologia": {
+		"01 Arritmias": {
+			"01 Interpretação de ECG": {},
+			"02 ACLS e Taquicardias": {},
+			"03 Fibrilação Atrial e Flutter": {},
+			"04 Bradicardia": {}
+		},
+		"02 Doença Isquêmica do Coração": {
+			"01 Doença Arterial Coronariana": {},
+			"02 IAM com Supra de ST": {}
+		},
+		"03 Insuficiência Cardíaca": {
+			"01 Insuficiência Cardíaca I": {},
+			"02 Insuficiência Cardíaca II": {},
+			"03 Cardiomiopatia": {}
+		},
+		"04 Ausculta Cardíaca": {
+			"01 Sopros Cardíacos": {},
+			"02 Bulhas Cardíacas": {}
+		},
+		"05 Farmacologia": {
+			"01 Farmacologia Cardiovascular I": {},
+			"02 Farmacologia Cardiovascular II": {}
+		},
+		"06 Outros": {
+			"01 Doenças do Pericárdio": {},
+			"02 Valvopatias": {},
+			"03 Hiperlipidemia": {},
+			"04 Hipertensão": {},
+			"05 Doença Vascular Periférica": {},
+			"06 Doenças da Aorta": {}
+		}
+	},
+	"Medicina de Emergência": {
+		"01 Emergências": {
+			"01 Queimaduras": {},
+			"02 Toxicologia": {},
+			"03 Emergências Comuns": {},
+			"04 Dor Torácica e Dispneia": {}
+		},
+		"02 Trauma": {
+			"01 Fundamentos do Trauma": {},
+			"02 Trauma Cervical e Medular": {},
+			"03 Trauma Torácico": {},
+			"04 Trauma Abdominal": {},
+			"05 Trauma Pélvico": {},
+			"06 Fraturas": {}
+		}
+	},
+	"Endocrinologia": {
+		"01 Glândula Tireoide": {
+			"01 Hormônios Tireoidianos": {},
+			"02 Hipotireoidismo": {},
+			"03 Hipertireoidismo": {},
+			"04 Nódulos Tireoidianos": {}
+		},
+		"02 Glândulas Adrenais": {
+			"01 Hiperaldosteronismo": {},
+			"02 Síndrome de Cushing": {},
+			"03 Insuficiência Adrenal": {}
+		},
+		"03 Diabetes": {
+			"01 Diabetes Mellitus": {},
+			"02 Complicações do Diabetes": {},
+			"03 Cetoacidose Diabética": {},
+			"04 Insulina": {},
+			"05 Tratamento do Diabetes": {}
+		},
+		"04 Outros": {
+			"01 Hipófise": {},
+			"02 Hiperparatireoidismo": {},
+			"03 Hipoparatireoidismo e Vitamina D": {},
+			"04 Osteoporose": {}
+		}
+	},
+	"Epidemiologia": {
+		"01 Geral": {
+			"01 Estatística": {},
+			"02 Teste de Hipóteses": {},
+			"03 Testes de Significância": {},
+			"04 Correlações": {},
+			"05 Delineamentos de Estudo": {},
+			"06 Quantificação de Risco": {},
+			"07 Sensibilidade e Especificidade": {},
+			"08 Valores Preditivos": {},
+			"09 Testes Diagnósticos": {},
+			"10 Viés": {},
+			"11 Ensaios Clínicos": {},
+			"12 Medicina Baseada em Evidências": {}
+		}
+	},
+	"Gastroenterologia": {
+		"01 Esôfago e Estômago": {
+			"01 Distúrbios do Esôfago": {},
+			"02 DRGE e Câncer de Esôfago": {},
+			"03 Distúrbios Gástricos": {},
+			"04 Câncer Gástrico": {}
+		},
+		"02 Fígado": {
+			"01 Doença Hepática": {},
+			"02 Massas Hepáticas": {},
+			"03 Cirrose": {},
+			"04 Hepatites Virais": {},
+			"05 Hiperbilirrubinemia": {},
+			"06 Doença de Wilson": {},
+			"07 Hemocromatose": {}
+		},
+		"03 Vias Biliares e Pâncreas": {
+			"01 Doença Biliar": {},
+			"02 Colelitíase": {},
+			"03 Câncer de Pâncreas": {},
+			"04 Pancreatite": {}
+		},
+		"04 Intestinos": {
+			"01 Câncer de Cólon": {},
+			"02 Doença Colorretal": {},
+			"03 Doença do Intestino Delgado": {},
+			"04 Doença Inflamatória Intestinal": {}
+		},
+		"05 Outros": {
+			"01 Diarreia": {},
+			"02 Hemorragia Digestiva": {},
+			"03 Hérnias": {},
+			"04 Má Absorção": {},
+			"05 Farmacologia Gastrointestinal": {}
+		}
+	},
+	"Hematologia e Oncologia": {
+		"01 Hemácias": {
+			"01 Anemias Normocíticas": {},
+			"02 Anemias Microcíticas": {},
+			"03 Talassemias": {},
+			"04 Anemia Macrocítica": {},
+			"05 Hemólise Extrínseca": {},
+			"06 Hemólise Intrínseca": {},
+			"07 Doença Falciforme": {},
+			"08 Hemoderivados": {}
+		},
+		"02 Coagulação": {
+			"01 Trombocitopenia": {},
+			"02 Coagulopatia": {},
+			"03 Estados de Hipercoagulabilidade": {},
+			"04 Antiplaquetários": {},
+			"05 Anticoagulantes": {}
+		},
+		"03 Leucócitos": {
+			"01 Distúrbios dos Plasmócitos": {},
+			"02 Doenças Mieloproliferativas": {},
+			"03 Leucemias Agudas": {},
+			"04 Leucemias Crônicas": {},
+			"05 Linfoma de Hodgkin": {},
+			"06 Linfoma Não-Hodgkin": {},
+			"07 Amiloidose": {}
+		}
+	},
+	"Doenças Infecciosas": {
+		"01 Antibióticos": {
+			"01 Penicilinas": {},
+			"02 Beta-lactâmicos": {},
+			"03 Inibidores da Síntese Proteica": {},
+			"04 Outros Antibióticos": {}
+		},
+		"02 Fungos e Parasitas": {
+			"01 Infecções Fúngicas": {},
+			"02 Antifúngicos": {},
+			"03 Infecções por Protozoários": {},
+			"04 Malária": {}
+		},
+		"03 HIV": {
+			"01 Infecção pelo HIV": {},
+			"02 Medicamentos para HIV": {},
+			"03 Complicações do HIV": {}
+		},
+		"04 Outros": {
+			"01 Doenças Transmitidas por Carrapatos": {},
+			"02 Infecções Sexualmente Transmissíveis": {},
+			"03 Meningite": {},
+			"04 Tuberculose": {},
+			"05 Vacinação em Adultos": {}
+		}
 	}
 }

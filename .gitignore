@@ -40,4 +40,4 @@ repomix-output.xml
 coverage/
 .turbo/
 
-src/content/database/Ciclo Basico/
+.repomixignore

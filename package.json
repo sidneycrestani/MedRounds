@@ -15,7 +15,8 @@
 		"format": "biome format .",
 		"db:seed": "tsx src/db/seed-all.ts",
 		"content:lint": "tsx scripts/content-lint.ts",
-		"assign-ids": "tsx scripts/assign-official-ids.ts"
+		"assign-ids": "tsx scripts/assign-official-ids.ts",
+		"seed": "npm run assign-ids && npm run content:lint && npm run db:seed"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.6",
