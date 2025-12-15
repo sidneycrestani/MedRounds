@@ -54,7 +54,8 @@ export default function CaseStudyClient({
 	return (
 		<div className="space-y-8 animate-in fade-in duration-500">
 			<CaseVignette
-				title="Vignette"
+				caseId={data.id} // <--- Adicione aqui
+				title="Contexto"
 				vignette={data.vignette}
 				media={data.media}
 			/>
