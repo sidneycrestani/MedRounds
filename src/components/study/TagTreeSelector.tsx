@@ -1,8 +1,55 @@
 import type { TagTreeItem } from "@/modules/taxonomy/services";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
+// --- 1. Componente Auxiliar Limpo ---
+// Isola a manipulação direta do DOM (ref) para lidar com o estado visual 'indeterminado'
+function IndeterminateCheckbox({
+	checked,
+	indeterminate,
+	onChange,
+	className,
+	id, // Adicionado
+}: {
+	checked: boolean;
+	indeterminate: boolean;
+	onChange: () => void;
+	className?: string;
+	id: string; // Adicionado
+}) {
+	const ref = useRef<HTMLInputElement>(null);
+
+	useEffect(() => {
+		if (ref.current) {
+			ref.current.indeterminate = indeterminate;
+		}
+	}, [indeterminate]);
+
+	return (
+		<input
+			type="checkbox"
+			ref={ref}
+			className={className}
+			checked={checked}
+			onChange={onChange}
+			id={id}
+		/>
+	);
+}
+
+// --- 2. Helper Recursivo ---
+const getAllIds = (node: TagTreeItem): number[] => {
+	let ids = [node.value];
+	if (node.children) {
+		for (const child of node.children) {
+			ids = [...ids, ...getAllIds(child)];
+		}
+	}
+	return ids;
+};
+
+// --- 3. Componente Principal ---
 type Props = {
 	nodes: TagTreeItem[];
 	selectedIds: number[];
@@ -22,32 +69,21 @@ export default function TagTreeSelector({
 		setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
 	};
 
-	// Helper: Coleta todos os IDs de um nó e seus descendentes
-	const getAllIds = (node: TagTreeItem): number[] => {
-		let ids = [node.value];
-		for (const child of node.children) {
-			ids = [...ids, ...getAllIds(child)];
-		}
-		return ids;
-	};
-
-	const handleCheck = (node: TagTreeItem) => {
+	// Lógica de manipulação da seleção
+	const handleCheck = (node: TagTreeItem, isCurrentlySelected: boolean) => {
 		const nodeAndChildrenIds = getAllIds(node);
-		const isCurrentlySelected = selectedIds.includes(node.value);
-
 		let newSelection: number[];
 
 		if (isCurrentlySelected) {
-			// Se já está selecionado, desmarca ele e todos os filhos
+			// Desmarcar: Remove o nó e todos os seus descendentes
 			newSelection = selectedIds.filter(
 				(id) => !nodeAndChildrenIds.includes(id),
 			);
 		} else {
-			// Se não está, adiciona ele e todos os filhos (evitando duplicatas)
+			// Marcar: Adiciona o nó e garante que todos os descendentes entrem
 			const uniqueIds = new Set([...selectedIds, ...nodeAndChildrenIds]);
 			newSelection = Array.from(uniqueIds);
 		}
-
 		onSelectionChange(newSelection);
 	};
 
@@ -58,14 +94,29 @@ export default function TagTreeSelector({
 			{nodes.map((node) => {
 				const hasChildren = node.children && node.children.length > 0;
 				const isExpanded = expanded[node.id];
+
+				// --- Lógica de Estado Otimizada ---
 				const isSelected = selectedIds.includes(node.value);
+
+				const descendantIds = useMemo(() => {
+					return getAllIds(node).filter((id) => id !== node.value);
+				}, [node]);
+
+				const hasSelectedDescendants = descendantIds.some((id) =>
+					selectedIds.includes(id),
+				);
+
+				const isIndeterminate = !isSelected && hasSelectedDescendants;
+
+				// NOVO: ID único para acessibilidade
+				const inputId = `tag-check-${node.id}`;
 
 				return (
 					<li key={node.id} className="select-none">
 						<div
 							className={twMerge(
 								"flex items-center gap-2 py-1 px-2 rounded hover:bg-gray-50 transition-colors",
-								isSelected ? "bg-blue-50" : "",
+								isSelected || isIndeterminate ? "bg-blue-50" : "",
 							)}
 							style={{ paddingLeft: `${level * 1.5 + 0.5}rem` }}
 						>
@@ -84,17 +135,23 @@ export default function TagTreeSelector({
 								)}
 							</button>
 
-							<label className="flex items-center gap-2 cursor-pointer flex-1">
-								<input
-									type="checkbox"
+							<label
+								className="flex items-center gap-2 cursor-pointer flex-1"
+								htmlFor={inputId} // Corrigido o erro de A11y
+							>
+								<IndeterminateCheckbox
 									className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-4 h-4"
 									checked={isSelected}
-									onChange={() => handleCheck(node)}
+									indeterminate={isIndeterminate}
+									onChange={() => handleCheck(node, isSelected)}
+									id={inputId} // Passa o ID
 								/>
 								<span
 									className={twMerge(
 										"text-sm",
-										isSelected ? "font-medium text-blue-900" : "text-gray-700",
+										isSelected || isIndeterminate
+											? "font-medium text-blue-900"
+											: "text-gray-700",
 									)}
 								>
 									{node.label}
