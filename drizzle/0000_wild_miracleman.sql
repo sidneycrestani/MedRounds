@@ -82,7 +82,7 @@ GRANT SELECT ON ALL TABLES IN SCHEMA "content" TO authenticated;
 GRANT USAGE ON SCHEMA "content" TO anon, authenticated;
 
 -- CONCEDE permissão de SELECT (Leitura) em TODAS as tabelas atuais
--- Isso inclui 'case_questions' e o gabarito. O front poderá ler livremente.
+-- Isso inclui 'case_questions' e o gabarito. O front poderá ler livremente. Isso é público por design.
 GRANT SELECT ON ALL TABLES IN SCHEMA "content" TO anon, authenticated;
 
 -- REVOGA permissões de escrita (Insert, Update, Delete)

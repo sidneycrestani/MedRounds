@@ -5,7 +5,7 @@ import { FileSchema } from "@/modules/content/contract";
 import * as dotenv from "dotenv";
 import { eq } from "drizzle-orm";
 
-// Imports da Nova Arquitetura
+// Imports da Arquitetura
 import { getDb } from "@/core/db";
 import { caseQuestions, clinicalCases } from "@/modules/content/schema";
 import { casesTags } from "@/modules/taxonomy/schema";
@@ -14,7 +14,7 @@ import { upsertTagHierarchy } from "@/modules/taxonomy/services";
 // 1. Carregar variáveis
 dotenv.config();
 
-// Fallback manual para o script de seed caso o helper de env não esteja acessível via tsx
+// Fallback manual para o script de seed
 const DATABASE_URL = process.env.DATABASE_URL;
 if (!DATABASE_URL) {
 	console.error("❌ ERRO CRÍTICO: DATABASE_URL não encontrada no .env");
@@ -69,10 +69,25 @@ function locateIssueLine(
 	}
 	return null;
 }
+interface TaxonomyNode {
+	[key: string]: TaxonomyNode | unknown;
+}
+function flattenMasterTaxonomy(obj: TaxonomyNode, parentPath = ""): string[] {
+	let paths: string[] = [];
+	for (const key of Object.keys(obj)) {
+		const currentPath = parentPath ? `${parentPath}::${key}` : key;
+		paths.push(currentPath);
 
-function readJsonFileSimple(filePath: string) {
-	if (!fs.existsSync(filePath)) return null;
-	return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+		const value = obj[key];
+		// Se tem filhos (objeto não vazio e não array), recursão
+		if (value && typeof value === "object" && !Array.isArray(value)) {
+			paths = [
+				...paths,
+				...flattenMasterTaxonomy(value as TaxonomyNode, currentPath),
+			];
+		}
+	}
+	return paths;
 }
 
 async function main() {
@@ -83,8 +98,6 @@ async function main() {
 		process.exit(1);
 	}
 
-	const files = listJsonFilesRecursive(dataDir);
-
 	console.log("🛡️  Validando Taxonomia (Allowlist)...");
 	const masterPath = path.join(
 		process.cwd(),
@@ -93,25 +106,37 @@ async function main() {
 		"taxonomy",
 		"master.json",
 	);
-	const masterList = readJsonFileSimple(masterPath);
-	if (!Array.isArray(masterList)) {
-		console.error("❌ master.json inválido ou não encontrado.");
+
+	if (!fs.existsSync(masterPath)) {
+		console.error("❌ master.json não encontrado.");
 		process.exit(1);
 	}
-	const allowedTags = new Set(masterList);
+
+	const masterRaw = fs.readFileSync(masterPath, "utf-8");
+	let allowedTagsSet: Set<string>;
+
+	try {
+		const masterObj = JSON.parse(masterRaw);
+		const flattened = flattenMasterTaxonomy(masterObj);
+		allowedTagsSet = new Set(flattened);
+	} catch (e) {
+		console.error("❌ Erro ao processar master.json:", e);
+		process.exit(1);
+	}
+
+	const files = listJsonFilesRecursive(dataDir);
 	let taxonomyError = false;
 
 	for (const file of files) {
 		const rawContent = fs.readFileSync(file, "utf-8");
 		const json = JSON.parse(rawContent);
-		// Parse seguro apenas para pegar as tags, ignorando erros de schema por enquanto (serão pegos na Fase 1)
 		const parsed = FileSchema.safeParse(json);
 
 		if (parsed.success) {
 			for (const kase of parsed.data) {
 				if (kase.tags) {
 					for (const t of kase.tags) {
-						if (!allowedTags.has(t)) {
+						if (!allowedTagsSet.has(t)) {
 							console.error(`⛔ TAG PROIBIDA: "${t}"`);
 							console.error(`   Arquivo: ${path.basename(file)}`);
 							console.error(
@@ -135,7 +160,7 @@ async function main() {
 
 	for (const file of files) {
 		const filePath = file;
-		console.log(`\n📄 Lendo arquivo: ${file}`);
+		console.log(`\n📄 Lendo arquivo: ${path.basename(file)}`);
 
 		try {
 			const rawContent = fs.readFileSync(filePath, "utf-8");
@@ -148,7 +173,7 @@ async function main() {
 					message: e.message,
 					line: locateIssueLine(rawContent, e.path) ?? undefined,
 				}));
-				console.error(`❌ Erro de Validação em '${file}':`);
+				console.error(`❌ Erro de Validação em '${path.basename(file)}':`);
 				console.error(JSON.stringify(formatted, null, 2));
 				continue;
 			}
@@ -157,9 +182,9 @@ async function main() {
 			const registry = readRegistry();
 
 			for (const caseData of cases) {
-				// --- 1. Upsert do Caso Clínico ---
+				// --- 3.1. Preparação de Dados do Caso ---
 
-				// Garante que description não seja null
+				// Fallback para descrição
 				const descriptionToSave =
 					caseData.description ??
 					(caseData.vignette.length > 150
@@ -248,11 +273,12 @@ async function main() {
 					caseId = inserted[0].id;
 				}
 
-				// --- 2. Processamento de Tags (Hierarquia Anki) ---
+				// Só inserimos/atualizamos tags que este caso realmente usa
 				if (caseData.tags && caseData.tags.length > 0) {
 					for (const tagPath of caseData.tags) {
 						try {
-							// Chama o serviço que faz o split "A::B::C" e upsert recursivo
+							// upsertTagHierarchy cria a árvore de tags no DB se não existir
+							// e retorna o ID da tag folha
 							const leafTagId = await upsertTagHierarchy(db, tagPath);
 
 							// Vincula o caso à tag folha
@@ -266,7 +292,7 @@ async function main() {
 					}
 				}
 
-				// --- 3. Inserção de Perguntas ---
+				// --- 3.4. Inserção de Perguntas ---
 				const needsInsertions =
 					existingCase.length === 0 ||
 					existingCase[0].contentHash !== contentHash;

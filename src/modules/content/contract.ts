@@ -9,7 +9,7 @@ export const StrictQuestionSchema = z.object({
 });
 
 const tagPattern =
-	/^(?:[A-Za-z\u00C0-\u00FF][A-Za-z0-9_ \u00C0-\u00FF]*)(?:::[A-Za-z\u00C0-\u00FF][A-Za-z0-9_ \u00C0-\u00FF]*)*$/;
+	/^(?:[A-Za-z0-9\u00C0-\u00FF\-\(\)\.\/\,\s_&]+)(?:::[A-Za-z0-9\u00C0-\u00FF\-\(\)\.\/\,\s_&]+)*$/;
 
 export const StrictCaseSchema = z
 	.object({
@@ -21,7 +21,16 @@ export const StrictCaseSchema = z
 		mainImageUrl: z.string().url().nullable().optional(),
 		status: z.enum(["draft", "review", "published"]),
 		difficulty: z.enum(["student", "general_practitioner", "specialist"]),
-		tags: z.array(z.string().regex(tagPattern)).min(1),
+		tags: z
+			.array(
+				z
+					.string()
+					.regex(
+						tagPattern,
+						"Formato inválido. Use 'Categoria::Subcategoria' (aceita letras, números, acentos, -, (), ., /, &)",
+					),
+			)
+			.min(1),
 		questions: z.array(StrictQuestionSchema).min(1),
 	})
 	.superRefine((val, ctx) => {

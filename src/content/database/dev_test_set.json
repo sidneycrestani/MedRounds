@@ -1,105 +1,29 @@
 [
 	{
-		"id": 1,
-		"title": "Hemodinâmica da Regurgitação Mitral: Aguda vs. Crônica",
-		"vignette": "Análise comparativa da fisiopatologia valvar: Paciente A apresenta ruptura abrupta de cordoalha tendínea (RM Aguda), enquanto Paciente B possui prolapso valvar mitral de longa data com adaptação ventricular (RM Crônica Compensada). O foco é a diferenciação das alterações hemodinâmicas e remodelamento cardíaco.",
+		"id": 5,
+		"title": "Hemodinâmica das Valvopatias (Regurgitação Mitral)",
+		"vignette": "Considere as alterações hemodinâmicas distintas entre a Regurgitação Mitral (RM) aguda e a RM crônica compensada.",
 		"status": "published",
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Cardiologia::Valvulopatias::Insuficiência Mitral::Fisiopatologia",
-			"Ciclo Básico::Fisiologia::Hemodinâmica::Ciclo Cardíaco"
+			"Ciclo Básico::Cardiologia::20 Doença Valvar::05 Regurgitação Mitral",
+			"Ciclo Básico::Cardiologia::06 Alças Pressão-Volume::03 Doença Valvar"
 		],
 		"questions": [
 			{
-				"text": "Na RM aguda, o que acontece com a pós-carga e a fração de ejeção (FE)? Explique o mecanismo físico.",
-				"correctAnswer": "A pós-carga diminui e a fração de ejeção aumenta. Mecanismo: O ventrículo esquerdo encontra uma via de baixa impedância (o átrio esquerdo) para ejetar sangue, além da aorta. Isso reduz a tensão parietal sistólica (pós-carga) e facilita o esvaziamento ventricular (aumento da FE total, embora o volume sistólico efetivo possa ser baixo).",
+				"text": "Na apresentação aguda, quais são as alterações imediatas esperadas na pós-carga e na fração de ejeção (FE)? Explique o mecanismo fisiológico da alteração da pós-carga.",
+				"correctAnswer": "Na RM aguda, observa-se diminuição da pós-carga e aumento da Fração de Ejeção. O mecanismo de redução da pós-carga ocorre porque, durante a sístole, o ventrículo esquerdo (VE) ejeta sangue para duas vias: a aorta (alta resistência) e o átrio esquerdo (baixa pressão e baixa resistência). A via de baixa impedância criada pela regurgitação facilita o esvaziamento ventricular, reduzindo a tensão parietal sistólica.",
 				"keywords": [
-					"pós-carga diminui",
-					"fração de ejeção aumenta",
-					"baixa impedância",
-					"átrio esquerdo"
+					"Pós-carga reduzida (via de baixa resistência)",
+					"Fração de Ejeção aumentada (fase aguda)"
 				],
 				"order": 1
 			},
 			{
-				"text": "Na RM crônica, o ventrículo sofre que tipo de remodelação e por quê?",
-				"correctAnswer": "Ocorre hipertrofia excêntrica (dilatação cavitária). Isso se deve à sobrecarga de volume crônica, pois o volume regurgitado retorna ao VE na diástole seguinte, somando-se ao retorno venoso e aumentando a pré-carga (estiramento dos sarcômeros em série).",
-				"keywords": [
-					"hipertrofia excêntrica",
-					"dilatação",
-					"sobrecarga de volume",
-					"sarcômeros em série"
-				],
-				"order": 2
-			}
-		]
-	},
-	{
-		"id": 2,
-		"title": "Transposição das Grandes Artérias (TGA) em Neonato",
-		"vignette": "Um recém-nascido é diagnosticado com D-Transposição das Grandes Artérias (TGA). O ecocardiograma mostra a aorta saindo do ventrículo direito e a artéria pulmonar do ventrículo esquerdo. O quadro é de cianose central progressiva.",
-		"status": "published",
-		"difficulty": "specialist",
-		"mainImageUrl": null,
-		"tags": [
-			"Pediatria::Cardiologia Pediátrica::Cardiopatias Congênitas::Cianóticas::Transposição das Grandes Artérias",
-			"Ciclo Básico::Embriologia::Sistema Cardiovascular::Septação::Tronco Arterioso",
-			"Farmacologia::Cardiovascular::Vasodilatadores::Prostaglandinas"
-		],
-		"questions": [
-			{
-				"text": "Qual foi a falha embriológica específica que causou essa anomalia?",
-				"correctAnswer": "Falha no espiralamento (rotação de 180 graus) do septo aorticopulmonar durante a divisão do tronco arterioso.",
-				"keywords": [
-					"septo aorticopulmonar",
-					"espiralar",
-					"rotação",
-					"tronco arterioso"
-				],
-				"order": 1
-			},
-			{
-				"text": "Por que a administração de Prostaglandina E1 é vital para a sobrevida imediata antes da cirurgia e qual seu mecanismo?",
-				"correctAnswer": "Na TGA, as circulações são paralelas. A vida depende da mistura de sangue. A Prostaglandina E1 impede o fechamento do Ductus Arteriosus (Canal Arterial), mantendo-o patente para permitir o shunt e a mistura de sangue oxigenado e desoxigenado.",
-				"keywords": [
-					"canal arterial",
-					"ductus arteriosus",
-					"patente",
-					"mistura de sangue"
-				],
-				"order": 2
-			},
-			{
-				"text": "Esta condição é classificada como um shunt de qual direção?",
-				"correctAnswer": "Shunt direita-esquerda (cardiopatia cianótica).",
-				"keywords": ["direita-esquerda", "cianótica"],
-				"order": 3
-			}
-		]
-	},
-	{
-		"id": 3,
-		"title": "Anatomia Coronariana e Ciclo Cardíaco",
-		"vignette": "Durante um cateterismo cardíaco diagnóstico, o hemodinamicista observa que a artéria que irriga o nó atrioventricular (AV) e dá origem à artéria descendente posterior (PDA) nasce da artéria coronária direita.",
-		"status": "published",
-		"difficulty": "student",
-		"mainImageUrl": null,
-		"tags": [
-			"Cardiologia::Anatomia::Circulação Coronariana",
-			"Ciclo Básico::Anatomia::Tórax::Coração::Irrigação"
-		],
-		"questions": [
-			{
-				"text": "Como é classificada a circulação deste paciente (dominância)?",
-				"correctAnswer": "Dominância Direita (presente em aproximadamente 85% da população).",
-				"keywords": ["dominância direita", "coronária direita"],
-				"order": 1
-			},
-			{
-				"text": "Em qual fase do ciclo cardíaco ocorre a maior parte da perfusão coronariana do ventrículo esquerdo e por quê?",
-				"correctAnswer": "Na diástole. Durante a sístole, a contração miocárdica comprime os vasos coronarianos intramurais, aumentando drasticamente a resistência vascular e impedindo o fluxo. O fluxo é máximo quando o músculo relaxa.",
-				"keywords": ["diástole", "compressão", "sístole", "relaxamento"],
+				"text": "Na forma crônica, qual o padrão de remodelamento ventricular (hipertrofia concêntrica ou excêntrica) e qual o estímulo fisiopatológico para tal?",
+				"correctAnswer": "O ventrículo sofre hipertrofia excêntrica (dilatação da cavidade com adição de sarcômeros em série). Isso ocorre devido à sobrecarga de volume. O volume regurgitado para o átrio retorna ao VE na diástole subsequente, somando-se ao retorno venoso pulmonar normal. Isso aumenta drasticamente a pré-carga (volume diastólico final), forçando a dilatação ventricular para acomodar o fluxo.",
+				"keywords": ["Hipertrofia Excêntrica", "Sobrecarga de Volume"],
 				"order": 2
 			}
 		]

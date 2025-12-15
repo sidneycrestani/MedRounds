@@ -12,6 +12,7 @@ export function makeBaseSlug(name: string): string {
 		.replace(/[óòôõö]/g, "o")
 		.replace(/[úùûü]/g, "u")
 		.replace(/ç/g, "c")
+		.replace(/ñ/g, "n")
 		.replace(/[^a-z0-9_]/g, "")
 		.replace(/__+/g, "_")
 		.replace(/^_+|_+$/g, "");

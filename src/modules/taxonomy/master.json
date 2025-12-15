@@ -1,29 +1,205 @@
-[
-	"Cardiologia",
-	"Cardiologia::Valvulopatias",
-	"Cardiologia::Valvulopatias::Insuficiência Mitral",
-	"Cardiologia::Valvulopatias::Insuficiência Mitral::Fisiopatologia",
-	"Cardiologia::Anatomia",
-	"Cardiologia::Anatomia::Circulação Coronariana",
-	"Pediatria",
-	"Pediatria::Cardiologia Pediátrica",
-	"Pediatria::Cardiologia Pediátrica::Cardiopatias Congênitas",
-	"Pediatria::Cardiologia Pediátrica::Cardiopatias Congênitas::Cianóticas",
-	"Pediatria::Cardiologia Pediátrica::Cardiopatias Congênitas::Cianóticas::Transposição das Grandes Artérias",
-	"Ciclo Básico",
-	"Ciclo Básico::Fisiologia",
-	"Ciclo Básico::Fisiologia::Hemodinâmica",
-	"Ciclo Básico::Fisiologia::Hemodinâmica::Ciclo Cardíaco",
-	"Ciclo Básico::Embriologia",
-	"Ciclo Básico::Embriologia::Sistema Cardiovascular",
-	"Ciclo Básico::Embriologia::Sistema Cardiovascular::Septação",
-	"Ciclo Básico::Embriologia::Sistema Cardiovascular::Septação::Tronco Arterioso",
-	"Ciclo Básico::Anatomia",
-	"Ciclo Básico::Anatomia::Tórax",
-	"Ciclo Básico::Anatomia::Tórax::Coração",
-	"Ciclo Básico::Anatomia::Tórax::Coração::Irrigação",
-	"Farmacologia",
-	"Farmacologia::Cardiovascular",
-	"Farmacologia::Cardiovascular::Vasodilatadores",
-	"Farmacologia::Cardiovascular::Vasodilatadores::Prostaglandinas"
-]
+{
+	"Ciclo Básico": {
+		"Cardiologia": {
+			"01 Embriologia": {
+				"01 Derivados Embriológicos": {},
+				"02 Tronco Arterioso": {},
+				"03 Septação Atrial": {},
+				"04 Derivados do Arco Aórtico e Arcos Faríngeos": {},
+				"Dobramento Endocárdico do Sistema Cardiovascular": {}
+			},
+			"02 Anatomia": {
+				"01 Visão Geral Anatômica": {},
+				"02 Silhueta Cardíaca Radiografia de Tórax": {},
+				"03 Imagem Axial TC e RM": {},
+				"04 Lesão Cardíaca Penetrante": {},
+				"05 Anatomia da Condução Cardíaca": {},
+				"06 Alvos de Ablação por Radiofrequência": {},
+				"07 Anatomia da Artéria Coronária": {},
+				"08 Seio Coronário": {},
+				"09 Cateterismo Cardíaco": {}
+			},
+			"03 Sistema Vascular": {
+				"01 Aorta": {},
+				"02 Síndrome do Roubo da Subclávia": {},
+				"03 Obstrução da Drenagem Venosa": {},
+				"04 Revascularização do Miocárdio": {},
+				"05 Acesso Femoral": {},
+				"06 Veia Cava Inferior": {}
+			},
+			"04 Parâmetros Cardíacos da Função Fisiológica": {
+				"01 Volume Sistólico": {},
+				"02 Variáveis do Volume Sistólico": {},
+				"03 Frequência Cardíaca": {},
+				"04 Mecanismo de Frank Starling": {},
+				"05 Débito Cardíaco": {},
+				"06 Pressão Arterial Média": {},
+				"07 Fluxo Sanguíneo Coronariano e Autorregulação": {}
+			},
+			"05 Curvas de Função Cardíaca e Retorno Venoso": {
+				"01 Curvas de Função Cardíaca": {},
+				"02 Curvas de Retorno Venoso": {},
+				"03 Curvas Combinadas de Função Cardíaca e Retorno Venoso": {}
+			},
+			"06 Alças Pressão-Volume": {
+				"01 Princípios Básicos": {},
+				"02 Determinantes": {},
+				"03 Doença Valvar": {},
+				"04 Fisiopatologia Avançada": {}
+			},
+			"07 Vasodilatação e Vasoconstrição": {
+				"01 Vasodilatação Regulada pelo Endotélio": {},
+				"02 Acoplamento Excitação Contração": {},
+				"03 Via de Vasoconstrição do Receptor Acoplado à Proteína G": {},
+				"04 Alvos Farmacológicos": {}
+			},
+			"08 Fisiologia de Pressão e Fluxo": {
+				"01 Complacência Vascular": {},
+				"02 Fluxo Sanguíneo": {},
+				"03 Receptores Sensoriais da Vasculatura": {}
+			},
+			"09 Ciclo Cardíaco": {
+				"01 Ausculta": {},
+				"02 Bulhas Cardíacas": {},
+				"03 Ciclo Cardíaco": {},
+				"04 Onda de Pulso Venoso Jugular": {},
+				"05 Distúrbios Clássicos": {}
+			},
+			"10 Sistema Renina Angiotensina Aldosterona": {
+				"01 Regulação": {},
+				"02 Alvos Farmacológicos Diretos": {}
+			},
+			"11 Fisiologia do Exercício": {
+				"01 Alterações Fisiológicas do Exercício": {},
+				"02 Taxa de Consumo de Oxigênio no Exercício": {},
+				"03 Débito Cardíaco em Atletas": {}
+			},
+			"12 Fisiologia Condutiva Cardíaca": {
+				"01 Sistema de Condução Cardíaca": {},
+				"02 Potencial de Ação de Marcapasso": {},
+				"03 Potencial de Ação Não Marcapasso": {},
+				"04 Variáveis dos Potenciais Cardíacos": {}
+			},
+			"13 Antiarrítmicos": {
+				"02 Antiarrítmicos Classe I": {},
+				"03 Antiarrítmicos Classe II": {},
+				"04 Antiarrítmicos Classe III": {},
+				"05 Antiarrítmicos Classe IV": {},
+				"06 Antiarrítmicos Classe V": {},
+				"07 Outras Propriedades de Drogas e Efeitos Adversos": {}
+			},
+			"14 Arritmias Atriais": {
+				"01 Fibrilação Atrial": {},
+				"02 Flutter Atrial": {},
+				"03 Síndrome do Nó Sinusal Doente": {}
+			},
+			"15 Arritmias Ventriculares": {
+				"01 Taquicardia Supraventricular": {},
+				"02 Síndrome de Wolff Parkinson White": {},
+				"03 Torsades de Pointes": {},
+				"04 Taquicardia Ventricular Monomórfica e Fibrilação Ventricular": {}
+			},
+			"16 Bloqueios de Condução": {
+				"01 Bloqueios Atrioventriculares": {},
+				"02 Bloqueios de Ramo": {},
+				"03 Suprimento Sanguíneo da Condução Cardíaca": {}
+			},
+			"17 Insuficiência Cardíaca": {
+				"01 Visão Geral da Patologia da Insuficiência Cardíaca": {},
+				"02 Insuficiência Cardíaca Sistólica": {},
+				"03 Insuficiência Cardíaca Diastólica": {},
+				"04 Insuficiência Cardíaca de Alto e Baixo Débito": {},
+				"05 Alvos Farmacológicos": {}
+			},
+			"18 Miocardiopatia": {
+				"01 Miocardiopatia Visão Geral": {},
+				"02 Miocardiopatia Dilatada": {},
+				"03 Miocardiopatia Restritiva": {},
+				"04 Miocardiopatia Hipertrófica Obstrutiva": {},
+				"05 Miocardite Viral": {},
+				"06 Doença de Chagas": {},
+				"07 Miocardiopatia de Takotsubo": {},
+				"08 Miocardiopatia Amilóide": {},
+				"09 Envelhecimento dos Miócitos Cardíacos": {},
+				"10 Outras Causas de Miocardiopatia": {}
+			},
+			"19 Doença Aórtica": {
+				"01 Considerações Anatômicas": {},
+				"02 Dissecção Aórtica": {},
+				"03 Aneurisma Aórtico": {},
+				"04 Considerações Cardíacas da Síndrome de Marfan": {},
+				"05 Coarctação da Aorta": {}
+			},
+			"20 Doença Valvar": {
+				"01 Visão Geral da Doença Valvar": {},
+				"02 Estenose Aórtica": {},
+				"03 Regurgitação Aórtica": {},
+				"04 Estenose Mitral": {},
+				"05 Regurgitação Mitral": {},
+				"06 Prolapso da Valva Mitral": {},
+				"07 Regurgitação Tricúspide": {}
+			},
+			"21 Cardiopatias Congênitas Acianóticas": {
+				"01 Visão Geral das Cardiopatias Congênitas Acianóticas": {},
+				"02 Defeito do Septo Ventricular": {},
+				"03 Defeito do Septo Atrial": {},
+				"04 Forame Oval Patente": {},
+				"05 Persistência do Canal Arterial": {},
+				"06 Síndrome de Eisenmenger": {}
+			},
+			"22 Cardiopatias Congênitas Cianóticas": {
+				"01 Visão Geral das Cardiopatias Congênitas Cianóticas": {},
+				"02 Tetralogia de Fallot": {},
+				"03 Transposição dos Grandes Vasos": {},
+				"04 Tronco Arterioso Persistente": {},
+				"05 Atresia Tricúspide": {},
+				"06 Retorno Venoso Pulmonar Anômalo Total": {}
+			},
+			"23 Angina Estável e Aterosclerose": {
+				"01 Doença Arterial": {},
+				"02 Aterosclerose": {},
+				"03 Estabilidade da Placa": {},
+				"04 Doença Arterial Coronariana": {},
+				"05 Angina Estável": {},
+				"06 Angina Vasoespástica": {},
+				"07 Terapia Antianginosa": {}
+			},
+			"24 Infarto do Miocárdio": {
+				"01 Síndrome Coronariana Aguda": {},
+				"02 Infarto do Miocárdio": {},
+				"03 Linha do Tempo Pós Infarto do Miocárdio": {},
+				"04 Localização no ECG em IAMCSST": {},
+				"05 Biomarcadores Cardíacos": {},
+				"06 Manejo": {}
+			},
+			"25 Doença Venosa e Arterial Periférica": {
+				"01 Doença Venosa Periférica": {},
+				"02 Doença Arterial Periférica": {},
+				"03 Úlceras de Membros Inferiores": {}
+			},
+			"26 Hipertensão": {
+				"01 Hipertensão Visão Geral": {},
+				"02 Hipertensão Essencial": {},
+				"03 Variantes de Hipertensão": {},
+				"04 Doença de Órgão Alvo Hipertensiva": {},
+				"05 Hipertensão Secundária": {},
+				"06 Anti hipertensivos": {}
+			},
+			"27 Doença Pericárdica": {
+				"01 Pericardite Aguda": {},
+				"02 Pericardite Constritiva": {},
+				"03 Derrame Pericárdico": {},
+				"04 Tamponamento Cardíaco": {}
+			},
+			"28 Choque": {
+				"01 Visão Geral do Choque": {},
+				"02 Choque Hipovolêmico": {},
+				"03 Choque Cardiogênico": {},
+				"04 Choque Obstrutivo": {},
+				"05 Choque Séptico": {},
+				"06 Choque Anafilático": {},
+				"07 Choque Neurogênico": {}
+			}
+		}
+	}
+}
