@@ -1,6 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Hash } from "lucide-react"; // Importar ícone
 import type { HTMLAttributes } from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 
 type Props = HTMLAttributes<HTMLDivElement> & {
 	caseId: number; // Nova prop
@@ -31,9 +35,14 @@ export default function CaseVignette({
 				</div>
 			</CardHeader>
 			<CardContent>
-				<p className="text-blue-900 text-lg font-medium leading-relaxed">
-					{vignette}
-				</p>
+				<div className="text-blue-900 text-lg font-medium leading-relaxed">
+					<ReactMarkdown
+						remarkPlugins={[remarkGfm, remarkMath]}
+						rehypePlugins={[rehypeKatex]}
+					>
+						{vignette}
+					</ReactMarkdown>
+				</div>
 				{media && (
 					<img
 						src={media}

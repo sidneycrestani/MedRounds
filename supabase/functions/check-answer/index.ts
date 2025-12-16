@@ -79,7 +79,7 @@ Deno.serve(async (req) => {
 
       INSTRUÇÃO:
       1. Se o aluno acertou a ideia geral mas esqueceu as keywords acima, dê nota parcial e alerte sobre a terminologia.
-      2. Caso o raciocínio esteja incorreto, explique brevemente o ponto-chave que faltou.
+      2. Caso o raciocínio esteja incorreto, explique brevemente o ponto-chave que faltou. Não converse, não cumprimente. Use o mínimo de palavras possível pare dizer o que o estudante errou e por que.
       3. Produza JSON com os campos: isCorrect (boolean), score (0-100), feedback (string). Não revele o gabarito completo no feedback.
       4. Entregue somente JSON. Não diga nada antes ou depois. Somente JSON.
     `;
