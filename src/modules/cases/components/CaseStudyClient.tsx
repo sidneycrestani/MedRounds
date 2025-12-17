@@ -29,7 +29,6 @@ export default function CaseStudyClient({
 	onCaseCompleted?: () => void;
 }) {
 	const {
-		// State & Computed
 		activeIndex,
 		currentQuestion,
 		currentAnswer,
@@ -39,8 +38,6 @@ export default function CaseStudyClient({
 		tabItems,
 		isCaseFullyComplete,
 		hasNextPendingQuestion,
-
-		// Actions
 		setActiveIndex,
 		setAnswer,
 		submitAnswer,
@@ -55,6 +52,7 @@ export default function CaseStudyClient({
 		nextQuestion();
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
+
 	return (
 		<div className="space-y-8 animate-in fade-in duration-500">
 			<CaseVignette
@@ -83,8 +81,6 @@ export default function CaseStudyClient({
 					disabled={isLoading || hasResult || isRevealed}
 				/>
 
-				{/* ZONE OF ACTION */}
-
 				{/* 1. Initial State: Inputting */}
 				{!hasResult && !isRevealed && (
 					<div className="flex items-center gap-4">
@@ -100,7 +96,7 @@ export default function CaseStudyClient({
 							variant="ghost"
 							onClick={revealAnswer}
 							disabled={isLoading}
-							className="text-gray-600"
+							className="text-gray-600 dark:text-gray-400 hover:dark:bg-gray-800"
 						>
 							<Eye className="w-4 h-4 mr-2" />
 							Ver Gabarito
@@ -111,11 +107,12 @@ export default function CaseStudyClient({
 				{/* 2. Revealed State: Self-Evaluation */}
 				{!hasResult && isRevealed && (
 					<div className="space-y-6 animate-in fade-in slide-in-from-top-2">
-						<div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-							<h4 className="font-bold text-gray-700 text-sm uppercase mb-2">
+						{/* Box de Gabarito ajustado para Dark Mode */}
+						<div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+							<h4 className="font-bold text-gray-700 dark:text-gray-300 text-sm uppercase mb-2">
 								Gabarito Oficial
 							</h4>
-							<div className="text-gray-900 whitespace-pre-line leading-relaxed">
+							<div className="text-gray-900 dark:text-gray-100 whitespace-pre-line leading-relaxed prose dark:prose-invert max-w-none">
 								<ReactMarkdown
 									remarkPlugins={[remarkGfm, remarkMath]}
 									rehypePlugins={[rehypeKatex]}
@@ -126,13 +123,13 @@ export default function CaseStudyClient({
 						</div>
 
 						<div className="flex items-center gap-3">
-							<span className="text-sm font-medium text-gray-600">
+							<span className="text-sm font-medium text-gray-600 dark:text-gray-400">
 								Como você se saiu?
 							</span>
 							<button
 								type="button"
 								onClick={() => submitSelfEvaluation(false)}
-								className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 font-medium transition-colors"
+								className="flex items-center gap-2 px-4 py-2 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-lg hover:bg-red-200 dark:hover:bg-red-900/50 font-medium transition-colors border border-transparent dark:border-red-800"
 							>
 								<X className="w-4 h-4" />
 								Errei / Revisar
@@ -140,7 +137,7 @@ export default function CaseStudyClient({
 							<button
 								type="button"
 								onClick={() => submitSelfEvaluation(true)}
-								className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 font-medium transition-colors"
+								className="flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg hover:bg-green-200 dark:hover:bg-green-900/50 font-medium transition-colors border border-transparent dark:border-green-800"
 							>
 								<Check className="w-4 h-4" />
 								Acertei
@@ -160,16 +157,14 @@ export default function CaseStudyClient({
 					/>
 				)}
 
-				{/* 4. Navigation: Unified Smart Button */}
+				{/* 4. Navigation */}
 				{(hasResult || isCaseFullyComplete) && (
-					<div className="flex items-center justify-end pt-4 border-t border-gray-100 mt-6">
+					<div className="flex items-center justify-end pt-4 border-t border-gray-100 dark:border-gray-700 mt-6">
 						{hasNextPendingQuestion ? (
-							// Condição 1: Ainda há questões pendentes nesta sessão -> Avança para a próxima questão
 							<Button onClick={handleNextAndScroll}>
 								Próxima Questão <ArrowRight className="w-4 h-4 ml-2" />
 							</Button>
 						) : (
-							// Condição 2: Acabou as questões desta sessão -> Finaliza o Caso (Next Case)
 							onCaseCompleted && (
 								<Button onClick={onCaseCompleted}>
 									Finalizar Caso <CheckCircle className="w-4 h-4 ml-2" />

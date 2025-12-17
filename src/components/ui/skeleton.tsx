@@ -15,7 +15,12 @@ export function Skeleton({ className, rounded = "md", ...props }: Props) {
 	}[rounded];
 	return (
 		<div
-			className={twMerge("animate-pulse bg-gray-200", r, className)}
+			// MUDANÇA AQUI: Adicionado dark:bg-gray-700
+			className={twMerge(
+				"animate-pulse bg-gray-200 dark:bg-gray-700/50",
+				r,
+				className,
+			)}
 			{...props}
 		/>
 	);

@@ -17,7 +17,7 @@ export default function QuestionDisplay({ text, media, ...props }: Props) {
 				<CardTitle>Enunciado</CardTitle>
 			</CardHeader>
 			<CardContent>
-				<div className="text-gray-800 leading-relaxed">
+				<div className="text-gray-800 dark:text-gray-200 leading-relaxed prose dark:prose-invert max-w-none">
 					<ReactMarkdown
 						remarkPlugins={[remarkGfm, remarkMath]}
 						rehypePlugins={[rehypeKatex]}
@@ -29,7 +29,7 @@ export default function QuestionDisplay({ text, media, ...props }: Props) {
 					<img
 						src={media}
 						alt="Imagem da questão"
-						className="mt-4 rounded-lg border"
+						className="mt-4 rounded-lg border dark:border-gray-700"
 					/>
 				)}
 			</CardContent>
