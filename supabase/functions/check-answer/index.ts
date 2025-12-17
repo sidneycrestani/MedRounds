@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from "npm:@google/generative-ai";
+import { GoogleGenerativeAI, generationConfig } from "npm:@google/generative-ai";
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
 Deno.serve(async (req) => {
@@ -59,30 +59,53 @@ Deno.serve(async (req) => {
 
     const apiKey = Deno.env.get("GEMINI_API_KEY") as string;
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+      generationConfig: {
+        responseMimeType: "application/json", // <--- O SEGREDO: Força JSON nativo
+        temperature: 0.2, // Baixa temperatura para ser mais rigoroso 
+      }
+    });
 
     const keywords = (questionRow.must_include_keywords ?? []) as string[];
     const idealAnswer = questionRow.correct_answer_text as string;
 
     const prompt = `
-      ATUE COMO: Preceptor Médico Sênior.
+ATUE COMO: Preceptor Médico Sênior (Rigoroso, técnico e conciso).
 
-      CONTEXTO DO CASO: ${caseRow.vignette}
-      PERGUNTA ESPECÍFICA: ${questionRow.question_text}
+DADOS DO CASO:
+[VIGNETTE]: ${caseRow.vignette}
+[PERGUNTA]: ${questionRow.question_text}
+[GABARITO IDEAL]: ${idealAnswer}
+[KEYWORDS OBRIGATÓRIAS]: ${keywords.join(", ")}\\
 
-      RESPOSTA DO ALUNO: ${userAnswer}
+RESPOSTA DO ALUNO:
+\\${userAnswer}
 
-      GABARITO OFICIAL: ${idealAnswer}
+---
+\\INSTRUÇÕES DE AVALIAÇÃO (Lógica de Decisão):
 
-      CRITÉRIOS DE AVALIAÇÃO OBRIGATÓRIOS (KEYWORDS): O aluno PRECISA ter mencionado conceitos similares a: ${keywords.join(", ")}.
-      Se a imagem (${questionRow.context_image_url || caseRow.main_image_url || ""}) for crucial, verifique se houve análise do achado visual.
+1. HIERARQUIA DE ACERTO (CRUCIAL):
+   - O conceito clínico vale mais que a palavra exata.
+   - O aluno acertou a *ideia geral* / manejo clínico, mas esqueceu as keywords exatas?
+     -> AÇÃO: Considere a resposta CORRETA (isCorrect: true).
+     -> PENALIDADE: Dê nota parcial (60-80) e use o feedback para educar sobre a terminologia técnica (keywords).
 
-      INSTRUÇÃO:
-      1. Se o aluno acertou a ideia geral mas esqueceu as keywords acima, dê nota parcial e alerte sobre a terminologia.
-      2. Caso o raciocínio esteja incorreto, explique brevemente o ponto-chave que faltou. Não converse, não cumprimente. Use o mínimo de palavras possível pare dizer o que o estudante errou e por que.
-      3. Produza JSON com os campos: isCorrect (boolean), score (0-100), feedback (string). Não revele o gabarito completo no feedback.
-      4. Entregue somente JSON. Não diga nada antes ou depois. Somente JSON.
-    `;
+2. CRITÉRIOS DE ERRO:
+   - O raciocínio clínico está errado, perigoso ou responde outra coisa?
+     -> AÇÃO: Considere INCORRETA (isCorrect: false).
+     -> NOTA: Baixa (0-40).
+
+3. DIRETRIZES DE FEEDBACK:
+   - Se "Passável" (Acerto parcial): "Sua conduta está correta, mas o termo técnico preciso é [Termo]. Use-o para maior clareza."
+   - Se "Incorreto": Explique o erro de lógica com o mínimo de palavras.
+   - NÃO revele o gabarito completo se o aluno errou feio (faça-o pensar).
+   - NÃO inicie com "Olá", "Parabéns" ou "Vamos analisar". Vá direto ao ponto.
+
+FORMATO DE SAÍDA:
+Retorne APENAS um JSON (sem markdown, sem crases) seguindo este schema:
+{"isCorrect": boolean, "score": number, "feedback": "string"}
+`;
 
     const result = await model.generateContent(prompt);
     const textResp = result.response
