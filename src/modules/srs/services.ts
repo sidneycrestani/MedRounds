@@ -1,5 +1,6 @@
 import type { Database } from "@/core/db";
 import { calculateReviewState } from "@/core/srs/scheduler";
+import type { CaseFeedbackDTO } from "@/modules/cases/types"; // Import the specific type
 import { userCaseHistory, userCaseState } from "@/modules/srs/schema";
 
 export async function processUserAttempt(
@@ -8,6 +9,7 @@ export async function processUserAttempt(
 	caseId: number,
 	questionIndex: number,
 	score: number,
+	aiFeedback?: CaseFeedbackDTO | Record<string, unknown> | null, // Strict type
 ) {
 	// 1. Calculate new state using pure domain logic
 	const reviewState = calculateReviewState(score);
@@ -20,6 +22,9 @@ export async function processUserAttempt(
 			caseId,
 			questionIndex,
 			score,
+			// Drizzle's jsonb column expects 'unknown', so we pass the typed object directly.
+			// No 'as any' needed because objects are assignable to unknown.
+			aiFeedback,
 			attemptedAt: new Date(),
 		});
 

@@ -137,12 +137,13 @@ export function useCaseSession({
 		caseId: number,
 		score: number,
 		questionIndex: number,
+		feedback?: ResultData, // Typed correctly
 	) {
 		try {
 			await fetch("/api/srs/process-attempt", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ caseId, score, questionIndex }),
+				body: JSON.stringify({ caseId, score, questionIndex, feedback }),
 			});
 		} catch (err) {
 			console.error("Failed to persist SRS data:", err);
@@ -171,7 +172,7 @@ export function useCaseSession({
 					next[activeIndex] = parsed;
 					return next;
 				});
-				persistSrsAttempt(data.id, parsed.score, currentQuestion.order);
+				persistSrsAttempt(data.id, parsed.score, currentQuestion.order, parsed);
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");
@@ -183,16 +184,15 @@ export function useCaseSession({
 	function handleSelfEvaluate(isCorrect: boolean) {
 		const score = isCorrect ? 100 : 0;
 
-		// 1. Persist attempt
-		persistSrsAttempt(data.id, score, currentQuestion.order);
-
-		// 2. Mock a result object to lock the UI
 		const mockResult: ResultData = {
 			isCorrect: isCorrect,
 			score: score,
 			feedback: "Auto-avaliação realizada.",
 			officialAnswer: currentQuestion.correctAnswer,
 		};
+
+		// Pass the result object to persist function
+		persistSrsAttempt(data.id, score, currentQuestion.order, mockResult);
 
 		setResults((prev) => {
 			const next = [...prev];

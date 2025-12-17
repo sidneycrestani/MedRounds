@@ -1,5 +1,6 @@
 import { getDb } from "@/core/db";
 import { getConnectionFromEnv, getServerEnv } from "@/core/env";
+import type { CaseFeedbackDTO } from "@/modules/cases/types";
 import { processUserAttempt } from "@/modules/srs/services";
 import type { APIRoute } from "astro";
 
@@ -13,7 +14,15 @@ export const POST: APIRoute = async (context) => {
 	}
 
 	// 2. Input Validation
-	let body: { caseId: number; score: number; questionIndex: number };
+	// Define the expected body shape
+	type RequestBody = {
+		caseId: number;
+		score: number;
+		questionIndex: number;
+		feedback?: CaseFeedbackDTO;
+	};
+
+	let body: RequestBody;
 	try {
 		body = await context.request.json();
 	} catch (e) {
@@ -22,7 +31,8 @@ export const POST: APIRoute = async (context) => {
 		});
 	}
 
-	const { caseId, score, questionIndex } = body;
+	const { caseId, score, questionIndex, feedback } = body;
+
 	if (
 		typeof caseId !== "number" ||
 		typeof score !== "number" ||
@@ -46,6 +56,7 @@ export const POST: APIRoute = async (context) => {
 			caseId,
 			questionIndex,
 			score,
+			feedback, // Pass the typed feedback object
 		);
 
 		return new Response(
