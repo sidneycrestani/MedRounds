@@ -17,14 +17,19 @@ export const sessionStatusEnum = app.enum("session_status", [
 	"abandoned",
 ]);
 
+// Interface para Tipagem no TypeScript
+export type UserSettings = {
+	theme: "light" | "dark" | "system";
+	use_custom_key: boolean;
+};
+
 export const userPreferences = app.table("user_preferences", {
 	userId: text("user_id").primaryKey(), // FK lógica para tabela de auth
 	selectedTagIds: jsonb("selected_tag_ids").$type<number[]>().default([]),
-	settings: jsonb("settings").$type<{
-		defaultSessionSize?: number;
-		theme?: "light" | "dark" | "system";
-		use_custom_api_key?: boolean;
-	}>(),
+	// Atualização da coluna settings com tipagem explícita e default
+	settings: jsonb("settings")
+		.$type<UserSettings>()
+		.default({ theme: "system", use_custom_key: false }),
 	updatedAt: timestamp("updated_at", { withTimezone: true })
 		.defaultNow()
 		.notNull(),

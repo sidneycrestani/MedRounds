@@ -7,46 +7,44 @@ import {
 	getPublicClientEnv,
 	getServerEnv,
 } from "@/core/env";
+import Layout from "@/layouts/Layout.astro"; // Importação do novo Layout
 import { getAllTagsAsTree } from "@/modules/taxonomy/services";
+import { Settings } from "lucide-react"; // Ícone para link de settings
 import "katex/dist/katex.min.css";
-// --- LÓGICA DE CONEXÃO ATUALIZADA ---
+
+// --- LÓGICA DE CONEXÃO ---
 const runtime = Astro.locals.runtime;
 const env = getServerEnv(runtime);
 const db = getDb(getConnectionFromEnv(env));
 const envForClient = getPublicClientEnv(runtime);
 const currentUser = Astro.locals.user;
-// ---------------------------------
 
-// Mudança: Buscamos a árvore completa, não apenas as raízes
 const treeData = await getAllTagsAsTree(db);
 ---
 
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <title>MedRounds - Casos Clínicos</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
-  </head>
-  <body class="min-h-screen bg-gray-50 flex flex-col">
+<Layout title="MedRounds - Casos Clínicos">
     
     <!-- Header Simples -->
-    <header class="bg-white border-b border-gray-200 py-4 px-6 sticky top-0 z-10">
+    <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-4 px-6 sticky top-0 z-10 transition-colors duration-300">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-blue-900 flex items-center gap-2">
+        <a href="/" class="text-2xl font-bold text-blue-900 dark:text-blue-400 flex items-center gap-2">
           <img src="/favicon.svg" alt="Logo MedRounds" class="w-8 h-8" />
           MedRounds
         </a>
-        <LoginButton client:load env={envForClient} userName={currentUser?.email} />
+        
+        <div class="flex items-center gap-4">
+          {currentUser && (
+            <a href="/settings" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white transition-colors" title="Configurações">
+              <Settings size={20} />
+            </a>
+          )}
+          <LoginButton client:load env={envForClient} userName={currentUser?.email} />
+        </div>
       </div>
     </header>
 
     <div class="flex-1 max-w-6xl mx-auto w-full p-6">
-      {/* Passamos treeData para o novo SessionManager */}
       <SessionManager client:only="react" treeData={treeData} />
     </div>
 
-  </body>
-</html>
+</Layout>

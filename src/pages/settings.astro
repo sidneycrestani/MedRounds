@@ -1,0 +1,39 @@
+---
+import LoginButton from "@/components/auth/LoginButton";
+import SettingsForm from "@/components/settings/SettingsForm";
+import Layout from "@/layouts/Layout.astro";
+import { ArrowLeft } from "lucide-react";
+
+// Server-side Auth Guard
+const user = Astro.locals.user;
+if (!user) {
+	return Astro.redirect("/");
+}
+---
+
+<Layout title="Configurações - MedRounds">
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-4 px-6 sticky top-0 z-10">
+      <div class="max-w-4xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <a href="/" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors" aria-label="Voltar">
+            <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+          </a>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-white">Configurações</h1>
+        </div>
+        
+        {/* Usamos client:load para o componente de avatar/logout funcionar */}
+        <div class="opacity-75">
+           <!-- Placeholder ou componente simplificado se preferir -->
+           <span class="text-sm font-medium">{user.email}</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-4xl mx-auto p-6">
+      <SettingsForm client:load />
+    </main>
+  </div>
+</Layout>
