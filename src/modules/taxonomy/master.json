@@ -200,6 +200,438 @@
 				"06 Choque Anafilático": {},
 				"07 Choque Neurogênico": {}
 			}
+		},
+		"Microbiologia": {
+			"01 Fundamentos da Bacteriologia": {
+				"01 Envelope Bacteriano Estrutural": {},
+				"02 Aderência e Motilidade Bacteriana": {},
+				"03 Morfologia Bacteriana": {},
+				"04 Procedimento da Coloração de Gram": {},
+				"05 Organismos de Difícil Coloração e Procedimentos Variantes": {},
+				"06 Ágar MacConkey e Ágar Eosina Azul de Metileno": {},
+				"07 Ágar Sangue": {},
+				"08 Associações de Cultura Adicionais": {}
+			},
+			"02 Genética Bacteriana": {
+				"01 Estruturas de DNA e Troca de Material Genético": {},
+				"02 Transformação": {},
+				"03 Conjugação": {},
+				"04 Transdução": {},
+				"05 Transposição": {}
+			},
+			"03 Toxinas Bacterianas": {
+				"01 Propriedades da Endotoxina": {},
+				"02 Mecanismos e Associações da Endotoxina": {},
+				"03 Sepse por Gram Negativos": {},
+				"04 Exotoxina": {}
+			},
+			"04 Estafilococos": {
+				"01 Princípios do Staphylococcus Aureus": {},
+				"02 Toxinas Doenças e Antibióticos do Staphylococcus Aureus": {},
+				"03 Cepas de Staphylococcus Aureus Resistentes a Antibióticos": {},
+				"04 Staphylococcus Epidermidis": {},
+				"05 Staphylococcus Saprophyticus": {}
+			},
+			"05 Estreptococos": {
+				"01 Streptococcus Pneumoniae": {},
+				"02 Estreptococos do Grupo Viridans": {},
+				"03 Streptococcus Pyogenes": {},
+				"04 Streptococcus Agalactiae": {},
+				"05 Estreptococos Adicionais": {}
+			},
+			"06 Enterococos e Bacillus": {
+				"01 Enterococcus": {},
+				"02 Bacillus Anthracis": {},
+				"03 Bacillus Cereus": {}
+			},
+			"07 Clostridium": {
+				"01 Clostridioides Difficile": {},
+				"02 Clostridium Perfringens": {},
+				"03 Clostridium Tetani": {},
+				"04 Clostridium Botulinum": {}
+			},
+			"08 Micobactérias": {
+				"01 Mycobacterium Tuberculosis": {},
+				"02 Fisiopatologia da Tuberculose Pulmonar": {},
+				"03 Variantes da Doença Tuberculose Pulmonar": {},
+				"04 Diagnóstico e Manejo da Tuberculose Pulmonar": {},
+				"05 Rastreamento da Tuberculose": {},
+				"06 Mycobacterium Leprae": {},
+				"07 Micobactérias Adicionais": {}
+			},
+			"09 Bacilos Gram Positivos Não Formadores de Esporos": {
+				"01 Corynebacterium Diphtheriae": {},
+				"02 Difteria": {},
+				"03 Listeria Monocytogenes": {},
+				"04 Nocardia": {},
+				"05 Actinomyces Israelii": {}
+			},
+			"10 Bacilos Gram Negativos Fermentadores de Lactose": {
+				"01 Escherichia Coli": {},
+				"02 Cepas Variantes de Escherichia Coli": {},
+				"03 Klebsiella": {},
+				"04 Patógenos Adicionais": {}
+			},
+			"11 Bacilos Gram Negativos Não Fermentadores de Lactose": {
+				"01 Shigella": {},
+				"02 Salmonella Não Tifoide": {},
+				"03 Salmonella Typhi": {},
+				"04 Yersinia Enterocolitica": {},
+				"05 Yersinia Pestis": {},
+				"06 Proteus": {},
+				"07 Pseudomonas Aeruginosa": {},
+				"08 Legionella Pneumophila": {}
+			},
+			"12 Bacilos Gram Negativos Curvos": {
+				"1 Campylobacter Jejuni": {},
+				"2 Helicobacter Pylori": {},
+				"3 Vibrio": {}
+			},
+			"13 Diplococos Gram Negativos": {
+				"1 Neisseria Gonorrhoeae": {},
+				"2 Neisseria Meningitidis": {},
+				"3 Moraxella Catarrhalis": {}
+			},
+			"14 Cocobacilos Gram Negativos": {
+				"01 Haemophilus": {},
+				"02 Bordetella Pertussis": {},
+				"03 Patógenos Adicionais": {}
+			},
+			"15 Espiroquetas": {
+				"01 Treponema Pallidum": {},
+				"02 Neurossífilis": {},
+				"03 Sífilis Congênita": {},
+				"04 Diagnóstico e Manejo Treponêmico": {},
+				"05 Borrelia Burgdorferi": {},
+				"06 Borrelia Recurrentis": {},
+				"07 Leptospira": {}
+			},
+			"16 Bactérias Atípicas": {
+				"01 Patogênese da Chlamydia Trachomatis": {},
+				"02 Sorotipos e Variantes da Doença por Chlamydia Trachomatis": {},
+				"03 Chlamydia Pneumoniae e Psittaci": {},
+				"04 Gardnerella Vaginalis": {},
+				"05 Rickettsia": {},
+				"06 Ehrlichia e Anaplasma": {},
+				"07 Mycoplasma e Ureaplasma": {},
+				"08 Coxiella Burnetti": {}
+			},
+			"17 Micoses Dimórficas": {
+				"01 Visão Geral dos Fungos": {},
+				"02 Histoplasma": {},
+				"03 Blastomyces": {},
+				"04 Coccidioides": {},
+				"05 Paracoccidioides": {},
+				"06 Sporothrix": {}
+			},
+			"18 Micoses Oportunistas": {
+				"01 Doença por Aspergillus": {},
+				"02 Diagnóstico e Manejo de Aspergillus": {},
+				"03 Patogênese da Candida": {},
+				"04 Variantes da Doença por Candida": {},
+				"05 Diagnóstico e Manejo de Candida": {},
+				"06 Cryptococcus": {},
+				"07 Mucor e Rhizopus": {},
+				"08 Pneumocystis": {}
+			},
+			"19 Tinea": {
+				"01 Visão Geral da Tinea": {},
+				"02 Variantes de Tinea": {},
+				"03 Diagnóstico e Manejo da Tinea": {},
+				"04 Malassezia": {}
+			},
+			"20 Protozoários Gastrointestinais": {
+				"01 Giardia": {},
+				"02 Entamoeba": {},
+				"03 Cryptosporidium": {}
+			},
+			"21 Protozoários Sistêmicos": {
+				"01 Toxoplasma": {},
+				"02 Naegleria": {},
+				"03 Trypanosoma Brucei": {},
+				"04 Trypanosoma Cruzi": {},
+				"05 Plasmodium": {},
+				"06 Babesia": {},
+				"07 Leishmania": {},
+				"08 Trichomonas": {}
+			},
+			"22_Nematódeos": {
+				"01_Enterobius": {},
+				"02_Ascaris": {},
+				"03_Strongyloides": {},
+				"04_Ancilostomídeos": {},
+				"05_Trichuris": {},
+				"06_Trichinella": {},
+				"07_Toxocara": {},
+				"08_Onchocerca": {},
+				"09_Loa_Loa": {},
+				"10_Wuchereria_e_Brugia": {}
+			},
+			"23_Cestódeos": {
+				"01_Taenia": {},
+				"02_Difilobotrídeos": {},
+				"03_Echinococcus": {}
+			},
+			"24_Neuropatologia_Infecciosa": {
+				"01_Introdução_à_Meningoencefalite": {}
+			},
+			"24_Trematódeos": {
+				"01_Schistosoma": {},
+				"02_Clonorchis": {}
+			},
+			"25_Ectoparasitas": {
+				"01_Sarcoptes": {},
+				"02_Pediculus_e_Pthirus": {}
+			},
+			"26_Abordagem_à_Virologia": {
+				"01_Abordagem_à_Virologia": {},
+				"02_Diagramas_Virais_Completos": {}
+			},
+			"27_Bases_da_Virologia": {
+				"01_Organização_Viral": {},
+				"02_Mecanismos_de_Infectividade_Viral": {},
+				"03_Genética_Viral": {},
+				"04_Defesa_do_Hospedeiro": {}
+			},
+			"28_Vírus_de_RNA_de_Sentido_Positivo": {
+				"01_Visão_Geral_de_Picornaviridae": {},
+				"02_Rhinovírus": {},
+				"03_Coxsackievírus": {},
+				"04_Poliovírus": {},
+				"05_Hepatite_A": {},
+				"06_Hepatite_E": {},
+				"07_Norovírus": {},
+				"08_Flaviviridae": {},
+				"09_Vírus_do_Nilo_Ocidental": {},
+				"10_Febre_Amarela": {},
+				"11_Zika": {},
+				"12_Dengue": {},
+				"13_Hepatite_C_Parte_1_(Patogênese_e_Doença)": {},
+				"14_Hepatite_C_Parte_2_(Diagnóstico_e_Manejo)": {},
+				"15_Coronavírus_Parte_1_(Patogênese_e_Doença)": {},
+				"16_Coronavírus_Parte_2_(Diagnóstico_e_Manejo)": {},
+				"17_Rubéola": {},
+				"18_Chikungunya": {},
+				"19_Vírus_da_Encefalite_Equina": {},
+				"20_Patogênese_do_HIV": {},
+				"21_Doença_Primária_pelo_HIV": {},
+				"22_Doenças_Secundárias_Associadas_ao_HIV": {},
+				"23_HIV_Congênito": {},
+				"24_Diagnóstico_e_Manejo_do_HIV": {},
+				"25_HTLV-1": {}
+			},
+			"29_Vírus_de_RNA_de_Sentido_Negativo": {
+				"01_Arenavírus": {},
+				"02_Bunyavírus": {},
+				"03_Paramyxoviridae": {},
+				"04_Parainfluenza": {},
+				"05_Vírus_Sincicial_Respiratório": {},
+				"06_Caxumba": {},
+				"07_Sarampo_(Patogênese_e_Doença)": {},
+				"08_Sarampo_(Complicações,_Diagnóstico_e_Manejo)": {},
+				"09_Influenza_(Patogênese)": {},
+				"10_Influenza_(Doença,_Diagnóstico_e_Manejo)": {},
+				"11_Ebola": {},
+				"12_Raiva": {},
+				"13_Hepatite_D": {}
+			},
+			"30_Vírus_de_RNA_de_Fita_Dupla": {
+				"01_Reovírus": {}
+			},
+			"31_Vírus_de_DNA": {
+				"01_Parvovírus_B19": {},
+				"02_Poliomavírus": {},
+				"03_Patogênese_do_Papilomavírus_Humano": {},
+				"04_Manifestações_Clínicas_do_Papilomavírus_Humano": {},
+				"05_Diagnóstico_e_Manejo_do_Papilomavírus_Humano": {},
+				"06_Adenovírus": {},
+				"07_Visão_Geral_da_Família_Herpesvírus": {},
+				"08_Manifestações_Clínicas_do_Vírus_Herpes_Simplex": {},
+				"09_Diagnóstico_e_Manejo_do_Vírus_Herpes_Simplex": {},
+				"10_Patogênese_e_Manifestações_Clínicas_do_Vírus_Varicela-Zoster": {},
+				"11_Diagnóstico_e_Manejo_do_Vírus_Varicela-Zoster": {},
+				"12_Manifestações_Clínicas_do_Vírus_Epstein-Barr": {},
+				"13_Diagnóstico_e_Manejo_do_Vírus_Epstein-Barr": {},
+				"14_Patogênese_e_Manifestações_Clínicas_do_Citomegalovírus": {},
+				"15_Diagnóstico_e_Manejo_do_Citomegalovírus": {},
+				"16_Herpesvírus_Humano_6_e_7_(Roséola)": {},
+				"17_Herpesvírus_Humano_8_(Sarcoma_de_Kaposi)": {},
+				"18_Poxvírus": {},
+				"19_Patogênese_e_Manifestações_Clínicas_do_Vírus_da_Hepatite_B": {},
+				"20_Diagnóstico_e_Manejo_do_Vírus_da_Hepatite_B": {}
+			},
+			"32_Infecções_Cardiorrespiratórias": {
+				"01_Princípios_da_Pneumonia": {},
+				"02_Diagnóstico_da_Pneumonia": {},
+				"03_Patógenos_de_Pneumonia_Típica": {},
+				"04_Patógenos_de_Pneumonia_Atípica": {},
+				"05_Patógenos_de_Pneumonia_Pediátrica_e_Adicionais": {},
+				"06_Princípios_da_Endocardite_Infecciosa": {},
+				"07_Diagnóstico_da_Endocardite_Infecciosa": {},
+				"08_Patógenos_Típicos_de_Endocardite": {},
+				"09_Complicações_e_Endocardite_Não_Infecciosa": {},
+				"10_Fisiopatologia_da_Febre_Reumática_Aguda": {},
+				"11_Diagnóstico_e_Manejo_da_Febre_Reumática_Aguda": {}
+			},
+			"33_Neuropatologia_Infecciosa": {
+				"01_Introdução_à_Meningoencefalite": {},
+				"02_Meningoencefalite_Bacteriana": {},
+				"03_Meningoencefalite_Viral_(Asséptica)": {},
+				"04_Meningoencefalite_Atípica": {},
+				"05_Meningoencefalite_Neonatal": {},
+				"06_Manejo_da_Meningoencefalite": {},
+				"07_Bases_da_Imagem_Cerebral_Infecciosa": {},
+				"08_Lesões_Cerebrais_Infecciosas": {},
+				"09_Medula_Espinhal_Infecciosa_e_Junção_Neuromuscular": {}
+			},
+			"34_Antibióticos": {
+				"23_Rifamicinas": {},
+				"24_Pirazinamida_Etambutol_Dapsona_e_Clofazimina": {}
+			},
+			"34_Doença_Dermatológica_Infecciosa": {
+				"01_Patologia_Dermatológica_Infecciosa_Localizada": {},
+				"02_Patologia_Folicular_Infecciosa": {},
+				"03_Exantemas_da_Infância_Impetigo_Molusco_Escarlatina": {},
+				"04_Exantemas_da_Infância_Varicela_Sarampo_Rubéola": {},
+				"05_Exantemas_da_Infância_Eritema_Infeccioso_Roséola_DMPB": {},
+				"06_Patologia_Dermatológica_Infecciosa_Sistêmica_Síndrome_do_Choque_Tóxico_SSSS_Fasceíte_Necrosante": {},
+				"07_Patologia_Dermatológica_Infecciosa_Sistêmica_Angiomatose_Bacilar_Sarcoma_de_Kaposi_Zoster": {},
+				"08_Palmas_e_Plantas_de_Alta_Relevância": {}
+			},
+			"35_Antifúngicos": {
+				"04_Antifúngicos_Adicionais": {}
+			},
+			"35_Infecções_Oportunistas": {
+				"01_Sarcoma_de_Kaposi_Localizado,_Candidíase_Orofaríngea,_Leucoplasia_Pilosa_Oral": {},
+				"02_Carcinoma_por_HPV,_Reativação_de_Tuberculose,_Linfoma_de_Burkitt": {},
+				"03_Pneumonia_por_Pneumocystis,_LEMP,_Sarcoma_de_Kaposi_Disseminado": {},
+				"04_Demência_e_Neuropatia_Associadas_ao_HIV,_Histoplasmose,_Coccidioidomicose": {},
+				"05_Toxoplasmose,_Linfoma_Primário_do_SNC,_Meningite_Criptocócica": {},
+				"06_Angiomatose_Bacilar,_Esofagite_Infecciosa,_Criptosporidiose,_Aspergilose": {},
+				"07_Citomegalovírus,_Doença_Micobacteriana_Não_Tuberculosa_Disseminada": {}
+			},
+			"36_Antibióticos": {
+				"01_Princípios_Gerais_dos_Antibióticos": {},
+				"02_Visão_Geral_da_Cobertura_Bacteriana": {},
+				"03_Penicilinas_Clássicas": {},
+				"04_Penicilinas_Resistentes_à_Penicilinase": {},
+				"05_Aminopenicilinas": {},
+				"06_Penicilinas_Antipseudomonas": {},
+				"07_Introdução_às_Cefalosporinas": {},
+				"08_Cefalosporinas_de_1ª_e_2ª_Geração": {},
+				"09_Cefalosporinas_de_3ª_4ª_e_5ª_Geração": {},
+				"10_Carbapenêmicos_e_Monobactâmicos": {},
+				"11_Glicopeptídeos_incluindo_Vancomicina": {},
+				"12_Aminoglicosídeos": {},
+				"13_Tetraciclinas_e_Derivados": {},
+				"14_Macrolídeos": {},
+				"15_Lincosamidas": {},
+				"16_Estreptograminas_Oxazolidinonas_e_Anfenicois": {},
+				"17_Fluoroquinolonas": {},
+				"18_Nitroimidazóis": {},
+				"19_Diaminopirimidinas_e_Sulfonamidas": {},
+				"20_Nitrofuranos": {},
+				"21_Fosfomicina_Daptomicina_e_Polimixinas": {},
+				"22_Isoniazida": {},
+				"23_Rifamicinas": {},
+				"24_Pirazinamida_Etambutol_Dapsona_e_Clofazimina": {},
+				"25_Antibióticos_Empíricos_em_Doenças_Respiratórias_e_ORL": {},
+				"26_Antibióticos_Empíricos_em_Meningite_Cistite_e_Pielonefrite": {},
+				"27_Antibióticos_Empíricos_em_Infecções_GI_Pele_Ósseas_e_Hematogênicas": {}
+			},
+			"37_Antifúngicos": {
+				"01_Princípios_Gerais_dos_Azóis": {},
+				"02_Azóis": {},
+				"03_Aliilaminas,_Equinocandinas_e_Polienos": {},
+				"04_Antifúngicos_Adicionais": {},
+				"05_Manejo_de_Doenças_Fúngicas_Comuns": {}
+			},
+			"38_Antiparasitários": {
+				"01_Pirimetamina_Sulfadiazina_Nitroimidazóis_e_Agentes_Intraluminais": {},
+				"02_Antiparasitários_para_Leishmaniose_e_Tripanossomíase": {},
+				"03_Farmacologia_da_Malária_e_Cloroquina": {},
+				"04_Antimaláricos_Resistentes_à_Cloroquina_e_Exoeritrocíticos": {},
+				"05_Anti-helmínticos": {},
+				"06_Algoritmo_de_Anti-helmínticos": {},
+				"07_Ectoparasiticidas": {}
+			},
+			"39_Antivirais": {
+				"01_Terapia_Antiviral_Respiratória": {},
+				"02_Terapia_Antiviral_para_HSV_e_VZV": {},
+				"03_Terapia_Antiviral_Herpética_Adicional": {},
+				"04_Farmacologia_Antirretroviral_para_HIV": {},
+				"05_Inibidores_de_Ligação_e_Fusão_Antirretrovirais": {},
+				"06_Inibidores_da_Transcriptase_Reversa_Nucleosídeos_Antirretrovirais": {},
+				"07_Terapias_Antirretrovirais_Adicionais": {},
+				"08_Manejo_Antirretroviral_do_HIV": {},
+				"09_Terapia_Antiviral_para_Hepatite_B": {},
+				"10_Terapia_Antiviral_para_Hepatite_C": {}
+			}
+		},
+		"Pneumologia": {
+			"01_Introdução_ao_Sistema_Respiratório": {
+				"01_Função,_Anatomia_e_Histologia_do_Sistema_Pulmonar": {},
+				"02_Defeitos_Embriológicos": {},
+				"03_Músculos_da_Respiração": {}
+			},
+			"02_Fisiologia_Aérea": {
+				"02_Respiração_e_Pressão": {},
+				"03_Ponto_de_Igual_Pressão": {},
+				"04_Volumes_e_Capacidades_Pulmonares": {},
+				"05_Curva_do_Pulmão_e_Parede_Torácica": {},
+				"06_Ventilação_e_Espaço_Morto": {},
+				"07_Surfactante": {},
+				"08_Complacência": {},
+				"09_Fluxo_de_Ar_e_Resistência_das_Vias_Aéreas": {},
+				"10_Curvas_Fluxo-Volume": {},
+				"11_Teste_de_Função_Pulmonar": {}
+			},
+			"03_Fisiologia_Sanguínea": {
+				"01_Noções_Básicas_de_Sangue_e_Respiração": {},
+				"01_Noções_Básicas_Respiratórias_e_Sanguíneas": {},
+				"02_Resistência_Vascular_Pulmonar": {},
+				"03_Ventilação_e_Perfusão": {},
+				"04_Desequilíbrio_V/Q_Patológico": {},
+				"05_Hemoglobina": {},
+				"06_Dióxido_de_Carbono": {},
+				"07_Conteúdo_de_Oxigênio": {},
+				"08_Níveis_Anormais_de_Oxigênio": {},
+				"09_Perfusão_vs_Difusão": {},
+				"10_Cenários_de_Gasometria": {},
+				"11_Gradiente_A-a": {}
+			},
+			"04_Fundamentos_da_Patologia_Pulmonar": {
+				"01_Exame_Físico_Pulmonar": {},
+				"02_Introdução_às_Infecções_Respiratórias": {}
+			},
+			"05_Doença_Pulmonar_Obstrutiva": {
+				"01_Noções_Básicas_da_Doença_Pulmonar_Obstrutiva": {},
+				"02_Asma": {},
+				"03_Tratamentos_para_Asma": {},
+				"04_DPOC": {},
+				"05_Fibrose_Cística": {}
+			},
+			"06_Doença_Pulmonar_Restritiva": {
+				"01_Noções_Básicas_da_Doença_Pulmonar_Restritiva": {},
+				"02_Fibrose_Pulmonar": {},
+				"03_Pneumoconiose": {},
+				"04_Pneumonite_de_Hipersensibilidade": {}
+			},
+			"07_Câncer_de_Pulmão": {
+				"01_Noções_Básicas_sobre_Câncer_de_Pulmão": {},
+				"02_Carcinoma_de_Pequenas_Células": {},
+				"03_Carcinoma_de_Células_Não_Pequenas": {},
+				"04_Mesotelioma": {}
+			},
+			"08_Tópicos_Especiais_em_Patologia_Pulmonar": {
+				"01_TVP_e_Embolia_Pulmonar": {},
+				"02_Hipertensão_Pulmonar": {},
+				"03_Pneumotórax": {},
+				"04_Edema_Pulmonar": {},
+				"05_Derrame_Pleural": {},
+				"06_SDRA_e_SDRN": {},
+				"07_Apneia_do_Sono": {}
+			}
 		}
 	},
 	"Cardiologia": {
