@@ -23,6 +23,7 @@ export const userPreferences = app.table("user_preferences", {
 	settings: jsonb("settings").$type<{
 		defaultSessionSize?: number;
 		theme?: "light" | "dark" | "system";
+		use_custom_api_key?: boolean;
 	}>(),
 	updatedAt: timestamp("updated_at", { withTimezone: true })
 		.defaultNow()

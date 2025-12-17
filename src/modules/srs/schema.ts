@@ -4,6 +4,7 @@ import {
 	doublePrecision,
 	index,
 	integer,
+	jsonb,
 	pgSchema,
 	primaryKey,
 	serial,
@@ -24,6 +25,10 @@ export const userCaseHistory = app.table(
 			.notNull(),
 		questionIndex: integer("question_index").notNull(),
 		score: integer("score"),
+		// Armazena o feedback estruturado da IA (score, texto, keywords, etc)
+		aiFeedback: jsonb("ai_feedback"),
+		// Armazena reflexões/anotações do usuário sobre essa tentativa
+		userNotes: text("user_notes"),
 		attemptedAt: timestamp("attempted_at", { withTimezone: true })
 			.notNull()
 			.defaultNow(),
