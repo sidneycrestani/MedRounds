@@ -12,12 +12,18 @@ export function Card({
 	variant = "default",
 	...props
 }: Props) {
-	const base = "rounded-xl border shadow-sm";
+	const base = "rounded-xl border shadow-sm transition-colors duration-200"; // Adicionei transition
 	type Variant = NonNullable<Props["variant"]>;
+
 	const variants: Record<Variant, string> = {
-		default: "bg-white border-gray-100",
-		muted: "bg-gray-100 border-gray-200",
+		// ADICIONADO: dark:bg-gray-800 dark:border-gray-700
+		default: "bg-white border-gray-100 dark:bg-gray-800 dark:border-gray-700",
+
+		// ADICIONADO: dark:bg-gray-900/50 dark:border-gray-700
+		muted:
+			"bg-gray-100 border-gray-200 dark:bg-gray-900/50 dark:border-gray-700",
 	};
+
 	return (
 		<div className={twMerge(base, variants[variant], className)} {...props}>
 			{children}
@@ -36,8 +42,12 @@ export function CardTitle({
 	className,
 	...props
 }: HTMLAttributes<HTMLHeadingElement>) {
+	// ADICIONADO: dark:text-white
 	return (
-		<h3 className={twMerge("font-bold text-gray-900", className)} {...props} />
+		<h3
+			className={twMerge("font-bold text-gray-900 dark:text-white", className)}
+			{...props}
+		/>
 	);
 }
 

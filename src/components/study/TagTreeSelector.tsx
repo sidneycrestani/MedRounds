@@ -115,8 +115,12 @@ export default function TagTreeSelector({
 					<li key={node.id} className="select-none">
 						<div
 							className={twMerge(
-								"flex items-center gap-2 py-1 px-2 rounded hover:bg-gray-50 transition-colors",
-								isSelected || isIndeterminate ? "bg-blue-50" : "",
+								// ADICIONADO: dark:hover:bg-gray-700/50
+								"flex items-center gap-2 py-1 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors",
+								// ADICIONADO: dark:bg-blue-900/20
+								isSelected || isIndeterminate
+									? "bg-blue-50 dark:bg-blue-900/20"
+									: "",
 							)}
 							style={{ paddingLeft: `${level * 1.5 + 0.5}rem` }}
 						>
@@ -137,21 +141,23 @@ export default function TagTreeSelector({
 
 							<label
 								className="flex items-center gap-2 cursor-pointer flex-1"
-								htmlFor={inputId} // Corrigido o erro de A11y
+								htmlFor={inputId}
 							>
 								<IndeterminateCheckbox
 									className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-4 h-4"
 									checked={isSelected}
 									indeterminate={isIndeterminate}
 									onChange={() => handleCheck(node, isSelected)}
-									id={inputId} // Passa o ID
+									id={inputId}
 								/>
 								<span
 									className={twMerge(
-										"text-sm",
+										"text-sm transition-colors",
 										isSelected || isIndeterminate
-											? "font-medium text-blue-900"
-											: "text-gray-700",
+											? // ADICIONADO: dark:text-blue-300
+												"font-medium text-blue-900 dark:text-blue-300"
+											: // ADICIONADO: dark:text-gray-300
+												"text-gray-700 dark:text-gray-300",
 									)}
 								>
 									{node.label}
