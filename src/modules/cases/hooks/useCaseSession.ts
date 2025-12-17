@@ -1,4 +1,3 @@
-// src/modules/cases/hooks/useCaseSession.ts
 import { createBrowserClient } from "@supabase/ssr";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { useMemo, useState } from "react";
@@ -75,6 +74,29 @@ export function useCaseSession({
 	const currentAnswer = answers[activeIndex];
 	const currentResult = results[activeIndex];
 	const isRevealed = revealedQuestionIds.has(currentQuestion.id);
+
+	// Mapeia activeQuestionIndices (orders) para índices do array data.questions
+	const activeArrayIndices = useMemo(() => {
+		return activeQuestionIndices
+			.map((order) => data.questions.findIndex((q) => q.order === order))
+			.filter((idx) => idx !== -1)
+			.sort((a, b) => a - b);
+	}, [activeQuestionIndices, data.questions]);
+
+	// Determina deterministicamente qual é a próxima questão pendente
+	const nextPendingIndex = useMemo(() => {
+		// Filtra apenas índices que fazem parte da sessão E ainda não têm resultado
+		const pending = activeArrayIndices.filter((idx) => results[idx] === null);
+
+		if (pending.length === 0) return null;
+
+		// 1. Tenta encontrar a próxima questão imediatamente após a atual
+		const forward = pending.find((idx) => idx > activeIndex);
+		if (forward !== undefined) return forward;
+
+		// 2. Se não houver próxima (estamos no fim), volta para a primeira pendente (caso tenha pulado)
+		return pending[0];
+	}, [activeArrayIndices, results, activeIndex]);
 
 	// Calculate Tab Items State
 	const tabItems = useMemo(() => {
@@ -213,6 +235,12 @@ export function useCaseSession({
 		});
 	}
 
+	function handleSmartAdvance() {
+		if (nextPendingIndex !== null) {
+			setActiveIndex(nextPendingIndex);
+		}
+	}
+
 	return {
 		// State
 		activeIndex,
@@ -223,6 +251,7 @@ export function useCaseSession({
 		isLoading: loading,
 		tabItems,
 		isCaseFullyComplete,
+		hasNextPendingQuestion: nextPendingIndex !== null,
 
 		// Actions
 		setActiveIndex,
@@ -231,5 +260,6 @@ export function useCaseSession({
 		revealAnswer: handleReveal,
 		submitSelfEvaluation: handleSelfEvaluate,
 		retry: retryCurrent,
+		nextQuestion: handleSmartAdvance,
 	};
 }

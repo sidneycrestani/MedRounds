@@ -1,7 +1,6 @@
-// src/modules/cases/components/CaseStudyClient.tsx
 import { Button } from "@/components/ui/button";
 import { NavigationTabs } from "@/components/ui/navigation-tabs";
-import { Check, Eye, X } from "lucide-react";
+import { ArrowRight, Check, CheckCircle, Eye, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
@@ -39,6 +38,7 @@ export default function CaseStudyClient({
 		isLoading,
 		tabItems,
 		isCaseFullyComplete,
+		hasNextPendingQuestion,
 
 		// Actions
 		setActiveIndex,
@@ -47,14 +47,18 @@ export default function CaseStudyClient({
 		revealAnswer,
 		submitSelfEvaluation,
 		retry,
+		nextQuestion,
 	} = useCaseSession({ data, env, activeQuestionIndices, userProgress });
 
 	const hasResult = !!currentResult;
-
+	const handleNextAndScroll = () => {
+		nextQuestion();
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	};
 	return (
 		<div className="space-y-8 animate-in fade-in duration-500">
 			<CaseVignette
-				caseId={data.id} // <--- Adicione aqui
+				caseId={data.id}
 				title="Contexto"
 				vignette={data.vignette}
 				media={data.media}
@@ -101,25 +105,6 @@ export default function CaseStudyClient({
 							<Eye className="w-4 h-4 mr-2" />
 							Ver Gabarito
 						</Button>
-
-						<div className="ml-auto flex items-center gap-2 text-sm">
-							{data.prevId && (
-								<a
-									href={`/case/${data.prevId}${data.searchParams}`}
-									className="text-gray-600 hover:text-black underline"
-								>
-									Anterior
-								</a>
-							)}
-							{data.nextId && (
-								<a
-									href={`/case/${data.nextId}${data.searchParams}`}
-									className="text-gray-600 hover:text-black underline"
-								>
-									Próxima
-								</a>
-							)}
-						</div>
 					</div>
 				)}
 
@@ -175,10 +160,21 @@ export default function CaseStudyClient({
 					/>
 				)}
 
-				{onCaseCompleted && (
-					<div className="flex items-center justify-end">
-						{isCaseFullyComplete && (
-							<Button onClick={onCaseCompleted}>Próximo Caso</Button>
+				{/* 4. Navigation: Unified Smart Button */}
+				{(hasResult || isCaseFullyComplete) && (
+					<div className="flex items-center justify-end pt-4 border-t border-gray-100 mt-6">
+						{hasNextPendingQuestion ? (
+							// Condição 1: Ainda há questões pendentes nesta sessão -> Avança para a próxima questão
+							<Button onClick={handleNextAndScroll}>
+								Próxima Questão <ArrowRight className="w-4 h-4 ml-2" />
+							</Button>
+						) : (
+							// Condição 2: Acabou as questões desta sessão -> Finaliza o Caso (Next Case)
+							onCaseCompleted && (
+								<Button onClick={onCaseCompleted}>
+									Finalizar Caso <CheckCircle className="w-4 h-4 ml-2" />
+								</Button>
+							)
 						)}
 					</div>
 				)}
