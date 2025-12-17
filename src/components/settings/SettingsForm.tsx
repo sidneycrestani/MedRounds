@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton"; // Importei o componente
 import type { UserSettings } from "@/modules/preferences/schema";
 import { Check, Key, Laptop, Moon, Sun, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -102,9 +103,9 @@ export default function SettingsForm() {
 	}
 
 	if (isLoading) {
-		return (
-			<div className="animate-pulse h-64 bg-gray-100 dark:bg-gray-800 rounded-xl" />
-		);
+		// CORREÇÃO: Usando o componente Skeleton que agora suporta dark mode
+		// ou aplicando as classes manualmente se preferir manter a div
+		return <Skeleton className="h-64 rounded-xl" />;
 	}
 
 	return (
