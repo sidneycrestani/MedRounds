@@ -165,11 +165,38 @@ export default function SessionManager({
 	}, [mode, currentIndex, queue]);
 
 	// 4. Handler de conclusão de caso
-	function onCaseCompleted() {
-		// TODO: Idealmente, informar API que avançou o index (PATCH /api/study/session/progress)
-		// Para este MVP, controlamos localmente. A persistência total do progresso fica para o próximo passo.
-		setCurrentIndex((prev) => prev + 1);
-		setCurrentCaseData(null);
+	async function onCaseCompleted() {
+		// 1. Bloqueia UI
+		setIsProcessing(true);
+
+		try {
+			// 2. Persiste o avanço no servidor
+			const res = await fetch("/api/study/session", {
+				method: "PATCH",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ action: "advance" }),
+			});
+
+			if (!res.ok) throw new Error("Falha ao salvar progresso");
+
+			const data = await res.json();
+
+			// 3. Verifica se o servidor finalizou a sessão
+			if (data.isCompleted) {
+				setMode("summary");
+				// Limpa fila local para garantir que refresh não mostre dados antigos
+				setQueue([]);
+			} else {
+				// 4. Avança localmente apenas após sucesso remoto
+				setCurrentIndex((prev) => prev + 1);
+				setCurrentCaseData(null);
+			}
+		} catch (error) {
+			console.error("Erro ao avançar questão:", error);
+			alert("Erro de conexão ao salvar progresso. Tente novamente.");
+		} finally {
+			setIsProcessing(false);
+		}
 	}
 
 	// --- RENDER ---

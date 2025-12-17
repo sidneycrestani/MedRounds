@@ -42,36 +42,86 @@ export const PATCH: APIRoute = async (context) => {
 	const user = context.locals.user;
 	if (!user) return new Response(null, { status: 401 });
 
-	const body = await context.request.json();
-	const tagIds = body.tagIds as number[];
-
 	const runtime = context.locals.runtime;
 	const env = getServerEnv(runtime);
 	const db = getDb(getConnectionFromEnv(env));
 
+	let body: { tagIds?: number[]; action?: string } = {};
 	try {
-		await db
-			.insert(userPreferences)
-			.values({
-				userId: user.id,
-				selectedTagIds: tagIds,
-				updatedAt: new Date(),
-			})
-			.onConflictDoUpdate({
-				target: userPreferences.userId,
-				set: {
-					selectedTagIds: tagIds,
-					updatedAt: new Date(),
-				},
-			});
-
-		return new Response(JSON.stringify({ success: true }), { status: 200 });
-	} catch (error) {
-		console.error(error);
-		return new Response(JSON.stringify({ error: "Update failed" }), {
-			status: 500,
-		});
+		body = await context.request.json();
+	} catch {
+		// Ignora erro de parse se body estiver vazio
 	}
+
+	// MODO 1: Atualizar Preferências (Lógica existente, mantida para compatibilidade)
+	if (body.tagIds && Array.isArray(body.tagIds)) {
+		try {
+			await db
+				.insert(userPreferences)
+				.values({
+					userId: user.id,
+					selectedTagIds: body.tagIds,
+					updatedAt: new Date(),
+				})
+				.onConflictDoUpdate({
+					target: userPreferences.userId,
+					set: {
+						selectedTagIds: body.tagIds,
+						updatedAt: new Date(),
+					},
+				});
+			return new Response(JSON.stringify({ success: true }), { status: 200 });
+		} catch (error) {
+			console.error(error);
+			return new Response(JSON.stringify({ error: "Update failed" }), {
+				status: 500,
+			});
+		}
+	}
+
+	// MODO 2: Avançar Sessão (NOVA LÓGICA)
+	if (body.action === "advance") {
+		try {
+			// 1. Buscar sessão ativa
+			const activeSession = await findActiveSession(db, user.id);
+			if (!activeSession) {
+				return new Response(JSON.stringify({ error: "No active session" }), {
+					status: 404,
+				});
+			}
+
+			const newIndex = activeSession.currentIndex + 1;
+			const isCompleted = newIndex >= activeSession.totalQuestions;
+
+			// 2. Atualizar Banco
+			await db
+				.update(studySessions)
+				.set({
+					currentIndex: newIndex,
+					status: isCompleted ? "completed" : "active",
+					lastActivityAt: new Date(),
+				})
+				.where(eq(studySessions.id, activeSession.id));
+
+			return new Response(
+				JSON.stringify({
+					success: true,
+					newIndex,
+					isCompleted,
+				}),
+				{ status: 200 },
+			);
+		} catch (error) {
+			console.error("Error advancing session:", error);
+			return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+				status: 500,
+			});
+		}
+	}
+
+	return new Response(JSON.stringify({ error: "Invalid request" }), {
+		status: 400,
+	});
 };
 export const GET: APIRoute = async (context) => {
 	const user = context.locals.user;

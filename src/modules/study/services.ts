@@ -38,7 +38,7 @@ export async function createSession(
 	{ userId, tagIds, limit = 20 }: CreateSessionParams,
 ) {
 	return await db.transaction(async (tx) => {
-		// Passo A: Salvar Preferências (Upsert)
+		await tx.delete(studySessions).where(eq(studySessions.userId, userId)); // Passo A: Salvar Preferências (Upsert)
 		// Isso garante que na próxima vez a UI saiba o que foi selecionado por último
 		await tx
 			.insert(userPreferences)
