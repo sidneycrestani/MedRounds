@@ -1,0 +1,32 @@
+---
+import ReviewFlow from "@/components/study/ReviewFlow";
+import Layout from "@/layouts/Layout.astro";
+import { ArrowLeft } from "lucide-react";
+
+// Server-side Auth Guard
+const user = Astro.locals.user;
+if (!user) {
+	return Astro.redirect("/");
+}
+---
+
+<Layout title="Revisão de Erros - MedRounds">
+  <div class="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
+    <!-- Header Simples -->
+    <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-4 px-6 sticky top-0 z-10">
+      <div class="max-w-4xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <a href="/" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors" aria-label="Voltar">
+            <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+          </a>
+          <span class="font-medium text-gray-500 dark:text-gray-400">Área de Revisão</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full p-6">
+      <ReviewFlow client:load />
+    </main>
+  </div>
+</Layout>
