@@ -1,6 +1,6 @@
 import Button from "@/components/ui/button";
-// MUDANÇA 1: Importe do SSR, não do supabase-js
 import { createBrowserClient } from "@supabase/ssr";
+import { LogOut } from "lucide-react";
 import { useMemo, useState } from "react";
 
 type EnvConfig = { supabaseUrl: string; supabaseAnonKey: string };
@@ -10,8 +10,6 @@ export default function LoginButton({
 	userName,
 }: { env: EnvConfig; userName?: string | null }) {
 	const supabase = useMemo(
-		// MUDANÇA 2: Use createBrowserClient.
-		// Ele configura automaticamente os cookies para serem lidos pelo servidor.
 		() => createBrowserClient(env.supabaseUrl, env.supabaseAnonKey),
 		[env.supabaseUrl, env.supabaseAnonKey],
 	);
@@ -26,18 +24,32 @@ export default function LoginButton({
 					"/api/auth/callback",
 					window.location.origin,
 				).toString(),
-				// O flowType PKCE é o padrão do createBrowserClient,
-				// mas não custa reforçar se quiser:
-				// flowType: 'pkce',
 			},
 		});
 		setLoading(false);
 	}
 
+	async function handleLogout() {
+		// Redirect to the API route to clear server cookies and sign out
+		window.location.href = "/api/auth/signout";
+	}
+
 	if (userName) {
 		return (
-			<div className="flex items-center gap-2">
-				<span className="text-sm text-gray-600">{userName}</span>
+			<div className="flex items-center gap-3">
+				<span className="text-sm text-gray-600 dark:text-gray-400 hidden sm:inline-block">
+					{userName}
+				</span>
+				<Button
+					variant="ghost"
+					size="sm"
+					onClick={handleLogout}
+					className="text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20 px-2 sm:px-3"
+					title="Sair"
+				>
+					<LogOut size={16} className="sm:mr-2" />
+					<span className="hidden sm:inline">Sair</span>
+				</Button>
 			</div>
 		);
 	}
