@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton"; // Importei o componente
+import { Skeleton } from "@/components/ui/skeleton";
 import type { UserSettings } from "@/modules/preferences/schema";
 import { Check, Key, Laptop, Moon, Sun, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
-
-const LOCAL_STORAGE_KEY_NAME = "medrounds_gemini_key";
 
 export default function SettingsForm() {
 	const [theme, setTheme] = useState<UserSettings["theme"]>("system");
@@ -21,12 +19,10 @@ export default function SettingsForm() {
 			try {
 				const res = await fetch("/api/settings");
 				if (res.ok) {
-					const data: UserSettings = await res.json();
+					const data = await res.json();
 					setTheme(data.theme);
-				}
-				const storedKey = localStorage.getItem(LOCAL_STORAGE_KEY_NAME);
-				if (storedKey) {
-					setHasStoredKey(true);
+					// A flag vinda do servidor indica se a chave existe no banco encriptada
+					setHasStoredKey(data.has_custom_key);
 				}
 			} catch (e) {
 				console.error("Failed to load settings", e);
@@ -40,6 +36,7 @@ export default function SettingsForm() {
 	async function handleThemeChange(newTheme: UserSettings["theme"]) {
 		setTheme(newTheme);
 		const root = document.documentElement;
+
 		if (
 			newTheme === "dark" ||
 			(newTheme === "system" &&
@@ -73,15 +70,23 @@ export default function SettingsForm() {
 	async function handleSaveKey() {
 		if (!apiKey.trim()) return;
 		setSaveState("idle");
+
 		try {
-			localStorage.setItem(LOCAL_STORAGE_KEY_NAME, apiKey.trim());
-			setHasStoredKey(true);
-			setApiKey("");
-			await fetch("/api/settings", {
+			// Enviamos a chave para o servidor encriptar e salvar no banco
+			const res = await fetch("/api/settings", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ theme, use_custom_key: true }),
+				body: JSON.stringify({
+					theme,
+					apiKey: apiKey.trim(),
+					use_custom_key: true,
+				}),
 			});
+
+			if (!res.ok) throw new Error("Falha ao salvar no servidor");
+
+			setHasStoredKey(true);
+			setApiKey(""); // Limpa o input por segurança
 			setSaveState("success");
 			setTimeout(() => setSaveState("idle"), 2000);
 		} catch (e) {
@@ -90,21 +95,33 @@ export default function SettingsForm() {
 	}
 
 	async function handleRemoveKey() {
-		if (!confirm("Tem certeza? A chave será removida deste dispositivo."))
+		if (
+			!confirm(
+				"Tem certeza? A chave será removida permanentemente do servidor.",
+			)
+		)
 			return;
-		localStorage.removeItem(LOCAL_STORAGE_KEY_NAME);
-		setHasStoredKey(false);
-		setApiKey("");
-		await fetch("/api/settings", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ theme, use_custom_key: false }),
-		});
+
+		try {
+			const res = await fetch("/api/settings", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					theme,
+					removeKey: true, // Flag para o backend limpar a coluna encrypted_gemini_key
+				}),
+			});
+
+			if (res.ok) {
+				setHasStoredKey(false);
+				setApiKey("");
+			}
+		} catch (e) {
+			console.error("Failed to remove key", e);
+		}
 	}
 
 	if (isLoading) {
-		// CORREÇÃO: Usando o componente Skeleton que agora suporta dark mode
-		// ou aplicando as classes manualmente se preferir manter a div
 		return <Skeleton className="h-64 rounded-xl" />;
 	}
 
@@ -167,10 +184,10 @@ export default function SettingsForm() {
 				</CardHeader>
 				<CardContent className="space-y-4">
 					<p className="text-sm text-gray-600 dark:text-gray-400">
-						Para usar a correção automática ilimitada, você pode fornecer sua
-						própria chave da API Google Gemini. A chave é salva{" "}
-						<strong>apenas no seu navegador</strong> e nunca é armazenada em
-						nossos servidores.
+						Para usar a correção automática ilimitada, forneça sua chave da API
+						Google Gemini. Sua chave é salva de forma{" "}
+						<strong>encriptada e segura</strong> em nossos servidores e usada
+						apenas para processar suas correções.
 					</p>
 
 					{hasStoredKey ? (
@@ -181,10 +198,10 @@ export default function SettingsForm() {
 								</div>
 								<div>
 									<p className="font-medium text-green-900 dark:text-green-100">
-										Chave salva com segurança
+										Chave configurada e segura
 									</p>
 									<p className="text-xs text-green-700 dark:text-green-300">
-										Armazenada no LocalStorage
+										Armazenamento encriptado no servidor (AES-256)
 									</p>
 								</div>
 							</div>
@@ -192,6 +209,7 @@ export default function SettingsForm() {
 								variant="ghost"
 								onClick={handleRemoveKey}
 								className="text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20"
+								title="Remover chave"
 							>
 								<Trash2 size={18} />
 							</Button>
@@ -213,7 +231,7 @@ export default function SettingsForm() {
 									disabled={apiKey.length < 10}
 									state={saveState}
 								>
-									Salvar Chave no Dispositivo
+									Salvar Chave
 								</Button>
 							</div>
 						</div>

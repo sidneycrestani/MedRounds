@@ -1,3 +1,4 @@
+// src/core/env.ts
 import { z } from "zod";
 type RuntimeLike = { env?: unknown };
 
@@ -10,6 +11,7 @@ const ServerEnvSchema = z
 	.object({
 		DATABASE_URL: z.string().min(1).optional(),
 		HYPERDRIVE: z.object({ connectionString: z.string().min(1) }).optional(),
+		ENCRYPTION_KEY: z.string().length(32).optional(),
 	})
 	.refine((env) => !!env.DATABASE_URL || !!env.HYPERDRIVE, {
 		message: "Missing DATABASE_URL or HYPERDRIVE.connectionString",

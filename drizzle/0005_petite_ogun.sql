@@ -1,0 +1,2 @@
+ALTER TABLE "app"."user_preferences" ALTER COLUMN "settings" SET DEFAULT '{"theme":"system","use_custom_key":false}'::jsonb;--> statement-breakpoint
+ALTER TABLE "app"."user_preferences" ADD COLUMN "encrypted_gemini_key" text;

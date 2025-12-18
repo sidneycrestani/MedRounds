@@ -1,5 +1,7 @@
+// src/pages/api/settings.ts
 import { getDb } from "@/core/db";
 import { getConnectionFromEnv, getServerEnv } from "@/core/env";
+import { encryptKey } from "@/core/security";
 import {
 	type UserSettings,
 	userPreferences,
@@ -17,7 +19,10 @@ export const GET: APIRoute = async (context) => {
 
 	try {
 		const prefs = await db
-			.select({ settings: userPreferences.settings })
+			.select({
+				settings: userPreferences.settings,
+				hasKey: userPreferences.encryptedGeminiKey,
+			})
 			.from(userPreferences)
 			.where(eq(userPreferences.userId, user.id))
 			.limit(1);
@@ -27,10 +32,17 @@ export const GET: APIRoute = async (context) => {
 			use_custom_key: false,
 		};
 
-		return new Response(JSON.stringify(settings), {
-			status: 200,
-			headers: { "Content-Type": "application/json" },
-		});
+		// Retornamos apenas se a chave existe, nunca o valor
+		return new Response(
+			JSON.stringify({
+				...settings,
+				has_custom_key: !!prefs[0]?.hasKey,
+			}),
+			{
+				status: 200,
+				headers: { "Content-Type": "application/json" },
+			},
+		);
 	} catch (error) {
 		console.error("GET Settings Error:", error);
 		return new Response(JSON.stringify({ error: "Internal Server Error" }), {
@@ -43,16 +55,17 @@ export const POST: APIRoute = async (context) => {
 	const user = context.locals.user;
 	if (!user) return new Response(null, { status: 401 });
 
-	// TIPAGEM CORRIGIDA AQUI
-	let body: Partial<UserSettings>;
+	const runtime = context.locals.runtime;
+	const env = getServerEnv(runtime);
+	const db = getDb(getConnectionFromEnv(env));
+
+	let body: Partial<UserSettings & { apiKey?: string; removeKey?: boolean }>;
 	try {
 		body = await context.request.json();
 	} catch {
 		return new Response("Invalid JSON", { status: 400 });
 	}
 
-	// Validação dos campos permitidos com base no tipo
-	// Nota: O TypeScript agora sabe que body.theme existe, mas precisamos garantir que é um dos valores literais
 	const rawTheme = body.theme as string;
 	const validTheme = ["light", "dark", "system"].includes(rawTheme)
 		? (rawTheme as UserSettings["theme"])
@@ -63,23 +76,40 @@ export const POST: APIRoute = async (context) => {
 		use_custom_key: Boolean(body.use_custom_key),
 	};
 
-	const runtime = context.locals.runtime;
-	const env = getServerEnv(runtime);
-	const db = getDb(getConnectionFromEnv(env));
-
 	try {
-		// Upsert na tabela user_preferences
+		let encryptedKey: string | null | undefined = undefined;
+
+		// Lógica de BYOK
+		if (body.removeKey) {
+			encryptedKey = null;
+			settingsToSave.use_custom_key = false;
+		} else if (body.apiKey && body.apiKey.trim().length > 10) {
+			if (!env.ENCRYPTION_KEY) {
+				throw new Error("Server encryption key not configured");
+			}
+			encryptedKey = encryptKey(
+				body.apiKey.trim(),
+				user.id,
+				env.ENCRYPTION_KEY,
+			);
+			settingsToSave.use_custom_key = true;
+		}
+
 		await db
 			.insert(userPreferences)
 			.values({
 				userId: user.id,
 				settings: settingsToSave,
+				encryptedGeminiKey: encryptedKey ?? null,
 				updatedAt: new Date(),
 			})
 			.onConflictDoUpdate({
 				target: userPreferences.userId,
 				set: {
 					settings: settingsToSave,
+					...(encryptedKey !== undefined
+						? { encryptedGeminiKey: encryptedKey }
+						: {}),
 					updatedAt: new Date(),
 				},
 			});

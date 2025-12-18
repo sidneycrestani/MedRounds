@@ -8,7 +8,6 @@ import {
 	uuid,
 } from "drizzle-orm/pg-core";
 
-// Reutilizamos o schema 'app' já existente em outros módulos
 const app = pgSchema("app");
 
 export const sessionStatusEnum = app.enum("session_status", [
@@ -24,12 +23,13 @@ export type UserSettings = {
 };
 
 export const userPreferences = app.table("user_preferences", {
-	userId: text("user_id").primaryKey(), // FK lógica para tabela de auth
+	userId: text("user_id").primaryKey(),
 	selectedTagIds: jsonb("selected_tag_ids").$type<number[]>().default([]),
-	// Atualização da coluna settings com tipagem explícita e default
 	settings: jsonb("settings")
 		.$type<UserSettings>()
 		.default({ theme: "system", use_custom_key: false }),
+	// NOVA COLUNA: Armazena a chave encriptada de forma segura
+	encryptedGeminiKey: text("encrypted_gemini_key"),
 	updatedAt: timestamp("updated_at", { withTimezone: true })
 		.defaultNow()
 		.notNull(),
