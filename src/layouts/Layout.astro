@@ -3,38 +3,66 @@ import "@/styles/global.css";
 
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	// Descrição padrão caso você esqueça de colocar em alguma página
+	description = "MedRounds: Simulador de Raciocínio Clínico e QBank com IA para estudantes de medicina.",
+	// A imagem que expliquei (social.png na pasta public)
+	image = "/social.png",
+} = Astro.props;
+
+// Gera a URL canônica (importante para o Google não achar que é conteúdo duplicado)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Resolve a URL completa da imagem para o compartilhamento funcionar
+const socialImageURL = new URL(image, Astro.url);
 ---
 
 <!doctype html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-		<!-- Script Anti-Flash (FOUC) -->
-		<!-- Executa antes do render para aplicar o tema correto instantaneamente -->
-		<script is:inline>
-			(function () {
-				const savedTheme = localStorage.getItem("theme");
-				const systemDark = window.matchMedia(
-					"(prefers-color-scheme: dark)",
-				).matches;
+    <link rel="canonical" href={canonicalURL} />
 
-				// Se estiver salvo como dark, OU se não estiver salvo e o sistema for dark
-				if (savedTheme === "dark" || (!savedTheme && systemDark)) {
-					document.documentElement.classList.add("dark");
-				} else {
-					document.documentElement.classList.remove("dark");
-				}
-			})();
-		</script>
-	</head>
-	<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-		<slot />
-	</body>
+    <title>{title} | MedRounds</title>
+    <meta name="title" content={`${title} | MedRounds`} />
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
+
+    <script is:inline>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        if (savedTheme === "dark" || (!savedTheme && systemDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <slot />
+  </body>
 </html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /settings
+Disallow: /study/
+
+Sitemap: https://medrounds.com.br/sitemap-index.xml
