@@ -40,17 +40,18 @@ if (currentUser) {
 
 <Layout title="MedRounds - Dashboard">
     
-    <!-- Header -->
     <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-4 px-6 sticky top-0 z-10 transition-colors duration-300">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-blue-900 dark:text-blue-400 flex items-center gap-2">
-          <img src="/favicon.svg" alt="Logo MedRounds" class="w-8 h-8" />
-          MedRounds
+        <a href="/" class="text-2xl font-bold flex items-center gap-2 group">
+          <img src="/favicon.svg" alt="Logo MedRounds" class="w-8 h-8 transition-transform group-hover:scale-105" />
+          <span class="bg-brand-gradient bg-clip-text text-transparent">
+            MedRounds
+          </span>
         </a>
         
         <div class="flex items-center gap-4">
           {currentUser && (
-            <a href="/settings" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white transition-colors" title="Configurações">
+            <a href="/settings" class="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 transition-colors" title="Configurações">
               <Settings size={20} />
             </a>
           )}
@@ -62,7 +63,9 @@ if (currentUser) {
     <div class="flex-1 max-w-6xl mx-auto w-full p-6">
       {!currentUser ? (
         <div class="text-center py-20">
-          <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Bem-vindo ao MedRounds</h1>
+          <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+            Bem-vindo ao <span class="text-brand-500">MedRounds</span>
+          </h1>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Faça login para começar seus estudos.</p>
         </div>
       ) : activeSession ? (
@@ -77,7 +80,7 @@ if (currentUser) {
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Card: Revisão / Triagem */}
-            <a href="/review" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all shadow-sm hover:shadow-md">
+            <a href="/review" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand-400 dark:hover:border-brand-500 transition-all shadow-sm hover:shadow-md">
               <div class="flex justify-between items-start mb-4">
                 <div class="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-lg text-orange-600 dark:text-orange-400 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                   <Inbox size={24} />
@@ -92,15 +95,15 @@ if (currentUser) {
               <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
                 Revise suas respostas incorretas e decida quando quer revê-las novamente.
               </p>
-              <div class="flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium">
+              <div class="flex items-center text-brand-600 dark:text-brand-400 text-sm font-medium group-hover:underline">
                 Ir para revisão<ArrowRight size={16} />
               </div>
             </a>
 
             {/* Card: Novo Estudo */}
-            <a href="/study/new" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 transition-all shadow-sm hover:shadow-md">
+            <a href="/study/new" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-brand-400 dark:hover:border-brand-500 transition-all shadow-sm hover:shadow-md">
               <div class="flex justify-between items-start mb-4">
-                <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg text-green-600 dark:text-green-400 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                <div class="bg-brand-50 dark:bg-brand-900/20 p-3 rounded-lg text-brand-600 dark:text-brand-400 group-hover:bg-brand-500 group-hover:text-white transition-colors">
                   <BrainCircuit size={24} />
                 </div>
               </div>
@@ -108,7 +111,7 @@ if (currentUser) {
               <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
                 Inicie uma nova sessão de estudos.
               </p>
-               <div class="flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium">
+               <div class="flex items-center text-brand-600 dark:text-brand-400 text-sm font-medium group-hover:underline">
                 Configurar sessão <PlayCircle size={16} />
               </div>
             </a>

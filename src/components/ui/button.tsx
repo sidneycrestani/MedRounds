@@ -23,12 +23,13 @@ export function Button({
 		"inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all shadow-sm disabled:opacity-70 disabled:cursor-not-allowed";
 
 	const variants = {
+		// ALTERADO: De bg-black para bg-brand-gradient
 		primary:
-			"bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200",
+			"bg-brand-gradient text-white hover:opacity-90 shadow-blue-500/20 dark:shadow-none border border-transparent",
 		secondary:
-			"bg-white text-gray-800 border border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:border-gray-500",
+			"bg-white text-gray-800 border border-gray-300 hover:border-brand-400 hover:text-brand-600 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:border-brand-500 dark:hover:text-brand-400",
 		ghost:
-			"text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 shadow-none",
+			"text-gray-700 hover:bg-brand-50 hover:text-brand-700 dark:text-gray-300 dark:hover:bg-gray-800 shadow-none",
 	};
 
 	const sizes = {
