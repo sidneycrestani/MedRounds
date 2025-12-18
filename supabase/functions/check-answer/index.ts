@@ -1,8 +1,38 @@
+import { Buffer } from "node:buffer";
+import crypto from "node:crypto";
 import {
 	GoogleGenerativeAI,
 	generationConfig,
 } from "npm:@google/generative-ai";
 import { createClient } from "jsr:@supabase/supabase-js@2";
+
+// Configurações de criptografia idênticas ao backend Astro
+const ALGORITHM = "aes-256-gcm";
+const IV_LENGTH = 16;
+const TAG_LENGTH = 16;
+const SALT_LENGTH = 64;
+
+function decryptKey(
+	encryptedBase64: string,
+	userId: string,
+	masterKey: string,
+): string {
+	const data = Buffer.from(encryptedBase64, "base64");
+	const iv = data.subarray(0, IV_LENGTH);
+	const tag = data.subarray(IV_LENGTH, IV_LENGTH + TAG_LENGTH);
+	const encryptedText = data.subarray(IV_LENGTH + TAG_LENGTH);
+
+	const salt = crypto.scryptSync(masterKey, userId, SALT_LENGTH);
+	const key = salt.subarray(0, 32);
+
+	const decipher = crypto.createDecipheriv(ALGORITHM, key, iv);
+	decipher.setAuthTag(tag);
+
+	return Buffer.concat([
+		decipher.update(encryptedText),
+		decipher.final(),
+	]).toString("utf8");
+}
 
 Deno.serve(async (req) => {
 	if (req.method === "OPTIONS") {
@@ -20,23 +50,54 @@ Deno.serve(async (req) => {
 		const authHeader = req.headers.get("Authorization")!;
 		const supabaseClient = createClient(
 			Deno.env.get("SUPABASE_URL") ?? "",
-			Deno.env.get("SUPABASE_ANON_KEY") ?? "", // Use ANON KEY aqui para validar o JWT do user
+			Deno.env.get("SUPABASE_ANON_KEY") ?? "",
 			{
 				global: { headers: { Authorization: authHeader } },
-				db: { schema: "content" },
 			},
 		);
+
 		const {
 			data: { user },
 			error: authError,
 		} = await supabaseClient.auth.getUser();
+
 		if (authError || !user) {
 			return new Response(JSON.stringify({ error: "Unauthorized" }), {
 				status: 401,
 			});
 		}
-		// 1. Busca dados normalizados: pergunta específica + caso pai
+
+		// Buscamos na tabela user_preferences (esquema app)
+		const adminClient = createClient(
+			Deno.env.get("SUPABASE_URL") ?? "",
+			Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+		);
+
+		let activeApiKey = Deno.env.get("GEMINI_API_KEY") as string;
+		const masterKey = Deno.env.get("ENCRYPTION_KEY");
+
+		// CHAMADA RPC: Busca a chave sem precisar expor o schema 'app'
+		const { data: encryptedKey, error: rpcError } = await adminClient.rpc(
+			"get_user_gemini_key",
+			{ p_user_id: user.id },
+		);
+
+		if (rpcError) {
+			console.error("Erro ao chamar RPC get_user_gemini_key:", rpcError);
+		}
+
+		if (encryptedKey && masterKey) {
+			try {
+				activeApiKey = decryptKey(encryptedKey, user.id, masterKey);
+				// console.log("BYOK: Chave customizada ativa.");
+			} catch (err) {
+				console.error("BYOK: Erro na descriptografia, usando fallback.");
+			}
+		}
+		// --------------------------
+
 		const { data: questionRow, error: qErr } = await supabaseClient
+			.schema("content")
 			.from("case_questions")
 			.select(
 				"id, case_id, question_text, correct_answer_text, must_include_keywords, context_image_url",
@@ -46,7 +107,6 @@ Deno.serve(async (req) => {
 
 		if (qErr) {
 			console.error("❌ Erro no Supabase Query:", JSON.stringify(qErr));
-			// Se o erro for PGRST106, confirma que o schema não está exposto na API
 			throw new Error(`Erro de banco de dados: ${qErr.message} (${qErr.code})`);
 		}
 
@@ -56,6 +116,7 @@ Deno.serve(async (req) => {
 		}
 
 		const { data: caseRow, error: cErr } = await supabaseClient
+			.schema("content")
 			.from("clinical_cases")
 			.select("id, vignette, main_image_url")
 			.eq("id", questionRow.case_id)
@@ -65,13 +126,13 @@ Deno.serve(async (req) => {
 			throw new Error("Caso clínico não encontrado.");
 		}
 
-		const apiKey = Deno.env.get("GEMINI_API_KEY") as string;
-		const genAI = new GoogleGenerativeAI(apiKey);
+		// Instancia o modelo com a chave decidida (Custom ou Sistema)
+		const genAI = new GoogleGenerativeAI(activeApiKey);
 		const model = genAI.getGenerativeModel({
-			model: "gemini-2.5-flash",
+			model: "gemini-flash-latest",
 			generationConfig: {
-				responseMimeType: "application/json", // <--- O SEGREDO: Força JSON nativo
-				temperature: 0.2, // Baixa temperatura para ser mais rigoroso
+				responseMimeType: "application/json",
+				temperature: 1.0,
 			},
 		});
 
@@ -125,7 +186,6 @@ Retorne APENAS um JSON (sem markdown, sem crases) seguindo este schema:
 			.trim();
 		const aiPayload = JSON.parse(textResp);
 
-		// 2. Retorna o feedback da IA + O Gabarito Oficial para o frontend exibir
 		return new Response(
 			JSON.stringify({
 				...aiPayload,
