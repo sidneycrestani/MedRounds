@@ -211,7 +211,7 @@ export default function SessionManager() {
 			{/* Barra de Progresso */}
 			<div className="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full mb-8 overflow-hidden">
 				<div
-					className="bg-blue-600 h-full transition-all duration-500 ease-out"
+					className="bg-brand-600 h-full transition-all duration-500 ease-out"
 					style={{
 						width: `${((currentIndex + 1) / queue.length) * 100}%`,
 					}}
