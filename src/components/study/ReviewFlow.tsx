@@ -88,7 +88,7 @@ export default function ReviewFlow() {
 				</div>
 				<div>
 					<h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-						Triagem de Erros
+						Revisar
 					</h1>
 					<p className="text-sm text-gray-500 dark:text-gray-400">
 						{items.length} {items.length === 1 ? "item" : "itens"} aguardando

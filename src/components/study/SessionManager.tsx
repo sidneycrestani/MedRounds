@@ -1,11 +1,9 @@
-import StudyDashboard from "@/components/study/StudyDashboard";
 import { Skeleton } from "@/components/ui/skeleton";
 import CaseStudyClient from "@/modules/cases/components/CaseStudyClient";
 import type { PublicCaseDataDTO, QueueItemDTO } from "@/modules/cases/types";
-import type { TagTreeItem } from "@/modules/taxonomy/services";
 import { useEffect, useState } from "react";
 
-type SessionMode = "loading" | "dashboard" | "running" | "summary";
+type SessionMode = "loading" | "running" | "summary" | "error";
 
 type SessionResponse =
 	| {
@@ -16,14 +14,9 @@ type SessionResponse =
 	  }
 	| {
 			status: "idle";
-			lastPreferences: { tagIds: number[] };
 	  };
 
-export default function SessionManager({
-	treeData,
-}: {
-	treeData: TagTreeItem[];
-}) {
+export default function SessionManager() {
 	const [mode, setMode] = useState<SessionMode>("loading");
 
 	// Estado da Sessão Ativa
@@ -36,9 +29,6 @@ export default function SessionManager({
 	const [computedActiveIndices, setComputedActiveIndices] = useState<number[]>(
 		[],
 	);
-
-	// Estado do Dashboard (Pre-load)
-	const [initialSelectedTags, setInitialSelectedTags] = useState<number[]>([]);
 
 	// Loading state para transições
 	const [isProcessing, setIsProcessing] = useState(false);
@@ -56,46 +46,15 @@ export default function SessionManager({
 					setCurrentIndex(data.progress.current);
 					setMode("running");
 				} else {
-					setInitialSelectedTags(data.lastPreferences.tagIds);
-					setMode("dashboard");
+					setMode("error"); // Não deveria montar este componente se não houver sessão
 				}
 			} catch (error) {
 				console.error(error);
-				setMode("dashboard"); // Fallback
+				setMode("error");
 			}
 		}
 		checkSession();
 	}, []);
-
-	// 2. Iniciar nova sessão (Disparado pelo Dashboard)
-	async function handleStartSession(tagIds: number[], quantity: number) {
-		setIsProcessing(true);
-		setInitialSelectedTags(tagIds);
-		try {
-			const res = await fetch("/api/study/session", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ tagIds, quantity }),
-			});
-
-			if (!res.ok) throw new Error("Failed to create session");
-
-			// Recarrega estado
-			const checkRes = await fetch("/api/study/session");
-			const data: SessionResponse = await checkRes.json();
-
-			if (data.status === "active") {
-				setQueue(data.queue);
-				setCurrentIndex(0);
-				setMode("running");
-			}
-		} catch (error) {
-			console.error(error);
-			alert("Erro ao iniciar sessão.");
-		} finally {
-			setIsProcessing(false);
-		}
-	}
 
 	async function handleEndSession() {
 		if (
@@ -107,20 +66,15 @@ export default function SessionManager({
 
 		setIsProcessing(true);
 		try {
-			// Chama a API para limpar a sessão no banco
 			await fetch("/api/study/session", { method: "DELETE" });
+			window.location.reload(); // Recarrega para voltar ao Dashboard
 		} catch (error) {
 			console.error("Erro ao encerrar sessão remota", error);
-		} finally {
-			setMode("dashboard");
-			setQueue([]);
-			setCurrentIndex(0);
-			setCurrentCaseData(null);
 			setIsProcessing(false);
 		}
 	}
 
-	// 3. Carregar dados do caso atual quando estiver rodando
+	// 2. Carregar dados do caso atual quando estiver rodando
 	useEffect(() => {
 		if (mode !== "running") return;
 
@@ -134,24 +88,18 @@ export default function SessionManager({
 		setCurrentCaseData(null);
 		setComputedActiveIndices([]);
 
-		// CORREÇÃO: Busca dados do caso E progresso atual em paralelo
 		Promise.all([
 			fetch(`/api/cases/${item.caseId}`).then((r) => r.json()),
 			fetch(`/api/cases/${item.caseId}/progress`).then((r) => r.json()),
 		])
 			.then(([caseData, progressData]) => {
 				const originalIndices = item.activeQuestionIndices;
-
-				// Filtra índices: Mantém apenas se NÃO tem progresso ou se está vencido (isDue: true).
-				// Se o usuário acabou de responder, isDue será false (agendado para futuro), então removemos da lista.
 				const remainingIndices = originalIndices.filter((idx: number) => {
 					const p = progressData[idx];
-					if (!p) return true; // Nunca visto -> mantém
-					return p.isDue; // Visto -> mantém só se estiver vencido
+					if (!p) return true;
+					return p.isDue;
 				});
 
-				// Se não sobrou nenhuma questão (usuário já fez todas desse caso mas a sessão não avançou),
-				// avançamos automaticamente.
 				if (remainingIndices.length === 0 && originalIndices.length > 0) {
 					onCaseCompleted();
 					return;
@@ -164,13 +112,11 @@ export default function SessionManager({
 			.finally(() => setIsProcessing(false));
 	}, [mode, currentIndex, queue]);
 
-	// 4. Handler de conclusão de caso
+	// 3. Handler de conclusão de caso
 	async function onCaseCompleted() {
-		// 1. Bloqueia UI
 		setIsProcessing(true);
 
 		try {
-			// 2. Persiste o avanço no servidor
 			const res = await fetch("/api/study/session", {
 				method: "PATCH",
 				headers: { "Content-Type": "application/json" },
@@ -181,13 +127,10 @@ export default function SessionManager({
 
 			const data = await res.json();
 
-			// 3. Verifica se o servidor finalizou a sessão
 			if (data.isCompleted) {
 				setMode("summary");
-				// Limpa fila local para garantir que refresh não mostre dados antigos
 				setQueue([]);
 			} else {
-				// 4. Avança localmente apenas após sucesso remoto
 				setCurrentIndex((prev) => prev + 1);
 				setCurrentCaseData(null);
 			}
@@ -213,32 +156,33 @@ export default function SessionManager({
 		);
 	}
 
-	if (mode === "dashboard") {
+	if (mode === "error") {
 		return (
-			<StudyDashboard
-				treeData={treeData}
-				initialSelectedIds={initialSelectedTags}
-				onStartSession={handleStartSession}
-				isLoading={isProcessing}
-			/>
+			<div className="text-center py-20">
+				<h2 className="text-xl font-bold mb-4">Nenhuma sessão ativa</h2>
+				<a
+					href="/"
+					className="text-blue-600 hover:underline"
+					onClick={() => window.location.reload()}
+				>
+					Voltar para o Dashboard
+				</a>
+			</div>
 		);
 	}
 
 	if (mode === "summary") {
 		return (
 			<div className="max-w-xl mx-auto text-center py-20 animate-in zoom-in-95 duration-500">
-				<h2 className="text-3xl font-bold text-gray-900 mb-4">
+				<h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
 					Sessão Concluída! 🎉
 				</h2>
-				<p className="text-gray-600 mb-8">
+				<p className="text-gray-600 dark:text-gray-400 mb-8">
 					Você completou todas as questões planejadas para agora.
 				</p>
 				<button
 					type="button"
-					onClick={() => {
-						setMode("dashboard");
-						setQueue([]);
-					}}
+					onClick={() => window.location.reload()}
 					className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
 				>
 					Voltar ao Início
@@ -251,22 +195,21 @@ export default function SessionManager({
 	return (
 		<div className="max-w-3xl mx-auto py-6">
 			{/* Header de Progresso */}
-			<div className="mb-6 flex items-center justify-between text-sm text-gray-500">
+			<div className="mb-6 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
 				<span>
 					Questão {currentIndex + 1} de {queue.length}
 				</span>
 				<button
 					type="button"
-					onClick={handleEndSession} // USAR A NOVA FUNÇÃO AQUI
+					onClick={handleEndSession}
 					className="hover:text-red-600 flex items-center gap-1 transition-colors"
 				>
-					{/* Se quiser ícone: <XCircle size={16} /> */}
 					Encerrar Estudo
 				</button>
 			</div>
 
 			{/* Barra de Progresso */}
-			<div className="w-full bg-gray-200 h-1.5 rounded-full mb-8 overflow-hidden">
+			<div className="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full mb-8 overflow-hidden">
 				<div
 					className="bg-blue-600 h-full transition-all duration-500 ease-out"
 					style={{
@@ -290,11 +233,7 @@ export default function SessionManager({
 						supabaseUrl: import.meta.env.PUBLIC_SUPABASE_URL,
 						supabaseAnonKey: import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
 					}}
-					// CORREÇÃO: Passamos os índices filtrados, não os originais da fila
 					activeQuestionIndices={computedActiveIndices}
-					// No modo sessão, focamos apenas na fila atual.
-					// Passamos null no userProgress para que o Client não bloqueie questões baseadas em SRS antigo,
-					// mas sim libere as que foram selecionadas para HOJE (activeQuestionIndices).
 					userProgress={null}
 					onCaseCompleted={onCaseCompleted}
 				/>

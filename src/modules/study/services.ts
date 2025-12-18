@@ -1,8 +1,9 @@
 import type { Database } from "@/core/db";
 import { generateStudySession } from "@/modules/cases/cases.repository";
 import { studySessions, userPreferences } from "@/modules/preferences/schema";
+import { userCaseState } from "@/modules/srs/schema";
 import { tags } from "@/modules/taxonomy/schema";
-import { and, desc, eq, inArray } from "drizzle-orm";
+import { and, count, desc, eq, inArray, isNull } from "drizzle-orm";
 
 export async function findActiveSession(db: Database, userId: string) {
 	const sessions = await db
@@ -25,6 +26,21 @@ export async function getLastPreferences(db: Database, userId: string) {
 		.limit(1);
 
 	return prefs[0] || null;
+}
+
+export async function getReviewInboxCount(db: Database, userId: string) {
+	const result = await db
+		.select({ value: count() })
+		.from(userCaseState)
+		.where(
+			and(
+				eq(userCaseState.userId, userId),
+				isNull(userCaseState.nextReviewAt),
+				eq(userCaseState.isMastered, false),
+			),
+		);
+
+	return result[0]?.value ?? 0;
 }
 
 type CreateSessionParams = {

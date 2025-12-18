@@ -1,0 +1,62 @@
+---
+import LoginButton from "@/components/auth/LoginButton";
+import NewSessionController from "@/components/study/NewSessionController";
+import { getDb } from "@/core/db";
+import {
+	getConnectionFromEnv,
+	getPublicClientEnv,
+	getServerEnv,
+} from "@/core/env";
+import Layout from "@/layouts/Layout.astro";
+import { getLastPreferences } from "@/modules/study/services";
+import { getAllTagsAsTree } from "@/modules/taxonomy/services";
+import { ArrowLeft, Settings } from "lucide-react";
+
+// Auth Check
+const user = Astro.locals.user;
+if (!user) {
+	return Astro.redirect("/");
+}
+
+// Data Fetching
+const runtime = Astro.locals.runtime;
+const env = getServerEnv(runtime);
+const db = getDb(getConnectionFromEnv(env));
+const envForClient = getPublicClientEnv(runtime);
+
+const treeData = await getAllTagsAsTree(db);
+const prefs = await getLastPreferences(db, user.id);
+const initialTags = prefs?.selectedTagIds || [];
+---
+
+<Layout title="Nova Sessão - MedRounds">
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-4 px-6 sticky top-0 z-10">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <a href="/" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors" aria-label="Voltar">
+            <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+          </a>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-white">Nova Sessão de Estudo</h1>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <a href="/settings" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <Settings size={20} />
+          </a>
+          <LoginButton client:load env={envForClient} userName={user.email} />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-6xl mx-auto p-6">
+      <NewSessionController 
+        client:only="react" 
+        treeData={treeData} 
+        initialSelectedIds={initialTags} 
+      />
+    </main>
+  </div>
+</Layout>

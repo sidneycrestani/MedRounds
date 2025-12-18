@@ -7,9 +7,18 @@ import {
 	getPublicClientEnv,
 	getServerEnv,
 } from "@/core/env";
-import Layout from "@/layouts/Layout.astro"; // Importação do novo Layout
-import { getAllTagsAsTree } from "@/modules/taxonomy/services";
-import { Settings } from "lucide-react"; // Ícone para link de settings
+import Layout from "@/layouts/Layout.astro";
+import {
+	findActiveSession,
+	getReviewInboxCount,
+} from "@/modules/study/services";
+import {
+	ArrowRight,
+	BrainCircuit,
+	Inbox,
+	PlayCircle,
+	Settings,
+} from "lucide-react";
 import "katex/dist/katex.min.css";
 
 // --- LÓGICA DE CONEXÃO ---
@@ -19,12 +28,19 @@ const db = getDb(getConnectionFromEnv(env));
 const envForClient = getPublicClientEnv(runtime);
 const currentUser = Astro.locals.user;
 
-const treeData = await getAllTagsAsTree(db);
+// Dashboard Data
+let activeSession = null;
+let reviewCount = 0;
+
+if (currentUser) {
+	activeSession = await findActiveSession(db, currentUser.id);
+	reviewCount = await getReviewInboxCount(db, currentUser.id);
+}
 ---
 
-<Layout title="MedRounds - Casos Clínicos">
+<Layout title="MedRounds - Dashboard">
     
-    <!-- Header Simples -->
+    <!-- Header -->
     <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 py-4 px-6 sticky top-0 z-10 transition-colors duration-300">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-blue-900 dark:text-blue-400 flex items-center gap-2">
@@ -44,7 +60,62 @@ const treeData = await getAllTagsAsTree(db);
     </header>
 
     <div class="flex-1 max-w-6xl mx-auto w-full p-6">
-      <SessionManager client:only="react" treeData={treeData} />
+      {!currentUser ? (
+        <div class="text-center py-20">
+          <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Bem-vindo ao MedRounds</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Faça login para começar seus estudos.</p>
+        </div>
+      ) : activeSession ? (
+        <SessionManager client:only="react" />
+      ) : (
+        <div class="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <section>
+             <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Olá!</h1>
+             <p class="text-gray-600 dark:text-gray-400">O que vamos praticar hoje?</p>
+          </section>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            {/* Card: Revisão / Triagem */}
+            <a href="/review" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all shadow-sm hover:shadow-md">
+              <div class="flex justify-between items-start mb-4">
+                <div class="bg-orange-100 dark:bg-orange-900/30 p-3 rounded-lg text-orange-600 dark:text-orange-400 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <Inbox size={24} />
+                </div>
+                {reviewCount > 0 && (
+                   <span class="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                     {reviewCount} pendentes
+                   </span>
+                )}
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Revisar</h2>
+              <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                Revise suas respostas incorretas e decida quando quer revê-las novamente.
+              </p>
+              <div class="flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium">
+                Ir para revisão<ArrowRight size={16} />
+              </div>
+            </a>
+
+            {/* Card: Novo Estudo */}
+            <a href="/study/new" class="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 transition-all shadow-sm hover:shadow-md">
+              <div class="flex justify-between items-start mb-4">
+                <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg text-green-600 dark:text-green-400 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <BrainCircuit size={24} />
+                </div>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Novo Estudo</h2>
+              <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                Inicie uma nova sessão escolhendo tópicos específicos da taxonomia.
+              </p>
+               <div class="flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium">
+                Configurar sessão <PlayCircle size={16} />
+              </div>
+            </a>
+
+          </div>
+        </div>
+      )}
     </div>
 
 </Layout>
