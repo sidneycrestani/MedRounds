@@ -40,18 +40,23 @@ export default function ReviewCard({ item, onAction }: Props) {
 	const [isContextOpen, setIsContextOpen] = useState(false);
 
 	const [notes, setNotes] = useState(item.user_notes || "");
-	// Se não tem notas, começa em modo de edição automaticamente
+	// Se não tem notas, começa em modo de edição automaticamente (mas sem foco)
 	const [isEditingNotes, setIsEditingNotes] = useState(!item.user_notes);
+
+	// Estado para controlar o foco manual vs automático
+	const [shouldFocus, setShouldFocus] = useState(false);
+
 	const [isSaving, setIsSaving] = useState(false);
 	const [isExiting, setIsExiting] = useState(false);
 	const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-	// Auto-focus quando entra em modo de edição
+	// Auto-focus APENAS se shouldFocus for verdadeiro
 	useEffect(() => {
-		if (isEditingNotes && textareaRef.current) {
+		if (isEditingNotes && shouldFocus && textareaRef.current) {
 			textareaRef.current.focus();
+			setShouldFocus(false); // Reseta o gatilho
 		}
-	}, [isEditingNotes]);
+	}, [isEditingNotes, shouldFocus]);
 
 	async function handleBlur() {
 		// Só salva e sai do modo de edição se houver conteúdo. Se vazio, permanece como "prompt".
@@ -119,7 +124,10 @@ export default function ReviewCard({ item, onAction }: Props) {
 						<button
 							type="button"
 							className="w-full text-left bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 rounded-lg p-4 cursor-pointer hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-all relative group/note"
-							onClick={() => setIsEditingNotes(true)}
+							onClick={() => {
+								setShouldFocus(true); // Solicita foco explicitamente
+								setIsEditingNotes(true);
+							}}
 							title="Clique para editar"
 						>
 							<div className="flex items-start gap-3">
