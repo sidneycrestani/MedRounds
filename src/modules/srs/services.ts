@@ -1,6 +1,6 @@
 import type { Database } from "@/core/db";
-import { calculateReviewState } from "@/core/srs/scheduler";
-import type { CaseFeedbackDTO } from "@/modules/cases/types"; // Import the specific type
+// import { calculateReviewState } from "@/core/srs/scheduler"; // REMOVIDO: Lógica automática desativada para triagem
+import type { CaseFeedbackDTO } from "@/modules/cases/types";
 import { userCaseHistory, userCaseState } from "@/modules/srs/schema";
 
 export async function processUserAttempt(
@@ -9,10 +9,16 @@ export async function processUserAttempt(
 	caseId: number,
 	questionIndex: number,
 	score: number,
-	aiFeedback?: CaseFeedbackDTO | Record<string, unknown> | null, // Strict type
+	aiFeedback?: CaseFeedbackDTO | Record<string, unknown> | null,
 ) {
-	// 1. Calculate new state using pure domain logic
-	const reviewState = calculateReviewState(score);
+	// 1. LÓGICA DE TRIAGEM (ALTERADO)
+	// Em vez de calcular a próxima data baseada na nota, jogamos para o "Limbo/Triagem".
+	// O aluno deve decidir depois o que fazer.
+	const reviewState = {
+		isMastered: false,
+		nextReviewDate: null, // NULL indica estado de Triagem
+		learningStatus: "learning",
+	};
 
 	// 2. Persist to database within a transaction
 	await db.transaction(async (tx) => {
@@ -22,8 +28,6 @@ export async function processUserAttempt(
 			caseId,
 			questionIndex,
 			score,
-			// Drizzle's jsonb column expects 'unknown', so we pass the typed object directly.
-			// No 'as any' needed because objects are assignable to unknown.
 			aiFeedback,
 			attemptedAt: new Date(),
 		});
@@ -35,11 +39,10 @@ export async function processUserAttempt(
 				userId,
 				caseId,
 				questionIndex,
-				nextReviewAt: reviewState.nextReviewDate,
+				nextReviewAt: reviewState.nextReviewDate, // Salva como NULL
 				lastScore: score,
 				isMastered: reviewState.isMastered,
 				learningStatus: reviewState.learningStatus,
-				// Legacy/Default fields required by schema but unused in current logic
 				easeFactor: 2.5,
 				consecutiveCorrect: 0,
 			})
@@ -50,7 +53,7 @@ export async function processUserAttempt(
 					userCaseState.questionIndex,
 				],
 				set: {
-					nextReviewAt: reviewState.nextReviewDate,
+					nextReviewAt: reviewState.nextReviewDate, // Atualiza para NULL
 					lastScore: score,
 					isMastered: reviewState.isMastered,
 					learningStatus: reviewState.learningStatus,

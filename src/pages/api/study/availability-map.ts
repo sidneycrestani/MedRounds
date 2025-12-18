@@ -15,7 +15,6 @@ export const GET: APIRoute = async (context) => {
 		const query = sql`
 			SELECT 
 				c.id AS case_id,
-				-- Use DISTINCT para evitar contagem duplicada por causa do JOIN com tags
 				COUNT(DISTINCT q.id) AS question_count,
 				ARRAY_AGG(DISTINCT ct.tag_id) AS tag_ids
 			FROM content.clinical_cases c
@@ -33,13 +32,14 @@ export const GET: APIRoute = async (context) => {
 					
 					OR 
 					
-					-- CASO 2: Vencido ou Em Aprendizado (Existe registro, mas NÃO é masterizado)
+					-- CASO 2: Vencido (Agendado para o passado)
+					-- ALTERAÇÃO CRÍTICA: Excluímos explicitamente itens onde next_review_at IS NULL.
+					-- NULL agora significa "Em Triagem", aguardando ação do usuário, 
+					-- portanto não deve aparecer na fila automática de estudo.
 					(
 						s.is_mastered IS FALSE 
-						AND (
-							s.next_review_at <= now() -- Vencido
-							OR s.next_review_at IS NULL -- Caso raro de erro de agendamento, trata como novo
-						)
+						AND s.next_review_at IS NOT NULL 
+						AND s.next_review_at <= now()
 					)
 				)
 			GROUP BY c.id
