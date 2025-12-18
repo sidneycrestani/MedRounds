@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 	variant?: "primary" | "secondary" | "ghost";
+	size?: "sm" | "md" | "lg" | "icon";
 	loading?: boolean;
 	state?: "idle" | "success" | "error";
 };
@@ -11,6 +12,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 export function Button({
 	className,
 	variant = "primary",
+	size = "md",
 	loading,
 	state = "idle",
 	disabled,
@@ -18,36 +20,39 @@ export function Button({
 	...props
 }: Props) {
 	const base =
-		"inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all shadow-sm";
-	type Variant = NonNullable<Props["variant"]>;
+		"inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all shadow-sm disabled:opacity-70 disabled:cursor-not-allowed";
 
-	const variants: Record<Variant, string> = {
-		// Primary: geralmente ok, pois é preto/branco, mas podemos ajustar hover
+	const variants = {
 		primary:
 			"bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200",
-
-		// Secondary: Fundo branco vira fundo escuro, borda ajustada
 		secondary:
 			"bg-white text-gray-800 border border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:border-gray-500",
-
-		// Ghost: Hover ajustado para dark mode
 		ghost:
-			"text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800",
+			"text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 shadow-none",
 	};
-	type BtnState = NonNullable<Props["state"]>;
-	const states: Record<BtnState, string> = {
+
+	const sizes = {
+		sm: "px-3 py-1.5 text-xs",
+		md: "px-4 py-2 text-sm",
+		lg: "px-6 py-3 text-base",
+		icon: "p-2",
+	};
+
+	const states = {
 		idle: "",
 		success: "ring-2 ring-green-500",
 		error: "ring-2 ring-red-500",
 	};
+
 	const content = loading ? "Carregando..." : children;
+
 	return (
 		<button
 			className={twMerge(
 				base,
 				variants[variant],
+				sizes[size],
 				states[state],
-				clsx(disabled || loading ? "opacity-70 cursor-not-allowed" : null),
 				className,
 			)}
 			disabled={disabled || loading}

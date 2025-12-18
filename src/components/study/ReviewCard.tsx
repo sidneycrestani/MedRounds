@@ -1,20 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-	BookOpen,
-	CalendarClock,
-	CheckCircle,
+	AlertTriangle,
+	BrainCircuit,
+	Calendar,
+	CheckCircle2,
 	ChevronDown,
-	ChevronUp,
-	Clock,
+	ChevronRight,
+	PenLine,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 
-// Tipo derivado da query do review-list
 export type ReviewItem = {
 	case_id: number;
 	question_index: number;
@@ -36,31 +36,49 @@ type Props = {
 };
 
 export default function ReviewCard({ item, onAction }: Props) {
-	const [isExpanded, setIsExpanded] = useState(false);
+	// Accordion state
+	const [isContextOpen, setIsContextOpen] = useState(false);
+
 	const [notes, setNotes] = useState(item.user_notes || "");
+	// Se não tem notas, começa em modo de edição automaticamente
+	const [isEditingNotes, setIsEditingNotes] = useState(!item.user_notes);
 	const [isSaving, setIsSaving] = useState(false);
-	const [isExiting, setIsExiting] = useState(false); // Para animação de saída
+	const [isExiting, setIsExiting] = useState(false);
+	const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-	// Lógica de Auto-Save
+	// Auto-focus quando entra em modo de edição
+	useEffect(() => {
+		if (isEditingNotes && textareaRef.current) {
+			textareaRef.current.focus();
+		}
+	}, [isEditingNotes]);
+
 	async function handleBlur() {
-		// Só salva se mudou algo em relação ao original (ou ao último save)
-		if (notes === item.user_notes) return;
+		// Só salva e sai do modo de edição se houver conteúdo. Se vazio, permanece como "prompt".
+		// Se o usuário apagar tudo, consideramos como "sem nota" visualmente depois.
 
-		setIsSaving(true);
-		try {
-			await fetch("/api/study/notes", {
-				method: "PATCH",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					caseId: item.case_id,
-					questionIndex: item.question_index,
-					notes,
-				}),
-			});
-		} catch (e) {
-			console.error("Failed to save notes", e);
-		} finally {
-			setIsSaving(false);
+		if (notes !== item.user_notes) {
+			setIsSaving(true);
+			try {
+				await fetch("/api/study/notes", {
+					method: "PATCH",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						caseId: item.case_id,
+						questionIndex: item.question_index,
+						notes,
+					}),
+				});
+			} catch (e) {
+				console.error("Failed to save notes", e);
+			} finally {
+				setIsSaving(false);
+			}
+		}
+
+		// Se salvou algo, volta para o modo de leitura (card bonito)
+		if (notes.trim().length > 0) {
+			setIsEditingNotes(false);
 		}
 	}
 
@@ -68,150 +86,192 @@ export default function ReviewCard({ item, onAction }: Props) {
 		action: "short_term" | "long_term" | "dismiss",
 	) {
 		setIsExiting(true);
-		// Aguarda a animação (500ms) antes de notificar o pai para remover do DOM
 		setTimeout(async () => {
 			await onAction(action, item.case_id, item.question_index);
-		}, 500);
+		}, 300);
 	}
 
 	if (isExiting) {
 		return (
-			<div className="h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out" />
+			<div className="h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out" />
 		);
 	}
 
 	return (
-		<Card className="mb-8 border-l-4 border-l-blue-500 shadow-md animate-in slide-in-from-bottom-4 duration-500">
+		<Card className="mb-6 shadow-sm border-l-4 border-l-orange-400 dark:border-l-orange-500 animate-in slide-in-from-bottom-4 duration-500 group">
 			<CardContent className="pt-6 space-y-6">
-				{/* Cabeçalho */}
+				{/* 1. Header & ID */}
 				<div className="flex justify-between items-start">
 					<div>
-						<span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-							Caso Clínico #{item.case_id}
+						<span className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider flex items-center gap-1">
+							<AlertTriangle size={12} /> Revisão Pendente #{item.case_id}
 						</span>
-						<h2 className="text-xl font-bold text-gray-900 dark:text-white mt-1">
+						<h2 className="text-lg font-bold text-gray-900 dark:text-white mt-1">
 							{item.case_title}
 						</h2>
 					</div>
-					<Button
-						variant="ghost"
-						onClick={() => setIsExpanded(!isExpanded)}
-						className="text-xs h-8"
-					>
-						{isExpanded ? (
-							<>
-								<ChevronUp size={14} className="mr-1" /> Ocultar Contexto
-							</>
-						) : (
-							<>
-								<BookOpen size={14} className="mr-1" /> Ver Contexto
-							</>
-						)}
-					</Button>
 				</div>
 
-				{/* Contexto (Accordion) */}
-				{isExpanded && (
-					<div className="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-lg text-sm text-gray-700 dark:text-gray-300 border border-gray-100 dark:border-gray-800 animate-in fade-in slide-in-from-top-2">
-						<ReactMarkdown>{item.vignette}</ReactMarkdown>
-					</div>
-				)}
-
-				{/* A Questão e o Erro */}
-				<div className="space-y-4">
-					<div className="prose dark:prose-invert max-w-none text-gray-800 dark:text-gray-200">
-						<h3 className="text-sm font-bold text-gray-500 uppercase">
-							Pergunta
-						</h3>
-						<ReactMarkdown
-							remarkPlugins={[remarkGfm, remarkMath]}
-							rehypePlugins={[rehypeKatex]}
+				{/* 2. REFLECTION SECTION (Unified Logic) */}
+				<div className="space-y-2">
+					{/* Caso A: Modo Leitura (Tem notas e não está editando) */}
+					{!isEditingNotes && notes.trim().length > 0 ? (
+						<button
+							type="button"
+							className="w-full text-left bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 rounded-lg p-4 cursor-pointer hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-all relative group/note"
+							onClick={() => setIsEditingNotes(true)}
+							title="Clique para editar"
 						>
-							{item.question_text}
-						</ReactMarkdown>
-					</div>
+							<div className="flex items-start gap-3">
+								<div className="bg-amber-100 dark:bg-amber-900/40 p-1.5 rounded-full shrink-0">
+									<BrainCircuit className="w-4 h-4 text-amber-700 dark:text-amber-500" />
+								</div>
+								<div className="flex-1 min-w-0">
+									<h3 className="text-xs font-bold text-amber-700 dark:text-amber-500 uppercase mb-1 flex items-center gap-2">
+										Sua Reflexão
+										<span className="text-[10px] font-normal opacity-0 group-hover/note:opacity-70 transition-opacity bg-amber-200 dark:bg-amber-800 px-1.5 py-0.5 rounded">
+											Editar
+										</span>
+									</h3>
+									<p className="text-gray-800 dark:text-gray-200 text-sm whitespace-pre-line leading-relaxed">
+										{notes}
+									</p>
+								</div>
+								<PenLine className="w-4 h-4 text-amber-400 opacity-0 group-hover/note:opacity-100 transition-opacity absolute top-4 right-4" />
+							</div>
+						</button>
+					) : (
+						// Caso B: Modo Edição OU Modo Vazio (Prompt de Escrita)
+						<div className="animate-in fade-in duration-300">
+							<label
+								htmlFor={`note-${item.case_id}`}
+								className="flex items-center gap-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mb-2 pl-1"
+							>
+								<BrainCircuit className="w-4 h-4" />
+								{notes.trim().length === 0
+									? "Análise de Causa Raiz"
+									: "Editando Reflexão"}
+							</label>
 
-					{/* Feedback da IA */}
-					{item.ai_feedback && (
-						<div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 p-4 rounded-lg">
-							<h3 className="text-sm font-bold text-blue-800 dark:text-blue-300 flex items-center gap-2 mb-2">
-								<span className="bg-blue-200 dark:bg-blue-800 p-1 rounded">
-									🤖
-								</span>{" "}
-								Análise do Erro
-							</h3>
-							<div className="text-blue-900 dark:text-blue-100 text-sm leading-relaxed whitespace-pre-line">
-								{item.ai_feedback.feedback}
+							<div className="relative">
+								<textarea
+									id={`note-${item.case_id}`}
+									ref={textareaRef}
+									className="w-full min-h-[100px] p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 text-sm focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all resize-y placeholder:text-gray-400 dark:placeholder:text-gray-500"
+									placeholder="Por que errei? Falta de conhecimento, leitura desatenta ou conceito equivocado?"
+									value={notes}
+									onChange={(e) => setNotes(e.target.value)}
+									onBlur={handleBlur}
+								/>
+								{/* Indicador de status de salvamento discreto dentro da caixa */}
+								<div className="absolute bottom-3 right-3 pointer-events-none">
+									{isSaving ? (
+										<span className="text-[10px] text-amber-600 bg-amber-50 px-2 py-1 rounded-full animate-pulse border border-amber-100">
+											Salvando...
+										</span>
+									) : null}
+								</div>
 							</div>
 						</div>
 					)}
-
-					{/* Gabarito */}
-					<div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-						<h3 className="text-xs font-bold text-gray-500 uppercase mb-2">
-							Gabarito Oficial
-						</h3>
-						<div className="prose prose-sm dark:prose-invert max-w-none">
-							<ReactMarkdown
-								remarkPlugins={[remarkGfm, remarkMath]}
-								rehypePlugins={[rehypeKatex]}
-							>
-								{item.correct_answer_text}
-							</ReactMarkdown>
-						</div>
-					</div>
 				</div>
 
-				{/* Reflexão */}
-				<div className="space-y-2">
-					<label
-						htmlFor={`notes-${item.case_id}-${item.question_index}`}
-						className="text-sm font-medium text-gray-700 dark:text-gray-300 flex justify-between"
+				{/* 3. The Context (Accordion) */}
+				<div className="border rounded-lg dark:border-gray-700 overflow-hidden mt-4">
+					<button
+						type="button"
+						onClick={() => setIsContextOpen(!isContextOpen)}
+						className="w-full flex items-center justify-between p-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors text-left"
 					>
-						<span>Suas Notas & Reflexão</span>
-						{isSaving && (
-							<span className="text-xs text-gray-400 animate-pulse">
-								Salvando...
-							</span>
+						<span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+							Ver Contexto & Gabarito
+						</span>
+						{isContextOpen ? (
+							<ChevronDown size={14} className="text-gray-400" />
+						) : (
+							<ChevronRight size={14} className="text-gray-400" />
 						)}
-					</label>
-					<textarea
-						id={`notes-${item.case_id}-${item.question_index}`}
-						className="w-full min-h-[100px] p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-y"
-						placeholder="Por que eu errei? O que preciso lembrar na próxima?"
-						value={notes}
-						onChange={(e) => setNotes(e.target.value)}
-						onBlur={handleBlur}
-					/>
+					</button>
+
+					{isContextOpen && (
+						<div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 space-y-4 border-t dark:border-gray-700 animate-in slide-in-from-top-2">
+							{/* Vignette */}
+							<div className="prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-gray-400">
+								<ReactMarkdown>{item.vignette}</ReactMarkdown>
+							</div>
+
+							{/* Question & Answer Grid */}
+							<div className="grid gap-4 pt-2 border-t border-gray-100 dark:border-gray-700">
+								<div className="pt-2">
+									<h4 className="text-xs font-bold text-gray-900 dark:text-white mb-1">
+										Pergunta
+									</h4>
+									<div className="text-sm text-gray-700 dark:text-gray-300">
+										<ReactMarkdown
+											remarkPlugins={[remarkGfm, remarkMath]}
+											rehypePlugins={[rehypeKatex]}
+										>
+											{item.question_text}
+										</ReactMarkdown>
+									</div>
+								</div>
+
+								<div className="bg-white dark:bg-gray-800 p-3 rounded border border-gray-200 dark:border-gray-700">
+									<h4 className="text-xs font-bold text-green-700 dark:text-green-500 uppercase mb-1 flex items-center gap-2">
+										<CheckCircle2 size={12} /> Gabarito Oficial
+									</h4>
+									<div className="text-sm prose prose-sm dark:prose-invert">
+										<ReactMarkdown
+											remarkPlugins={[remarkGfm, remarkMath]}
+											rehypePlugins={[rehypeKatex]}
+										>
+											{item.correct_answer_text}
+										</ReactMarkdown>
+									</div>
+								</div>
+							</div>
+						</div>
+					)}
 				</div>
 
-				{/* Ações (Footer) */}
-				<div className="pt-4 border-t border-gray-100 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-between gap-4">
-					<span className="text-sm text-gray-500 font-medium">
-						Quando rever?
-					</span>
-					<div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+				{/* 4. Action Area (Dispatch) */}
+				<div className="pt-4 border-t border-gray-100 dark:border-gray-800">
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 						<button
 							type="button"
 							onClick={() => handleButtonClick("short_term")}
-							className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-amber-50 text-amber-700 border border-amber-200 rounded-lg hover:bg-amber-100 hover:border-amber-300 transition-all font-medium text-sm"
+							className="group relative flex flex-col items-center justify-center gap-1 p-3 bg-white dark:bg-gray-800 border-2 border-orange-100 dark:border-orange-900/50 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl transition-all"
 						>
-							<Clock size={16} /> 1 Mês
+							<div className="flex items-center gap-2 text-orange-700 dark:text-orange-400 font-bold text-sm">
+								<AlertTriangle size={16} /> Curto Prazo
+							</div>
+							<span className="text-xs text-orange-600/60 dark:text-orange-400/60 font-medium">
+								~10 dias
+							</span>
 						</button>
+
 						<button
 							type="button"
 							onClick={() => handleButtonClick("long_term")}
-							className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 border border-blue-200 rounded-lg hover:bg-blue-100 hover:border-blue-300 transition-all font-medium text-sm"
+							className="group relative flex flex-col items-center justify-center gap-1 p-3 bg-white dark:bg-gray-800 border-2 border-blue-100 dark:border-blue-900/50 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all"
 						>
-							<CalendarClock size={16} /> 6 Meses
+							<div className="flex items-center gap-2 text-blue-700 dark:text-blue-400 font-bold text-sm">
+								<Calendar size={16} /> Longo Prazo
+							</div>
+							<span className="text-xs text-blue-600/60 dark:text-blue-400/60 font-medium">
+								~45 dias
+							</span>
 						</button>
+
 						<button
 							type="button"
 							onClick={() => handleButtonClick("dismiss")}
-							className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 text-gray-500 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all text-sm"
-							title="Marcar como masterizado (não revisar mais)"
+							className="group relative flex flex-col items-center justify-center gap-1 p-3 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-800 hover:border-green-300 dark:hover:border-green-700 hover:bg-green-50 dark:hover:bg-green-900/10 rounded-xl transition-all text-gray-400 hover:text-green-700 dark:hover:text-green-400"
 						>
-							<CheckCircle size={16} /> Finalizar
+							<div className="flex items-center gap-2 font-bold text-sm">
+								<CheckCircle2 size={16} /> Finalizar
+							</div>
+							<span className="text-xs opacity-70 font-medium">Dominado</span>
 						</button>
 					</div>
 				</div>

@@ -4,6 +4,12 @@ import { userCaseState } from "@/modules/srs/schema";
 import type { APIRoute } from "astro";
 import { and, eq } from "drizzle-orm";
 
+// Constants aligned with SRS philosophy (Short term = ~1.5 weeks, Long term = ~1.5 months)
+const INTERVALS = {
+	SHORT_TERM_DAYS: 10,
+	LONG_TERM_DAYS: 45,
+};
+
 export const POST: APIRoute = async (context) => {
 	const user = context.locals.user;
 	if (!user) {
@@ -38,26 +44,28 @@ export const POST: APIRoute = async (context) => {
 	const env = getServerEnv(runtime);
 	const db = getDb(getConnectionFromEnv(env));
 
-	// Definição das datas
+	// Definition of dates
 	const now = new Date();
 	let nextReview: Date | null = null;
 	let isMastered = false;
+	let daysAdded = 0;
 
 	switch (action) {
 		case "short_term":
-			// Daqui a 30 dias
-			nextReview = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+			daysAdded = INTERVALS.SHORT_TERM_DAYS;
+			nextReview = new Date(now.getTime() + daysAdded * 24 * 60 * 60 * 1000);
 			isMastered = false;
 			break;
 		case "long_term":
-			// Daqui a 6 meses (aprox 180 dias)
-			nextReview = new Date(now.getTime() + 180 * 24 * 60 * 60 * 1000);
+			daysAdded = INTERVALS.LONG_TERM_DAYS;
+			nextReview = new Date(now.getTime() + daysAdded * 24 * 60 * 60 * 1000);
 			isMastered = false;
 			break;
 		case "dismiss":
-			// Marcar como dominado (sai da fila de revisão)
+			// Mark as mastered (removed from queue)
 			nextReview = null;
 			isMastered = true;
+			daysAdded = 0;
 			break;
 		default:
 			return new Response(JSON.stringify({ error: "Invalid action" }), {
@@ -71,7 +79,6 @@ export const POST: APIRoute = async (context) => {
 			.set({
 				nextReviewAt: nextReview,
 				isMastered: isMastered,
-				// Opcional: Atualizar status de aprendizado visualmente se desejar
 				learningStatus: isMastered ? "mastered" : "learning",
 			})
 			.where(
@@ -82,7 +89,15 @@ export const POST: APIRoute = async (context) => {
 				),
 			);
 
-		return new Response(JSON.stringify({ success: true }), { status: 200 });
+		return new Response(
+			JSON.stringify({
+				success: true,
+				scheduledFor: nextReview ? nextReview.toISOString() : null,
+				days: daysAdded,
+				action,
+			}),
+			{ status: 200 },
+		);
 	} catch (error) {
 		console.error("Schedule Update Error:", error);
 		return new Response(JSON.stringify({ error: "Internal Server Error" }), {
