@@ -6,11 +6,20 @@ import {
 } from "npm:@google/generative-ai";
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
-// Configurações de criptografia idênticas ao backend Astro
+// Configurações de criptografia (idênticas ao original)
 const ALGORITHM = "aes-256-gcm";
 const IV_LENGTH = 16;
 const TAG_LENGTH = 16;
 const SALT_LENGTH = 64;
+
+// --- LISTA DE MODELOS PARA FALLBACK ---
+// A função tentará estes modelos na ordem. Se o primeiro falhar por cota, tenta o próximo.
+const MODEL_FALLBACK_LIST = [
+	"gemini-3-flash-preview",
+	"gemini-3-flash-preview", // Retry
+	"gemini-2.5-flash", 
+	"gemini-2.5-flash-lite", 
+];
 
 function decryptKey(
 	encryptedBase64: string,
@@ -67,7 +76,7 @@ Deno.serve(async (req) => {
 			});
 		}
 
-		// Buscamos na tabela user_preferences (esquema app)
+		// Buscamos a chave customizada (BYOK)
 		const adminClient = createClient(
 			Deno.env.get("SUPABASE_URL") ?? "",
 			Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
@@ -76,7 +85,6 @@ Deno.serve(async (req) => {
 		let activeApiKey = Deno.env.get("GEMINI_API_KEY") as string;
 		const masterKey = Deno.env.get("ENCRYPTION_KEY");
 
-		// CHAMADA RPC: Busca a chave sem precisar expor o schema 'app'
 		const { data: encryptedKey, error: rpcError } = await adminClient.rpc(
 			"get_user_gemini_key",
 			{ p_user_id: user.id },
@@ -89,13 +97,12 @@ Deno.serve(async (req) => {
 		if (encryptedKey && masterKey) {
 			try {
 				activeApiKey = decryptKey(encryptedKey, user.id, masterKey);
-				// console.log("BYOK: Chave customizada ativa.");
 			} catch (err) {
 				console.error("BYOK: Erro na descriptografia, usando fallback.");
 			}
 		}
-		// --------------------------
 
+		// Busca dados da questão
 		const { data: questionRow, error: qErr } = await supabaseClient
 			.schema("content")
 			.from("case_questions")
@@ -122,26 +129,13 @@ Deno.serve(async (req) => {
 			.eq("id", questionRow.case_id)
 			.single();
 
-		if (cErr || !caseRow) {
-			throw new Error("Caso clínico não encontrado.");
-		}
-
-		// Instancia o modelo com a chave decidida (Custom ou Sistema)
-		const genAI = new GoogleGenerativeAI(activeApiKey);
-		const model = genAI.getGenerativeModel({
-			model: "gemini-3-flash-preview",
-			generationConfig: {
-				responseMimeType: "application/json",
-				temperature: 1.0,
-			},
-		});
+		if (cErr || !caseRow) throw new Error("Caso clínico não encontrado.");
 
 		const keywords = (questionRow.must_include_keywords ?? []) as string[];
 		const idealAnswer = questionRow.correct_answer_text as string;
 
 		const prompt = `
 ATUE COMO: Preceptor Médico Sênior (Rigoroso, técnico e conciso).
-
 DADOS DO CASO:
 [VIGNETTE]: ${caseRow.vignette}
 [PERGUNTA]: ${questionRow.question_text}
@@ -178,13 +172,50 @@ FORMATO DE SAÍDA:
 Retorne APENAS um JSON (sem markdown, sem crases) seguindo este schema:
 {"isCorrect": boolean, "score": number, "feedback": "string"}
 `;
+		const genAI = new GoogleGenerativeAI(activeApiKey);
+		let lastError = null;
+		let aiPayload = null;
+		for (const modelName of MODEL_FALLBACK_LIST) {
+			try {
+				console.log(`Tentando modelo: ${modelName}...`);
 
-		const result = await model.generateContent(prompt);
-		const textResp = result.response
-			.text()
-			.replace(/```json|```/g, "")
-			.trim();
-		const aiPayload = JSON.parse(textResp);
+				const model = genAI.getGenerativeModel({
+					model: modelName,
+					generationConfig: {
+						responseMimeType: "application/json",
+						temperature: 1.0,
+					},
+				});
+				const result = await model.generateContent(prompt);
+				const textResp = result.response
+					.text()
+					.replace(/```json|```/g, "")
+					.trim();
+
+				aiPayload = JSON.parse(textResp);
+
+				// Se chegou aqui, funcionou! Sai do loop.
+				break;
+			} catch (err: any) {
+				console.warn(`Falha no modelo ${modelName}:`, err.message);
+				lastError = err;
+
+				// Verifica se é erro de cota (429) ou sobrecarga (503)
+				// Se for outro erro (ex: chave inválida), talvez não adiante tentar outros,
+				// mas na dúvida tentamos o próximo.
+				if (
+					err.message?.includes("429") ||
+					err.message?.includes("Resource exhausted")
+				) {
+					continue; // Tenta o próximo da lista
+				}
+			}
+		}
+
+		if (!aiPayload) {
+			// Se todos falharam, lança o erro do último modelo tentado
+			throw lastError || new Error("Todos os modelos falharam.");
+		}
 
 		return new Response(
 			JSON.stringify({
@@ -198,7 +229,7 @@ Retorne APENAS um JSON (sem markdown, sem crases) seguindo este schema:
 				},
 			},
 		);
-	} catch (err) {
+	} catch (err: any) {
 		console.error(err);
 		return new Response(JSON.stringify({ error: err.message }), {
 			status: 500,
