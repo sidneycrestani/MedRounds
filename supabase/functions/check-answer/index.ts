@@ -129,7 +129,7 @@ Deno.serve(async (req) => {
 		// Instancia o modelo com a chave decidida (Custom ou Sistema)
 		const genAI = new GoogleGenerativeAI(activeApiKey);
 		const model = genAI.getGenerativeModel({
-			model: "gemini-flash-latest",
+			model: "gemini-3-flash-preview",
 			generationConfig: {
 				responseMimeType: "application/json",
 				temperature: 1.0,
