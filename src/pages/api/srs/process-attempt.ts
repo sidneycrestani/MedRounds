@@ -19,7 +19,8 @@ export const POST: APIRoute = async (context) => {
 		caseId: number;
 		score: number;
 		questionIndex: number;
-		feedback?: CaseFeedbackDTO;
+		isCorrect?: boolean; // Propriedade direta (autoavaliação simplificada)
+		feedback?: CaseFeedbackDTO; // Objeto de feedback (IA ou Mock)
 	};
 
 	let body: RequestBody;
@@ -32,6 +33,24 @@ export const POST: APIRoute = async (context) => {
 	}
 
 	const { caseId, score, questionIndex, feedback } = body;
+
+	// Extração da Lógica Booleana (isCorrect)
+	// Prioridade 1: Propriedade direta no body
+	// Prioridade 2: Propriedade dentro do objeto feedback
+	// Fallback: Baseado no score (legacy support/safety)
+	let isCorrect = body.isCorrect;
+	if (
+		isCorrect === undefined &&
+		feedback &&
+		typeof feedback.isCorrect === "boolean"
+	) {
+		isCorrect = feedback.isCorrect;
+	}
+
+	// Fallback de segurança se ainda for undefined
+	if (isCorrect === undefined) {
+		isCorrect = score >= 100;
+	}
 
 	if (
 		typeof caseId !== "number" ||
@@ -56,7 +75,8 @@ export const POST: APIRoute = async (context) => {
 			caseId,
 			questionIndex,
 			score,
-			feedback, // Pass the typed feedback object
+			isCorrect, // Passando o booleano obrigatório
+			feedback,
 		);
 
 		return new Response(

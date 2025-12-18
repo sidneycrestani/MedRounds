@@ -1,5 +1,4 @@
 import type { Database } from "@/core/db";
-// import { calculateReviewState } from "@/core/srs/scheduler"; // REMOVIDO: Lógica automática desativada para triagem
 import type { CaseFeedbackDTO } from "@/modules/cases/types";
 import { userCaseHistory, userCaseState } from "@/modules/srs/schema";
 
@@ -9,15 +8,20 @@ export async function processUserAttempt(
 	caseId: number,
 	questionIndex: number,
 	score: number,
+	isCorrect: boolean,
 	aiFeedback?: CaseFeedbackDTO | Record<string, unknown> | null,
 ) {
-	// 1. LÓGICA DE TRIAGEM (ALTERADO)
-	// Em vez de calcular a próxima data baseada na nota, jogamos para o "Limbo/Triagem".
-	// O aluno deve decidir depois o que fazer.
+	// 1. LÓGICA DE TRIAGEM (SRS BOOLEANO)
+	// Se acertou (true) -> Masterizado (sai da fila).
+	// Se errou (false) -> Learning (cai na fila de triagem/revisão).
+	// Em ambos os casos, nextReviewDate é NULL.
+	// - Se masterizado + NULL: Não aparece na lista de "Revisar" nem na "Estudar".
+	// - Se !masterizado + NULL: Aparece na lista de "Revisar" (Inbox).
+
 	const reviewState = {
-		isMastered: false,
-		nextReviewDate: null, // NULL indica estado de Triagem
-		learningStatus: "learning",
+		isMastered: isCorrect,
+		nextReviewDate: null,
+		learningStatus: isCorrect ? "mastered" : "learning",
 	};
 
 	// 2. Persist to database within a transaction
@@ -39,12 +43,12 @@ export async function processUserAttempt(
 				userId,
 				caseId,
 				questionIndex,
-				nextReviewAt: reviewState.nextReviewDate, // Salva como NULL
+				nextReviewAt: reviewState.nextReviewDate, // Sempre NULL
 				lastScore: score,
 				isMastered: reviewState.isMastered,
 				learningStatus: reviewState.learningStatus,
 				easeFactor: 2.5,
-				consecutiveCorrect: 0,
+				consecutiveCorrect: isCorrect ? 1 : 0,
 			})
 			.onConflictDoUpdate({
 				target: [
@@ -53,10 +57,11 @@ export async function processUserAttempt(
 					userCaseState.questionIndex,
 				],
 				set: {
-					nextReviewAt: reviewState.nextReviewDate, // Atualiza para NULL
+					nextReviewAt: reviewState.nextReviewDate,
 					lastScore: score,
 					isMastered: reviewState.isMastered,
 					learningStatus: reviewState.learningStatus,
+					// Opcional: incrementar consecutiveCorrect se necessário no futuro
 				},
 			});
 	});

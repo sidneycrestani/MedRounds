@@ -68,6 +68,8 @@ export function useCaseSession({
 	const [revealedQuestionIds, setRevealedQuestionIds] = useState<Set<number>>(
 		new Set(),
 	);
+	// State for note saving status
+	const [isSavingNote, setIsSavingNote] = useState(false);
 
 	// --- 3. Computed Properties ---
 	const currentQuestion = data.questions[activeIndex];
@@ -137,16 +139,43 @@ export function useCaseSession({
 		caseId: number,
 		score: number,
 		questionIndex: number,
-		feedback?: ResultData, // Typed correctly
+		isCorrect: boolean, // Changed from feedback object to boolean
+		feedback?: ResultData,
 	) {
 		try {
 			await fetch("/api/srs/process-attempt", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ caseId, score, questionIndex, feedback }),
+				body: JSON.stringify({
+					caseId,
+					score,
+					questionIndex,
+					isCorrect,
+					feedback,
+				}),
 			});
 		} catch (err) {
 			console.error("Failed to persist SRS data:", err);
+		}
+	}
+
+	async function saveNote(note: string) {
+		if (!note && note !== "") return; // Allow clearing notes, but ignore undefined
+		setIsSavingNote(true);
+		try {
+			await fetch("/api/study/notes", {
+				method: "PATCH",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					caseId: data.id,
+					questionIndex: currentQuestion.order,
+					notes: note,
+				}),
+			});
+		} catch (e) {
+			console.error("Failed to save note", e);
+		} finally {
+			setIsSavingNote(false);
 		}
 	}
 
@@ -172,7 +201,14 @@ export function useCaseSession({
 					next[activeIndex] = parsed;
 					return next;
 				});
-				persistSrsAttempt(data.id, parsed.score, currentQuestion.order, parsed);
+				// Use parsed.isCorrect directly
+				persistSrsAttempt(
+					data.id,
+					parsed.score,
+					currentQuestion.order,
+					parsed.isCorrect,
+					parsed,
+				);
 			} catch (e) {
 				console.error(e);
 				alert("Resposta da IA inválida.");
@@ -191,8 +227,14 @@ export function useCaseSession({
 			officialAnswer: currentQuestion.correctAnswer,
 		};
 
-		// Pass the result object to persist function
-		persistSrsAttempt(data.id, score, currentQuestion.order, mockResult);
+		// Pass isCorrect explicitly
+		persistSrsAttempt(
+			data.id,
+			score,
+			currentQuestion.order,
+			isCorrect,
+			mockResult,
+		);
 
 		setResults((prev) => {
 			const next = [...prev];
@@ -252,6 +294,7 @@ export function useCaseSession({
 		tabItems,
 		isCaseFullyComplete,
 		hasNextPendingQuestion: nextPendingIndex !== null,
+		isSavingNote,
 
 		// Actions
 		setActiveIndex,
@@ -261,5 +304,6 @@ export function useCaseSession({
 		submitSelfEvaluation: handleSelfEvaluate,
 		retry: retryCurrent,
 		nextQuestion: handleSmartAdvance,
+		saveNote,
 	};
 }

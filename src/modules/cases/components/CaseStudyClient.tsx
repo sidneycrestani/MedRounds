@@ -38,6 +38,7 @@ export default function CaseStudyClient({
 		tabItems,
 		isCaseFullyComplete,
 		hasNextPendingQuestion,
+		isSavingNote,
 		setActiveIndex,
 		setAnswer,
 		submitAnswer,
@@ -45,6 +46,7 @@ export default function CaseStudyClient({
 		submitSelfEvaluation,
 		retry,
 		nextQuestion,
+		saveNote,
 	} = useCaseSession({ data, env, activeQuestionIndices, userProgress });
 
 	const hasResult = !!currentResult;
@@ -154,6 +156,8 @@ export default function CaseStudyClient({
 						feedback={currentResult.feedback}
 						officialAnswer={currentResult.officialAnswer}
 						onRetry={retry}
+						onSaveNote={saveNote}
+						isSavingNote={isSavingNote}
 					/>
 				)}
 
