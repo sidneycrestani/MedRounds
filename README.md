@@ -13,7 +13,7 @@ A plataforma não substitui o Anki; ela atua como o **ambiente de teste**. O flu
 O sistema implementa um ciclo de aprendizado focado na **metacognição** e intervenção manual:
 
 1. **Exposição (Vignette):** O usuário enfrenta casos clínicos reais e deve digitar sua conduta ou diagnóstico. Não há opções para "chutar".
-2. **Correção via IA (Preceptor Mode):** O *Google Gemini 2.5 Flash* analisa a resposta semântica, comparando com o gabarito oficial e keywords obrigatórias. Ele atua como um preceptor sênior: rigoroso e direto.
+2. **Correção via IA (Preceptor Mode):** O *Google Gemini 2.5 Flash* analisa a resposta semântica, comparando com o gabarito e keywords obrigatórias. Ele atua como um preceptor sênior: rigoroso e direto.
 3. **Review Inbox (Triagem de Erros):** Erros não somem. Eles entram em uma "Caixa de Entrada" de revisão.
 4. **Consolidação Ativa (A Diferença):**
 * Na etapa de revisão, o aluno estuda o gabarito.

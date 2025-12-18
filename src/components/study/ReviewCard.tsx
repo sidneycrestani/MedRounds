@@ -226,7 +226,7 @@ export default function ReviewCard({ item, onAction }: Props) {
 
 								<div className="bg-white dark:bg-gray-800 p-3 rounded border border-gray-200 dark:border-gray-700">
 									<h4 className="text-xs font-bold text-green-700 dark:text-green-500 uppercase mb-1 flex items-center gap-2">
-										<CheckCircle2 size={12} /> Gabarito Oficial
+										<CheckCircle2 size={12} /> Gabarito
 									</h4>
 									<div className="text-sm prose prose-sm dark:prose-invert">
 										<ReactMarkdown

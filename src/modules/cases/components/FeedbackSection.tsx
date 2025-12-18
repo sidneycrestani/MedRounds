@@ -1,5 +1,7 @@
+// src/modules/cases/components/FeedbackSection.tsx
+
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, NotebookPen, XCircle } from "lucide-react";
+import { CheckCircle2, Info, NotebookPen, XCircle } from "lucide-react";
 import { type HTMLAttributes, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
@@ -33,7 +35,6 @@ export default function FeedbackSection({
 	const [saveStatus, setSaveStatus] = useState<"idle" | "saved">("idle");
 
 	async function handleBlur() {
-		// Only save if content actually changed
 		if (onSaveNote && noteContent !== lastSaved) {
 			await onSaveNote(noteContent);
 			setLastSaved(noteContent);
@@ -43,35 +44,50 @@ export default function FeedbackSection({
 	}
 
 	return (
-		<div className="space-y-6" {...props}>
-			<Card
-				className={
+		<div
+			className="space-y-8 mt-8 animate-in fade-in slide-in-from-top-4 duration-500"
+			{...props}
+		>
+			{/* Bloco de Avaliação da IA */}
+			<div
+				className={twMerge(
+					"rounded-2xl border-2 p-1 transition-all",
 					isCorrect
-						? "bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800"
-						: "bg-orange-50 border-orange-200 dark:bg-orange-900/20 dark:border-orange-800"
-				}
+						? "bg-green-50/50 border-green-100 dark:bg-green-900/10 dark:border-green-900/30"
+						: "bg-orange-50/50 border-orange-100 dark:bg-orange-900/10 dark:border-orange-900/30",
+				)}
 			>
-				<CardContent>
-					<div className="flex justify-between items-start mb-4">
-						<div className="flex items-center gap-3">
-							{isCorrect ? (
-								<CheckCircle2 className="w-8 h-8 text-green-600 dark:text-green-400" />
-							) : (
-								<XCircle className="w-8 h-8 text-orange-600 dark:text-orange-400" />
-							)}
+				<div className="p-5 sm:p-6">
+					<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+						<div className="flex items-center gap-4">
+							<div
+								className={twMerge(
+									"p-3 rounded-xl shadow-sm",
+									isCorrect
+										? "bg-green-500 text-white"
+										: "bg-orange-500 text-white",
+								)}
+							>
+								{isCorrect ? (
+									<CheckCircle2 className="w-6 h-6" />
+								) : (
+									<XCircle className="w-6 h-6" />
+								)}
+							</div>
 							<div>
 								<h4
-									className={
+									className={twMerge(
+										"text-xl font-bold tracking-tight",
 										isCorrect
-											? "text-lg font-bold text-green-800 dark:text-green-200"
-											: "text-lg font-bold text-orange-800 dark:text-orange-200"
-									}
+											? "text-green-900 dark:text-green-300"
+											: "text-orange-900 dark:text-orange-300",
+									)}
 								>
-									{isCorrect ? "Conduta Adequada" : "Pontos de Atenção"}
+									{isCorrect ? "Conduta Correta" : "Sugestão de Melhora"}
 								</h4>
-								<span className="text-sm text-gray-500 dark:text-gray-400">
-									Nota: {score}/100
-								</span>
+								<p className="text-sm opacity-70 text-gray-600 dark:text-gray-400">
+									Avaliação gerada por inteligência artificial
+								</p>
 							</div>
 						</div>
 
@@ -80,19 +96,19 @@ export default function FeedbackSection({
 								type="button"
 								onClick={() => setIsNoteOpen(!isNoteOpen)}
 								className={twMerge(
-									"flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors border",
+									"flex items-center justify-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all border",
 									isNoteOpen
 										? "bg-white border-blue-200 text-blue-700 shadow-sm dark:bg-gray-800 dark:border-blue-800 dark:text-blue-300"
-										: "border-transparent text-gray-500 hover:bg-white/50 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800/50 dark:hover:text-gray-200",
+										: "bg-transparent border-gray-200 text-gray-600 hover:bg-white hover:border-gray-300 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800",
 								)}
 							>
 								<NotebookPen className="w-4 h-4" />
-								{isNoteOpen ? "Ocultar Reflexão" : "Adicionar Reflexão"}
+								{isNoteOpen ? "Fechar Notas" : "Adicionar Reflexão"}
 							</button>
 						)}
 					</div>
 
-					<div className="text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-line pl-11 prose dark:prose-invert max-w-none">
+					<div className="text-gray-800 dark:text-gray-200 leading-relaxed prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-strong:text-current">
 						<ReactMarkdown
 							remarkPlugins={[remarkGfm, remarkMath]}
 							rehypePlugins={[rehypeKatex]}
@@ -101,71 +117,87 @@ export default function FeedbackSection({
 						</ReactMarkdown>
 					</div>
 
-					{/* Note Input Section with Slide Animation */}
+					{/* Seção de Notas do Usuário */}
 					<div
 						className={twMerge(
-							"overflow-hidden transition-all duration-300 ease-in-out pl-11",
+							"overflow-hidden transition-all duration-300 ease-in-out",
 							isNoteOpen
-								? "max-h-96 opacity-100 mt-4"
+								? "max-h-96 opacity-100 mt-8 pt-6 border-t border-gray-200/50 dark:border-gray-700/50"
 								: "max-h-0 opacity-0 mt-0",
 						)}
 					>
-						<div className="relative">
-							<label
-								htmlFor="reflection-note"
-								className="block text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5 uppercase tracking-wide flex justify-between"
-							>
-								<span>Suas anotações (Privado)</span>
-								<span className="font-normal normal-case">
+						<div className="relative space-y-3">
+							<div className="flex justify-between items-center">
+								<label
+									htmlFor="reflection-note"
+									className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest"
+								>
+									Sua Reflexão (Privada)
+								</label>
+								<div className="text-[10px] font-medium">
 									{isSavingNote && (
-										<span className="text-blue-500 animate-pulse">
+										<span className="text-blue-500 animate-pulse flex items-center gap-1">
+											<div className="w-1 h-1 bg-current rounded-full animate-bounce" />
 											Salvando...
 										</span>
 									)}
 									{!isSavingNote && saveStatus === "saved" && (
-										<span className="text-green-600 dark:text-green-400">
-											Salvo
+										<span className="text-green-600 dark:text-green-400 flex items-center gap-1">
+											<CheckCircle2 size={10} /> Salvo com sucesso
 										</span>
 									)}
-								</span>
-							</label>
+								</div>
+							</div>
 							<textarea
 								id="reflection-note"
 								value={noteContent}
 								onChange={(e) => setNoteContent(e.target.value)}
 								onBlur={handleBlur}
-								placeholder="O que você aprendeu com este erro? O que precisa revisar?"
-								className="w-full min-h-[100px] p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-y transition-shadow"
+								placeholder="O que você aprendeu com esta questão? Por que errou ou como pode consolidar esse acerto?"
+								className="w-full min-h-[120px] p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-950/50 text-sm text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none resize-none transition-all shadow-inner"
 							/>
 						</div>
 					</div>
-				</CardContent>
-			</Card>
+				</div>
+			</div>
 
-			<Card variant="muted">
-				<CardContent>
-					<h4 className="font-bold text-gray-700 dark:text-gray-300 mb-3 text-sm uppercase tracking-wide">
-						Gabarito / Resposta Ideal
-					</h4>
-					<div className="prose prose-sm dark:prose-invert max-w-none text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 p-4 rounded border border-gray-200 dark:border-gray-700">
-						<ReactMarkdown
-							remarkPlugins={[remarkGfm, remarkMath]}
-							rehypePlugins={[rehypeKatex]}
-						>
-							{officialAnswer}
-						</ReactMarkdown>
-					</div>
-					{onRetry && (
-						<button
-							type="button"
-							onClick={onRetry}
-							className="mt-4 text-sm text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white underline"
-						>
-							Refazer esta questão
-						</button>
-					)}
-				</CardContent>
-			</Card>
+			{/* Gabarito Oficial */}
+			<div className="relative group">
+				<div className="absolute -inset-0.5 bg-gradient-to-r from-gray-200 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000" />
+				<Card
+					variant="muted"
+					className="relative border-none bg-gray-100/50 dark:bg-gray-800/40 backdrop-blur-sm overflow-hidden"
+				>
+					<CardContent className="pt-6">
+						<div className="flex items-center gap-2 mb-4 text-gray-500 dark:text-gray-400">
+							<Info className="w-4 h-4" />
+							<h4 className="font-bold text-xs uppercase tracking-widest">
+								Gabarito & Referência
+							</h4>
+						</div>
+						<div className="prose prose-sm dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed bg-white/40 dark:bg-gray-900/30 p-5 rounded-xl border border-white/60 dark:border-gray-700/30">
+							<ReactMarkdown
+								remarkPlugins={[remarkGfm, remarkMath]}
+								rehypePlugins={[rehypeKatex]}
+							>
+								{officialAnswer}
+							</ReactMarkdown>
+						</div>
+						{onRetry && (
+							<div className="mt-4 flex justify-center">
+								<button
+									type="button"
+									onClick={onRetry}
+									className="text-xs font-medium text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 transition-colors py-2 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20"
+								>
+									Deseja responder novamente?{" "}
+									<span className="underline ml-1">Clique aqui</span>
+								</button>
+							</div>
+						)}
+					</CardContent>
+				</Card>
+			</div>
 		</div>
 	);
 }

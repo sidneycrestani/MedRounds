@@ -112,7 +112,7 @@ export default function CaseStudyClient({
 						{/* Box de Gabarito ajustado para Dark Mode */}
 						<div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
 							<h4 className="font-bold text-gray-700 dark:text-gray-300 text-sm uppercase mb-2">
-								Gabarito Oficial
+								Gabarito
 							</h4>
 							<div className="text-gray-900 dark:text-gray-100 whitespace-pre-line leading-relaxed prose dark:prose-invert max-w-none">
 								<ReactMarkdown
