@@ -28,6 +28,7 @@ export const clinicalCases = content.table("clinical_cases", {
 	title: text("title").notNull(),
 	description: text("description"),
 	vignette: text("vignette").notNull(),
+	explanation: text("explanation"),
 	mainImageUrl: text("main_image_url"),
 	status: caseStatusEnum("status").notNull().default("draft"),
 	difficulty: caseDifficultyEnum("difficulty"),

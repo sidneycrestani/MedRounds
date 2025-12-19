@@ -30,6 +30,7 @@ export async function getCaseById(db: Database, id: number) {
 		id: c.id,
 		title: c.title,
 		vignette: c.vignette,
+		explanation: c.explanation,
 		media: c.mainImageUrl ?? undefined,
 		questions: qs.map((q) => ({
 			id: q.id,

@@ -1,0 +1,1 @@
+ALTER TABLE "content"."clinical_cases" ADD COLUMN "explanation" text;

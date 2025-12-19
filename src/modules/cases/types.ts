@@ -15,6 +15,7 @@ export const FullCaseSchema = z.object({
 	id: z.number(),
 	title: z.string(),
 	vignette: z.string(),
+	explanation: z.string().nullable().optional(),
 	media: z.string().url().optional(),
 	questions: z.array(PublicQuestionSchema),
 });

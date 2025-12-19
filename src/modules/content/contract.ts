@@ -18,6 +18,7 @@ export const StrictCaseSchema = z
 		title: z.string().min(1),
 		description: z.string().optional(),
 		vignette: z.string().min(1),
+		explanation: z.string().optional(),
 		mainImageUrl: z.string().url().nullable().optional(),
 		status: z.enum(["draft", "review", "published"]),
 		difficulty: z.enum(["student", "general_practitioner", "specialist"]),

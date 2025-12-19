@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavigationTabs } from "@/components/ui/navigation-tabs";
-import { ArrowRight, Check, CheckCircle, Eye, X } from "lucide-react";
+import {
+	ArrowRight,
+	Check,
+	CheckCircle,
+	Eye,
+	Lightbulb,
+	X,
+} from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
@@ -54,6 +62,11 @@ export default function CaseStudyClient({
 		nextQuestion();
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
+
+	const showExplanation =
+		isCaseFullyComplete &&
+		data.explanation &&
+		data.explanation.trim().length > 0;
 
 	return (
 		<div className="space-y-8 animate-in fade-in duration-500">
@@ -161,7 +174,31 @@ export default function CaseStudyClient({
 					/>
 				)}
 
-				{/* 4. Navigation */}
+				{/* 4. NEW: Case Explanation / Summary */}
+				{showExplanation && (
+					<div className="animate-in slide-in-from-bottom-4 duration-700 fade-in fill-mode-forwards mt-8">
+						<Card className="border-l-4 border-l-purple-500 bg-purple-50/50 dark:bg-purple-900/10">
+							<CardHeader className="pb-2">
+								<CardTitle className="text-lg flex items-center gap-2 text-purple-900 dark:text-purple-300">
+									<Lightbulb className="w-5 h-5" />
+									Comentário
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="text-gray-800 dark:text-gray-200 leading-relaxed prose dark:prose-invert max-w-none">
+									<ReactMarkdown
+										remarkPlugins={[remarkGfm, remarkMath]}
+										rehypePlugins={[rehypeKatex]}
+									>
+										{data.explanation}
+									</ReactMarkdown>
+								</div>
+							</CardContent>
+						</Card>
+					</div>
+				)}
+
+				{/* 5. Navigation */}
 				{(hasResult || isCaseFullyComplete) && (
 					<div className="flex items-center justify-end pt-4 border-t border-gray-100 dark:border-gray-700 mt-6">
 						{hasNextPendingQuestion ? (
