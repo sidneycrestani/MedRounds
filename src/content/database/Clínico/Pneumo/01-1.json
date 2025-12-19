@@ -1,0 +1,175 @@
+[
+	{
+		"id": 43,
+		"title": "Diferenciação entre Hemoptise e Hematêmese",
+		"vignette": "Paciente admitido no pronto-socorro com queixa de exteriorização de sangue pela boca. Apresenta-se ansioso. Na abordagem inicial, é necessário diferenciar a origem topográfica do sangramento entre vias aéreas e trato digestivo.",
+		"explanation": "A distinção é vital para decidir se o próximo exame será uma Broncoscopia ou uma Endoscopia Digestiva Alta. Na hemoptise, o sangue sai da árvore brônquica, misturando-se ao ar, o que causa as bolhas. Na hematêmese, o contato com o suco gástrico altera a cor e o odor do sangue.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)"
+		],
+		"questions": [
+			{
+				"text": "Cite três características semiológicas que diferenciam a hemoptise da hematêmese baseando-se na história clínica e na inspeção do material.",
+				"correctAnswer": "As diferenças fundamentais são: 1. **Aspecto e Cor:** A hemoptise apresenta sangue vermelho vivo, rutilante e espumoso (aerado). A hematêmese apresenta sangue escuro, 'em borra de café' ou com a presença de restos alimentares. 2. **Sintomas Associados:** A hemoptise é precedida ou acompanhada de tosse e pigarro. A hematêmese é precedida ou acompanhada de náuseas e vômitos. 3. **pH:** O material da hemoptise possui pH alcalino. O material da hematêmese possui pH ácido.",
+				"keywords": [
+					"Sangue rutilante/aerado vs. Borra de café",
+					"Tosse vs. Náuseas/Vômitos",
+					"pH alcalino vs. pH ácido"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 44,
+		"title": "Baqueteamento Digital e Neoplasia Pulmonar",
+		"vignette": "Durante o exame físico de um paciente tabagista crônico com história de tosse persistente, observa-se à inspeção das mãos um aumento do ângulo entre a base da unha e a cutícula (perda do ângulo de Lovibond) e uma consistência 'esponjosa' à palpação do leito ungueal. As falanges distais apresentam-se aumentadas de volume.",
+		"explanation": "Embora possa ocorrer em cardiopatias congênitas cianóticas e doenças inflamatórias intestinais, no contexto pneumológico, o baqueteamento reflete hipóxia crônica ou a presença de fatores de crescimento vascular liberados por tumores. Curiosidade: o DPOC isolado (enfisema puro) raramente causa baqueteamento; se estiver presente, procure câncer ou bronquiectasias associadas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::08 Neoplasias Pulmonares::03 Câncer de Pulmão: Tipos Histológicos e Estadiamento Simplificado"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação semiológica deste achado?",
+				"correctAnswer": "**Baqueteamento digital** ou **Hipocratismo digital**.",
+				"keywords": [
+					"Baqueteamento/Hipocratismo digital",
+					"Perda do ângulo de Lovibond"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a principal suspeita diagnóstica que deve ser investigada obrigatoriamente neste contexto clínico?",
+				"correctAnswer": "**Neoplasia Pulmonar**. Em pacientes tabagistas, este sinal é uma 'bandeira vermelha' (red flag) para malignidade intratorácica ou doenças supurativas crônicas (como bronquiectasias).",
+				"keywords": ["Neoplasia Pulmonar", "Bronquiectasias"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 45,
+		"title": "Padrões Posicionais de Dispneia: Trepopneia e Platipneia",
+		"vignette": "Durante a avaliação de dois pacientes com queixa de dispneia, observam-se padrões posicionais distintos: Paciente A relata melhora significativa da falta de ar ao adotar o decúbito lateral direito. Paciente B apresenta dispneia na posição ortostática (em pé) ou sentada, com melhora imediata ao assumir a posição supina (deitado).",
+		"explanation": "A dispneia não é apenas 'falta de ar'. A posição em que ela ocorre nos dá pistas anatômicas. A mais comum é a Ortopneia (comum na IC e na asma grave), mas a Trepopneia e a Platipneia são diagnósticas para condições específicas que muitos médicos deixam passar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)"
+		],
+		"questions": [
+			{
+				"text": "Nomeie o sinal semiológico apresentado pelo Paciente A e cite uma causa provável.",
+				"correctAnswer": "**Trepopneia**. Sugere derrame pleural volumoso (o paciente deita sobre o lado afetado para permitir a expansão do pulmão sadio).",
+				"keywords": ["Trepopneia (Derrame pleural)", "Decúbito lateral"],
+				"order": 1
+			},
+			{
+				"text": "Nomeie o sinal semiológico apresentado pelo Paciente B e cite uma causa provável.",
+				"correctAnswer": "**Platipneia**. Sugere Síndrome Hepatopulmonar ou shunts intracardíacos direita-esquerda (a gravidade aumenta o fluxo sanguíneo nas bases pulmonares ao ficar em pé, exacerbando o shunt).",
+				"keywords": [
+					"Platipneia (Síndrome Hepatopulmonar)",
+					"Shunt direita-esquerda"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 46,
+		"title": "Propedêutica da Consolidação Pulmonar: Egofonia e Pectoriloquia",
+		"vignette": "Durante a ausculta pulmonar na base do hemitórax direito, ao solicitar que o paciente sussurre 'trinta e três', a voz é audível com nitidez através do estetoscópio. Posteriormente, ao solicitar a fonação da vogal 'I' de forma contínua, o som auscultado assemelha-se a um 'E' anasalado.",
+		"explanation": "O pulmão normal é cheio de ar, que é um péssimo condutor de sons de alta frequência (por isso a voz chega abafada à pele). Quando o alvéolo está cheio de líquido/pus (consolidação), ele se torna um excelente condutor. Se você ouve a voz com clareza na parede torácica, aquele pulmão não tem ar, tem sólido.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Quais são os nomes técnicos destes dois achados propedêuticos?",
+				"correctAnswer": "**Pectoriloquia afônica** (voz sussurrada nítida) e **Egofonia** (mudança de timbre de 'I' para 'E').",
+				"keywords": ["Pectoriloquia afônica", "Egofonia"],
+				"order": 1
+			},
+			{
+				"text": "O que a presença destes sinais indica sobre o estado do parênquima pulmonar na região auscultada?",
+				"correctAnswer": "Indicam **Síndrome de Consolidação Pulmonar** (pneumonia). O parênquima preenchido por exsudato ou sólido transmite frequências sonoras agudas melhor que o parênquima aerado normal.",
+				"keywords": ["Consolidação pulmonar", "Transmissão sonora aumentada"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 47,
+		"title": "Diagnóstico Diferencial: Atelectasia vs Derrame Pleural",
+		"vignette": "Ao examinar o tórax posterior de um paciente, verifica-se à manobra de expansibilidade uma redução significativa da movimentação no hemitórax esquerdo, associada à macicez à percussão no mesmo lado.",
+		"explanation": "A palpação da expansibilidade e a posição da traqueia são fundamentais para diferenciar processos que 'subtraem' volume (atelectasia) de processos que 'adicionam' volume ao espaço pleural (derrame).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)"
+		],
+		"questions": [
+			{
+				"text": "Se a palpação da traqueia revelar desvio para a esquerda (ipsilateral), qual é o diagnóstico sindrômico mais provável?",
+				"correctAnswer": "**Atelectasia**. A perda de volume pulmonar gera pressão negativa, atraindo as estruturas do mediastino para o lado da lesão.",
+				"keywords": [
+					"Atelectasia (Desvio Ipsilateral)",
+					"Expansibilidade reduzida"
+				],
+				"order": 1
+			},
+			{
+				"text": "Se a palpação da traqueia revelar desvio para a direita (contralateral), qual é o diagnóstico sindrômico mais provável?",
+				"correctAnswer": "**Derrame Pleural Volumoso**. O acúmulo de líquido ocupa espaço na caixa torácica, empurrando as estruturas do mediastino para o lado oposto.",
+				"keywords": ["Derrame Pleural (Desvio Contralateral)", "Macicez"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 48,
+		"title": "Mecânica Ventilatória e Risco na Crise de Asma",
+		"vignette": "Paciente com diagnóstico de asma brônquica em crise aguda apresenta-se com Frequência Respiratória (FR) de 28 irpm e uso evidente da musculatura esternocleidomastoidea. A oximetria de pulso indica Saturação de O2 de 94% em ar ambiente e o paciente consegue completar frases.",
+		"explanation": "A FR é o primeiro sinal a alterar na insuficiência respiratória e o último a normalizar. O uso de musculatura acessória indica que a complacência pulmonar está muito baixa ou a resistência das vias aéreas muito alta, exigindo pressão negativa extra.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::03 Asma Brônquica: Manejo da Crise Aguda na Emergência",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::03 Oximetria de Pulso e Sinais Vitais Respiratórios"
+		],
+		"questions": [
+			{
+				"text": "Classifique o risco deste paciente (baixo, médio ou alto) e justifique, desconsiderando a saturação 'normal'.",
+				"correctAnswer": "**Alto risco/Risco iminente**. A saturação de 94% está sendo mantida às custas de um trabalho respiratório exaustivo (taquipneia de 28 irpm + uso de musculatura acessória). A fadiga muscular pode levar à insuficiência respiratória súbita.",
+				"keywords": [
+					"Trabalho respiratório aumentado",
+					"Saturação como marcador tardio"
+				],
+				"order": 1
+			},
+			{
+				"text": "Fisiologicamente, o que o uso da musculatura acessória indica sobre a mecânica ventilatória neste momento?",
+				"correctAnswer": "Indica que a resistência das vias aéreas está muito elevada e/ou a complacência está reduzida, exigindo a geração de pressão negativa extra-pleural para manter o volume corrente.",
+				"keywords": [
+					"Risco de fadiga muscular",
+					"Uso de musculatura acessória"
+				],
+				"order": 2
+			}
+		]
+	}
+]

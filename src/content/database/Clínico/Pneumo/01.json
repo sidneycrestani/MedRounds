@@ -1,0 +1,188 @@
+[
+	{
+		"id": 37,
+		"title": "Semiologia Pulmonar – Síndrome de Consolidação vs. Derrame Pleural",
+		"vignette": "Dois pacientes são admitidos com queixa de febre e dispneia. Ao exame físico, ambos apresentam macicez à percussão na base do pulmão direito. Paciente A: Apresenta Frêmito Toraco-Vocal (FTV) aumentado na região da macicez. Paciente B: Apresenta Frêmito Toraco-Vocal (FTV) abolido na região da macicez.",
+		"explanation": "O FTV avalia a transmissão da vibração das cordas vocais através da árvore traqueobronquial até a parede. Condensações alveolares com brônquio pérvio aumentam essa transmissão. Presença de ar (pneumotórax) ou líquido (derrame) no espaço pleural 'afasta' o pulmão da parede e bloqueia a vibração.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)"
+		],
+		"questions": [
+			{
+				"text": "Qual a fisiopatologia que explica a diferença no FTV entre os dois pacientes?",
+				"correctAnswer": "No Paciente A, a vibração sonora é facilitada pela presença de meio sólido ou denso com brônquio pérvio, característico das consolidações. No Paciente B, a presença de líquido no espaço pleural atua como uma barreira acústica (isolante), impedindo que a vibração gerada no parênquima alcance a parede torácica.",
+				"keywords": [
+					"Frêmito toraco-vocal aumentado",
+					"Frêmito toraco-vocal abolido"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o provável diagnóstico sindrômico para cada paciente?",
+				"correctAnswer": "O Paciente A apresenta uma Síndrome de Consolidação (ex: Pneumonia). O Paciente B apresenta um Derrame Pleural.",
+				"keywords": ["Síndrome de consolidação", "Derrame pleural", "Macicez"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 38,
+		"title": "Limitações da Oximetria de Pulso",
+		"vignette": "Um paciente é admitido no serviço de emergência após resgate de incêndio em ambiente confinado. Apresenta-se confuso, taquipneico e com mucosas hiperemiadas (coloração 'cereja'). A oximetria de pulso registra saturação de oxigênio (SpO2) de 99% em ar ambiente.",
+		"explanation": "A oximetria de pulso é um método indireto baseado na absorbância de luz. O CO tem uma afinidade 200-250x maior pela hemoglobina que o O2. O aparelho 'vê' a hemoglobina ligada (seja ao O2 ou ao CO) e assume que é oxigênio, dando uma falsa segurança.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::03 Oximetria de Pulso e Sinais Vitais Respiratórios",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)"
+		],
+		"questions": [
+			{
+				"text": "Por que a leitura da oximetria de pulso não é fidedigna neste cenário clínico?",
+				"correctAnswer": "O cenário sugere intoxicação por monóxido de carbono (CO). O oxímetro de pulso padrão utiliza espectrofotometria que não diferencia a oxi-hemoglobina da carboxi-hemoglobina (COHb), pois ambas possuem espectros de absorção de luz semelhantes, gerando um resultado falsamente elevado.",
+				"keywords": [
+					"Intoxicação por monóxido de carbono",
+					"Carboxi-hemoglobina",
+					"Falsa oximetria"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o exame laboratorial mandatório para avaliar a oxigenação real deste paciente?",
+				"correctAnswer": "Gasometria arterial com co-oximetria (único método capaz de mensurar a fração de carboxi-hemoglobina).",
+				"keywords": ["Co-oximetria", "Gasometria arterial"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 39,
+		"title": "Ausculta Pulmonar e Ruídos Adventícios",
+		"vignette": "Durante o exame físico de um paciente com insuficiência cardíaca descompensada, auscultam-se ruídos pulmonares semelhantes ao 'abrir de um velcro', predominantes no final da inspiração. Nota-se que esses ruídos não se alteram com a tosse.",
+		"explanation": "A diferenciação entre ruídos de 'vizinhança' (vias aéreas distais vs. proximais) é crucial. Estertores finos indicam doença do parênquima ou edema alveolar/intersticial. Roncos indicam secreção em brônquios de maior calibre (bronquites).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+		],
+		"questions": [
+			{
+				"text": "Qual o termo semiológico para este ruído?",
+				"correctAnswer": "Estertores finos (ou crepitantes).",
+				"keywords": ["Estertores finos (crepitantes)"],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo fisiopatológico de sua geração?",
+				"correctAnswer": "São gerados pela abertura súbita, durante a inspiração, de alvéolos e pequenas vias aéreas que se encontravam colapsados por líquido ou exsudato.",
+				"keywords": ["Abertura alveolar", "Insuficiência cardíaca"],
+				"order": 2
+			},
+			{
+				"text": "Qual a principal diferença semiológica entre este ruído e os roncos?",
+				"correctAnswer": "Os roncos são sons graves originados em vias aéreas de maior calibre e, diferentemente dos estertores finos, frequentemente modificam-se ou desaparecem após a tosse (mobilização de secreção).",
+				"keywords": ["Roncos", "Mobilização com tosse"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 40,
+		"title": "Abordagem da Tosse Crônica",
+		"vignette": "Um paciente de 45 anos, não tabagista, apresenta tosse seca persistente há 10 semanas. Relata uso prévio de amoxicilina por 7 dias sem resposta clínica. Nega febre, hemoptise ou perda de peso. A radiografia de tórax é normal.",
+		"explanation": "A tosse é dividida em aguda (<3 sem), subaguda (3-8 sem) e crônica (>8 sem). No paciente não tabagista e sem sinais de alarme (como hemoptise ou perda de peso), o foco deve ser o 'triângulo clássico' (nariz, pulmão, esôfago) antes de exames mais invasivos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)"
+		],
+		"questions": [
+			{
+				"text": "Como é classificada esta tosse com base na duração?",
+				"correctAnswer": "Tosse crônica (duração superior a 8 semanas).",
+				"keywords": ["Tosse crônica"],
+				"order": 1
+			},
+			{
+				"text": "Quais são as três etiologias mais prevalentes para este perfil de paciente (não tabagista com Rx normal)?",
+				"correctAnswer": "Síndrome da Tosse das Vias Aéreas Superiores (gotejamento pós-nasal), Asma (variante tosse) e Doença do Refluxo Gastroesofágico (DRGE).",
+				"keywords": [
+					"Gotejamento pós-nasal (STVAS)",
+					"Asma",
+					"Doença do Refluxo Gastroesofágico (DRGE)",
+					"Radiografia normal"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 41,
+		"title": "Padrões Respiratórios Patológicos",
+		"vignette": "Um paciente é admitido na sala de emergência com rebaixamento do nível de consciência. À inspeção, observa-se padrão respiratório caracterizado por inspirações profundas seguidas de expirações rápidas, ruidosas e regulares, sem pausas de apneia.",
+		"explanation": "O corpo utiliza a respiração como mecanismo de compensação rápida para o pH sanguíneo. Ao aumentar a profundidade da incursão (volume corrente) e a frequência, o paciente tenta 'lavar' o CO2 (um ácido volátil) para elevar o pH. É diferente da respiração de Cheyne-Stokes, que é cíclica com períodos de apneia.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)"
+		],
+		"questions": [
+			{
+				"text": "Qual o epônimo deste padrão respiratório?",
+				"correctAnswer": "Ritmo de Kussmaul.",
+				"keywords": ["Ritmo de Kussmaul", "Hiperventilação"],
+				"order": 1
+			},
+			{
+				"text": "Este padrão é classicamente um mecanismo compensatório para qual distúrbio acidobásico?",
+				"correctAnswer": "Acidose metabólica grave (ex: Cetoacidose Diabética, Uremia). O padrão visa aumentar o volume minuto para eliminar CO2 (compensação respiratória).",
+				"keywords": [
+					"Acidose metabólica",
+					"Compensação respiratória",
+					"Cetoacidose diabética"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 42,
+		"title": "Caracterização da Dor Torácica",
+		"vignette": "Paciente refere dor em hemitórax esquerdo, bem localizada ('aponta com o dedo'), descrita como 'pontada'. A dor exacerba-se significativamente com a inspiração profunda, tosse e espirros.",
+		"explanation": "O pulmão 'não dói'. Quando um paciente tem dor ventilatório-dependente, isso significa que algum processo (inflamação, infecção, tumor ou infarto pulmonar) atingiu a pleura parietal ou a parede torácica. O atrito entre as pleuras inflamadas gera a dor clássica em 'pontada'.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)"
+		],
+		"questions": [
+			{
+				"text": "Qual a classificação clínica deste tipo de dor torácica?",
+				"correctAnswer": "Dor pleurítica (ou pleuriz).",
+				"keywords": ["Dor pleurítica", "Ventilatório-dependente"],
+				"order": 1
+			},
+			{
+				"text": "Qual a estrutura anatômica responsável pela nocicepção neste caso?",
+				"correctAnswer": "Pleura parietal. O parênquima pulmonar e a pleura visceral não possuem inervação dolorosa; a dor surge da inflamação ou irritação da pleura parietal, inervada pelos nervos intercostais e frênico.",
+				"keywords": [
+					"Pleura parietal",
+					"Nervos intercostais",
+					"Inflamação pleural"
+				],
+				"order": 2
+			}
+		]
+	}
+]
