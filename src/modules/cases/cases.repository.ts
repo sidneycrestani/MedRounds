@@ -255,7 +255,7 @@ export async function generateStudySession(
            ARRAY_AGG(e.question_index ORDER BY e.question_index) AS active_indices
     FROM eligible e
     GROUP BY e.case_id
-    ORDER BY RANDOM()
+    ORDER BY e.case_id ASC
   `;
 
 	const res = await db.execute(query);
