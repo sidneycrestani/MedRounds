@@ -17,8 +17,8 @@ const SALT_LENGTH = 64;
 const MODEL_FALLBACK_LIST = [
 	"gemini-3-flash-preview",
 	"gemini-3-flash-preview", // Retry
-	"gemini-2.5-flash", 
-	"gemini-2.5-flash-lite", 
+	"gemini-2.5-flash",
+	"gemini-2.5-flash-lite",
 ];
 
 function decryptKey(

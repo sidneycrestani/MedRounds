@@ -83,7 +83,7 @@ export default function FeedbackSection({
 											: "text-orange-900 dark:text-orange-300",
 									)}
 								>
-									{isCorrect ? "Conduta Correta" : "Sugestão de Melhora"}
+									{isCorrect ? "Correto" : "Sugestão de Melhora"}
 								</h4>
 								<p className="text-sm opacity-70 text-gray-600 dark:text-gray-400">
 									Avaliação gerada por inteligência artificial

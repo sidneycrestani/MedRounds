@@ -95,8 +95,10 @@ function main() {
 			const parsed = FileSchema.safeParse(json);
 
 			if (!parsed.success) {
+				console.error(`\n❌ Schema Validation Error in ${file}:`);
+				console.error(JSON.stringify(parsed.error.format(), null, 2));
+
 				errors.push(`Invalid file schema: ${file}`);
-				// Opcional: detalhar o erro do Zod aqui se necessário
 				continue;
 			}
 

@@ -634,6 +634,88 @@
 			}
 		}
 	},
+	"Ciclo Clínico": {
+		"Clínica Médica": {
+			"02 Pneumologia": {
+				"01 Semiologia e Propedêutica Pulmonar": {
+					"01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)": {},
+					"02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)": {},
+					"03 Oximetria de Pulso e Sinais Vitais Respiratórios": {}
+				},
+				"02 Métodos Diagnósticos em Pneumologia": {
+					"01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)": {},
+					"02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)": {},
+					"03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)": {},
+					"04 Tomografia Computadorizada de Tórax (Indicações e Padrões Principais)": {},
+					"05 Broncoscopia (Indicações e Preparo)": {},
+					"06 Toracocentese Diagnóstica (Critérios de Light e Análise Líquor)": {}
+				},
+				"03 Doenças Obstrutivas": {
+					"01 Asma Brônquica: Diagnóstico e Classificação de Controle (GINA)": {},
+					"02 Asma Brônquica: Tratamento de Manutenção (Steps) e Dispositivos Inalatórios": {},
+					"03 Asma Brônquica: Manejo da Crise Aguda na Emergência": {},
+					"04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos": {},
+					"05 DPOC: Tratamento Ambulatorial e Reabilitação Pulmonar": {},
+					"06 DPOC: Manejo da Exacerbação (Infecciosa vs Não-Infecciosa)": {},
+					"07 Bronquiectasias (Investigação Etiológica e Manejo de Infecções)": {}
+				},
+				"04 Infecções Respiratórias": {
+					"01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento": {},
+					"02 Pneumonia Nosocomial (PAH) e Associada à Ventilação (PAV)": {},
+					"03 Abscesso Pulmonar e Pneumonia Aspirativa": {},
+					"04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)": {},
+					"05 COVID-19 (Fases, Manejo Ambulatorial e Hospitalar)": {},
+					"06 Micoses Pulmonares Endêmicas (Paracoccidioidomicose, Histoplasmose)": {},
+					"07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)": {},
+					"08 Micobactérias Não Tuberculosas (Diagnóstico Diferencial e Tratamento)": {},
+					"09 Infecções em Imunossuprimidos e Bactérias Filamentosas (Nocardia, Actinomyces, Aspergillus)": {}
+				},
+				"05 Tuberculose (TB)": {
+					"01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)": {},
+					"02 TB Latente (ILTB): Rastreio (PPD/IGRA) e Tratamento": {},
+					"03 Esquemas Terapêuticos Básicos (RIPE) e Seguimento": {},
+					"04 TB Extrapulmonar (Pleural, Ganglionar - Noções Gerais)": {},
+					"05 Efeitos Adversos das Medicações e Manejo": {}
+				},
+				"06 Circulação Pulmonar": {
+					"01 Tromboembolismo Pulmonar (TEP): Probabilidade Pré-Teste (Wells/Geneva)": {},
+					"02 TEP: Diagnóstico (D-Dímero, Angio-TC) e Estratificação de Risco (PESI)": {},
+					"03 TEP: Tratamento (Anticoagulação e Trombólise)": {},
+					"04 Hipertensão Pulmonar (Classificação Clínica e Ecocardiograma de Rastreio)": {}
+				},
+				"07 Doenças Pleurais": {
+					"01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)": {},
+					"02 Derrame Parapneumônico e Empiema (Indicações de Drenagem)": {},
+					"03 Pneumotórax (Espontâneo vs Traumático, Primário vs Secundário)": {},
+					"04 Manejo do Pneumotórax (Observação, Aspiração, Drenagem)": {}
+				},
+				"08 Neoplasias Pulmonares": {
+					"01 Nódulo Pulmonar Solitário (Avaliação de Risco e Fleischner Society)": {},
+					"02 Câncer de Pulmão: Rastreamento (Low-Dose CT)": {},
+					"03 Câncer de Pulmão: Tipos Histológicos e Estadiamento Simplificado": {},
+					"04 Síndromes Paraneoplásicas e Síndrome da Veia Cava Superior": {}
+				},
+				"09 Doenças Intersticiais e Ocupacionais": {
+					"01 Doenças Pulmonares Intersticiais (DPI): Abordagem Diagnóstica Inicial": {},
+					"02 Fibrose Pulmonar Idiopática (Suspeita Clínica e Tomográfica)": {},
+					"03 Pneumoconioses (Silicose, Asbestose)": {},
+					"04 Pneumonite de Hipersensibilidade": {},
+					"05 Sarcoidose (Manifestações Pulmonares e Sistêmicas)": {}
+				},
+				"10 Distúrbios do Sono e Controle": {
+					"01 Síndrome da Apneia Obstrutiva do Sono (SAOS): Diagnóstico e Polissonografia": {},
+					"02 Tratamento da SAOS (CPAP e Medidas Gerais)": {},
+					"03 Tabagismo: Abordagem Cognitivo-Comportamental e Farmacológica": {}
+				},
+				"11 Insuficiência Respiratória Aguda": {
+					"01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)": {},
+					"02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)": {},
+					"03 Cateter Nasal de Alto Fluxo (CNAF) e VNI (Indicações Básicas)": {},
+					"04 Sequência Rápida de Intubação (Indicações Pneumológicas)": {}
+				}
+			}
+		}
+	},
 	"Cardiologia": {
 		"01 Arritmias": {
 			"01 Interpretação de ECG": {},
