@@ -156,11 +156,31 @@ async function main() {
 	}
 	console.log("✅ Taxonomia validada.");
 
-	console.log(`📂 Processando ${files.length} arquivos...`);
+	// --- 2. Otimização: Cache de Hashes ---
+	console.log("⚡ Pré-carregando hashes do banco de dados...");
+	const existingRows = await db
+		.select({
+			id: clinicalCases.id,
+			contentHash: clinicalCases.contentHash,
+		})
+		.from(clinicalCases);
+
+	// Mapa O(1) para buscar hash por ID: Map<CaseID, HashString>
+	const dbHashMap = new Map<number, string | null>();
+	for (const row of existingRows) {
+		dbHashMap.set(row.id, row.contentHash);
+	}
+	console.log(`📊 ${existingRows.length} casos já existentes no banco.`);
+
+	// --- 3. Processamento dos Arquivos ---
+	console.log(`📂 Processando ${files.length} arquivos JSON...`);
+
+	const stats = { inserted: 0, updated: 0, skipped: 0 };
+	const registry = readRegistry();
 
 	for (const file of files) {
 		const filePath = file;
-		console.log(`\n📄 Lendo arquivo: ${path.basename(file)}`);
+		// console.log(`\n📄 Lendo: ${path.basename(file)}`);
 
 		try {
 			const rawContent = fs.readFileSync(filePath, "utf-8");
@@ -179,7 +199,6 @@ async function main() {
 			}
 
 			const cases = validationResult.data;
-			const registry = readRegistry();
 
 			for (const caseData of cases) {
 				// --- 3.1. Preparação de Dados do Caso ---
@@ -196,6 +215,7 @@ async function main() {
 					(caseData.tempId && registry
 						? registry.mappings[caseData.tempId]
 						: undefined);
+
 				if (typeof effectiveId !== "number") {
 					console.error(
 						`❌ Caso sem ID oficial atribuído: ${file} (tempId: ${caseData.tempId ?? ""})`,
@@ -203,14 +223,7 @@ async function main() {
 					continue;
 				}
 
-				const existingCase = await db
-					.select()
-					.from(clinicalCases)
-					.where(eq(clinicalCases.id, effectiveId))
-					.limit(1);
-
-				let caseId: number;
-
+				// Gera hash determinístico
 				const contentHash = crypto
 					.createHash("sha1")
 					.update(
@@ -235,34 +248,23 @@ async function main() {
 					)
 					.digest("hex");
 
-				if (existingCase.length > 0) {
-					caseId = existingCase[0].id;
-					const unchanged = existingCase[0].contentHash === contentHash;
-					if (!unchanged) {
-						await db
-							.update(clinicalCases)
-							.set({
-								title: caseData.title,
-								description: descriptionToSave,
-								vignette: caseData.vignette,
-								explanation: caseData.explanation ?? null,
-								mainImageUrl: caseData.mainImageUrl ?? null,
-								status: caseData.status,
-								difficulty: caseData.difficulty,
-								lastUpdated: new Date(),
-								contentHash,
-							})
-							.where(eq(clinicalCases.id, caseId));
-						await db
-							.delete(caseQuestions)
-							.where(eq(caseQuestions.caseId, caseId));
-						await db.delete(casesTags).where(eq(casesTags.caseId, caseId));
-					}
-				} else {
-					const inserted = await db
-						.insert(clinicalCases)
-						.values({
-							id: effectiveId,
+				// --- 3.2. Verificação Otimizada (Local) ---
+				const storedHash = dbHashMap.get(effectiveId);
+				const exists = dbHashMap.has(effectiveId);
+				const needsUpdate = exists && storedHash !== contentHash;
+
+				if (exists && !needsUpdate) {
+					stats.skipped++;
+					process.stdout.write("."); // Feedback visual minimalista
+					continue;
+				}
+
+				// --- 3.3. Persistência ---
+				if (needsUpdate) {
+					// UPDATE
+					await db
+						.update(clinicalCases)
+						.set({
 							title: caseData.title,
 							description: descriptionToSave,
 							vignette: caseData.vignette,
@@ -270,24 +272,43 @@ async function main() {
 							mainImageUrl: caseData.mainImageUrl ?? null,
 							status: caseData.status,
 							difficulty: caseData.difficulty,
+							lastUpdated: new Date(),
 							contentHash,
 						})
-						.returning({ id: clinicalCases.id });
-					caseId = inserted[0].id;
+						.where(eq(clinicalCases.id, effectiveId));
+
+					// Limpa relações antigas para recriar
+					await db
+						.delete(caseQuestions)
+						.where(eq(caseQuestions.caseId, effectiveId));
+					await db.delete(casesTags).where(eq(casesTags.caseId, effectiveId));
+
+					stats.updated++;
+				} else {
+					// INSERT
+					await db.insert(clinicalCases).values({
+						id: effectiveId,
+						title: caseData.title,
+						description: descriptionToSave,
+						vignette: caseData.vignette,
+						explanation: caseData.explanation ?? null,
+						mainImageUrl: caseData.mainImageUrl ?? null,
+						status: caseData.status,
+						difficulty: caseData.difficulty,
+						contentHash,
+					});
+
+					stats.inserted++;
 				}
 
-				// Só inserimos/atualizamos tags que este caso realmente usa
+				// --- 3.4. Tags (Sempre recriadas no update ou criadas no insert) ---
 				if (caseData.tags && caseData.tags.length > 0) {
 					for (const tagPath of caseData.tags) {
 						try {
-							// upsertTagHierarchy cria a árvore de tags no DB se não existir
-							// e retorna o ID da tag folha
 							const leafTagId = await upsertTagHierarchy(db, tagPath);
-
-							// Vincula o caso à tag folha
 							await db
 								.insert(casesTags)
-								.values({ caseId, tagId: leafTagId })
+								.values({ caseId: effectiveId, tagId: leafTagId })
 								.onConflictDoNothing();
 						} catch (err) {
 							console.error(`   ⚠️  Erro ao processar tag "${tagPath}":`, err);
@@ -295,15 +316,11 @@ async function main() {
 					}
 				}
 
-				// --- 3.4. Inserção de Perguntas ---
-				const needsInsertions =
-					existingCase.length === 0 ||
-					existingCase[0].contentHash !== contentHash;
-
-				if (needsInsertions && caseData.questions.length > 0) {
+				// --- 3.5. Perguntas ---
+				if (caseData.questions.length > 0) {
 					await db.insert(caseQuestions).values(
 						caseData.questions.map((q) => ({
-							caseId,
+							caseId: effectiveId,
 							questionText: q.text,
 							correctAnswerText: q.correctAnswer,
 							mustIncludeKeywords: q.keywords,
@@ -319,7 +336,10 @@ async function main() {
 		}
 	}
 
-	console.log("\n✅ Seed finalizado com sucesso.");
+	console.log("\n\n✅ Seed finalizado!");
+	console.log(
+		`   🆕 Inseridos: ${stats.inserted} | 🔄 Atualizados: ${stats.updated} | ⏩ Pulados: ${stats.skipped}`,
+	);
 	process.exit(0);
 }
 
