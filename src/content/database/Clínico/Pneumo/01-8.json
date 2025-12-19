@@ -1,0 +1,168 @@
+[
+	{
+		"id": 85,
+		"title": "Topografia da Toracocentese",
+		"vignette": "Paciente com diagnóstico confirmado de derrame pleural volumoso ao exame físico e radiológico. Indica-se a realização de toracocentese diagnóstica.",
+		"explanation": "O médico precisa saber transformar o diagnóstico físico em um procedimento seguro. Conhecer o trajeto dos nervos e vasos intercostais evita hemotórax iatrogênico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::06 Toracocentese Diagnóstica (Critérios de Light e Análise Líquor)"
+		],
+		"questions": [
+			{
+				"text": "Com base na anatomia da parede torácica, em qual local da costela (borda superior ou inferior) deve-se introduzir a agulha e qual a justificativa anatômica?",
+				"correctAnswer": "A punção deve ser realizada na borda superior da costela inferior. Isso é fundamental para evitar a lesão do feixe vasculonervoso intercostal (veia, artéria e nervo), que transcorre ao longo da borda inferior da costela superior.",
+				"keywords": [
+					"Borda superior da costela inferior",
+					"Feixe vasculonervoso intercostal"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a referência anatômica (espaço intercostal) usualmente utilizada como limite inferior de segurança para evitar lesão diafragmática ou hepática?",
+				"correctAnswer": "Geralmente, utiliza-se o 7º ou 8º espaço intercostal na linha axilar posterior como limite de segurança.",
+				"keywords": ["7º ou 8º espaço intercostal"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 86,
+		"title": "Monitorização do Pico de Fluxo (Peak Flow)",
+		"vignette": "Um paciente asmático dá entrada no pronto-socorro. Na ausência de um espirômetro convencional, opta-se pelo uso de um Peak Flow Meter.",
+		"explanation": "É o \"termômetro\" do asmático. O estudante deve saber que existem ferramentas simples para quantificar a obstrução além do estetoscópio.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::03 Asma Brônquica: Manejo da Crise Aguda na Emergência"
+		],
+		"questions": [
+			{
+				"text": "O que este dispositivo mensura fisiologicamente?",
+				"correctAnswer": "O aparelho mede o Pico de Fluxo Expiratório (PFE), ou seja, o fluxo máximo de ar obtido durante uma expiração forçada iniciada na capacidade pulmonar total. Ele quantifica o grau de obstrução das vias aéreas de grande calibre.",
+				"keywords": ["Pico de Fluxo Expiratório (PFE)", "Grau de obstrução"],
+				"order": 1
+			},
+			{
+				"text": "Qual a utilidade clínica de comparar o resultado obtido com o \"melhor valor pessoal\" do paciente no manejo da crise?",
+				"correctAnswer": "A comparação com o \"melhor valor pessoal\" permite classificar a gravidade da crise. Por exemplo, valores abaixo de 50% do melhor valor pessoal indicam uma crise grave ou muito grave, orientando a agressividade do tratamento.",
+				"keywords": ["Comparação com \"melhor valor pessoal\""],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 87,
+		"title": "Respiração Paradoxal",
+		"vignette": "Durante a monitorização de um paciente com crise asmática grave, observa-se que na inspiração o tórax expande enquanto o abdômen retrai. Na expiração, ocorre o movimento inverso (o abdômen projeta-se para fora).",
+		"explanation": "É um sinal de extrema gravidade. Quando se identifica respiração paradoxal, o paciente está próximo de uma parada respiratória por exaustão muscular. É indicativo de necessidade de via aérea avançada/suporte ventilatório.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+		],
+		"questions": [
+			{
+				"text": "Qual o termo semiológico para este fenômeno?",
+				"correctAnswer": "Respiração Paradoxal (ou Assincronia Toracoabdominal).",
+				"keywords": ["Respiração Paradoxal (Assincronia Toracoabdominal)"],
+				"order": 1
+			},
+			{
+				"text": "O que este sinal indica sobre a função do diafragma?",
+				"correctAnswer": "Indica fadiga ou falência iminente do diafragma. O músculo está exausto e incapaz de contrair adequadamente; a pressão negativa gerada pelos músculos acessórios do tórax acaba \"sugando\" o abdômen passivamente para dentro durante a inspiração.",
+				"keywords": [
+					"Fadiga diafragmática",
+					"Iminência de falência respiratória"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 88,
+		"title": "Tórax Silencioso",
+		"vignette": "Paciente asmático admitido com sibilância audível e dispneia intensa. Após 20 minutos de tratamento inicial, o paciente apresenta redução da ausculta de sibilos e o murmúrio vesicular torna-se quase inaudível. Concomitantemente, a saturação de oxigênio cai de 92% para 88%.",
+		"explanation": "Muitos estudantes interpretam erroneamente o desaparecimento dos sibilos como melhora. Na asma grave, o sibilo indica que ainda há passagem de ar. O silêncio auscultatório em paciente com esforço respiratório é sinal de obstrução crítica e parada respiratória iminente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::03 Asma Brônquica: Manejo da Crise Aguda na Emergência"
+		],
+		"questions": [
+			{
+				"text": "O desaparecimento dos sibilos representa melhora ou piora do quadro?",
+				"correctAnswer": "Representa um sinal de extrema piora.",
+				"keywords": ["Sinal de gravidade extrema"],
+				"order": 1
+			},
+			{
+				"text": "Qual o nome deste achado semiológico e sua fisiopatologia?",
+				"correctAnswer": "O achado é denominado Tórax Silencioso (Silent Chest). Ocorre quando a obstrução brônquica é tão severa que o fluxo de ar se torna insuficiente até mesmo para gerar a turbulência necessária para o som do sibilo.",
+				"keywords": [
+					"Tórax Silencioso (Silent Chest)",
+					"Fluxo aéreo insuficiente"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 89,
+		"title": "Identificação de Baqueteamento Digital",
+		"vignette": "Durante o exame físico das extremidades, surge a dúvida se o formato das unhas do paciente corresponde a um baqueteamento digital patológico ou a uma variação constitucional.",
+		"explanation": "É a forma mais objetiva de identificar o baqueteamento no exame físico inicial, antes que a deformidade em \"baqueta de tambor\" se torne evidente macroscopicamente.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+		],
+		"questions": [
+			{
+				"text": "Qual manobra propedêutica deve ser realizada para esclarecer a dúvida (descreva a execução)?",
+				"correctAnswer": "Deve-se realizar o Teste de Schamroth (manobra da janela). Solicita-se ao paciente que encoste as superfícies dorsais das falanges distais de dedos correspondentes (ex: indicadores) uma contra a outra.",
+				"keywords": ["Teste de Schamroth"],
+				"order": 1
+			},
+			{
+				"text": "Qual o achado nesta manobra que confirma a presença de hipocratismo digital?",
+				"correctAnswer": "Em condições normais, visualiza-se um pequeno losango de luz na base das unhas (\"janela\"). No baqueteamento digital, essa janela desaparece devido ao aumento do ângulo de Lovibond e à hipertrofia de partes moles.",
+				"keywords": [
+					"Desaparecimento da janela (losango)",
+					"Ângulo de Lovibond"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 90,
+		"title": "Dispositivos de Oxigenoterapia",
+		"vignette": "Para um paciente hipoxêmico com padrão respiratório irregular, estão disponíveis dois dispositivos de oxigenoterapia: (A) Cateter Nasal de O2 a 2 L/min e (B) Máscara de Venturi a 24%.",
+		"explanation": "O estudante deve saber que, para pacientes retentores de CO2 (como no DPOC), a oferta imprecisa de oxigênio pode ser deletéria. A Máscara de Venturi é o padrão para controle rigoroso da oxigenação nestes cenários.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)"
+		],
+		"questions": [
+			{
+				"text": "Qual a principal diferença clínica entre os dispositivos A e B no que tange à precisão da Fração Inspirada de Oxigênio (FiO2) entregue ao paciente?",
+				"correctAnswer": "O Cateter Nasal é um dispositivo de baixo fluxo e entrega uma FiO2 variável e imprecisa, pois depende do volume corrente e da frequência respiratória do paciente (o oxigênio se mistura com o ar ambiente de forma não controlada). A Máscara de Venturi é um dispositivo de alto fluxo que, pelo princípio de Bernoulli, entrega uma FiO2 fixa e precisa, independentemente do padrão ventilatório do paciente.",
+				"keywords": [
+					"Cateter Nasal: Baixo fluxo / FiO2 variável",
+					"Máscara de Venturi: Alto fluxo / FiO2 fixa e precisa",
+					"Independência do padrão ventilatório (Venturi)"
+				],
+				"order": 1
+			}
+		]
+	}
+]

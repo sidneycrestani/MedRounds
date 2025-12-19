@@ -1,0 +1,172 @@
+[
+	{
+		"id": 73,
+		"title": "Espirometria e Padrão Obstrutivo",
+		"vignette": "Um paciente é submetido a uma espirometria. O laudo apresenta um valor da relação VEF1/CVF (Índice de Tiffeneau) de 0.60 (60%).",
+		"explanation": "Na obstrução, o ar tem dificuldade de sair, por isso o volume no primeiro segundo (VEF1) cai proporcionalmente mais que a capacidade total (CVF). Na restrição, o pulmão é pequeno, então a relação costuma estar normal ou aumentada, mas a CVF isolada é baixa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)"
+		],
+		"questions": [
+			{
+				"text": "Qual o padrão ventilatório definido por este valor?",
+				"correctAnswer": "Este valor define um Distúrbio Ventilatório Obstrutivo, caracterizado por uma relação VEF1/CVF < 0.7 (ou abaixo do limite inferior da normalidade).",
+				"keywords": ["Distúrbio Ventilatório Obstrutivo", "VEF1/CVF < 0.7"],
+				"order": 1
+			},
+			{
+				"text": "Qual parâmetro deve ser analisado em seguida para avaliar se existe resposta significativa ao broncodilatador e qual o critério de positividade?",
+				"correctAnswer": "Deve-se observar se houve aumento no VEF1 (ou na CVF). O critério para resposta positiva ao broncodilatador é um aumento de pelo menos 12% E 200 ml em relação aos valores pré-broncodilatador.",
+				"keywords": ["Aumento de VEF1 ou CVF", "$\\ge$ 12% E 200 ml"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 74,
+		"title": "Diagnóstico de Distúrbio Restritivo",
+		"vignette": "Uma espirometria evidencia CVF (Capacidade Vital Forçada) reduzida, porém com a relação VEF1/CVF preservada (normal). Há suspeita de um Distúrbio Restritivo, mas a espirometria isolada não confirma esse diagnóstico.",
+		"explanation": "Muitas vezes uma CVF baixa na espirometria é apenas \"pseudorrestrição\" causada por aprisionamento de ar. Só a CPT medida por pletismografia diz se o pulmão é realmente pequeno (fibrose, cifoscoliose, obesidade).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)"
+		],
+		"questions": [
+			{
+				"text": "Qual é o exame considerado \"padrão-ouro\" para confirmar a restrição?",
+				"correctAnswer": "O exame indicado é a Pletismografia (ou medida de volumes pulmonares por diluição de hélio/nitrogênio).",
+				"keywords": ["Pletismografia"],
+				"order": 1
+			},
+			{
+				"text": "Qual parâmetro fisiológico deve estar reduzido para fechar este diagnóstico?",
+				"correctAnswer": "O parâmetro que confirma a restrição é a redução da CPT (Capacidade Pulmonar Total) abaixo do percentil 5 (ou < 80% do previsto).",
+				"keywords": [
+					"Capacidade Pulmonar Total (CPT)",
+					"CPT Reduzida (< 80% ou P5)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 75,
+		"title": "Radiologia Torácica e Sinal da Silhueta",
+		"vignette": "Uma radiografia de tórax (PA) evidencia uma opacidade no hemitórax direito que \"apaga\" (borra) o contorno do átrio direito.",
+		"explanation": "Se duas estruturas de mesma densidade (água/tecido) estão encostadas, a linha de separação entre elas desaparece no Raio-X. Se a mancha estivesse no lobo inferior (atrás do coração), a silhueta cardíaca continuaria nítida.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome deste sinal radiológico?",
+				"correctAnswer": "Sinal da Silhueta.",
+				"keywords": ["Sinal da Silhueta", "Mesma densidade radiológica"],
+				"order": 1
+			},
+			{
+				"text": "O que este sinal infere sobre a localização anatômica da lesão (lobo acometido)?",
+				"correctAnswer": "Indica que a lesão está em contato anatômico direto com a estrutura cuja borda foi apagada. Neste caso, confirma que a patologia está localizada no Lobo Médio, pois este é o lobo anatomicamente adjacente à borda direita do coração.",
+				"keywords": ["Lobo Médio", "Contato anatômico"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 76,
+		"title": "Consolidação e Broncograma Aéreo",
+		"vignette": "Ao analisar uma radiografia de tórax com uma consolidação densa, observam-se pequenas linhas radiolucentes (escuras) e ramificadas no interior da opacidade.",
+		"explanation": "É o sinal radiológico da pneumonia lobar. Indica que a via aérea está pérvia, mas o \"final da linha\" (alvéolo) está ocupado.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação deste achado radiológico?",
+				"correctAnswer": "Broncograma Aéreo.",
+				"keywords": ["Broncograma Aéreo"],
+				"order": 1
+			},
+			{
+				"text": "Por que este achado diferencia uma lesão parenquimatosa de uma lesão pleural?",
+				"correctAnswer": "O broncograma aéreo ocorre quando os alvéolos estão preenchidos por exsudato/transudato (radiopacos), mas os brônquios permanecem pérvios e aerados (radiolucentes). Isso confirma que a lesão é intrapulmonar/alveolar. No derrame pleural, o líquido é extra-pulmonar, comprimindo o parênquima sem gerar essa imagem.",
+				"keywords": [
+					"Lesão Alveolar (Parenquimatosa)",
+					"Brônquios pérvios",
+					"Alvéolos ocupados"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 77,
+		"title": "Identificação de Derrame Pleural",
+		"vignette": "Um paciente com insuficiência cardíaca realiza um Raio-X de tórax em ortostase. Nota-se o velamento do ângulo costofrênico, substituído por uma opacidade com uma linha superior côncava.",
+		"explanation": "O líquido pleural acumula-se primeiro nas bases por gravidade. No Laurell, o líquido \"escorre\" pela parede lateral, permitindo ver lâminas finas que no PA ficariam escondidas atrás do diafragma.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome da linha curva característica descrita?",
+				"correctAnswer": "Parábola de Damoiseau (ou Sinal do Menisco).",
+				"keywords": ["Parábola de Damoiseau (Sinal do Menisco)"],
+				"order": 1
+			},
+			{
+				"text": "Qual a incidência radiológica recomendada para detectar volumes pequenos de líquido (50-100ml) que podem passar despercebidos na incidência PA?",
+				"correctAnswer": "A incidência indicada é o Raio-X em decúbito lateral com raios horizontais (Incidência de Laurell).",
+				"keywords": [
+					"Incidência de Laurell",
+					"Decúbito Lateral com raios horizontais"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 78,
+		"title": "Padrão Intersticial na Congestão Pulmonar",
+		"vignette": "Em um paciente com quadro clínico de congestão pulmonar, a radiografia de tórax exibe pequenas linhas horizontais, curtas (1-2 cm) e finas, localizadas perifericamente nas bases pulmonares, perpendiculares à pleura.",
+		"explanation": "Diferente do padrão alveolar (mancha algodonosa), o padrão intersticial mostra que o problema está no \"esqueleto\" do pulmão. Linhas B = edema de septo.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+		],
+		"questions": [
+			{
+				"text": "Qual o epônimo dessas linhas?",
+				"correctAnswer": "Linhas B de Kerley.",
+				"keywords": ["Linhas B de Kerley"],
+				"order": 1
+			},
+			{
+				"text": "Qual a alteração anatomopatológica que elas representam?",
+				"correctAnswer": "Elas representam o espessamento dos septos interlobulares, secundário ao acúmulo de líquido (edema) no interstício pulmonar. É um sinal clássico de hipertensão venocapilar pulmonar (ex: Insuficiência Cardíaca Esquerda).",
+				"keywords": [
+					"Espessamento de septos interlobulares",
+					"Edema Intersticial"
+				],
+				"order": 2
+			}
+		]
+	}
+]

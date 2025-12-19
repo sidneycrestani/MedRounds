@@ -1,0 +1,181 @@
+[
+	{
+		"id": 67,
+		"title": "O Espaço Morto Fisiológico",
+		"vignette": "Um paciente diagnosticado com Tromboembolismo Pulmonar (TEP) apresenta uma área do parênquima pulmonar que mantém a ventilação preservada, porém não recebe perfusão sanguínea devido à obstrução vascular pelo coágulo.",
+		"explanation": "É o oposto do Shunt (onde há sangue, mas não há ar). No Espaço Morto, há ar, mas não há sangue. Ambos tornam o pulmão ineficiente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::06 Circulação Pulmonar::01 Tromboembolismo Pulmonar (TEP): Probabilidade Pré-Teste (Wells/Geneva)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação fisiológica para o fenômeno onde há ventilação sem perfusão?",
+				"correctAnswer": "Espaço Morto Alveolar (ou Efeito Espaço Morto).",
+				"keywords": ["Espaço Morto Alveolar", "Relação V/Q Infinita"],
+				"order": 1
+			},
+			{
+				"text": "Qual o impacto fisiológico imediato desse fenômeno na eliminação do gás carbônico (CO2)?",
+				"correctAnswer": "Ocorre dificuldade na eliminação do CO2, resultando na necessidade de aumentar a ventilação minuto total para compensar as áreas não funcionais. Caso não haja compensação, ocorre hipercapnia.",
+				"keywords": ["Hipercapnia", "Aumento da Ventilação Minuto"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 68,
+		"title": "A Curva de Dissociação da Hemoglobina",
+		"vignette": "Um paciente internado em Unidade de Terapia Intensiva apresenta febre alta (40°C) e acidose metabólica grave. A análise dos sinais vitais e da gasometria revela que, para uma mesma pressão parcial de oxigênio (PaO2), a saturação de oxigênio (SpO2) encontra-se inferior ao valor de referência padrão.",
+		"explanation": "O desvio para a direita ocorre por: ↑Temperatura, ↑CO2, ↑2,3-DPG e ↓pH (Acidose). O desvio para a esquerda (retenção do O2 na Hb) ocorre no oposto.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)"
+		],
+		"questions": [
+			{
+				"text": "Qual a alteração observada na Curva de Dissociação da Hemoglobina (direção do desvio)?",
+				"correctAnswer": "Desvio para a direita.",
+				"keywords": ["Desvio para a Direita", "Acidose e Hipertermia"],
+				"order": 1
+			},
+			{
+				"text": "Qual a vantagem fisiológica desse desvio para a oxigenação tecidual periférica?",
+				"correctAnswer": "A vantagem é a diminuição da afinidade da hemoglobina pelo oxigênio (Efeito Bohr), o que facilita a liberação (unloading) do O2 para os tecidos com alta demanda metabólica.",
+				"keywords": [
+					"Efeito Bohr",
+					"Redução da Afinidade",
+					"Liberação Tecidual de O2"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 69,
+		"title": "Interpretação Sistemática da Gasometria",
+		"vignette": "Foi coletada uma gasometria arterial de um paciente em ar ambiente, apresentando os seguintes resultados: pH 7.25 | PaCO2 60 mmHg | HCO3 26 mEq/L | PaO2 55 mmHg.",
+		"explanation": "Na acidose respiratória aguda, para cada aumento de 10 na PaCO2, o HCO3 sobe apenas 1. Se fosse crônico (como no DPOC estável), o HCO3 estaria bem mais alto (subiria 3.5 para cada 10 de PaCO2).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)"
+		],
+		"questions": [
+			{
+				"text": "Classifique o estado do pH.",
+				"correctAnswer": "Acidose (pH < 7.35).",
+				"keywords": ["Acidose"],
+				"order": 1
+			},
+			{
+				"text": "Identifique o distúrbio primário (respiratório ou metabólico).",
+				"correctAnswer": "Respiratória (Hipercapnia/PaCO2 elevada concordante com o pH ácido).",
+				"keywords": ["Acidose Respiratória", "Hipercapnia"],
+				"order": 2
+			},
+			{
+				"text": "Classifique o distúrbio quanto à cronicidade (agudo ou crônico) e justifique com base no bicarbonato.",
+				"correctAnswer": "Aguda. O bicarbonato encontra-se praticamente normal (26 mEq/L), indicando que não houve tempo para compensação renal significativa (retenção de bases).",
+				"keywords": ["Distúrbio Agudo", "Ausência de Compensação Renal"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 70,
+		"title": "Cálculo do Gradiente Alvéolo-Arterial",
+		"vignette": "Deseja-se calcular o Gradiente Alvéolo-Arterial de Oxigênio [P(A-a)O2] de um paciente ao nível do mar (Pressão Barométrica = 760 mmHg), respirando em Ar Ambiente (FiO2 21%). A gasometria arterial informa: PaCO2 = 40 mmHg e PaO2 = 90 mmHg.",
+		"explanation": "O Gradiente normal é geralmente entre 5 a 15 mmHg (ou idade/4 + 4). Um gradiente de 10 indica que o pulmão está trocando oxigênio perfeitamente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Calcule a Pressão Alveolar de Oxigênio (PAO2) utilizando a equação simplificada do gás alveolar.",
+				"correctAnswer": "PAO2 = 150 - (PaCO2 / 0.8) → 150 - (40 / 0.8) = 150 - 50 = 100 mmHg.",
+				"keywords": ["Equação do Gás Alveolar", "PAO2 100 mmHg (ar ambiente)"],
+				"order": 1
+			},
+			{
+				"text": "Determine o valor do Gradiente Alvéolo-Arterial [P(A-a)O2].",
+				"correctAnswer": "Gradiente = PAO2 - PaO2 → 100 - 90 = 10 mmHg.",
+				"keywords": [
+					"Gradiente Alvéolo-Arterial Normal",
+					"Troca Gasosa Preservada"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 71,
+		"title": "Ventilação Alveolar e PaCO2",
+		"vignette": "Considerando a relação inversamente proporcional entre a Ventilação Alveolar e a pressão parcial de dióxido de carbono no sangue arterial (PaCO2).",
+		"explanation": "O CO2 é o marcador direto da ventilação. Se o pulmão não 'sopra' o ar para fora adequadamente, o CO2 acumula no sangue. É por isso que pacientes com doenças neuromusculares ou overdose morrem de acidose respiratória.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Fisiologicamente, o que ocorre com o valor da PaCO2 se a ventilação alveolar de um paciente for reduzida em 50%?",
+				"correctAnswer": "A PaCO2 dobra de valor.",
+				"keywords": [
+					"Relação Inversa Ventilação/PaCO2",
+					"Acidose Respiratória"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a terminologia clínica para o estado de um paciente com PaCO2 > 45 mmHg?",
+				"correctAnswer": "Hipoventilação Alveolar (ou Hipercapnia).",
+				"keywords": ["Hipoventilação Alveolar", "Hipercapnia"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 72,
+		"title": "Mecânica Respiratória e Sinal de Hoover",
+		"vignette": "Durante o exame físico do tórax de um paciente com Enfisema Pulmonar avançado, observa-se que, durante a fase inspiratória, os rebordos costais inferiores movem-se medialmente (retração paradoxal), ao invés de expandirem lateralmente.",
+		"explanation": "É um sinal clássico de desvantagem mecânica respiratória. O diafragma perde sua curvatura (cúpula) e torna-se um músculo ineficiente, aumentando muito o trabalho respiratório do paciente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos"
+		],
+		"questions": [
+			{
+				"text": "Qual o epônimo deste sinal semiológico?",
+				"correctAnswer": "Sinal de Hoover.",
+				"keywords": ["Sinal de Hoover"],
+				"order": 1
+			},
+			{
+				"text": "O que este sinal indica sobre a geometria e funcionalidade do diafragma?",
+				"correctAnswer": "Indica retificação (achatamento) do diafragma secundária à hiperinsuflação pulmonar. A perda da cúpula diafragmática altera o vetor de força: as fibras musculares tracionam as costelas para dentro ao invés de descerem o diafragma.",
+				"keywords": [
+					"Hiperinsuflação Pulmonar",
+					"Retificação Diafragmática",
+					"Desvantagem Mecânica"
+				],
+				"order": 2
+			}
+		]
+	}
+]

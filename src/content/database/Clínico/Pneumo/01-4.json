@@ -1,0 +1,188 @@
+[
+	{
+		"id": 61,
+		"title": "Padrões Respiratórios Centrais",
+		"vignette": "Na Unidade de Terapia Intensiva, a inspeção da dinâmica respiratória revela dois pacientes com padrões distintos: Paciente 1: Apresenta ciclos repetitivos caracterizados por uma fase de apneia, seguida de incursões respiratórias que aumentam progressivamente em amplitude e frequência, para depois decrescerem até uma nova apneia. Paciente 2: Apresenta um padrão respiratório totalmente irregular e caótico, com amplitudes variadas e pausas de apneia imprevisíveis, sem ciclicidade.",
+		"explanation": "Enquanto a respiração de Kussmaul possui origem metabólica (acidose), os padrões de Cheyne-Stokes e Biot indicam disfunção do controle neurológico central. O Cheyne-Stokes reflete uma instabilidade no controle químico da ventilação, enquanto o Biot reflete a desorganização estrutural dos neurônios responsáveis pelo ritmo, sendo um marcador de deterioração neurológica avançada.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação dos ritmos respiratórios observados no Paciente 1 e no Paciente 2, respectivamente?",
+				"correctAnswer": "O Paciente 1 apresenta respiração de **Cheyne-Stokes**. O Paciente 2 apresenta respiração de **Biot** (ou respiração atáxica).",
+				"keywords": [
+					"Respiração de Cheyne-Stokes",
+					"Respiração de Biot (Atáxica)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o significado clínico topográfico e prognóstico associado a cada um destes padrões?",
+				"correctAnswer": "A respiração de **Cheyne-Stokes** está associada a lesões corticais difusas ou insuficiência cardíaca grave, refletindo um atraso no feedback dos níveis de CO2 para o centro respiratório. A respiração de **Biot** indica lesão grave no **bulbo** (tronco encefálico), onde reside o centro gerador do ritmo respiratório, sinalizando iminência de parada respiratória e prognóstico reservado.",
+				"keywords": [
+					"Insuficiência Cardíaca Grave",
+					"Lesão Bulbar",
+					"Prognóstico reservado"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 62,
+		"title": "Alterações da Parede Torácica e Dispneia",
+		"vignette": "Durante o exame físico de dois pacientes jovens com queixa de dispneia aos esforços, observa-se: Paciente A: Depressão profunda do esterno (*Pectus excavatum*). Paciente B: Desvio lateral e posterior acentuado da coluna vertebral (*Cifoscoliose*). A ausculta pulmonar e a radiografia de tórax mostram parênquima pulmonar sem alterações em ambos os casos.",
+		"explanation": "A ventilação depende da integridade da caixa torácica. Deformidades ósseas graves atuam como uma restrição mecânica externa, limitando o volume de ar que pode ser inspirado. Cronicamente, isso pode levar à hipoventilação alveolar, hipoxemia e *cor pulmonale*, apesar da ausência de doença parenquimatosa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)"
+		],
+		"questions": [
+			{
+				"text": "Qual a classificação fisiopatológica do distúrbio ventilatório causado por essas deformidades?",
+				"correctAnswer": "Classificam-se como **Doença Pulmonar Restritiva Extrapulmonar**.",
+				"keywords": [
+					"Doença Restritiva Extrapulmonar",
+					"Pectus excavatum",
+					"Cifoscoliose"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo responsável pela dispneia nestes pacientes?",
+				"correctAnswer": "A deformidade da caixa torácica impede a expansão adequada dos pulmões, reduzindo a complacência do sistema respiratório e, consequentemente, a **Capacidade Pulmonar Total (CPT)**. A 'bomba' ventilatória falha mecanicamente, impedindo o enchimento adequado do 'fole' (pulmão), mesmo que este esteja íntegro.",
+				"keywords": [
+					"Redução da Capacidade Pulmonar Total (CPT)",
+					"Limitação da expansibilidade"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 63,
+		"title": "Semiologia dos Estertores",
+		"vignette": "Durante a ausculta pulmonar, diferenciam-se dois tipos de ruídos adventícios descontínuos (estertores): Som A: Agudo, curto, semelhante ao atrito de cabelo ou velcro, audível no final da inspiração e que não se modifica com a tosse. Som B: Grave, bolhoso, audível no início da inspiração e na expiração, que se modifica ou desaparece após a tosse.",
+		"explanation": "A diferenciação entre fino e grosso é crucial para a topografia da lesão. A persistência do som após a tosse (estertor fino) sugere acometimento parenquimatoso/intersticial, enquanto a alteração com a tosse (estertor grosso) sugere presença de secreção móvel na árvore brônquica.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+		],
+		"questions": [
+			{
+				"text": "Como são denominados o Som A e o Som B?",
+				"correctAnswer": "O Som A corresponde a **Estertores Finos** (ou crepitantes). O Som B corresponde a **Estertores Grossos** (ou subcrepitantes/bolhosos).",
+				"keywords": [
+					"Estertores Finos (Crepitantes)",
+					"Estertores Grossos (Subcrepitantes)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o local de origem fisiopatológica de cada um?",
+				"correctAnswer": "Os **Estertores Finos** são gerados pela abertura súbita de alvéolos e bronquíolos distais colabados ou com líquido, sendo característicos de doenças do interstício (ex: fibrose) ou alveolares (ex: edema, pneumonia fase inicial). Os **Estertores Grossos** são gerados pela passagem de ar através de secreção espessa em vias aéreas de maior calibre, típicos de bronquites e broncopneumonias.",
+				"keywords": [
+					"Doença Intersticial",
+					"Secreção Brônquica",
+					"Modificação com tosse"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 64,
+		"title": "Diagnóstico Diferencial das Síndromes Pleuropulmonares",
+		"vignette": "Um paciente é admitido com dispneia aguda. O exame físico torácico é fundamental para estreitar as hipóteses diagnósticas antes dos exames de imagem.",
+		"explanation": "Estas quatro síndromes compõem a base do raciocínio clínico em pneumologia. A combinação de palpação (FTV), percussão e ausculta permite diferenciar se o problema é preenchimento alveolar (consolidação), ocupação do espaço pleural (ar ou líquido) ou colapso pulmonar (atelectasia).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::03 Pneumotórax (Espontâneo vs Traumático, Primário vs Secundário)"
+		],
+		"questions": [
+			{
+				"text": "Descreva os achados esperados para (1) Frêmito Toracovocal (FTV), (2) Percussão e (3) Murmúrio Vesicular (MV) nas seguintes síndromes: a) Síndrome de Consolidação (Pneumonia). b) Derrame Pleural. c) Pneumotórax. d) Atelectasia (por obstrução brônquica).",
+				"correctAnswer": "a) **Consolidação:** FTV Aumentado; Macicez à percussão; MV com sopro tubário e/ou estertores (presença de broncograma aéreo). b) **Derrame Pleural:** FTV Abolido/Diminuído; Macicez à percussão; MV Abolido/Diminuído (interposição líquida). c) **Pneumotórax:** FTV Abolido/Diminuído; Hipersonoridade ou Timpanismo à percussão; MV Abolido/Diminuído (interposição aérea). d) **Atelectasia:** FTV Abolido/Diminuído; Macicez à percussão; MV Abolido (com possível desvio da traqueia para o lado ipsilateral à lenão).",
+				"keywords": [
+					"Consolidação: FTV Aumentado",
+					"Derrame Pleural: Macicez e FTV abolido",
+					"Pneumotórax: Hipersonoridade/Timpanismo",
+					"Atelectasia: Desvio de traqueia ipsilateral"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 65,
+		"title": "Gradiente Alvéolo-Arterial de Oxigênio",
+		"vignette": "Dois pacientes apresentam hipoxemia (PaO2 reduzida) na gasometria arterial: Paciente A: Quadro de overdose por opioides, apresentando bradipneia acentuada (frequência respiratória de 6 irpm). Paciente B: Quadro de pneumonia lobar extensa confirmada radiologicamente.",
+		"explanation": "Se o gradiente é normal em um paciente hipoxêmico (geralmente com PaCO2 elevada), a causa é falha na 'bomba' (SNC, neuromuscular, caixa torácica). Se o gradiente é aumentado, há uma barreira ou desequilíbrio dentro do pulmão (V/Q, Shunt ou Difusão) impedindo a oxigenação adequada do sangue arterial em relação ao ar alveolar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Qual a utilidade clínica do cálculo do Gradiente Alvéolo-Arterial de Oxigênio [P(A-a)O2]?",
+				"correctAnswer": "O Gradiente A-a é utilizado para diferenciar a origem da hipoxemia: causas **extrapulmonares** (hipoventilação) versus causas **intrapulmonares** (falha na troca gasosa).",
+				"keywords": [
+					"Gradiente Alvéolo-Arterial [P(A-a)O2]",
+					"Causa Extrapulmonar vs. Intrapulmonar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como se comportará este gradiente no Paciente A e no Paciente B, respectivamente?",
+				"correctAnswer": "No **Paciente A (overdose)**, o gradiente estará **normal**, pois a hipoxemia decorre exclusivamente da hipoventilação alveolar; o parênquima pulmonar está íntegro. No **Paciente B (pneumonia)**, o gradiente estará **aumentado**, indicando comprometimento da membrana alvéolo-capilar e distúrbio na troca gasosa.",
+				"keywords": [
+					"Hipoventilação Alveolar (Gradiente Normal)",
+					"Troca gasosa"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 66,
+		"title": "Fisiopatologia da Hipoxemia",
+		"vignette": "A compreensão dos mecanismos fisiopatológicos é essencial para o tratamento direcionado da insuficiência respiratória hipoxêmica.",
+		"explanation": "A identificação do mecanismo orienta a terapêutica. Por exemplo, a hipoxemia por *Shunt* verdadeiro é refratária à oxigenoterapia convencional, enquanto a hipoxemia por Mismatch V/Q ou Hipoventilação responde prontamente ao aumento da oferta de O2.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Quais são os 5 mecanismos fisiopatológicos clássicos que resultam em hipoxemia arterial?",
+				"correctAnswer": "1. **Diminuição da PiO2:** Redução da pressão inspirada de oxigênio (ex: grandes altitudes). 2. **Hipoventilação Alveolar:** Falha na renovação do ar alveolar (ex: depressão do SNC, doenças neuromusculares). 3. **Distúrbio Ventilação-Perfusão (Mismatch V/Q):** Áreas ventiladas mas não perfundidas ou perfundidas mas não ventiladas (mecanismo mais comum, presente em asma, DPOC, pneumonia). 4. **Shunt Direita-Esquerda:** Sangue passa do lado venoso para o arterial sem contato com alvéolos ventilados (ex: atelectasia completa, edema pulmonar agudo grave, malformações arteriovenosas). 5. **Distúrbio de Difusão:** Espessamento da membrana alvéolo-capilar dificultando a passagem do gás (ex: fibrose pulmonar).",
+				"keywords": [
+					"Diminuição da PiO2",
+					"Hipoventilação Alveolar",
+					"Distúrbio V/Q (Ventilação-Perfusão)",
+					"Shunt",
+					"Distúrbio de Difusão"
+				],
+				"order": 1
+			}
+		]
+	}
+]

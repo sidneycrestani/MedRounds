@@ -1,0 +1,189 @@
+[
+	{
+		"id": 55,
+		"title": "Características Macroscópicas do Escarro",
+		"vignette": "Durante a anamnese de três pacientes distintos apresentando tosse produtiva, as características macroscópicas do escarro são avaliadas: 1. Paciente A: Apresenta escarro róseo e espumoso. 2. Paciente B: Apresenta escarro de coloração 'ferruginosa' (tijolo). 3. Paciente C: Apresenta escarro fétido e purulento, com separação em camadas quando coletado no frasco.",
+		"explanation": "O aspecto do material expelido reflete o processo fisiopatológico: o róseo é o plasma/hemácias saindo dos capilares por pressão hidrostática; o ferruginoso é a oxidação da hemoglobina no exsudato alveolar; o fétido indica a presença de germes anaeróbios em cavidades de estase.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::07 Bronquiectasias (Investigação Etiológica e Manejo de Infecções)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico clínico mais provável para o Paciente A?",
+				"correctAnswer": "**Edema Agudo de Pulmão.** A presença de material róseo e espumoso decorre do transudato alveolar misturado a hemácias extravasadas por aumento da pressão hidrostática capilar.",
+				"keywords": ["Escarro róseo e espumoso (Edema Agudo de Pulmão)"],
+				"order": 1
+			},
+			{
+				"text": "Qual o agente etiológico clássico associado ao quadro do Paciente B?",
+				"correctAnswer": "**Pneumonia por *Streptococcus pneumoniae* (Pneumococo).** A cor ferruginosa resulta da oxidação da hemoglobina presente no exsudato alveolar.",
+				"keywords": ["Escarro ferruginoso (*Streptococcus pneumoniae*)"],
+				"order": 2
+			},
+			{
+				"text": "Quais as duas principais hipóteses diagnósticas para o Paciente C?",
+				"correctAnswer": "**Bronquiectasias ou Abscesso Pulmonar.** O odor fétido e a estratificação do escarro são característicos de infecções por germes anaeróbios e estase de secreções em cavidades ou brônquios dilatados.",
+				"keywords": [
+					"Escarro fétido/estratificado (Anaeróbios/Abscesso/Bronquiectasia)"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 56,
+		"title": "Enfisema Subcutâneo e Crepitação Tátil",
+		"vignette": "Durante o exame físico de um paciente que sofreu trauma torácico recente ou foi submetido a uma punção venosa central difícil, a palpação da região cervical e torácica superior revela uma sensação tátil de crepitação, descrita semiologicamente como o estalar de bolhas sob a pele.",
+		"explanation": "O ar disseca os planos musculares e subcutâneos. Quase sempre está associado a um Pneumotórax ou Pneumomediastino. É um sinal físico patognomônico de perda de integridade do sistema respiratório.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::03 Pneumotórax (Espontâneo vs Traumático, Primário vs Secundário)"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação semiológica deste achado?",
+				"correctAnswer": "**Enfisema Subcutâneo.**",
+				"keywords": ["Enfisema subcutâneo", "Crepitação à palpação"],
+				"order": 1
+			},
+			{
+				"text": "O que a presença deste sinal indica obrigatoriamente sobre a integridade do sistema respiratório?",
+				"correctAnswer": "Indica a perda de integridade das vias aéreas ou do espaço pleural, denunciando o escape de ar do pulmão, pleura ou árvore traqueobronquial para os tecidos moles (subcutâneo).",
+				"keywords": ["Pneumotórax/Pneumomediastino", "Lesão de via aérea"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 57,
+		"title": "Atrito Pleural e Evolução para Derrame",
+		"vignette": "Na ausculta de um paciente com queixa de dor torácica aguda, identifica-se um ruído adventício descontínuo e superficial, audível em ambos os tempos respiratórios (inspiração e expiração). O som assemelha-se ao atrito de duas peças de couro e desaparece imediatamente quando se solicita ao paciente que prenda a respiração (apneia).",
+		"explanation": "O atrito é o sinal acústico da pleurite seca. É um som \"de vizinhança\". Se o paciente parar de respirar e o som continuar, é atrito pericárdico; se o som parar, é pleural.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)"
+		],
+		"questions": [
+			{
+				"text": "Qual é o nome deste ruído e o que ele fisiopatologicamente representa?",
+				"correctAnswer": "**Atrito Pleural.** Representa a inflamação das pleuras visceral e parietal (pleurite), que se tornam ásperas e perdem o deslizamento suave fisiológico. O desaparecimento à apneia o diferencia do atrito pericárdico.",
+				"keywords": [
+					"Atrito pleural",
+					"Pleurite seca",
+					"Diferencial com atrito pericárdico"
+				],
+				"order": 1
+			},
+			{
+				"text": "Se este ruído desaparecer subitamente, sem melhora correspondente da dor ou do quadro clínico, qual é a suspeita diagnóstica evolutiva?",
+				"correctAnswer": "O desaparecimento súbito sugere a formação de **Derrame Pleural**. O acúmulo de líquido separa as membranas pleurais inflamadas, impedindo o atrito físico e o som correspondente, mesmo com a persistência do processo inflamatório.",
+				"keywords": ["Derrame pleural (evolução)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 58,
+		"title": "Tempo Expiratório Forçado",
+		"vignette": "Para avaliar a função pulmonar de um paciente tabagista à beira do leito, na ausência de espirometria, realiza-se a manobra do Tempo Expiratório Forçado. O examinador posiciona o diafragma do estetoscópio sobre a traqueia (fúrcula esternal) e solicita ao paciente uma inspiração profunda seguida de expiração máxima e rápida com a boca aberta.",
+		"explanation": "É um teste simples e subutilizado. Em pulmões saudáveis, a maior parte do ar sai nos primeiros 3 a 4 segundos. O prolongamento da expiração é o equivalente clínico ao VEF1 reduzido.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos"
+		],
+		"questions": [
+			{
+				"text": "Qual é o ponto de corte (em segundos) para considerar o teste sugestivo de doença obstrutiva?",
+				"correctAnswer": "Um tempo **superior a 6 segundos**.",
+				"keywords": ["Tempo expiratório forçado", "> 6 segundos"],
+				"order": 1
+			},
+			{
+				"text": "Qual a base fisiológica para o prolongamento deste tempo?",
+				"correctAnswer": "O prolongamento ocorre devido à perda do recolhimento elástico pulmonar e/ou estreitamento das vias aéreas, que aumentam a resistência ao fluxo aéreo, impedindo o esvaziamento pulmonar rápido característico de pulmões saudáveis.",
+				"keywords": [
+					"Doença Obstrutiva (DPOC/Asma)",
+					"Perda de recolhimento elástico"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 59,
+		"title": "Cor Pulmonale e Sinal de Kussmaul",
+		"vignette": "Um paciente portador de enfisema pulmonar grave apresenta, ao exame físico, turgência jugular patológica a 45 graus. Observa-se que, durante a inspiração, ocorre um aumento paradoxal desta turgência venosa (Sinal de Kussmaul).",
+		"explanation": "O pulmão e o coração direito são um sistema em série. Quando o pulmão está doente (hipóxia crônica causando vasoconstrição), a pressão sobe e o \"sangue volta\" para as jugulares e o fígado.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::06 Circulação Pulmonar::04 Hipertensão Pulmonar (Classificação Clínica e Ecocardiograma de Rastreio)"
+		],
+		"questions": [
+			{
+				"text": "O que esses achados indicam sobre a interação cardiopulmonar neste caso?",
+				"correctAnswer": "Indicam que a doença pulmonar crônica ocasionou hipertensão arterial pulmonar severa, levando à falência do ventrículo direito (insuficiência cardíaca direita), resultando em congestão venosa sistêmica.",
+				"keywords": [
+					"Sinal de Kussmaul",
+					"Insuficiência Cardíaca Direita",
+					"Hipertensão Pulmonar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual é o termo clínico para a condição cardíaca resultante desta patologia pulmonar?",
+				"correctAnswer": "**Cor Pulmonale.**",
+				"keywords": ["Cor Pulmonale"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 60,
+		"title": "Sopro Tubário e Consolidação Pulmonar",
+		"vignette": "Durante a ausculta pulmonar de um paciente com síndrome febril aguda, identifica-se uma área periférica do tórax onde o murmúrio vesicular foi substituído por um som intenso, agudo e tubular, com uma pausa nítida entre a inspiração e a expiração. O som assemelha-se à ausculta direta da traqueia.",
+		"explanation": "O murmúrio vesicular normal é o som da traqueia \"filtrado\" por milhares de alvéolos cheios de ar. Se o alvéolo vira \"bloco de carne\" (hepatização), ele vira um condutor de som de alta fidelidade.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação deste achado auscultatório?",
+				"correctAnswer": "**Sopro Tubário** (ou respiração brônquica).",
+				"keywords": ["Sopro tubário"],
+				"order": 1
+			},
+			{
+				"text": "Por que este fenômeno ocorre na periferia pulmonar em casos de pneumonia lobar?",
+				"correctAnswer": "Ocorre devido à **consolidação pulmonar**. O tecido pulmonar, ao se tornar sólido (hepatização) pela substituição do ar alveolar por exsudato inflamatório, passa a transmitir com alta fidelidade o som gerado na traqueia e grandes brônquios, sem a filtração habitual promovida pelo parênquima aerado.",
+				"keywords": [
+					"Consolidação pulmonar",
+					"Pneumonia lobar",
+					"Transmissão sonora aumentada"
+				],
+				"order": 2
+			}
+		]
+	}
+]
