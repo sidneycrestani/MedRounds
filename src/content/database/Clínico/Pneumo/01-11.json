@@ -1,0 +1,108 @@
+[
+	{
+		"id": 99,
+		"title": "O Gradiente Alvéolo-Arterial (P(A-a)O2)",
+		"vignette": "Você recebe dois pacientes com Hipoventilação (PaCO2 de 60 mmHg) e hipoxemia na gasometria. Paciente 1: Tentativa de suicídio com Benzodiazepínicos (overdose). Paciente 2: Exacerbação de DPOC por Pneumonia.",
+		"explanation": "O Gradiente Alvéolo-Arterial é a diferença entre quanto O2 tem no alvéolo (estimado pela equação do ar alveolar) e quanto O2 chegou no sangue (PaO2). **Gradiente Normal:** O problema é que o oxigênio nem está chegando no alvéolo (ex: hipoventilação por drogas, doenças neuromusculares, grandes altitudes). **Gradiente Aumentado:** O oxigênio chega no alvéolo, mas há um distúrbio V/Q, Shunt ou problema de Difusão (ex: Pneumonia, TEP, Edema Pulmonar).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Se você calcular o Gradiente Alvéolo-Arterial [P(A-a)O2], qual paciente apresentará um gradiente normal e qual apresentará um gradiente aumentado? O que esse cálculo te diz sobre a integridade da membrana alvéolo-capilar?",
+				"correctAnswer": "O Paciente 1 (Overdose) terá um gradiente normal. O Paciente 2 (DPOC/Pneumonia) terá um gradiente aumentado. Um gradiente normal indica que a hipoxemia é causada puramente por um problema 'extra-pulmonar' (a bomba parou, mas o pulmão está sadio). Um gradiente aumentado indica que a hipoxemia deve-se a uma patologia intrínseca do pulmão (o oxigênio chega no alvéolo, mas não consegue passar para o sangue de forma eficiente).",
+				"keywords": [
+					"Gradiente Alvéolo-Arterial",
+					"Hipoventilação",
+					"Gasometria",
+					"Pneumonia",
+					"DPOC"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 100,
+		"title": "A Máscara de Reservatório e o Fluxo de O2",
+		"vignette": "Um paciente com edema agudo de pulmão está usando uma Máscara com Reservatório. O fluxômetro de oxigênio na parede está ajustado em 3 litros por minuto. Você observa que a bolsa do reservatório colapsa (esvazia) completamente toda vez que o paciente inspira.",
+		"explanation": "A máscara com reservatório (não-reinalante) possui válvulas unidirecionais. Para que ela funcione entregando FiO2 alta (até 90-100%), o reservatório deve estar cheio de O2 puro disponível para a próxima inspiração. Se o fluxo da parede for baixo, o paciente 'bebe' todo o estoque e acaba aspirando ar ambiente pelas frestas ou reinalando ar exalado, perdendo o benefício do dispositivo.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)"
+		],
+		"questions": [
+			{
+				"text": "Qual o erro técnico grave nessa montagem e qual a consequência para o paciente se o fluxo não for corrigido imediatamente?",
+				"correctAnswer": "O fluxo de oxigênio está muito baixo. Máscaras com reservatório exigem fluxos altos (geralmente entre 10 a 15 L/min) para manter a bolsa sempre inflada. Se a bolsa colapsa, o paciente começa a reinalar o CO2 que ele mesmo expirou e que ficou retido na máscara/bolsa por falta de fluxo de 'lavagem'. Isso causa hipercapnia e aumenta o esforço respiratório, podendo levar à exaustão.",
+				"keywords": [
+					"Máscara com Reservatório",
+					"Oxigenoterapia",
+					"Fluxo de O2",
+					"Hipercapnia"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 101,
+		"title": "O \"Joelho\" da Curva de Dissociação da Hemoglobina",
+		"vignette": "Você está monitorando um paciente com pneumonia. A enfermeira nota que a SatO2 caiu de 98% para 92% e pergunta se deve se preocupar. Pouco tempo depois, a SatO2 caiu de 90% para 82%.",
+		"explanation": "Um médico de excelência sabe que '90% não é apenas um número'. É o limite de segurança fisiológica. Manter o paciente acima de 90% garante que a hemoglobina ainda tenha alta afinidade pelo oxigênio, mas abaixo disso, a entrega de oxigênio aos tecidos fica criticamente comprometida.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::03 Oximetria de Pulso e Sinais Vitais Respiratórios",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Por que a queda de 90% para 82% é considerada muito mais perigosa e urgente do que a queda de 98% para 92%, mesmo sendo uma variação numérica semelhante? Explique com base na Curva de Dissociação da Hemoglobina.",
+				"correctAnswer": "Isso ocorre devido ao formato sigmoide (em 'S') da curva de dissociação da hemoglobina. Na parte alta da curva (acima de 90-92%), grandes variações na pressão parcial de oxigênio (PaO2) causam pequenas alterações na saturação. No entanto, o valor de 90% de saturação (que corresponde a uma PaO2 de aproximadamente 60 mmHg) representa o 'joelho' ou a 'queda do precipício' da curva. Abaixo desse ponto, qualquer pequena queda adicional na PaO2 resulta em uma queda drástica e desproporcional na SatO2, levando rapidamente à hipóxia tecidual grave.",
+				"keywords": [
+					"Curva de Dissociação da Hemoglobina",
+					"SatO2",
+					"PaO2",
+					"Hipoxemia"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 102,
+		"title": "O Exame Físico além do Oxímetro",
+		"vignette": "Você é chamado para avaliar um paciente com crise de asma. O oxímetro marca SatO2 94%. No entanto, o paciente está sentado em posição de 'tripé', apresenta batimento de asa de nariz, fala apenas frases entrecortadas (monossílabos) e você nota tiragem supraclavicular e intercostal evidente.",
+		"explanation": "Oxigenoterapia trata a hipoxemia (falta de O2), mas não trata o trabalho respiratório excessivo. Um paciente pode ter oxigênio normal no sangue enquanto faz um esforço hercúleo para respirar. Se o esforço não for aliviado (com medicação ou suporte ventilatório), a musculatura fadiga, o CO2 sobe e o paciente para.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::03 Asma Brônquica: Manejo da Crise Aguda na Emergência",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Apesar da SatO2 de 94% (dentro da meta), este paciente está em Insuficiência Respiratória iminente? Quais sinais clínicos indicam que ele pode 'parar' a qualquer momento por fadiga, independentemente da saturação atual?",
+				"correctAnswer": "Sim, o paciente está em insuficiência respiratória iminente por fadiga da bomba ventilatória. Os sinais de alerta são: posição de tripé (uso de musculatura acessória), fala entrecortada (incapacidade de manter fluxo expiratório para fonar), batimento de asa de nariz e tiragens (esforço inspiratório extremo). A SatO2 de 94% é um dado 'tardio' ou mantido temporariamente por um esforço muscular insustentável. Se o paciente apresentar respiração paradoxal ou 'silêncio auscultatório', a parada respiratória por exaustão é iminente.",
+				"keywords": [
+					"Asma",
+					"Insuficiência Respiratória",
+					"Musculatura Acessória",
+					"Fadiga Muscular",
+					"Exame Físico"
+				],
+				"order": 1
+			}
+		]
+	}
+]
