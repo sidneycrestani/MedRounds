@@ -10,7 +10,7 @@ export default defineConfig({
 
 	output: "server",
 	adapter: cloudflare(),
-	integrations: [react(), tailwind(), sitemap()],
+	integrations: [react(), tailwind() ],
 	vite: {
 		resolve: {
 			alias: {
