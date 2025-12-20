@@ -1,0 +1,163 @@
+[
+	{
+		"id": 113,
+		"title": "PAC Grave e Critérios de Internação em UTI",
+		"vignette": "Um paciente com diagnóstico de Pneumonia Adquirida na Comunidade (PAC) apresenta-se na emergência. O quadro evolui com choque séptico com necessidade de vasopressores (noradrenalina) OU insuficiência respiratória aguda com necessidade de ventilação mecânica invasiva.",
+		"explanation": "O médico de excelência não espera o paciente \"parar\" para levá-lo à UTI. Ele reconhece os critérios menores (como a plaquetopenia ou a hipotermia na sepse pulmonar) como sinais de que o corpo está perdendo a batalha.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+		],
+		"questions": [
+			{
+				"text": "Segundo os critérios da ATS/IDSA, a presença de um desses critérios maiores já define a PAC como grave com indicação de UTI. Na ausência destes dois critérios maiores, quantos critérios menores seriam necessários para indicar admissão em UTI? Cite três exemplos desses critérios menores.",
+				"correctAnswer": "Na ausência de critérios maiores, são necessários pelo menos três critérios menores para indicar a admissão em UTI. Exemplos de critérios menores incluem: 1. Relação PaO2/FiO2 < 250; 2. Infiltrados multilobares na radiografia; 3. Confusão mental/desorientação; 4. Uremia (BUN ≥ 20 mg/dL ou Ureia > 42 mg/dL); 5. Leucopenia (< 4.000 células/mm³); 6. Trombocitopenia (< 100.000 plaquetas/mm³); 7. Hipotermia (temperatura central < 36°C); 8. Hipotensão necessitando de reposição volêmica agressiva.",
+				"keywords": [
+					"Critérios ATS/IDSA",
+					"3 critérios menores",
+					"Relação P/F < 250",
+					"Infiltrado multilobar",
+					"Confusão mental"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o esquema antibiótico empírico na UTI para PAC Grave geralmente inclui cobertura estendida para Legionella sp. e Staphylococcus aureus, além do pneumococo?",
+				"correctAnswer": "Na UTI, a cobertura é ampliada (ex: Beta-lactâmico + Macrolídeo ou Fluoroquinolona respiratória) porque pacientes críticos apresentam maior risco de infecção por agentes mais virulentos ou resistentes, como o Staphylococcus aureus, e por Legionella pneumophila, um agente atípico conhecido por causar pneumonias graves com acometimento sistêmico e alta mortalidade se não tratado adequadamente.",
+				"keywords": ["Legionella pneumophila", "Cobertura para atípicos"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 114,
+		"title": "Diagnóstico Diferencial de Cavitações Pulmonares",
+		"vignette": "Você analisa as radiografias de tórax de dois pacientes distintos com sintomas respiratórios: 1. Paciente A: Apresenta infiltrado com uma cavidade de paredes finas localizada no ápice do pulmão direito. 2. Paciente B: Apresenta consolidação no lobo inferior com uma cavidade de paredes grossas e presença de nível hidroaéreo (interface ar-líquido).",
+		"explanation": "O bacilo da TB é aeróbio estrito, por isso ama o ápice (onde há mais oxigênio). Já abscessos por anaeróbios ocorrem por microaspiração, tendendo a ir para as partes baixas ou segmentos posteriores, e formam o nível hidroaéreo devido à mistura de pus e gás produzido pelas bactérias.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+		],
+		"questions": [
+			{
+				"text": "Qual a hipótese diagnóstica mais provável para o Paciente A e para o Paciente B, respectivamente?",
+				"correctAnswer": "Paciente A: Tuberculose pós-primária. Paciente B: Abscesso Pulmonar bacteriano (geralmente por anaeróbios).",
+				"keywords": [
+					"Tuberculose pós-primária (Ápice/Parede fina)",
+					"Abscesso Pulmonar (Lobo inferior/Nível hidroaéreo)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Explique a fisiopatologia que justifica a localização preferencial e o aspecto radiológico em cada caso.",
+				"correctAnswer": "Tuberculose: O Mycobacterium tuberculosis é um aeróbio estrito, preferindo áreas com maior tensão de oxigênio, como os ápices pulmonares. As cavidades tendem a ter paredes mais finas na TB clássica. Abscesso Pulmonar: Ocorre geralmente por microaspiração de conteúdo orofaríngeo em pacientes com rebaixamento de consciência ou disfagia. Por ação da gravidade, a infecção tende a se alojar nos segmentos posteriores ou inferiores. O nível hidroaéreo é formado pela necrose liquefativa (pus) associada à produção de gás pelas bactérias anaeróbias.",
+				"keywords": ["Aeróbio estrito", "Microaspiração", "Anaeróbios"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 115,
+		"title": "Uso de Quinolonas e Tuberculose",
+		"vignette": "Um paciente de 50 anos, tabagista, apresenta tosse e febre há 15 dias. Em um atendimento inicial, foi prescrita Levofloxacina por 7 dias. O paciente relatou melhora expressiva nos primeiros 4 dias (desaparecimento da febre e redução da tosse). Contudo, 10 dias após o término do antibiótico, os sintomas retornaram com maior intensidade.",
+		"explanation": "No Brasil, antes de iniciar uma quinolona para \"Pneumonia\", o médico deve ter alto grau de certeza de que não é TB (pesquisar perda de peso, sudorese, tempo de tosse). Se houver dúvida, prefira o esquema Beta-lactâmico + Macrolídeo, que não mascara a TB da mesma forma.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos"
+		],
+		"questions": [
+			{
+				"text": "Por que o uso de quinolonas respiratórias (Levofloxacina/Moxifloxacina) é considerado uma conduta de risco quando a Tuberculose é um diagnóstico diferencial possível?",
+				"correctAnswer": "As quinolonas possuem atividade bactericida contra o Mycobacterium tuberculosis. Seu uso isolado em casos de TB não diagnosticada promove uma melhora clínica transitória, o que mascara o diagnóstico e atrasa o início do tratamento correto (esquema RIPE). Além disso, a monoterapia inadvertida induz rapidamente a resistência do bacilo às quinolonas, inutilizando uma classe de drogas de segunda linha fundamental para casos de TB multirresistente.",
+				"keywords": [
+					"Mascaramento diagnóstico",
+					"Indução de resistência",
+					"Atividade micobactericida",
+					"Atraso no tratamento"
+				],
+				"order": 1
+			},
+			{
+				"text": "O que explica a melhora inicial seguida de piora neste paciente?",
+				"correctAnswer": "O paciente apresentou melhora inicial porque a Levofloxacina tratou parcialmente a carga bacilar da Tuberculose. Ao suspender a droga, houve recrudescimento da infecção, retornando os sintomas.",
+				"keywords": ["Quinolonas respiratórias"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 116,
+		"title": "Pneumonia por Legionella",
+		"vignette": "Um paciente de 60 anos é internado com quadro de pneumonia grave. Além dos sintomas respiratórios (tosse, dispneia), ele apresenta diarreia, confusão mental, e os exames laboratoriais evidenciam hiponatremia importante e elevação de transaminases hepáticas.",
+		"explanation": "A Legionella é a \"rainha\" das pneumonias atípicas graves. Ela não causa apenas sintomas respiratórios; ela é uma doença sistêmica. O médico de excelência olha para o sódio baixo e para a diarreia em um paciente com pneumonia e imediatamente \"pensa\" em Legionella, ajustando o tratamento para cobrir esse germe.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Qual o agente etiológico clássico que explica a tríade de pneumonia grave, sintomas gastrointestinais e hiponatremia?",
+				"correctAnswer": "Legionella pneumophila. Este agente causa a \"Doença dos Legionários\", uma forma de pneumonia atípica grave com manifestações extrapulmonares (gastrointestinais, neurológicas e renais/eletrolíticas).",
+				"keywords": [
+					"Legionella pneumophila",
+					"Hiponatremia",
+					"Diarreia",
+					"Sintomas neurológicos/Confusão"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual teste não invasivo, realizado na urina, pode confirmar esse diagnóstico rapidamente?",
+				"correctAnswer": "Teste do Antígeno Urinário para Legionella (Antigenúria).",
+				"keywords": ["Antígeno urinário"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 117,
+		"title": "Tuberculose Miliar",
+		"vignette": "Uma paciente idosa, em uso crônico de corticoide para artrite reumatoide, investiga febre de origem indeterminada, emagrecimento e dispneia leve. A radiografia de tórax revela incontáveis micronódulos (1-2mm) distribuídos de forma homogênea por ambos os pulmões, assemelhando-se a sementes de milho (\"milium\").",
+		"explanation": "A TB Miliar é uma forma grave e potencialmente fatal, comum em imunossuprimidos e idosos. O diagnóstico é visual (padrão reticulonodular fino na TC ou RX). Frequentemente requer biópsia (pulmonar ou hepática) ou cultura de outros sítios para confirmação, se o escarro falhar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::04 TB Extrapulmonar (Pleural, Ganglionar - Noções Gerais)"
+		],
+		"questions": [
+			{
+				"text": "Qual a forma clínica dessa Tuberculose e qual o mecanismo fisiopatológico de disseminação que explica o acometimento pulmonar difuso e bilateral?",
+				"correctAnswer": "Trata-se de Tuberculose Miliar. A fisiopatologia baseia-se na disseminação hematogênica do bacilo, permitindo que ele alcance ambos os pulmões (e outros órgãos) simultaneamente e de forma uniforme.",
+				"keywords": [
+					"Tuberculose Miliar",
+					"Disseminação hematogênica",
+					"Micronódulos difusos"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o Teste Rápido Molecular para TB (TRM-TB) ou a baciloscopia de escarro frequentemente resultam negativos nesta forma da doença?",
+				"correctAnswer": "O exame de escarro pode ser negativo porque, na forma militar, a doença é predominantemente intersticial e hematogênica. Frequentemente, os granulomas e bacilos estão no interstício pulmonar e não há comunicação direta com a luz brônquica/vias aéreas para que o bacilo seja expelido na expectoração.",
+				"keywords": [
+					"Imunossupressão",
+					"Escarro negativo/Paucibacilar",
+					"Doença intersticial"
+				],
+				"order": 2
+			}
+		]
+	}
+]

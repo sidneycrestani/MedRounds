@@ -1,0 +1,143 @@
+[
+	{
+		"id": 118,
+		"title": "Pneumonia Aspirativa e Anaeróbios",
+		"vignette": "Paciente do sexo masculino, 70 anos, com sequela de acidente vascular cerebral (AVC) e disfagia, apresenta quadro de febre e tosse produtiva com escarro de odor fétido há 3 dias. A radiografia de tórax evidencia infiltrado no segmento superior do lobo inferior direito.",
+		"explanation": "O médico deve identificar o 'escarro fétido' como patognomônico de infecção por anaeróbios. Pacientes com rebaixamento de nível de consciência ou distúrbios de deglutição (disfagia) não desenvolvem a Pneumonia Adquirida na Comunidade (PAC) clássica; eles apresentam pneumonia por microaspiração ou macroaspiração. Isso exige cobertura antibiótica específica que regimes padrão para PAC (como Ceftriaxone ou Azitromicina isolados) não oferecem adequadamente.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+		],
+		"questions": [
+			{
+				"text": "Explique a razão anatômica para o acometimento do segmento superior do lobo inferior direito neste contexto.",
+				"correctAnswer": "O acometimento deste local ocorre devido à anatomia do brônquio fonte direito, que é mais verticalizado e retilíneo em relação à traqueia, favorecendo a migração do conteúdo aspirado para o lobo inferior direito, especificamente o segmento superior, quando o paciente se encontra em decúbito dorsal.",
+				"keywords": ["Brônquio fonte direito verticalizado"],
+				"order": 1
+			},
+			{
+				"text": "Quais são os dois principais grupos de bactérias que devem ser cobertos empiricamente?",
+				"correctAnswer": "Deve-se cobrir anaeróbios da cavidade oral (sugeridos pelo escarro fétido) e bacilos Gram-negativos entéricos.",
+				"keywords": ["Anaeróbios e Gram-negativos"],
+				"order": 2
+			},
+			{
+				"text": "O uso de Clindamicina ou Amoxicilina + Clavulanato é adequado para este caso? Justifique.",
+				"correctAnswer": "Sim. A Amoxicilina com Clavulanato é uma excelente opção de primeira linha, pois cobre bem anaeróbios e Gram-negativos. A Clindamicina é uma alternativa histórica para cobertura de anaeróbios, embora diretrizes mais recentes prefiram betalactâmicos com inibidores de betalactamase devido à resistência e perfil de efeitos adversos.",
+				"keywords": ["Cobertura de anaeróbios"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 119,
+		"title": "Indicação de Culturas na PAC",
+		"vignette": "Um paciente jovem, hígido, diagnosticado com Pneumonia Adquirida na Comunidade (PAC) leve (CURB-65 = 0), receberá tratamento ambulatorial com Amoxicilina. O paciente questiona a ausência de solicitações de cultura de escarro ou hemoculturas para identificação bacteriana.",
+		"explanation": "Existe uma tendência a solicitar exames diagnósticos excessivos. Na PAC, a microbiologia é frequentemente inconclusiva. O tratamento é, por definição, empírico na maioria dos casos ambulatoriais e de enfermaria. Reserva-se a investigação etiológica (culturas) para pacientes com gravidade elevada ou risco de germes que exijam antibióticos de amplo espectro não cobertos pelo esquema padrão.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Segundo as diretrizes atuais, qual a justificativa para não solicitar rotineiramente hemoculturas e cultura de escarro em PAC leve tratada ambulatorialmente?",
+				"correctAnswer": "A positividade desses exames em casos leves e ambulatoriais é muito baixa (< 5-10%) e o resultado raramente altera a conduta clínica, não justificando o custo e o uso de recursos.",
+				"keywords": ["Baixa sensibilidade / Baixo custo-efetividade"],
+				"order": 1
+			},
+			{
+				"text": "Cite duas situações clínicas em que a coleta desses exames se torna mandatória.",
+				"correctAnswer": "Os exames tornam-se obrigatórios em casos de PAC Grave (necessidade de admissão em UTI) e em pacientes com fatores de risco para patógenos multirresistentes, como MRSA ou Pseudomonas aeruginosa (ex: internação prévia, uso recente de antibióticos parenterais). Falha à terapêutica inicial também é uma indicação.",
+				"keywords": ["PAC Grave (UTI) / Risco de MRSA ou Pseudomonas"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 120,
+		"title": "Tuberculose e Interações Medicamentosas (RIPE)",
+		"vignette": "Um paciente portador de HIV, em uso de Terapia Antirretroviral (TARV) com Dolutegravir, Tenofovir e Lamivudina, inicia tratamento para Tuberculose pulmonar com esquema RIPE. O paciente também possui epilepsia e faz uso contínuo de Fenitoína.",
+		"explanation": "A Rifampicina acelera o metabolismo de outras drogas. O médico deve ajustar doses (ex: dobrar a dose de Dolutegravir em alguns protocolos) ou trocar medicações concomitantes ao iniciar o tratamento da TB. Ignorar essas interações pode levar à falha catastrófica do tratamento das comorbidades.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::03 Esquemas Terapêuticos Básicos (RIPE) e Seguimento",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::05 Efeitos Adversos das Medicações e Manejo"
+		],
+		"questions": [
+			{
+				"text": "Qual fármaco do esquema RIPE é conhecido por ser um potente indutor do citocromo P450 hepático?",
+				"correctAnswer": "A Rifampicina.",
+				"keywords": ["Rifampicina"],
+				"order": 1
+			},
+			{
+				"text": "Qual é a consequência clínica esperada nos níveis séricos dos antirretrovirais e da Fenitoína, e quais os riscos associados?",
+				"correctAnswer": "A Rifampicina induz o metabolismo hepático dessas drogas, causando redução drástica dos níveis séricos da Fenitoína e de diversas classes de antirretrovirais. O risco clínico é a falha terapêutica do HIV (aumento da carga viral/resistência) e o retorno das crises convulsivas devido à dose subterapêutica do anticonvulsivante.",
+				"keywords": [
+					"Indução do Citocromo P450 / Redução de níveis séricos / Falha terapêutica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 121,
+		"title": "Efeitos Adversos do RIPE (Hiperuricemia)",
+		"vignette": "Durante o tratamento para Tuberculose com esquema RIPE, um paciente desenvolve dor súbita, edema e eritema na primeira articulação metatarsofalângica ('podagra'), sem história de trauma local.",
+		"explanation": "A Pirazinamida, além de hepatotóxica, é frequentemente associada a artralgias e hiperuricemia. É fundamental diferenciar esse efeito adverso metabólico de uma artrite séptica ou outra infecção. A prioridade é manter o tratamento da TB, gerenciando os sintomas articulares.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::05 Efeitos Adversos das Medicações e Manejo"
+		],
+		"questions": [
+			{
+				"text": "Qual medicamento do esquema RIPE está associado a este quadro clínico e qual o mecanismo fisiopatológico?",
+				"correctAnswer": "A Pirazinamida. O mecanismo é a inibição da excreção tubular renal de ácido úrico, levando à hiperuricemia.",
+				"keywords": ["Pirazinamida / Inibição da excreção de ácido úrico"],
+				"order": 1
+			},
+			{
+				"text": "Qual é a conduta recomendada em relação ao tratamento da tuberculose neste cenário?",
+				"correctAnswer": "A conduta é manter o esquema RIPE e tratar a crise de gota sintomaticamente (analgésicos, AINEs ou colchicina). A suspensão da Pirazinamida só é indicada em casos de gota intratável ou refratária.",
+				"keywords": [
+					"Manter tratamento da TB / Tratamento sintomático da gota"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 122,
+		"title": "Influenza e Pneumonia Viral",
+		"vignette": "Durante período de sazonalidade de inverno, uma paciente com antecedentes de asma e obesidade é admitida com febre alta súbita, mialgia intensa, odinofagia e infiltrado pulmonar bilateral à radiografia. O teste rápido para Influenza resulta positivo.",
+		"explanation": "Em períodos de surto, o vírus Influenza pode causar pneumonias primárias graves ou predispor a infecções bacterianas secundárias (ex: S. aureus). Pacientes com fatores de risco para complicações (asmáticos, obesos, idosos, imunossuprimidos, gestantes) têm indicação formal de Oseltamivir. O tratamento não deve ser retardado aguardando confirmação laboratorial se a suspeita clínica e epidemiológica for alta.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)"
+		],
+		"questions": [
+			{
+				"text": "Independentemente da suspeita de coinfecção bacteriana, qual fármaco antiviral deve ser prescrito imediatamente?",
+				"correctAnswer": "Oseltamivir (Tamiflu).",
+				"keywords": ["Oseltamivir"],
+				"order": 1
+			},
+			{
+				"text": "Qual é a janela de tempo ideal para o início desta medicação visando a máxima eficácia clínica?",
+				"correctAnswer": "A janela ideal é o início nas primeiras 48 horas do início dos sintomas.",
+				"keywords": ["Primeiras 48 horas"],
+				"order": 2
+			}
+		]
+	}
+]

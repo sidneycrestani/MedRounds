@@ -1,0 +1,170 @@
+[
+	{
+		"id": 133,
+		"title": "Síndrome de Löffler",
+		"vignette": "Um paciente procura atendimento apresentando tosse seca, sibilância e dispneia leve. A radiografia de tórax evidencia infiltrados pulmonares migratórios (alteração de localização em exames sequenciais de curto intervalo). O hemograma revela eosinofilia acentuada.",
+		"explanation": "No Brasil, nem todo infiltrado com \"chiado\" é asma ou pneumonia bacteriana. Se houver eosinofilia, o médico deve pensar em ciclo pulmonar de helmintos. O tratamento não é antibiótico, mas sim vermífugo (como Albendazol).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)"
+		],
+		"questions": [
+			{
+				"text": "Qual é o epônimo dessa síndrome?",
+				"correctAnswer": "Trata-se da **Síndrome de Löffler**.",
+				"keywords": [
+					"Síndrome de Löffler",
+					"Infiltrados migratórios",
+					"Eosinofilia"
+				],
+				"order": 1
+			},
+			{
+				"text": "Quais são os quatro parasitas clássicos associados a este quadro clínico (ciclo de dependência pulmonar)?",
+				"correctAnswer": "Os parasitas clássicos podem ser lembrados pelo mnemônico \"NASA\": *Necator americanus*, *Ascaris lumbricoides*, *Strongyloides stercoralis* e *Ancylostoma duodenale*.",
+				"keywords": [
+					"Ciclo de Looss (Ciclo pulmonar)",
+					"Ascaris",
+					"Strongyloides",
+					"Ancilostomídeos"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 134,
+		"title": "Hiperinfecção por Strongyloides stercoralis",
+		"vignette": "Você está atendendo um paciente lavrador, com hábito de andar descalço, admitido por exacerbação grave de DPOC. O plano terapêutico inclui a prescrição de corticosteroides em altas doses sistêmicas.",
+		"explanation": "O médico de excelência \"desvermina\" o paciente grave antes de usar corticoide potente se houver risco epidemiológico. É uma causa de morte evitável em UTIs brasileiras.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)"
+		],
+		"questions": [
+			{
+				"text": "Qual é a complicação potencialmente fatal associada ao uso de corticoide neste perfil epidemiológico?",
+				"correctAnswer": "O uso de corticoide pode desencadear a **Síndrome de Hiperinfecção** por *Strongyloides stercoralis*.",
+				"keywords": [
+					"Strongyloides stercoralis",
+					"Síndrome de Hiperinfecção",
+					"Corticoterapia"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual é a fisiopatologia básica dessa complicação?",
+				"correctAnswer": "A imunossupressão permite que as larvas se multipliquem massivamente e atravessem a parede intestinal, levando bactérias gram-negativas da flora entérica para a corrente sanguínea, causando sepse de foco pulmonar e/ou meningite.",
+				"keywords": ["Sepse por Gram-negativos", "Fisiopatologia"],
+				"order": 2
+			},
+			{
+				"text": "Qual a conduta preventiva recomendada?",
+				"correctAnswer": "Deve-se realizar tratamento empírico/profilático com **Ivermectina** antes ou concomitantemente ao início da corticoterapia.",
+				"keywords": ["Ivermectina"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 135,
+		"title": "Diagnóstico Diferencial de Pneumonias Virais (COVID-19)",
+		"vignette": "Um paciente apresenta febre, tosse seca e dispneia. A tomografia de tórax revela infiltrados em vidro fosco, periféricos e bilaterais, sem consolidações lobares. A oximetria de pulso marca saturação de 88%, embora o paciente não apresente desconforto respiratório franco (\"hipoxemia silenciosa\").",
+		"explanation": "O médico de excelência diferencia a pneumonia bacteriana (consolidação lobar) da viral (vidro fosco bilateral). A hipoxemia silenciosa é um fenômeno onde o paciente perde oxigenação sem acumular tanto CO2, demorando a sentir dispneia.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::05 COVID-19 (Fases, Manejo Ambulatorial e Hospitalar)"
+		],
+		"questions": [
+			{
+				"text": "O padrão tomográfico e clínico descrito é altamente sugestivo de qual etiologia?",
+				"correctAnswer": "Etiologia viral, classicamente associada ao **Sars-CoV-2 (COVID-19)**.",
+				"keywords": [
+					"Vidro fosco bilateral",
+					"COVID-19",
+					"Hipoxemia silenciosa"
+				],
+				"order": 1
+			},
+			{
+				"text": "Considerando um quadro de pneumonia viral grave por esta etiologia, qual medicação comprovadamente reduz a mortalidade?",
+				"correctAnswer": "**Corticosteroides (Dexametasona)**.",
+				"keywords": ["Dexametasona"],
+				"order": 2
+			},
+			{
+				"text": "Por que esta medicação não deve ser utilizada na fase inicial (primeiros 7 dias) de sintomas leves?",
+				"correctAnswer": "O corticoide não deve ser usado na fase inicial (fase de replicação viral) pois pode inibir a resposta imune inata necessária para o controle da carga viral. Deve ser reservado para a fase inflamatória (geralmente após o 7º dia) em pacientes hipoxêmicos.",
+				"keywords": ["Fase inflamatória vs. replicativa"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 136,
+		"title": "Pneumonia Atípica por Mycoplasma",
+		"vignette": "Um estudante universitário relata tosse seca persistente e febre baixa há 10 dias. Ao exame físico, auscultam-se estertores finos e, na otoscopia, identifica-se a presença de bolhas na membrana timpânica (Miringite Bolhosa).",
+		"explanation": "A \"miringite bolhosa\" é uma pérola da semiologia médica que \"carimba\" o diagnóstico de *Mycoplasma*. É uma pneumonia que \"anda\" (walking pneumonia), pois o paciente está bem o suficiente para continuar suas atividades apesar da tosse.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Qual é o agente etiológico clássico associado a este quadro clínico e ao achado otoscópico?",
+				"correctAnswer": "***Mycoplasma pneumoniae***.",
+				"keywords": [
+					"Mycoplasma pneumoniae",
+					"Miringite Bolhosa",
+					"Pneumonia Atípica"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a classe de antibióticos de primeira escolha para o tratamento?",
+				"correctAnswer": "**Macrolídeos** (ex: Azitromicina, Claritromicina). As quinolonas respiratórias são alternativas.",
+				"keywords": ["Macrolídeos"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 137,
+		"title": "Pneumonia por Klebsiella pneumoniae",
+		"vignette": "Um paciente etilista crônico e diabético descompensado é admitido com pneumonia grave e prostração. Apresenta escarro espesso, mucoide e avermelhado (\"geleia de groselha\"). A radiografia de tórax demonstra infiltrado no lobo superior com abaulamento da cissura interlobar (sinal da fissura abaulada).",
+		"explanation": "O médico de excelência identifica o perfil do paciente. Etilistas e diabéticos têm maior risco de microaspiração de Gram-negativos da orofaringe. A *Klebsiella* causa uma pneumonia necrotizante rápida, e o sinal da fissura abaulada no RX é uma pista clássica de livros de semiologia e provas de residência.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::02 Pneumonia Nosocomial (PAH) e Associada à Ventilação (PAV)"
+		],
+		"questions": [
+			{
+				"text": "Qual é o agente etiológico clássico deste cenário?",
+				"correctAnswer": "***Klebsiella pneumoniae*** (Pneumonia de Friedländer).",
+				"keywords": [
+					"Klebsiella pneumoniae",
+					"Escarro em geleia de groselha",
+					"Sinal da fissura abaulada"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual é la principal preocupação atual em ambiente hospitalar referente ao perfil de resistência desta bactéria?",
+				"correctAnswer": "A produção de carbapenemases (**KPC** - *Klebsiella pneumoniae carbapenemase*), conferindo resistência aos antibióticos carbapenêmicos e dificultando o manejo terapêutico.",
+				"keywords": ["KPC (Resistência bacteriana)", "Etilismo e Diabetes"],
+				"order": 2
+			}
+		]
+	}
+]

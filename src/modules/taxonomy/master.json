@@ -657,7 +657,8 @@
 					"04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos": {},
 					"05 DPOC: Tratamento Ambulatorial e Reabilitação Pulmonar": {},
 					"06 DPOC: Manejo da Exacerbação (Infecciosa vs Não-Infecciosa)": {},
-					"07 Bronquiectasias (Investigação Etiológica e Manejo de Infecções)": {}
+					"07 Bronquiectasias (Investigação Etiológica e Manejo de Infecções)": {},
+					"08 Fibrose Cística (Suspeita Clínica no Adulto e Triagem)": {}
 				},
 				"04 Infecções Respiratórias": {
 					"01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento": {},
@@ -668,7 +669,8 @@
 					"06 Micoses Pulmonares Endêmicas (Paracoccidioidomicose, Histoplasmose)": {},
 					"07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)": {},
 					"08 Micobactérias Não Tuberculosas (Diagnóstico Diferencial e Tratamento)": {},
-					"09 Infecções em Imunossuprimidos e Bactérias Filamentosas (Nocardia, Actinomyces, Aspergillus)": {}
+					"09 Infecções em Imunossuprimidos e Bactérias Filamentosas (Nocardia, Actinomyces, Aspergillus)": {},
+					"10 Profilaxia e Vacinação Específica em Pneumopatias (Pneumocócica e Influenza)": {}
 				},
 				"05 Tuberculose (TB)": {
 					"01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)": {},
@@ -681,7 +683,8 @@
 					"01 Tromboembolismo Pulmonar (TEP): Probabilidade Pré-Teste (Wells/Geneva)": {},
 					"02 TEP: Diagnóstico (D-Dímero, Angio-TC) e Estratificação de Risco (PESI)": {},
 					"03 TEP: Tratamento (Anticoagulação e Trombólise)": {},
-					"04 Hipertensão Pulmonar (Classificação Clínica e Ecocardiograma de Rastreio)": {}
+					"04 Hipertensão Pulmonar (Classificação Clínica e Ecocardiograma de Rastreio)": {},
+					"05 Cor Pulmonale (Fisiopatologia, Diagnóstico e Manejo Básico)": {}
 				},
 				"07 Doenças Pleurais": {
 					"01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)": {},
@@ -693,14 +696,17 @@
 					"01 Nódulo Pulmonar Solitário (Avaliação de Risco e Fleischner Society)": {},
 					"02 Câncer de Pulmão: Rastreamento (Low-Dose CT)": {},
 					"03 Câncer de Pulmão: Tipos Histológicos e Estadiamento Simplificado": {},
-					"04 Síndromes Paraneoplásicas e Síndrome da Veia Cava Superior": {}
+					"04 Síndromes Paraneoplásicas e Síndrome da Veia Cava Superior": {},
+					"05 Tumores e Massas do Mediastino (Diagnóstico Diferencial por Compartimentos)": {}
 				},
 				"09 Doenças Intersticiais e Ocupacionais": {
 					"01 Doenças Pulmonares Intersticiais (DPI): Abordagem Diagnóstica Inicial": {},
 					"02 Fibrose Pulmonar Idiopática (Suspeita Clínica e Tomográfica)": {},
 					"03 Pneumoconioses (Silicose, Asbestose)": {},
 					"04 Pneumonite de Hipersensibilidade": {},
-					"05 Sarcoidose (Manifestações Pulmonares e Sistêmicas)": {}
+					"05 Sarcoidose (Manifestações Pulmonares e Sistêmicas)": {},
+					"06 Manifestações Pulmonares de Doenças do Tecido Conjuntivo (Artrite Reumatoide, Esclerodermia)": {},
+					"07 Vasculites Pulmonares e Hemorragia Alveolar (Síndrome Pulmão-Rim)": {}
 				},
 				"10 Distúrbios do Sono e Controle": {
 					"01 Síndrome da Apneia Obstrutiva do Sono (SAOS): Diagnóstico e Polissonografia": {},
@@ -711,7 +717,8 @@
 					"01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)": {},
 					"02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)": {},
 					"03 Cateter Nasal de Alto Fluxo (CNAF) e VNI (Indicações Básicas)": {},
-					"04 Sequência Rápida de Intubação (Indicações Pneumológicas)": {}
+					"04 Sequência Rápida de Intubação (Indicações Pneumológicas)": {},
+					"05 Síndrome do Desconforto Respiratório Agudo (SDRA) e Critérios de Berlim": {}
 				}
 			}
 		}

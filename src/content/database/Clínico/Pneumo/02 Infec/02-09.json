@@ -1,0 +1,152 @@
+[
+	{
+		"id": 143,
+		"title": "Infecções de Vias Aéreas Inferiores",
+		"vignette": "Paciente jovem comparece à consulta com queixa de tosse produtiva há 5 dias. Ao exame físico, encontra-se afebril, eupneico (sem taquipneia) e a ausculta pulmonar é normal, sem ruídos adventícios. O paciente solicita prescrição de antibióticos, argumentando que a expectoração tornou-se amarelada/esverdeada.",
+		"explanation": "O médico de excelência combate a resistência bacteriana. Se o exame físico é normal e não há sinais de instabilidade (febre/taquicardia/estertores), o diagnóstico é Bronquite, e tratar bronquite com antibiótico é má prática médica.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Por que a alteração da cor do escarro não justifica, isoladamente, o uso de antibióticos neste caso?",
+				"correctAnswer": "A coloração purulenta (amarela ou verde) do escarro indica a presença de **peroxidase liberada pelos leucócitos**. Este fenômeno fisiológico ocorre tanto em infecções bacterianas quanto nas virais, devido à resposta inflamatória, não servindo como marcador de etiologia bacteriana.",
+				"keywords": ["Peroxidase leucocitária"],
+				"order": 1
+			},
+			{
+				"text": "Qual é a conduta terapêutica correta para este paciente?",
+				"correctAnswer": "A conduta correta é a prescrição de **sintomáticos** (analgésicos, hidratação e antitussígenos, se necessário). O quadro clínico de tosse aguda sem sinais sistêmicos ou focais (ausculta limpa, sem taquicardia/taquipneia) em paciente hígido é compatível com **Bronquite Aguda**, cuja etiologia é viral em mais de 90% dos casos.",
+				"keywords": [
+					"Bronquite Aguda Viral",
+					"Ausculta pulmonar normal",
+					"Tratamento sintomático"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 144,
+		"title": "Síndromes Aspirativas",
+		"vignette": "Dois pacientes são admitidos na emergência após episódios de vômitos e suspeita de broncoaspiração: Paciente A: 25 anos, em coma alcoólico. Broncoaspirou na admissão. Duas horas depois, evolui com dispneia intensa, hipoxemia e infiltrado pulmonar difuso, mas permanece afebril. Paciente B: 80 anos, institucionalizado, sequela de AVC com disfagia. História de tosse ao alimentar-se há 3 dias. Apresenta-se com febre alta, escarro purulento e consolidação em lobo inferior direito. Um interno sugere iniciar antibioticoterapia de amplo espectro para ambos.",
+		"explanation": "É crucial distinguir a injúria química aguda (efeito do ácido gástrico estéril, início súbito) da infecção bacteriana (inóculo de bactérias da boca, início insidioso). Na pneumonite química, o antibiótico só entra se houver piora ou falha de melhora após 48-72h (superinfecção). Na pneumonia aspirativa instalada, o foco é cobrir gram-negativos e anaeróbios da cavidade oral.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+		],
+		"questions": [
+			{
+				"text": "Para qual paciente a antibioticoterapia imediata está incorreta e por quê?",
+				"correctAnswer": "A conduta está incorreta para o **Paciente A**. O uso profilático de antibióticos na fase aguda não previne infecção secundária e seleciona flora resistente. O tratamento é suporte ventilatório.",
+				"keywords": ["Suporte ventilatório"],
+				"order": 1
+			},
+			{
+				"text": "Descreva a diferença fisiopatológica básica entre os dois quadros.",
+				"correctAnswer": "O **Paciente A** apresenta **Pneumonite Química (Síndrome de Mendelson)**, uma reação inflamatória estéril causada pela acidez do suco gástrico, de início súbito. O **Paciente B** apresenta **Pneumonia Aspirativa**, uma infecção bacteriana estabelecida (incluindo anaeróbios), decorrente da microaspiração de patógenos da orofaringe ao longo de dias.",
+				"keywords": [
+					"Síndrome de Mendelson (Pneumonite Química)",
+					"Inflamação estéril vs. Infecção bacteriana",
+					"Anaeróbios"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 145,
+		"title": "Abordagem do Abscesso Pulmonar",
+		"vignette": "Durante visita na enfermaria, discute-se o caso de um paciente com Abscesso Pulmonar de 5 cm em lobo inferior direito, com nível hidraéreo evidente à tomografia. O paciente apresenta febre e tosse produtiva com escarro de odor fétido. Um estudante sugere a realização imediata de drenagem torácica (toracostomia), traçando um paralelo com o tratamento do empiema pleural.",
+		"explanation": "Abscessos pulmonares primários têm comunicação com o brônquio. Se você fura o abscesso por fora, cria um trajeto direto do pulmão para a pleura, o que é catastrófico. A maioria cura apenas com antibiótico (cobertura para anaeróbios) e fisioterapia respiratória para ajudar a vômica.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+		],
+		"questions": [
+			{
+				"text": "Por que a drenagem externa (percutânea ou cirúrgica) é contraindicada como primeira escolha no abscesso pulmonar primário?",
+				"correctAnswer": "A drenagem externa apresenta alto risco de contaminação do espaço pleural (que frequentemente está livre/estéril), podendo ocasionar **fístula broncopleural** e **empiema** secundário. A drenagem externa é reservada apenas para falha terapêutica medicamentosa ou instabilidade grave.",
+				"keywords": [
+					"Risco de Fístula Broncopleural",
+					"Contaminação do espaço pleural",
+					"Antibioticoterapia prolongada"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual é o mecanismo de 'drenagem natural' que já está ocorrendo neste paciente?",
+				"correctAnswer": "O abscesso pulmonar drena naturalmente através da **comunicação com a árvore brônquica**, manifestando-se clinicamente pela **vômica** (tosse com eliminação de grande quantidade de pus).",
+				"keywords": ["Vômica (Drenagem brônquica)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 146,
+		"title": "Corticosteroides na COVID-19",
+		"vignette": "Um paciente com diagnóstico confirmado de COVID-19 apresenta-se no 3º dia de sintomas com febre e mialgia, saturando 97% em ar ambiente. O médico assistente opta por não prescrever corticoides neste momento. O paciente retorna no 8º dia de doença, apresentando dispneia e saturação de 90%, momento em que é iniciada Dexametasona.",
+		"explanation": "Este é o conceito central do estudo RECOVERY. A COVID-19 tem duas fases distintas. O tratamento é fase-dependente. Corticoide é remédio para a 'fase inflamatória' (marcada clinicamente por dessaturação/necessidade de O2), nunca para a fase viral leve.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::05 COVID-19 (Fases, Manejo Ambulatorial e Hospitalar)"
+		],
+		"questions": [
+			{
+				"text": "Explique a lógica fisiopatológica que contraindica o corticoide na primeira fase e o indica na segunda fase apresentada.",
+				"correctAnswer": "A COVID-19 possui duas fases distintas: a **fase de replicação viral** (inicial) e a **fase inflamatória/pulmonar** (tardia). O corticoide é indicado apenas na fase inflamatória, evidenciada clinicamente pela hipoxemia (necessidade de O2), para modular a resposta imune exagerada (tempestade de citocinas).",
+				"keywords": [
+					"Fase de replicação viral vs. Fase inflamatória",
+					"Hipoxemia (Dessaturação)",
+					"Estudo RECOVERY"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o risco associado à inversão dessa conduta (uso precoce)?",
+				"correctAnswer": "O uso de corticoide na fase inicial (viremia) pode inibir a resposta imune inata necessária para o controle viral, potencialmente aumentando a carga viral e a mortalidade.",
+				"keywords": ["Imunossupressão"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 147,
+		"title": "Influenza e Antivirais",
+		"vignette": "Durante surto sazonal de Influenza, dois pacientes com síndrome gripal iniciada há 24 horas são atendidos na Atenção Primária: 1. Homem, 28 anos, hígido. 2. Mulher, 28 anos, portadora de Diabetes Mellitus tipo 1 e Asma.",
+		"explanation": "Não se trata todo mundo com antiviral. O foco são dois grupos: (1) Quem tem risco de morrer (comorbidades, extremos de idade, gestantes) e (2) Quem já está grave (SRAG/internados). O mecanismo da droga (inibidor de neuraminidase) impede a liberação de novos vírus, por isso funciona mal se iniciado tardiamente em casos leves, pois a carga viral já atingiu o pico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)"
+		],
+		"questions": [
+			{
+				"text": "Segundo os protocolos do Ministério da Saúde, qual a indicação de Oseltamivir para cada paciente e qual a janela terapêutica ideal?",
+				"correctAnswer": "A **Paciente 2** tem indicação formal de Oseltamivir empírico devido à presença de **fatores de risco** para complicações (comorbidades), devendo ser iniciado preferencialmente nas primeiras 48 horas. O **Paciente 1**, sendo hígido e com quadro leve, deve receber apenas sintomáticos.",
+				"keywords": [
+					"Fatores de Risco (Comorbidades)",
+					"Janela de 48 horas",
+					"Inibidor de Neuraminidase"
+				],
+				"order": 1
+			},
+			{
+				"text": "Caso o Paciente 1 evoluísse com dispneia intensa e hipoxemia (SRAG), a conduta seria alterada? Justifique.",
+				"correctAnswer": "Sim. A presença de sinais de gravidade ou **SRAG (Síndrome Respiratória Aguda Grave)** torna o uso de Oseltamivir obrigatório para qualquer paciente, independente de comorbidades ou do tempo de início dos sintomas, pois o benefício em reduzir mortalidade supera a janela ideal de eficácia.",
+				"keywords": ["SRAG (Síndrome Respiratória Aguda Grave)"],
+				"order": 2
+			}
+		]
+	}
+]

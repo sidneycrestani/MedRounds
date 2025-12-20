@@ -1,0 +1,153 @@
+[
+	{
+		"id": 128,
+		"title": "Tuberculose Pulmonar - Esquema Básico e Duração",
+		"vignette": "Um paciente com diagnóstico confirmado de Tuberculose (TB) pulmonar, cepa sensível, questiona sobre a duração total da terapia e se a medicação será a mesma durante todo o período.",
+		"explanation": "A fase de ataque serve para matar os bacilos em replicação rápida e reduzir a carga infectante. A fase de manutenção serve para eliminar os bacilos 'dormentes' (persistentes) e evitar a recidiva.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::03 Esquemas Terapêuticos Básicos (RIPE) e Seguimento"
+		],
+		"questions": [
+			{
+				"text": "Qual é a duração total do tratamento para um caso de TB pulmonar sem complicações (meningoencefálica ou osteoarticular)?",
+				"correctAnswer": "O tratamento tem duração total de 6 meses.",
+				"keywords": ["Duração total: 6 meses"],
+				"order": 1
+			},
+			{
+				"text": "Como o esquema básico (RIPE) é dividido em termos de fases e quais fármacos compõem cada etapa?",
+				"correctAnswer": "O esquema divide-se em duas fases: 1. Fase Intensiva (de Ataque): Duração de 2 meses. Utiliza-se o esquema RIPE (Rifampicina, Isoniazida, Pirazinamida e Etambutol). 2. Fase de Manutenção: Duração de 4 meses. Utiliza-se apenas o esquema RI (Rifampicina e Isoniazida).",
+				"keywords": [
+					"Fase Intensiva (2 meses): RIPE",
+					"Fase de Manutenção (4 meses): RI"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 129,
+		"title": "Pneumonia Adquirida na Comunidade - Falha Terapêutica",
+		"vignette": "Um paciente tratado para Pneumonia Adquirida na Comunidade (PAC) com antibioticoterapia de primeira linha adequada apresenta, após 72 horas, persistência da febre, leucocitose em ascensão e piora da dispneia. A presença de derrame pleural foi descartada por nova avaliação ultrassonográfica.",
+		"explanation": "Quando o tratamento de primeira linha falha, precisamos de 'olhos melhores'. A TC pode revelar abscessos, linfonodos suspeitos ou indicar a necessidade de uma Broncoscopia com lavado broncoalveolar para cultura direta.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento",
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::04 Tomografia Computadorizada de Tórax (Indicações e Padrões Principais)"
+		],
+		"questions": [
+			{
+				"text": "Considerando que o diagnóstico de pneumonia está correto e não há derrame pleural, quais são as duas principais hipóteses fisiopatológicas para a falha terapêutica neste momento?",
+				"correctAnswer": "As principais suspeitas são: 1. Agente etiológico não coberto ou resistente (ex: MRSA, Pseudomonas ou germes atípicos não cobertos pelo esquema inicial). 2. Complicação local parenquimatosa, como abscesso pulmonar ou necrose, que não foi adequadamente visualizada na radiografia simples.",
+				"keywords": [
+					"Falha Terapêutica (>72h)",
+					"Resistência Bacteriana",
+					"Abscesso Pulmonar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual exame de imagem deve ser solicitado para melhor elucidação diagnóstica?",
+				"correctAnswer": "O exame indicado é a Tomografia Computadorizada (TC) de Tórax com contraste.",
+				"keywords": ["TC de Tórax com contraste"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 130,
+		"title": "Pneumonia no Idoso - Apresentação Clínica",
+		"vignette": "Uma paciente de 85 anos é admitida no Pronto-Socorro com história de hiporexia ('parou de comer') e confusão mental aguda iniciada há 24 horas. Ao exame físico, não apresenta febre e nega tosse.",
+		"explanation": "O médico de excelência sabe que no idoso a pneumonia frequentemente se manifesta através de alteração do comportamento ou declínio funcional agudo. Aguardar a presença de tosse produtiva e febre alta pode retardar perigosamente o diagnóstico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Por que a ausência de febre e tosse não exclui o diagnóstico de pneumonia nesta faixa etária?",
+				"correctAnswer": "Pacientes idosos apresentam imunossenescência, o que resulta em menor resposta pirogênica (ausência de febre) e diminuição do reflexo de tosse e clareamento ciliar.",
+				"keywords": ["Imunossenescência", "Ausência de febre"],
+				"order": 1
+			},
+			{
+				"text": "Cite três manifestações clínicas 'atípicas' de infecção comuns nesta população.",
+				"correctAnswer": "As manifestações comuns incluem: Delirium (estado confusional agudo), quedas da própria altura, prostração, inapetência e taquipneia isolada.",
+				"keywords": [
+					"Delirium (Confusão Mental Aguda)",
+					"Quedas / Declínio Funcional"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 131,
+		"title": "Cisto Hidático Pulmonar - Contraindicações de Procedimentos",
+		"vignette": "Um paciente proveniente de zona endêmica para Equinococose (criação de ovinos e cães no Rio Grande do Sul) apresenta, em exame de imagem, um cisto pulmonar de grandes dimensões, paredes finas e conteúdo líquido.",
+		"explanation": "Na pneumologia, nem toda lesão cística deve ser puncionada. O diagnóstico de Hidatidose é clínico-epidemiológico e sorológico. O tratamento é cirúrgico (com técnica cuidadosa para não romper o cisto) ou farmacológico (Albendazol).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)"
+		],
+		"questions": [
+			{
+				"text": "Qual procedimento diagnóstico invasivo é contraindicado se houver suspeita de Hidatidose?",
+				"correctAnswer": "A Punção Aspirativa por Agulha Fina (PAAF) ou drenagem percutânea é contraindicada.",
+				"keywords": ["Hidatidose (Equinococose)", "Contraindicação de PAAF"],
+				"order": 1
+			},
+			{
+				"text": "Qual é o risco clínico imediato associado à realização inadvertida deste procedimento?",
+				"correctAnswer": "O rompimento do cisto pode levar ao extravasamento de líquido altamente antigênico, causando Choque Anafilático e disseminação secundária dos escólex (cistos filhos) na cavidade pleural.",
+				"keywords": ["Choque Anafilático", "Disseminação pleural"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 132,
+		"title": "Pneumonia Hospitalar vs. Comunitária",
+		"vignette": "Um paciente internado para tratamento de fratura de fêmur, sem sintomas respiratórios na admissão, desenvolve febre e novo infiltrado pulmonar no 3º dia (72 horas) de hospitalização.",
+		"explanation": "Si a pneumonia inicia após 48h de internação, a probabilidade etiológica muda drasticamente. A prevalência de Streptococcus pneumoniae cai, enquanto aumenta o risco de bactérias Gram-negativas e estafilococos resistentes selecionados pelo ambiente hospitalar.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::02 Pneumonia Nosocomial (PAH) e Associada à Ventilação (PAV)"
+		],
+		"questions": [
+			{
+				"text": "Qual é a classificação correta desta pneumonia baseada no tempo de internação?",
+				"correctAnswer": "Trata-se de uma Pneumonia Adquirida no Hospital (PAH) ou Nosocomial.",
+				"keywords": ["Pneumonia Hospitalar (PAH)"],
+				"order": 1
+			},
+			{
+				"text": "Qual é o marco temporal (em horas) que diferencia a pneumonia comunitária da hospitalar?",
+				"correctAnswer": "O divisor é de 48 horas de internação. Sintomas iniciados após esse período classificam-se como PAH.",
+				"keywords": ["Marco de 48 horas"],
+				"order": 2
+			},
+			{
+				"text": "Como essa classificação altera a escolha empírica do antibiótico em comparação à PAC?",
+				"correctAnswer": "A escolha deve cobrir patógenos hospitalares, incluindo Gram-negativos multirresistentes (como Pseudomonas aeruginosa) e S. aureus (incluindo MRSA), exigindo antibióticos de amplo espectro (ex: Piperacilina-Tazobactam, Cefepime ou Carbapenêmicos), diferentemente da cobertura para Pneumococo da PAC.",
+				"keywords": [
+					"Cobertura para Gram-negativos (Pseudomonas)",
+					"Cobertura para MRSA"
+				],
+				"order": 3
+			}
+		]
+	}
+]

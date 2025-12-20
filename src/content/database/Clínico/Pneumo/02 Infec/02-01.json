@@ -1,0 +1,146 @@
+[
+	{
+		"id": 103,
+		"title": "A Decisão de Internar (PAC)",
+		"vignette": "Paciente masculino de 72 anos, lúcido, sem comorbidades conhecidas, dá entrada na Unidade de Pronto Atendimento (UPA) com história de tosse produtiva e febre aferida há 3 dias. Ao exame físico: Frequência Respiratória (FR) de 28 irpm, Pressão Arterial (PA) 110/70 mmHg, Frequência Cardíaca (FC) 95 bpm. Exames laboratoriais iniciais mostram Ureia de 54 mg/dL (Valor de referência: até 40 mg/dL).",
+		"explanation": "O CURB-65 é uma ferramenta de estratificação de gravidade. Cada letra soma 1 ponto: **C**onfusão mental, **U**reia (>43 mg/dL), **R**espiração (FR ≥ 30), **B**lood Pressure (PAS < 90 ou PAD ≤ 60) e **65** (anos). Pacientes com 2 pontos têm mortalidade moderada (cerca de 9%) e geralmente necessitam de suporte hospitalar para garantir a estabilização. A ureia alta é um marcador indireto de sepse e hipoperfusão renal, e a idade é um fator isolado de menor reserva fisiológica. O objetivo é aplicar critérios objetivos para decidir o local de tratamento (casa vs. hospital), evitando internações desnecessárias ou altas perigosas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Calcule o escore CURB-65 para este paciente.",
+				"correctAnswer": "O escore CURB-65 é **2 pontos**. O paciente pontua pela **Idade ≥ 65 anos** (1 ponto) e pela **Ureia > 43 mg/dL** (1 ponto). Ele não pontua nos critérios de Confusão, Respiração (pois FR < 30) ou PA (pois PAS $\\ge$ 90 e PAD > 60).",
+				"keywords": ["CURB-65 = 2 pontos", "Idade $\\ge$ 65 anos"],
+				"order": 1
+			},
+			{
+				"text": "Qual a conduta clínica recomendada com base na pontuação obtida?",
+				"correctAnswer": "A conduta para um escore de 2 pontos é considerar **internação hospitalar** (enfermaria). Em casos selecionados, pode-se cogitar tratamento ambulatorial supervisionado rigorosamente, mas a internação é a conduta padrão de segurança.",
+				"keywords": ["Internação hospitalar (enfermaria)"],
+				"order": 2
+			},
+			{
+				"text": "Qual a justificativa fisiopatológica para a inclusão da ureia e da idade neste escore de gravidade?",
+				"correctAnswer": "A ureia elevada é um marcador indireto de desidratação, hipoperfusão renal e catabolismo associado à sepse. A idade avançada representa menor reserva fisiológica e imunossenescência, aumentando o risco de desfechos desfavoráveis independentemente da virulência do patógeno.",
+				"keywords": ["Ureia > 43 mg/dL (marcador de hipoperfusão)"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 104,
+		"title": "Terapia Combinada na Pneumonia Adquirida na Comunidade",
+		"vignette": "Uma paciente de 35 anos, previamente hígida, recebe diagnóstico de Pneumonia Adquirida na Comunidade (PAC) e será tratada em regime domiciliar. O médico assistente optou pela prescrição de Amoxicilina associada a Claritromicina.",
+		"explanation": "Enquanto o *Streptococcus pneumoniae* (Pneumococo) é o principal agente, os atípicos são frequentes em jovens e causam quadros de \"pneumonia atípica\". A Amoxicilina isolada não os cobre porque esses germes não possuem parede celular de peptideoglicano (alvo dos beta-lactâmicos). Além disso, estudos sugerem que a terapia combinada tem efeito anti-inflamatório (imunomodulador dos macrolídeos) e melhores desfechos clínicos, mesmo quando o agente isolado é o pneumococo.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+		],
+		"questions": [
+			{
+				"text": "Qual a justificativa microbiológica para a associação de um macrolídeo (Claritromicina) ao beta-lactâmico (Amoxicilina) neste contexto?",
+				"correctAnswer": "A associação visa ampliar o espectro de cobertura para incluir os **germes atípicos**.",
+				"keywords": ["Germes atípicos"],
+				"order": 1
+			},
+			{
+				"text": "Qual grupo de agentes etiológicos não seria coberto caso fosse utilizada a Amoxicilina em monoterapia?",
+				"correctAnswer": "O uso isolado de Amoxicilina deixaria descobertos agentes como *Mycoplasma pneumoniae*, *Chlamydophila pneumoniae* e *Legionella sp*. Isso ocorre porque a Amoxicilina atua na inibição da síntese da parede celular (peptideoglicano), estrutura ausente ou quimicamente distinta nestes microrganismos atípicos.",
+				"keywords": [
+					"Mycoplasma pneumoniae / Chlamydophila pneumoniae",
+					"Ausência de parede celular de peptideoglicano"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 105,
+		"title": "Diagnóstico Molecular da Tuberculose",
+		"vignette": "Um paciente comparece à Unidade Básica de Saúde com queixa de tosse há 4 semanas, associada a perda ponderal e sudorese noturna. Diante da suspeita clínica, o médico solicita o Teste Rápido Molecular para Tuberculose (TRM-TB/GeneXpert) como exame inicial, em detrimento da baciloscopia (BAAR) isolada.",
+		"explanation": "A baciloscopia depende da visualização direta do bacilo, o que exige uma carga alta (5 mil a 10 mil bacilos/mL) para ser positiva. O TRM-TB é automatizado, rápido (resultado em aproximadamente 2h) e já informa se a droga principal do tratamento (Rifampicina) terá eficácia, sendo hoje o exame de escolha no Brasil para o primeiro diagnóstico, sempre que disponível.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)"
+		],
+		"questions": [
+			{
+				"text": "Cite as duas principais vantagens diagnósticas do TRM-TB sobre a baciloscopia de escarro tradicional.",
+				"correctAnswer": "As duas grandes vantagens são: 1. **Maior sensibilidade:** O método detecta o DNA do complexo *Mycobacterium tuberculosis*, permitindo diagnóstico mesmo em amostras paucibacilares (baixa carga bacteriana), onde a baciloscopia poderia ser negativa. 2. **Detecção de resistência:** O exame identifica simultaneamente mutações que conferem resistência à **Rifampicina**, permitindo o reconhecimento precoce de cepas multirresistentes (TB-MDR).",
+				"keywords": [
+					"Maior sensibilidade (Detecção de DNA)",
+					"Resistência à Rifampicina",
+					"Diagnóstico de TB Multirresistente"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 106,
+		"title": "Manejo de Efeitos Adversos no Tratamento da TB (Esquema RIPE)",
+		"vignette": "Um paciente em tratamento para Tuberculose há 50 dias (fase intensiva do esquema RIPE: Rifampicina, Isoniazida, Pirazinamida, Etambutol) retorna à consulta queixando-se de coloração alaranjada na urina, náuseas intensas e dor em hipocôndrio direito.",
+		"explanation": "É vital que o médico saiba tranquilizar o paciente sobre a mudança de cor das secreções (suor, lágrima, urina ficam alaranjados pela Rifampicina) para evitar o abandono do tratamento por susto. Contudo, deve manter alto grau de suspeição para icterícia e sintomas dispépticos, que indicam lesão hepatocelular. Elevações de transaminases > 3x o valor normal com sintomas ou > 5x sem sintomas obrigam a interrupção do esquema RIPE até normalização.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::05 Efeitos Adversos das Medicações e Manejo"
+		],
+		"questions": [
+			{
+				"text": "Dentre os sintomas relatados, qual representa um efeito colateral benigno e qual indica uma complicação potencialmente grave?",
+				"correctAnswer": "A **urina alaranjada** é um efeito benigno e esperado do uso da Rifampicina. As **náuseas e dor em hipocôndrio direito** sugerem hepatotoxicidade medicamentosa, uma complicação grave que exige avaliação laboratorial imediata e provável suspensão do esquema.",
+				"keywords": [
+					"Urina alaranjada (Rifampicina - Benigno)",
+					"Hepatotoxicidade (Sintomas dispépticos/Dor abdominal)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual fármaco do esquema RIPE apresenta o maior potencial de hepatotoxicidade?",
+				"correctAnswer": "A **Pirazinamida** é a droga com maior potencial hepatotóxico, seguida pela Isoniazida e, com menor frequência, pela Rifampicina.",
+				"keywords": ["Pirazinamida (Maior toxicidade hepática)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 107,
+		"title": "Complicações da Pneumonia e Derrame Pleural",
+		"vignette": "Paciente de 45 anos encontra-se no 4º dia de internação hospitalar para tratamento de pneumonia lobar inferior direita, em uso de Ceftriaxone e Azitromicina. Evolui com manutenção da febre (38,5°C) e refere nova dor pleurítica à direita. A radiografia de tórax de controle evidencia o surgimento de derrame pleural ipsilateral.",
+		"explanation": "Nem todo derrame na pneumonia precisa de dreno. O derrame \"simples\" resolve apenas com antibiótico sistêmico. Porém, se as bactérias invadem o espaço pleural, elas consomem glicose e geram ácido (reduzindo o pH). Se o líquido for ácido ou tiver glicose consumida, o antibiótico não conseguirá esterilizar o local sozinho; o espaço tornou-se um \"abscesso\" pleural (ou fase fibrinopurulenta) que exige evacuação mecânica (drenagem) para evitar encarceramento pulmonar e sepse.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::02 Derrame Parapneumônico e Empiema (Indicações de Drenagem)"
+		],
+		"questions": [
+			{
+				"text": "Qual o próximo passo propedêutico obrigatório para a avaliação deste derrame pleural?",
+				"correctAnswer": "O próximo passo é a realização de uma **Toracocentese Diagnóstica** para análise do líquido pleural.",
+				"keywords": ["Toracocentese diagnóstica"],
+				"order": 1
+			},
+			{
+				"text": "Cite os 3 critérios bioquímicos do líquido pleural (além do aspecto purulento/Gram positivo) que definem um derrame parapneumônico complicado ou empiema, indicando necessidade de drenagem torácica.",
+				"correctAnswer": "Os critérios bioquímicos que indicam drenagem de tórax (selo d'água) são: 1. **pH < 7,20**; 2. **Glicose < 40-60 mg/dL**; 3. **LDH > 1.000 UI/L**.",
+				"keywords": [
+					"pH < 7,20",
+					"Glicose baixa (< 40-60 mg/dL)",
+					"LDH > 1.000 UI/L"
+				],
+				"order": 2
+			}
+		]
+	}
+]
