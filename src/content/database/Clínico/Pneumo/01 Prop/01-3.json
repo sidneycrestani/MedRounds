@@ -99,7 +99,7 @@
 		"title": "Tempo Expiratório Forçado",
 		"vignette": "Para avaliar a função pulmonar de um paciente tabagista à beira do leito, na ausência de espirometria, realiza-se a manobra do Tempo Expiratório Forçado. O examinador posiciona o diafragma do estetoscópio sobre a traqueia (fúrcula esternal) e solicita ao paciente uma inspiração profunda seguida de expiração máxima e rápida com a boca aberta.",
 		"explanation": "É um teste simples e subutilizado. Em pulmões saudáveis, a maior parte do ar sai nos primeiros 3 a 4 segundos. O prolongamento da expiração é o equivalente clínico ao VEF1 reduzido.",
-		"status": "published",
+		"status": "draft",
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [

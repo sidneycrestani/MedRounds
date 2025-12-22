@@ -115,13 +115,7 @@
 		],
 		"questions": [
 			{
-				"text": "Em qual grau da escala mMRC (Modified Medical Research Council) este paciente se enquadra?",
-				"correctAnswer": "O paciente se enquadra no **mMRC Grau 3**.",
-				"keywords": ["Escala mMRC", "Grau 3"],
-				"order": 1
-			},
-			{
-				"text": "Qual a vantagem clínica de utilizar esta escala em comparação à descrição subjetiva (ex: \"dispneia moderada\")?",
+				"text": "Qual a vantagem clínica de utilizar a escala mMRC (Modified Medical Research Council) em comparação à descrição subjetiva (ex: \"dispneia moderada\")?",
 				"correctAnswer": "A escala é superior por ser objetiva e reprodutível. Termos como 'leve' ou 'moderado' são subjetivos e variam entre examinadores. A escala baseada em atividades específicas (como a distância percorrida ou o ato de vestir-se) fornece um dado funcional concreto para comparação futura.",
 				"keywords": [
 					"Dispneia Funcional",
