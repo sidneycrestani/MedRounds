@@ -827,32 +827,6 @@
 		]
 	},
 	{
-		"id": 131,
-		"title": "Cisto Hidático Pulmonar - Contraindicações de Procedimentos",
-		"vignette": "Um paciente proveniente de zona endêmica para Equinococose (criação de ovinos e cães no Rio Grande do Sul) apresenta, em exame de imagem, um cisto pulmonar de grandes dimensões, paredes finas e conteúdo líquido.",
-		"explanation": "Na pneumologia, nem toda lesão cística deve ser puncionada. O diagnóstico de Hidatidose é clínico-epidemiológico e sorológico. O tratamento é cirúrgico (com técnica cuidadosa para não romper o cisto) ou farmacológico (Albendazol).",
-		"status": "published",
-		"difficulty": "general_practitioner",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
-		],
-		"questions": [
-			{
-				"text": "Qual procedimento diagnóstico invasivo é contraindicado se houver suspeita de Hidatidose?",
-				"correctAnswer": "A Punção Aspirativa por Agulha Fina (PAAF) ou drenagem percutânea é contraindicada.",
-				"keywords": ["Hidatidose (Equinococose)", "Contraindicação de PAAF"],
-				"order": 1
-			},
-			{
-				"text": "Qual é o risco clínico imediato associado à realização inadvertida deste procedimento?",
-				"correctAnswer": "O rompimento do cisto pode levar ao extravasamento de líquido altamente antigênico, causando Choque Anafilático e disseminação secundária dos escólex (cistos filhos) na cavidade pleural.",
-				"keywords": ["Choque Anafilático", "Disseminação pleural"],
-				"order": 2
-			}
-		]
-	},
-	{
 		"id": 132,
 		"title": "Pneumonia Hospitalar vs. Comunitária",
 		"vignette": "Um paciente internado para tratamento de fratura de fêmur, sem sintomas respiratórios na admissão, desenvolve febre e novo infiltrado pulmonar no 3º dia (72 horas) de hospitalização.",
@@ -919,42 +893,6 @@
 					"Ancilostomídeos"
 				],
 				"order": 2
-			}
-		]
-	},
-	{
-		"id": 134,
-		"title": "Hiperinfecção por Strongyloides stercoralis",
-		"vignette": "Você está atendendo um paciente lavrador, com hábito de andar descalço, admitido por exacerbação grave de DPOC. O plano terapêutico inclui a prescrição de corticosteroides em altas doses sistêmicas.",
-		"explanation": "O médico de excelência \"desvermina\" o paciente grave antes de usar corticoide potente se houver risco epidemiológico. É uma causa de morte evitável em UTIs brasileiras.",
-		"status": "published",
-		"difficulty": "specialist",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
-		],
-		"questions": [
-			{
-				"text": "Qual é a complicação potencialmente fatal associada ao uso de corticoide neste perfil epidemiológico?",
-				"correctAnswer": "O uso de corticoide pode desencadear a **Síndrome de Hiperinfecção** por *Strongyloides stercoralis*.",
-				"keywords": [
-					"Strongyloides stercoralis",
-					"Síndrome de Hiperinfecção",
-					"Corticoterapia"
-				],
-				"order": 1
-			},
-			{
-				"text": "Qual é a fisiopatologia básica dessa complicação?",
-				"correctAnswer": "A imunossupressão permite que as larvas se multipliquem massivamente e atravessem a parede intestinal, levando bactérias gram-negativas da flora entérica para a corrente sanguínea, causando sepse de foco pulmonar e/ou meningite.",
-				"keywords": ["Sepse por Gram-negativos", "Fisiopatologia"],
-				"order": 2
-			},
-			{
-				"text": "Qual a conduta preventiva recomendada?",
-				"correctAnswer": "Deve-se realizar tratamento empírico/profilático com **Ivermectina** antes ou concomitantemente ao início da corticoterapia.",
-				"keywords": ["Ivermectina"],
-				"order": 3
 			}
 		]
 	},
@@ -1165,36 +1103,6 @@
 				"keywords": [
 					"Ruptura de tendão (Aquiles)",
 					"Interação Quinolona + Corticoide"
-				],
-				"order": 2
-			}
-		]
-	},
-	{
-		"id": 142,
-		"title": "Análise do Líquido Pleural e Critérios de Light",
-		"vignette": "Foi realizada uma toracocentese diagnóstica em um paciente com derrame pleural. Os resultados bioquímicos são: Proteína no líquido pleural: 4,0 g/dL (Proteína sérica: 6,0 g/dL); LDH no líquido pleural: 300 U/L (LDH sérico: 400 U/L); Valor de referência superior do LDH sérico: 250 U/L.",
-		"explanation": "O médico de excelência não 'chuta' se o líquido é inflamatório ou não; ele calcula. Transudato sugere causas sistêmicas (ICC, Cirrose). Exsudato sugere causas locais (Pneumonia, Câncer, TB). Basta um critério positivo para ser exsudato.",
-		"status": "published",
-		"difficulty": "general_practitioner",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
-		],
-		"questions": [
-			{
-				"text": "Classifique o líquido como Transudato ou Exudato.",
-				"correctAnswer": "O líquido é um Exsudato.",
-				"keywords": ["Exsudato (basta 1 critério positivo)"],
-				"order": 1
-			},
-			{
-				"text": "Cite os 3 parâmetros dos Critérios de Light utilizados para essa definição.",
-				"correctAnswer": "Os Critérios de Light definem exsudato se houver pelo menos um dos seguintes: 1. Relação Proteína Líquido/Soro > 0,5 (Neste caso: $4/6 = 0,66$); 2. Relação LDH Líquido/Soro > 0,6 (Neste caso: $300/400 = 0,75$); 3. LDH do líquido > 2/3 do limite superior do LDH sérico (Neste caso: $2/3$ de $250 \\approx 166$. O valor 300 é maior que 166).",
-				"keywords": [
-					"Relação Proteína Pleura/Soro > 0,5",
-					"Relação LDH Pleura/Soro > 0,6",
-					"LDH Pleura > 2/3 do limite superior sérico"
 				],
 				"order": 2
 			}
