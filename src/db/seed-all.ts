@@ -8,7 +8,7 @@ import { eq, inArray } from "drizzle-orm";
 // Imports da Arquitetura
 import { getDb } from "@/core/db";
 import { caseQuestions, clinicalCases } from "@/modules/content/schema";
-import { casesTags } from "@/modules/taxonomy/schema";
+import { casesTags, tags } from "@/modules/taxonomy/schema"; // Adicionado 'tags' aqui
 import { upsertTagHierarchy } from "@/modules/taxonomy/services";
 
 // 1. Carregar variáveis
@@ -176,7 +176,13 @@ async function main() {
 	// --- 3. Processamento dos Arquivos ---
 	console.log(`📂 Processando ${files.length} arquivos JSON...`);
 
-	const stats = { inserted: 0, updated: 0, skipped: 0, deleted: 0 };
+	const stats = {
+		inserted: 0,
+		updated: 0,
+		skipped: 0,
+		deleted: 0,
+		tagsCleaned: 0,
+	};
 	const registry = readRegistry();
 
 	// Conjunto para rastrear todos os IDs encontrados nos arquivos JSON
@@ -185,7 +191,6 @@ async function main() {
 
 	for (const file of files) {
 		const filePath = file;
-		// console.log(`\n📄 Lendo: ${path.basename(file)}`);
 
 		try {
 			const rawContent = fs.readFileSync(filePath, "utf-8");
@@ -287,8 +292,7 @@ async function main() {
 						.where(eq(clinicalCases.id, effectiveId));
 
 					// ATENÇÃO: Estratégia "Wipe and Replace" para consistência.
-					// Isso garante que se uma pergunta for removida do JSON, ela será removida do banco.
-					// O mesmo vale para tags (cases_tags).
+					// Removemos relações antigas para recriar. Isso naturalmente remove o vínculo com tags antigas.
 					await db
 						.delete(caseQuestions)
 						.where(eq(caseQuestions.caseId, effectiveId));
@@ -359,17 +363,13 @@ async function main() {
 
 	if (idsToDelete.length > 0) {
 		console.log(
-			`\n🗑️  Detectados ${idsToDelete.length} casos obsoletos (removidos dos JSONs). Limpando...`,
+			`\n🗑️  Detectados ${idsToDelete.length} casos obsoletos. Limpando...`,
 		);
 
-		// Remove explicitamente as dependências primeiro para evitar erros de FK
-		// (embora o DELETE CASCADE no DB geralmente resolva, é mais seguro aqui)
 		await db
 			.delete(caseQuestions)
 			.where(inArray(caseQuestions.caseId, idsToDelete));
 		await db.delete(casesTags).where(inArray(casesTags.caseId, idsToDelete));
-
-		// Remove os casos
 		await db
 			.delete(clinicalCases)
 			.where(inArray(clinicalCases.id, idsToDelete));
@@ -377,9 +377,60 @@ async function main() {
 		stats.deleted = idsToDelete.length;
 	}
 
+	// --- 5. Garbage Collection de TAGS (Remover tags órfãs) ---
+	// Tags órfãs são aquelas que não estão em cases_tags E não são pais de tags usadas.
+	console.log("\n🧹 Verificando tags órfãs...");
+
+	// A. Pega todas as tags atualmente usadas (após updates e deletes de casos)
+	const usedTagRows = await db.select({ id: casesTags.tagId }).from(casesTags);
+	const usedTagIds = new Set(usedTagRows.map((r) => r.id));
+
+	// B. Pega a estrutura completa de tags para subir a hierarquia
+	const allTags = await db
+		.select({ id: tags.id, parentId: tags.parentId })
+		.from(tags);
+	const tagMap = new Map(allTags.map((t) => [t.id, t]));
+
+	// C. Conjunto de IDs que DEVEM ser mantidos (usados ou pais de usados)
+	const idsToKeep = new Set<number>();
+
+	// Função recursiva para marcar uma tag e seus ancestrais como "Manter"
+	function keepTagAndAncestors(id: number) {
+		if (idsToKeep.has(id)) return; // Já marcado, economiza processamento
+		idsToKeep.add(id);
+
+		const node = tagMap.get(id);
+		if (node?.parentId) {
+			keepTagAndAncestors(node.parentId);
+		}
+	}
+
+	// Marca todas as tags usadas e seus pais
+	for (const id of usedTagIds) {
+		keepTagAndAncestors(id);
+	}
+
+	// D. Identifica tags que existem no banco mas não estão no conjunto "Manter"
+	const tagsToDelete = allTags
+		.map((t) => t.id)
+		.filter((id) => !idsToKeep.has(id));
+
+	if (tagsToDelete.length > 0) {
+		console.log(`✂️  Removendo ${tagsToDelete.length} tags não utilizadas...`);
+
+		// Remove em lote
+		await db.delete(tags).where(inArray(tags.id, tagsToDelete));
+		stats.tagsCleaned = tagsToDelete.length;
+	} else {
+		process.stdout.write(" Nenhuma tag órfã encontrada.");
+	}
+
 	console.log("\n\n✅ Seed finalizado!");
 	console.log(
-		`   🆕 Inseridos: ${stats.inserted} | 🔄 Atualizados: ${stats.updated} | ⏩ Pulados: ${stats.skipped} | 🗑️  Deletados: ${stats.deleted}`,
+		`   🆕 Inseridos: ${stats.inserted} | 🔄 Atualizados: ${stats.updated} | ⏩ Pulados: ${stats.skipped}`,
+	);
+	console.log(
+		`   🗑️  Casos Deletados: ${stats.deleted} | ✂️  Tags Limpas: ${stats.tagsCleaned}`,
 	);
 	process.exit(0);
 }
