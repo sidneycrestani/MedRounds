@@ -1,0 +1,1126 @@
+[
+	{
+		"id": 211,
+		"title": "Tromboembolismo Pulmonar (Raciocínio Diagnóstico)",
+		"vignette": "Você está no plantão do Pronto-Socorro e atende dois pacientes com queixa de dispneia súbita e dor torácica:\n* Paciente A: Mulher, 25 anos, usuária de anticoncepcional oral, sem comorbidades, saturação 96%, FC 88 bpm. Sem sinais de TVP.\n* Paciente B: Homem, 65 anos, em pós-operatório recente (10 dias) de artroplastia de quadril, taquipneico, saturação 89%, FC 115 bpm e edema assimétrico em membro inferior direito.",
+		"explanation": "O manejo do TEP depende estritamente da probabilidade pré-teste (Escore de Wells ou Geneva).\n\n* **Baixa Probabilidade:** O objetivo é excluir a doença de forma não invasiva. Usa-se o **D-Dímero** (alta sensibilidade, baixa especificidade). Se negativo, exclui TEP. Se positivo, vai para imagem.\n* **Alta Probabilidade:** O D-Dímero perde utilidade. Pula-se direto para imagem confirmatória (**Angio-TC**).\n* **Tratamento Empírico:** Em casos de alta suspeita clínica, não se deve aguardar o exame de imagem para iniciar a anticoagulação, salvo contraindicação absoluta (sangramento ativo grave).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Aplique o raciocínio da probabilidade pré-teste (Escore de Wells simplificado) para ambos. Quem é baixa e quem é alta probabilidade?",
+				"correctAnswer": "**Paciente A (Baixa Probabilidade):** Jovem, sinais vitais estáveis, sem sinais de TVP ou cirurgia recente. Escore de Wells provável < 4 (TEP improvável).\n**Paciente B (Alta Probabilidade):** Idoso, cirurgia de grande porte (fator de risco maior), taquicardia, sinais clínicos de TVP e hipoxemia. Escore de Wells > 4 (TEP provável).",
+				"keywords": ["Probabilidade Pré-Teste (Wells)"],
+				"order": 1
+			},
+			{
+				"text": "Qual o próximo exame complementar imediato indicado para cada paciente? Por que solicitar um D-Dímero para o Paciente B seria um erro conceitual?",
+				"correctAnswer": "Para o **Paciente A**, deve-se solicitar o **D-Dímero**. Como ela tem baixa probabilidade, um D-Dímero negativo tem alto valor preditivo negativo (exclui a doença sem radiação).\nPara o **Paciente B**, o exame é a **Angio-TC de Tórax**. Solicitar D-Dímero aqui é um erro porque, mesmo que venha negativo (o que é raro num pós-op), a probabilidade clínica é tão alta que você não confiaria no resultado para excluir o diagnóstico. Além disso, pós-operatórios elevam D-Dímero inespecificamente (falso positivo).",
+				"keywords": [
+					"D-Dímero",
+					"Angio-TC de Tórax",
+					"Valor Preditivo Negativo"
+				],
+				"order": 2
+			},
+			{
+				"text": "Se a Angio-TC do Paciente B demorar 4 horas para ser realizada, qual a conduta medicamentosa imediata?",
+				"correctAnswer": "Deve-se iniciar **anticoagulação plena empírica** (ex: Heparina de Baixo Peso Molecular - Enoxaparina 1mg/kg 12/12h) imediatamente, antes da confirmação pela tomografia, visto que a probabilidade clínica é alta e não há contraindicação absoluta citada. O risco de morte por TEP não tratado supera o risco de sangramento de uma dose.",
+				"keywords": ["Anticoagulação Empírica"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 212,
+		"title": "Derrame Pleural (Fisiopatologia e Classificação)",
+		"vignette": "Durante a rotação na enfermaria, você realiza toracocentese diagnóstica em dois pacientes com derrame pleural e obtém os seguintes resultados da análise do líquido pleural e sérica:\n\n* Caso 1: Relação Proteína Pleura/Soro = 0.3; Relação LDH Pleura/Soro = 0.4; LDH pleural < 2/3 do limite superior sérico.\n* Caso 2: Relação Proteína Pleura/Soro = 0.8; Celularidade com predominância de linfócitos; ADA (Adenosina Deaminase) elevado (> 40 U/L).",
+		"explanation": "Os **Critérios de Light** definem Exsudato se houver pelo menos um dos seguintes:\n1. Proteína Pleural / Proteína Sérica > 0.5\n2. LDH Pleural / LDH Sérico > 0.6\n3. LDH Pleural > 2/3 do limite superior do LDH sérico.\n\nSe nenhum estiver presente, é Transudato (doença sistêmica). Se houver um, é Exsudato (doença local).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Classifique os derrames (Transudato vs. Exsudato) baseando-se nos Critérios de Light.",
+				"correctAnswer": "**Caso 1:** É um **Transudato**. Todos os critérios de Light são negativos (relações baixas).\n**Caso 2:** É um **Exsudato**. A relação proteína > 0.5 define a presença de exsudato (basta 1 critério positivo).",
+				"keywords": ["Critérios de Light"],
+				"order": 1
+			},
+			{
+				"text": "Explique o mecanismo fisiopatológico \"oculto\" de cada caso (forças de Starling vs. permeabilidade capilar).",
+				"correctAnswer": "**Transudato (Caso 1):** Ocorre por desequilíbrio nas forças hidrostáticas ou oncóticas, *sem doença pleural primária*. O capilar está íntegro, mas a pressão força o líquido para fora (ex: Insuficiência Cardíaca - aumento da pressão hidrostática) ou falta proteína para segurar o líquido (ex: Cirrose/Desnutrição - queda da pressão oncótica).\n**Exsudato (Caso 2):** Ocorre por aumento da **permeabilidade capilar** e inflamação local, ou obstrução da drenagem linfática. A pleura está doente, permitindo o vazamento de proteínas e células grandes (ex: Infecções, Câncer).",
+				"keywords": [
+					"Transudato (Hidrostático/Oncótico)",
+					"Exsudato (Inflamatório/Permeabilidade)"
+				],
+				"order": 2
+			},
+			{
+				"text": "Qual a etiologia mais provável para o Caso 2 no Brasil e qual seria o próximo passo ideal (considerando limitações do ADA)?",
+				"correctAnswer": "A principal hipótese é **Tuberculose Pleural** (Exsudato linfocítico com ADA alto). Embora o ADA seja um forte indício, o padrão-ouro é a biópsia pleural, mas na prática clínica brasileira, em pacientes jovens com esse perfil, frequentemente inicia-se o tratamento RIPE. Se houver dúvida ou risco de malignidade, a **biópsia pleural** é mandatória.",
+				"keywords": ["ADA (Adenosina Deaminase)", "Tuberculose Pleural"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 213,
+		"title": "Pneumotórax (Emergência vs. Urgência)",
+		"vignette": "Um paciente vítima de trauma torácico fechado dá entrada na sala de emergência. Ele está agitado, cianótico, com PA 70/40 mmHg, turgência jugular patológica e desvio de traqueia para a esquerda. O murmúrio vesicular está abolido à direita. O residente júnior corre para pegar o aparelho de ultrassom ou solicitar um Raio-X portátil.",
+		"explanation": "É vital diferenciar o Pneumotórax Simples (estável, diagnosticado por RX/USG, conduta expectante ou drenagem) do **Hipertensivo** (instável, diagnóstico clínico, conduta imediata). A fisiopatologia do hipertensivo envolve o colapso hemodinâmico por obstrução do retorno venoso, e não apenas a insuficiência respiratória.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico sindrômico exato e qual o mecanismo que explica o choque (hipotensão)?",
+				"correctAnswer": "Diagnóstico: **Pneumotórax Hipertensivo à direita**. O mecanismo do choque é obstrutivo: o ar entra na pleura e não sai (mecanismo de válvula), aumentando a pressão intratorácica. Isso comprime a veia cava, impedindo o retorno venoso ao coração (pré-carga cai drasticamente -> débito cardíaco cai -> choque).",
+				"keywords": ["Pneumotórax Hipertensivo", "Choque Obstrutivo"],
+				"order": 1
+			},
+			{
+				"text": "Qual o erro na conduta do residente ao buscar imagem?",
+				"correctAnswer": "O erro é **aguardar exame de imagem** em um paciente instável com sinais clínicos clássicos. O Pneumotórax Hipertensivo é um diagnóstico **estritamente clínico**. A demora para fazer o Raio-X pode levar à parada cardiorrespiratória em atividade elétrica sem pulso (AESP).",
+				"keywords": ["Diagnóstico Clínico"],
+				"order": 2
+			},
+			{
+				"text": "Qual o procedimento imediato (salva-vidas) e qual o procedimento definitivo subsequente?",
+				"correctAnswer": "Imediato: **Descompressão torácica com agulha** (jelco calibroso) no 2º espaço intercostal na linha hemiclavicular (ou 4º/5º espaço na linha axilar anterior, conforme protocolos mais recentes do ATLS), transformando o pneumotórax hipertensivo em simples.\nDefinitivo: **Drenagem torácica fechada em selo d'água** (5º espaço intercostal, linha axilar média).",
+				"keywords": [
+					"Toracocentese de Alívio (Descompressão)",
+					"Drenagem Torácica (Selo d'água)"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 214,
+		"title": "TEP vs. Diagnóstico Diferencial (A Casca de Banana)",
+		"vignette": "Paciente 70 anos, tabagista, com dispneia progressiva e tosse. Chega ao PS com piora aguda. Ao exame: MV reduzido globalmente, sibilos expiratórios, tempo expiratório prolongado. Gasometria arterial: pH 7.30, pCO2 55 mmHg, pO2 55 mmHg, HCO3 28. O interno suspeita de TEP pela hipoxemia e sugere Angio-TC.",
+		"explanation": "Este exercício força o contraste entre a \"fome de ar\" do TEP (com pulmão limpo e CO2 baixo) versus a dispneia da DPOC (com sibilos e CO2 alto). Embora TEP possa causar exacerbação de DPOC, a apresentação primária puramente hipercápnica sugere problema ventilatório/mecânico, enquanto o TEP é um problema vascular (espaço morto aumentado).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Analisando a fisiologia da troca gasosa (Gradiente Alvéolo-Arterial) e a gasometria, qual o mecanismo principal da hipoxemia neste caso (TEP vs. Hipoventilação)?",
+				"correctAnswer": "A gasometria mostra **acidose respiratória** (pCO2 alto) com retenção de bicarbonato (crônica agudizada). Isso indica **hipoventilação alveolar** (insuficiência respiratória tipo 2). No TEP, classicamente ocorre hipocapnia (pCO2 baixo) devido à taquipneia reflexa (alcalose respiratória inicial). O gradiente A-a estaria aumentado em ambos, mas a retenção de CO2 aponta para falha de bomba/obstrução grave, típico de DPOC.",
+				"keywords": [
+					"Hipercapnia (Retenção de CO2)",
+					"Acidose Respiratória",
+					"Insuficiência Respiratória Tipo 2"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que este quadro clínico sugere fortemente uma exacerbação de DPOC e não TEP clássico?",
+				"correctAnswer": "A clínica de tórax silencioso/sibilante com tempo expiratório prolongado é clássica de obstrução de via aérea (DPOC/Asma). O TEP geralmente tem ausculta pulmonar *limpa* ou inespecífica, dissociada da gravidade da dispneia.",
+				"keywords": [],
+				"order": 2
+			},
+			{
+				"text": "Se fosse TEP maciço causando choque, o que você esperaria encontrar na ausculta cardíaca ou no ECG (Sinais de Cor Pulmonale Agudo)?",
+				"correctAnswer": "No TEP maciço, haveria sinais de falência de ventrículo direito: hiperfonese de B2 (componente pulmonar), turgência jugular e, no ECG, o padrão **S1Q3T3** (S profundo em D1, Q e T invertida em D3) ou bloqueio de ramo direito novo.",
+				"keywords": ["Cor Pulmonale Agudo", "Padrão S1Q3T3"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 215,
+		"title": "Empiema Pleural (A Evolução do Derrame)",
+		"vignette": "Um paciente de 45 anos, etilista, está internado há 5 dias para tratamento de pneumonia bacteriana à direita. Apesar do uso de Ceftriaxone e Claritromicina, ele mantém febre persistente e piora da dor torácica pleurítica. Um novo Raio-X mostra aumento do derrame pleural. Você realiza uma toracocentese diagnóstica que revela um líquido de aspecto turvo/purulento.",
+		"explanation": "Nem todo derrame na pneumonia precisa de dreno. O derrame para-pneumônico simples resolve com antibiótico. O **complicado** (bioquímica alterada) ou o **Empiema** (pus franco) exigem drenagem porque evoluem para loculação (septos de fibrinose) e encarceramento pulmonar (paquipleuris), o que pode exigir cirurgias complexas no futuro.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Quais são os 3 critérios bioquímicos no líquido pleural (além do aspecto purulento) que indicam que um derrame para-pneumônico é \"complicado\" e requer drenagem?",
+				"correctAnswer": "Os critérios para derrame para-pneumônico complicado são: **pH < 7.2**, **Glicose < 40-60 mg/dL** e **LDH > 1000 U/L** (além de Gram ou cultura positivos).",
+				"keywords": [
+					"Derrame Para-pneumônico Complicado",
+					"pH Pleural < 7.2",
+					"Glicose Pleural Baixa"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o pH do líquido pleural cai em processos infecciosos graves (mecanismo)?",
+				"correctAnswer": "O pH cai devido ao **metabolismo anaeróbio** intenso das bactérias e dos leucócitos (neutrófilos) no espaço pleural, gerando acúmulo de lactato e CO2. Além disso, a inflamação prejudica o transporte de efluentes ácidos para fora do espaço pleural.",
+				"keywords": ["Empiema Pleural"],
+				"order": 2
+			},
+			{
+				"text": "Qual a conduta imediata obrigatória após a visualização de pus na seringa? Apenas trocar o antibiótico resolve?",
+				"correctAnswer": "A conduta imediata é a **Drenagem Torácica em Selo d’Água**. Apenas o antibiótico não resolve porque o antibiótico tem baixa penetração em coleções purulentas organizadas e o pus atua como um \"corpo estranho\" infectado. \"Pus parado é pus drenado\".",
+				"keywords": ["Drenagem em Selo d'Água"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 216,
+		"title": "Hemotórax (Trauma e Diferenciação)",
+		"vignette": "Um paciente jovem sofreu um acidente automobilístico e apresenta macicez à percussão e murmúrio abolido na base esquerda. Você suspeita de derrame pleural pós-traumático. Ao puncionar, o líquido é francamente hemorrágico. O hematócrito do paciente (sangue periférico) é de 36%.",
+		"explanation": "O Hemotórax no trauma é uma emergência pois pode levar ao choque hipovolêmico e ao colapso pulmonar. A técnica de drenagem é fundamental para o estudante de 3º/4º ano: o dreno deve ser calibroso para não obstruir com coágulos e a inserção deve sempre respeitar a anatomia do feixe intercostal (VAN - Veia, Artéria, Nervo).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Como diferenciar, através do hematócrito do líquido pleural, se o paciente tem um \"Hemotórax\" verdadeiro ou apenas um derrame sero-hemorrágico?",
+				"correctAnswer": "Define-se Hemotórax quando o **Hematócrito do líquido pleural é $\\ge$ 50% do hematócrito do sangue periférico**. Se o hematócrito do líquido for baixo, trata-se apenas de um derrame com sangue (comum em traumas menores ou neoplasias).",
+				"keywords": ["Hemotórax (Ht > 50% do periférico)"],
+				"order": 1
+			},
+			{
+				"text": "Qual o marco anatômico para realizar a drenagem torácica (localização segura) e qual estrutura você deve evitar passando o dreno \"por cima\" da costela inferior?",
+				"correctAnswer": "O local é o **\"Triângulo de Segurança\"** (geralmente 4º ou 5º espaço intercostal, entre a linha axilar anterior e média). Deve-se passar o dreno **rente à borda superior da costela inferior** para evitar o **feixe vasculonervoso intercostal** (veia, artéria e nervo), que corre na borda inferior da costela superior.",
+				"keywords": [
+					"Feixe Vasculonervoso Intercostal",
+					"Triângulo de Segurança"
+				],
+				"order": 2
+			},
+			{
+				"text": "No contexto de trauma, qual o critério de volume na drenagem inicial que indica a necessidade de Toracotomia de Emergência (ir para o centro cirúrgico)?",
+				"correctAnswer": "Indica-se toracotomia se houver drenagem imediata de **> 1.500 ml** de sangue ou uma drenagem contínua de **200-300 ml/hora nas primeiras 2 a 4 horas**.",
+				"keywords": ["Toracotomia de Emergência"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 217,
+		"title": "TEP de Alto Risco e Trombólise (O Limite do Manejo)",
+		"vignette": "Paciente feminina, 60 anos, com diagnóstico de TEP confirmado por Angio-TC (trombo em sela). Inicialmente estava estável, mas após 2 horas apresenta queda da pressão arterial (PA 80/50 mmHg), palidez, sudorese e extremidades frias, sem melhora após infusão de 500ml de cristaloides.",
+		"explanation": "Este é o ponto crucial: saber que o tratamento padrão do TEP é anticoagulação, **MAS**, se o paciente chocar, a conduta muda para trombólise. O TEP mata por falência aguda do Ventrículo Direito (VD). Quando o VD não aguenta a pressão do trombo, a pressão arterial sistêmica cai, e isso define a gravidade máxima da doença.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Como esse TEP é classificado agora (Massivo/Alto Risco vs. Não-massivo/Baixo Risco)?",
+				"correctAnswer": "Classifica-se como **TEP de Alto Risco (ou TEP Massivo)**. A definição de \"Alto Risco\" no TEP não é o tamanho do trombo na imagem, mas sim a presença de **instabilidade hemodinâmica** (choque obstrutivo ou hipotensão persistente).",
+				"keywords": ["TEP de Alto Risco (Massivo)"],
+				"order": 1
+			},
+			{
+				"text": "Qual a conduta terapêutica de urgência indicada para esta instabilidade hemodinâmica?",
+				"correctAnswer": "Está indicada a **Trombólise Sistêmica** (ex: Alteplase/rtPA), desde que não haja contraindicações absolutas (como sangramento intracraniano recente).",
+				"keywords": ["Trombólise (Alteplase)", "Instabilidade Hemodinâmica"],
+				"order": 2
+			},
+			{
+				"text": "Por que a anticoagulação isolada (Heparina) não é suficiente para esta paciente neste momento?",
+				"correctAnswer": "A anticoagulação (Heparina) serve para **prevenir a formação de novos trombos** e impedir a progressão do coágulo atual, mas ela não \"dissolve\" o trombo existente de forma rápida. No choque, precisamos desobstruir a circulação pulmonar imediatamente para reduzir a pós-carga do ventrículo direito; por isso, usamos o trombolítico.",
+				"keywords": ["Choque Obstrutivo", "Falência de Ventrículo Direito"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 218,
+		"title": "Pneumotórax Espontâneo (Perfis de Paciente)",
+		"vignette": "Dois pacientes chegam ao consultório com queixa de dor torácica súbita:\n* Paciente 1: Homem, 19 anos, 1.90m de altura, magro, sem doenças prévias, sentiu dor enquanto jogava videogame.\n* Paciente 2: Homem, 68 anos, tabagista pesado (50 maços/ano), com diagnóstico de enfisema, sentiu dor e falta de ar intensa enquanto caminhava.",
+		"explanation": "O pneumotórax \"do jovem alto e magro\" é o clássico acadêmico (Primário), mas o pneumotórax do DPOC (Secundário) é o que mais interna e complica. No 3º e 4º ano, o aluno deve diferenciar que o pulmão com doença prévia tolera muito mal qualquer perda de volume aerado.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Classifique o tipo de pneumotórax de cada paciente (Primário vs. Secundário).",
+				"correctAnswer": "**Paciente 1:** Pneumotórax Espontâneo **Primário** (ocorre em pulmões previamente sadios).\n**Paciente 2:** Pneumotórax Espontâneo **Secundário** (ocorre como complicação de uma doença pulmonar preexistente, no caso, DPOC/Enfisema).",
+				"keywords": [
+					"Pneumotórax Espontâneo Primário",
+					"Pneumotórax Espontâneo Secundário"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a causa anatômica provável (o que rompeu?) no Paciente 1?",
+				"correctAnswer": "A causa provável é a ruptura de pequenas bolhas subpleurais, chamadas de **Blebs**, localizadas geralmente nos ápices pulmonares.",
+				"keywords": ["Blebs Apicais"],
+				"order": 2
+			},
+			{
+				"text": "Qual desses pacientes tem maior risco de recorrência e maior gravidade clínica imediata? Explique o porquê.",
+				"correctAnswer": "O **Paciente 2 (Secundário)**. Ele tem maior gravidade porque não tem reserva funcional; um pneumotórax pequeno em quem já tem DPOC grave pode causar insuficiência respiratória aguda. Além disso, o risco de recorrência é maior e o tratamento costuma ser mais agressivo (drenagem quase sempre é necessária, ao contrário do primário pequeno que pode ser observado).",
+				"keywords": ["Doença Pulmonar Obstrutiva Crônica (DPOC)"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 219,
+		"title": "O \"Falso Exsudato\" (Refinando os Critérios de Light)",
+		"vignette": "Um paciente de 75 anos com Insuficiência Cardíaca (IC) descompensada está em uso de doses altas de Furosemida. Ele apresenta derrame pleural bilateral. Você realiza a toracocentese e os Critérios de Light classificam o líquido como Exsudato (Proteína Pleura/Soro = 0.52). No entanto, clinicamente, tudo indica ser um transudato pela IC.",
+		"explanation": "Este é o ajuste fino da semiologia armada. Os Critérios de Light têm excelente sensibilidade para exsudatos, mas sua especificidade cai em pacientes que usam diuréticos. O aluno de 4º ano deve saber que a clínica (IC, cirrose, síndrome nefrótica) é soberana e o gradiente de albumina é a ferramenta de desempate.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Por que o uso de diuréticos pode \"falsear\" os Critérios de Light, transformando um transudato em exsudato?",
+				"correctAnswer": "O diurético remove preferencialmente a **água** do espaço pleural, mas as proteínas (moléculas grandes) demoram mais para serem reabsorvidas. Isso causa uma **concentração artificial das proteínas** no líquido pleural, elevando a relação Proteína Pleura/Soro e \"enganando\" os Critérios de Light.",
+				"keywords": [
+					"Falso Exsudato",
+					"Uso de Diuréticos",
+					"Especificidade dos Critérios de Light"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual cálculo adicional (gradiente) deve ser feito para confirmar se o líquido é realmente um transudato nesses casos de dúvida?",
+				"correctAnswer": "Deve-se calcular o **Gradiente de Albumina Soro-Líquido Pleural** (Albumina do Soro MENOS Albumina do Líquido Pleural).",
+				"keywords": ["Gradiente de Albumina Soro-Líquido"],
+				"order": 2
+			},
+			{
+				"text": "Qual o valor de corte desse gradiente que sugere Transudato?",
+				"correctAnswer": "Se o Gradiente de Albumina for **> 1.2 g/dL**, o líquido é classificado como **Transudato**, ignorando o resultado conflitante dos Critérios de Light.",
+				"keywords": [],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 220,
+		"title": "TEP - Farmacologia Clínica (A Ponte e os DOACs)",
+		"vignette": "Paciente com TEP de baixo risco (estável hemodinamicamente) será iniciado em tratamento. Você decide usar Varfarina (Marevan).",
+		"explanation": "Entender a farmacodinâmica da coagulação é vital. A Varfarina é barata e disponível, mas exige manejo complexo. O 4º ano deve conhecer os DOACs como o novo padrão-ouro para o TEP estável devido à facilidade posológica e segurança, embora a Varfarina ainda seja usada em casos específicos (como síndrome do anticorpo antifosfolipídio).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Por que é proibido iniciar Varfarina isoladamente nas primeiras 24-48 horas de um TEP? Qual o risco biológico?",
+				"correctAnswer": "A Varfarina inibe os fatores dependentes de Vitamina K (II, VII, IX, X), mas também inibe as **Proteínas C e S** (que são anticoagulantes naturais). Como as Proteínas C e S têm meia-vida curta, elas desaparecem primeiro, criando um **estado transitório de pró-coagulação** (risco de necrose cutânea e piora do trombo).",
+				"keywords": ["Inibidores da Vitamina K", "Proteína C e S"],
+				"order": 1
+			},
+			{
+				"text": "O que significa fazer a \"ponte\" com Heparina e quando podemos retirá-la?",
+				"correctAnswer": "A \"ponte\" consiste em manter a **Heparina** (ação imediata) junto com a Varfarina por pelo menos 5 dias, e até que o RNI (INR) esteja na faixa terapêutica (2.0 a 3.0) por dois dias consecutivos.",
+				"keywords": ["Ponte de Heparina", "RNI (INR) Alvo"],
+				"order": 2
+			},
+			{
+				"text": "Atualmente, qual a classe de medicamentos (ex: Rivaroxabana, Apixabana) que permite o tratamento do TEP sem a necessidade de internação ou uso de heparina injetável prévia?",
+				"correctAnswer": "Os **DOACs (Anticoagulantes Orais Diretos)**, como a Rivaroxabana e a Apixabana. Eles possuem início de ação rápido e não necessitam de ponte com heparina (no caso da Rivaroxabana e Apixabana), permitindo o manejo domiciliar em casos selecionados de baixo risco.",
+				"keywords": ["DOACs (Rivaroxabana/Apixabana)"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 221,
+		"title": "Pneumotórax - Imagem e Conduta Conservadora",
+		"vignette": "Um paciente jovem com Pneumotórax Espontâneo Primário está assintomático e estável. No Raio-X de tórax em expiração, você observa uma lâmina de pneumotórax (distância entre a pleura visceral e a parede torácica) de 1,5 cm no ápice.",
+		"explanation": "Nem todo ar na pleura exige um tubo de 32 French. O manejo conservador é seguro em pacientes jovens, estáveis e com pneumotórax pequeno. O 4º ano precisa saber identificar a **linha da pleura visceral** (ausência de trama vascular além daquela linha) e ter o discernimento de não intervir agressivamente em casos leves.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "De acordo com as diretrizes atuais (British Thoracic Society ou consenso de emergência), este pneumotórax é considerado pequeno ou grande?",
+				"correctAnswer": "É considerado um **Pneumotórax Pequeno** (geralmente definido como < 2 cm de distância entre a borda do pulmão e a parede do tórax ao nível do hilo).",
+				"keywords": ["Pneumotórax Pequeno (< 2cm)"],
+				"order": 1
+			},
+			{
+				"text": "Qual a conduta inicial recomendada para este paciente específico?",
+				"correctAnswer": "A conduta é **Observação Clínica e Suporte com Oxigênio** (se necessário). O oxigênio suplementar, mesmo que o paciente sature bem, ajuda a acelerar a reabsorção do ar no espaço pleural (lavagem de nitrogênio). Se o paciente estiver estável e o pneumotórax for pequeno, não há necessidade de dreno imediato.",
+				"keywords": [
+					"Manejo Conservador",
+					"Lavagem de Nitrogênio (Oxigenoterapia)"
+				],
+				"order": 2
+			},
+			{
+				"text": "Por que o Raio-X de tórax em expiração era classicamente solicitado para ver pneumotórax (embora hoje o USG e o Raio-X em inspiração sejam preferidos)?",
+				"correctAnswer": "Na expiração, o volume do pulmão diminui, mas o volume do ar no espaço pleural permanece constante. Isso torna o pneumotórax proporcionalmente maior em relação ao parênquima pulmonar, facilitando a visualização da **linha da pleura visceral**.",
+				"keywords": ["Pleura Visceral"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 222,
+		"title": "Semiologia Radiológica das Emergências",
+		"vignette": "Você está analisando os exames de imagem de três pacientes diferentes no pronto-socorro:\n\n* Paciente A: Raio-X com opacidade na base, com limite superior côncavo voltado para cima (em direção à axila).\n* Paciente B: Suspeita de TEP; o Raio-X mostra uma opacidade em forma de cunha/triângulo na periferia (base voltada para a pleura).\n* Paciente C: Suspeita de TEP maciço; o Raio-X mostra uma área de \"hipertransparência\" (pulmão mais preto) por redução da trama vascular em uma região específica.",
+		"explanation": "Embora a Angio-TC seja o padrão para TEP e o USG seja excelente para derrame, o Raio-X ainda é o primeiro exame. O aluno deve saber que o Raio-X de tórax no TEP é frequentemente **normal**, mas quando apresenta sinais como a Corcova de Hampton ou o Sinal de Westermark, eles são altamente sugestivos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Nomeie os sinais radiológicos descritos nos pacientes A, B e C.",
+				"correctAnswer": "**Paciente A:** Sinal do Menisco (clássico do derrame pleural livre). \n**Paciente B:** Corcova de Hampton (representa uma área de infarto pulmonar/hemorragia alveolar). \n**Paciente C:** Sinal de Westermark (oligoemia focal).",
+				"keywords": [
+					"Sinal do Menisco",
+					"Corcova de Hampton (Infarto Pulmonar)",
+					"Sinal de Westermark (Oligoemia)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a explicação fisiopatológica para o sinal do Paciente C?",
+				"correctAnswer": "O **Sinal de Westermark** ocorre porque o trombo obstrui a artéria pulmonar de um segmento ou lobo, impedindo a passagem de sangue. Como há menos sangue naquela área, há menos atenuação dos raios-X, resultando em uma área que parece \"mais preta\" (oligoemia) em comparação ao restante do pulmão.",
+				"keywords": ["Sinal de Westermark (Oligoemia)"],
+				"order": 2
+			},
+			{
+				"text": "No Paciente A, qual a quantidade mínima de líquido (em ml) necessária para que o derrame seja visível no Raio-X de tórax em incidência PA (Posterior-Anterior)?",
+				"correctAnswer": "São necessários aproximadamente **200 a 300 ml** de líquido para apagar o seio costofrênico no Raio-X em PA. (Nota: na incidência de Perfil, volumes menores como 50-75 ml já podem ser detectados).",
+				"keywords": ["Seio Costofrênico"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 223,
+		"title": "Mecanismo do Selo d'Água e Drenagem Torácica",
+		"vignette": "Você foi chamado para avaliar um paciente com pneumotórax que está com um dreno de tórax há 24 horas. Ao observar o frasco de drenagem, você nota duas situações:\n\n1. O líquido na haste do dreno sobe quando o paciente inspira e desce quando ele expira (**oscilação**).\n2. Quando o paciente tosse, saem bolhas de ar pelo líquido (**borbulhamento**).",
+		"explanation": "Entender o frasco de drenagem é fundamental na prática clínica. O selo d'água funciona como uma **válvula unidirecional**: permite que o ar e o líquido saiam do tórax, mas impede que o ar do ambiente entre (devido à barreira de água). A oscilação é o sinal de \"vida\" do dreno, indicando que o sistema mantém comunicação com a pressão pleural.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "O que a oscilação da coluna líquida indica sobre o sistema de drenagem?",
+				"correctAnswer": "A oscilação indica que o **sistema está pérvio** (aberto e funcionando) e que a ponta do dreno está dentro do espaço pleural, comunicando-se com as variações de pressão intratorácica.",
+				"keywords": ["Oscilação (Perviedade)"],
+				"order": 1
+			},
+			{
+				"text": "O que o borbulhamento persistente (mesmo sem o paciente tossir) indicaria?",
+				"correctAnswer": "O borbulhamento indica a presença de uma **fístula aérea** (o ar está saindo do pulmão para a pleura e daí para o dreno) ou uma **fuga no sistema** (ex: conexões frouxas ou o dreno saiu parcialmente da parede torácica).",
+				"keywords": ["Fístula Aérea (Borbulhamento)"],
+				"order": 2
+			},
+			{
+				"text": "Se o dreno parar de oscilar subitamente e o paciente apresentar desconforto respiratório, qual a primeira suspeita e a primeira conduta?",
+				"correctAnswer": "A suspeita é de **obstrução do dreno** (por coágulo ou acotovelamento do tubo). Se o dreno obstrui e o pulmão ainda está vazando ar, pode ocorrer um pneumotórax hipertensivo. A conduta é checar todo o trajeto do tubo em busca de dobras e tentar desobstruir (\"ordenhar\" o dreno, com cautela).",
+				"keywords": ["Selo d'Água", "Válvula Unidirecional"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 224,
+		"title": "Manejo Hemodinâmico no TEP Maciço",
+		"vignette": "Um paciente com TEP de alto risco está hipotenso (PA 85/50 mmHg). O interno sugere abrir o soro (cristaloide) vigorosamente para \"subir a pressão\".",
+		"explanation": "O choque no TEP é **obstrutivo**, não hipovolêmico. Tratar como se fosse desidratação pode comprometer a função biventricular devido à interdependência ventricular, onde a dilatação do ventrículo direito prejudica o enchimento do ventrículo esquerdo.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Por que a expansão volêmica vigorosa (ex: > 1000ml) pode ser perigosa e até piorar o choque neste paciente?",
+				"correctAnswer": "No TEP maciço, o Ventrículo Direito (VD) está falhando porque não consegue vencer a pressão do trombo (pós-carga alta). O VD é uma cavidade que lida mal com volume. Se você der muito soro, o VD dilata excessivamente, empurra o septo interventricular para a esquerda e **comprime o Ventrículo Esquerdo (VE)**. Isso diminui o enchimento do VE e cai ainda mais o débito cardíaco (choque piora).",
+				"keywords": [
+					"Choque Obstrutivo",
+					"Interdependência Ventricular",
+					"Desvio do Septo Interventricular"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a droga de escolha (vasopressor/inotrópico) caso a pressão não suba com uma alíquota cautelosa de volume (250-500ml)?",
+				"correctAnswer": "A **Noradrenalina** é a droga de escolha inicial para manter a pressão de perfusão coronariana do próprio VD. Se houver disfunção contrátil importante, a **Dobutamina** pode ser associada, mas com cautela pelo risco de hipotensão.",
+				"keywords": ["Noradrenalina"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 225,
+		"title": "Wells vs. Geneva (Estratificação de Probabilidade)",
+		"vignette": "Você está atendendo um paciente com suspeita de TEP. O interno diz: \"Não gosto do Escore de Wells porque ele é muito subjetivo no critério 'Diagnóstico alternativo menos provável'\". Você então sugere utilizarem o Escore de Geneva Revisado.",
+		"explanation": "O estudante deve saber que existem duas ferramentas validadas para estratificação de probabilidade pré-teste no TEP. Se houver insegurança com a subjetividade do Escore de Wells, deve-se recorrer ao Escore de Geneva, que é puramente objetivo. Ambos servem para o mesmo propósito: decidir quem pode ser excluído por D-Dímero e quem necessita de Angio-TC imediata.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual a principal diferença filosófica entre o Escore de Wells e o Escore de Geneva?",
+				"correctAnswer": "O **Escore de Wells** possui um componente subjetivo (\"TEP é o diagnóstico mais provável?\"), que depende da experiência do examinador. O **Escore de Geneva** é totalmente objetivo, baseado apenas em dados clínicos, idade e sinais vitais, sendo mais reprodutível para estudantes e médicos menos experientes.",
+				"keywords": ["Escore de Geneva Revisado", "Objetividade Clínica"],
+				"order": 1
+			},
+			{
+				"text": "Cite 3 critérios que estão presentes no Geneva, mas que não dependem do julgamento subjetivo do médico.",
+				"correctAnswer": "1. **Idade > 65 anos**; 2. **Frequência Cardíaca (FC)** com divisões objetivas (ex: 75-94 bpm vs >95 bpm); 3. **Dor à palpação profunda de membros inferiores** e edema unilateral.",
+				"keywords": ["Probabilidade Pré-teste"],
+				"order": 2
+			},
+			{
+				"text": "Se o paciente tiver um Geneva de \"Baixa Probabilidade\", mas o D-Dímero vier positivo, qual o próximo passo?",
+				"correctAnswer": "O próximo passo é realizar um exame de imagem (**Angio-TC de tórax**). O D-Dímero positivo em um paciente de baixa probabilidade \"quebra\" a exclusão, exigindo a confirmação ou descarte por imagem.",
+				"keywords": [],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 226,
+		"title": "O ECG Real no TEP (Além do S1Q3T3)",
+		"vignette": "Você recebe o ECG de um paciente com dispneia súbita e dor torácica. O interno procura desesperadamente o sinal de S1Q3T3, não o encontra, e afirma: \"O ECG está normal, então não deve ser TEP\".",
+		"explanation": "No 4º ano, o aluno precisa entender que um \"ECG normal\" não exclui TEP. A função do ECG no contexto de dor torácica é prioritariamente excluir um Infarto Agudo do Miocárdio (IAM) e procurar sinais de sofrimento/sobrecarga aguda de câmaras direitas, que corroboram a suspeita de TEP mas não são obrigatórios.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o achado eletrocardiográfico mais comum no Tromboembolismo Pulmonar?",
+				"correctAnswer": "O achado mais comum é a **Taquicardia Sinusal**. Frequentemente, o ECG do TEP não apresenta sinais \"patognomônicos\", manifestando apenas o aumento da frequência cardíaca como resposta fisiológica.",
+				"keywords": ["Taquicardia Sinusal"],
+				"order": 1
+			},
+			{
+				"text": "Quais alterações de repolarização (ondas T) em quais derivações sugerem fortemente sobrecarga de Ventrículo Direito?",
+				"correctAnswer": "**Inversão de onda T de V1 a V4** (padrão de sobrecarga ventricular direita) e, ocasionalmente, a presença de um Bloqueio de Ramo Direito (BRD) de início recente.",
+				"keywords": [
+					"Inversão de Onda T (V1-V4)",
+					"Sobrecarga de Ventrículo Direito"
+				],
+				"order": 2
+			},
+			{
+				"text": "Por que o S1Q3T3 é considerado um sinal clássico, mas de pouca utilidade prática no dia a dia?",
+				"correctAnswer": "O S1Q3T3 (Sinal de McGinn-White) é altamente específico (quando aparece, sugere muito TEP), mas possui **baixa sensibilidade** (presente em menos de 15-20% dos casos, geralmente nos mais graves). Basear a exclusão do diagnóstico na ausência deste sinal é um erro conceitual grave.",
+				"keywords": ["S1Q3T3 (Sinal de McGinn-White)"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 227,
+		"title": "Segurança na Toracocentese (Primum Non Nocere)",
+		"vignette": "Você vai realizar uma toracocentese diagnóstica em um paciente com derrame pleural volumoso.",
+		"explanation": "A técnica da toracocentese é um marco do 3º/4º ano. Mais do que interpretar os Critérios de Light, o médico deve ser capaz de realizar a coleta do líquido pleural com segurança, minimizando riscos de pneumotórax iatrogênico, sangramentos ou reações vagais através de posicionamento e técnica corretos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o local recomendado para a punção (em relação à linha axilar e aos espaços intercostais)?",
+				"correctAnswer": "Geralmente no **6º ao 8º espaço intercostal**, entre a linha axilar média e a linha escapular. O ponto deve ser sempre 1 a 2 espaços intercostais abaixo do nível da macicez detectada à percussão, respeitando a borda superior da costela inferior.",
+				"keywords": ["Segurança do Procedimento"],
+				"order": 1
+			},
+			{
+				"text": "Cite 2 contraindicações relativas relacionadas à coagulação que devem ser checadas antes do procedimento.",
+				"correctAnswer": "1. **Plaquetopenia acentuada (< 50.000/mm³)**; 2. **Distúrbios de coagulação graves (RNI > 2.0)**. Embora o uso de ultrassonografia aumente a segurança, estes são marcos importantes de cautela para o médico generalista.",
+				"keywords": ["Plaquetopenia"],
+				"order": 2
+			},
+			{
+				"text": "O que é a \"Reação Vasovagal\" durante a toracocentese e como o posicionamento do paciente ajuda a evitá-la?",
+				"correctAnswer": "É uma queda súbita da pressão arterial e frequência cardíaca por estimulação vagal durante a manipulação da pleura. O paciente deve estar **sentado e inclinado para frente**, apoiado em uma mesa (posição de \"faraó\"), o que garante estabilidade e melhor acesso ao espaço intercostal.",
+				"keywords": ["Posição de Faraó"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 228,
+		"title": "TEP de Baixo Risco - Quem pode ir para casa? (Escore PESI)",
+		"vignette": "Você confirmou TEP em um paciente jovem, estável e sem comorbidades. O hospital está superlotado e você avalia se ele preenche critérios para tratamento domiciliar com anticoagulante oral direto (DOAC).",
+		"explanation": "O aluno de 4º ano deve discernir que ferramentas de diagnóstico (Wells/Geneva) diferem de ferramentas de prognóstico e manejo. O Escore PESI permite estratificar quais pacientes com TEP confirmado possuem risco de mortalidade em 30 dias baixo o suficiente para permitir a alta hospitalar precoce ou manejo ambulatorial.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual escore de prognóstico deve ser utilizado para avaliar a mortalidade em 30 dias e decidir se o paciente é de \"baixo risco\"?",
+				"correctAnswer": "Deve-se utilizar o **Escore PESI** (Pulmonary Embolism Severity Index) ou sua versão validada **Simplificada (sPESI)**.",
+				"keywords": ["Escore sPESI", "Baixo Risco"],
+				"order": 1
+			},
+			{
+				"text": "Cite 3 variáveis desse escore que, se presentes, impediriam a alta hospitalar imediata.",
+				"correctAnswer": "Se o paciente apresentar qualquer um dos seguintes pontos no sPESI: **Idade > 80 anos**, **Câncer ativo**, **Insuficiência Cardíaca ou Doença Pulmonar Crônica**, **Frequência Cardíaca ≥ 110 bpm**, **Pressão Arterial Sistólica < 100 mmHg** ou **Saturação de O2 < 90%**.",
+				"keywords": ["Tratamento Domiciliar"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 229,
+		"title": "Síndromes Clínicas do TEP (Periférico vs. Central)",
+		"vignette": "O TEP pode se apresentar de formas muito distintas dependendo da localização do trombo. Analise dois casos:\n* Caso A: Paciente com dor pleurítica súbita, tosse e pequena hemoptise. Está estável, sem taquicardia. A Angio-TC mostra trombo em artéria segmentar subpleural.\n* Caso B: Paciente com dispneia súbita e síncope. Apresenta-se taquicárdico, com turgência jugular, mas sem dor torácica. A Angio-TC mostra trombo em sela (tronco da artéria pulmonar).",
+		"explanation": "O aluno deve entender que 'nem todo TEP causa síncope' e 'nem todo TEP causa dor pleurítica'. Trombos centrais matam por choque/baixo débito, pois obstruem a saída de sangue do ventrículo direito de forma grave. Trombos periféricos causam dor pleurítica e hemoptise devido ao infarto pulmonar e irritação da pleura parietal.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome da síndrome clínica do Caso A e por que ocorre hemoptise?",
+				"correctAnswer": "O Caso A é a **Síndrome do Infarto Pulmonar**. A hemoptise ocorre porque a obstrução de uma artéria periférica (distal) leva à hemorragia alveolar e morte do tecido pulmonar adjacente à pleura.",
+				"keywords": ["Infarto Pulmonar", "Hemoptise no TEP"],
+				"order": 1
+			},
+			{
+				"text": "No Caso B, por que o paciente apresentou síncope?",
+				"correctAnswer": "No Caso B (TEP Central/Macisso), a síncope ocorre devido à **queda súbita do débito cardíaco**. O trombo obstrui a saída de sangue do ventrículo direito de forma tão grave que não chega sangue suficiente ao ventrículo esquerdo e, consequentemente, ao cérebro.",
+				"keywords": ["Baixo Débito Cardíaco"],
+				"order": 2
+			},
+			{
+				"text": "Qual desses casos tem maior probabilidade de apresentar um Raio-X com a 'Corcova de Hampton'?",
+				"correctAnswer": "O **Caso A**. A Corcova de Hampton é uma opacidade triangular periférica que representa justamente o infarto pulmonar, típico de embolias distais.",
+				"keywords": ["Corcova de Hampton"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 230,
+		"title": "Contraindicações à Anticoagulação (Segurança do Paciente)",
+		"vignette": "Você confirmou TEP em um paciente de 70 anos. No entanto, ao revisar o prontuário, você nota que ele teve um Acidente Vascular Cerebral (AVC) há 2 semanas.",
+		"explanation": "Saber tratar é importante, mas saber quando não tratar define o médico prudente. A anticoagulação é o pilar do tratamento do TEP, mas é contraindicada em cenários de sangramento ativo grave ou vulnerabilidade do Sistema Nervoso Central. Nesses casos, alternativas mecânicas como o Filtro de Veia Cava devem ser consideradas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "O AVC recente é uma contraindicação para a anticoagulação plena?",
+				"correctAnswer": "Sim, o AVC isquêmico recente (geralmente nos últimos 1-3 meses) ou hemorrágico (em qualquer tempo) é uma contraindicação de peso devido ao alto risco de transformação hemorrágica ou novo sangramento intracraniano.",
+				"keywords": ["Risco de Sangramento"],
+				"order": 1
+			},
+			{
+				"text": "Cite 2 contraindicações absolutas à anticoagulação no TEP.",
+				"correctAnswer": "1. **Sangramento ativo grave** (ex: hemorragia digestiva alta volumosa); 2. **Cirurgia intracraniana ou medular recente**; 3. **Discrasia sanguínea grave conhecida**.",
+				"keywords": ["Contraindicações Absolutas"],
+				"order": 2
+			},
+			{
+				"text": "Se o paciente tem um TEP confirmado, mas não pode ser anticoagulado devido a um sangramento ativo grave, qual a alternativa terapêutica mecânica para evitar que novos trombos cheguem ao pulmão?",
+				"correctAnswer": "A inserção de um **Filtro de Veia Cava Inferior**. É um dispositivo colocado por via endovascular que 'peneira' o sangue vindo dos membros inferiores, impedindo que novos êmbolos alcancem a circulação pulmonar.",
+				"keywords": ["Filtro de Veia Cava"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 231,
+		"title": "Técnica da Coleta do Líquido Pleural (O Erro do pH)",
+		"vignette": "Você está coletando líquido pleural para análise. O preceptor observa sua técnica e faz algumas exigências para que o resultado do pH seja confiável.",
+		"explanation": "A coleta do líquido pleural para análise de pH deve seguir rigores técnicos semelhantes aos da gasometria arterial. Artefatos de coleta, como a presença de bolhas de ar ou contaminação com anestésicos ácidos (lidocaína), podem invalidar o resultado e levar a condutas invasivas desnecessárias.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Por que o líquido para análise de pH deve ser coletado em uma seringa de gasometria (heparinizada) e não em um frasco comum?",
+				"correctAnswer": "O pH pleural é extremamente sensível. A seringa heparinizada e vedada impede a troca de gases com o ambiente e a coagulação do líquido, que poderia obstruir o aparelho de análise.",
+				"keywords": ["Seringa Heparinizada"],
+				"order": 1
+			},
+			{
+				"text": "O que acontece com o valor do pH se houver bolhas de ar dentro da seringa?",
+				"correctAnswer": "O pH irá **subir falsamente**. O $CO_2$ do líquido pleural (que é ácido) sai para a bolha de ar para equilibrar as pressões parciais, tornando o líquido mais alcalino. Isso pode mascarar diagnósticos de empiema.",
+				"keywords": ["Artefato de Coleta (Bolhas de ar)"],
+				"order": 2
+			},
+			{
+				"text": "Por que o excesso de Lidocaína (anestésico local) na seringa pode invalidar a análise do pH pleural?",
+				"correctAnswer": "A Lidocaína é uma substância **extremamente ácida** (pH em torno de 4.0 a 6.0). Se houver mistura do anestésico com a amostra, o pH pleural virá falsamente baixo, simulando um derrame complicado ou empiema.",
+				"keywords": ["Acidez da Lidocaína"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 232,
+		"title": "Gradiente Alvéolo-Arterial - $P(A-a)O_2$ no TEP",
+		"vignette": "Um paciente com suspeita de TEP tem uma saturação de oxigênio ($SpO_2$) de 94% em ar ambiente. O interno diz: 'A saturação está normal, então a troca gasosa está preservada'. Você decide calcular o Gradiente Alvéolo-Arterial ($P(A-a)O_2$) para provar que há uma disfunção.",
+		"explanation": "O Gradiente $A-a$ é uma ferramenta matemática da gasometria essencial para identificar disfunções na membrana alvéolo-capilar ou distúrbios de ventilação-perfusão. No TEP, o aumento do gradiente reflete o aumento do espaço morto alveolar e o desvio de fluxo sanguíneo, sendo um marcador de troca gasosa ineficiente mesmo com $PaO_2$ aparentemente normal.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "O que o Gradiente Alvéolo-Arterial mede e por que ele é mais sensível que a simples Saturação de $O_2$ ou a $PaO_2$ isolada?",
+				"correctAnswer": "O Gradiente $A-a$ mede a eficiência da transferência de oxigênio dos alvéolos para o sangue. Ele é mais sensível porque considera se o paciente está hiperventilando (baixando o $CO_2$) para manter a oxigenação, revelando disfunções que a $PaO_2$ isolada pode omitir.",
+				"keywords": ["Gradiente Alvéolo-Arterial (P(A-a)O2)"],
+				"order": 1
+			},
+			{
+				"text": "No TEP, qual o mecanismo fisiopatológico que faz o Gradiente $A-a$ aumentar?",
+				"correctAnswer": "O mecanismo é o **Distúrbio Ventilação-Perfusão (V/Q)**. A obstrução vascular cria áreas ventiladas mas não perfundidas (**Espaço Morto**), e o desvio de sangue para outras áreas gera desequilíbrios na troca gasosa.",
+				"keywords": [
+					"Distúrbio Ventilação-Perfusão (V/Q)",
+					"Espaço Morto Alveolar"
+				],
+				"order": 2
+			},
+			{
+				"text": "Se o Gradiente $A-a$ estiver normal em um paciente com dispneia, isso fala a favor ou contra TEP?",
+				"correctAnswer": "Fala fortemente **contra TEP**. Um Gradiente $A-a$ normal indica que a membrana de troca está íntegra. Em pacientes dispneicos com gradiente normal, deve-se investigar causas extrapulmonares como ansiedade, anemia ou acidose metabólica.",
+				"keywords": [],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 233,
+		"title": "Quilotórax (O Líquido de Aspecto Leitoso)",
+		"vignette": "Durante uma toracocentese, você aspira um líquido de aspecto branco-leitoso. O interno afirma prontamente: \"É um empiema (pus), precisamos drenar agora\".",
+		"explanation": "O quilotórax é um tipo específico de exsudato que não ocorre por inflamação da pleura, mas por extravasamento de linfa. No 4º ano, é vital não confundir esse aspecto leitoso com pus, pois o tratamento do quilotórax envolve frequentemente manejo dietético e, em casos refratários, intervenção cirúrgica, diferindo totalmente do manejo do empiema.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Como diferenciar macroscopicamente e pelo odor se o líquido leitoso é pus ou quilo (linfa)?",
+				"correctAnswer": "O **pus (empiema)** geralmente tem um odor fétido ou característico e, se deixado em repouso, forma um sedimento (as células decantam). O **quilo (quilotórax)** é inodoro e permanece como uma emulsão homogênea (não decanta).",
+				"keywords": ["Aspecto Leitoso"],
+				"order": 1
+			},
+			{
+				"text": "Qual o principal marcador bioquímico no líquido pleural que confirma o diagnóstico de Quilotórax (valor de corte)?",
+				"correctAnswer": "A dosagem de **Triglicerídeos**. Um valor de **triglicerídeos > 110 mg/dL** no líquido pleural confirma o quilotórax. Se o valor estiver entre 50-110 mg/dL, pode ser necessária a pesquisa de quilomícrons.",
+				"keywords": ["Triglicerídeos > 110 mg/dL"],
+				"order": 2
+			},
+			{
+				"text": "Cite uma causa traumática e uma causa neoplásica comum para a ruptura do ducto torácico.",
+				"correctAnswer": "**Traumática:** Cirurgias torácicas ou cervicais extensas (iatrogenia). **Neoplásica:** Linfomas, que podem comprimir ou invadir o ducto torácico.",
+				"keywords": ["Ducto Torácico", "Linfoma"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 234,
+		"title": "Edema Pulmonar de Reexpansão (A Armadilha da Drenagem)",
+		"vignette": "Você está drenando um derrame pleural volumoso (ocupando todo o hemitórax) de um paciente que estava com esse líquido há semanas. Após drenar 2 litros de uma só vez, o paciente começa a tossir intensamente, apresenta dispneia e expectoração rósea.",
+		"explanation": "Este é um conceito de segurança fundamental: a drenagem deve ser gradual. O pulmão colapsado cronicamente sofre uma lesão de isquemia-reperfusão ao ser reexpandido bruscamente, o que gera aumento da permeabilidade capilar e extravasamento de líquido para os alvéolos. O alívio imediato do paciente tem um limite de volume para evitar catástrofes iatrogênicas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual a complicação aguda que este paciente está apresentando?",
+				"correctAnswer": "**Edema Pulmonar de Reexpansão**.",
+				"keywords": ["Edema de Reexpansão"],
+				"order": 1
+			},
+			{
+				"text": "Qual a recomendação de volume máximo que deve ser drenado/aspirado em uma única toracocentese para evitar esse fenômeno?",
+				"correctAnswer": "Recomenda-se drenar no máximo **1.000 ml a 1.500 ml** por vez. Se o líquido for muito volumoso, o dreno deve ser pinçado após 1,5L e reaberto horas depois.",
+				"keywords": ["Limite de 1.500 ml"],
+				"order": 2
+			},
+			{
+				"text": "Qual o mecanismo fisiopatológico básico dessa complicação (Pressão hidrostática vs. Permeabilidade)?",
+				"correctAnswer": "O mecanismo principal é o aumento súbito da **permeabilidade capilar** e a inflamação local secundária à lesão de isquemia-reperfusão ocorrida durante a expansão pulmonar abrupta.",
+				"keywords": ["Permeabilidade Capilar"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 235,
+		"title": "Citologia Oncótica (Diagnóstico do Exsudato Maligno)",
+		"vignette": "Um paciente idoso com perda de peso apresenta derrame pleural unilateral exsudativo, com predominância de linfócitos, mas o ADA é baixo (descartando TB). Você envia o líquido para citologia oncótica.",
+		"explanation": "O diagnóstico de malignidade pleural muitas vezes exige persistência. A citologia oncótica tem sensibilidade limitada e resultados negativos iniciais não excluem a doença, sendo necessária a repetição do exame ou a realização de biópsia pleural em casos de alta suspeição clínica.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Se a primeira citologia oncótica vier negativa, isso exclui câncer na pleura?",
+				"correctAnswer": "**Não exclui.** A citologia oncótica do líquido pleural possui uma sensibilidade limitada para a detecção de células neoplásicas.",
+				"keywords": ["Citologia Oncótica"],
+				"order": 1
+			},
+			{
+				"text": "Qual a sensibilidade aproximada de uma única amostra e por que recomenda-se enviar uma segunda ou terceira amostra em casos suspeitos?",
+				"correctAnswer": "A sensibilidade da primeira amostra gira em torno de **50 a 60%**. Ao realizar uma segunda toracocentese, a sensibilidade aumenta para cerca de **80%**. O volume de líquido enviado (idealmente > 50ml) também otimiza o rendimento diagnóstico.",
+				"keywords": ["Sensibilidade"],
+				"order": 2
+			},
+			{
+				"text": "Qual o tumor primário que mais frequentemente causa derrame pleural metastático em homens e em mulheres?",
+				"correctAnswer": "Em homens, o mais comum é o **Câncer de Pulmão**. Em mulheres, é o **Câncer de Mama**.",
+				"keywords": ["Metástase Pleural"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 236,
+		"title": "D-Dímero Ajustado pela Idade (Refinando a ferramenta)",
+		"vignette": "Um paciente de 85 anos chega ao PS com dispneia. O Escore de Wells indica probabilidade \"baixa/improvável\" para TEP. O D-Dímero solicitado vem com valor de 700 ng/mL (o valor de referência do laboratório é < 500 ng/mL).",
+		"explanation": "O uso de um valor fixo de D-Dímero (500 ng/mL) em idosos resulta em baixa especificidade e excesso de exames de imagem desnecessários. O ajuste por idade é uma prática moderna recomendada por diretrizes internacionais para otimizar o diagnóstico de exclusão do TEP na população idosa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Segundo as diretrizes atuais, você deve considerar este D-Dímero positivo ou negativo para este paciente específico?",
+				"correctAnswer": "Deve ser considerado **Negativo**. Utilizando o ajuste pela idade, o ponto de corte para este paciente seria de 850 ng/mL, portanto o valor de 700 ng/mL está dentro da normalidade esperada.",
+				"keywords": ["D-Dímero Ajustado pela Idade"],
+				"order": 1
+			},
+			{
+				"text": "Qual a fórmula para o D-Dímero ajustado pela idade (para pacientes acima de 50 anos)?",
+				"correctAnswer": "A fórmula é: **Idade × 10 ng/mL**. Para um paciente de 85 anos, o cálculo resulta em 850 ng/mL.",
+				"keywords": ["Idade × 10"],
+				"order": 2
+			},
+			{
+				"text": "Por que o ajuste pela idade é importante (o que acontece com o D-Dímero conforme envelhecemos)?",
+				"correctAnswer": "Com o envelhecimento, ocorre um aumento fisiológico na produção de fibrina e pequenas ativações do sistema de coagulação, elevando os níveis basais de D-Dímero de forma inespecífica. O ajuste aumenta a especificidade do teste sem comprometer a segurança.",
+				"keywords": ["Especificidade no Idoso"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 237,
+		"title": "Quando NÃO puncionar (Derrame Bilateral na IC)",
+		"vignette": "Paciente com Insuficiência Cardíaca (IC) descompensada apresenta dispneia e Raio-X com derrame pleural bilateral, simétrico, sem febre ou dor torácica. O interno quer realizar uma toracocentese diagnóstica imediatamente para 'ver os Critérios de Light'.",
+		"explanation": "O aluno deve aprender a parcimônia. Puncionar um derrame pleural tipicamente hidrostático expõe o paciente a riscos (pneumotórax, infecção) sem mudar a conduta. Na grande maioria dos casos de IC, o derrame é um transudato que resolve com a melhora da função cardíaca. O conhecimento da 'atipia' (unilateralidade, febre, dor) é o que define a indicação precisa de uma punção diagnóstica imediata.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual a conduta inicial mais adequada antes de considerar a toracocentese neste caso?",
+				"correctAnswer": "A conduta inicial é o **tratamento clínico da causa base (diuréticos e otimização da IC)**. O derrame deve ser acompanhado conforme a resposta ao tratamento da insuficiência cardíaca.",
+				"keywords": ["Derrame Pleural na IC"],
+				"order": 1
+			},
+			{
+				"text": "Cite 3 'sinais de alerta' (critérios de atipia) que, se presentes em um paciente com IC, obrigariam a realização da punção pleural imediata.",
+				"correctAnswer": "1. **Derrame Unilateral** (ou francamente assimétrico); 2. **Presença de Febre**; 3. **Dor Torácica Pleurítica**. Esses sinais sugerem diagnósticos diferenciais ou complicações associadas, como pneumonia ou TEP.",
+				"keywords": ["Atipia (Febre/Dor/Unilateralidade)", "Simetria"],
+				"order": 2
+			},
+			{
+				"text": "Se após 72 horas de tratamento clínico otimizado (diuréticos) o derrame permanecer inalterado ou aumentar, a punção deve ser feita?",
+				"correctAnswer": "**Sim.** Se o derrame é refratário ao tratamento diurético (não diminui após 48-72h), a toracocentese está indicada para excluir outras causas associadas.",
+				"keywords": ["Derrame Refratário"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 238,
+		"title": "Pneumotórax Iatrogênico e o USG (Point-of-Care)",
+		"vignette": "Após a passagem de um Cateter Venoso Central (CVC) em veia subclávia, o paciente começa a apresentar desconforto respiratório. Você suspeita de pneumotórax iatrogênico e utiliza o Ultrassom (POCUS) à beira do leito.",
+		"explanation": "O POCUS (Point-of-Care Ultrasound) é uma ferramenta essencial na semiologia moderna. O USG é superior ao Raio-X de leito para diagnosticar pneumotórax precocemente. É fundamental reconhecer o deslizamento pleural e o ponto de pulmão para guiar a conduta, que pode ser conservadora em casos pequenos e estáveis.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "O que é o sinal do 'Deslizamento Pleural' (Lung Sliding) no USG e o que a sua ausência sugere?",
+				"correctAnswer": "O **Deslizamento Pleural** é a visualização das pleuras visceral e parietal deslizando uma sobre a outra durante a respiração. Sua **ausência** sugere que há ar entre as pleuras (pneumotórax), impedindo a visualização do movimento do parênquima pulmonar.",
+				"keywords": [
+					"Lung Sliding (Deslizamento Pleural)",
+					"POCUS (Point of Care Ultrasound)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o sinal ultrassonográfico considerado patognomônico (100% de especificidade) para pneumotórax?",
+				"correctAnswer": "O **Ponto de Pulmão (Lung Point)**. Representa o local exato da transição onde a pleura visceral volta a tocar a pleura parietal, confirmando a presença de ar no espaço pleural.",
+				"keywords": ["Ponto de Pulmão (Lung Point)"],
+				"order": 2
+			},
+			{
+				"text": "No pneumotórax iatrogênico por punção de veia central, a conduta é sempre a drenagem torácica?",
+				"correctAnswer": "**Não.** Se o pneumotórax for pequeno (geralmente < 2cm), o paciente estiver estável e não estiver em ventilação mecânica, pode-se optar por observação clínica e oxigenoterapia, realizando controle radiológico em 6 a 12 horas.",
+				"keywords": ["Pneumotórax Iatrogênico"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 239,
+		"title": "TEP no Paciente Oncológico (A Escolha do Anticoagulante)",
+		"vignette": "Um paciente com Câncer de Pâncreas em quimioterapia apresenta um TEP subsegmentar incidental em uma tomografia de estadiamento. Ele está assintomático.",
+		"explanation": "A relação Câncer-Trombose é uma manifestação paraneoplásica clássica devido ao estado de hipercoagulabilidade. O tratamento do TEP incidental (achado de exame) em oncologia é obrigatório, pois o risco de recorrência e morte é comparável ao TEP sintomático. A Enoxaparina permanece como um pilar no tratamento devido à segurança e menores interações medicamentosas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Este paciente deve ser anticoagulado, mesmo sendo um achado incidental e ele estando assintomático?",
+				"correctAnswer": "**Sim.** O TEP incidental em pacientes oncológicos tem o mesmo significado clínico e risco de complicações que o TEP sintomático, devendo ser tratado com anticoagulação plena.",
+				"keywords": ["TEP Incidental"],
+				"order": 1
+			},
+			{
+				"text": "Historicamente, qual a classe de anticoagulante de escolha para pacientes com câncer (estudo CLOT)?",
+				"correctAnswer": "A **Heparina de Baixo Peso Molecular (Enoxaparina)** em dose plena. É preferida por apresentar menores taxas de recorrência comparada à varfarina e maior segurança em relação a interações com quimioterápicos.",
+				"keywords": ["Enoxaparina (HBPM)"],
+				"order": 2
+			},
+			{
+				"text": "Por que o paciente oncológico tem um risco muito maior de TEP (fisiopatologia básica)?",
+				"correctAnswer": "O câncer induz um **estado de hipercoagulabilidade** sistêmica. As células tumorais liberam substâncias pró-coagulantes (como o fator tecidual) e ativam plaquetas e o sistema endotelial, favorecendo a formação de trombos.",
+				"keywords": ["Hipercoagulabilidade Maligna", "Interação Medicamentosa"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 240,
+		"title": "A Evolução do Empiema (Fibrina e Paquipleuris)",
+		"vignette": "Um paciente com empiema pleural está com dreno de tórax há 7 dias. O dreno parou de sair líquido purulento, mas o pulmão não expandiu totalmente no Raio-X e o paciente continua febril. A TC de tórax mostra várias 'lojas' (septações) de líquido presas por membranas.",
+		"explanation": "O empiema é uma doença dinâmica que evolui rapidamente. O tempo é crucial: se o líquido não for drenado na fase inicial (exsudativa), a fibrina começa a formar septos que impedem a drenagem eficaz por um único tubo. Se negligenciado, evolui para a fase de organização, onde uma carapaça fibrosa (paquipleuris) pode encarcerar o pulmão permanentemente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Em quais as 3 fases o empiema se divide (do início à organização)?",
+				"correctAnswer": "1. **Fase Exsudativa** (líquido fluido); 2. **Fase Fibrinopurulenta** (formação de septos de fibrina e loculações); 3. **Fase de Organização** (formação de tecido fibroso sólido).",
+				"keywords": [],
+				"order": 1
+			},
+			{
+				"text": "Em qual fase este paciente se encontra e por que o dreno de tórax sozinho parou de funcionar?",
+				"correctAnswer": "Ele está na **Fase Fibrinopurulenta**. O dreno parou de funcionar porque o líquido tornou-se **loculado (septado)**; o dreno esvaziou a loja em que estava inserido, mas outras coleções infectadas permanecem inacessíveis ao tubo.",
+				"keywords": ["Fase Fibrinopurulenta", "Loculação/Septação"],
+				"order": 2
+			},
+			{
+				"text": "O que é o 'Encarceramento Pulmonar' (Paquipleuris) que pode ocorrer se este empiema não for tratado corretamente?",
+				"correctAnswer": "É a formação de uma **carapaça fibrosa espessa** sobre a pleura visceral (paquipleuris), que impede o pulmão de se expandir. Isso resulta em distúrbio ventilatório restritivo crônico e pode exigir decorticação pleural cirúrgica.",
+				"keywords": ["Paquipleuris (Encarceramento)", "Decorticação Pleural"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 241,
+		"title": "TEP e a Insuficiência Renal (Cintilografia V/Q)",
+		"vignette": "Uma paciente de 72 anos, diabética, com Doença Renal Crônica (Creatinina 3.8 mg/dL e ClCr 15 ml/min), apresenta-se com dispneia súbita e Escore de Wells de alta probabilidade. Você sabe que a Angio-TC é o padrão-ouro, mas o risco de nefropatia por contraste é altíssimo.",
+		"explanation": "A Angio-TC possui limitações importantes em pacientes com insuficiência renal ou alergia grave ao contraste iodado. Nestes cenários, a Cintilografia V/Q é a principal alternativa diagnóstica. O conceito central deste exame é o 'mismatch': áreas onde há ventilação preservada, mas ausência de perfusão, o que traduz fisiopatologicamente a obstrução vascular pelo trombo.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o exame de imagem de escolha para esta paciente, considerando a contraindicação ao contraste iodado?",
+				"correctAnswer": "O exame de escolha é a **Cintilografia Pulmonar de Ventilação/Perfusão (V/Q)**. Este exame utiliza radioisótopos (como Tecnécio e Xenônio/Aerossol) que não apresentam nefrotoxicidade.",
+				"keywords": ["Cintilografia V/Q", "Nefropatia por Contraste"],
+				"order": 1
+			},
+			{
+				"text": "O que significa um resultado de 'Alta Probabilidade' e um resultado 'Normal' neste exame específico?",
+				"correctAnswer": "**Alta Probabilidade:** Indica a presença de áreas pulmonares bem ventiladas, mas não perfundidas (mismatch), sendo altamente sugestivo de TEP. **Normal:** Possui um alto valor preditivo negativo, excluindo o diagnóstico de TEP com segurança comparável à da Angio-TC.",
+				"keywords": ["Mismatch Ventilação-Perfusão"],
+				"order": 2
+			},
+			{
+				"text": "Se este exame vier como 'Probabilidade Intermediária', ele confirma ou exclui o TEP?",
+				"correctAnswer": "**Nenhum dos dois.** Um resultado de probabilidade intermediária ou baixa (não-diagnóstico) representa uma zona cinzenta. Ele não possui poder para confirmar nem excluir a patologia, exigindo a continuidade da investigação através de outros métodos, como o USG de membros inferiores.",
+				"keywords": ["Probabilidade Intermediária"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 242,
+		"title": "Amilase no Líquido Pleural (Pistas Extrapulmonares)",
+		"vignette": "Um paciente com histórico de etilismo crônico dá entrada com dor abdominal irradiada para o dorso e derrame pleural à esquerda. A toracocentese revela um exsudato. Você solicita a dosagem de Amilase no líquido pleural.",
+		"explanation": "A análise bioquímica do líquido pleural pode revelar diagnósticos de patologias com origem extrapulmonar. A amilase é um marcador fundamental quando há suspeita de doenças pancreáticas ou esofágicas. A diferenciação entre a isoenzima pancreática e a salivar é a chave para o diagnóstico diferencial em quadros de dor abdominal ou torácica aguda associada ao derrame.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Cite duas condições clínicas principais que elevam a amilase no líquido pleural.",
+				"correctAnswer": "As causas clássicas em situações de emergência são a **Pancreatite (Aguda ou Crônica)** e a **Ruptura de Esôfago**. Algumas neoplasias também podem elevar esse marcador.",
+				"keywords": ["Amilase Pleural", "Pancreatite"],
+				"order": 1
+			},
+			{
+				"text": "Como diferenciar a origem da amilase (pancreática vs. salivar) pode ajudar no diagnóstico de uma dessas condições?",
+				"correctAnswer": "A detecção de amilase **pancreática** direciona o diagnóstico para afecções do pâncreas. Já a presença de amilase **salivar** no espaço pleural é um marcador patognomônico de ruptura esofágica, indicando que a saliva extravasou para o tórax.",
+				"keywords": [],
+				"order": 2
+			},
+			{
+				"text": "No caso de uma Ruptura de Esôfago (Síndrome de Boerhaave), além da amilase, qual alteração no pH pleural você esperaria encontrar?",
+				"correctAnswer": "Espera-se encontrar um **pH pleural extremamente ácido (< 6.0)**. Isso ocorre devido à entrada de conteúdo gástrico e saliva, que geram uma intensa resposta inflamatória química e bacteriana imediata.",
+				"keywords": ["Ruptura Esofágica (Boerhaave)", "pH Pleural Ácido"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 243,
+		"title": "Enfisema Subcutâneo (Semiologia do Pneumotórax)",
+		"vignette": "Ao examinar um paciente que sofreu um trauma torácico e está com um dreno de tórax, você palpa a pele da região cervical e torácica e sente uma sensação de 'crepitação' ou 'estalo', como se estivesse apertando plástico bolha.",
+		"explanation": "A crepitação subcutânea é um sinal físico clássico nas emergências e traumas torácicos. Ela sinaliza que o ar escapou das vias aéreas ou do espaço pleural para o tecido celular subcutâneo. O enfisema subcutâneo massivo deve alertar o médico para a possibilidade de falha no sistema de drenagem ou uma fístula aérea de alto débito.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome deste achado semiológico?",
+				"correctAnswer": "O achado é denominado **Enfisema Subcutâneo**.",
+				"keywords": ["Enfisema Subcutâneo"],
+				"order": 1
+			},
+			{
+				"text": "O que este achado indica sobre a localização do ar fora do pulmão?",
+				"correctAnswer": "Indica que o ar se disseminou para o **tecido subcutâneo**, tendo escapado do espaço pleural ou do mediastino. É um sinal indireto de ruptura de via aérea ou da pleura (pneumotórax).",
+				"keywords": ["Crepitação à palpação", "Trauma Torácico"],
+				"order": 2
+			},
+			{
+				"text": "Se este achado progredir rapidamente para a face e pescoço, causando edema palpebral e mudança na voz, isso indica necessariamente que o dreno de tórax parou de funcionar?",
+				"correctAnswer": "**Não necessariamente**, porém sugere que o dreno pode estar mal posicionado ou obstruído, ou que o escape aéreo pulmonar excede a capacidade de sucção do sistema. O risco principal é a evolução para um pneumotórax hipertensivo.",
+				"keywords": ["Perviedade do Dreno"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 244,
+		"title": "Pseudoquilotórax (O Derrame Crônico)",
+		"vignette": "Um paciente com Tuberculose pleural tratada inadequadamente há anos apresenta um derrame pleural residual. O líquido é leitoso, mas a dosagem de Triglicerídeos é baixa (< 50 mg/dL) e a dosagem de Colesterol é alta (> 200 mg/dL).",
+		"explanation": "Diferenciar quilotórax de pseudoquilotórax é essencial para o manejo clínico. Enquanto o quilotórax decorre de vazamento agudo de linfa (rico em triglicerídeos), o pseudoquilotórax é um processo crônico resultante da lise celular em derrames antigos encapsulados por pleuras espessas, levando ao acúmulo de cristais de colesterol.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico deste líquido de aspecto leitoso?",
+				"correctAnswer": "O diagnóstico é **Pseudoquilotórax** (também conhecido como derrame quilotiforme ou colesterolínico).",
+				"keywords": ["Pseudoquilotórax", "Líquido Quilotiforme"],
+				"order": 1
+			},
+			{
+				"text": "Qual a diferença fisiopatológica básica entre este quadro e o Quilotórax?",
+				"correctAnswer": "No Quilotórax, o aspecto leitoso deve-se aos **Triglicerídeos** por ruptura do ducto torácico (quadro agudo). No **Pseudoquilotórax**, o aspecto leitoso decorre do **Colesterol** acumulado pela lise crônica de hemácias e células inflamatórias em um derrame retido por meses ou anos (quadro crônico).",
+				"keywords": ["Colesterol Pleural > 200 mg/dL"],
+				"order": 2
+			},
+			{
+				"text": "Cite uma doença reumatológica que frequentemente evolui com este tipo de derrame pleural crônico e rico em colesterol.",
+				"correctAnswer": "A **Artrite Reumatoide (AR)** é a condição reumatológica clássica associada a derrames pleurais crônicos que podem evoluir para pseudoquilotórax.",
+				"keywords": ["Artrite Reumatoide"],
+				"order": 3
+			}
+		]
+	}
+]

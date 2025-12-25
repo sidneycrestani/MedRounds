@@ -1,0 +1,1478 @@
+[
+	{
+		"id": 159,
+		"title": "Manejo da Crise Asmática Grave e Tórax Silencioso",
+		"vignette": "Uma paciente de 24 anos, asmática conhecida, chega ao Pronto-Socorro com dispneia intensa e fala entrecortada. Ao exame inicial, apresenta sibilos difusos e SpO2 91%. Após 3 ciclos de SABA (Beta-2 de curta) + SAMA (Anticolinérgico de curta) via spray com espaçador e corticoide sistêmico, você reavalia a paciente. Ela parece mais sonolenta, a musculatura acessória continua ativa, mas a ausculta pulmonar está silenciosa, sem sibilos audíveis. A SpO2 caiu para 88%.",
+		"explanation": "A crise asmática (exacerbação) deve ser manejada de forma agressiva.\n\n1.  **Avaliação da Gravidade:** Fala entrecortada, uso de musculatura acessória, frequência respiratória > 30 e SpO2 < 90% indicam gravidade.\n2.  **Primeira Linha:** Oxigênio (alvo 93-95%), SABA (Salbutamol/Fenoterol) associado a SAMA (Ipratrópio) em doses repetidas na primeira hora (3 ciclos a cada 20 min). Corticoide sistêmico (Prednisona oral ou Metilprednisolona/Hidrocortisona IV) deve ser iniciado na primeira hora para prevenir recidiva e reduzir inflamação (ação começa em 4-6h).\n3.  **Tórax Silencioso:** É uma \"casca de banana\" clássica. O aluno inexperiente pode achar que a ausência de sibilos indica \"limpeza\" do pulmão, quando na verdade indica fluxo aéreo crítico.\n4.  **Sulfato de Magnésio:** Indicado na asma grave (FEV1 < 25-30% ou hipoxemia persistente) que não responde à primeira hora de tratamento.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Como você interpreta o desaparecimento dos sibilos (\"Tórax Silencioso\") neste contexto e qual a fisiopatologia por trás desse fenômeno?",
+				"correctAnswer": "O desaparecimento dos sibilos associado à piora clínica e queda da saturação indica o fenômeno do Tórax Silencioso. Isso representa extrema gravidade e iminência de parada respiratória. Fisiopatologicamente, o broncoespasmo, o edema e o tamponamento mucoso são tão severos que o fluxo de ar é insuficiente até mesmo para gerar a turbulência necessária para produzir o som do sibilo. Não houve melhora, houve obstrução quase total.",
+				"keywords": ["Tórax Silencioso", "Obstrução Crítica ao Fluxo"],
+				"order": 1
+			},
+			{
+				"text": "Diante da falha da terapia inicial, você decide administrar Sulfato de Magnésio venoso. Qual o mecanismo de ação farmacológico esperado e qual o objetivo desta droga na crise grave?",
+				"correctAnswer": "O Sulfato de Magnésio atua como um antagonista do cálcio na musculatura lisa brônquica, promovendo relaxamento muscular (broncodilatação) por mecanismo diferente dos beta-agonistas. O objetivo é evitar a intubação orotraqueal em pacientes que não responderam à terapia padrão (SABA + SAMA + Corticoide), servindo como terapia de resgate.",
+				"keywords": ["Sulfato de Magnésio IV", "Bloqueio de Canais de Cálcio"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 160,
+		"title": "Exacerbação de DPOC e Critérios de Anthonisen",
+		"vignette": "Um paciente de 68 anos, tabagista (carga tabágica 50 maços-ano) e portador de DPOC, procura atendimento por \"falta de ar pior que o habitual\" há 3 dias. Refere também aumento da quantidade de escarro, que passou de hialino para purulento (amarelo-esverdeado). Ao exame: SpO2 86% em ar ambiente, sibilos expiratórios e murmúrio vesicular diminuído globalmente.",
+		"explanation": "A exacerbação da DPOC é um evento agudo caracterizado pela piora dos sintomas respiratórios que requer mudança terapêutica.\n\n*   **Antibióticos (Anthonisen):**\n    *   Tipo 1 (3 critérios): Antibiótico indicado.\n    *   Tipo 2 (2 critérios, sendo um deles purulência): Antibiótico indicado.\n    *   Tipo 3 (1 critério): Antibiótico geralmente não indicado.\n    *   *Nota:* Pacientes que necessitam de Ventilação Mecânica (Invasiva ou VNI) sempre ganham antibiótico, independentemente dos critérios clínicos.\n*   **Oxigênio na DPOC:** Diferente da asma, o excesso de O2 na DPOC pode causar hipercapnia (retenção de CO2). Por isso, o alvo é estrito (88-92%).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Utilizando os Critérios de Anthonisen, justifique se há ou não indicação de antibioticoterapia neste caso.",
+				"correctAnswer": "Sim, há indicação de antibiótico. Os critérios de Anthonisen avaliam três mudanças cardinais: 1. Aumento da dispneia; 2. Aumento do volume do escarro; 3. Purulência do escarro. A presença de purulência associada a pelo menos mais um critério (neste caso, dispneia e volume aumentados - Tipo 1) torna o uso de antibiótico mandatório, pois há forte correlação com etiologia bacteriana (H. influenzae, M. catarrhalis, S. pneumoniae).",
+				"keywords": ["Critérios de Anthonisen", "Purulência do Escarro"],
+				"order": 1
+			},
+			{
+				"text": "Além da decisão sobre o antibiótico, quais são os outros três pilares fundamentais (\"Tripé\") do manejo da exacerbação da DPOC na sala de emergência?",
+				"correctAnswer": "Os três pilares fundamentais são: 1. Broncodilatadores de curta ação: Aumento da dose e frequência de SABA (Salbutamol) associado a SAMA (Ipratrópio). 2. Corticosteroide Sistêmico: Prednisona oral (preferencial) ou corticoide venoso por 5 a 7 dias para reduzir inflamação e tempo de internação. 3. Oxigenoterapia Controlada: Alvo de saturação 88-92% para evitar a narcose por CO2 (perda do drive hipóxico e efeito Haldane), utilizando Venturi ou VNI se houver acidose respiratória.",
+				"keywords": ["Narcose por CO2", "Alvo de Saturação 88-92%"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 161,
+		"title": "Fisiopatologia Diferencial: Asma vs DPOC",
+		"vignette": "Dois pacientes apresentam quadro de obstrução ao fluxo aéreo na espirometria (VEF1/CVF < 0,70).\n\n*   Paciente A (Asma): 20 anos, história de atopia. A obstrução reverte significativamente após broncodilatador.\n*   Paciente B (DPOC): 65 anos, enfisematoso. A obstrução é fixa ou pouco reversível.",
+		"explanation": "Compreender a fisiopatologia dita o tratamento:\n\n*   **Asma:** Como é eosinofílica/inflamatória, a base do tratamento é o Corticoide Inalatório (anti-inflamatório).\n*   **DPOC:** Como há destruição estrutural e perda de elasticidade com inflamação neutrofílica (menos responsiva a corticoide), a base do tratamento é o Broncodilatador de Longa Ação (LAMA/LABA) para manter a via aérea aberta mecanicamente e reduzir o aprisionamento de ar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Compare a fisiopatologia celular/imunológica predominante no Paciente A versus o Paciente B. Quais são as principais células inflamatórias envolvidas em cada doença?",
+				"correctAnswer": "Paciente A (Asma): Inflamação predominantemente Eosinofílica (perfil Th2), mediada por IgE, mastócitos e leucotrienos. É uma resposta alérgica/atópica. Paciente B (DPOC): Inflamação predominantemente Neutrofílica e macrofágica (perfil Tc1/Th1 e Th17), mediada por CD8+ e estresse oxidativo causado pela fumaça do cigarro.",
+				"keywords": [
+					"Perfil Th2/Eosinófilos (Asma)",
+					"Neutrófilos/CD8+ (DPOC)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Explique a diferença estrutural nas vias aéreas/alvéolos que justifica por que a doença do Paciente B é progressiva e irreversível, ao contrário do Paciente A.",
+				"correctAnswer": "Na Asma (A), a obstrução é causada por contração do músculo liso, edema e muco, sobre uma membrana basal espessada; as estruturas alveolares estão preservadas (remodelamento das vias aéreas, mas sem destruição parenquimatosa). Na DPOC (B), ocorre destruição dos septos alveolares (Enfisema), o que reduz o recolhimento elástico do pulmão (o pulmão não \"esvazia\" sozinho), além de fibrose peribronquiolar. Essa perda de tração radial e destruição tecidual é irreversível.",
+				"keywords": ["Destruição Alveolar", "Perda do Recolhimento Elástico"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 162,
+		"title": "Bronquiectasias e Ciclo Vicioso de Cole",
+		"vignette": "Uma paciente de 45 anos com história de tuberculose tratada há 15 anos queixa-se de tosse crônica diária com expectoração de grande volume (\"xícaras de catarro\") pela manhã. Apresenta pneumonias de repetição (3 no último ano). A TC de tórax mostra brônquios dilatados com espessamento parietal e sinal do \"anel de sinete\".",
+		"explanation": "Bronquiectasia não é apenas uma \"bronquite\". É uma dilatação irreversível e anormal dos brônquios.\n\n*   **Diagnóstico:** Clínico (tosse produtiva crônica, infecções de repetição) + Imagem (TC de Alta Resolução é o padrão-ouro).\n*   **Manejo:** Fisioterapia respiratória (higiene brônquica) é essencial para quebrar o ciclo de estase. O uso de antibióticos é focado nas exacerbações ou, em casos selecionados, antibiótico inalatório/oral contínuo para suprimir a carga bacteriana (ex: macrolídeos pelo efeito anti-inflamatório/imunomodulador ou tobramicina inalatória).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Descreva o \"Ciclo Vicioso de Cole\" que explica a perpetuação da doença desta paciente.",
+				"correctAnswer": "O Ciclo Vicioso de Cole descreve a patogênese das Bronquiectasias: 1. Agressão inicial/Dano estrutural (ex: sequela de TB) prejudica o clearance mucociliar. 2. Acúmulo de secreção facilita a colonização bacteriana. 3. Infecção/Inflamação crônica recruta neutrófilos que liberam proteases. 4. Mais dano tecidual ocorre, dilatando mais os brônquios e reiniciando o ciclo.",
+				"keywords": [
+					"Ciclo Vicioso de Cole",
+					"Clearance Mucociliar Prejudicado"
+				],
+				"order": 1
+			},
+			{
+				"text": "Ao contrário de uma Pneumonia Adquirida na Comunidade (PAC) comum, por que a cultura de escarro (inclusive fora das exacerbações) é uma ferramenta obrigatória no manejo desta patologia?",
+				"correctAnswer": "Pacientes com bronquiectasias são frequentemente colonizados por germes multirresistentes, especialmente Pseudomonas aeruginosa. A cultura de vigilância (fora da crise) permite conhecer a flora do paciente (\"flora residente\"). Se a paciente exacerbar, o antibiótico empírico deve ser guiado por essas culturas prévias (ex: cobrir Pseudomonas), diferentemente da PAC, onde a cobertura é padronizada para Pneumococo.",
+				"keywords": ["Colonização por Pseudomonas", "Cultura de Vigilância"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 163,
+		"title": "Mecânica Respiratória e Avaliação Objetiva na Obstrução Aérea",
+		"vignette": "Um estudante de medicina observa dois exames de imagem e testes de função pulmonar. O primeiro paciente tem um tórax em \"tanoeiro\" (aumento do diâmetro anteroposterior) e o teste mostra um Volume Residual (VR) muito elevado e uma Capacidade Pulmonar Total (CPT) também aumentada. O segundo paciente, durante uma crise, apresenta uma queda súbita no Pico de Fluxo Expiratório (Peak Flow).",
+		"explanation": "A mecânica respiratória nas doenças obstrutivas é ditada pela dificuldade de colocar o ar para **fora**. \n- **Capacidade Pulmonar Total (CPT):** No DPOC, ela aumenta porque o pulmão se torna mais \"complacente\" (frouxo) e retém ar.\n- **Volume Residual (VR):** É o ar que sobra após a expiração máxima. Se o VR sobe, ele \"rouba\" espaço da Capacidade Vital, fazendo o paciente sentir dispneia mesmo com pulmões cheios de ar.\n- **Pico de Fluxo (Peak Flow):** É uma ferramenta de beira de leito barata e essencial. Valores abaixo de 50% do previsto/melhor pessoal indicam crise grave.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique o conceito fisiopatológico de Hiperinsuflação Dinâmica e Aprisionamento Aéreo no paciente com DPOC. Por que o Volume Residual aumenta?",
+				"correctAnswer": "A DPOC causa destruição do parênquima (enfisema) e perda da sustentação elástica dos bronquíolos. Durante a expiração, a pressão positiva colapsa essas vias aéreas precocemente (Colapso Expiratório), impedindo que todo o ar saia. O ar que fica retido aumenta o Volume Residual. Na exacerbação, a frequência respiratória aumenta e o paciente não tem tempo de expirar todo o ar antes da próxima inspiração, gerando a Hiperinsuflação Dinâmica, que coloca a musculatura respiratória em desvantagem mecânica.",
+				"keywords": [
+					"Colapso Expiratório Precoce",
+					"Hiperinsuflação Dinâmica",
+					"Volume Residual (VR)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Na crise de asma, por que a medida do Pico de Fluxo Expiratório (PFE) ou do VEF1 é mais fidedigna que a ausculta pulmonar para avaliar a resposta ao tratamento no Pronto-Socorro?",
+				"correctAnswer": "Porque a ausculta é subjetiva e pode ser enganosa (ex: o \"tórax silencioso\" ou a persistência de sibilos em pacientes que já estão clinicamente melhores). O PFE é uma medida objetiva de obstrução de grandes vias aéreas. Uma melhora no PFE reflete diretamente a redução da resistência ao fluxo, permitindo uma decisão mais segura sobre a alta hospitalar ou necessidade de internação.",
+				"keywords": ["Pico de Fluxo Expiratório (PFE)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 164,
+		"title": "Manejo de Exacerbação: VNI e Bronquiectasias Associadas",
+		"vignette": "Durante o manejo de um paciente com DPOC exacerbado na emergência, você nota que ele apresenta sinais de fadiga muscular e acidose respiratória (pH 7.28, pCO2 55 mmHg). Você sabe que a Ventilação Não Invasiva (VNI) é o padrão-ouro aqui. No entanto, o paciente está muito secretivo e tem diagnóstico prévio de bronquiectasias extensas em lobos inferiores.",
+		"explanation": "A associação DPOC + Bronquiectasias é comum e agrava o prognóstico. \n- **VNI na DPOC:** Reduz o trabalho respiratório e ajuda a \"lavar\" o CO2. É a conduta que mais reduz mortalidade na exacerbação grave.\n- **Bronquiectasias:** A prioridade é a **limpeza**. O pulmão bronquiectásico é funcionalmente um \"pântano\" (água parada que infecta). O tratamento de uma exacerbação de bronquiectasia sem fisioterapia é incompleto.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o risco de utilizar VNI em um paciente com DPOC que possui grande volume de secreção (bronquiectasias associadas)?",
+				"correctAnswer": "O principal risco é a broncoaspiração e a falha da VNI por obstrução das vias aéreas por plugues de moco. A VNI pressupõe que a via aérea esteja pérvia. Se o paciente não consegue expectorar o grande volume de secreção das bronquiectasias, a pressão positiva pode empurrar a secreção para a periferia pulmonar, piorando a relação V/Q e aumentando o risco de pneumonia aspirativa.",
+				"keywords": [
+					"Plugue Mucoso",
+					"Acidose Respiratória (Indicação de VNI)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Além da antibioticoterapia e broncodilatadores, qual medida terapêutica \"não-farmacológica\" é indispensável para o tratamento das bronquiectasias exacerbadas e por que ela é negligenciada no Pronto-Socorro?",
+				"correctAnswer": "A Fisioterapia Respiratória (Higiene Brônquica). Nas bronquiectasias, o \"motor\" do muco (os cílios) está destruído. O paciente depende de manobras físicas (drenagem postural, percussão, tosse assistida) para remover o catarro. Sem a retirada mecânica do reservatório infectado, o antibiótico tem eficácia reduzida porque não penetra bem no biofilme purulento.",
+				"keywords": ["Higiene Brônquica", "Clearance Mucociliar"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 165,
+		"title": "Terapia Combinada e Corticosteroides na Crise Asmática",
+		"vignette": "Um paciente asmático de 30 anos chega ao PS com crise moderada. Você prescreve Fenoterol (SABA) e Ipratrópio (SAMA) via nebulização. O paciente pergunta por que ele precisa usar o \"remédio que seca a boca\" (Ipratrópio), já que ele sempre usou apenas a \"bombinha de alívio\" em casa.",
+		"explanation": "No Pronto-Socorro, a regra de ouro é: **Oxigênio, Broncodilatador e Corticoide**.\n- **SAMA (Ipratrópio):** Na asma, seu papel é restrito à crise aguda no PS. No uso crônico ambulatorial da asma, ele é pouco usado (diferente da DPOC).\n- **Via de administração:** Na crise, a via oral para corticoides é tão eficaz quanto a venosa, a menos que o paciente esteja vomitando ou em insuficiência respiratória iminente.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a vantagem farmacológica de associar um Anticolinérgico (SAMA) ao Beta-2 agonista (SABA) especificamente na crise aguda?",
+				"correctAnswer": "A associação promove um bloqueio duplo da via aérea. Enquanto o SABA atua diretamente nos receptores Beta-2 promovendo relaxamento da musculatura lisa, o SAMA bloqueia os receptores muscarínicos (M3), inibindo o tônus vagal (parassimpático) que está aumentado na crise. Essa sinergia resulta em maior broncodilatação e redução da produção de muco, diminuindo as taxas de hospitalização.",
+				"keywords": ["Tônus Vagal", "Sinergismo SABA/SAMA"],
+				"order": 1
+			},
+			{
+				"text": "Por que o corticoide utilizado na emergência deve ser administrado o mais rápido possível, mesmo sabendo que seu efeito broncodilatador não é imediato?",
+				"correctAnswer": "O corticoide sistêmico demora de 4 a 6 horas para começar a agir (efeito genômico). Ele não é um broncodilatador direto. Sua função é reduzir a inflamação da mucosa, diminuir o edema e, crucialmente, up-regulate (aumentar a sensibilidade e o número) dos receptores Beta-2, tornando o SABA mais eficaz nas horas seguintes.",
+				"keywords": [
+					"Up-regulation de Receptores Beta-2",
+					"Efeito Genômico (Corticoide)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 166,
+		"title": "Riscos da Oxigenoterapia no DPOC e Narcose por CO2",
+		"vignette": "Um homem de 70 anos, portador de DPOC grave, apresenta-se com quadro de exacerbação. Ao chegar, ele está consciente, mas sonolento. A saturação inicial era 82% em ar ambiente. O enfermeiro instalou uma máscara de oxigênio com alto fluxo (10 L/min), e após 20 minutos o paciente tornou-se irresponsivo, apesar de a saturação agora marcar 99%.",
+		"explanation": "O oxigênio na DPOC deve ser tratado como uma droga com janela terapêutica estreita. \n- **Máscara de Venturi:** Utiliza o princípio de Bernoulli para garantir que o paciente receba exatamente o que foi prescrito (ex: 24%, 28%, 31%), independente do seu padrão respiratório.\n- **Gasometria:** É obrigatória em qualquer DPOC exacerbado para avaliar o pH e a pCO2 basal.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique o fenômeno fisiológico que levou ao rebaixamento do nível de consciência após a oferta excessiva de Oxigênio (Narcose por CO2).",
+				"correctAnswer": "Três mecanismos explicam a retenção de CO2 induzida por O2 excessivo na DPOC: 1. Redução do Drive Respiratório: O paciente DPOC retém CO2 cronicamente e passa a depender da hipoxemia para estimular o centro respiratório; ao corrigir o O2 demais, ele \"para\" de respirar. 2. Efeito Haldane: O O2 em excesso desloca o CO2 da hemoglobina para o plasma. 3. Reversão da Vasoconstrição Pulmonar Hipóxica: O O2 abre vasos em áreas mal ventiladas, aumentando o espaço morto fisiológico. O resultado final é a hipercapnia severa, que tem efeito narcótico no cérebro.",
+				"keywords": [
+					"Drive Hipoxêmico",
+					"Efeito Haldane",
+					"Vasoconstrição Pulmonar Hipóxica"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o dispositivo de oxigenoterapia mais adequado para este paciente no PS e qual o alvo de saturação recomendado?",
+				"correctAnswer": "O dispositivo ideal é a Máscara de Venturi, pois permite oferecer uma Fração Inspirada de O2 (FiO2) exata e constante. O alvo de saturação deve ser entre 88% e 92%.",
+				"keywords": ["Máscara de Venturi"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 167,
+		"title": "Crises de Asma Induzidas por Fármacos e Tríade de Samter",
+		"vignette": "Um paciente de 25 anos com asma intermitente chega ao PS com uma crise de broncoespasmo grave logo após ter tomado um comprimido para dor de cabeça e outro para 'tremedeira e ansiedade' que pegou com um familiar. Ele não sabe o nome das medicações, mas você suspeita de uma crise induzida por fármacos.",
+		"explanation": "Identificar o gatilho da crise é parte fundamental do manejo no 3º e 4º ano. \n\n*   **Beta-bloqueadores:** Mesmo colírios para glaucoma (Timolol) podem ser absorvidos sistemicamente e causar crise.\n*   **Tríade de Samter (Doença Respiratória Exacerbada por Aspirina):** Composta por Asma + Polipose Nasal + Intolerância à Aspirina/AINEs. É um diagnóstico clínico importante.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Quais são as duas classes de medicamentos mais comumente envolvidas no desencadeamento de crises de asma por iatrogenia ou automedicação?",
+				"correctAnswer": "As duas classes são os **Beta-bloqueadores não seletivos** (ex: Propranolol), que bloqueiam os receptores Beta-2 pulmonares impedindo a broncodilatação, e os **AINEs/Aspirina**.",
+				"keywords": ["Beta-bloqueadores não seletivos"],
+				"order": 1
+			},
+			{
+				"text": "Explique o mecanismo pelo qual os Anti-inflamatórios Não Esteroidais (AINEs), como a Aspirina, podem precipitar broncoespasmo em pacientes suscetíveis (Tríade de Samter).",
+				"correctAnswer": "O mecanismo envolve o desvio da cascata do ácido araquidônico. Ao bloquear a via da Ciclooxigenase (COX-1), o metabolismo do ácido araquidônico é desviado para a via da **Lipoxigenase**, resultando na produção excessiva de **Leucotrienos**, que são potentes bronconstritores e indutores de edema de mucosa.",
+				"keywords": ["Via da Lipoxigenase", "Leucotrienos", "Tríade de Samter"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 168,
+		"title": "Semiologia Avançada do DPOC: Sinal de Hoover e Mecânica Respiratória",
+		"vignette": "Ao examinar um paciente com DPOC avançado (estágio GOLD 4), você nota que o tórax está permanentemente expandido. Durante a inspiração, você observa que a parte inferior da caixa torácica se retrai (move-se para dentro) em vez de expandir. Além disso, o paciente prefere ficar sentado, inclinado para frente, apoiando os braços nos joelhos (posição de tripé).",
+		"explanation": "A semiologia do DPOC no 4º ano deve focar na falência mecânica:\n\n*   **Sinais de Hiperinsuflação:** Tórax em tonel, redução da expansibilidade, timpanismo à percussão e redução da macicez hepática.\n*   **Sinais de Fadiga/Uso de Acessória:** Batimento de asa de nariz, tiragem supraclavicular e sinal de Hoover.\n*   **Lábios franzidos:** O paciente expira contra os lábios quase fechados para criar uma \"pressão positiva expiratória final\" (PEEP) intrínseca, evitando o colapso precoce das vias aéreas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome do sinal semiológico da retração paradoxal da base do tórax na inspiração e qual sua explicação anatômica?",
+				"correctAnswer": "O nome é **Sinal de Hoover**. Ele ocorre devido à hiperinsuflação crônica que retifica (aplana) o diafragma. Um diafragma achatado, ao se contrair, em vez de expandir a base do tórax, puxa as costelas inferiores para dentro, pois as fibras musculares estão orientadas horizontalmente devido à distensão pulmonar.",
+				"keywords": ["Sinal de Hoover", "Retificação Diafragmática"],
+				"order": 1
+			},
+			{
+				"text": "Por que o paciente com DPOC grave adota a \"posição de tripé\" e como isso auxilia na mecânica respiratória?",
+				"correctAnswer": "A posição de tripé permite que o paciente utilize a musculatura acessória (peitorais) com maior eficiência. Ao fixar a cintura escapular (apoiando os braços), o músculo peitoral, que normalmente move o braço, passa a atuar de forma inversa, \"puxando\" as costelas para cima e para fora, auxiliando a inspiração em um diafragma já fadigado.",
+				"keywords": ["Posição de Tripé", "Musculatura Acessória"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 169,
+		"title": "Gasometria Arterial na Crise de Asma: O Perigo da Pseudo-normalização",
+		"vignette": "Uma paciente de 19 anos em crise asmática grave é submetida a uma gasometria arterial enquanto recebe oxigênio por máscara. O resultado mostra: pH 7.40, pCO2 40 mmHg, pO2 70 mmHg e HCO3 24 mEq/L. O interno de medicina comenta: 'O pH e a pCO2 estão normais, então a paciente está compensada e fora de perigo imediato'.",
+		"explanation": "A gasometria na asma deve ser interpretada de forma dinâmica:\n\n1.  **Fase Inicial/Moderada:** Hipoxemia + Hipocapnia (pCO2 < 35) + Alcalose.\n2.  **Fase de Pré-Fadiga:** Hipoxemia + pCO2 'Normal' (35-45) -> **O sinal de alerta!**\n3.  **Fase de Insuficiência Respiratória:** Hipoxemia grave + Hipercapnia (pCO2 > 45) + Acidose.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Por que o comentário do interno está perigosamente incorreto? O que uma pCO2 'normal' significa no auge de uma crise de asma?",
+				"correctAnswer": "Uma pCO2 'normal' (40 mmHg) em um paciente com crise asmática grave e taquipneia é um sinal de exaustão respiratória iminente. O esperado para um paciente taquipneico é uma pCO2 baixa (hipocapnia) devido à hiperventilação. Se a pCO2 está 'normalizando' ou subindo, significa que a paciente não consegue mais sustentar o trabalho respiratório para lavar o CO2. É um marcador de gravidade extrema que precede a acidose respiratória e a parada.",
+				"keywords": [
+					"Pseudo-normalização da pCO2",
+					"Fadiga da Musculatura Respiratória"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual é o achado gasométrico esperado em uma crise de asma leve a moderada (fase inicial) e por que ele ocorre?",
+				"correctAnswer": "O achado esperado é Alcalose Respiratória com Hipoxemia (pH elevado e pCO2 baixa). Isso ocorre porque a hipoxemia estimula o drive respiratório, levando à hiperventilação, que elimina excessivamente o CO2.",
+				"keywords": ["Alcalose Respiratória", "Hiperventilação Alveolar"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 170,
+		"title": "Sinais de Gravidade: Pulso Paradoxal na Obstrução Respiratória",
+		"vignette": "Durante a monitorização de um paciente com asma aguda grave, você utiliza um esfigmomanômetro para avaliar o pulso arterial. Você nota que a pressão arterial sistólica cai 15 mmHg durante a inspiração espontânea do paciente.",
+		"explanation": "O Pulso Paradoxal é um marcador fidedigno de obstrução grave ao fluxo aéreo e de alto trabalho respiratório. Ele reflete a magnitude das oscilações de pressão dentro do tórax. Se o pulso paradoxal desaparece sem melhora clínica, pode indicar que o paciente não tem mais força para gerar pressão negativa (fadiga).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome deste sinal semiológico e a partir de qual valor ele é considerado patológico?",
+				"correctAnswer": "O nome é Pulso Paradoxal. Ele é considerado patológico quando a queda da pressão arterial sistólica durante a inspiração é superior a 10 mmHg.",
+				"keywords": ["Pulso Paradoxal (> 10 mmHg)"],
+				"order": 1
+			},
+			{
+				"text": "Explique o mecanismo fisiopatológico (interação coração-pulmão) que gera esse fenômeno na obstrução grave das vias aéreas.",
+				"correctAnswer": "Na obstrução grave (Asma/DPOC), o paciente faz uma pressão intratorácica excessivamente negativa para conseguir inspirar. Essa pressão negativa aumenta o retorno venoso para o ventrículo direito (VD), abaulando o septo interventricular para a esquerda. Simultaneamente, a hiperinsuflação pulmonar aumenta a pós-carga do VD. O resultado é uma redução do enchimento e do débito do ventrículo esquerdo durante a inspiração, gerando a queda da pressão sistólica.",
+				"keywords": [
+					"Pressão Intratorácica Negativa",
+					"Interdependência Ventricular",
+					"Abaulamento do Septo Interventricular"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 171,
+		"title": "Espirometria: Prova Broncodilatadora e Critérios de Reversibilidade",
+		"vignette": "Para diferenciar Asma de DPOC no ambulatório (Fase 1: Diagnóstico Sindrômico), o médico solicita uma espirometria com prova broncodilatadora (PBD). O laudo mostra: VEF1 pré-BD: 1.50L (50% do previsto); VEF1 pós-BD: 1.85L (62% do previsto). O ganho absoluto foi de 350ml e o ganho percentual foi de 23% em relação ao valor pré-BD.",
+		"explanation": "A espirometria é a 'biópsia funcional' do pneumologista. No 3º e 4º ano, o aluno deve dominar:\n\n- **Distúrbio Obstrutivo:** VEF1/CVF < 0,70.\n- **Resposta ao BD:** 12% + 200ml (Regra dos 12 e 200). \n*Nota:* Uma resposta positiva não exclui DPOC (alguns pacientes têm componente asmático associado - ACO), mas uma resposta muito exuberante aponta fortemente para Asma.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Este teste é considerado positivo para resposta ao broncodilatador? Quais os critérios numéricos da diretriz brasileira para definir uma prova broncodilatadora positiva?",
+				"correctAnswer": "Sim, o teste é positivo. Para ser considerada uma resposta significativa, deve haver um aumento no VEF1 (ou CVF) de pelo menos 12% E um aumento absoluto de pelo menos 200ml em relação ao valor pré-broncodilatador. No caso, houve 23% e 350ml de ganho.",
+				"keywords": [
+					"VEF1 (Volume Expiratório Forçado no 1º segundo)",
+					"Critério 12% e 200ml"
+				],
+				"order": 1
+			},
+			{
+				"text": "Do ponto de vista fisiopatológico, o que a presença de uma 'resposta significativa' sugere sobre a natureza da doença deste paciente (Asma vs DPOC)?",
+				"correctAnswer": "Sugere uma obstrução reversível ou parcialmente reversível, o que é a marca registrada da Asma. No DPOC, a obstrução é tipicamente fixa ou com reversibilidade mínima, devido à destruição estrutural (enfisema) e fibrose que não respondem ao relaxamento da musculatura lisa.",
+				"keywords": [
+					"Prova Broncodilatadora (PBD)",
+					"Reversibilidade da Obstrução"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 172,
+		"title": "Diagnóstico Diferencial de Sibilos: Asma Brônquica vs Asma Cardíaca",
+		"vignette": "Dois pacientes chegam ao Pronto-Socorro com queixa de dispneia e \"chiado no peito\". Paciente A: 22 anos, história de rinite, apresenta tosse seca e sibilos expiratórios difusos. Murmúrio vesicular bem distribuído, sem estertores. Paciente B: 68 anos, hipertenso e cardiopata, apresenta dispneia que piora ao deitar (ortopneia), sibilos inspiratórios e expiratórios, associados a estertores finos em bases pulmonares e uma terceira bulha (B3) à ausculta cardíaca.",
+		"explanation": "\"Nem tudo que sibila é asma\". Este é um mantra fundamental para o 4º ano. * **Diagnóstico Diferencial:** O estudante deve buscar sinais de congestão sistêmica (edema de membros inferiores, turgência jugular) e pulmonar (estertores, ortopneia) para diferenciar a asma cardíaca da brônquica. * **Ausculta:** Na asma brônquica, os sibilos costumam ser predominantemente expiratórios. Na asma cardíaca, a presença de estertores crepitantes (\"som de velcro\") direciona para o alvéolo ocupado por líquido.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o termo semiológico utilizado para o quadro do Paciente B e qual a fisiopatologia por trás do sibilo neste contexto?",
+				"correctAnswer": "O termo é **Asma Cardíaca**. O sibilo no Paciente B não é causado por uma inflamação brônquica primária (como na asma brônquica), mas sim por um **edema peribronquial**. O aumento da pressão hidrostática nos capilares pulmonares (devido à falência do ventrículo esquerdo) leva ao extravasamento de fluido para o interstício, o que comprime as pequenas vias aéreas e gera turbulência no fluxo de ar, mimetizando o som do sibilo.",
+				"keywords": ["Asma Cardíaca", "Edema Peribronquial"],
+				"order": 1
+			},
+			{
+				"text": "Por que o uso de Beta-2 agonistas (como o Salbutamol) pode ser perigoso ou mascarar o quadro no Paciente B?",
+				"correctAnswer": "Porque os Beta-2 agonistas podem causar **taquicardia e hipocalemia**, o que aumenta a demanda miocárdica de oxigênio e pode desencadear arritmias em um coração já insuficiente. Além disso, ao tratar apenas o \"chiado\", o médico pode atrasar o diagnóstico de Insuficiência Cardíaca Descompensada, cuja base do tratamento é a diurese e redução da pré/pós-carga, e não a broncodilatação isolada.",
+				"keywords": ["Ortopneia", "Estertores Crepitantes"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 173,
+		"title": "Fenótipos Clínico-Fisiopatológicos da DPOC: Pink Puffer e Blue Bloater",
+		"vignette": "Na enfermaria de clínica médica, você avalia dois pacientes com DPOC avançada que exemplificam os dois extremos da doença: Paciente 1: Magro, caquético, taquipneico, usa musculatura acessória e expira com os lábios franzidos. O tórax é nitidamente hiperinsuflado. A gasometria mostra pO2 limítrofe, mas pCO2 normal. Paciente 2: Obeso, apresenta cianose de extremidades, tosse produtiva crônica e edema importante de membros inferiores. A gasometria mostra hipoxemia acentuada e hipercapnia (retenção de CO2).",
+		"explanation": "Embora a maioria dos pacientes tenha componentes de ambos, entender os extremos ajuda na fisiopatologia: * **Pink Puffer (Enfisema):** O problema é a destruição alveolar (perda de área de troca). Ele hiperventila para compensar, por isso é \"rosado\" e magro (alto gasto energético para respirar). * **Blue Bloater (Bronquite):** O problema é a inflamação e muco nas vias aéreas. Ele \"desiste\" de lutar contra a obstrução, hiperventila menos, retém CO2 e fica cianótico (\"azul\"). A hipoxemia crônica leva à policitemia e ao Cor Pulmonale.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Identifique os fenótipos clássicos (epônimos) do Paciente 1 e do Paciente 2.",
+				"correctAnswer": "**Paciente 1:** Enfisematoso ou *\"Pink Puffer\"* (Soprador Rosado). **Paciente 2:** Bronquítico Crônico ou *\"Blue Bloater\"* (Azul e Inchado).",
+				"keywords": [
+					"Pink Puffer vs. Blue Bloater",
+					"Hiperventilação Compensatória"
+				],
+				"order": 1
+			},
+			{
+				"text": "Explique por que o Paciente 2 (Bronquítico) desenvolve edema de membros inferiores, conectando o pulmão ao lado direito do coração.",
+				"correctAnswer": "O Paciente 2 tem hipoventilação alveolar grave, o que gera hipoxemia crônica. A hipoxemia causa **vasoconstrição pulmonar hipóxica** (para desviar o sangue de áreas mal ventiladas). Quando isso ocorre em todo o pulmão, a pressão na artéria pulmonar sobe (Hipertensão Pulmonar), sobrecarregando o ventrículo direito. A falência do VD em bombear contra essa pressão gera congestão sistêmica, resultando no edema de membros inferiores e turgência jugular (**Cor Pulmonale**).",
+				"keywords": ["Vasoconstrição Pulmonar Hipóxica", "Cor Pulmonale"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 174,
+		"title": "Deficiência de Alfa-1 Antitripsina e Enfisema Panacinar",
+		"vignette": "Um paciente de 38 anos, **não tabagista**, procura o ambulatório com dispneia progressiva aos esforços. A TC de tórax revela enfisema panacinar, com destruição predominante nos **lobos inferiores**. Ele menciona que seu irmão faleceu jovem por uma \"doença no fígado\" sem causa definida.",
+		"explanation": "A DA1AT é uma causa importante de DPOC em jovens e não fumantes. * **Fígado:** A proteína anômala pode se acumular nos hepatócitos, causando cirrose (explicando o histórico familiar do paciente). * **Rastreamento:** Deve-se suspeitar em: DPOC em jovens (< 45 anos), enfisema em não fumantes, enfisema de bases ou hepatopatia sem causa aparente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a principal suspeita diagnóstica para este paciente e qual o mecanismo genético/molecular dessa doença?",
+				"correctAnswer": "**Deficiência de Alfa-1 Antitripsina (DA1AT)**. É uma doença genética onde há uma produção deficiente ou anômala da enzima alfa-1 antitripsina. Esta enzima é responsável por inibir a **elastase neutrofílica**. Sem o freio da antitripsina, a elastase destrói as fibras elásticas dos alvéolos, levando ao enfisema precoce.",
+				"keywords": [
+					"Elastase Neutrofílica",
+					"Inibidor de Protease",
+					"Genética (Fenótipo ZZ)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o enfisema, neste caso, poupa menos os lobos inferiores, diferentemente do enfisema causado pelo tabagismo?",
+				"correctAnswer": "No tabagismo, a fumaça (que é inalada) tende a se concentrar nos lobos superiores, gerando o enfisema centroacinar. Na DA1AT, a deficiência é sistêmica (via sanguínea). Como os **lobos inferiores são mais perfundidos** (recebem mais sangue e, portanto, mais neutrófilos/elastase), a destruição do parênquima é mais acentuada nas bases pulmonares (enfisema panacinar).",
+				"keywords": ["Enfisema Panacinar (Bases)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 175,
+		"title": "Hiper-responsividade Brônquica e Teste de Provocação com Metacolina",
+		"vignette": "Uma paciente de 21 anos apresenta episódios de tosse seca e aperto no peito, predominantemente à noite, após exposição ao frio. Você solicita uma espirometria, que resulta completamente normal, inclusive com prova broncodilatadora negativa. Diante da forte suspeita clínica de asma, você decide realizar um teste de provocação com Metacolina.",
+		"explanation": "No 3º e 4º ano, o aluno deve entender que a espirometria normal não exclui asma, pois a doença é variável.\n\n- **Broncoprovocação:** Usada quando a clínica sugere asma, mas a espirometria é inconclusiva. \n- **Cuidado:** Não deve ser realizado se o paciente já tiver obstrução basal (VEF1 < 60-70%), pelo risco de broncoespasmo severo induzido pelo teste.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "O que define o conceito de Hiper-responsividade Brônquica e qual o resultado esperado no teste da Metacolina (PC20) para confirmar o diagnóstico de asma nesta paciente?",
+				"correctAnswer": "A hiper-responsividade brônquica é a tendência das vias aéreas de se contraírem exageradamente em resposta a estímulos que seriam inócuos para pessoas saudáveis (frio, fumaça, agentes químicos). No teste, a Metacolina (um agente parassimpaticomimético) é inalada em doses crescentes. O teste é positivo se houver uma queda de 20% no VEF1 (chamada de PC20) com uma dose baixa da droga (geralmente < 8 mg/mL).",
+				"keywords": [
+					"Hiper-responsividade Brônquica",
+					"PC20 (Provocação de 20%)",
+					"Metacolina / Histamina"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que um teste de Metacolina negativo tem um alto valor preditivo negativo para asma?",
+				"correctAnswer": "Porque a hiper-responsividade é a característica fisiopatológica universal da asma. Se o paciente não reage nem mesmo a um estímulo direto e potente como a Metacolina, a probabilidade de os sintomas respiratórios serem causados por asma é extremamente baixa. O teste é excelente para excluir o diagnóstico.",
+				"keywords": ["Valor Preditivo Negativo"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 176,
+		"title": "Achados Microscópicos no Escarro da Asma",
+		"vignette": "Durante uma aula de patologia clínica, você analisa o escarro de um paciente asmático e identifica estruturas microscópicas clássicas: espirais de muco e cristais bipiramidais brilhantes.",
+		"explanation": "A patologia da asma não é apenas \"músculo apertado\". É uma doença inflamatória que altera a reologia do muco.\n\n- **Eosinofilia:** A presença de eosinófilos no escarro e os cristais de Charcot-Leyden reforçam o perfil inflamatório Th2 da asma.\n- **Tamponamento Mucoso:** É a principal causa de morte na asma fatal, onde os pulmões não colapsam na autópsia porque as vias aéreas estão \"concretadas\" com muco espesso.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Quais os nomes dados a essas duas estruturas (espirais e cristais) e qual a origem fisiopatológica de cada uma?",
+				"correctAnswer": "As espirais de muco são chamadas de Espirais de Curschmann (formadas pelo muco condensado que molda as pequenas vias aéreas). Os cristais são os Cristais de Charcot-Leyden, formados pela cristalização de uma proteína (lisofosfolipase) derivada da desgranulação de eosinófilos.",
+				"keywords": [
+					"Espirais de Curschmann",
+					"Cristais de Charcot-Leyden",
+					"Desgranulação de Eosinófilos"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como a formação desses \"rolhões de muco\" contribui para a hipoxemia na crise de asma?",
+				"correctAnswer": "Os rolhões de muco causam a oclusão completa ou parcial de pequenos brônquios e bronquíolos. Isso gera áreas de shunts intrapulmonares ou distúrbios de ventilação-perfusão (V/Q): o sangue passa por alvéolos que não estão sendo ventilados devido à obstrução pelo muco, resultando em sangue não oxigenado retornando à circulação sistêmica (hipoxemia).",
+				"keywords": ["Distúrbio V/Q"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 177,
+		"title": "Complicações Mecânicas da Crise Asmática: Efeito Macklin",
+		"vignette": "Um paciente de 18 anos, em crise asmática severa, apresenta subitamente dor torácica aguda e aumento do volume da região cervical, com sensação de \"crepitação\" (estalidos) ao palpar a pele do pescoço.",
+		"explanation": "O estudante deve estar atento a complicações que mudam o prognóstico da crise:\n\n- **Pneumotórax e Pneumomediastino:** Devem ser suspeitados sempre que houver dor súbita ou crepitação cervical.\n- **Enfisema Subcutâneo:** A palpação da fúrcula esternal e pescoço é parte obrigatória do exame físico na asma grave.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a complicação mecânica provável e qual o mecanismo fisiopatológico (Efeito Macklin) que explica a migração do ar do pulmão para o pescoço?",
+				"correctAnswer": "A complicação é o Pneumomediastino (associado a enfisema subcutâneo). O Efeito Macklin ocorre quando a pressão alveolar aumenta muito (devido à obstrução e esforço inspiratório), causando ruptura de alvéolos marginais. O ar escapa para o interstício peribroncovascular, disseca o tecido em direção ao hilo pulmonar e sobe para o mediastino e tecidos moles do pescoço.",
+				"keywords": [
+					"Pneumomediastino",
+					"Enfisema Subcutâneo",
+					"Efeito Macklin"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que essa complicação ocorre mais frequentemente em crises obstrutivas do que em pneumonias lobares?",
+				"correctAnswer": "Devido ao aprisionamento aéreo e às pressões transpulmonares extremas geradas pelo paciente asmático para tentar vencer a obstrução expiratória. Na pneumonia, o alvéolo está ocupado por exsudato, o que geralmente impede a hiperdistensão e ruptura alveolar característica das doenças obstrutivas.",
+				"keywords": ["Pressão Transpulmonar"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 178,
+		"title": "Exacerbação de Bronquiectasias e Hemoptise",
+		"vignette": "Um paciente com Bronquiectasias por sequela de sarcoidose apresenta mudança no seu padrão basal. Ele refere que o catarro, antes amarelado e fácil de sair, tornou-se mais espesso, com estrias de sangue e ele está sentindo \"um peso no peito\".",
+		"explanation": "Diferenciar o \"basal\" do \"exacerbado\" nas bronquiectasias é o que evita internações desnecessárias ou falhas terapêuticas.\n\n- **Hemoptise:** Nas bronquiectasias, o sangramento vem das artérias brônquicas (alta pressão), por isso pode se tornar maciço rapidamente, ao contrário do sangramento das artérias pulmonares.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Quais são os critérios clínicos que definem uma Exacerbação de Bronquiectasias? (Cite pelo menos 3).",
+				"correctAnswer": "A exacerbação é definida pela piora de pelo menos 3 dos seguintes sintomas por > 48h: 1. Aumento da tosse; 2. Aumento do volume do escarro; 3. Mudança na consistência/purulência; 4. Aumento da dispneia; 5. Hemoptise; 6. Mal-estar/fadiga.",
+				"keywords": ["Purulência do Escarro", "Exacerbação Clínica"],
+				"order": 1
+			},
+			{
+				"text": "Qual a explicação para a ocorrência de hemoptise (mesmo que leve) em pacientes com bronquiectasias?",
+				"correctAnswer": "As bronquiectasias causam inflamação crônica que leva à hipertrofia e neovascularização das artérias brônquicas (que vêm da circulação sistêmica e estão sob alta pressão). Esses novos vasos são frágeis e rompem-se facilmente durante acessos de tosse ou infecções, causando o sangramento.",
+				"keywords": ["Artérias Brônquicas (Neovascularização)", "Hemoptise"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 179,
+		"title": "Semiologia Comparativa: Consolidação vs. Doença Obstrutiva",
+		"vignette": "Durante a prática de semiologia, você examina dois pacientes com queixa de dispneia e tosse. Patient A apresenta febre, tosse produtiva, aumento do frêmito toracovocal (FTV) e macicez à percussão em base direita. Patient B apresenta dispneia aos esforços, redução do frêmito toracovocal (FTV) e hipertimpanismo à percussão globalmente.",
+		"explanation": "A semiologia das doenças obstrutivas é o oposto das síndromes de condensação.\n\n*   **Obstrução:** Ar demais = FTV reduzido + Hipertimpanismo + Murmúrio Vesicular reduzido.\n*   **Consolidação:** Ar de menos = FTV aumentado + Macicez + Murmúrio Vesicular com estertores ou sopro tubário.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique a diferença física que faz o FTV aumentar no Paciente A (Consolidação) e diminuir no Paciente B (DPOC/Enfisema).",
+				"correctAnswer": "O Frêmito Toracovocal (FTV) depende da transmissão da vibração das cordas vocais através do parênquima. No Paciente A, a consolidação (alvéolos cheios de líquido/pus) transmite o som melhor que o ar, aumentando a vibração. No Paciente B, o excesso de ar (hiperinsuflação) e a destruição dos septos alveolares atuam como um isolante acústico, dificultando a propagação da vibração até a parede torácica, o que reduz o FTV.",
+				"keywords": ["Frêmito Toracovocal (FTV)", "Isolante Acústico (Ar)"],
+				"order": 1
+			},
+			{
+				"text": "Qual a correlação entre a percussão hipertimpânica e a posição do diafragma no Paciente B?",
+				"correctAnswer": "O hipertimpanismo reflete o excesso de ar nos pulmões (aprisionamento aéreo). Isso causa o rebaixamento e a retificação do diafragma. Na percussão, isso se traduz pela descida da transição entre a sonoridade pulmonar e a macicez hepática (o pulmão 'invade' o espaço onde deveria estar o fígado).",
+				"keywords": ["Hipertimpanismo", "Rebaixamento do Diafragma"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 180,
+		"title": "Sinais Radiológicos de Hiperinsuflação Pulmonar no DPOC",
+		"vignette": "Você recebe a Radiografia de Tórax (PA e Perfil) de um paciente com DPOC avançado para avaliação pré-operatória de uma cirurgia abdominal.",
+		"explanation": "O raio-x não faz o diagnóstico de DPOC (quem faz é a espirometria), mas é fundamental para excluir complicações e avaliar a gravidade anatômica.\n\n*   **Espaço Retroesternal:** Se > 2,5 cm no perfil (medido atrás do esterno), é um sinal fidedigno de enfisema.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Cite 4 sinais radiológicos clássicos de hiperinsuflação pulmonar que você espera encontrar neste exame.",
+				"correctAnswer": "Os 4 sinais clássicos são: 1. Retificação/Aplanamento das cúpulas diafragmáticas; 2. Aumento do espaço retroesternal no perfil; 3. Horizontalização das costelas (e aumento dos espaços intercostais); 4. Hipertransparência pulmonar (pulmão mais preto devido ao excesso de ar).",
+				"keywords": [
+					"Retificação Diafragmática",
+					"Horizontalização das Costelas",
+					"Espaço Retroesternal"
+				],
+				"order": 1
+			},
+			{
+				"text": "Explique por que o coração do paciente enfisematoso frequentemente assume um aspecto de 'coração em gota' na radiografia.",
+				"correctAnswer": "O 'coração em gota' (ou coração verticalizado) ocorre porque os pulmões hiperinsuflados empurram o diafragma para baixo. Como o coração está apoiado no diafragma e preso pelos grandes vasos no mediastino, ele é estirado verticalmente, perdendo sua conformação horizontalizada normal.",
+				"keywords": ["Coração em Gota"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 181,
+		"title": "Mecânica Respiratória: Manobra de Lábios Franzidos e PEEP Intrínseca",
+		"vignette": "Um paciente com DPOC grave é visto na sala de espera expirando de forma lenta e prolongada com os lábios quase fechados (lábios franzidos ou 'em bico'). Ele diz que faz isso instintivamente porque sente que 'o ar sai melhor'.",
+		"explanation": "A manobra de lábios franzidos é uma ferramenta de fisioterapia respiratória natural.\n\n*   **PEEP (Positive End-Expiratory Pressure):** Ao gerar essa pressão, o paciente estabiliza a via aérea. É o mesmo princípio usado em ventiladores mecânicos para tratar o edema pulmonar ou a própria DPOC.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o mecanismo fisiopatológico (Ponto de Igual Pressão) que explica por que expirar contra resistência (lábios franzidos) ajuda a evitar o colapso das vias aéreas?",
+				"correctAnswer": "Na DPOC, a perda de sustentação elástica faz com que os bronquíolos colapsem precocemente durante a expiração (Ponto de Igual Pressão deslocado para a periferia). Ao franzir os lábios, o paciente cria uma contrapressão (resistência) na saída da boca, que se transmite para dentro das vias aéreas. Essa pressão positiva interna mantém os brônquios abertos por mais tempo, permitindo que mais ar saia antes do colapso.",
+				"keywords": [
+					"Ponto de Igual Pressão",
+					"Colapso Expiratório",
+					"Lábios Franzidos"
+				],
+				"order": 1
+			},
+			{
+				"text": "Esse paciente está realizando uma forma de 'PEEP intrínseca'. Qual o benefício disso para o volume residual pulmonar?",
+				"correctAnswer": "O benefício é a redução do aprisionamento aéreo e, consequentemente, a redução do Volume Residual. Isso diminui a hiperinsuflação dinâmica, permitindo que o paciente inicie a próxima inspiração com um volume pulmonar menor e menos esforço muscular.",
+				"keywords": ["PEEP (Pressão Positiva)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 182,
+		"title": "Manifestações Sistêmicas do DPOC: Eritrocitose Secundária e Cor Pulmonale",
+		"vignette": "Um paciente de 60 anos, fumante pesado e portador de Bronquite Crônica, apresenta um Hemograma com Hemoglobina de 19 g/dL e Hematócrito de 58%. Ele não tem outras doenças e nega uso de anabolizantes.",
+		"explanation": "O DPOC é uma doença sistêmica.\n\n*   **Eritrocitose:** É um marcador de hipoxemia crônica grave. Se o hematócrito for muito alto (> 55-60%), pode haver indicação de oxigenoterapia domiciliar para reduzir o estímulo à produção de hemácias.\n*   **Cuidado:** Policitemia aumenta o risco de eventos trombóticos.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Como se chama esse achado hematológico e qual a sua relação direta com a patologia pulmonar do paciente?",
+				"correctAnswer": "O achado é a Eritrocitose Secundária (ou Policitemia Secundária). A hipoxemia crônica (baixa pO2 no sangue) é detectada pelos rins, que aumentam a produção de Eritropoetina (EPO). A EPO estimula a medula óssea a produzir mais hemácias para tentar aumentar a capacidade de transporte de oxigênio.",
+				"keywords": ["Eritrocitose Secundária", "Eritropoetina (EPO)"],
+				"order": 1
+			},
+			{
+				"text": "Por que esse aumento do hematócrito, embora seja uma tentativa de compensação do corpo, pode sobrecarregar o ventrículo direito?",
+				"correctAnswer": "O aumento excessivo do hematócrito eleva a viscosidade sanguínea. O sangue 'mais grosso' oferece maior resistência ao fluxo nos capilares pulmonares, aumentando a pressão na artéria pulmonar. Isso eleva a pós-carga do ventrículo direito, contribuindo para o desenvolvimento de hipertrofia e falência cardíaca direita (Cor Pulmonale).",
+				"keywords": ["Viscosidade Sanguínea", "Cor Pulmonale"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 183,
+		"title": "Critérios Clínicos da Bronquite Crônica e Enfisema",
+		"vignette": "Um paciente de 55 anos, tabagista, afirma que \"tem uma tosse que não passa\". Ao ser questionado sobre a duração, ele relata que tosse praticamente todos os dias, com produção de catarro claro, há pelo menos 4 meses por ano, e que isso vem acontecendo nos últimos 3 anos.",
+		"explanation": "No 3º ano, o aluno deve saber que \"Bronquite Crônica\" não é um termo genérico para qualquer tosse. É uma síndrome com critérios temporais rígidos.\n\n*   **Importância:** Pacientes que fumam e têm bronquite crônica (mesmo com espirometria normal) já têm maior risco de declínio da função pulmonar e exacerbações futuras.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual é a definição clínica estrita de Bronquite Crônica? Este paciente preenche esses critérios?",
+				"correctAnswer": "A definição clínica de Bronquite Crônica é a presença de tosse produtiva na maioria dos dias, por pelo menos 3 meses ao ano, em 2 anos consecutivos, na ausência de outras doenças que expliquem o sintoma (como tuberculose ou bronquiectasias). Sim, o paciente preenche os critérios (4 meses/3 anos).",
+				"keywords": ["Critério Temporal (3 meses / 2 anos)", "Tosse Produtiva"],
+				"order": 1
+			},
+			{
+				"text": "Por que a Bronquite Crônica é considerada um diagnóstico clínico, enquanto o Enfisema é considerado um diagnóstico anatomopatológico?",
+				"correctAnswer": "Porque a Bronquite Crônica baseia-se puramente na história de sintomas (tosse e expectoração). Já o Enfisema é definido pela destruição permanente e anormal dos espaços aéreos distais ao bronquíolo terminal, acompanhada de destruição de suas paredes sem fibrose óbvia — uma alteração estrutural que, a rigor, só é confirmada por biópsia ou sugerida por exames de imagem (TC).",
+				"keywords": [
+					"Diagnóstico Clínico (Bronquite)",
+					"Diagnóstico Anatomopatológico (Enfisema)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 184,
+		"title": "Semiologia dos Sibilos: Monofônico vs Polifônico",
+		"vignette": "Ao realizar a ausculta pulmonar de uma criança com suspeita de aspiração de corpo estranho e de um adulto com crise de asma, você nota uma diferença fundamental no timbre dos sibilos.\n\n*   Paciente A: Apresenta um sibilo único, de tonalidade fixa, ouvido apenas em uma região específica do hemitórax direito (Sibilo Monofônico).\n*   Paciente B: Apresenta múltiplos sibilos com diferentes frequências e timbres, espalhados por ambos os pulmões (Sibilo Polifônico).",
+		"explanation": "A semiologia acústica ajuda a evitar erros diagnósticos graves.\n\n*   **Aviso:** Nunca trate um \"chiado unilateral\" como asma sem antes afastar obstrução mecânica por imagem ou broncoscopia.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a interpretação clínica para um Sibilo Monofônico localizado e por que ele geralmente não indica asma?",
+				"correctAnswer": "O sibilo monofônico sugere uma obstrução fixa e localizada em uma única via aérea de maior calibre. As causas principais são corpo estranho, tumor endobrônquico ou estenose de brônquio. Não costuma ser asma porque a asma é uma doença inflamatória difusa, que atinge múltiplos brônquios simultaneamente.",
+				"keywords": [
+					"Sibilo Monofônico (Obstrução Localizada)",
+					"Aspiração de Corpo Estratificado",
+					"Tumor Endobrônquico"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo físico que gera a \"polifonia\" (vários sons) na asma brônquica?",
+				"correctAnswer": "A polifonia ocorre porque a asma causa bronconstrição, edema e muco em diversas vias aéreas de diferentes calibres ao mesmo tempo. Como cada via aérea tem um diâmetro e um grau de obstrução diferente, o ar vibra em frequências diferentes, gerando o som musical \"polifônico\" característico.",
+				"keywords": ["Sibilo Polifônico (Obstrução Difusa)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 185,
+		"title": "Técnicas Inalatórias e Uso de Espaçadores na Emergência",
+		"vignette": "No Pronto-Socorro, você deve prescrever Salbutamol para um paciente asmático. O hospital dispõe de nebulização convencional (com máscara e oxigênio) e de inaladores de dose medida (bombinha/MDI) com espaçadores de grande volume.",
+		"explanation": "O médico de 4º ano deve saber orientar a técnica inalatória. \n\n*   **Dica:** Sem espaçador, cerca de 80% da droga fica na boca e é engolida, aumentando efeitos colaterais e diminuindo a eficácia no pulmão.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a vantagem técnica e clínica de preferir o uso da \"bombinha\" com espaçador em vez da nebulização convencional no ambiente de emergência?",
+				"correctAnswer": "O uso de MDI (spray) com espaçador é tão ou mais eficaz que a nebulização, com a vantagem de ser mais rápido, mais barato e reduzir o risco de contaminação ambiental (aerolização de partículas virais/bacterianas), o que é crucial em contextos de infecções respiratórias. Além disso, causa menos efeitos colaterais sistêmicos (taquicardia) do que a nebulização contínua.",
+				"keywords": [
+					"MDI (Inalador de Dose Medida)",
+					"Espaçador de Grande Volume"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a função do espaçador na deposição pulmonar da droga e por que ele é indispensável para pacientes com má coordenação motora?",
+				"correctAnswer": "O espaçador reduz a velocidade das partículas de aerossol e diminui o tamanho delas por evaporação. Isso reduz a deposição orofaríngea (menos droga fica grudada na garganta) e aumenta a deposição pulmonar. Para quem tem má coordenação, o espaçador elimina a necessidade de sincronizar o disparo com a inspiração (\"apertar e sugar ao mesmo tempo\").",
+				"keywords": ["Deposição Orofaríngea", "Coordenação Inspiração-Disparo"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 186,
+		"title": "Manejo Preventivo e Vacinação nas Doenças Obstrutivas",
+		"vignette": "Um paciente com DPOC estável (fase de manutenção) vem para consulta de rotina no 4º ano. Ele pergunta se \"precisa mesmo tomar tantas vacinas\", pois ouviu dizer que vacina de gripe pode causar gripe.",
+		"explanation": "A medicina preventiva é inseparável da pneumologia.\n\n*   **Influenza:** Anual.\n*   **Pneumococo:** Geralmente inicia-se com a VPC13 seguida da VPP23 (conforme protocolos locais/idade).",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Quais são as duas vacinas obrigatórias para pacientes com doenças obstrutivas crônicas (Asma e DPOC) e qual o benefício esperado (além de evitar a infecção primária)?",
+				"correctAnswer": "As vacinas contra Influenza (Gripe) e contra o Pneumococo (Pneumonia). O principal benefício é a redução das exacerbações. Infecções virais e bacterianas são os gatilhos mais comuns para crises que levam à internação e à perda acelerada de função pulmonar.",
+				"keywords": [
+					"Vacinação (Influenza/Pneumococo)",
+					"Prevenção de Exacerbações"
+				],
+				"order": 1
+			},
+			{
+				"text": "Explique por que a prevenção de infecções é considerada parte do tratamento \"broncodilatador\" indireto nesses pacientes.",
+				"correctAnswer": "Cada infecção/exacerbação gera um insulto inflamatório que causa mais destruição tecidual (na DPOC) ou remodelamento das vias aéreas (na Asma). Ao prevenir a infecção, evitamos o ciclo de inflamação aguda sobre a crônica, mantendo a via aérea mais pérvia e reduzindo a necessidade de resgate com broncodilatadores de curta ação.",
+				"keywords": ["Declínio da Função Pulmonar", "Manejo Preventivo"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 187,
+		"title": "Achados de TCAR em Bronquiectasias",
+		"vignette": "Um paciente com história de infecções respiratórias na infância realiza uma Tomografia de Tórax de Alta Resolução (TCAR). O radiologista descreve a presença de brônquios com diâmetro maior que a artéria adjacente, além de imagens lineares paralelas que lembram 'trilhos de trem'.",
+		"explanation": "A TCAR é o padrão-ouro para bronquiectasias. Anatomicamente, a relação brônquio/artéria normal é de 1:1. Quando o brônquio apresenta diâmetro aumentado, ele assemelha-se ao aro de um anel e a artéria (menor) à joia do anel (Sinal do Sinete). O sinal do trilho de trem ocorre quando o brônquio dilatado é visualizado longitudinalmente, revelando suas paredes espessadas e paralelas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Como se chamam os dois sinais radiológicos descritos acima (brônquio > artéria e linhas paralelas) e o que eles representam anatomicamente?",
+				"correctAnswer": "O sinal do brônquio com diâmetro maior que a artéria acompanhante é o Sinal do Anel de Sinete. As linhas paralelas são o Sinal do Trilho de Trem. Ambos representam a dilatação brônquica permanente e o espessamento das paredes dos brônquios, que perdem sua forma afunilada normal.",
+				"keywords": [
+					"Sinal do Anel de Sinete",
+					"Sinal do Trilho de Trem",
+					"Relação Brônquio-Artéria > 1"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a importância de observar se esses brônquios dilatados chegam até a periferia (até 1 cm da pleura) para o diagnóstico de bronquiectasias?",
+				"correctAnswer": "Em pulmões normais, os brônquios tornam-se tão finos na periferia que não são visíveis na TC. A visualização de brônquios dilatados na periferia pulmonar (a menos de 1 cm da pleura costal) é um critério diagnóstico fundamental para bronquiectasias, confirmando que a via aérea não está apenas dilatada, mas falhando em sua redução progressiva de calibre.",
+				"keywords": ["Periferia Pulmonar"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 188,
+		"title": "Fisiopatologia das Trocas Gasosas: Distúrbio V/Q vs Shunt",
+		"vignette": "Na asma aguda e na DPOC exacerbada, a principal causa de hipoxemia (queda da pO2) não é o 'shunt' verdadeiro, mas sim o distúrbio de Ventilação-Perfusão (V/Q).",
+		"explanation": "Este é um conceito fundamental da fisiologia respiratória. O distúrbio V/Q responde bem à oferta de O2 e é a marca das doenças obstrutivas (broncoespasmo, muco). Já o Shunt é tipicamente refratário à oxigenoterapia simples e caracteriza doenças de preenchimento alveolar como Pneumonia, Edema Agudo de Pulmão (EAP) e SDRA.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique a diferença fisiopatológica entre um alvéolo com baixa relação V/Q (típico das doenças obstrutivas) e um alvéolo em Shunt (típico de consolidações/edema).",
+				"correctAnswer": "No distúrbio de Baixa V/Q, o alvéolo recebe pouco ar (obstrução parcial), mas ainda tem alguma ventilação para o sangue que passa. No Shunt, a ventilação é zero (alvéolo totalmente ocupado ou colapsado), mas a perfusão continua.",
+				"keywords": [
+					"Relação Ventilação-Perfusão (V/Q)",
+					"Shunt Intrapulmonar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o paciente com asma/DPOC responde rapidamente a baixas ofertas de Oxigênio (ex: cateter nasal 2L/min), enquanto o paciente em shunt (ex: pneumonia grave) costuma ser refratário?",
+				"correctAnswer": "No distúrbio V/Q, como ainda existe alguma ventilação, o oxigênio suplementar consegue chegar ao alvéolo 'hipoventilado' e elevar a pressão parcial de O2, corrigindo a hipoxemia. No Shunt, como o alvéolo está fechado/ocupado, o oxigênio oferecido não entra em contato com o sangue daquela unidade alveolar; o sangue passa pelo pulmão 'sem ver o oxigênio', tornando a hipoxemia muito mais difícil de corrigir.",
+				"keywords": ["Hipoxemia Refratária", "Unidade Alveolar Hipoventilada"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 189,
+		"title": "Remodelamento das Vias Aéreas na Asma Crônica",
+		"vignette": "Um estudante questiona o preceptor: 'Se a asma é uma doença reversível, por que alguns pacientes idosos que tiveram asma a vida toda agora apresentam uma obstrução fixa que não melhora mais com a bombinha, parecendo DPOC?'",
+		"explanation": "O conceito de remodelamento justifica o uso precoce de Corticoides Inalatórios. O objetivo do tratamento da asma não é apenas cessar a crise aguda, mas impedir que a inflamação persistente transforme uma doença funcionalmente reversível em uma obstrução estrutural fixa e irreversível (fenótipo asma-DPOC).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome do processo anatomopatológico que explica essa perda de reversibilidade na asma crônica mal controlada?",
+				"correctAnswer": "O processo é o Remodelamento das Vias Aéreas. Ele ocorre devido à inflamação crônica persistente (eosinofílica) que, com o tempo, deixa de ser apenas um fenômeno inflamatório e passa a ser um fenômeno de cicatrização e alteração estrutural.",
+				"keywords": ["Remodelamento das Vias Aéreas", "Obstrução Fixa"],
+				"order": 1
+			},
+			{
+				"text": "Cite dois componentes estruturais da via aérea que sofrem modificações definitivas nesse processo.",
+				"correctAnswer": "Os componentes são: 1. Espessamento da camada reticular da membrana basal (deposição de colágeno); 2. Hipertrofia e hiperplasia da musculatura lisa brônquica; 3. Hiperplasia de glândulas mucosas e células caliciformes. Essas mudanças tornam a parede do brônquio mais rígida e o lúmen permanentemente estreitado.",
+				"keywords": [
+					"Membrana Basal Subepitelial",
+					"Hipertrofia de Musculatura Lisa"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 190,
+		"title": "Microbiologia na Exacerbação da DPOC",
+		"vignette": "Na exacerbação da DPOC, a decisão de iniciar antibióticos baseia-se nos critérios de Anthonisen. No entanto, o médico deve conhecer os patógenos mais prováveis para escolher a terapia empírica correta.",
+		"explanation": "Diferente da pneumonia adquirida na comunidade (PAC), onde o Pneumococo é o agente soberano, na DPOC exacerbada os patógenos Gram-negativos como Haemophilus e Moraxella ganham protagonismo. Em casos de obstrução muito grave (VEF1 < 50%) ou uso crônico de corticoides, a suspeita de Pseudomonas aeruginosa deve ser considerada.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Quais são os três principais patógenos bacterianos ('The Big Three') envolvidos na exacerbação da DPOC?",
+				"correctAnswer": "Os três principais são: Streptococcus pneumoniae (Pneumococo), Haemophilus influenzae e Moraxella catarrhalis.",
+				"keywords": ["Streptococcus pneumoniae", "Moraxella catarrhalis"],
+				"order": 1
+			},
+			{
+				"text": "Qual desses patógenos é um cocobacilo Gram-negativo que frequentemente produz beta-lactamases, exigindo o uso de Amoxicilina + Clavulanato ou Cefalosporinas de 2ª/3ª geração?",
+				"correctAnswer": "O Haemophilus influenzae. Ele é um dos principais colonizadores da via aérea de pacientes com DPOC e tem alta taxa de produção de beta-lactamases, o que torna a Amoxicilina pura ineficaz em muitos casos, necessitando da associação com um inibidor (Clavulanato).",
+				"keywords": ["Haemophilus influenzae", "Beta-lactamase"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 191,
+		"title": "Capacidade de Difusão (DLCO) no Diagnóstico Diferencial de Obstruções",
+		"vignette": "Dois pacientes realizam um teste completo de função pulmonar, incluindo a medida da Capacidade de Difusão de Monóxido de Carbono (DLCO). Ambos possuem um distúrbio obstrutivo (VEF1/CVF < 0,70). O Paciente A (Asmático) apresenta DLCO normal ou levemente aumentada. O Paciente B (Enfisematoso) apresenta DLCO significativamente reduzida.",
+		"explanation": "A DLCO é o 'divisor de águas' na função pulmonar: \n\n*   **DLCO Baixa + Obstrução:** Pense em Enfisema. \n*   **DLCO Normal + Obstrução:** Pense em Asma ou Bronquite Crônica. \n*   **DLCO Baixa + Restrição:** Pense em Fibrose Pulmonar (Módulo de Intersticiais).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "O que o teste de DLCO avalia especificamente e por que ele é a ferramenta definitiva para diferenciar o Enfisema da Asma/Bronquite Crônica?",
+				"correctAnswer": "A DLCO avalia a integridade da unidade alvéolo-capilar e a facilidade com que os gases atravessam a membrana para o sangue. Ela é definitiva porque o enfisema é a única doença obstrutiva que envolve a destruição do parênquima pulmonar, enquanto a asma e a bronquite crônica são doenças puramente das vias aéreas (brônquios), sem lesão dos alvéolos.",
+				"keywords": ["Capacidade de Difusão (DLCO)", "Unidade Alvéolo-Capilar"],
+				"order": 1
+			},
+			{
+				"text": "Por que a DLCO está reduzida no enfisema, mas preservada na asma?",
+				"correctAnswer": "No enfisema, a destruição dos septos alveolares reduz drasticamente a área de superfície disponível para as trocas gasosas e destrói o leito capilar associado. Na asma, apesar da obstrução ao fluxo de ar, a membrana alvéolo-capilar está intacta e a perfusão capilar pode estar até aumentada devido à inflamação, o que mantém ou eleva a DLCO.",
+				"keywords": [
+					"Área de Superfície de Troca",
+					"Destruição de Septos Alveolares"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 192,
+		"title": "Classificação GOLD da Gravidade da Obstrução na DPOC",
+		"vignette": "Ao interpretar a espirometria de um paciente com DPOC estável (pós-uso de broncodilatador), o estudante de medicina deve classificar a gravidade da limitação ao fluxo aéreo com base no valor do VEF1 em relação ao previsto.",
+		"explanation": "É fundamental que o aluno de 4º ano saiba que o diagnóstico da DPOC é feito pela relação (VEF1/CVF < 0,7), mas a gravidade da obstrução é dada apenas pelo valor isolado do VEF1. Essa classificação (1-4) refere-se apenas ao grau de obstrução na espirometria, não deve ser confundida com a classificação A-B-E.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "De acordo com a classificação GOLD (1 a 4), quais são os pontos de corte do VEF1 (%) que definem uma obstrução Leve, Moderada, Grave e Muito Grave?",
+				"correctAnswer": "A classificação da gravidade da obstrução na DPOC (pós-BD) é: GOLD 1 (Leve): VEF1 ≥ 80% do previsto; GOLD 2 (Moderada): 50% ≤ VEF1 < 80% do previsto; GOLD 3 (Grave): 30% ≤ VEF1 < 50% do previsto; GOLD 4 (Muito Grave): VEF1 < 30% do previsto.",
+				"keywords": ["Classificação GOLD (1-4)", "VEF1 % do Previsto"],
+				"order": 1
+			},
+			{
+				"text": "Se um paciente tem um VEF1/CVF de 0,65 e um VEF1 de 45% do previsto, em qual categoria GOLD ele se enquadra?",
+				"correctAnswer": "O paciente enquadra-se no GOLD 3 (Grave), pois seu VEF1 está entre 30% e 49%.",
+				"keywords": ["Gravidade da Obstrução"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 193,
+		"title": "Semiologia Diferencial: Sibilo vs Estridor",
+		"vignette": "Um paciente chega com ruído respiratório audível à distância. O examinador precisa diferenciar se o som é um Sibilo ou um Estridor.",
+		"explanation": "Diferenciar sibilo de estridor salva vidas no PS. O Estridor é um sinal de via aérea em risco iminente. Exige avaliação da laringe/traqueia e, muitas vezes, adrenalina inalatória ou corticoide para reduzir edema de glote, não Salbutamol.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a principal diferença na localização anatômica da obstrução e na fase do ciclo respiratório onde o Estridor é mais audível em comparação ao sibilo?",
+				"correctAnswer": "O Estridor indica uma obstrução em vias aéreas superiores (laringe ou traqueia extratorácica) e é tipicamente um som inspiratório. O Sibilo indica obstrução em vias aéreas inferiores (brônquios e bronquíolos) e é predominantemente expiratório.",
+				"keywords": ["Estridor (Inspiratório)", "Via Aérea Superior"],
+				"order": 1
+			},
+			{
+				"text": "Por que o uso de broncodilatadores inalatórios é ineficaz no tratamento de um Estridor causado por edema de glote ou corpo estranho na laringe?",
+				"correctAnswer": "Porque o broncodilatador (Beta-2 agonista) atua relaxando a musculatura lisa dos brônquios (vias inferiores). O estridor é causado por uma redução mecânica ou inflamatória no calibre de uma via aérea superior que possui suporte cartilaginoso rígido ou que está obstruída por um processo não mediado pela musculatura lisa brônquica.",
+				"keywords": ["Edema de Glote", "Obstrução Fixa Laríngea"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 194,
+		"title": "Fisiologia do Ritmo Circadiano e Asma Noturna",
+		"vignette": "Muitos pacientes asmáticos relatam que seus sintomas pioram significativamente durante a madrugada (por volta das 3h ou 4h da manhã), fenômeno conhecido como 'Asma Noturna'.",
+		"explanation": "A asma noturna é um marcador de mau controle da doença. Dica Clínica: Se o paciente acorda à noite com falta de ar ou tosse, o tratamento de manutenção (corticoide inalatório) precisa ser otimizado, pois o controle da inflamação basal deve ser capaz de neutralizar essas oscilações circadianas.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique a influência do ritmo circadiano do Cortisol e da Adrenalina na fisiopatologia da piora noturna da asma.",
+				"correctAnswer": "Durante a madrugada, ocorre o 'nadir' (ponto mais baixo) dos níveis endógenos de Cortisol e Adrenalina. Como o cortisol é um anti-inflamatório natural e a adrenalina é um broncodilatador natural, a queda fisiológica dessas substâncias deixa a via aérea do asmático mais desprotegida contra a inflamação e o broncoespasmo.",
+				"keywords": ["Ritmo Circadiano", "Nadir do Cortisol"],
+				"order": 1
+			},
+			{
+				"text": "Qual alteração no tônus do sistema nervoso autônomo ocorre durante o sono que contribui para a bronconstrição?",
+				"correctAnswer": "Ocorre um aumento do tônus Parassimpático (Vagal). O sistema parassimpático promove a contração da musculatura lisa brônquica e o aumento da secreção de muco através da liberação de acetilcolina nos receptores muscarínicos M3, o que favorece a obstrução durante o sono.",
+				"keywords": [
+					"Tônus Vagal (Parassimpático)",
+					"Receptores Muscarínicos M3"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 195,
+		"title": "Análise Gráfica da Espirometria e Curva Fluxo-Volume",
+		"vignette": "Um estudante analisa os gráficos de uma espirometria. Na Curva Fluxo-Volume, ele observa que o ramo expiratório, que deveria ser uma linha reta descendente, apresenta uma concavidade acentuada (aspecto \"escavado\" ou \"em colher\").",
+		"explanation": "O diagnóstico visual na espirometria é uma competência essencial: \n\n*   **Obstrução:** Curva \"escavada\" e deslocada para a esquerda (devido ao aumento dos volumes pulmonares).\n*   **Restrição:** Curva em formato de \"chapéu de bruxa\" (estreita e alta), pois o fluxo é rápido, mas o volume total é pequeno.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "O que essa concavidade no ramo expiratório representa fisicamente em termos de fluxo aéreo e por que ela é característica das doenças obstrutivas?",
+				"correctAnswer": "A concavidade representa uma queda rápida do fluxo de ar logo após o início da expiração. Nas doenças obstrutivas, as vias aéreas perdem sustentação (DPOC) ou estão inflamadas (asma). Ao iniciar a expiração forçada, a pressão intratorácica aumenta e causa a compressão dinâmica das vias aéreas, reduzindo drasticamente o fluxo antes que o pulmão se esvazie, o que gera o desenho \"escavado\".",
+				"keywords": [
+					"Concavidade Expiratória",
+					"Compressão Dinâmica das Vias Aéreas"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como a curva fluxo-volume de um paciente com obstrução fixa de via aérea superior (ex: estenose de traqueia) se diferencia dessa curva da asma/DPOC?",
+				"correctAnswer": "Na obstrução fixa de via aérea superior, a curva apresenta um achatamento (platô) tanto no ramo inspiratório quanto no expiratório, perdendo seu formato pontiagudo. É como se o fluxo encontrasse um \"gargalo\" constante que limita a velocidade máxima do ar, independentemente do esforço do paciente.",
+				"keywords": ["Curva Fluxo-Volume", "Obstrução Fixa (Platô)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 196,
+		"title": "Semiologia Respiratória: Diferenciação entre Sibilos e Roncos",
+		"vignette": "Durante a ausculta de um paciente com bronquite crônica exacerbada, você ouve ruídos adventícios graves, contínuos, que lembram um \"ronco\" ou \"borbulhar baixo\". Ao pedir para o paciente tossir, esses ruídos desaparecem ou mudam significativamente de local.",
+		"explanation": "A semiologia clássica separa os ruídos pela frequência (Hz): \n\n*   **Sibilância:** Musical, agudo, vias aéreas pequenas.\n*   **Roncos:** Grave, ruidoso, grandes vias aéreas (\"catarro\").\n*   **Dica:** Roncos são muito comuns na Bronquite Crônica e nas Bronquiectasias devido à hipersecreção.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a diferença fisiopatológica na geração do Ronco em comparação ao Sibilo?",
+				"correctAnswer": "Ambos são ruídos contínuos, mas o Sibilo é gerado pela vibração das paredes de brônquios e bronquíolos quase fechados (alta frequência). O Ronco é gerado pela vibração de secreções espessas (muco) dentro de vias aéreas de grande calibre (baixa frequência).",
+				"keywords": ["Ronco vs. Sibilo", "Ruídos Contínuos"],
+				"order": 1
+			},
+			{
+				"text": "Qual a importância clínica da manobra de tosse para diferenciar ruídos causados por secreção em grandes vias aéreas de ruídos causados por bronconstrição?",
+				"correctAnswer": "A tosse desloca ou elimina o muco. Se o ruído (Ronco) desaparece ou muda após a tosse, confirma-se que a causa era o acúmulo de secreção brônquica. O Sibilo, por ser causado por estreitamento estrutural ou espasmo da parede do brônquio, geralmente não se altera apenas com uma manobra de tosse.",
+				"keywords": ["Secreção em Grandes Vias Aéreas", "Manobra de Tosse"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 197,
+		"title": "Fisiopatologia do Enfisema: Hipótese Protease-Antiprotease",
+		"vignette": "O enfisema pulmonar é frequentemente descrito como o resultado de um desequilíbrio bioquímico no parênquima pulmonar, exacerbado pelo tabagismo.",
+		"explanation": "O enfisema não é uma \"ferida\" que não cicatriza; é uma digestão ativa do pulmão. \n\n*   **Elastina:** É a proteína que permite o pulmão \"murchar\" sozinho na expiração. Sem ela, o pulmão perde o recolhimento elástico e fica hiperinsuflado.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique o que é a Hipótese Protease-Antiprotease na gênese do enfisema. Qual o papel dos neutrófilos e macrófagos nesse processo?",
+				"correctAnswer": "O enfisema ocorre quando há um excesso de enzimas que destroem proteínas (Proteases, como a Elastase) em relação às enzimas que protegem o tecido (Antiproteases). A fumaça do cigarro recruta e ativa macrófagos e neutrófilos, que liberam elastase para digerir a elastina dos septos alveolares, levando à destruição do parênquima.",
+				"keywords": [
+					"Elastase Neutrofílica",
+					"Equilíbrio Protease-Antiprotease"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como os oxidantes presentes na fumaça do cigarro inativam os mecanismos de defesa natural do pulmão, mesmo em pacientes que não possuem deficiência genética de Alfa-1 antitripsina?",
+				"correctAnswer": "Os oxidantes do cigarro causam a oxidação direta da Alfa-1 antitripsina funcional no pulmão. Isso cria uma \"deficiência adquirida\" ou local de antiproteases: mesmo que o fígado produza a enzima, ela é inativada no pulmão pela inflamação e pelo estresse oxidativo do fumo, deixando o tecido vulnerável à autodigestão.",
+				"keywords": ["Estresse Oxidativo", "Destruição da Elastina"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 198,
+		"title": "Suspeita Clínica de Fibrose Cística no Adulto",
+		"vignette": "Você atende um paciente de 20 anos com história de sinusite crônica, tosse produtiva desde a infância e baixo ganho ponderal. Ele apresenta bronquiectasias em lobos superiores na TC de tórax.",
+		"explanation": "O aluno de 4º ano deve saber que a Fibrose Cística não é apenas pediátrica. \n\n*   **Diagnóstico inicial:** Teste do Suor (dosagem de cloro no suor) ou triagem genética.\n*   **Pista clínica:** Se o paciente tem bronquiectasias + história de diarreia gordurosa (esteatorreia) ou desnutrição, a suspeita de Fibrose Cística é obrigatória.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Embora as bronquiectasias tenham várias causas (como TB), por que a localização em lobos superiores em um paciente jovem deve levantar a suspeita de Fibrose Cística?",
+				"correctAnswer": "Diferente da maioria das infecções (como TB ou aspiração) que afetam áreas específicas ou lobos inferiores (por gravidade), a Fibrose Cística frequentemente apresenta um predomínio de bronquiectasias nos lobos superiores. Além disso, a associação com sintomas extra-pulmonares (baixa absorção de gordura, sinusite) aponta para uma doença sistêmica genética.",
+				"keywords": ["Bronquiectasias de Lobos Superiores"],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo básico da disfunção do canal de cloro (CFTR) que leva à formação de bronquiectasias nesta doença?",
+				"correctAnswer": "A mutação no canal CFTR impede o transporte adequado de cloro (e consequentemente de água) para fora das células das mucosas. Isso resulta em um muco extremamente espesso e desidratado. Esse muco obstrui as vias aéreas, impede o clearance mucociliar e cria um ambiente perfeito para infecções crônicas, que acabam destruindo e dilatando os brônquios (bronquiectasias).",
+				"keywords": [
+					"Canal CFTR",
+					"Muco Espesso (Desidratado)",
+					"Teste do Suor"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 199,
+		"title": "Bioquímica das Trocas Gasosas: O Efeito Haldane",
+		"vignette": "Muitos estudantes aprendem que o oxigênio em excesso no paciente com DPOC causa hipercapnia porque \"reduz o estímulo respiratório\". No entanto, existe um fenômeno bioquímico na hemoglobina chamado Efeito Haldane que contribui significativamente para o aumento do CO2 plasmático nessas situações.",
+		"explanation": "Este é um conceito refinado de fisiologia: \n\n*   **Efeito Bohr:** O CO2/Acidez afeta a afinidade da Hb pelo O2 (nos tecidos).\n*   **Efeito Haldane:** O O2 afeta a afinidade da Hb pelo CO2 (nos pulmões).\n*   **Aplicação Clínica:** Entender isso explica por que a pCO2 de um DPOC sobe quase instantaneamente ao receber O2 em excesso, antes mesmo de ocorrer uma mudança significativa no drive respiratório central.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique o Efeito Haldane e como a administração de altas concentrações de Oxigênio (O2) desloca o Gás Carbônico (CO2) da hemoglobina para o plasma.",
+				"correctAnswer": "O Efeito Haldane descreve a menor afinidade da hemoglobina pelo CO2 quando ela está saturada com Oxigênio. Ao oferecermos O2 em altas doses, a hemoglobina \"solta\" o CO2 que estava ligado a ela (carboemoglobina) para se ligar ao O2.",
+				"keywords": ["Efeito Haldane", "Carboemoglobina"],
+				"order": 1
+			},
+			{
+				"text": "Qual a consequência desse deslocamento para a pCO2 medida na gasometria arterial e para o estado ácido-básico do paciente?",
+				"correctAnswer": "O CO2 liberado da hemoglobina vai para o plasma, aumentando a pCO2 livre (hipercapnia). Se o pulmão do paciente é incapaz de aumentar a ventilação para excretar esse excesso (como ocorre na DPOC), o pH sanguíneo cai, resultando em Acidose Respiratória.",
+				"keywords": ["Dissociação do CO2", "Acidose Respiratória"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 200,
+		"title": "Semiologia da Hiperinsuflação: Percussão e Expansibilidade",
+		"vignette": "Ao realizar a percussão do tórax de um paciente com enfisema pulmonar, você nota que a macicez hepática (que normalmente começa no 5º ou 6º espaço intercostal direito) está situada muito mais abaixo, e o Espaço de Traube encontra-se hipertimpânico.",
+		"explanation": "O estudante deve diferenciar \"tamanho do tórax\" de \"capacidade de expansão\".\n\n*   **Espaço de Traube:** Área de timpanismo gástrico (hipocôndrio esquerdo). Se o pulmão cresce demais para baixo, ele pode obliterar a parte superior desse espaço.\n*   **Manobra de Ruault:** Avalia os ápices pulmonares. No enfisema, a mobilidade é mínima porque o tórax está \"preso\" na posição cheia.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "O que o deslocamento para baixo da macicez hepática indica sobre o volume pulmonar neste paciente?",
+				"correctAnswer": "Indica a presença de Hiperinsuflação Pulmonar. O pulmão, com volume residual aumentado, expande-se verticalmente e empurra o diafragma e o fígado para baixo, mascarando a macicez hepática superior (o pulmão \"cobre\" o fígado).",
+				"keywords": ["Rebaixamento da Macicez Hepática", "Espaço de Traube"],
+				"order": 1
+			},
+			{
+				"text": "No enfisema, o que acontece com a expansibilidade torácica (avaliada pela manobra de Ruault) e por que ela está reduzida, apesar de o pulmão estar \"cheio de ar\"?",
+				"correctAnswer": "A expansibilidade está reduzida. Isso ocorre porque o tórax do enfisematoso já se encontra em uma posição de inspiração máxima permanente (\"tórax em tonel\"). Como a musculatura já está encurtada e o pulmão não consegue esvaziar, há pouco espaço mecânico para uma nova expansão durante a inspiração.",
+				"keywords": ["Tórax em Tonel", "Redução da Expansibilidade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 201,
+		"title": "Fenótipos da Asma: Extrínseca vs. Intrínseca",
+		"vignette": "A asma é uma doença heterogênea. Tradicionalmente, dividimos os pacientes entre aqueles com Asma Extrínseca (Atópica) e Asma Intrínseca (Não Atópica).",
+		"explanation": "Entender o fenótipo ajuda na anamnese:\n\n*   **Extrínseca:** O gatilho é claro (poeira, pólen, mofo). Responde muito bem a corticoides.\n*   **Intrínseca:** O gatilho é obscuro (estresse, infecções virais, mudanças de temperatura). O prognóstico costuma ser mais reservado.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o perfil típico do paciente com Asma Extrínseca em relação à idade de início, histórico familiar e níveis de IgE sérica?",
+				"correctAnswer": "A Asma Extrínseca inicia-se geralmente na infância/adolescência, está fortemente associada a outras atopias (rinite, dermatite), histórico familiar positivo para alergias e apresenta níveis elevados de IgE e testes cutâneos (Prick Test) positivos.",
+				"keywords": ["Atopia / IgE", "Fenótipo Clínico"],
+				"order": 1
+			},
+			{
+				"text": "A Asma Intrínseca costuma ser mais comum em qual faixa etária e qual a sua relação com a gravidade dos sintomas e pólipos nasais?",
+				"correctAnswer": "A Asma Intrínseca inicia-se mais tardiamente, na vida adulta. Ela tende a ser mais grave, menos responsiva ao controle ambiental e está frequentemente associada à polipose nasal e à intolerância à aspirina (AINEs).",
+				"keywords": ["Asma de Início Tardio", "Polipose Nasal"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 202,
+		"title": "Interpretação Qualitativa do Escarro: Enzimas e Celularidade",
+		"vignette": "Um paciente com DPOC apresenta-se com tosse e escarro de cor esverdeada. O interno de medicina afirma: \"Como o escarro é verde, há certeza de infecção bacteriana e precisamos de antibiótico\".",
+		"explanation": "A purulência é um dos critérios de Anthonisen para antibiótico na DPOC, mas deve ser avaliada no contexto clínico. Na asma, raramente se usa antibiótico na crise baseando-se apenas na cor do escarro, pois a secreção \"feia\" costuma ser resultado apenas de inflamação eosinofílica intensa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Por que a cor verde do escarro não é sinônimo absoluto de infecção bacteriana? Qual enzima celular dá a cor verde à secreção?",
+				"correctAnswer": "A cor verde é causada pela presença da enzima Mieloperoxidase, liberada pelos neutrófilos. Embora o recrutamento de neutrófilos seja comum em infecções bacterianas, ele também pode ocorrer em inflamações agudas causadas por vírus ou irritantes ambientais. Portanto, a cor indica inflamação ativa, mas não necessariamente a etiologia bacteriana isolada.",
+				"keywords": ["Mieloperoxidase", "Purulência vs. Infecção"],
+				"order": 1
+			},
+			{
+				"text": "Na asma, o escarro pode ser amarelado/esverdeado sem que haja infecção. Qual célula, quando presente em grande quantidade, causa essa alteração de cor na asma?",
+				"correctAnswer": "Os Eosinófilos. Na exacerbação da asma, a descamação epitelial e a grande quantidade de eosinófilos e seus produtos (como a proteína básica maior) podem tornar o escarro espesso e purulento ao olhar leigo, mimetizando uma infecção bacteriana que, na verdade, é apenas inflamação alérgica intensa.",
+				"keywords": ["Eosinofilia no Escarro", "Neutrófilos"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 203,
+		"title": "Broncoespasmo Induzido pelo Exercício (BIE)",
+		"vignette": "Um adolescente de 15 anos queixa-se de tosse e \"peito apertado\" que surgem apenas após 5 a 10 minutos de corrida intensa no treino de futebol. Ele não tem sintomas em repouso e sua espirometria basal é normal.",
+		"explanation": "O BIE é uma manifestação comum de asma ou pode ocorrer isoladamente em atletas. O uso de SABA (Salbutamol) 15 a 30 minutos antes do exercício é a conduta preventiva padrão.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome dessa condição e qual a principal teoria fisiopatológica (Osmótica/Térmica) que explica por que o exercício desencadeia o broncoespasmo?",
+				"correctAnswer": "O nome é Broncoespasmo Induzido pelo Exercício (BIE). A teoria mais aceita sugere que a hiperventilação durante o exercício leva à perda de calor e água da mucosa das vias aéreas (evaporação). Isso torna o fluido extracelular das vias aéreas hiperosmolar, o que estimula a liberação de mediadores inflamatórios (como histamina e leucotrienos) pelos mastócitos, resultando em bronconstrição.",
+				"keywords": [
+					"Broncoespasmo Induzido pelo Exercício (BIE)",
+					"Teoria Osmótica / Térmica",
+					"Desgranulação de Mastócitos"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o ar frio e seco piora os sintomas desse paciente em comparação ao exercício em ambiente úmido e quente?",
+				"correctAnswer": "Porque o ar frio e seco acelera a evaporação e o resfriamento da mucosa brônquica, intensificando o estresse osmótico e térmico que desencadeia a crise. O ar úmido e quente reduz essa perda de água, sendo melhor tolerado.",
+				"keywords": ["Hiperventilação"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 204,
+		"title": "Efeitos Metabólicos e Iatrogênicos dos Beta-2 Agonistas",
+		"vignette": "Um paciente com asma grave recebe 6 ciclos de nebulização com Salbutamol (SABA) em alta dose nas primeiras duas horas de chegada ao Pronto-Socorro. Ao ser reavaliado, ele apresenta tremores finos de extremidades e o potássio sérico (K+) caiu de 4.2 mEq/L para 3.1 mEq/L.",
+		"explanation": "Este é um efeito colateral clássico que deve ser monitorado no PS. Os sintomas incluem tremores (por estimulação direta do músculo esquelético), taquicardia e hipocalemia. Esse mesmo efeito é usado propositalmente no tratamento de emergência da hipercalemia (Medida Polarizante).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Explique o mecanismo farmacológico que faz com que o uso de Beta-2 agonistas cause hipocalemia (queda do potássio no sangue).",
+				"correctAnswer": "Os Beta-2 agonistas estimulam a enzima Na+/K+ ATPase na membrana das células (especialmente nos músculos esqueléticos). Essa bomba transporta ativamente o potássio do meio extracelular (sangue) para o meio intracelular.",
+				"keywords": ["Bomba Na+/K+ ATPase", "Estimulação Beta-2 Adrenérgica"],
+				"order": 1
+			},
+			{
+				"text": "Esse paciente tem uma deficiência real de potássio no corpo (balanço negativo) ou apenas uma redistribuição? Justifique.",
+				"correctAnswer": "Trata-se de uma redistribuição (Shift intracelular). O potássio não foi perdido na urina ou fezes; ele apenas \"entrou\" nas células. Por isso, na maioria das vezes, o nível de potássio se normaliza sozinho assim que o efeito da medicação passa, não sendo necessária a reposição agressiva de K+, a menos que o valor seja criticamente baixo ou o paciente tenha risco de arritmias.",
+				"keywords": [
+					"Shift Intracelular de Potássio",
+					"Hipocalemia Iatrogênica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 205,
+		"title": "Eficiência Ventilatória e Espaço Morto no Enfisema",
+		"vignette": "Na DPOC avançada (Enfisema), o paciente pode apresentar uma pCO2 elevada na gasometria mesmo tendo uma frequência respiratória aumentada. Isso ocorre devido ao aumento do Espaço Morto Fisiológico.",
+		"explanation": "Este conceito diferencia \"Ventilação Minuta\" (volume total de ar) de \"Ventilação Alveolar\" (ar que realmente faz troca). No DPOC, o paciente tem muita ventilação, mas pouca troca efetiva devido à destruição estrutural.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Diferencie o Espaço Morto Anatômico do Espaço Morto Alveolar.",
+				"correctAnswer": "O Espaço Morto Anatômico é o volume de ar nas vias aéreas de condução (traqueia, brônquios) onde não ocorrem trocas gasosas por natureza. O Espaço Morto Alveolar refere-se a alvéolos que são ventilados (recebem ar), mas não são perfundidos (não recebem sangue).",
+				"keywords": ["Espaço Morto Fisiológico"],
+				"order": 1
+			},
+			{
+				"text": "Por que o enfisema aumenta o Espaço Morto Alveolar e como isso explica a ineficiência da ventilação (mesmo o paciente respirando rápido)?",
+				"correctAnswer": "No enfisema, a destruição dos septos alveolares destrói também os capilares. Assim, o ar entra em \"sacos\" aéreos dilatados onde não há sangue passando para fazer a troca. O paciente gasta energia para ventilar áreas \"mortas\"; por isso, embora ele respire muito, o sangue continua retendo CO2, pois a Ventilação Alveolar Efetiva é baixa.",
+				"keywords": [
+					"Ventilação Alveolar Efetiva",
+					"Destruição Capilar",
+					"Ineficiência Ventilatória"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 206,
+		"title": "Semiologia do Baqueteamento Digital no Paciente com DPOC",
+		"vignette": "Durante o exame físico de um paciente com DPOC estável, você observa atentamente as mãos do paciente em busca de Baqueteamento Digital (Hipocratismo Digital).",
+		"explanation": "Este é um \"dogma\" da semiologia pneumológica: o baqueteamento digital não ocorre no DPOC ou Asma isolados. Se presente, indica doenças supurativas crônicas, neoplasias ou doenças cardíacas cianóticas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "O baqueteamento digital é um achado comum e esperado no DPOC isolado (bronquite/enfisema)?",
+				"correctAnswer": "Não. O baqueteamento digital não é causado pelo DPOC isolado. Sua presença indica que há outra patologia associada.",
+				"keywords": ["Hipocratismo Digital"],
+				"order": 1
+			},
+			{
+				"text": "Se você encontrar baqueteamento digital em um paciente tabagista com diagnóstico de DPOC, quais são as duas condições graves que você deve obrigatoriamente investigar?",
+				"correctAnswer": "Deve-se investigar Câncer de Pulmão ou a presença de Bronquiectasias (ou outras doenças supurativas crônicas). O DPOC, por mais hipoxêmico que seja, não causa a proliferação de tecido conjuntivo no leito ungueal típica do hipocratismo; esse achado é um \"sinal de alerta\" para buscar complicações ou diagnósticos alternativos.",
+				"keywords": [
+					"Sinal de Alerta (Red Flag)",
+					"Diagnóstico Diferencial",
+					"Neoplasia Pulmonar"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 207,
+		"title": "Zona Silenciosa do Pulmão e Resistência Periférica",
+		"vignette": "Um paciente tabagista apresenta dispneia leve aos esforços, mas sua espirometria mostra um VEF1 e uma relação VEF1/CVF dentro da normalidade. No entanto, o parâmetro FEF 25-75% (Fluxo Expiratório Forçado entre 25% e 75% da CVF) está significativamente reduzido.",
+		"explanation": "O aluno de 4º ano deve entender que a espirometria 'normal' pode esconder patologia inicial. \n\n*   **Física:** A resistência nas vias aéreas é maior nas vias de médio calibre (segmentares) e muito baixa na periferia devido à enorme área de seção transversal total.\n*   **Clínica:** O FEF 25-75% é um marcador precoce de Doença de Pequenas Vias Aéreas, sendo altamente sensível para flagrar a doença em estágios iniciais, antes que o VEF1 seja afetado.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Por que as pequenas vias aéreas (bronquíolos < 2mm) são chamadas de \"Zona Silenciosa\" do pulmão em termos de resistência ao fluxo?",
+				"correctAnswer": "Porque, apesar de serem estreitas individualmente, o número de pequenas vias aéreas é tão vasto que a sua área de seção transversal total é imensa. Como resultado, elas contribuem com menos de 20% da resistência total do pulmão. Isso significa que uma grande quantidade dessas vias pode estar doente ou obstruída antes que os testes globais (como o VEF1) consigam detectar alguma alteração.",
+				"keywords": [
+					"Zona Silenciosa do Pulmão",
+					"Área de Seção Transversal Total",
+					"Resistência Periférica"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a importância clínica de encontrar uma redução isolada do FEF 25-75% em um paciente fumante com VEF1 ainda normal?",
+				"correctAnswer": "O FEF 25-75% é um marcador precoce de Doença de Pequenas Vias Aéreas. Sua redução isolada sugere que o processo obstrutivo já começou, mas ainda não atingiu as vias aéreas de maior calibre. É um sinal de alerta para intervenção precoce (cessação do tabagismo) antes que a obstrução se torne clinicamente óbvia e irreversível.",
+				"keywords": ["FEF 25-75%"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 208,
+		"title": "Dispositivos Inalatórios: Técnica e Deposição Pulmonar",
+		"vignette": "Ao prescrever medicações inalatórias, o médico pode escolher entre o MDI (Inalador de Dose Medida/Spray) e o DPI (Inalador de Pó Seco, como o Diskus ou Aerolizer).",
+		"explanation": "Prescrever o dispositivo errado é o motivo nº 1 de falha no tratamento.\n\n*   **MDI:** Exige coordenação entre o disparo e a inspiração ou o uso de um espaçador.\n*   **DPI:** Exige \"força\" (fluxo) inspiratório para desaglomerar o pó, sendo contraindicado em crises agudas graves ou pacientes com baixíssima capacidade inspiratória.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual a diferença fundamental na técnica de inspiração exigida para um MDI comparado a um DPI?",
+				"correctAnswer": "Para o MDI, a inspiração deve ser lenta e profunda para evitar que as partículas colidam na orofaringe devido à velocidade do spray. Para o DPI, a inspiração deve ser rápida e vigorosa, pois é a própria força do fluxo inspiratório do paciente que precisa \"quebrar\" o pó e transformá-lo em aerossol para chegar aos pulmões.",
+				"keywords": ["Inspiração Lenta vs. Rápida", "Desaglomerar o Fármaco"],
+				"order": 1
+			},
+			{
+				"text": "Por que um paciente idoso com DPOC muito grave e baixa capacidade inspiratória pode falhar ao usar um dispositivo de Pó Seco (DPI)?",
+				"correctAnswer": "Porque os DPIs dependem de um fluxo inspiratório mínimo (geralmente > 30-60 L/min) para desaglomerar a medicação. Pacientes com musculatura respiratória fadigada ou obstrução muito grave podem não conseguir gerar esse fluxo rápido, fazendo com que o pó fique retido no dispositivo ou na boca, sem atingir as vias aéreas inferiores.",
+				"keywords": [
+					"Inalador de Pó Seco (DPI)",
+					"Fluxo Inspiratório Turbulento"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 209,
+		"title": "Semiologia Cardiovascular no Cor Pulmonale",
+		"vignette": "Ao examinar um paciente com DPOC avançada e suspeita de Cor Pulmonale, o médico foca a ausculta cardíaca no segundo espaço intercostal esquerdo, junto à borda esternal.",
+		"explanation": "A semiologia cardíaca é a chave para detectar quando o pulmão começou a impactar a função cardíaca direita.\n\n*   **B2 Hiperfonética:** É frequentemente o primeiro sinal clínico de hipertensão pulmonar.\n*   **Ictus de VD:** Pode ser palpável na região subxifoide ou paraesternal esquerda (conhecido como Sinal de Dressler).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual alteração na segunda bulha (B2) é esperada nesse paciente e qual o mecanismo fisiopatológico para esse achado?",
+				"correctAnswer": "Espera-se uma hiperfonese da Segunda Bulha (P2 > A2). Isso ocorre porque a Hipertensão Pulmonar (secundária à doença pulmonar) faz com que a valva pulmonar se feche com muito mais força e rapidez devido à alta pressão de retrocesso na artéria pulmonar, gerando um som mais alto e metálico.",
+				"keywords": ["Hiperfonese de P2", "Hipertensão Pulmonar Crônica"],
+				"order": 1
+			},
+			{
+				"text": "O que é o Sopro de Graham Steell e como ele se relaciona com a pressão na artéria pulmonar?",
+				"correctAnswer": "O Sopro de Graham Steell é um sopro diastólico de alta frequência, aspirativo, ouvido no foco pulmonar. Ele representa uma insuficiência valvar pulmonar funcional, causada pela dilatação do anel da valva pulmonar devido à hipertensão pulmonar crônica grave.",
+				"keywords": [
+					"Sopro de Graham Steell",
+					"Insuficiência Pulmonar Funcional"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 210,
+		"title": "Manifestações Sistêmicas do DPOC: Anemia Inflamatória",
+		"vignette": "Embora a eritrocitose (policitemia) seja famosa na DPOC, muitos pacientes apresentam, na verdade, uma anemia normocrômica e normocítica.",
+		"explanation": "O tratamento da DPOC envolve uma visão sistêmica. A anemia é um preditor independente de mortalidade e pior qualidade de vida nesses pacientes. Se houver aumento da dispneia sem piora da função pulmonar obstrutiva, o status hematológico deve ser investigado.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
+		],
+		"questions": [
+			{
+				"text": "Qual o mecanismo inflamatório (envolvendo a Hepcidina) que explica a ocorrência de anemia de doença crônica em pacientes com DPOC?",
+				"correctAnswer": "A DPOC é uma doença inflamatória sistêmica. As citocinas inflamatórias (como IL-6) estimulam o fígado a produzir Hepcidina. A hepcidina bloqueia a ferroportina (impedindo a absorção de ferro no intestino e a liberação de ferro dos estoques/macrófagos), o que reduz o ferro disponível para a eritropoese, causando anemia apesar de estoques de ferro normais.",
+				"keywords": ["Hepcidina", "Ferroportina", "Anemia de Doença Crônica"],
+				"order": 1
+			},
+			{
+				"text": "Qual o impacto dessa anemia na percepção de dispneia do paciente, mesmo que a função pulmonar (VEF1) esteja estável?",
+				"correctAnswer": "A anemia reduz a capacidade de transporte de oxigênio do sangue. Isso obriga o paciente a aumentar o débito cardíaco e a ventilação para manter a oferta de O2 aos tecidos. O resultado é um aumento da dispneia (escala mMRC mais alta) e menor tolerância ao exercício, independentemente do grau de obstrução brônquica.",
+				"keywords": ["Capacidade de Transporte de O2"],
+				"order": 2
+			}
+		]
+	}
+]

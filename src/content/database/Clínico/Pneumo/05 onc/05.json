@@ -1,0 +1,857 @@
+[
+	{
+		"id": 275,
+		"title": "Rastreamento de Câncer de Pulmão e Critérios de Elegibilidade",
+		"vignette": "Um paciente de 62 anos, tabagista ativo (carga tabágica de 45 maços-ano), comparece à consulta de rotina na Unidade Básica de Saúde. Ele é assintomático do ponto de vista respiratório, mas refere preocupação após o falecimento de um amigo por câncer de pulmão. Ele questiona se existe algum exame para 'detectar cedo' a doença.",
+		"explanation": "O rastreamento de câncer de pulmão visa identificar o carcinoma broncogênico em estágios precoces (I e II), onde a ressecção cirúrgica oferece alta probabilidade de cura. A TC de baixa dose utiliza protocolos que reduzem a exposição à radiação em comparação à TC convencional, mantendo sensibilidade suficiente para detectar nódulos milimétricos. O objetivo principal é a redução da mortalidade específica por câncer de pulmão na população de alto risco.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Segundo as diretrizes atuais de rastreamento, este paciente possui indicação para exames preventivos? Quais os critérios de elegibilidade?",
+				"correctAnswer": "Sim, o paciente possui indicação. Os critérios clássicos de rastreamento (baseados no USPSTF e sociedades brasileiras) incluem: idade entre 50 e 80 anos, carga tabágica ≥ 20 maços-ano e ser tabagista ativo ou ter parado há menos de 15 anos.",
+				"keywords": ["Carga Tabágica (Maços-ano)", "Nódulo Pulmonar"],
+				"order": 1
+			},
+			{
+				"text": "Qual o exame padrão-ouro para o rastreamento e por que a Radiografia de Tórax (RX) não é recomendada para este fim?",
+				"correctAnswer": "O exame indicado é a Tomografia de Tórax de Baixa Dose (TCBD). A radiografia de tórax não é recomendada para rastreamento pois não demonstrou redução de mortalidade em grandes estudos (como o NLST), uma vez que, quando uma lesão é visível ao RX, ela geralmente já se encontra em estágios mais avançados, perdendo a janela de oportunidade curativa.",
+				"keywords": ["TC de Baixa Dose (TCBD)", "Redução de Mortalidade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 276,
+		"title": "Classificação Histológica e Comportamento Clínico do Câncer de Pulmão",
+		"vignette": "Dois pacientes apresentam massas pulmonares em exames de imagem solicitados por tosse persistente. O Paciente A apresenta uma massa central, próxima ao hilo, com crescimento rápido e presença de hiponatremia laboratorial. O Paciente B apresenta um nódulo periférico, de crescimento mais lento.",
+		"explanation": "Diferenciar Pequenas Células (SCLC) de Não-Pequenas Células (NSCLC) é o primeiro passo da oncologia torácica. O SCLC (15% dos casos) é quase exclusivo de fumantes, central e neuroendócrino. O NSCLC (85% dos casos) tem como subtipo mais comum o Adenocarcinoma, que pode ocorrer inclusive em não fumantes e tende a ser periférico. Essa distinção dita se o foco inicial será cirúrgico (NSCLC estágios iniciais) ou sistêmico (SCLC).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual a principal divisão histológica do câncer de pulmão e em qual dessas categorias cada paciente provavelmente se encaixa?",
+				"correctAnswer": "A divisão principal é entre Carcinoma de Pequenas Células (Oat Cell) e Carcinoma de Não-Pequenas Células (que inclui Adenocarcinoma e Carcinoma Escamoso). O Paciente A provavelmente tem um Carcinoma de Pequenas Células (central, agressivo, associado à síndrome paraneoplásica de SIADH). O Paciente B provavelmente tem um Adenocarcinoma (periférico, crescimento mais lento).",
+				"keywords": ["Adenocarcinoma (Periférico)", "Síndrome Paraneoplásica"],
+				"order": 1
+			},
+			{
+				"text": "Qual desses tipos histológicos apresenta, via de regra, pior prognóstico e raramente é tratado com cirurgia como primeira linha? Justifique com base na biologia do tumor.",
+				"correctAnswer": "O Carcinoma de Pequenas Células. Sua biologia é marcada por uma altíssima taxa de duplicação celular e disseminação micrometastática precoce. Por ser considerado uma doença sistêmica já ao diagnóstico na maioria das vezes, o tratamento padrão é a quimioterapia e radioterapia, reservando-se a cirurgia apenas para casos raríssimos e muito iniciais.",
+				"keywords": [
+					"Pequenas Células (Oat Cell)",
+					"Não-Pequenas Células (NSCLC)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 277,
+		"title": "Síndrome da Veia Cava Superior em Oncologia",
+		"vignette": "Um paciente de 55 anos, com diagnóstico prévio de massa mediastinal em investigação, chega à emergência com edema de face e pescoço (\"face em bota\"), turgência jugular patológica que não melhora com a inspiração e presença de circulação colateral visível no tórax superior. Ele refere sensação de \"cabeça cheia\" ao se curvar para frente.",
+		"explanation": "A SVCS é uma emergência oncológica clássica, frequentemente causada por câncer de pulmão ou linfomas. Embora seja assustadora visualmente, a maioria dos casos permite uma investigação diagnóstica (biópsia) antes da radioterapia ou stent venoso, a menos que haja edema cerebral ou de glote iminente. O reconhecimento da \"tríade\" (edema de face, cianose e circulação colateral) é fundamental para o clínico.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual a síndrome clínica apresentada e qual a fisiopatologia por trás dos achados físicos?",
+				"correctAnswer": "Síndrome da Veia Cava Superior (SVCS). A fisiopatologia baseia-se na obstrução extrínseca (compressão por tumor/linfonodos) ou intrínseca (trombo) do fluxo sanguíneo através da veia cava superior. Como este vaso drena a cabeça, pescoço e membros superiores, sua obstrução causa congestão venosa retrógrada, levando ao edema e à circulação colateral como tentativa de desvio do fluxo para a veia ázigos ou veias da parede torácica.",
+				"keywords": [
+					"Veia Cava Superior",
+					"Circulação Colateral",
+					"Edema em Bota"
+				],
+				"order": 1
+			},
+			{
+				"text": "Quais as medidas imediatas de manejo clínico no pronto-socorro para alívio dos sintomas antes do tratamento definitivo?",
+				"correctAnswer": "As medidas iniciais incluem: elevação da cabeceira do leito (para reduzir a pressão hidrostática cefálica), oxigenoterapia (se houver desconforto), e uso de corticosteroides (Dexametasona) para reduzir o componente inflamatório/edema peritumoral, além de diuréticos de alça em casos selecionados para diminuir a sobrecarga volêmica.",
+				"keywords": ["Dexametasona", "Compressão Extrínseca"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 278,
+		"title": "Carcinoma Escamoso e Hipercalcemia Paraneoplásica",
+		"vignette": "Um paciente de 65 anos, tabagista de longa data (60 maços-ano), apresenta tosse com estrias de sangue (hemoptise leve) e perda ponderal de 8kg em dois meses. A radiografia de tórax mostra uma massa central próxima ao hilo pulmonar direito. Os exames laboratoriais revelam uma hipercalcemia significativa (Cálcio total = 12,5 mg/dL), sem evidência de metástases ósseas na cintilografia.",
+		"explanation": "Dentro do grupo de Não-Pequenas Células, o Carcinoma Escamoso e o Adenocarcinoma dominam. O **Escamoso** 'mora' no centro (brônquios principais), causa mais hemoptise e está muito ligado ao cigarro. O **Adenocarcinoma** 'mora' na periferia, é o mais comum em não-fumantes e mulheres. No 3º e 4º ano, o aluno deve associar: Massa Central + Hipercalcemia = Escamoso; Massa Central + Hiponatremia = Pequenas Células.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o subtipo histológico do Câncer de Pulmão de Não-Pequenas Células (CPNPC) mais provável neste caso, considerando a localização da lesão e o achado laboratorial?",
+				"correctAnswer": "**Carcinoma Escamoso (ou Epidermoide)**. Este tumor é classicamente associado ao tabagismo, tem localização predominantemente central (hilar) e é o subtipo de CPNPC que mais frequentemente causa síndromes paraneoplásicas endócrinas como a hipercalcemia.",
+				"keywords": ["Carcinoma Escamoso/Epidermoide", "Massa Central"],
+				"order": 1
+			},
+			{
+				"text": "Qual a fisiopatologia da hipercalcemia neste paciente (o 'mecanismo oculto')?",
+				"correctAnswer": "A hipercalcemia ocorre devido à produção ectópica de uma proteína relacionada ao paratormônio, o **PTHrp** (peptide related to PTH). Essa proteína mimetiza a ação do PTH, estimulando a reabsorção óssea e a reabsorção renal de cálcio, elevando os níveis séricos mesmo sem invasão óssea direta pelo tumor.",
+				"keywords": ["Hipercalcemia Paraneoplásica", "PTHrp"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 279,
+		"title": "Abordagem Diagnóstica: Broncoscopia vs Biópsia Percutânea",
+		"vignette": "Você está diante de dois pacientes com suspeita de neoplasia pulmonar após achados em TC de tórax. O Paciente X possui uma massa volumosa central que invade o brônquio fonte esquerdo. O Paciente Y possui um nódulo de 2,5 cm localizado na periferia do lobo inferior direito, encostado na pleura parietal.",
+		"explanation": "A escolha do método diagnóstico depende da **geografia do tumor**. Tumores centrais (perto da traqueia e brônquios fontes) são território da broncoscopia. Tumores periféricos (perto das costelas/pleura) são território da radiologia intervencionista (biópsia por agulha). Entender essa logística evita exames desnecessários e atrasos no diagnóstico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Para o Paciente X, qual o método de escolha inicial para obtenção de biópsia e confirmação histológica?",
+				"correctAnswer": "**Broncoscopia (com biópsia endobrônquica)**. Como a lesão é central e invade a via aérea, o broncoscópio consegue visualizar o tumor diretamente e coletar fragmentos por pinçamento.",
+				"keywords": ["Broncoscopia", "Localização Hilar vs Periférica"],
+				"order": 1
+			},
+			{
+				"text": "Para o Paciente Y, qual a via de acesso costuma ser mais eficaz para o diagnóstico histológico?",
+				"correctAnswer": "**Biópsia Percutânea Transparietal (guiada por TC ou Ultrassom)**. Lesões periféricas são de difícil alcance pelo broncoscópio convencional. A introdução de uma agulha através da parede torácica, guiada por imagem, oferece maior rendimento diagnóstico nesses casos.",
+				"keywords": [
+					"Biópsia Percutânea (Core biopsy)",
+					"Rendimento Diagnóstico"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 280,
+		"title": "Tumor de Pancoast e Síndrome de Horner",
+		"vignette": "Um paciente de 58 anos queixa-se de dor intensa em ombro direito irradiada para a face interna do braço, associada a uma queda da pálpebra superior à direita (ptose) e uma pupila visivelmente menor (miose) do mesmo lado. Ele é tabagista pesado.",
+		"explanation": "O tumor de Pancoast não é um tipo histológico (geralmente é um adenocarcinoma ou escamoso), mas sim uma **classificação anatômica**. O aluno deve identificar que nem toda dor no ombro é ortopédica; em um tabagista, a invasão do ápice pulmonar deve ser considerada. O envolvimento do plexo braquial (raízes C8, T1 e T2) explica a dor e a parestesia no território cubital/interna do braço.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome da síndrome neurológica caracterizada pela ptose e miose, e qual a sua causa anatômica neste contexto oncológico?",
+				"correctAnswer": "**Síndrome de Horner**. Ela é causada pela compressão ou invasão da **cadeia simpática cervical** (especificamente o gânglio estrelado) pelo tumor. Além de ptose e miose, o paciente pode apresentar anidrose (ausência de suor) ipsilateral na face.",
+				"keywords": ["Síndrome de Horner", "Ptose e Miose", "Cadeia Simpática"],
+				"order": 1
+			},
+			{
+				"text": "Como é chamado o tumor de pulmão localizado especificamente no ápice pulmonar que causa este quadro compressivo?",
+				"correctAnswer": "**Tumor de Pancoast** (ou tumor do sulco superior). É uma neoplasia que cresce no ápice do pulmão e invade estruturas vizinhas como o plexo braquial (causando a dor no braço) e a cadeia simpática (causando a Síndrome de Horner).",
+				"keywords": ["Tumor de Pancoast", "Plexo Braquial"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 281,
+		"title": "Adenocarcinoma Pulmonar em Não Fumantes",
+		"vignette": "Uma paciente de 52 anos, nunca tabagista, apresenta tosse seca persistente há 3 meses e dor pleurítica à direita. A investigação radiológica revela um nódulo periférico de 3 cm no lobo superior direito, associado a um pequeno derrame pleural ipsilateral.",
+		"explanation": "Houve uma mudança epidemiológica nas últimas décadas. Antigamente, o Carcinoma Escamoso (ligado ao fumo pesado) era o soberano. Hoje, o Adenocarcinoma é o mais prevalente. Para o estudante de 3º/4º ano, é crucial quebrar o estigma de que 'câncer de pulmão só dá em fumante idoso'. Diante de uma massa periférica em um não fumante, o Adenocarcinoma é a hipótese principal.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o tipo histológico de câncer de pulmão mais provável nesta paciente, considerando seu perfil epidemiológico (não fumante)?",
+				"correctAnswer": "Adenocarcinoma. É o tipo mais comum de câncer de pulmão em geral e, especificamente, o subtipo mais frequente em mulheres, jovens e pessoas que nunca fumaram.",
+				"keywords": ["Adenocarcinoma", "Não fumante"],
+				"order": 1
+			},
+			{
+				"text": "Em termos de localização e disseminação, como esse tumor se diferencia classicamente do Carcinoma Escamoso?",
+				"correctAnswer": "O Adenocarcinoma é tipicamente periférico (origina-se nas glândulas produtoras de muco nos bronquíolos distais), enquanto o Escamoso é central. O Adenocarcinoma também tem uma tendência maior à disseminação hematogênica precoce e ao envolvimento da pleura (causando derrame pleural neoplásico), enquanto o Escamoso tende a cavitar e crescer localmente.",
+				"keywords": ["Localização Periférica", "Derrame Pleural Maligno"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 282,
+		"title": "SIADH e Carcinoma de Pequenas Células",
+		"vignette": "Um paciente de 70 anos, tabagista pesado, com diagnóstico de massa hilar de crescimento rápido (sugestiva de Carcinoma de Pequenas Células), é internado por confusão mental e letargia. Os exames laboratoriais mostram: Sódio (Na+) = 118 mEq/L (Normal: 135-145), Osmolalidade plasmática baixa e uma concentração urinária de sódio elevada. O paciente está euvolêmico (sem edemas ou desidratação).",
+		"explanation": "A hiponatremia é um 'clássico' das enfermarias de clínica médica. Quando o aluno vê um paciente com massa pulmonar e sódio baixo, o diagnóstico de SIADH por Pequenas Células deve ser imediato. O tratamento da hiponatremia aqui foca na restrição hídrica e no tratamento do tumor de base, mas o reconhecimento da causa paraneoplásica evita tratamentos errados (como dar soro fisiológico, que pode piorar a SIADH em alguns contextos).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual a síndrome paraneoplásica que explica este quadro laboratorial e qual o mecanismo fisiopatológico (o 'porquê' do sódio baixo)?",
+				"correctAnswer": "SIADH (Síndrome da Secreção Inapropriada de Hormônio Antidiurético). O tumor secreta ectopicamente o hormônio ADH (vasopressina). O excesso de ADH faz o rim reabsorver água livre em excesso nos ductos coletores, 'diluindo' o sódio no sangue (hiponatremia dilucional), apesar de o paciente não ter excesso de volume total (euvolêmico).",
+				"keywords": ["SIADH", "Hiponatremia Dilucional"],
+				"order": 1
+			},
+			{
+				"text": "Por que esse tumor (Pequenas Células) é o que mais frequentemente causa esse tipo de distúrbio em comparação aos outros tipos de câncer de pulmão?",
+				"correctAnswer": "Porque o Carcinoma de Pequenas Células (SCLC) tem origem em células neuroendócrinas (células de Kulchitsky). Por possuírem essa linhagem neuroendócrina, elas têm a maquinaria celular necessária para sintetizar e secretar polipeptídeos complexos, como o ADH e o ACTH (que causa Síndrome de Cushing).",
+				"keywords": [
+					"Células Neuroendócrinas (Kulchitsky)",
+					"Carcinoma de Pequenas Células (Oat Cell)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 283,
+		"title": "Terminologia Radiológica: Nódulo vs. Massa Pulmonar",
+		"vignette": "Durante a análise de uma radiografia de tórax de um paciente assintomático, você observa uma opacidade arredondada, solitária, no lobo superior esquerdo, medindo cerca de 2,2 cm. O laudo do radiologista descreve a lesão como um 'nódulo pulmonar'.",
+		"explanation": "No 3º e 4º ano, o aluno deve dominar a terminologia. 'Massa' é sinônimo de alta suspeição oncológica até que se prove o contrário. O 'Nódulo Pulmonar Solitário' é um desafio diagnóstico onde avaliamos o risco baseado no tamanho, idade do paciente e tabagismo. Nódulos pequenos (< 6-8 mm) em pacientes de baixo risco podem apenas ser observados, enquanto massas exigem biópsia imediata ou cirurgia.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o critério de tamanho que diferencia um **Nódulo** de uma **Massa** pulmonar? Por que essa distinção é importante na prática clínica?",
+				"correctAnswer": "A diferenciação é o limite de **3 cm**. Lesões até 3 cm são chamadas de **Nódulos**; lesões maiores que 3 cm são chamadas de **Massas**. A distinção é vital porque uma 'massa' em um paciente adulto tem uma probabilidade de malignidade muito superior (frequentemente > 80%), enquanto nódulos possuem um diagnóstico diferencial muito mais amplo, incluindo causas infecciosas e granulomas benignos.",
+				"keywords": [
+					"Nódulo (< 3 cm) vs. Massa (> 3 cm)",
+					"Estabilidade (2 anos sem crescimento sugere benignidade)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Cite três características radiológicas (na TC de tórax) que aumentam a suspeição de que um nódulo seja maligno.",
+				"correctAnswer": "1. **Bordas espiculadas** ou irregulares ('coroa radiada'). 2. **Crescimento** documentado em exames anteriores. 3. **Ausência de calcificações benignas** (como a calcificação em 'pipoca', típica do hamartoma). 4. **Aumento da densidade** (componente sólido em nódulos de vidro fosco).",
+				"keywords": [
+					"Bordas Espiculadas",
+					"Calcificação em \"Pipoca\" (Benigna)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 284,
+		"title": "Sítios de Metástase e Estadiamento no Câncer de Pulmão",
+		"vignette": "Um paciente acaba de receber o diagnóstico histológico de Carcinoma de Não-Pequenas Células (Adenocarcinoma) através de uma biópsia percutânea. Antes de definir o tratamento, o médico precisa saber se a doença está restrita ao pulmão ou se já se espalhou.",
+		"explanation": "Entender o padrão de disseminação é essencial para o raciocínio clínico. Se um paciente com massa pulmonar apresenta dor óssea, o aluno deve pensar em metástase. Se apresenta dor em hipocôndrio direito, metástase hepática. Se apresenta alteração de comportamento, metástase cerebral. Frequentemente, solicitamos TC de abdome superior (para ver adrenais e fígado) e exames de imagem do crânio como parte da avaliação inicial 'básica' de qualquer câncer de pulmão suspeito.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Quais são os quatro sítios extra-torácicos mais comuns de metástase do câncer de pulmão?",
+				"correctAnswer": "Os quatro sítios clássicos são: **Glândulas Adrenais**, **Fígado**, **Ossos** e **Cérebro**.",
+				"keywords": [
+					"Adrenais",
+					"Metástase Óssea",
+					"Disseminação Hematogênica"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual exame de imagem é fundamental para o estadiamento do sistema nervoso central, especialmente em pacientes que apresentam sintomas neurológicos ou tumores maiores que 2 cm?",
+				"correctAnswer": "**Ressonância Magnética (RM) de Crânio** (ou TC de crânio com contraste, se a RM não estiver disponível). O câncer de pulmão é uma das neoplasias que mais frequentemente envia metástases para o cérebro, e isso muda completamente o prognóstico e a estratégia terapêutica.",
+				"keywords": ["Estadiamento Inicial"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 285,
+		"title": "Emergências na Síndrome da Veia Cava Superior e Diagnóstico Diferencial",
+		"vignette": "Retornando à **Síndrome da Veia Cava Superior (SVCS)**, um paciente apresenta-se na emergência com o quadro clássico. Além do edema e da turgência jugular, ele começa a apresentar estridor inspiratório e dificuldade para falar.",
+		"explanation": "Este é o 'ajuste fino' da propedêutica. A SVCS não é apenas um problema visual; ela pode matar por asfixia se o edema atingir a via aérea superior. O aluno deve saber que, na emergência, se o paciente está 'estriduloso' e com 'face em bota', a via aérea está em risco.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "No manejo imediato da SVCS, qual a principal preocupação clínica que indica uma intervenção de urgência absoluta?",
+				"correctAnswer": "A **obstrução das vias aéreas superior** (edema de glote/compressão da traqueia) ou o **edema cerebral**. Se houver risco de vida imediato por essas causas, o tratamento (radioterapia ou stent) deve ser iniciado antes mesmo da confirmação histológica, se necessário.",
+				"keywords": ["Edema de Glote", "Estridor", "Urgência Oncológica"],
+				"order": 1
+			},
+			{
+				"text": "No 3º/4º ano, qual a diferenciação clínica entre a turgência jugular da SVCS e a turgência jugular da Insuficiência Cardíaca Direita?",
+				"correctAnswer": "Na SVCS, a turgência jugular é **fixa e não pulsátil**, e não se altera com as manobras respiratórias (ausência de refluxo hepatojugular e ausência de colapso na inspiração), pois o bloqueio é mecânico e superior ao átrio direito. Na IC Direita, a turgência reflete as pressões das câmaras direitas, sendo frequentemente pulsátil e associada a outros sinais de congestão sistêmica (edema de membros inferiores, hepatomegalia).",
+				"keywords": ["Turgência Jugular Não-Pulsátil"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 286,
+		"title": "Sinais de Alarme e Semiologia no Câncer de Pulmão",
+		"vignette": "Um paciente de 65 anos, tabagista (50 maços-ano), refere que sua \"tosse de fumante\", que o acompanha há anos, mudou de característica nas últimas semanas, tornando-se mais frequente e agora associada a um chiado localizado apenas no lado direito. Ao exame físico, você nota baqueteamento digital (dedos em vidro de relógio) e, na ausculta, um sibilo fixo/monofônico no ápice direito.",
+		"explanation": "A semiologia do câncer de pulmão é a arte de identificar o \"novo\" em um paciente com pulmão já doente. O sibilo fixo é um achado que \"grita\" obstrução mecânica. O baqueteamento digital, por sua vez, é um sinal de doença sistêmica crônica e, na oncologia torácica, faz parte da síndrome de Pierre-Marie-Bamberger (osteoartropatia hipertrófica pneumogênica).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual a importância semiológica da \"mudança no padrão da tosse\" em um tabagista crônico?",
+				"correctAnswer": "A mudança no padrão da tosse é um dos **sinais de alarme (red flags)** mais precoces. Em um tabagista, a tosse costuma ser negligenciada pelo paciente, mas se ela se torna mais intensa, muda de timbre ou muda de horários, deve ser investigada imediatamente como suspeita de neoplasia broncogênica.",
+				"keywords": ["Sinal de Alarme (Red Flag)"],
+				"order": 1
+			},
+			{
+				"text": "Qual a explicação fisiopatológica para o sibilo ser \"fixo e monofônico\" neste caso, e como ele difere do sibilo da asma?",
+				"correctAnswer": "O sibilo fixo e monofônico indica uma **obstrução parcial mecânica de um brônquio** por uma massa (tumor). Diferente da asma, onde o sibilo é polifônico (vários tons) e disseminado por todo o tórax devido ao broncoespasmo difuso, o sibilo tumoral é localizado e mantém sempre o mesmo tom, pois a via aérea obstruída é sempre a mesma.",
+				"keywords": ["Sibilo Fixo/Monofônico"],
+				"order": 2
+			},
+			{
+				"text": "O baqueteamento digital (osteopatia hipertrófica) é específico do câncer de pulmão? Qual o mecanismo proposto para esse achado?",
+				"correctAnswer": "Não é específico (ocorre em doenças supurativas como bronquiectasias e em cardiopatias congênitas cianóticas), mas no contexto de um idoso tabagista, é altamente sugestivo de câncer de pulmão. O mecanismo envolve a liberação de fatores de crescimento (como o **VEGF** e PDGF) por megacariócitos que não foram fragmentados nos capilares pulmonares (devido ao shunt ou distorção vascular pelo tumor), promovendo proliferação de tecido conjuntivo e vascular sob as unhas.",
+				"keywords": [
+					"Baqueteamento Digital",
+					"VEGF (Fator de Crescimento Endotelial Vascular)"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 287,
+		"title": "Síndrome Miastênica de Eaton-Lambert e Paraneoplasias",
+		"vignette": "Um paciente com massa pulmonar central (provável Carcinoma de Pequenas Células) queixa-se de fraqueza muscular, principalmente nas coxas e braços, o que o impede de subir escadas. Curiosamente, ele relata que a força melhora após ele insistir no movimento ou fazer um esforço repetido. Ele também refere boca seca.",
+		"explanation": "O Carcinoma de Pequenas Células é o \"campeão\" das síndromes paraneoplásicas devido à sua origem neuroendócrina. Eaton-Lambert é uma questão clássica de raciocínio clínico que separa o aluno que entende fisiologia sináptica do aluno que apenas decora nomes. A diferenciação com Miastenia é baseada no comportamento do sintoma frente ao exercício.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome desta síndrome paraneoplásica neuromuscular?",
+				"correctAnswer": "**Síndrome Miastênica de Eaton-Lambert**.",
+				"keywords": ["Síndrome de Eaton-Lambert"],
+				"order": 1
+			},
+			{
+				"text": "Como podemos diferenciá-la clinicamente da Miastenia Gravis (o Princípio do Contraste)?",
+				"correctAnswer": "Na **Miastenia Gravis**, a fraqueza **piora** com o esforço repetido (fatigabilidade) e frequentemente envolve a musculatura ocular (ptose). Na **Síndrome de Eaton-Lambert**, a força **melhora temporariamente** com a contração muscular repetida (fenômeno de facilitação) e o envolvimento ocular é raro. Além disso, Eaton-Lambert costuma cursar com disautonomias, como a xerostomia (boca seca).",
+				"keywords": ["Carcinoma de Pequenas Células"],
+				"order": 2
+			},
+			{
+				"text": "Qual o mecanismo fisiopatológico (o \"porquê\") dessa fraqueza?",
+				"correctAnswer": "O tumor de pequenas células expressa canais de cálcio voltagem-dependentes em sua superfície. O sistema imune produz anticorpos contra esses canais. Esses mesmos anticorpos atacam os **canais de cálcio pré-sinápticos** na junção neuromuscular, impedindo a liberação de acetilcolina. Com o esforço repetido, o cálcio consegue se acumular no terminal pré-sináptico, permitindo a liberação de acetilcolina e a melhora temporária da força.",
+				"keywords": [
+					"Canais de Cálcio Voltagem-Dependentes",
+					"Fenômeno de Facilitação"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 288,
+		"title": "Uso de Marcadores Tumorais no Câncer de Pulmão",
+		"vignette": "Um estudante do 3º ano, ao atender um paciente com forte suspeita de câncer de pulmão pela história e imagem, decide solicitar uma bateria de exames laboratoriais, incluindo marcadores tumorais como CEA, CA-125 e AFP, acreditando que esses exames ajudarão a confirmar o diagnóstico.",
+		"explanation": "Este é um erro clássico de \"medicina defensiva\" ou falta de compreensão da acurácia dos testes. O diagnóstico de câncer de pulmão é **histopatológico** (biópsia). Marcadores tumorais não substituem a biópsia e não devem ser usados como triagem ou diagnóstico inicial.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Por que a conduta do estudante de solicitar esses marcadores para o **diagnóstico** de câncer de pulmão é considerada errada?",
+				"correctAnswer": "Porque esses marcadores possuem **baixa sensibilidade e baixa especificidade** para o diagnóstico inicial. Eles podem estar elevados em diversas condições benignas (inflamações, tabagismo, doenças hepáticas) e podem estar normais mesmo na presença de um câncer agressivo. Um resultado positivo não confirma o câncer e um negativo não o exclui, servindo apenas para gerar ansiedade e custos desnecessários.",
+				"keywords": [
+					"Baixa Sensibilidade e Especificidade",
+					"Diagnóstico Histopatológico (Padrão-Ouro)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a utilidade real desses marcadores na oncologia torácica após o diagnóstico já ter sido estabelecido?",
+				"correctAnswer": "A utilidade real é no **acompanhamento pós-tratamento (seguimento)**. Se um marcador (como o CEA) estava elevado antes de uma cirurgia de retirada do tumor e depois caiu a níveis normais, ele passa a ser um bom parâmetro para detectar uma **recidiva precoce** se voltar a subir nos meses seguintes.",
+				"keywords": ["Seguimento/Recidiva"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 289,
+		"title": "Carcinoma Escamoso e Escavação Pulmonar",
+		"vignette": "Um paciente de 68 anos, tabagista, apresenta febre baixa, tosse produtiva e perda de peso. A radiografia de tórax mostra uma lesão em lobo superior direito com uma cavidade central (imagem escavada) de paredes grossas e irregulares. O principal diagnóstico diferencial é entre Abscesso Pulmonar, Tuberculose e Neoplasia.",
+		"explanation": "A cavitação é um desafio diagnóstico. No 3º/4º ano, o aluno deve saber que 'nem toda caverna é TB'. Se a parede é irregular e o paciente tem fatores de risco, o Carcinoma Escamoso deve encabeçar a lista, especialmente se a lesão não responder à antibioticoterapia inicial.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o tipo histológico de câncer de pulmão que mais frequentemente sofre escavação/cavitação?",
+				"correctAnswer": "**Carcinoma Escamoso (Epidermoide)**. Devido ao seu crescimento central rápido e à tendência de sofrer necrose central por falta de suprimento sanguíneo, este tumor frequentemente 'escava', mimetizando infecções como abscesso ou tuberculose.",
+				"keywords": ["Carcinoma Escamoso", "Necrose Central"],
+				"order": 1
+			},
+			{
+				"text": "Radiologicamente, como a espessura da parede da cavidade nos ajuda a diferenciar uma lesão benigna (como um cisto ou bolha) de uma lesão maligna?",
+				"correctAnswer": "Paredes finas (< 4 mm) sugerem fortemente lesões benignas. Paredes grossas e, principalmente, **irregulares/nodulares** (> 15 mm) aumentam significativamente a suspeição de malignidade.",
+				"keywords": [
+					"Escavação/Cavitação",
+					"Diagnóstico Diferencial (TB/Abscesso)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 290,
+		"title": "Metástases Pulmonares e Padrão em Bala de Canhão",
+		"vignette": "Uma paciente de 55 anos, em acompanhamento por câncer de mama há 3 anos, realiza uma TC de tórax de rotina que revela múltiplos nódulos bilaterais, de tamanhos variados, espalhados por ambos os pulmões, com predomínio nas bases. Ela não tem sintomas respiratórios.",
+		"explanation": "Diferenciar o 'câncer que nasceu no pulmão' do 'câncer que foi para o pulmão' é fundamental na propedêutica. O pulmão é um filtro capilar gigante, por isso é um dos sítios mais comuns de metástase. No 3º e 4º ano, ver múltiplos nódulos deve fazer o aluno procurar o tumor primário em outro lugar.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Esse padrão radiológico (múltiplos nódulos bilaterais) é mais característico de um tumor primário de pulmão ou de metástases de outro órgão?",
+				"correctAnswer": "É mais característico de **Metástases Pulmonares**. O tumor primário de pulmão geralmente se apresenta como uma lesão única (nódulo ou massa solitária). Múltiplos nódulos bilaterais sugerem disseminação hematogênica de um câncer de outro sítio (Mama, Rim, Cólon, Melanoma).",
+				"keywords": ["Metástases Pulmonares", "Múltiplos Nódulos Bilaterais"],
+				"order": 1
+			},
+			{
+				"text": "Como é chamado o padrão radiológico clássico de metástases pulmonares volumosas e arredondadas, lembrando imagens de 'bolas de canhão'?",
+				"correctAnswer": "Padrão em **'Bala de Canhão'** (ou *Cannonball metastases*).",
+				"keywords": [
+					"Imagem em \"Bala de Canhão\"",
+					"Disseminação Hematogênica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 291,
+		"title": "Gás Radônio e Carcinogênese Ambiental",
+		"vignette": "Você está atendendo um paciente com câncer de pulmão que nunca fumou e nunca teve exposição ocupacional relevante. Ele vive há 30 anos em uma casa com porão mal ventilado em uma região com solo rico em granito e urânio.",
+		"explanation": "Muitas vezes focamos apenas no cigarro, mas o radônio é uma causa importante e negligenciada. Para o estudante, entender que o ambiente domiciliar pode ser um fator de risco ajuda a ampliar a anamnese ambiental.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual é o segundo maior fator de risco ambiental para câncer de pulmão (atrás apenas do tabagismo) e que pode explicar casos em não fumantes?",
+				"correctAnswer": "**Gás Radônio**. É um gás radioativo incolor e inodoro que se origina da decomposição natural do urânio no solo e nas rochas (como o granito), acumulando-se em ambientes fechados e mal ventilados (como porões).",
+				"keywords": ["Gás Radônio", "Não fumantes"],
+				"order": 1
+			},
+			{
+				"text": "Como esse agente causa dano celular?",
+				"correctAnswer": "O radônio emite **partículas alfa** que, quando inaladas, causam danos diretos ao DNA das células epiteliais respiratórias, levando a mutações e carcinogênese.",
+				"keywords": ["Partículas Alfa", "Carcinogênese Ambiental"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 292,
+		"title": "Performance Status (ECOG) na Oncologia Clínica",
+		"vignette": "Ao admitir um paciente com câncer de pulmão avançado na enfermaria, você lê no prontuário que ele tem um 'ECOG 4'. Ao entrar no quarto, você encontra o paciente completamente restrito ao leito, dependente de cuidados para todas as atividades básicas.",
+		"explanation": "No 4º ano, o aluno começa a entender que 'não tratamos o exame, tratamos o paciente'. O conceito de Performance Status é o pilar da oncologia clínica. Saber que um paciente está muito debilitado (ECOG alto) muda o objetivo da terapia de 'cura/controle' para 'conforto'.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "O que avalia a escala de ECOG (ou Karnofsky) e por que ela é tão importante quanto o tipo de tumor para decidir o tratamento?",
+				"correctAnswer": "Avalia o **Performance Status (Estado Funcional)** do paciente, ou seja, o quanto a doença limita suas atividades de vida diária. Ela é crucial porque prediz a tolerância do paciente ao tratamento e o prognóstico. Um tumor 'tratável' em um paciente sem reserva funcional (ECOG ruim) pode resultar em mais danos do que benefícios.",
+				"keywords": ["ECOG / Performance Status", "Estado Funcional"],
+				"order": 1
+			},
+			{
+				"text": "Um paciente com ECOG 3 ou 4 geralmente é candidato a tratamentos agressivos como quimioterapia citotóxica?",
+				"correctAnswer": "Geralmente **não**. Pacientes com ECOG 3 (no leito > 50% do tempo) ou 4 (totalmente restrito) costumam receber apenas cuidados paliativos de suporte, pois a toxicidade do tratamento oncológico costuma ser fatal ou degradar a pouca qualidade de vida restante.",
+				"keywords": ["Reserva Fisiológica", "Cuidados Paliativos"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 293,
+		"title": "Invasão do Nervo Laríngeo Recorrente e Rouquidão",
+		"vignette": "Um paciente de 60 anos, tabagista, apresenta-se com uma queixa nova de rouquidão persistente há um mês, sem dor de garganta ou febre. Ele também relata uma tosse fraca e ineficaz. Na radiografia, observa-se uma massa em mediastino superior, próxima à janela aortopulmonar.",
+		"explanation": "A rouquidão em um tabagista é um 'sinal de alarme' clássico. Se não houver causa laríngea direta (visto à laringoscopia), o médico deve olhar para o tórax. A invasão do nervo laríngeo recorrente é um sinal de doença localmente avançada, o que implica que o tumor já saiu do pulmão e atingiu estruturas do mediastino.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual a estrutura nervosa que está sendo provavelmente comprimida pelo tumor para causar a rouquidão?",
+				"correctAnswer": "Nervo Laríngeo Recorrente (ramo do nervo vago). A compressão deste nervo causa paralisia da corda vocal ipsilateral, resultando em disfonia (rouquidão) e voz 'soprosa'.",
+				"keywords": ["Nervo Laríngeo Recorrente", "Paralisia de Corda Vocal"],
+				"order": 1
+			},
+			{
+				"text": "Por que, anatomicamente, as lesões no pulmão esquerdo são mais propensas a causar esse sintoma específico de rouquidão?",
+				"correctAnswer": "Devido ao trajeto anatômico: o nervo laríngeo recorrente esquerdo desce até o tórax e faz a volta (recorre) sob o arco da aorta, na janela aortopulmonar. Já o direito recorre mais alto, sob a artéria subclávia. Portanto, tumores hilares ou mediastinais à esquerda têm maior proximidade anatômica com o trajeto torácico deste nervo.",
+				"keywords": ["Janela Aortopulmonar", "Invasão Mediastinal"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 294,
+		"title": "Invasão do Nervo Frênico e Paralisia Diafragmática",
+		"vignette": "Durante a avaliação de uma radiografia de tórax de um paciente com suspeita de neoplasia pulmonar central à direita, você nota que a cupula diafragmática direita está significativamente elevada (mais do que os 1-2 cm fisiológicos em relação à esquerda). O paciente queixa-se de dispneia que piora ao deitar.",
+		"explanation": "Assim como o laríngeo recorrente, a paralisia do frênico indica invasão do mediastino pelo tumor. É um achado físico/radiológico que ajuda a 'estadiar com os olhos', indicando que o tumor não é mais uma doença localizada apenas no parênquima pulmonar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual nervo está sendo afetado para causar essa elevação diafragmática e qual a sua origem espinhal?",
+				"correctAnswer": "Nervo Frênico. Ele tem origem nas raízes de C3, C4 e C5 ('C3, 4, 5 keep the diaphragm alive').",
+				"keywords": ["Nervo Frênico", "Raízes C3-C5"],
+				"order": 1
+			},
+			{
+				"text": "Como esse achado interfere na mecânica respiratória do paciente?",
+				"correctAnswer": "A paralisia do nervo frênico causa a paralisia do hemidiafragma correspondente. Em vez de contrair e descer durante a inspiração (gerando pressão negativa), o diafragma paralisado sobe passivamente (movimento paradoxal) ou permanece elevado, reduzindo o volume pulmonar efetivo e piorando a relação ventilação-perfusão, o que explica a dispneia.",
+				"keywords": ["Elevação de Hemidiafragma", "Movimento Paradoxal"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 295,
+		"title": "Síndrome de Cushing Ectópica no Carcinoma de Pequenas Células",
+		"vignette": "Um paciente com Carcinoma de Pequenas Células (SCLC) desenvolve rapidamente um quadro de hipertensão arterial de difícil controle, fraqueza muscular proximal, hiperglicemia e manchas roxas na pele (equimoses). Ao exame, apresenta face arredondada ('fácies em lua cheia') e acúmulo de gordura supraclavicular.",
+		"explanation": "O Carcinoma de Pequenas Células é uma 'fábrica de hormônios'. Além do ADH (SIADH), o ACTH é a segunda secreção ectópica mais clássica. O aluno de 3º/4º ano deve associar: Massa Hilar + Distúrbio Metabólico Agudo (Diabetes/HTA/Hipocalemia) = Cushing Ectópico por SCLC.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome desta síndrome paraneoplásica e qual hormônio está sendo produzido ectopicamente pelo tumor?",
+				"correctAnswer": "Síndrome de Cushing Ectópica, causada pela secreção de ACTH (hormônio adrenocorticotrófico) pelo tumor de pulmão.",
+				"keywords": ["ACTH Ectópico", "Síndrome de Cushing"],
+				"order": 1
+			},
+			{
+				"text": "Como podemos diferenciar, de forma básica, essa produção ectópica de um tumor na própria glândula hipófise (Doença de Cushing)?",
+				"correctAnswer": "Na síndrome ectópica pelo câncer de pulmão, o quadro clínico costuma ter uma instalação muito mais rápida e agressiva (aguda), frequentemente dominada por hipocalemia profunda e hiperpigmentação da pele, enquanto na Doença de Cushing (hipofisária) o quadro é crônico e insidioso. Além disso, os níveis de ACTH no câncer de pulmão costumam ser extremamente mais elevados.",
+				"keywords": ["Carcinoma de Pequenas Células", "Hipocalemia"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 296,
+		"title": "Derrame Pleural Maligno e Inoperabilidade",
+		"vignette": "Um paciente com massa pulmonar de 4 cm é submetido a uma ultrassonografia de tórax que confirma a presença de um derrame pleural associado. O médico realiza uma toracocentese e o líquido pleural revela a presença de células malignas (adenocarcinoma).",
+		"explanation": "Este é um conceito fundamental para evitar encaminhamentos cirúrgicos equivocados. O aluno deve entender que, se o câncer 'derramou' na pleura, ele já ganhou a cavidade e não há mais como garantir a cura apenas retirando o lobo pulmonar. O derrame pleural maligno é um divisor de águas entre a intenção curativa e a paliativa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o significado desse achado (pleura positiva para malignidade) em termos de possibilidade de cirurgia curativa?",
+				"correctAnswer": "A presença de células neoplásicas no líquido pleural (Derrame Pleural Maligno) classifica a doença como Estágio IV (Metastática). Isso significa que, via de regra, o paciente é inoperável com intuito curativo, pois a pleura é considerada um sítio de disseminação à distância (M1a).",
+				"keywords": ["Derrame Pleural Maligno", "Inoperabilidade"],
+				"order": 1
+			},
+			{
+				"text": "Na prática clínica do 3º/4º ano, como classificamos esse paciente quanto à extensão da doença (Localizada, Regional ou Metastática)?",
+				"correctAnswer": "É classificada como doença Metastática (ou Sistêmica). O tratamento deixa de ser focado na retirada do tumor primário (cirurgia) e passa a ser focado em terapia sistêmica (quimioterapia/imunoterapia) e controle de sintomas (paliação do derrame).",
+				"keywords": ["Estágio IV (M1a)", "Toracocentese Diagnóstica"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 297,
+		"title": "Pneumonia Pós-Obstrutiva e Neoplasia Broncogênica",
+		"vignette": "Um paciente de 67 anos, tabagista, é internado pela terceira vez em seis meses com quadro de febre, tosse produtiva e imagem de consolidação no lobo superior direito. Ele melhora parcialmente com antibióticos, mas a imagem radiológica nunca desaparece completamente (\"pneumonia que não limpa\").",
+		"explanation": "No 3º/4º ano, o aluno deve aprender a desconfiar de pneumonias \"comportadas\". Se a pneumonia é sempre no mesmo lugar (unilobar) e o paciente tem risco para câncer, a infecção é secundária a uma obstrução. É um dos diagnósticos diferenciais mais importantes da prática de enfermaria. Ocorre quando um tumor endobrônquico obstrui a drenagem, gerando acúmulo de secreção e infecção distal.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Como se chama esse fenômeno clínico e qual a sua relação com o câncer de pulmão?",
+				"correctAnswer": "Pneumonia Pós-Obstrutiva. Ocorre quando um tumor endobrônquico (geralmente Carcinoma Escamoso ou de Pequenas Células) obstrui parcial ou totalmente a drenagem de um brônquio. As secreções acumuladas distalmente à obstrução infectam-se. A melhora com antibióticos é apenas temporária, pois a causa mecânica (o tumor) persiste.",
+				"keywords": [
+					"Pneumonia Pós-Obstrutiva",
+					"Pneumonia de Repetição (Mesmo Lobo)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a conduta obrigatória para um paciente idoso e tabagista com pneumonia de repetição no mesmo lobo pulmonar?",
+				"correctAnswer": "Realização de Broncoscopia e/ou Tomografia de Tórax. É mandatório descartar uma neoplasia ocultando-se por trás do quadro infeccioso (\"pneumonia como sentinela do câncer\").",
+				"keywords": [
+					"Obstrução Endobrônquica",
+					"Investigação com Broncoscopia"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 298,
+		"title": "Sinal de S de Golden na Radiologia Torácica",
+		"vignette": "Ao analisar a radiografia de tórax de um paciente com atelectasia do lobo superior direito, o preceptor aponta para uma curvatura convexa na região do hilo que, junto com a linha da fissura deslocada, forma uma imagem semelhante à letra \"S\" invertida.",
+		"explanation": "O sinal de S de Golden é uma \"pérola\" da radiologia torácica. Ele ajuda o estudante a diferenciar uma atelectasia \"simples\" (por plugue de moco, por exemplo) de uma atelectasia causada por um tumor maligno. A presença da convexidade central indica que há algo sólido (massa) ocupando o hilo.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome desse sinal radiológico clássico?",
+				"correctAnswer": "Sinal de S de Golden (ou S de Golden invertido).",
+				"keywords": ["Sinal de S de Golden"],
+				"order": 1
+			},
+			{
+				"text": "O que a parte \"convexa\" (a barriga do S) representa anatomicamente?",
+				"correctAnswer": "Representa a massa tumoral central que está causando a obstrução do brônquio. O restante da linha \"S\" é formado pela fissura horizontal que foi puxada para cima devido à atelectasia (colapso) do lobo superior.",
+				"keywords": [
+					"Atelectasia Lobar",
+					"Massa Hilar",
+					"Carcinoma Broncogênico"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 299,
+		"title": "Linfonodo de Virchow e Estadiamento Clínico",
+		"vignette": "Durante o exame físico de um paciente com suspeita de neoplasia pulmonar, você realiza a palpação das cadeias ganglionares e encontra um linfonodo endurecido, pétreo e indolor na fossa supraclavicular esquerda.",
+		"explanation": "A propedêutica de cabeça e pescoço é parte do exame pulmonar. O linfonodo de Virchow recebe drenagem do ducto torácico; encontrá-lo é um sinal de que o câncer \"saiu\" do tórax. Para o estudante de 4º ano, este achado muda o plano terapêutico de cirurgia para tratamento sistêmico/paliativo.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome desse achado e qual o seu significado clínico?",
+				"correctAnswer": "Linfonodo de Virchow (ou sinal de Troisier). Significa a presença de metástase linfonodal à distância.",
+				"keywords": ["Linfonodo de Virchow", "Sinal de Troisier"],
+				"order": 1
+			},
+			{
+				"text": "Por que a presença desse linfonodo geralmente contraindica uma cirurgia com intenção curativa no pulmão?",
+				"correctAnswer": "Porque a presença de metástase em linfonodos supraclaviculares (fora da caixa torácica) classifica o tumor como N3 (estágio IIIB) ou M1 (estágio IV), dependendo da classificação. Isso indica que a doença já se disseminou pelo sistema linfático para além do alcance de uma ressecção cirúrgica pulmonar padrão.",
+				"keywords": ["Cadeia Supraclavicular", "Disseminação Linfática"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 300,
+		"title": "Fisiopatologia da Dor Pleurítica no Câncer de Pulmão",
+		"vignette": "Um paciente com um nódulo periférico queixa-se de uma dor no peito \"em pontada\", que piora muito quando ele respira fundo ou tosse. Ele aponta exatamente o local da dor com o dedo.",
+		"explanation": "Entender a sensibilidade dolorosa do tórax é base da semiologia. Isso explica por que o diagnóstico de câncer de pulmão é tão tardio na maioria das vezes: quando começa a doer, é porque o tumor já rompeu as fronteiras do pulmão e atingiu a parede costal. O parênquima e a pleura visceral são insensíveis à dor.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome desse tipo de dor e qual estrutura anatômica deve estar envolvida para que o paciente sinta dor?",
+				"correctAnswer": "Dor Pleurítica (ou pleuriz). A estrutura envolvida é a pleura parietal. Diferente da pleura visceral e do parênquima, a pleura parietal é ricamente inervada por nervos intercostais e pelo nervo frênico, sendo sensível à dor.",
+				"keywords": ["Dor Pleurítica", "Pleura Parietal (Inervada)"],
+				"order": 1
+			},
+			{
+				"text": "Por que um tumor localizado apenas no centro do parênquima pulmonar (parênquima central) costuma ser indolor até fases avançadas?",
+				"correctAnswer": "Porque o parênquima pulmonar e a pleura visceral não possuem receptores de dor (nociceptores). Por isso, o câncer de pulmão é frequentemente silencioso (\"mudo\") no início; a dor só aparece quando o tumor cresce o suficiente para invadir a pleura parietal, a parede torácica ou estruturas nervosas.",
+				"keywords": [
+					"Pleura Visceral (Insensível)",
+					"Invasão da Parede Torácica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 301,
+		"title": "Síndrome de Trousseau e Hipercoagulabilidade Paraneoplásica",
+		"vignette": "Um paciente de 58 anos, em investigação de um Adenocarcinoma de pulmão, apresenta-se com dor, calor e rubor em trajeto venoso no antebraço esquerdo. Dois dias depois, os sintomas desaparecem ali, mas surgem na perna direita. O paciente não tem varizes nem história de trauma.",
+		"explanation": "A Síndrome de Trousseau é um marcador de malignidade oculta. No 3º/4º ano, o aluno deve saber que um evento trombótico sem causa óbvia (como cirurgia recente ou imobilização) em um paciente com perda de peso deve sempre levantar a suspeita de câncer, especialmente o Adenocarcinoma. O tumor libera substâncias pró-coagulantes que ativam a cascata de coagulação de forma sistêmica.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome dessa manifestação vascular paraneoplásica e com qual subtipo histológico ela é mais comumente associada?",
+				"correctAnswer": "Síndrome de Trousseau (ou Tromboflebite Migratória Superficial). Ela é classicamente associada aos Adenocarcimonas (pulmão, pâncreas, estômago), que são tumores produtores de mucina.",
+				"keywords": [
+					"Síndrome de Trousseau",
+					"Tromboflebite Migratória",
+					"Adenocarcinoma"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a fisiopatologia básica dessa condição (o 'mecanismo oculto')?",
+				"correctAnswer": "O tumor libera substâncias pró-coagulantes (como a mucina e o fator tecidual) na circulação, que ativam a cascata de coagulação de forma sistêmica, levando à formação de trombos em diferentes sítios venosos de forma errática e migratória.",
+				"keywords": ["Estado de Hipercoagulabilidade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 302,
+		"title": "Metástase Cerebral e Síndrome de Hipertensão Intracraniana",
+		"vignette": "Um paciente com câncer de pulmão recém-diagnosticado passa a apresentar cefaleia persistente, que piora ao acordar e ao tossir, associada a náuseas e vômitos em jato. Ao exame físico, você nota um leve edema de papila à fundoscopia.",
+		"explanation": "O pulmão é a principal fonte de metástases cerebrais. Para o estudante, o reconhecimento da tríade 'Cefaleia + Vômitos em jato + Papiledema' é fundamental para indicar uma RM ou TC de crânio urgente. O tratamento sintomático inicial com corticoides (Dexametasona) visa reduzir o edema ao redor da metástase.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Esses sintomas são sugestivos de qual complicação do câncer de pulmão?",
+				"correctAnswer": "Metástase Cerebral com consequente Síndrome de Hipertensão Intracraniana (HIC).",
+				"keywords": ["Hipertensão Intracraniana (HIC)", "Metástase Cerebral"],
+				"order": 1
+			},
+			{
+				"text": "Por que o paciente sente mais dor ao tossir ou ao realizar a manobra de Valsalva?",
+				"correctAnswer": "A tosse e o esforço aumentam a pressão intratorácica e abdominal, o que dificulta o retorno venoso cerebral e aumenta momentaneamente a pressão intracraniana. Em um cérebro que já está com a complacência reduzida devido a uma massa (metástase) e edema peritumoral, esse pequeno aumento de pressão desencadeia a dor intensa.",
+				"keywords": ["Edema Peritumoral", "Vômito em Jato"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 303,
+		"title": "Cessação do Tabagismo no Perioperatório Oncológico",
+		"vignette": "Um paciente tabagista é diagnosticado com uma massa pulmonar possivelmente ressecável (cirúrgica). Ele diz ao médico: 'Agora que já estou com câncer, não adianta mais parar de fumar, o estrago já está feito'.",
+		"explanation": "Muitos estudantes acham que a cessação é apenas prevenção primária. No 3º/4º ano, deve-se entender que o tabagismo ativo é um fator de risco para complicação cirúrgica. Parar de fumar faz parte do tratamento oncológico, melhorando a função mucociliar e a oxigenação tecidual.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Do ponto de vista fisiológico e perioperatório, por que essa afirmação do paciente está errada? Cite dois benefícios de parar de fumar semanas antes da cirurgia.",
+				"correctAnswer": "A afirmação está errada porque a cessação do tabagismo, mesmo após o diagnóstico, reduz drasticamente as complicações pós-operatórias. Os benefícios incluem: 1. Melhora da função mucociliar (reduzindo acúmulo de secreção e pneumonia pós-op); 2. Melhor oxigenação tecidual (o monóxido de carbono do cigarro reduz a entrega de O2, e sua eliminação melhora a cicatrização da ferida operatória e da anastomose brônquica).",
+				"keywords": [
+					"Complicações Perioperatórias",
+					"Função Mucociliar",
+					"Cicatrização",
+					"Monóxido de Carbono (CO)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o impacto da cessação do tabagismo na resposta aos tratamentos como quimioterapia e na sobrevida geral?",
+				"correctAnswer": "Pacientes que param de fumar respondem melhor à quimioterapia (menor toxicidade e melhor farmacocinética das drogas) e têm uma sobrevida maior, além de menor risco de desenvolver um segundo tumor primário.",
+				"keywords": [],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 304,
+		"title": "Dermatomiosite e Acantose Nigricans como Paraneoplasias",
+		"vignette": "Um paciente de 60 anos apresenta-se com fraqueza muscular proximal e uma erupção cutânea arroxeada ao redor das pálpebras (heliótropo) e lesões avermelhadas sobre as articulações dos dedos (pápulas de Gottron). A investigação revela uma massa pulmonar.",
+		"explanation": "A pele é o espelho de muitas doenças internas. Manifestações cutâneas e musculares inflamatórias podem ser a primeira pista de um câncer de pulmão. Cerca de 10-25% dos casos de dermatomiosite em adultos estão associados a uma neoplasia oculta. A acantose nigricans maligna também é um marcador importante.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico da condição dermatológica/reumatológica e como ela se classifica neste contexto?",
+				"correctAnswer": "Dermatomiosite. Neste contexto, ela é uma Síndrome Paraneoplásica. Cerca de 10-25% dos casos de dermatomiosite em adultos estão associados a uma neoplasia oculta, sendo o câncer de pulmão um dos mais frequentes.",
+				"keywords": ["Dermatomiosite", "Heliótropo / Pápulas de Gottron"],
+				"order": 1
+			},
+			{
+				"text": "O surgimento de Acantose Nigricans (escurecimento e espessamento da pele em dobras) de forma súbita e extensa em um idoso não obeso deve levantar suspeita de quê?",
+				"correctAnswer": "Acantose Nigricans Maligna. Diferente da acantose associada à resistência insulínica, a forma paraneoplásica surge de forma abrupta, é mais extensa e pode envolver palmas das mãos e mucosas, indicando frequentemente um tumor intra-abdominal ou pulmonar.",
+				"keywords": [
+					"Acantose Nigricans Maligna",
+					"Síndrome Paraneoplásica Cutânea"
+				],
+				"order": 2
+			}
+		]
+	}
+]
