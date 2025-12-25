@@ -915,61 +915,6 @@
 		]
 	},
 	{
-		"id": 191,
-		"title": "Capacidade de Difusão (DLCO) no Diagnóstico Diferencial de Obstruções",
-		"vignette": "Dois pacientes realizam um teste completo de função pulmonar, incluindo a medida da Capacidade de Difusão de Monóxido de Carbono (DLCO). Ambos possuem um distúrbio obstrutivo (VEF1/CVF < 0,70). O Paciente A (Asmático) apresenta DLCO normal ou levemente aumentada. O Paciente B (Enfisematoso) apresenta DLCO significativamente reduzida.",
-		"explanation": "A DLCO é o 'divisor de águas' na função pulmonar: \n\n*   **DLCO Baixa + Obstrução:** Pense em Enfisema. \n*   **DLCO Normal + Obstrução:** Pense em Asma ou Bronquite Crônica. \n*   **DLCO Baixa + Restrição:** Pense em Fibrose Pulmonar (Módulo de Intersticiais).",
-		"status": "published",
-		"difficulty": "specialist",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
-		],
-		"questions": [
-			{
-				"text": "O que o teste de DLCO avalia especificamente e por que ele é a ferramenta definitiva para diferenciar o Enfisema da Asma/Bronquite Crônica?",
-				"correctAnswer": "A DLCO avalia a integridade da unidade alvéolo-capilar e a facilidade com que os gases atravessam a membrana para o sangue. Ela é definitiva porque o enfisema é a única doença obstrutiva que envolve a destruição do parênquima pulmonar, enquanto a asma e a bronquite crônica são doenças puramente das vias aéreas (brônquios), sem lesão dos alvéolos.",
-				"keywords": ["Capacidade de Difusão (DLCO)", "Unidade Alvéolo-Capilar"],
-				"order": 1
-			},
-			{
-				"text": "Por que a DLCO está reduzida no enfisema, mas preservada na asma?",
-				"correctAnswer": "No enfisema, a destruição dos septos alveolares reduz drasticamente a área de superfície disponível para as trocas gasosas e destrói o leito capilar associado. Na asma, apesar da obstrução ao fluxo de ar, a membrana alvéolo-capilar está intacta e a perfusão capilar pode estar até aumentada devido à inflamação, o que mantém ou eleva a DLCO.",
-				"keywords": [
-					"Área de Superfície de Troca",
-					"Destruição de Septos Alveolares"
-				],
-				"order": 2
-			}
-		]
-	},
-	{
-		"id": 192,
-		"title": "Classificação GOLD da Gravidade da Obstrução na DPOC",
-		"vignette": "Ao interpretar a espirometria de um paciente com DPOC estável (pós-uso de broncodilatador), o estudante de medicina deve classificar a gravidade da limitação ao fluxo aéreo com base no valor do VEF1 em relação ao previsto.",
-		"explanation": "É fundamental que o aluno de 4º ano saiba que o diagnóstico da DPOC é feito pela relação (VEF1/CVF < 0,7), mas a gravidade da obstrução é dada apenas pelo valor isolado do VEF1. Essa classificação (1-4) refere-se apenas ao grau de obstrução na espirometria, não deve ser confundida com a classificação A-B-E.",
-		"status": "published",
-		"difficulty": "general_practitioner",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
-		],
-		"questions": [
-			{
-				"text": "De acordo com a classificação GOLD (1 a 4), quais são os pontos de corte do VEF1 (%) que definem uma obstrução Leve, Moderada, Grave e Muito Grave?",
-				"correctAnswer": "A classificação da gravidade da obstrução na DPOC (pós-BD) é: GOLD 1 (Leve): VEF1 ≥ 80% do previsto; GOLD 2 (Moderada): 50% ≤ VEF1 < 80% do previsto; GOLD 3 (Grave): 30% ≤ VEF1 < 50% do previsto; GOLD 4 (Muito Grave): VEF1 < 30% do previsto.",
-				"keywords": ["Classificação GOLD (1-4)", "VEF1 % do Previsto"],
-				"order": 1
-			},
-			{
-				"text": "Se um paciente tem um VEF1/CVF de 0,65 e um VEF1 de 45% do previsto, em qual categoria GOLD ele se enquadra?",
-				"correctAnswer": "O paciente enquadra-se no GOLD 3 (Grave), pois seu VEF1 está entre 30% e 49%.",
-				"keywords": ["Gravidade da Obstrução"],
-				"order": 2
-			}
-		]
-	},
-	{
 		"id": 193,
 		"title": "Semiologia Diferencial: Sibilo vs Estridor",
 		"vignette": "Um paciente chega com ruído respiratório audível à distância. O examinador precisa diferenciar se o som é um Sibilo ou um Estridor.",
@@ -1104,36 +1049,6 @@
 				"text": "Como os oxidantes presentes na fumaça do cigarro inativam os mecanismos de defesa natural do pulmão, mesmo em pacientes que não possuem deficiência genética de Alfa-1 antitripsina?",
 				"correctAnswer": "Os oxidantes do cigarro causam a oxidação direta da Alfa-1 antitripsina funcional no pulmão. Isso cria uma \"deficiência adquirida\" ou local de antiproteases: mesmo que o fígado produza a enzima, ela é inativada no pulmão pela inflamação e pelo estresse oxidativo do fumo, deixando o tecido vulnerável à autodigestão.",
 				"keywords": ["Estresse Oxidativo", "Destruição da Elastina"],
-				"order": 2
-			}
-		]
-	},
-	{
-		"id": 198,
-		"title": "Suspeita Clínica de Fibrose Cística no Adulto",
-		"vignette": "Você atende um paciente de 20 anos com história de sinusite crônica, tosse produtiva desde a infância e baixo ganho ponderal. Ele apresenta bronquiectasias em lobos superiores na TC de tórax.",
-		"explanation": "O aluno de 4º ano deve saber que a Fibrose Cística não é apenas pediátrica. \n\n*   **Diagnóstico inicial:** Teste do Suor (dosagem de cloro no suor) ou triagem genética.\n*   **Pista clínica:** Se o paciente tem bronquiectasias + história de diarreia gordurosa (esteatorreia) ou desnutrição, a suspeita de Fibrose Cística é obrigatória.",
-		"status": "published",
-		"difficulty": "specialist",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas da Via Aérea"
-		],
-		"questions": [
-			{
-				"text": "Embora as bronquiectasias tenham várias causas (como TB), por que a localização em lobos superiores em um paciente jovem deve levantar a suspeita de Fibrose Cística?",
-				"correctAnswer": "Diferente da maioria das infecções (como TB ou aspiração) que afetam áreas específicas ou lobos inferiores (por gravidade), a Fibrose Cística frequentemente apresenta um predomínio de bronquiectasias nos lobos superiores. Além disso, a associação com sintomas extra-pulmonares (baixa absorção de gordura, sinusite) aponta para uma doença sistêmica genética.",
-				"keywords": ["Bronquiectasias de Lobos Superiores"],
-				"order": 1
-			},
-			{
-				"text": "Qual o mecanismo básico da disfunção do canal de cloro (CFTR) que leva à formação de bronquiectasias nesta doença?",
-				"correctAnswer": "A mutação no canal CFTR impede o transporte adequado de cloro (e consequentemente de água) para fora das células das mucosas. Isso resulta em um muco extremamente espesso e desidratado. Esse muco obstrui as vias aéreas, impede o clearance mucociliar e cria um ambiente perfeito para infecções crônicas, que acabam destruindo e dilatando os brônquios (bronquiectasias).",
-				"keywords": [
-					"Canal CFTR",
-					"Muco Espesso (Desidratado)",
-					"Teste do Suor"
-				],
 				"order": 2
 			}
 		]

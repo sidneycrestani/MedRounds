@@ -1090,37 +1090,5 @@
 				"order": 3
 			}
 		]
-	},
-	{
-		"id": 244,
-		"title": "Pseudoquilotórax (O Derrame Crônico)",
-		"vignette": "Um paciente com Tuberculose pleural tratada inadequadamente há anos apresenta um derrame pleural residual. O líquido é leitoso, mas a dosagem de Triglicerídeos é baixa (< 50 mg/dL) e a dosagem de Colesterol é alta (> 200 mg/dL).",
-		"explanation": "Diferenciar quilotórax de pseudoquilotórax é essencial para o manejo clínico. Enquanto o quilotórax decorre de vazamento agudo de linfa (rico em triglicerídeos), o pseudoquilotórax é um processo crônico resultante da lise celular em derrames antigos encapsulados por pleuras espessas, levando ao acúmulo de cristais de colesterol.",
-		"status": "published",
-		"difficulty": "specialist",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Emergências Circulatórias e Pleurais"
-		],
-		"questions": [
-			{
-				"text": "Qual o diagnóstico deste líquido de aspecto leitoso?",
-				"correctAnswer": "O diagnóstico é **Pseudoquilotórax** (também conhecido como derrame quilotiforme ou colesterolínico).",
-				"keywords": ["Pseudoquilotórax", "Líquido Quilotiforme"],
-				"order": 1
-			},
-			{
-				"text": "Qual a diferença fisiopatológica básica entre este quadro e o Quilotórax?",
-				"correctAnswer": "No Quilotórax, o aspecto leitoso deve-se aos **Triglicerídeos** por ruptura do ducto torácico (quadro agudo). No **Pseudoquilotórax**, o aspecto leitoso decorre do **Colesterol** acumulado pela lise crônica de hemácias e células inflamatórias em um derrame retido por meses ou anos (quadro crônico).",
-				"keywords": ["Colesterol Pleural > 200 mg/dL"],
-				"order": 2
-			},
-			{
-				"text": "Cite uma doença reumatológica que frequentemente evolui com este tipo de derrame pleural crônico e rico em colesterol.",
-				"correctAnswer": "A **Artrite Reumatoide (AR)** é a condição reumatológica clássica associada a derrames pleurais crônicos que podem evoluir para pseudoquilotórax.",
-				"keywords": ["Artrite Reumatoide"],
-				"order": 3
-			}
-		]
 	}
 ]
