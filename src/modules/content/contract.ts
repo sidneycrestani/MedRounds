@@ -3,7 +3,7 @@ import { z } from "zod";
 export const StrictQuestionSchema = z.object({
 	text: z.string().min(1),
 	correctAnswer: z.string().min(1),
-	keywords: z.array(z.string().min(1)).min(1),
+	keywords: z.array(z.string().min(1)).default([]),
 	order: z.number().int().nonnegative(),
 	image: z.string().url().nullable().optional(),
 });

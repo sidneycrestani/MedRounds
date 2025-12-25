@@ -25,7 +25,7 @@ function readRegistry(registryPath: string): Registry {
 }
 
 function writeRegistry(registryPath: string, reg: Registry) {
-	fs.writeFileSync(registryPath, JSON.stringify(reg, null, 2) + "\n");
+	fs.writeFileSync(registryPath, `${JSON.stringify(reg, null, 2)}\n`);
 }
 
 function listJsonFilesRecursive(dir: string): string[] {
@@ -84,7 +84,7 @@ function main() {
 				const existing = reg.mappings[uuid];
 				if (existing) {
 					c.id = existing;
-					delete c.tempId;
+					c.tempId = undefined;
 					mutated = true;
 					changes++;
 				} else {
@@ -92,14 +92,14 @@ function main() {
 					reg.mappings[uuid] = nextId;
 					reg.lastId = nextId;
 					c.id = nextId;
-					delete c.tempId;
+					c.tempId = undefined;
 					mutated = true;
 					changes++;
 				}
 			}
 		}
 		if (mutated) {
-			fs.writeFileSync(f, JSON.stringify(arr, null, 2) + "\n");
+			fs.writeFileSync(f, `${JSON.stringify(arr, null, 2)}\n`);
 		}
 	}
 
