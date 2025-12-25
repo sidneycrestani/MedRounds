@@ -795,37 +795,6 @@
 		]
 	},
 	{
-		"id": 303,
-		"title": "Cessação do Tabagismo no Perioperatório Oncológico",
-		"vignette": "Um paciente tabagista é diagnosticado com uma massa pulmonar possivelmente ressecável (cirúrgica). Ele diz ao médico: 'Agora que já estou com câncer, não adianta mais parar de fumar, o estrago já está feito'.",
-		"explanation": "Muitos estudantes acham que a cessação é apenas prevenção primária. No 3º/4º ano, deve-se entender que o tabagismo ativo é um fator de risco para complicação cirúrgica. Parar de fumar faz parte do tratamento oncológico, melhorando a função mucociliar e a oxigenação tecidual.",
-		"status": "published",
-		"difficulty": "student",
-		"mainImageUrl": null,
-		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Oncologia Torácica Básica"
-		],
-		"questions": [
-			{
-				"text": "Do ponto de vista fisiológico e perioperatório, por que essa afirmação do paciente está errada? Cite dois benefícios de parar de fumar semanas antes da cirurgia.",
-				"correctAnswer": "A afirmação está errada porque a cessação do tabagismo, mesmo após o diagnóstico, reduz drasticamente as complicações pós-operatórias. Os benefícios incluem: 1. Melhora da função mucociliar (reduzindo acúmulo de secreção e pneumonia pós-op); 2. Melhor oxigenação tecidual (o monóxido de carbono do cigarro reduz a entrega de O2, e sua eliminação melhora a cicatrização da ferida operatória e da anastomose brônquica).",
-				"keywords": [
-					"Complicações Perioperatórias",
-					"Função Mucociliar",
-					"Cicatrização",
-					"Monóxido de Carbono (CO)"
-				],
-				"order": 1
-			},
-			{
-				"text": "Qual o impacto da cessação do tabagismo na resposta aos tratamentos como quimioterapia e na sobrevida geral?",
-				"correctAnswer": "Pacientes que param de fumar respondem melhor à quimioterapia (menor toxicidade e melhor farmacocinética das drogas) e têm uma sobrevida maior, além de menor risco de desenvolver um segundo tumor primário.",
-				"keywords": [],
-				"order": 2
-			}
-		]
-	},
-	{
 		"id": 304,
 		"title": "Dermatomiosite e Acantose Nigricans como Paraneoplasias",
 		"vignette": "Um paciente de 60 anos apresenta-se com fraqueza muscular proximal e uma erupção cutânea arroxeada ao redor das pálpebras (heliótropo) e lesões avermelhadas sobre as articulações dos dedos (pápulas de Gottron). A investigação revela uma massa pulmonar.",
