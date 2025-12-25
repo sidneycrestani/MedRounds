@@ -8,8 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -41,10 +40,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::08 Neoplasias Pulmonares::03 Câncer de Pulmão: Tipos Histológicos e Estadiamento Simplificado",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -74,8 +70,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::05 COVID-19 (Fases, Manejo Ambulatorial e Hospitalar)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -104,7 +99,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -133,8 +128,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -160,8 +154,7 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::10 Profilaxia e Vacinação Específica em Pneumopatias (Pneumocócica e Influenza)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{

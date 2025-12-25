@@ -8,7 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -32,8 +32,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::08 Neoplasias Pulmonares::03 Câncer de Pulmão: Tipos Histológicos e Estadiamento Simplificado"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -62,7 +61,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -91,8 +90,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -118,8 +116,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -148,8 +145,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::03 Asma Brônquica: Manejo da Crise Aguda na Emergência",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::03 Oximetria de Pulso e Sinais Vitais Respiratórios"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{

@@ -8,7 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::06 Micoses Pulmonares Endêmicas (Paracoccidioidomicose, Histoplasmose)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -43,7 +43,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::06 Micoses Pulmonares Endêmicas (Paracoccidioidomicose, Histoplasmose)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -75,7 +75,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::03 Esquemas Terapêuticos Básicos (RIPE) e Seguimento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -101,7 +101,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -127,7 +127,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::05 Efeitos Adversos das Medicações e Manejo"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{

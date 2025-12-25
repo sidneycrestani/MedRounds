@@ -8,8 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -38,7 +37,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::04 Tomografia Computadorizada de Tórax (Indicações e Padrões Principais)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -70,8 +69,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -100,8 +98,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -126,7 +123,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -155,9 +152,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::09 Doenças Intersticiais e Ocupacionais::01 Doenças Pulmonares Intersticiais (DPI): Abordagem Diagnóstica Inicial"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{

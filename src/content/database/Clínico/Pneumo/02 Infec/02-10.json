@@ -8,7 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -37,7 +37,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -70,8 +70,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -101,8 +100,7 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::05 Tuberculose (TB)::01 TB Pulmonar: Diagnóstico (Baciloscopia, TRM-TB, Cultura)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::04 Influenza e Viroses Respiratórias (Diagnóstico e Antivirais)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -135,7 +133,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{

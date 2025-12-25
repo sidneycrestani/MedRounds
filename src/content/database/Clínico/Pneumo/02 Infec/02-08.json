@@ -8,7 +8,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -37,7 +37,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::03 Abscesso Pulmonar e Pneumonia Aspirativa"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -69,7 +69,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -95,7 +95,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -124,7 +124,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{

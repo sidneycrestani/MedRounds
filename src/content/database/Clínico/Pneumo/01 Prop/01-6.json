@@ -8,7 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -34,7 +34,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::01 Espirometria (Interpretação: Distúrbios Obstrutivos, Restritivos e Misto)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -63,7 +63,7 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -89,7 +89,7 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -119,8 +119,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::01 Derrame Pleural: Transudato vs Exsudato (Diagnóstico Diferencial)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -149,7 +148,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::03 Radiografia de Tórax (Padrões Básicos e Sistematização de Leitura)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{

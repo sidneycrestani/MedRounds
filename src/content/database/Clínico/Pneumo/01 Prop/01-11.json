@@ -8,8 +8,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Métodos Diagnósticos em Pneumologia::02 Gasometria Arterial (Interpretação de Distúrbios Ácido-Básicos e Trocas Gasosas)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -35,7 +34,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -60,8 +59,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::03 Oximetria de Pulso e Sinais Vitais Respiratórios",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -86,9 +84,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::03 Asma Brônquica: Manejo da Crise Aguda na Emergência",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{

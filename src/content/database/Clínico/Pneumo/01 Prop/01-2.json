@@ -8,7 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -44,7 +44,7 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -78,8 +78,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::04 DPOC: Diagnóstico, Estadiamento (GOLD) e Fenótipos"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -111,7 +110,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::01 Anamnese Respiratória (Dispneia, Tosse, Hemoptise, Dor Torácica)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -135,8 +134,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::10 Distúrbios do Sono e Controle::03 Tabagismo: Abordagem Cognitivo-Comportamental e Farmacológica",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::08 Neoplasias Pulmonares::02 Câncer de Pulmão: Rastreamento (Low-Dose CT)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -162,8 +160,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::07 Doenças Pleurais::03 Pneumotórax (Espontâneo vs Traumático, Primário vs Secundário)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Semiologia e Propedêutica Pulmonar::02 Exame Físico do Tórax (Inspeção, Palpação, Percussão, Ausculta)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{

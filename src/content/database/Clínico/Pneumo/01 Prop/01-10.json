@@ -8,7 +8,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -38,8 +38,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::03 Doenças Obstrutivas::06 DPOC: Manejo da Exacerbação (Infecciosa vs Não-Infecciosa)",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -70,7 +69,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::01 Insuficiência Hipoxêmica (Tipo I) vs Hipercápnica (Tipo II)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{
@@ -95,7 +94,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::11 Insuficiência Respiratória Aguda::02 Oxigenoterapia (Cateter, Máscaras, Venturi, Máscara Reservatório)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
 		],
 		"questions": [
 			{

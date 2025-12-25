@@ -8,7 +8,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -43,7 +43,7 @@
 		"difficulty": "specialist",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::07 Doenças Pulmonares Parasitárias (Löffler, Strongyloides, Hidatidose)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -79,7 +79,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::05 COVID-19 (Fases, Manejo Ambulatorial e Hospitalar)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -115,7 +115,7 @@
 		"difficulty": "student",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
@@ -145,8 +145,7 @@
 		"difficulty": "general_practitioner",
 		"mainImageUrl": null,
 		"tags": [
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::01 Pneumonia Adquirida na Comunidade (PAC): Etiologia, CRB-65/PSI e Tratamento",
-			"Ciclo Clínico::Clínica Médica::02 Pneumologia::04 Infecções Respiratórias::02 Pneumonia Nosocomial (PAH) e Associada à Ventilação (PAV)"
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::02 Infecções Respiratórias"
 		],
 		"questions": [
 			{
