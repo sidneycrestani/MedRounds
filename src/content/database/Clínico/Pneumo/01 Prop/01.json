@@ -180,5 +180,1719 @@
 				"order": 2
 			}
 		]
+	},
+	{
+		"id": 43,
+		"title": "Diferenciação entre Hemoptise e Hematêmese",
+		"vignette": "Paciente admitido no pronto-socorro com queixa de exteriorização de sangue pela boca. Apresenta-se ansioso. Na abordagem inicial, é necessário diferenciar a origem topográfica do sangramento entre vias aéreas e trato digestivo.",
+		"explanation": "A distinção é vital para decidir se o próximo exame será uma Broncoscopia ou uma Endoscopia Digestiva Alta. Na hemoptise, o sangue sai da árvore brônquica, misturando-se ao ar, o que causa as bolhas. Na hematêmese, o contato com o suco gástrico altera a cor e o odor do sangue.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Cite três características semiológicas que diferenciam a hemoptise da hematêmese baseando-se na história clínica e na inspeção do material.",
+				"correctAnswer": "As diferenças fundamentais são: 1. **Aspecto e Cor:** A hemoptise apresenta sangue vermelho vivo, rutilante e espumoso (aerado). A hematêmese apresenta sangue escuro, 'em borra de café' ou com a presença de restos alimentares. 2. **Sintomas Associados:** A hemoptise é precedida ou acompanhada de tosse e pigarro. A hematêmese é precedida ou acompanhada de náuseas e vômitos. 3. **pH:** O material da hemoptise possui pH alcalino. O material da hematêmese possui pH ácido.",
+				"keywords": [
+					"Sangue rutilante/aerado vs. Borra de café",
+					"Tosse vs. Náuseas/Vômitos",
+					"pH alcalino vs. pH ácido"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 44,
+		"title": "Baqueteamento Digital e Neoplasia Pulmonar",
+		"vignette": "Durante o exame físico de um paciente tabagista crônico com história de tosse persistente, observa-se à inspeção das mãos um aumento do ângulo entre a base da unha e a cutícula (perda do ângulo de Lovibond) e uma consistência 'esponjosa' à palpação do leito ungueal. As falanges distais apresentam-se aumentadas de volume.",
+		"explanation": "Embora possa ocorrer em cardiopatias congênitas cianóticas e doenças inflamatórias intestinais, no contexto pneumológico, o baqueteamento reflete hipóxia crônica ou a presença de fatores de crescimento vascular liberados por tumores. Curiosidade: o DPOC isolado (enfisema puro) raramente causa baqueteamento; se estiver presente, procure câncer ou bronquiectasias associadas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação semiológica deste achado?",
+				"correctAnswer": "**Baqueteamento digital** ou **Hipocratismo digital**.",
+				"keywords": [
+					"Baqueteamento/Hipocratismo digital",
+					"Perda do ângulo de Lovibond"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a principal suspeita diagnóstica que deve ser investigada obrigatoriamente neste contexto clínico?",
+				"correctAnswer": "**Neoplasia Pulmonar**. Em pacientes tabagistas, este sinal é uma 'bandeira vermelha' (red flag) para malignidade intratorácica ou doenças supurativas crônicas (como bronquiectasias).",
+				"keywords": ["Neoplasia Pulmonar", "Bronquiectasias"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 45,
+		"title": "Padrões Posicionais de Dispneia: Trepopneia e Platipneia",
+		"vignette": "Durante a avaliação de dois pacientes com queixa de dispneia, observam-se padrões posicionais distintos: Paciente A relata melhora significativa da falta de ar ao adotar o decúbito lateral direito. Paciente B apresenta dispneia na posição ortostática (em pé) ou sentada, com melhora imediata ao assumir a posição supina (deitado).",
+		"explanation": "A dispneia não é apenas 'falta de ar'. A posição em que ela ocorre nos dá pistas anatômicas. A mais comum é a Ortopneia (comum na IC e na asma grave), mas a Trepopneia e a Platipneia são diagnósticas para condições específicas que muitos médicos deixam passar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Nomeie o sinal semiológico apresentado pelo Paciente A e cite uma causa provável.",
+				"correctAnswer": "**Trepopneia**. Sugere derrame pleural volumoso (o paciente deita sobre o lado afetado para permitir a expansão do pulmão sadio).",
+				"keywords": ["Trepopneia (Derrame pleural)", "Decúbito lateral"],
+				"order": 1
+			},
+			{
+				"text": "Nomeie o sinal semiológico apresentado pelo Paciente B e cite uma causa provável.",
+				"correctAnswer": "**Platipneia**. Sugere Síndrome Hepatopulmonar ou shunts intracardíacos direita-esquerda (a gravidade aumenta o fluxo sanguíneo nas bases pulmonares ao ficar em pé, exacerbando o shunt).",
+				"keywords": [
+					"Platipneia (Síndrome Hepatopulmonar)",
+					"Shunt direita-esquerda"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 46,
+		"title": "Propedêutica da Consolidação Pulmonar: Egofonia e Pectoriloquia",
+		"vignette": "Durante a ausculta pulmonar na base do hemitórax direito, ao solicitar que o paciente sussurre 'trinta e três', a voz é audível com nitidez através do estetoscópio. Posteriormente, ao solicitar a fonação da vogal 'I' de forma contínua, o som auscultado assemelha-se a um 'E' anasalado.",
+		"explanation": "O pulmão normal é cheio de ar, que é um péssimo condutor de sons de alta frequência (por isso a voz chega abafada à pele). Quando o alvéolo está cheio de líquido/pus (consolidação), ele se torna um excelente condutor. Se você ouve a voz com clareza na parede torácica, aquele pulmão não tem ar, tem sólido.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Quais são os nomes técnicos destes dois achados propedêuticos?",
+				"correctAnswer": "**Pectoriloquia afônica** (voz sussurrada nítida) e **Egofonia** (mudança de timbre de 'I' para 'E').",
+				"keywords": ["Pectoriloquia afônica", "Egofonia"],
+				"order": 1
+			},
+			{
+				"text": "O que a presença destes sinais indica sobre o estado do parênquima pulmonar na região auscultada?",
+				"correctAnswer": "Indicam **Síndrome de Consolidação Pulmonar** (pneumonia). O parênquima preenchido por exsudato ou sólido transmite frequências sonoras agudas melhor que o parênquima aerado normal.",
+				"keywords": ["Consolidação pulmonar", "Transmissão sonora aumentada"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 47,
+		"title": "Diagnóstico Diferencial: Atelectasia vs Derrame Pleural",
+		"vignette": "Ao examinar o tórax posterior de um paciente, verifica-se à manobra de expansibilidade uma redução significativa da movimentação no hemitórax esquerdo, associada à macicez à percussão no mesmo lado.",
+		"explanation": "A palpação da expansibilidade e a posição da traqueia são fundamentais para diferenciar processos que 'subtraem' volume (atelectasia) de processos que 'adicionam' volume ao espaço pleural (derrame).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Se a palpação da traqueia revelar desvio para a esquerda (ipsilateral), qual é o diagnóstico sindrômico mais provável?",
+				"correctAnswer": "**Atelectasia**. A perda de volume pulmonar gera pressão negativa, atraindo as estruturas do mediastino para o lado da lesão.",
+				"keywords": [
+					"Atelectasia (Desvio Ipsilateral)",
+					"Expansibilidade reduzida"
+				],
+				"order": 1
+			},
+			{
+				"text": "Se a palpação da traqueia revelar desvio para a direita (contralateral), qual é o diagnóstico sindrômico mais provável?",
+				"correctAnswer": "**Derrame Pleural Volumoso**. O acúmulo de líquido ocupa espaço na caixa torácica, empurrando as estruturas do mediastino para o lado oposto.",
+				"keywords": ["Derrame Pleural (Desvio Contralateral)", "Macicez"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 48,
+		"title": "Mecânica Ventilatória e Risco na Crise de Asma",
+		"vignette": "Paciente com diagnóstico de asma brônquica em crise aguda apresenta-se com Frequência Respiratória (FR) de 28 irpm e uso evidente da musculatura esternocleidomastoidea. A oximetria de pulso indica Saturação de O2 de 94% em ar ambiente e o paciente consegue completar frases.",
+		"explanation": "A FR é o primeiro sinal a alterar na insuficiência respiratória e o último a normalizar. O uso de musculatura acessória indica que a complacência pulmonar está muito baixa ou a resistência das vias aéreas muito alta, exigindo pressão negativa extra.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Classifique o risco deste paciente (baixo, médio ou alto) e justifique, desconsiderando a saturação 'normal'.",
+				"correctAnswer": "**Alto risco/Risco iminente**. A saturação de 94% está sendo mantida às custas de um trabalho respiratório exaustivo (taquipneia de 28 irpm + uso de musculatura acessória). A fadiga muscular pode levar à insuficiência respiratória súbita.",
+				"keywords": [
+					"Trabalho respiratório aumentado",
+					"Saturação como marcador tardio"
+				],
+				"order": 1
+			},
+			{
+				"text": "Fisiologicamente, o que o uso da musculatura acessória indica sobre a mecânica ventilatória neste momento?",
+				"correctAnswer": "Indica que a resistência das vias aéreas está muito elevada e/ou a complacência está reduzida, exigindo a geração de pressão negativa extra-pleural para manter o volume corrente.",
+				"keywords": [
+					"Risco de fadiga muscular",
+					"Uso de musculatura acessória"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 49,
+		"title": "Estridor vs. Sibilo",
+		"vignette": "Você é chamado para avaliar uma criança que iniciou subitamente um quadro de dificuldade respiratória. Ao exame, você identifica um ruído musical agudo. Cenário A: O som é predominantemente inspiratório e mais audível na região cervical. Cenário B: O som é predominantemente expiratório e audível difusamente em ambos os campos pulmonares.",
+		"explanation": "O médico precisa diferenciar imediatamente se o problema é 'em cima' ou 'embaixo'. O estridor é inspiratório porque a pressão negativa da inspiração colapsa a via aérea já estreitada. O sibilo é expiratório porque a pressão positiva da expiração estreita os bronquíolos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação semiológica do ruído apresentado no Cenário A?",
+				"correctAnswer": "O som A é o **Estridor**.",
+				"keywords": ["Estridor", "Emergência Médica"],
+				"order": 1
+			},
+			{
+				"text": "Onde esse ruído é gerado anatomicamente?",
+				"correctAnswer": "Ele é gerado na via aérea superior (laringe ou traqueia extratorácica).",
+				"keywords": ["Laringe/Traqueia", "Obstrução de Via Aérea Superior"],
+				"order": 2
+			},
+			{
+				"text": "Por que o Cenário A representa uma emergência médica de maior gravidade imediata em comparação ao Cenário B?",
+				"correctAnswer": "É mais temido porque indica uma obstrução iminente de via aérea alta (como corpo estranho, epiglotite ou edema de glote). Diferente dos brônquios (múltiplos), a via aérea superior possui um lúmen único; sua obstrução pode ser fatal rapidamente. O som B corresponde ao Sibilo, gerado em brônquios distais (comum na asma/DPOC).",
+				"keywords": [
+					"Sibilo",
+					"Obstrução de Via Aérea Superior",
+					"Emergência Médica"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 50,
+		"title": "Cianose Central vs. Periférica",
+		"vignette": "Dois pacientes dão entrada no pronto-socorro apresentando cianose (coloração arroxeada) nas extremidades e lábios. Paciente 1: Apresenta mãos frias, porém a língua e a mucosa oral estão rosadas/normocoradas. Paciente 2: Apresenta mãos quentes, porém a língua e a mucosa oral estão nitidamente violáceas.",
+		"explanation": "Para haver cianose, é necessário que existam pelo menos 5g/dL de hemoglobina reduzida (desoxigenada). Na cianose central, o sangue já sai do coração mal oxigenado. Na periférica, ele sai bem, mas demora a circular na ponta do dedo e perde muito oxigênio para os tecidos locais.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o significado fisiopatológico da cianose central (Paciente 2) em termos de troca gasosa?",
+				"correctAnswer": "A cianose central (evidenciada em língua/mucosas) indica **hipoxemia arterial sistêmica**. Isso reflete uma falha na oxigenação do sangue nos pulmões ou a presença de um shunt cardíaco direita-esquerda.",
+				"keywords": [
+					"Cianose Central",
+					"Hipoxemia Arterial",
+					"Hemoglobina Reduzida"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que a cianose central é considerada clinicamente mais grave que a periférica?",
+				"correctAnswer": "Ela é mais grave pois denota comprometimento sistêmico da oxigenação. Já a cianose periférica (apenas extremidades) indica apenas baixa perfusão local ou estase venosa (frio, choque circulatório), onde a oxigenação arterial pulmonar pode estar normal.",
+				"keywords": [
+					"Cianose Central",
+					"Cianose Periférica",
+					"Perfusão Tecidual"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 51,
+		"title": "Inspeção do Tórax (Tórax em Tonel)",
+		"vignette": "Durante a inspeção estática de um paciente idoso e ex-tabagista, observa-se que o diâmetro anteroposterior do tórax é semelhante ao diâmetro lateral. Nota-se também que o ângulo subcostal (formado entre as bordas costais e o apêndice xifoide) encontra-se obtuso.",
+		"explanation": "No enfisema, o pulmão perde a elasticidade e não consegue 'murchar' totalmente. O tórax, então, assume a posição de inspiração permanente para tentar acomodar esse volume extra, perdendo a eficiência da musculatura diafragmática.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação semiológica deste achado?",
+				"correctAnswer": "**Tórax em tonel** (ou em barril).",
+				"keywords": ["Tórax em Tonel", "DPOC"],
+				"order": 1
+			},
+			{
+				"text": "Qual a causa mecânica para essa alteração estrutural?",
+				"correctAnswer": "É causado pelo aprisionamento crônico de ar (hiperinsuflação), sendo um sinal clássico de enfisema pulmonar (DPOC).",
+				"keywords": ["Hiperinsuflação", "Enfisema Pulmonar"],
+				"order": 2
+			},
+			{
+				"text": "O que este achado infere sobre o volume residual pulmonar do paciente?",
+				"correctAnswer": "Revela um aumento drástico do **volume residual** (a quantidade de ar que permanece no pulmão após a expiração máxima e não participa da troca gasosa efetiva).",
+				"keywords": ["Volume Residual Aumentado", "Enfisema Pulmonar"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 52,
+		"title": "Graduação da Dispneia (mMRC)",
+		"vignette": "A quantificação da dispneia é fundamental para o acompanhamento evolutivo de pneumopatias. Um paciente relata ao médico: \"Doutor, eu tenho que parar para respirar depois de caminhar uns 100 metros ou após alguns minutos caminhando no plano\".",
+		"explanation": "0: Só grandes esforços. 1: Pressa ou subida leve. 2: Para no plano (mais devagar que pessoas da mesma idade). 3: Para após 100m. 4: Dispneia aos mínimos esforços (vestir-se, banho).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a vantagem clínica de utilizar a escala mMRC (Modified Medical Research Council) em comparação à descrição subjetiva (ex: \"dispneia moderada\")?",
+				"correctAnswer": "A escala é superior por ser objetiva e reprodutível. Termos como 'leve' ou 'moderado' são subjetivos e variam entre examinadores. A escala baseada em atividades específicas (como a distância percorrida ou o ato de vestir-se) fornece um dado funcional concreto para comparação futura.",
+				"keywords": [
+					"Dispneia Funcional",
+					"Reprodutibilidade",
+					"Avaliação Objetiva"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 53,
+		"title": "Carga Tabágica",
+		"vignette": "Um paciente de 60 anos relata tabagismo desde os 15 anos de idade. Ele informa que fumou, em média, um maço e meio (30 cigarros) por dia durante todo esse período (45 anos).",
+		"explanation": "Não basta saber que o paciente fuma. O risco é dose-dependente. A unidade 'maço-ano' padroniza a exposição. Acima de 20 maços-ano, a probabilidade de DPOC sobe exponencialmente e, acima de 20-30 maços-ano, o paciente entra em protocolos de rastreamento de neoplasia.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a Carga Tabágica deste paciente calculada em \"maços-ano\"?",
+				"correctAnswer": "A carga é de **67,5 maços-ano**. Cálculo: (Nº de cigarros por dia ÷ 20) x Anos de tabagismo. (30 ÷ 20) x 45 = 1,5 x 45 = 67,5.",
+				"keywords": ["Carga Tabágica", "Maços-ano", "Cálculo de Risco"],
+				"order": 1
+			},
+			{
+				"text": "A partir de qual valor de corte considera-se um aumento drástico do risco para DPOC e necessidade de rastreio para Câncer de Pulmão?",
+				"correctAnswer": "O valor de corte crítico na literatura é geralmente **20 maços-ano**.",
+				"keywords": ["Carga Tabágica", "Rastreamento de Neoplasia", "DPOC"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 54,
+		"title": "Síndrome Pleural (Percussão e Ausculta)",
+		"vignette": "Você avalia um paciente com quadro súbito de dor torácica e dispneia. À percussão do tórax, identifica-se hipersonoridade (timpanismo) em todo o hemitórax direito, contrastando com o som claro pulmonar no lado esquerdo.",
+		"explanation": "A tríade 'Hipersonoridade + MV abolido + FTV abolido' é o diagnóstico clínico clássico do Pneumotórax. Se houver desvio de traqueia associado, é uma emergência (Pneumotórax hipertensivo).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "O que a hipersonoridade indica sobre a composição do espaço pleural neste caso?",
+				"correctAnswer": "Indica a presença de **ar no espaço pleural** (Pneumotórax) ou, menos frequentemente, uma hiperinsuflação grave localizada (bula gigante).",
+				"keywords": ["Hipersonoridade/Timpanismo", "Pneumotórax"],
+				"order": 1
+			},
+			{
+				"text": "Para confirmar a hipótese diagnóstica principal, quais seriam os achados esperados na Ausculta Pulmonar e na Palpação (Frêmito Toracovocal - FTV) no hemitórax acometido?",
+				"correctAnswer": "Na ausculta, espera-se **Murmúrio Vesicular abolido** (ou drasticamente reduzido). Na palpação, espera-se **FTV abolido**.",
+				"keywords": [
+					"Murmúrio Vesicular Abolido",
+					"Frêmito Toracovocal (FTV) Abolido",
+					"Pneumotórax"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 55,
+		"title": "Características Macroscópicas do Escarro",
+		"vignette": "Durante a anamnese de três pacientes distintos apresentando tosse produtiva, as características macroscópicas do escarro são avaliadas: 1. Paciente A: Apresenta escarro róseo e espumoso. 2. Paciente B: Apresenta escarro de coloração 'ferruginosa' (tijolo). 3. Paciente C: Apresenta escarro fétido e purulento, com separação em camadas quando coletado no frasco.",
+		"explanation": "O aspecto do material expelido reflete o processo fisiopatológico: o róseo é o plasma/hemácias saindo dos capilares por pressão hidrostática; o ferruginoso é a oxidação da hemoglobina no exsudato alveolar; o fétido indica a presença de germes anaeróbios em cavidades de estase.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico clínico mais provável para o Paciente A?",
+				"correctAnswer": "**Edema Agudo de Pulmão.** A presença de material róseo e espumoso decorre do transudato alveolar misturado a hemácias extravasadas por aumento da pressão hidrostática capilar.",
+				"keywords": ["Escarro róseo e espumoso (Edema Agudo de Pulmão)"],
+				"order": 1
+			},
+			{
+				"text": "Qual o agente etiológico clássico associado ao quadro do Paciente B?",
+				"correctAnswer": "**Pneumonia por *Streptococcus pneumoniae* (Pneumococo).** A cor ferruginosa resulta da oxidação da hemoglobina presente no exsudato alveolar.",
+				"keywords": ["Escarro ferruginoso (*Streptococcus pneumoniae*)"],
+				"order": 2
+			},
+			{
+				"text": "Quais as duas principais hipóteses diagnósticas para o Paciente C?",
+				"correctAnswer": "**Bronquiectasias ou Abscesso Pulmonar.** O odor fétido e a estratificação do escarro são característicos de infecções por germes anaeróbios e estase de secreções em cavidades ou brônquios dilatados.",
+				"keywords": [
+					"Escarro fétido/estratificado (Anaeróbios/Abscesso/Bronquiectasia)"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 56,
+		"title": "Enfisema Subcutâneo e Crepitação Tátil",
+		"vignette": "Durante o exame físico de um paciente que sofreu trauma torácico recente ou foi submetido a uma punção venosa central difícil, a palpação da região cervical e torácica superior revela uma sensação tátil de crepitação, descrita semiologicamente como o estalar de bolhas sob a pele.",
+		"explanation": "O ar disseca os planos musculares e subcutâneos. Quase sempre está associado a um Pneumotórax ou Pneumomediastino. É um sinal físico patognomônico de perda de integridade do sistema respiratório.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação semiológica deste achado?",
+				"correctAnswer": "**Enfisema Subcutâneo.**",
+				"keywords": ["Enfisema subcutâneo", "Crepitação à palpação"],
+				"order": 1
+			},
+			{
+				"text": "O que a presença deste sinal indica obrigatoriamente sobre a integridade do sistema respiratório?",
+				"correctAnswer": "Indica a perda de integridade das vias aéreas ou do espaço pleural, denunciando o escape de ar do pulmão, pleura ou árvore traqueobronquial para os tecidos moles (subcutâneo).",
+				"keywords": ["Pneumotórax/Pneumomediastino", "Lesão de via aérea"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 57,
+		"title": "Atrito Pleural e Evolução para Derrame",
+		"vignette": "Na ausculta de um paciente com queixa de dor torácica aguda, identifica-se um ruído adventício descontínuo e superficial, audível em ambos os tempos respiratórios (inspiração e expiração). O som assemelha-se ao atrito de duas peças de couro e desaparece imediatamente quando se solicita ao paciente que prenda a respiração (apneia).",
+		"explanation": "O atrito é o sinal acústico da pleurite seca. É um som \"de vizinhança\". Se o paciente parar de respirar e o som continuar, é atrito pericárdico; se o som parar, é pleural.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual é o nome deste ruído e o que ele fisiopatologicamente representa?",
+				"correctAnswer": "**Atrito Pleural.** Representa a inflamação das pleuras visceral e parietal (pleurite), que se tornam ásperas e perdem o deslizamento suave fisiológico. O desaparecimento à apneia o diferencia do atrito pericárdico.",
+				"keywords": [
+					"Atrito pleural",
+					"Pleurite seca",
+					"Diferencial com atrito pericárdico"
+				],
+				"order": 1
+			},
+			{
+				"text": "Se este ruído desaparecer subitamente, sem melhora correspondente da dor ou do quadro clínico, qual é a suspeita diagnóstica evolutiva?",
+				"correctAnswer": "O desaparecimento súbito sugere a formação de **Derrame Pleural**. O acúmulo de líquido separa as membranas pleurais inflamadas, impedindo o atrito físico e o som correspondente, mesmo com a persistência do processo inflamatório.",
+				"keywords": ["Derrame pleural (evolução)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 58,
+		"title": "Tempo Expiratório Forçado",
+		"vignette": "Para avaliar a função pulmonar de um paciente tabagista à beira do leito, na ausência de espirometria, realiza-se a manobra do Tempo Expiratório Forçado. O examinador posiciona o diafragma do estetoscópio sobre a traqueia (fúrcula esternal) e solicita ao paciente uma inspiração profunda seguida de expiração máxima e rápida com a boca aberta.",
+		"explanation": "É um teste simples e subutilizado. Em pulmões saudáveis, a maior parte do ar sai nos primeiros 3 a 4 segundos. O prolongamento da expiração é o equivalente clínico ao VEF1 reduzido.",
+		"status": "draft",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual é o ponto de corte (em segundos) para considerar o teste sugestivo de doença obstrutiva?",
+				"correctAnswer": "Um tempo **superior a 6 segundos**.",
+				"keywords": ["Tempo expiratório forçado", "> 6 segundos"],
+				"order": 1
+			},
+			{
+				"text": "Qual a base fisiológica para o prolongamento deste tempo?",
+				"correctAnswer": "O prolongamento ocorre devido à perda do recolhimento elástico pulmonar e/ou estreitamento das vias aéreas, que aumentam a resistência ao fluxo aéreo, impedindo o esvaziamento pulmonar rápido característico de pulmões saudáveis.",
+				"keywords": [
+					"Doença Obstrutiva (DPOC/Asma)",
+					"Perda de recolhimento elástico"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 59,
+		"title": "Cor Pulmonale e Sinal de Kussmaul",
+		"vignette": "Um paciente portador de enfisema pulmonar grave apresenta, ao exame físico, turgência jugular patológica a 45 graus. Observa-se que, durante a inspiração, ocorre um aumento paradoxal desta turgência venosa (Sinal de Kussmaul).",
+		"explanation": "O pulmão e o coração direito são um sistema em série. Quando o pulmão está doente (hipóxia crônica causando vasoconstrição), a pressão sobe e o \"sangue volta\" para as jugulares e o fígado.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "O que esses achados indicam sobre a interação cardiopulmonar neste caso?",
+				"correctAnswer": "Indicam que a doença pulmonar crônica ocasionou hipertensão arterial pulmonar severa, levando à falência do ventrículo direito (insuficiência cardíaca direita), resultando em congestão venosa sistêmica.",
+				"keywords": [
+					"Sinal de Kussmaul",
+					"Insuficiência Cardíaca Direita",
+					"Hipertensão Pulmonar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual é o termo clínico para a condição cardíaca resultante desta patologia pulmonar?",
+				"correctAnswer": "**Cor Pulmonale.**",
+				"keywords": ["Cor Pulmonale"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 60,
+		"title": "Sopro Tubário e Consolidação Pulmonar",
+		"vignette": "Durante a ausculta pulmonar de um paciente com síndrome febril aguda, identifica-se uma área periférica do tórax onde o murmúrio vesicular foi substituído por um som intenso, agudo e tubular, com uma pausa nítida entre a inspiração e a expiração. O som assemelha-se à ausculta direta da traqueia.",
+		"explanation": "O murmúrio vesicular normal é o som da traqueia \"filtrado\" por milhares de alvéolos cheios de ar. Se o alvéolo vira \"bloco de carne\" (hepatização), ele vira um condutor de som de alta fidelidade.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação deste achado auscultatório?",
+				"correctAnswer": "**Sopro Tubário** (ou respiração brônquica).",
+				"keywords": ["Sopro tubário"],
+				"order": 1
+			},
+			{
+				"text": "Por que este fenômeno ocorre na periferia pulmonar em casos de pneumonia lobar?",
+				"correctAnswer": "Ocorre devido à **consolidação pulmonar**. O tecido pulmonar, ao se tornar sólido (hepatização) pela substituição do ar alveolar por exsudato inflamatório, passa a transmitir com alta fidelidade o som gerado na traqueia e grandes brônquios, sem a filtração habitual promovida pelo parênquima aerado.",
+				"keywords": [
+					"Consolidação pulmonar",
+					"Pneumonia lobar",
+					"Transmissão sonora aumentada"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 61,
+		"title": "Padrões Respiratórios Centrais",
+		"vignette": "Na Unidade de Terapia Intensiva, a inspeção da dinâmica respiratória revela dois pacientes com padrões distintos: Paciente 1: Apresenta ciclos repetitivos caracterizados por uma fase de apneia, seguida de incursões respiratórias que aumentam progressivamente em amplitude e frequência, para depois decrescerem até uma nova apneia. Paciente 2: Apresenta um padrão respiratório totalmente irregular e caótico, com amplitudes variadas e pausas de apneia imprevisíveis, sem ciclicidade.",
+		"explanation": "Enquanto a respiração de Kussmaul possui origem metabólica (acidose), os padrões de Cheyne-Stokes e Biot indicam disfunção do controle neurológico central. O Cheyne-Stokes reflete uma instabilidade no controle químico da ventilação, enquanto o Biot reflete a desorganização estrutural dos neurônios responsáveis pelo ritmo, sendo um marcador de deterioração neurológica avançada.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação dos ritmos respiratórios observados no Paciente 1 e no Paciente 2, respectivamente?",
+				"correctAnswer": "O Paciente 1 apresenta respiração de **Cheyne-Stokes**. O Paciente 2 apresenta respiração de **Biot** (ou respiração atáxica).",
+				"keywords": [
+					"Respiração de Cheyne-Stokes",
+					"Respiração de Biot (Atáxica)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o significado clínico topográfico e prognóstico associado a cada um destes padrões?",
+				"correctAnswer": "A respiração de **Cheyne-Stokes** está associada a lesões corticais difusas ou insuficiência cardíaca grave, refletindo um atraso no feedback dos níveis de CO2 para o centro respiratório. A respiração de **Biot** indica lesão grave no **bulbo** (tronco encefálico), onde reside o centro gerador do ritmo respiratório, sinalizando iminência de parada respiratória e prognóstico reservado.",
+				"keywords": [
+					"Insuficiência Cardíaca Grave",
+					"Lesão Bulbar",
+					"Prognóstico reservado"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 62,
+		"title": "Alterações da Parede Torácica e Dispneia",
+		"vignette": "Durante o exame físico de dois pacientes jovens com queixa de dispneia aos esforços, observa-se: Paciente A: Depressão profunda do esterno (*Pectus excavatum*). Paciente B: Desvio lateral e posterior acentuado da coluna vertebral (*Cifoscoliose*). A ausculta pulmonar e a radiografia de tórax mostram parênquima pulmonar sem alterações em ambos os casos.",
+		"explanation": "A ventilação depende da integridade da caixa torácica. Deformidades ósseas graves atuam como uma restrição mecânica externa, limitando o volume de ar que pode ser inspirado. Cronicamente, isso pode levar à hipoventilação alveolar, hipoxemia e *cor pulmonale*, apesar da ausência de doença parenquimatosa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a classificação fisiopatológica do distúrbio ventilatório causado por essas deformidades?",
+				"correctAnswer": "Classificam-se como **Doença Pulmonar Restritiva Extrapulmonar**.",
+				"keywords": [
+					"Doença Restritiva Extrapulmonar",
+					"Pectus excavatum",
+					"Cifoscoliose"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo responsável pela dispneia nestes pacientes?",
+				"correctAnswer": "A deformidade da caixa torácica impede a expansão adequada dos pulmões, reduzindo a complacência do sistema respiratório e, consequentemente, a **Capacidade Pulmonar Total (CPT)**. A 'bomba' ventilatória falha mecanicamente, impedindo o enchimento adequado do 'fole' (pulmão), mesmo que este esteja íntegro.",
+				"keywords": [
+					"Redução da Capacidade Pulmonar Total (CPT)",
+					"Limitação da expansibilidade"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 63,
+		"title": "Semiologia dos Estertores",
+		"vignette": "Durante a ausculta pulmonar, diferenciam-se dois tipos de ruídos adventícios descontínuos (estertores): Som A: Agudo, curto, semelhante ao atrito de cabelo ou velcro, audível no final da inspiração e que não se modifica com a tosse. Som B: Grave, bolhoso, audível no início da inspiração e na expiração, que se modifica ou desaparece após a tosse.",
+		"explanation": "A diferenciação entre fino e grosso é crucial para a topografia da lesão. A persistência do som após a tosse (estertor fino) sugere acometimento parenquimatoso/intersticial, enquanto a alteração com a tosse (estertor grosso) sugere presença de secreção móvel na árvore brônquica.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Como são denominados o Som A e o Som B?",
+				"correctAnswer": "O Som A corresponde a **Estertores Finos** (ou crepitantes). O Som B corresponde a **Estertores Grossos** (ou subcrepitantes/bolhosos).",
+				"keywords": [
+					"Estertores Finos (Crepitantes)",
+					"Estertores Grossos (Subcrepitantes)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o local de origem fisiopatológica de cada um?",
+				"correctAnswer": "Os **Estertores Finos** são gerados pela abertura súbita de alvéolos e bronquíolos distais colabados ou com líquido, sendo característicos de doenças do interstício (ex: fibrose) ou alveolares (ex: edema, pneumonia fase inicial). Os **Estertores Grossos** são gerados pela passagem de ar através de secreção espessa em vias aéreas de maior calibre, típicos de bronquites e broncopneumonias.",
+				"keywords": [
+					"Doença Intersticial",
+					"Secreção Brônquica",
+					"Modificação com tosse"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 64,
+		"title": "Diagnóstico Diferencial das Síndromes Pleuropulmonares",
+		"vignette": "Um paciente é admitido com dispneia aguda. O exame físico torácico é fundamental para estreitar as hipóteses diagnósticas antes dos exames de imagem.",
+		"explanation": "Estas quatro síndromes compõem a base do raciocínio clínico em pneumologia. A combinação de palpação (FTV), percussão e ausculta permite diferenciar se o problema é preenchimento alveolar (consolidação), ocupação do espaço pleural (ar ou líquido) ou colapso pulmonar (atelectasia).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Descreva os achados esperados para (1) Frêmito Toracovocal (FTV), (2) Percussão e (3) Murmúrio Vesicular (MV) nas seguintes síndromes: a) Síndrome de Consolidação (Pneumonia). b) Derrame Pleural. c) Pneumotórax. d) Atelectasia (por obstrução brônquica).",
+				"correctAnswer": "a) **Consolidação:** FTV Aumentado; Macicez à percussão; MV com sopro tubário e/ou estertores (presença de broncograma aéreo). b) **Derrame Pleural:** FTV Abolido/Diminuído; Macicez à percussão; MV Abolido/Diminuído (interposição líquida). c) **Pneumotórax:** FTV Abolido/Diminuído; Hipersonoridade ou Timpanismo à percussão; MV Abolido/Diminuído (interposição aérea). d) **Atelectasia:** FTV Abolido/Diminuído; Macicez à percussão; MV Abolido (com possível desvio da traqueia para o lado ipsilateral à lenão).",
+				"keywords": [
+					"Consolidação: FTV Aumentado",
+					"Derrame Pleural: Macicez e FTV abolido",
+					"Pneumotórax: Hipersonoridade/Timpanismo",
+					"Atelectasia: Desvio de traqueia ipsilateral"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 65,
+		"title": "Gradiente Alvéolo-Arterial de Oxigênio",
+		"vignette": "Dois pacientes apresentam hipoxemia (PaO2 reduzida) na gasometria arterial: Paciente A: Quadro de overdose por opioides, apresentando bradipneia acentuada (frequência respiratória de 6 irpm). Paciente B: Quadro de pneumonia lobar extensa confirmada radiologicamente.",
+		"explanation": "Se o gradiente é normal em um paciente hipoxêmico (geralmente com PaCO2 elevada), a causa é falha na 'bomba' (SNC, neuromuscular, caixa torácica). Se o gradiente é aumentado, há uma barreira ou desequilíbrio dentro do pulmão (V/Q, Shunt ou Difusão) impedindo a oxigenação adequada do sangue arterial em relação ao ar alveolar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a utilidade clínica do cálculo do Gradiente Alvéolo-Arterial de Oxigênio [P(A-a)O2]?",
+				"correctAnswer": "O Gradiente A-a é utilizado para diferenciar a origem da hipoxemia: causas **extrapulmonares** (hipoventilação) versus causas **intrapulmonares** (falha na troca gasosa).",
+				"keywords": [
+					"Gradiente Alvéolo-Arterial [P(A-a)O2]",
+					"Causa Extrapulmonar vs. Intrapulmonar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como se comportará este gradiente no Paciente A e no Paciente B, respectivamente?",
+				"correctAnswer": "No **Paciente A (overdose)**, o gradiente estará **normal**, pois a hipoxemia decorre exclusivamente da hipoventilação alveolar; o parênquima pulmonar está íntegro. No **Paciente B (pneumonia)**, o gradiente estará **aumentado**, indicando comprometimento da membrana alvéolo-capilar e distúrbio na troca gasosa.",
+				"keywords": [
+					"Hipoventilação Alveolar (Gradiente Normal)",
+					"Troca gasosa"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 66,
+		"title": "Fisiopatologia da Hipoxemia",
+		"vignette": "A compreensão dos mecanismos fisiopatológicos é essencial para o tratamento direcionado da insuficiência respiratória hipoxêmica.",
+		"explanation": "A identificação do mecanismo orienta a terapêutica. Por exemplo, a hipoxemia por *Shunt* verdadeiro é refratária à oxigenoterapia convencional, enquanto a hipoxemia por Mismatch V/Q ou Hipoventilação responde prontamente ao aumento da oferta de O2.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Quais são os 5 mecanismos fisiopatológicos clássicos que resultam em hipoxemia arterial?",
+				"correctAnswer": "1. **Diminuição da PiO2:** Redução da pressão inspirada de oxigênio (ex: grandes altitudes). 2. **Hipoventilação Alveolar:** Falha na renovação do ar alveolar (ex: depressão do SNC, doenças neuromusculares). 3. **Distúrbio Ventilação-Perfusão (Mismatch V/Q):** Áreas ventiladas mas não perfundidas ou perfundidas mas não ventiladas (mecanismo mais comum, presente em asma, DPOC, pneumonia). 4. **Shunt Direita-Esquerda:** Sangue passa do lado venoso para o arterial sem contato com alvéolos ventilados (ex: atelectasia completa, edema pulmonar agudo grave, malformações arteriovenosas). 5. **Distúrbio de Difusão:** Espessamento da membrana alvéolo-capilar dificultando a passagem do gás (ex: fibrose pulmonar).",
+				"keywords": [
+					"Diminuição da PiO2",
+					"Hipoventilação Alveolar",
+					"Distúrbio V/Q (Ventilação-Perfusão)",
+					"Shunt",
+					"Distúrbio de Difusão"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 67,
+		"title": "O Espaço Morto Fisiológico",
+		"vignette": "Um paciente diagnosticado com Tromboembolismo Pulmonar (TEP) apresenta uma área do parênquima pulmonar que mantém a ventilação preservada, porém não recebe perfusão sanguínea devido à obstrução vascular pelo coágulo.",
+		"explanation": "É o oposto do Shunt (onde há sangue, mas não há ar). No Espaço Morto, há ar, mas não há sangue. Ambos tornam o pulmão ineficiente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação fisiológica para o fenômeno onde há ventilação sem perfusão?",
+				"correctAnswer": "Espaço Morto Alveolar (ou Efeito Espaço Morto).",
+				"keywords": ["Espaço Morto Alveolar", "Relação V/Q Infinita"],
+				"order": 1
+			},
+			{
+				"text": "Qual o impacto fisiológico imediato desse fenômeno na eliminação do gás carbônico (CO2)?",
+				"correctAnswer": "Ocorre dificuldade na eliminação do CO2, resultando na necessidade de aumentar a ventilação minuto total para compensar as áreas não funcionais. Caso não haja compensação, ocorre hipercapnia.",
+				"keywords": ["Hipercapnia", "Aumento da Ventilação Minuto"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 68,
+		"title": "A Curva de Dissociação da Hemoglobina",
+		"vignette": "Um paciente internado em Unidade de Terapia Intensiva apresenta febre alta (40°C) e acidose metabólica grave. A análise dos sinais vitais e da gasometria revela que, para uma mesma pressão parcial de oxigênio (PaO2), a saturação de oxigênio (SpO2) encontra-se inferior ao valor de referência padrão.",
+		"explanation": "O desvio para a direita ocorre por: ↑Temperatura, ↑CO2, ↑2,3-DPG e ↓pH (Acidose). O desvio para a esquerda (retenção do O2 na Hb) ocorre no oposto.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a alteração observada na Curva de Dissociação da Hemoglobina (direção do desvio)?",
+				"correctAnswer": "Desvio para a direita.",
+				"keywords": ["Desvio para a Direita", "Acidose e Hipertermia"],
+				"order": 1
+			},
+			{
+				"text": "Qual a vantagem fisiológica desse desvio para a oxigenação tecidual periférica?",
+				"correctAnswer": "A vantagem é a diminuição da afinidade da hemoglobina pelo oxigênio (Efeito Bohr), o que facilita a liberação (unloading) do O2 para os tecidos com alta demanda metabólica.",
+				"keywords": [
+					"Efeito Bohr",
+					"Redução da Afinidade",
+					"Liberação Tecidual de O2"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 69,
+		"title": "Interpretação Sistemática da Gasometria",
+		"vignette": "Foi coletada uma gasometria arterial de um paciente em ar ambiente, apresentando os seguintes resultados: pH 7.25 | PaCO2 60 mmHg | HCO3 26 mEq/L | PaO2 55 mmHg.",
+		"explanation": "Na acidose respiratória aguda, para cada aumento de 10 na PaCO2, o HCO3 sobe apenas 1. Se fosse crônico (como no DPOC estável), o HCO3 estaria bem mais alto (subiria 3.5 para cada 10 de PaCO2).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Classifique o estado do pH.",
+				"correctAnswer": "Acidose (pH < 7.35).",
+				"keywords": ["Acidose"],
+				"order": 1
+			},
+			{
+				"text": "Identifique o distúrbio primário (respiratório ou metabólico).",
+				"correctAnswer": "Respiratória (Hipercapnia/PaCO2 elevada concordante com o pH ácido).",
+				"keywords": ["Acidose Respiratória", "Hipercapnia"],
+				"order": 2
+			},
+			{
+				"text": "Classifique o distúrbio quanto à cronicidade (agudo ou crônico) e justifique com base no bicarbonato.",
+				"correctAnswer": "Aguda. O bicarbonato encontra-se praticamente normal (26 mEq/L), indicando que não houve tempo para compensação renal significativa (retenção de bases).",
+				"keywords": ["Distúrbio Agudo", "Ausência de Compensação Renal"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 70,
+		"title": "Cálculo do Gradiente Alvéolo-Arterial",
+		"vignette": "Deseja-se calcular o Gradiente Alvéolo-Arterial de Oxigênio [P(A-a)O2] de um paciente ao nível do mar (Pressão Barométrica = 760 mmHg), respirando em Ar Ambiente (FiO2 21%). A gasometria arterial informa: PaCO2 = 40 mmHg e PaO2 = 90 mmHg.",
+		"explanation": "O Gradiente normal é geralmente entre 5 a 15 mmHg (ou idade/4 + 4). Um gradiente de 10 indica que o pulmão está trocando oxigênio perfeitamente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Calcule a Pressão Alveolar de Oxigênio (PAO2) utilizando a equação simplificada do gás alveolar.",
+				"correctAnswer": "PAO2 = 150 - (PaCO2 / 0.8) → 150 - (40 / 0.8) = 150 - 50 = 100 mmHg.",
+				"keywords": ["Equação do Gás Alveolar", "PAO2 100 mmHg (ar ambiente)"],
+				"order": 1
+			},
+			{
+				"text": "Determine o valor do Gradiente Alvéolo-Arterial [P(A-a)O2].",
+				"correctAnswer": "Gradiente = PAO2 - PaO2 → 100 - 90 = 10 mmHg.",
+				"keywords": [
+					"Gradiente Alvéolo-Arterial Normal",
+					"Troca Gasosa Preservada"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 71,
+		"title": "Ventilação Alveolar e PaCO2",
+		"vignette": "Considerando a relação inversamente proporcional entre a Ventilação Alveolar e a pressão parcial de dióxido de carbono no sangue arterial (PaCO2).",
+		"explanation": "O CO2 é o marcador direto da ventilação. Se o pulmão não 'sopra' o ar para fora adequadamente, o CO2 acumula no sangue. É por isso que pacientes com doenças neuromusculares ou overdose morrem de acidose respiratória.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Fisiologicamente, o que ocorre com o valor da PaCO2 se a ventilação alveolar de um paciente for reduzida em 50%?",
+				"correctAnswer": "A PaCO2 dobra de valor.",
+				"keywords": [
+					"Relação Inversa Ventilação/PaCO2",
+					"Acidose Respiratória"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a terminologia clínica para o estado de um paciente com PaCO2 > 45 mmHg?",
+				"correctAnswer": "Hipoventilação Alveolar (ou Hipercapnia).",
+				"keywords": ["Hipoventilação Alveolar", "Hipercapnia"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 72,
+		"title": "Mecânica Respiratória e Sinal de Hoover",
+		"vignette": "Durante o exame físico do tórax de um paciente com Enfisema Pulmonar avançado, observa-se que, durante a fase inspiratória, os rebordos costais inferiores movem-se medialmente (retração paradoxal), ao invés de expandirem lateralmente.",
+		"explanation": "É um sinal clássico de desvantagem mecânica respiratória. O diafragma perde sua curvatura (cúpula) e torna-se um músculo ineficiente, aumentando muito o trabalho respiratório do paciente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o epônimo deste sinal semiológico?",
+				"correctAnswer": "Sinal de Hoover.",
+				"keywords": ["Sinal de Hoover"],
+				"order": 1
+			},
+			{
+				"text": "O que este sinal indica sobre a geometria e funcionalidade do diafragma?",
+				"correctAnswer": "Indica retificação (achatamento) do diafragma secundária à hiperinsuflação pulmonar. A perda da cúpula diafragmática altera o vetor de força: as fibras musculares tracionam as costelas para dentro ao invés de descerem o diafragma.",
+				"keywords": [
+					"Hiperinsuflação Pulmonar",
+					"Retificação Diafragmática",
+					"Desvantagem Mecânica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 73,
+		"title": "Espirometria e Padrão Obstrutivo",
+		"vignette": "Um paciente é submetido a uma espirometria. O laudo apresenta um valor da relação VEF1/CVF (Índice de Tiffeneau) de 0.60 (60%).",
+		"explanation": "Na obstrução, o ar tem dificuldade de sair, por isso o volume no primeiro segundo (VEF1) cai proporcionalmente mais que a capacidade total (CVF). Na restrição, o pulmão é pequeno, então a relação costuma estar normal ou aumentada, mas a CVF isolada é baixa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o padrão ventilatório definido por este valor?",
+				"correctAnswer": "Este valor define um Distúrbio Ventilatório Obstrutivo, caracterizado por uma relação VEF1/CVF < 0.7 (ou abaixo do limite inferior da normalidade).",
+				"keywords": ["Distúrbio Ventilatório Obstrutivo", "VEF1/CVF < 0.7"],
+				"order": 1
+			},
+			{
+				"text": "Qual parâmetro deve ser analisado em seguida para avaliar se existe resposta significativa ao broncodilatador e qual o critério de positividade?",
+				"correctAnswer": "Deve-se observar se houve aumento no VEF1 (ou na CVF). O critério para resposta positiva ao broncodilatador é um aumento de pelo menos 12% E 200 ml em relação aos valores pré-broncodilatador.",
+				"keywords": ["Aumento de VEF1 ou CVF", "$\\ge$ 12% E 200 ml"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 74,
+		"title": "Diagnóstico de Distúrbio Restritivo",
+		"vignette": "Uma espirometria evidencia CVF (Capacidade Vital Forçada) reduzida, porém com a relação VEF1/CVF preservada (normal). Há suspeita de um Distúrbio Restritivo, mas a espirometria isolada não confirma esse diagnóstico.",
+		"explanation": "Muitas vezes uma CVF baixa na espirometria é apenas \"pseudorrestrição\" causada por aprisionamento de ar. Só a CPT medida por pletismografia diz se o pulmão é realmente pequeno (fibrose, cifoscoliose, obesidade).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual é o exame considerado \"padrão-ouro\" para confirmar a restrição?",
+				"correctAnswer": "O exame indicado é a Pletismografia (ou medida de volumes pulmonares por diluição de hélio/nitrogênio).",
+				"keywords": ["Pletismografia"],
+				"order": 1
+			},
+			{
+				"text": "Qual parâmetro fisiológico deve estar reduzido para fechar este diagnóstico?",
+				"correctAnswer": "O parâmetro que confirma a restrição é a redução da CPT (Capacidade Pulmonar Total) abaixo do percentil 5 (ou < 80% do previsto).",
+				"keywords": [
+					"Capacidade Pulmonar Total (CPT)",
+					"CPT Reduzida (< 80% ou P5)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 75,
+		"title": "Radiologia Torácica e Sinal da Silhueta",
+		"vignette": "Uma radiografia de tórax (PA) evidencia uma opacidade no hemitórax direito que \"apaga\" (borra) o contorno do átrio direito.",
+		"explanation": "Se duas estruturas de mesma densidade (água/tecido) estão encostadas, a linha de separação entre elas desaparece no Raio-X. Se a mancha estivesse no lobo inferior (atrás do coração), a silhueta cardíaca continuaria nítida.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome deste sinal radiológico?",
+				"correctAnswer": "Sinal da Silhueta.",
+				"keywords": ["Sinal da Silhueta", "Mesma densidade radiológica"],
+				"order": 1
+			},
+			{
+				"text": "O que este sinal infere sobre a localização anatômica da lesão (lobo acometido)?",
+				"correctAnswer": "Indica que a lesão está em contato anatômico direto com a estrutura cuja borda foi apagada. Neste caso, confirma que a patologia está localizada no Lobo Médio, pois este é o lobo anatomicamente adjacente à borda direita do coração.",
+				"keywords": ["Lobo Médio", "Contato anatômico"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 76,
+		"title": "Consolidação e Broncograma Aéreo",
+		"vignette": "Ao analisar uma radiografia de tórax com uma consolidação densa, observam-se pequenas linhas radiolucentes (escuras) e ramificadas no interior da opacidade.",
+		"explanation": "É o sinal radiológico da pneumonia lobar. Indica que a via aérea está pérvia, mas o \"final da linha\" (alvéolo) está ocupado.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação deste achado radiológico?",
+				"correctAnswer": "Broncograma Aéreo.",
+				"keywords": ["Broncograma Aéreo"],
+				"order": 1
+			},
+			{
+				"text": "Por que este achado diferencia uma lesão parenquimatosa de uma lesão pleural?",
+				"correctAnswer": "O broncograma aéreo ocorre quando os alvéolos estão preenchidos por exsudato/transudato (radiopacos), mas os brônquios permanecem pérvios e aerados (radiolucentes). Isso confirma que a lesão é intrapulmonar/alveolar. No derrame pleural, o líquido é extra-pulmonar, comprimindo o parênquima sem gerar essa imagem.",
+				"keywords": [
+					"Lesão Alveolar (Parenquimatosa)",
+					"Brônquios pérvios",
+					"Alvéolos ocupados"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 77,
+		"title": "Identificação de Derrame Pleural",
+		"vignette": "Um paciente com insuficiência cardíaca realiza um Raio-X de tórax em ortostase. Nota-se o velamento do ângulo costofrênico, substituído por uma opacidade com uma linha superior côncava.",
+		"explanation": "O líquido pleural acumula-se primeiro nas bases por gravidade. No Laurell, o líquido \"escorre\" pela parede lateral, permitindo ver lâminas finas que no PA ficariam escondidas atrás do diafragma.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome da linha curva característica descrita?",
+				"correctAnswer": "Parábola de Damoiseau (ou Sinal do Menisco).",
+				"keywords": ["Parábola de Damoiseau (Sinal do Menisco)"],
+				"order": 1
+			},
+			{
+				"text": "Qual a incidência radiológica recomendada para detectar volumes pequenos de líquido (50-100ml) que podem passar despercebidos na incidência PA?",
+				"correctAnswer": "A incidência indicada é o Raio-X em decúbito lateral com raios horizontais (Incidência de Laurell).",
+				"keywords": [
+					"Incidência de Laurell",
+					"Decúbito Lateral com raios horizontais"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 78,
+		"title": "Padrão Intersticial na Congestão Pulmonar",
+		"vignette": "Em um paciente com quadro clínico de congestão pulmonar, a radiografia de tórax exibe pequenas linhas horizontais, curtas (1-2 cm) e finas, localizadas perifericamente nas bases pulmonares, perpendiculares à pleura.",
+		"explanation": "Diferente do padrão alveolar (mancha algodonosa), o padrão intersticial mostra que o problema está no \"esqueleto\" do pulmão. Linhas B = edema de septo.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o epônimo dessas linhas?",
+				"correctAnswer": "Linhas B de Kerley.",
+				"keywords": ["Linhas B de Kerley"],
+				"order": 1
+			},
+			{
+				"text": "Qual a alteração anatomopatológica que elas representam?",
+				"correctAnswer": "Elas representam o espessamento dos septos interlobulares, secundário ao acúmulo de líquido (edema) no interstício pulmonar. É um sinal clássico de hipertensão venocapilar pulmonar (ex: Insuficiência Cardíaca Esquerda).",
+				"keywords": [
+					"Espessamento de septos interlobulares",
+					"Edema Intersticial"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 79,
+		"title": "Sinais de Volume na Radiologia Torácica",
+		"vignette": "Durante a análise de radiografias de tórax de dois pacientes distintos, observa-se em ambos uma opacidade homogênea no hemitórax esquerdo. O Paciente A apresenta desvio da traqueia e do mediastino para a esquerda, além de redução dos espaços intercostais ipsilaterais. O Paciente B apresenta traqueia centralizada e estruturas mediastinais tópicas.",
+		"explanation": "Na atelectasia, o pulmão 'murcha'. Na pneumonia, ele 'fica denso'. Essa distinção é crucial para decidir se o paciente precisa de antibiótico ou de uma broncoscopia para retirar um corpo estranho/tampão mucoso.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico radiológico mais provável para o Paciente A?",
+				"correctAnswer": "O Paciente A apresenta uma Atelectasia.",
+				"keywords": ["Atelectasia", "Desvio ipsilateral do mediastino"],
+				"order": 1
+			},
+			{
+				"text": "Qual o sinal radiológico fundamental que diferencia a fisiopatologia do Paciente A em relação ao Paciente B (sugestivo de Pneumonia/Consolidação)?",
+				"correctAnswer": "O sinal diferencial é a perda de volume (sinais redutivos). Na atelectasia, o colapso pulmonar gera uma pressão negativa que traciona as estruturas vizinhas (desvio ipsilateral do mediastino, elevação da cúpula diafragmática, deslocamento de fissuras e pinçamento de costelas). A Pneumonia (Paciente B) preenche o espaço alveolar com exsudato, mas não altera significativamente o volume pulmonar, portanto, não desloca estruturas adjacentes.",
+				"keywords": [
+					"Sinais redutivos (perda de volume)",
+					"Consolidação (sem perda de volume)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 80,
+		"title": "Padrão em Vidro Fosco vs. Consolidação",
+		"vignette": "Na tomografia computadorizada de tórax e na radiografia digital, a caracterização das opacidades é fundamental para o raciocínio diagnóstico. Considere o padrão de 'Vidro Fosco' (Ground Glass).",
+		"explanation": "É um termo muito comum na TC e hoje também no Raio-X. Indica um processo inflamatório ou edema que ainda não ocupou totalmente o espaço aéreo. Foi o padrão clássico da fase inicial da COVID-19.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Radiologicamente, o que define o padrão em Vidro Fosco em oposição à Consolidação?",
+				"correctAnswer": "O Vidro Fosco é uma opacidade que aumenta a densidade pulmonar, mas permite a visualização dos vasos sanguíneos e brônquios através dela. A Consolidação é uma opacidade mais densa que 'apaga' (obscurece) as margens dos vasos e vias aéreas.",
+				"keywords": [
+					"Vidro fosco (Ground Glass)",
+					"Preservação da trama vascular/brônquica"
+				],
+				"order": 1
+			},
+			{
+				"text": "O que esse achado indica fisiopatologicamente sobre o preenchimento alveolar?",
+				"correctAnswer": "O Vidro Fosco indica um preenchimento parcial dos alvéolos ou um espessamento do interstício pulmonar, diferente do preenchimento total visto na consolidação.",
+				"keywords": [
+					"Preenchimento alveolar parcial",
+					"Espessamento intersticial"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 81,
+		"title": "Hipoxemia e Resposta ao Oxigênio",
+		"vignette": "Um paciente apresenta hipoxemia grave. É instalada uma máscara com reservatório ofertando Oxigênio a 100% (FiO2 1.0). Após 20 minutos, uma nova gasometria arterial demonstra que a PaO2 permaneceu praticamente inalterada (abaixo de 60 mmHg).",
+		"explanation": "No distúrbio V/Q (asma/DPOC), o oxigênio ajuda muito. No Shunt (SDRA, pneumonia grave, atelectasia total), o oxigênio sozinho não resolve; você precisa de pressão (PEEP) para abrir o alvéolo.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o mecanismo fisiopatológico de hipoxemia caracteriza-se por ser refratário à oferta de oxigênio suplementar?",
+				"correctAnswer": "O mecanismo é o Shunt Direita-Esquerda (Shunt Intrapulmonar).",
+				"keywords": ["Shunt direita-esquerda", "Hipoxemia refratária a O2"],
+				"order": 1
+			},
+			{
+				"text": "Por que a suplementação de O2 não corrige a hipoxemia neste cenário?",
+				"correctAnswer": "Isso ocorre porque o sangue perfunde áreas do pulmão que estão totalmente sem ventilação (ex: alvéolos colapsados ou preenchidos por pus/edema). Como esse sangue não entra em contato com o gás alveolar, independente da concentração de oxigênio ofertada (FiO2), ele retorna à circulação sistêmica com características venosas, misturando-se ao sangue oxigenado e mantendo a hipoxemia.",
+				"keywords": [
+					"Perfusão sem ventilação (V/Q = 0)",
+					"Necessidade de PEEP"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 82,
+		"title": "Morfologia da Curva Fluxo-Volume",
+		"vignette": "A análise visual da espirometria complementa os dados numéricos. Observe a alça expiratória (parte superior do gráfico) na Curva Fluxo-Volume.",
+		"explanation": "No pulmão normal, o fluxo cai de forma retilínea. No obstrutivo, como os brônquios fecham precocemente durante a expiração, o fluxo cai bruscamente logo no início, gerando essa 'barriga' para dentro no gráfico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a alteração morfológica característica da alça expiratória no Distúrbio Obstrutivo?",
+				"correctAnswer": "A curva apresenta uma concavidade voltada para cima (côncava superiormente), descrita classicamente como 'aspecto escavado' ou 'em colher'. Isso reflete a queda abrupta do fluxo logo após o pico expiratório devido ao fechamento precoce das vias aéreas.",
+				"keywords": [
+					"Curva fluxo-volume",
+					"Concavidade superior",
+					"Aspecto escavado",
+					"Colapso expiratório precoce"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 83,
+		"title": "Gasometria e Anion Gap",
+		"vignette": "Diante de um paciente com Acidose Metabólica (pH < 7,35 e HCO3 baixo), é necessário investigar a etiologia do distúrbio. Para isso, utiliza-se o cálculo do Anion Gap (Hiato Aniônico).",
+		"explanation": "O JSON cita 'distúrbios ácido-básicos'. Não existe análise de acidose metabólica sem Anion Gap. Ele define se o paciente está em choque (lactato), em uremia ou em cetoacidose.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a fórmula para o cálculo do Anion Gap?",
+				"correctAnswer": "Fórmula: $AG = Na^+ - (Cl^- + HCO_3^-)$. (Valor de referência usual: 8 a 12 mEq/L).",
+				"keywords": ["Fórmula: $Na - (Cl + HCO_3)$"],
+				"order": 1
+			},
+			{
+				"text": "Como esse cálculo diferencia as causas de acidose metabólica (perda de base vs. acúmulo de ácido)?",
+				"correctAnswer": "O cálculo permite a seguinte distinção: 1. AG Aumentado (Normoclorêmica): Indica a presença de ânions não medidos no plasma, ou seja, ganho de ácido orgânico (ex: lactato, cetoácidos, toxinas urêmicas). 2. AG Normal (Hiperclorêmica): Indica que a acidose ocorre por perda direta de bicarbonato (ex: diarreia, acidose tubular renal), onde o rim retém cloro para manter a eletroneutralidade.",
+				"keywords": [
+					"Anion Gap aumentado (Acúmulo de ácidos orgânicos)",
+					"Anion Gap normal (Hiperclorêmica / Perda de bicarbonato)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 84,
+		"title": "Difusão de Monóxido de Carbono (DLCO)",
+		"vignette": "Na prova de função pulmonar completa, além da espirometria e pletismografia, realiza-se o teste de Capacidade de Difusão do Monóxido de Carbono (DLCO).",
+		"explanation": "É o 'terceiro pilar' da função pulmonar. Ajuda muito a identificar doenças que 'comem' o parênquima pulmonar, como a fibrose e o enfisema, antes mesmo do Raio-X mostrar.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "O que o teste de DLCO avalia fisiologicamente?",
+				"correctAnswer": "A DLCO mede a integridade e a eficiência da troca gasosa através da membrana alvéolo-capilar.",
+				"keywords": [
+					"DLCO (Difusão de CO)",
+					"Integridade da membrana alvéolo-capilar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como este exame auxilia no diagnóstico diferencial entre Enfisema Pulmonar e Asma, considerando que ambas são doenças obstrutivas?",
+				"correctAnswer": "No diagnóstico diferencial: 1. Enfisema: A DLCO está reduzida devido à destruição dos septos alveolares e redução do leito capilar (perda de área de superfície para troca). 2. Asma: A DLCO é normal ou aumentada, pois a membrana alvéolo-capilar está preservada e há aumento do volume de sangue capilar pulmonar (recrutamento vascular).",
+				"keywords": ["Enfisema: DLCO reduzida", "Asma: DLCO normal/aumentada"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 85,
+		"title": "Topografia da Toracocentese",
+		"vignette": "Paciente com diagnóstico confirmado de derrame pleural volumoso ao exame físico e radiológico. Indica-se a realização de toracocentese diagnóstica.",
+		"explanation": "O médico precisa saber transformar o diagnóstico físico em um procedimento seguro. Conhecer o trajeto dos nervos e vasos intercostais evita hemotórax iatrogênico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Com base na anatomia da parede torácica, em qual local da costela (borda superior ou inferior) deve-se introduzir a agulha e qual a justificativa anatômica?",
+				"correctAnswer": "A punção deve ser realizada na borda superior da costela inferior. Isso é fundamental para evitar a lesão do feixe vasculonervoso intercostal (veia, artéria e nervo), que transcorre ao longo da borda inferior da costela superior.",
+				"keywords": [
+					"Borda superior da costela inferior",
+					"Feixe vasculonervoso intercostal"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a referência anatômica (espaço intercostal) usualmente utilizada como limite inferior de segurança para evitar lesão diafragmática ou hepática?",
+				"correctAnswer": "Geralmente, utiliza-se o 7º ou 8º espaço intercostal na linha axilar posterior como limite de segurança.",
+				"keywords": ["7º ou 8º espaço intercostal"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 86,
+		"title": "Monitorização do Pico de Fluxo (Peak Flow)",
+		"vignette": "Um paciente asmático dá entrada no pronto-socorro. Na ausência de um espirômetro convencional, opta-se pelo uso de um Peak Flow Meter.",
+		"explanation": "É o \"termômetro\" do asmático. O estudante deve saber que existem ferramentas simples para quantificar a obstrução além do estetoscópio.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "O que este dispositivo mensura fisiologicamente?",
+				"correctAnswer": "O aparelho mede o Pico de Fluxo Expiratório (PFE), ou seja, o fluxo máximo de ar obtido durante uma expiração forçada iniciada na capacidade pulmonar total. Ele quantifica o grau de obstrução das vias aéreas de grande calibre.",
+				"keywords": ["Pico de Fluxo Expiratório (PFE)", "Grau de obstrução"],
+				"order": 1
+			},
+			{
+				"text": "Qual a utilidade clínica de comparar o resultado obtido com o \"melhor valor pessoal\" do paciente no manejo da crise?",
+				"correctAnswer": "A comparação com o \"melhor valor pessoal\" permite classificar a gravidade da crise. Por exemplo, valores abaixo de 50% do melhor valor pessoal indicam uma crise grave ou muito grave, orientando a agressividade do tratamento.",
+				"keywords": ["Comparação com \"melhor valor pessoal\""],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 87,
+		"title": "Respiração Paradoxal",
+		"vignette": "Durante a monitorização de um paciente com crise asmática grave, observa-se que na inspiração o tórax expande enquanto o abdômen retrai. Na expiração, ocorre o movimento inverso (o abdômen projeta-se para fora).",
+		"explanation": "É um sinal de extrema gravidade. Quando se identifica respiração paradoxal, o paciente está próximo de uma parada respiratória por exaustão muscular. É indicativo de necessidade de via aérea avançada/suporte ventilatório.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o termo semiológico para este fenômeno?",
+				"correctAnswer": "Respiração Paradoxal (ou Assincronia Toracoabdominal).",
+				"keywords": ["Respiração Paradoxal (Assincronia Toracoabdominal)"],
+				"order": 1
+			},
+			{
+				"text": "O que este sinal indica sobre a função do diafragma?",
+				"correctAnswer": "Indica fadiga ou falência iminente do diafragma. O músculo está exausto e incapaz de contrair adequadamente; a pressão negativa gerada pelos músculos acessórios do tórax acaba \"sugando\" o abdômen passivamente para dentro durante a inspiração.",
+				"keywords": [
+					"Fadiga diafragmática",
+					"Iminência de falência respiratória"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 88,
+		"title": "Tórax Silencioso",
+		"vignette": "Paciente asmático admitido com sibilância audível e dispneia intensa. Após 20 minutos de tratamento inicial, o paciente apresenta redução da ausculta de sibilos e o murmúrio vesicular torna-se quase inaudível. Concomitantemente, a saturação de oxigênio cai de 92% para 88%.",
+		"explanation": "Muitos estudantes interpretam erroneamente o desaparecimento dos sibilos como melhora. Na asma grave, o sibilo indica que ainda há passagem de ar. O silêncio auscultatório em paciente com esforço respiratório é sinal de obstrução crítica e parada respiratória iminente.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "O desaparecimento dos sibilos representa melhora ou piora do quadro?",
+				"correctAnswer": "Representa um sinal de extrema piora.",
+				"keywords": ["Sinal de gravidade extrema"],
+				"order": 1
+			},
+			{
+				"text": "Qual o nome deste achado semiológico e sua fisiopatologia?",
+				"correctAnswer": "O achado é denominado Tórax Silencioso (Silent Chest). Ocorre quando a obstrução brônquica é tão severa que o fluxo de ar se torna insuficiente até mesmo para gerar a turbulência necessária para o som do sibilo.",
+				"keywords": [
+					"Tórax Silencioso (Silent Chest)",
+					"Fluxo aéreo insuficiente"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 89,
+		"title": "Identificação de Baqueteamento Digital",
+		"vignette": "Durante o exame físico das extremidades, surge a dúvida se o formato das unhas do paciente corresponde a um baqueteamento digital patológico ou a uma variação constitucional.",
+		"explanation": "É a forma mais objetiva de identificar o baqueteamento no exame físico inicial, antes que a deformidade em \"baqueta de tambor\" se torne evidente macroscopicamente.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual manobra propedêutica deve ser realizada para esclarecer a dúvida (descreva a execução)?",
+				"correctAnswer": "Deve-se realizar o Teste de Schamroth (manobra da janela). Solicita-se ao paciente que encoste as superfícies dorsais das falanges distais de dedos correspondentes (ex: indicadores) uma contra a outra.",
+				"keywords": ["Teste de Schamroth"],
+				"order": 1
+			},
+			{
+				"text": "Qual o achado nesta manobra que confirma a presença de hipocratismo digital?",
+				"correctAnswer": "Em condições normais, visualiza-se um pequeno losango de luz na base das unhas (\"janela\"). No baqueteamento digital, essa janela desaparece devido ao aumento do ângulo de Lovibond e à hipertrofia de partes moles.",
+				"keywords": [
+					"Desaparecimento da janela (losango)",
+					"Ângulo de Lovibond"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 90,
+		"title": "Dispositivos de Oxigenoterapia",
+		"vignette": "Para um paciente hipoxêmico com padrão respiratório irregular, estão disponíveis dois dispositivos de oxigenoterapia: (A) Cateter Nasal de O2 a 2 L/min e (B) Máscara de Venturi a 24%.",
+		"explanation": "O estudante deve saber que, para pacientes retentores de CO2 (como no DPOC), a oferta imprecisa de oxigênio pode ser deletéria. A Máscara de Venturi é o padrão para controle rigoroso da oxigenação nestes cenários.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a principal diferença clínica entre os dispositivos A e B no que tange à precisão da Fração Inspirada de Oxigênio (FiO2) entregue ao paciente?",
+				"correctAnswer": "O Cateter Nasal é um dispositivo de baixo fluxo e entrega uma FiO2 variável e imprecisa, pois depende do volume corrente e da frequência respiratória do paciente (o oxigênio se mistura com o ar ambiente de forma não controlada). A Máscara de Venturi é um dispositivo de alto fluxo que, pelo princípio de Bernoulli, entrega uma FiO2 fixa e precisa, independentemente do padrão ventilatório do paciente.",
+				"keywords": [
+					"Cateter Nasal: Baixo fluxo / FiO2 variável",
+					"Máscara de Venturi: Alto fluxo / FiO2 fixa e precisa",
+					"Independência do padrão ventilatório (Venturi)"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 91,
+		"title": "Narcose por CO2 em Paciente com DPOC",
+		"vignette": "Você está acompanhando um paciente com Doença Pulmonar Obstrutiva Crônica (DPOC) exacerbada, admitido com dispneia intensa e agitação psicomotora. Após 30 minutos de oxigenoterapia por máscara simples em alto fluxo, o paciente apresenta-se 'calmo', porém com sonolência excessiva e de difícil despertar.",
+		"explanation": "É o erro clássico do estudante: 'dar oxigênio demais para quem retém CO2'. O oxigênio alto remove o estímulo hipóxico que mantém esse paciente respirando, fazendo com que ele ventile menos e acumule CO2, que é anestésico.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico clínico para a alteração do nível de consciência observada neste contexto?",
+				"correctAnswer": "O paciente está evoluindo com Narcose por CO2 (ou Narcose Carbônica).",
+				"keywords": [
+					"Narcose por CO2 (ou Carbônica)",
+					"Depressão do Sistema Nervoso Central"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo fisiopatológico associado à gasometria arterial que explica este quadro?",
+				"correctAnswer": "O excesso de oxigênio ofertado a pacientes retentores crônicos (como no DPOC grave) pode reduzir o drive respiratório e, principalmente, piorar a relação ventilação/perfusão (V/Q). Isso leva à retenção aguda de gás carbônico (hipercapnia). A PaCO2 elevada atua como um depressor do Sistema Nervoso Central, resultando em sonolência, torpor e podendo evoluir para o coma.",
+				"keywords": ["Hipercapnia aguda"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 92,
+		"title": "Asterixe e Encefalopatia Hipercápnica",
+		"vignette": "Durante o exame físico de um paciente com insuficiência respiratória e rebaixamento do nível de consciência, você solicita que ele estenda os membros superiores e realize uma hiperextensão dos punhos (dorsiflexão). Observam-se movimentos rápidos, arrítmicos e súbitos de perda do tônus postural seguidos de retorno à posição inicial ('bater de asas').",
+		"explanation": "Embora muito associado à encefalopatia hepática, o flapping é um sinal de encefalopatia metabólica de qualquer causa. Na pneumologia, é o marcador físico da retenção de CO2 que está afetando o sistema motor.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome semiológico deste sinal?",
+				"correctAnswer": "O sinal é denominado Asterixe (ou Flapping).",
+				"keywords": ["Asterixe (ou Flapping)"],
+				"order": 1
+			},
+			{
+				"text": "No contexto de um paciente pneumopata, o que a presença deste sinal infere sobre a gasometria arterial?",
+				"correctAnswer": "No contexto respiratório, a asterixe é um sinal clínico de Hipercapnia grave (níveis elevados de PaCO2). Trata-se de uma manifestação neurológica de encefalopatia metabólica induzida pela retenção de CO2.",
+				"keywords": ["Hipercapnia grave", "Encefalopatia metabólica"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 93,
+		"title": "Semiologia Torácica: Pectoriloquia Fônica e Afônica",
+		"vignette": "Durante a semiologia torácica de um paciente com suspeita de síndrome de consolidação, você realiza a ausculta da voz utilizando duas técnicas distintas: pede ao paciente que fale '33' em voz normal e, posteriormente, que fale '33' cochichado (sussurrado).",
+		"explanation": "É o refinamento da ausculta da voz. O pulmão normal filtra o cochicho; o pulmão pneumônico transmite o cochicho como se o paciente estivesse falando no seu ouvido.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual a denominação do achado semiológico quando a voz é ouvida com nitidez na parede torácica em cada uma das técnicas?",
+				"correctAnswer": "Quando a voz normal é ouvida nitidamente, denomina-se Pectoriloquia Fônica. Quando a voz cochichada é ouvida nitidamente, denomina-se Pectoriloquia Afônica.",
+				"keywords": ["Pectoriloquia Fônica", "Pectoriloquia Afônica"],
+				"order": 1
+			},
+			{
+				"text": "Qual das duas manobras apresenta maior sensibilidade para detectar consolidações incipientes ou de menor extensão?",
+				"correctAnswer": "A Pectoriloquia Afônica é mais sensível e específica. O cochicho gera sons de alta frequência que, em condições normais, são filtrados pelo parênquima aerado. A transmissão nítida desses sons ocorre apenas se houver um meio sólido (consolidação) facilitando a condução sonora.",
+				"keywords": ["Consolidação pulmonar (transmissão de alta frequência)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 94,
+		"title": "Sinais de Alarme no Pneumotórax Hipertensivo",
+		"vignette": "Você atende um paciente com diagnóstico clínico de pneumotórax (murmúrio vesicular abolido e hipersonoridade à percussão).",
+		"explanation": "O pneumotórax simples é uma doença respiratória. O pneumotórax hipertensivo é uma doença circulatória (choque obstrutivo). O ar entra no espaço pleural, mas não sai, criando uma pressão positiva que 'entorta' o mediastino e impede o sangue de voltar para o coração.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Quais são os três sinais clínicos clássicos que definem o quadro como Pneumotórax Hipertensivo, indicando a necessidade de descompressão torácica imediata antes da realização de exames de imagem?",
+				"correctAnswer": "Os sinais que indicam a conversão para uma emergência com instabilidade hemodinâmica são: 1. Hipotensão Arterial (Choque): Devido à compressão das câmaras cardíacas e obstrução do retorno venoso. 2. Desvio da Traqueia: Deslocamento contralateral à lesão. 3. Turgência Jugular: Evidência de aumento da pressão venosa central por obstrução mecânica.",
+				"keywords": [
+					"Hipotensão (Choque Obstrutivo)",
+					"Desvio de traqueia",
+					"Turgência jugular"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 95,
+		"title": "Fisiopatologia da Insuficiência Respiratória",
+		"vignette": "Dois pacientes são admitidos no Departamento de Emergência com dispneia súbita: Paciente A: 24 anos, portador de Miastenia Gravis, apresenta esforço respiratório fraco, SatO2 88% e gasometria arterial evidenciando PaCO2 de 65 mmHg. Paciente B: 60 anos, com Insuficiência Cardíaca descompensada, estertores crepitantes até ápices, SatO2 82% e gasometria arterial evidenciando PaCO2 de 30 mmHg.",
+		"explanation": "A IR Tipo 1 é um problema no **parênquima** (alvéolo cheio de pus, água ou sangue), afetando a oxigenação. A IR Tipo 2 é um problema na **ventilação** (comando central, nervos, músculos ou obstrução grave), afetando a eliminação de CO2. É vital entender que um paciente com pulmão sadio pode morrer de IR Tipo 2 (ex: overdose de opioide).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Classifique o tipo de Insuficiência Respiratória (IR) de cada paciente.",
+				"correctAnswer": "O Paciente A apresenta Insuficiência Respiratória Tipo 2 (Hipercápnica ou Ventilatória). O Paciente B apresenta Insuficiência Respiratória Tipo 1 (Hipoxêmica).",
+				"keywords": ["IR Tipo 2 (Hipercápnica)", "IR Tipo 1 (Hipoxêmica)"],
+				"order": 1
+			},
+			{
+				"text": "Explique o mecanismo fisiopatológico responsável pela diferença nos níveis de PaCO2 entre os dois pacientes.",
+				"correctAnswer": "O Paciente A sofre de uma falência de 'bomba' (mecânica ventilatória), resultando em hipoventilação alveolar e incapacidade de eliminar o CO2 produzido, o que leva à hipercapnia. Já o Paciente B apresenta um distúrbio de troca gasosa (ocupação alveolar/difusão), porém sua bomba ventilatória está íntegra. Para compensar a hipoxemia, ele aumenta o volume minuto (taquipneia), o que acaba por 'lavar' o CO2 excessivamente, gerando hipocapnia.",
+				"keywords": [
+					"Falência de bomba (ventilação) vs. Falência de troca",
+					"Hipoventilação alveolar",
+					"Taquipneia compensatória ('Lavagem' de CO2)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 96,
+		"title": "Oxigenoterapia na DPOC",
+		"vignette": "Um paciente com DPOC exacerbada dá entrada no serviço com sonolência e taquipneia. Inicialmente, sugere-se o uso de Máscara com Reservatório a 15L/min. No entanto, a conduta é alterada para o uso de uma Máscara de Venturi a 28%.",
+		"explanation": "A oxigenoterapia na DPOC deve ser titulada para um alvo de **88-92%**. Dispositivos de baixo fluxo (como cateter nasal) ou alto fluxo instável (reservatório) podem entregar O2 demais, levando à narcose por CO2, acidose respiratória e parada. A Venturi usa o princípio físico de que o fluxo de O2 puxa o ar ambiente de forma constante, garantindo precisão.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Por que a Máscara de Venturi é o dispositivo de escolha em detrimento da Máscara com Reservatório neste perfil de paciente?",
+				"correctAnswer": "A Máscara de Venturi é indicada pois fornece uma Fração Inspirada de O2 (FiO2) fixa e controlada, independente do padrão ventilatório do paciente, prevenindo a oferta excessiva de oxigênio. A máscara com reservatório fornece alta concentração variável, aumentando o risco de hiperóxia.",
+				"keywords": ["FiO2 fixa/controlada"],
+				"order": 1
+			},
+			{
+				"text": "Quais são os mecanismos fisiológicos que explicam o risco de manter uma SatO2 de 100% neste paciente?",
+				"correctAnswer": "O risco é a hipercapnia induzida por oxigênio (narcose por CO2). Os mecanismos incluem: 1. Perda do drive hipóxico: O centro respiratório do paciente, habituado à hipercapnia, depende da hipoxemia para estimular a ventilação. 2. Efeito Haldane: A oxigenação da hemoglobina reduz sua afinidade pelo CO2, liberando-o na corrente sanguínea. 3. Piora do distúrbio V/Q: O O2 reverte a vasoconstrição hipóxica pulmonar em áreas mal ventiladas, aumentando o espaço morto fisiológico.",
+				"keywords": [
+					"Narcose por CO2 (Hipercapnia induzida)",
+					"Perda do drive hipóxico",
+					"Efeito Haldane",
+					"Alteração da relação V/Q (Vasoconstrição hipóxica)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 97,
+		"title": "Hipoxemia Refratária e Shunt",
+		"vignette": "Durante o atendimento de dois pacientes com hipoxemia grave, observa-se: Paciente X (Pneumonia lobar): Saturação eleva-se de 85% para 94% com cateter nasal a 4L/min. Paciente Y (Atelectasia total à esquerda): Saturação permanece em 84% mesmo com uso de Máscara com Reservatório a 15L/min.",
+		"explanation": "O Shunt é a causa de hipoxemia mais 'refratária'. Clinicamente, se você dá O2 em altas doses e a SatO2 não sobe, você deve suspeitar de Shunt (ex: atelectasia, edema pulmonar maciço, malformações arteriovenosas ou SDRA). O tratamento do Shunt geralmente exige **pressão positiva (PEEP)** para recrutar o alvéolo, e não apenas O2.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual é o fenômeno fisiopatológico que justifica a ausência de resposta à oxigenoterapia no Paciente Y, diferenciando-o do Paciente X?",
+				"correctAnswer": "O Paciente Y apresenta um Shunt verdadeiro (ou Shunt intrapulmonar). Nesta condição, o sangue perfunde alvéolos não ventilados (colapsados), não ocorrendo troca gasosa. O aumento da oferta de oxigênio não corrige a hipoxemia pois o gás não atinge a unidade funcional onde o sangue está passando. O Paciente X apresenta um distúrbio V/Q, onde ainda há ventilação (embora reduzida), permitindo resposta ao aumento da FiO2.",
+				"keywords": [
+					"Shunt Verdadeiro / Shunt Intrapulmonar",
+					"Perfusão sem ventilação",
+					"Hipoxemia refratária",
+					"Distúrbio V/Q (referente ao Paciente X)"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 98,
+		"title": "Dinâmica dos Dispositivos de Baixo Fluxo",
+		"vignette": "Um paciente utiliza Cateter Nasal de O2 a 3L/min. No Momento A: Paciente eupneico, Frequência Respiratória (FR) de 14 irpm. No Momento B: Paciente ansioso, taquipneico, com FR de 32 irpm e respiração profunda.",
+		"explanation": "Um dispositivo é chamado de 'Baixo Fluxo' quando o fluxo oferecido pelo aparelho é **menor** que o pico de fluxo inspiratório do paciente. Por isso, a FiO2 em cateteres é apenas uma estimativa (regra de bolso: 1L/min ≈ 24%, somando 4% a cada litro adicional). Se o paciente estiver muito taquipneico ou instável, o cateter nasal torna-se um método impreciso e insuficiente.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "A Fração Inspirada de Oxigênio (FiO2) efetiva alveolar é a mesma nos momentos A e B? Justifique utilizando o conceito de dispositivo de baixo fluxo.",
+				"correctAnswer": "Não, a FiO2 será menor no Momento B. Em dispositivos de baixo fluxo, o fluxo de oxigênio fornecido é inferior ao fluxo inspiratório do paciente. No Momento B, o aumento do volume minuto e da velocidade de inspiração obriga o paciente a inalar maior quantidade de ar ambiente (21% O2) para suprir sua demanda, diluindo a concentração de oxigênio proveniente do cateter.",
+				"keywords": [
+					"FiO2 variável",
+					"Diluição com ar ambiente",
+					"Fluxo inspiratório > Fluxo do dispositivo",
+					"Redução da FiO2 (no momento de taquipneia)"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 99,
+		"title": "O Gradiente Alvéolo-Arterial (P(A-a)O2)",
+		"vignette": "Você recebe dois pacientes com Hipoventilação (PaCO2 de 60 mmHg) e hipoxemia na gasometria. Paciente 1: Tentativa de suicídio com Benzodiazepínicos (overdose). Paciente 2: Exacerbação de DPOC por Pneumonia.",
+		"explanation": "O Gradiente Alvéolo-Arterial é a diferença entre quanto O2 tem no alvéolo (estimado pela equação do ar alveolar) e quanto O2 chegou no sangue (PaO2). **Gradiente Normal:** O problema é que o oxigênio nem está chegando no alvéolo (ex: hipoventilação por drogas, doenças neuromusculares, grandes altitudes). **Gradiente Aumentado:** O oxigênio chega no alvéolo, mas há um distúrbio V/Q, Shunt ou problema de Difusão (ex: Pneumonia, TEP, Edema Pulmonar).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Se você calcular o Gradiente Alvéolo-Arterial [P(A-a)O2], qual paciente apresentará um gradiente normal e qual apresentará um gradiente aumentado? O que esse cálculo te diz sobre a integridade da membrana alvéolo-capilar?",
+				"correctAnswer": "O Paciente 1 (Overdose) terá um gradiente normal. O Paciente 2 (DPOC/Pneumonia) terá um gradiente aumentado. Um gradiente normal indica que a hipoxemia é causada puramente por um problema 'extra-pulmonar' (a bomba parou, mas o pulmão está sadio). Um gradiente aumentado indica que a hipoxemia deve-se a uma patologia intrínseca do pulmão (o oxigênio chega no alvéolo, mas não consegue passar para o sangue de forma eficiente).",
+				"keywords": [
+					"Gradiente Alvéolo-Arterial",
+					"Hipoventilação",
+					"Gasometria",
+					"Pneumonia",
+					"DPOC"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 100,
+		"title": "A Máscara de Reservatório e o Fluxo de O2",
+		"vignette": "Um paciente com edema agudo de pulmão está usando uma Máscara com Reservatório. O fluxômetro de oxigênio na parede está ajustado em 3 litros por minuto. Você observa que a bolsa do reservatório colapsa (esvazia) completamente toda vez que o paciente inspira.",
+		"explanation": "A máscara com reservatório (não-reinalante) possui válvulas unidirecionais. Para que ela funcione entregando FiO2 alta (até 90-100%), o reservatório deve estar cheio de O2 puro disponível para a próxima inspiração. Se o fluxo da parede for baixo, o paciente 'bebe' todo o estoque e acaba aspirando ar ambiente pelas frestas ou reinalando ar exalado, perdendo o benefício do dispositivo.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Qual o erro técnico grave nessa montagem e qual a consequência para o paciente se o fluxo não for corrigido imediatamente?",
+				"correctAnswer": "O fluxo de oxigênio está muito baixo. Máscaras com reservatório exigem fluxos altos (geralmente entre 10 a 15 L/min) para manter a bolsa sempre inflada. Se a bolsa colapsa, o paciente começa a reinalar o CO2 que ele mesmo expirou e que ficou retido na máscara/bolsa por falta de fluxo de 'lavagem'. Isso causa hipercapnia e aumenta o esforço respiratório, podendo levar à exaustão.",
+				"keywords": [
+					"Máscara com Reservatório",
+					"Oxigenoterapia",
+					"Fluxo de O2",
+					"Hipercapnia"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 101,
+		"title": "O \"Joelho\" da Curva de Dissociação da Hemoglobina",
+		"vignette": "Você está monitorando um paciente com pneumonia. A enfermeira nota que a SatO2 caiu de 98% para 92% e pergunta se deve se preocupar. Pouco tempo depois, a SatO2 caiu de 90% para 82%.",
+		"explanation": "Um médico de excelência sabe que '90% não é apenas um número'. É o limite de segurança fisiológica. Manter o paciente acima de 90% garante que a hemoglobina ainda tenha alta afinidade pelo oxigênio, mas abaixo disso, a entrega de oxigênio aos tecidos fica criticamente comprometida.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Por que a queda de 90% para 82% é considerada muito mais perigosa e urgente do que a queda de 98% para 92%, mesmo sendo uma variação numérica semelhante? Explique com base na Curva de Dissociação da Hemoglobina.",
+				"correctAnswer": "Isso ocorre devido ao formato sigmoide (em 'S') da curva de dissociação da hemoglobina. Na parte alta da curva (acima de 90-92%), grandes variações na pressão parcial de oxigênio (PaO2) causam pequenas alterações na saturação. No entanto, o valor de 90% de saturação (que corresponde a uma PaO2 de aproximadamente 60 mmHg) representa o 'joelho' ou a 'queda do precipício' da curva. Abaixo desse ponto, qualquer pequena queda adicional na PaO2 resulta em uma queda drástica e desproporcional na SatO2, levando rapidamente à hipóxia tecidual grave.",
+				"keywords": [
+					"Curva de Dissociação da Hemoglobina",
+					"SatO2",
+					"PaO2",
+					"Hipoxemia"
+				],
+				"order": 1
+			}
+		]
+	},
+	{
+		"id": 102,
+		"title": "O Exame Físico além do Oxímetro",
+		"vignette": "Você é chamado para avaliar um paciente com crise de asma. O oxímetro marca SatO2 94%. No entanto, o paciente está sentado em posição de 'tripé', apresenta batimento de asa de nariz, fala apenas frases entrecortadas (monossílabos) e você nota tiragem supraclavicular e intercostal evidente.",
+		"explanation": "Oxigenoterapia trata a hipoxemia (falta de O2), mas não trata o trabalho respiratório excessivo. Um paciente pode ter oxigênio normal no sangue enquanto faz um esforço hercúleo para respirar. Se o esforço não for aliviado (com medicação ou suporte ventilatório), a musculatura fadiga, o CO2 sobe e o paciente para.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"Ciclo Clínico::Clínica Médica::02 Pneumologia::01 Propedêutica e Fisiologia Aplicada"
+		],
+		"questions": [
+			{
+				"text": "Apesar da SatO2 de 94% (dentro da meta), este paciente está em Insuficiência Respiratória iminente? Quais sinais clínicos indicam que ele pode 'parar' a qualquer momento por fadiga, independentemente da saturação atual?",
+				"correctAnswer": "Sim, o paciente está em insuficiência respiratória iminente por fadiga da bomba ventilatória. Os sinais de alerta são: posição de tripé (uso de musculatura acessória), fala entrecortada (incapacidade de manter fluxo expiratório para fonar), batimento de asa de nariz e tiragens (esforço inspiratório extremo). A SatO2 de 94% é um dado 'tardio' ou mantido temporariamente por um esforço muscular insustentável. Se o paciente apresentar respiração paradoxal ou 'silêncio auscultatório', a parada respiratória por exaustão é iminente.",
+				"keywords": [
+					"Asma",
+					"Insuficiência Respiratória",
+					"Musculatura Acessória",
+					"Fadiga Muscular",
+					"Exame Físico"
+				],
+				"order": 1
+			}
+		]
 	}
 ]
