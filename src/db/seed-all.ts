@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { FileSchema } from "@/modules/content/contract";
 import * as dotenv from "dotenv";
-import { eq } from "drizzle-orm";
+import { eq, inArray } from "drizzle-orm";
 
 // Imports da Arquitetura
 import { getDb } from "@/core/db";
@@ -127,6 +127,7 @@ async function main() {
 	const files = listJsonFilesRecursive(dataDir);
 	let taxonomyError = false;
 
+	// Validação preliminar de taxonomia
 	for (const file of files) {
 		const rawContent = fs.readFileSync(file, "utf-8");
 		const json = JSON.parse(rawContent);
@@ -175,8 +176,12 @@ async function main() {
 	// --- 3. Processamento dos Arquivos ---
 	console.log(`📂 Processando ${files.length} arquivos JSON...`);
 
-	const stats = { inserted: 0, updated: 0, skipped: 0 };
+	const stats = { inserted: 0, updated: 0, skipped: 0, deleted: 0 };
 	const registry = readRegistry();
+
+	// Conjunto para rastrear todos os IDs encontrados nos arquivos JSON
+	// Usado posteriormente para deletar casos obsoletos do banco
+	const processedIds = new Set<number>();
 
 	for (const file of files) {
 		const filePath = file;
@@ -223,6 +228,9 @@ async function main() {
 					continue;
 				}
 
+				// Marca ID como processado
+				processedIds.add(effectiveId);
+
 				// Gera hash determinístico
 				const contentHash = crypto
 					.createHash("sha1")
@@ -237,12 +245,13 @@ async function main() {
 							status: caseData.status,
 							difficulty: caseData.difficulty,
 							tags: [...(caseData.tags ?? [])].sort(),
+							// Otimização: Inclui keywords ordenadas no hash
 							questions: caseData.questions.map((q) => ({
 								text: q.text,
 								correctAnswer: q.correctAnswer,
 								order: q.order,
 								image: q.image ?? null,
-								keywords: q.keywords ?? [],
+								keywords: [...(q.keywords ?? [])].sort(),
 							})),
 						}),
 					)
@@ -277,7 +286,9 @@ async function main() {
 						})
 						.where(eq(clinicalCases.id, effectiveId));
 
-					// Limpa relações antigas para recriar
+					// ATENÇÃO: Estratégia "Wipe and Replace" para consistência.
+					// Isso garante que se uma pergunta for removida do JSON, ela será removida do banco.
+					// O mesmo vale para tags (cases_tags).
 					await db
 						.delete(caseQuestions)
 						.where(eq(caseQuestions.caseId, effectiveId));
@@ -316,7 +327,7 @@ async function main() {
 					}
 				}
 
-				// --- 3.5. Perguntas ---
+				// --- 3.5. Perguntas (Sempre recriadas no update ou criadas no insert) ---
 				if (caseData.questions.length > 0) {
 					await db.insert(caseQuestions).values(
 						caseData.questions.map((q) => ({
@@ -336,9 +347,39 @@ async function main() {
 		}
 	}
 
+	// --- 4. Garbage Collection (Remover casos deletados do JSON) ---
+	// Verifica quais IDs existem no banco mas NÃO foram processados nesta rodada
+	const allDbCases = await db
+		.select({ id: clinicalCases.id })
+		.from(clinicalCases);
+
+	const idsToDelete = allDbCases
+		.map((c) => c.id)
+		.filter((id) => !processedIds.has(id));
+
+	if (idsToDelete.length > 0) {
+		console.log(
+			`\n🗑️  Detectados ${idsToDelete.length} casos obsoletos (removidos dos JSONs). Limpando...`,
+		);
+
+		// Remove explicitamente as dependências primeiro para evitar erros de FK
+		// (embora o DELETE CASCADE no DB geralmente resolva, é mais seguro aqui)
+		await db
+			.delete(caseQuestions)
+			.where(inArray(caseQuestions.caseId, idsToDelete));
+		await db.delete(casesTags).where(inArray(casesTags.caseId, idsToDelete));
+
+		// Remove os casos
+		await db
+			.delete(clinicalCases)
+			.where(inArray(clinicalCases.id, idsToDelete));
+
+		stats.deleted = idsToDelete.length;
+	}
+
 	console.log("\n\n✅ Seed finalizado!");
 	console.log(
-		`   🆕 Inseridos: ${stats.inserted} | 🔄 Atualizados: ${stats.updated} | ⏩ Pulados: ${stats.skipped}`,
+		`   🆕 Inseridos: ${stats.inserted} | 🔄 Atualizados: ${stats.updated} | ⏩ Pulados: ${stats.skipped} | 🗑️  Deletados: ${stats.deleted}`,
 	);
 	process.exit(0);
 }
