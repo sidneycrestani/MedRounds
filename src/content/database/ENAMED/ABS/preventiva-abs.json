@@ -1,0 +1,541 @@
+[
+	{
+		"id": 305,
+		"title": "Atributos da APS e Coordenação do Cuidado no Caso de Dona Margarida",
+		"vignette": "Dona Margarida, 62 anos, hipertensa e diabética, reside na mesma rua há 40 anos e é acompanhada pela Equipe de Saúde da Família (ESF) \"Esperança\" desde a sua implantação, há 12 anos. Ela conhece todos os profissionais pelo nome e possui um forte vínculo com a enfermeira da equipe. Recentemente, Margarida apresentou um quadro de dor abdominal persistente. O médico da ESF solicitou uma ultrassonografia, que sugeriu um nódulo hepático. Ele encaminhou a paciente ao hepatologista no hospital de referência. Após a consulta especializada, Margarida retorna à UBS com o relatório do especialista, mas sem saber como proceder com as novas medicações e exames solicitados.",
+		"explanation": "Os atributos da APS propostos por Barbara Starfield são divididos em Essenciais (Acesso, Longitudinalidade, Integralidade e Coordenação) e Derivados (Orientação Familiar e Comunitária, e Competência Cultural). A **Coordenação do Cuidado** é o \"elo\" que garante que o sistema de saúde não seja um conjunto de silos isolados. Ela exige que a ESF receba as informações dos níveis secundário e terciário e as traduza para a realidade da vida do paciente. Sem coordenação, a longitudinalidade torna-se apenas \"tempo de prontuário\", sem impacto real na resolutividade.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Quais atributos essenciais da Atenção Primária à Saúde (APS) estão plenamente preservados e quais falharam ou estão em risco neste cenário? Justifique.",
+				"correctAnswer": "**Preservados:** **Longitudinalidade** (acompanhamento pela mesma equipe ao longo de 12 anos, com construção de vínculo e confiança) e **Acesso/Primeiro Contato** (a paciente utilizou a UBS como porta de entrada para o seu novo sintoma). **Em risco/Falha:** **Coordenação do Cuidado** e **Integralidade**. A Coordenação falhou no momento em que a paciente retornou do especialista com dúvidas e sem um fluxo claro de continuidade; a equipe deve ser o \"maestro\" do cuidado, integrando as informações do especialista ao plano terapêutico global. A **Integralidade** está em risco se a equipe focar apenas no nódulo hepático e negligenciar o impacto psicossocial e as comorbidades prévias (HAS/DM) durante essa nova investigação.",
+				"keywords": [
+					"Atributos de Starfield",
+					"Coordenação do Cuidado",
+					"Porta de Entrada"
+				],
+				"order": 1
+			},
+			{
+				"text": "Diferencie \"Longitudinalidade\" de \"Continuidade do Cuidado\", utilizando elementos do caso para exemplificar a distinção.",
+				"correctAnswer": "A **Longitudinalidade** refere-se à existência de uma fonte regular de cuidados e uma relação de confiança ao longo do tempo, independentemente da presença de doença (Dona Margarida ser acompanhada pela ESF há 12 anos). A **Continuidade do Cuidado** é a transferência ininterrupta de informações e a gestão coerente do cuidado entre diferentes níveis de atenção ou diferentes episódios de doença. No caso, houve longitudinalidade, mas a continuidade foi prejudicada pela falta de comunicação eficiente entre o hepatologista e a ESF (a paciente voltou \"perdida\").",
+				"keywords": [
+					"Longitudinalidade vs. Vínculo",
+					"Referência e Contrarreferência"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 306,
+		"title": "Abordagem Familiar e Método Clínico Centrado na Pessoa: Família Silva",
+		"vignette": "Durante uma visita domiciliar, o médico residente e a Agente Comunitária de Saúde (ACS) visitam a família Silva. O Sr. José (68 anos) é o cuidador principal de sua esposa, Dona Zuleide, que está acamada após um AVC. O filho do casal, desempregado e com histórico de uso abusivo de álcool, mora nos fundos e frequentemente entra em conflito com o pai. O médico percebe que o Sr. José está exausto e com níveis pressóricos elevados, apesar do uso regular de medicação.",
+		"explanation": "A Abordagem Familiar na APS reconhece que o indivíduo não é uma ilha. O **Genograma** utiliza símbolos padronizados para representar graficamente a família. O **Ecomapa** complementa essa visão ao mostrar se a família está isolada ou integrada à comunidade. Já o **MCCP** é uma ferramenta de consulta que busca equilibrar a atenção entre a \"doença\" (biológico) e a \"enfermidade\" (experiência subjetiva do adoecer). Seus 4 pilares são: 1. Explorar a saúde, a doença e a experiência da pessoa; 2. Entender a pessoa como um todo; 3. Elaborar um plano conjunto de manejo; 4. Fortalecer a relação médico-pessoa.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Para compreender a dinâmica desta família e o impacto da rede social no cuidado de Dona Zuleide, quais ferramentas de abordagem familiar devem ser utilizadas e qual a função específica de cada uma?",
+				"correctAnswer": "Devem ser utilizados o **Genograma** e o **Ecomapa**. O **Genograma** serve para mapear a estrutura familiar (pelo menos 3 gerações), identificando padrões de doenças, tipos de relações (conflituosas, próximas) e a composição do domicílio. O **Ecomapa** serve para identificar as relações da família com o meio externo (Igreja, UBS, vizinhos, rede de apoio, trabalho), visualizando o suporte social disponível (ou a falta dele) para o Sr. José.",
+				"keywords": ["Genograma", "Ecomapa"],
+				"order": 1
+			},
+			{
+				"text": "No componente \"Entendendo a Pessoa como um Todo\" do Método Clínico Centrado na Pessoa (MCCP), como a aplicação do acrônimo SIFE (ou PIFE) ajudaria a manejar a hipertensão do Sr. José neste contexto?",
+				"correctAnswer": "O **SIFE** (Sentimentos, Ideias, Funções e Expectativas) permitiria ao médico entender que: 1. **Sentimentos:** Sr. José sente culpa ou medo pela situação da esposa; 2. **Ideias:** Ele pode acreditar que sua pressão sobe apenas pelo estresse e não pela doença em si; 3. **Função:** A hipertensão está limitando sua capacidade de cuidar da esposa (papel principal dele); 4. **Expectativas:** Ele pode esperar apenas um \"remédio mais forte\", enquanto a necessidade real é o suporte para o cuidado da esposa e o manejo do conflito com o filho. Ao abordar o SIFE, o médico fortalece a aliança terapêutica e trata a causa base do descontrole pressórico: o sofrimento ético-social.",
+				"keywords": [
+					"MCCP (Método Clínico Centrado na Pessoa)",
+					"SIFE / PIFE",
+					"Experiência do Adoecer"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 307,
+		"title": "PNAB 2017, Territorialização e o Conceito de Clínica Ampliada",
+		"vignette": "Um gestor municipal decide criar uma nova unidade de saúde em um bairro vulnerável. Ele questiona a necessidade de seguir as diretrizes da Política Nacional de Atenção Básica (PNAB) quanto à composição da Equipe de Saúde da Família (ESF), sugerindo que uma equipe composta apenas por médicos e enfermeiros, sem ACS ou técnicos, seria mais barata e eficiente para \"resolver doenças\".",
+		"explanation": "A PNAB (revisada em 2017) estabelece que a ESF é a estratégia prioritária para a expansão e consolidação da APS. Um conceito chave é o de **Território**, que não é apenas uma área geográfica, mas um espaço vivo onde ocorrem relações sociais, políticas e culturais. A **Territorialização** envolve o cadastro da população, o diagnóstico da comunidade e a identificação de áreas de risco. A Clínica Ampliada, por sua vez, exige que o profissional de saúde saiba lidar com a incerteza e utilize o Projeto Terapêutico Singular (PTS) como ferramenta de intervenção em casos complexos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "De acordo com a PNAB, qual é a composição mínima obrigatória de uma ESF e por que a ausência do Agente Comunitário de Saúde (ACS) compromete a premissa de \"Territorialização\"?",
+				"correctAnswer": "A composição mínima da ESF inclui: **médico, enfermeiro, auxiliar ou técnico de enfermagem e Agente Comunitário de Saúde (ACS)**. Podem ser incluídos o agente de combate a endemias e profissionais de saúde bucal. A ausência do ACS compromete a **Territorialização** porque é este profissional que realiza o elo entre a comunidade e a unidade, mapeando riscos dinâmicos (sociais, ambientais, sanitários) que não são captados dentro do consultório. Sem o ACS, a equipe perde a capacidade de busca ativa e a compreensão da vigilância em saúde no território.",
+				"keywords": [
+					"PNAB 2017",
+					"Territorialização",
+					"Composição Mínima da ESF",
+					"Agente Comunitário de Saúde (ACS)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Explique o conceito de \"Clínica Ampliada\" e como ela se diferencia do modelo biomédico tradicional sugerido pelo gestor (\"resolver doenças\").",
+				"correctAnswer": "A **Clínica Ampliada** é uma diretriz que busca aumentar a autonomia do sujeito e a resolutividade do cuidado. Enquanto o modelo biomédico foca na cura da patologia através de intervenções medicamentosas ou cirúrgicas, a Clínica Ampliada utiliza ferramentas interdisciplinares para considerar a singularidade do sujeito, o contexto social e o sofrimento psíquico. Ela pressupõe que a \"resolução da doença\" é insuficiente se não houver produção de saúde e autonomia para o paciente gerir sua própria vida.",
+				"keywords": ["Clínica Ampliada"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 308,
+		"title": "Gestão de Casos Complexos na APS: Matriciamento e Projeto Terapêutico Singular",
+		"vignette": "O Sr. Antenor, 55 anos, diabético tipo 2 e obeso, frequenta a UBS para curativos de uma úlcera venosa crônica que não cicatriza há 6 meses. O médico da equipe, frustrado com a falta de evolução, decide acionar o fisioterapeuta e o psicólogo da equipe multiprofissional (antigo NASF, hoje eMulti) para uma discussão de caso. Durante a reunião, o psicólogo relata que o Sr. Antenor mora sozinho, está em processo de luto pela esposa e não consegue manter a dieta porque não tem ânimo para cozinhar, alimentando-se apenas de pães e café.",
+		"explanation": "O **Matriciamento** e o **PTS** são dispositivos fundamentais da Clínica Ampliada. O matriciamento rompe com a lógica da 'encaminhometria' (encaminhar tudo para o especialista) e promove a educação permanente da equipe. Já o PTS é a materialização da **Integralidade**, pois olha para além da ferida (úlcera venosa) e aborda as questões psicossociais (luto, isolamento) que impedem o sucesso do tratamento clínico. Na APS, a complexidade não é definida pela tecnologia dura (máquinas), mas pela densidade das relações e fatores sociais envolvidos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "O processo de discussão de caso entre a ESF e a equipe multiprofissional, visando ampliar a compreensão do caso e compartilhar a responsabilidade, é chamado de quê? Explique como esse processo difere de um encaminhamento comum (referência).",
+				"correctAnswer": "O processo é chamado de **Matriciamento (ou Apoio Matricial)**. Diferente de um encaminhamento comum, onde a responsabilidade é 'transferida' para outro profissional (referência linear), no matriciamento há uma **retaguarda assistencial e suporte técnico-pedagógico**. Os profissionais compartilham saberes para construir uma intervenção conjunta, mantendo a responsabilidade principal na equipe de referência (ESF). O objetivo não é apenas 'passar o paciente adiante', mas aumentar a capacidade resolutiva da ESF.",
+				"keywords": [
+					"Matriciamento",
+					"Apoio Matricial",
+					"Equipe Multiprofissional (eMulti)"
+				],
+				"order": 1
+			},
+			{
+				"text": "A partir dessa discussão, a equipe elabora um plano de cuidados específico para o Sr. Antenor, envolvendo metas de curto e médio prazo com a participação ativa dele. Qual o nome dessa ferramenta de planejamento assistencial?",
+				"correctAnswer": "Trata-se do **Projeto Terapêutico Singular (PTS)**. O PTS é um conjunto de propostas de condutas terapêuticas articuladas para um sujeito (ou coletivo) em situação de vulnerabilidade, geralmente utilizado em casos complexos. Ele se divide em: 1. Diagnóstico da situação; 2. Definição de metas; 3. Divisão de responsabilidades; 4. Reavaliação periódica.",
+				"keywords": [
+					"Projeto Terapêutico Singular (PTS)",
+					"Responsabilização Compartilhada"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 309,
+		"title": "Acesso e Ética no Atendimento à Saúde do Adolescente",
+		"vignette": "Uma jovem de 17 anos procura a UBS sozinha solicitando a inserção de um DIU (Dispositivo Intrauterino). Ela relata que iniciou atividade sexual recentemente e não quer que os pais saibam, pois eles são muito conservadores e ela teme represálias. A enfermeira da recepção informa que ela não pode ser atendida sem um responsável legal, pois é menor de idade, e que o DIU só é colocado em mulheres que já tiveram filhos.",
+		"explanation": "O **Acesso** é o atributo que define se a população consegue ou não entrar no sistema. Ele é influenciado pela 'Acessibilidade' (distância, horários, barreiras arquitetônicas) e pela 'Aceitabilidade' (relação de confiança e ausência de julgamento moral). No caso de adolescentes, o sigilo é a ferramenta que garante o vínculo. Se a APS falha no acesso, ela compromete todos os outros atributos (longitudinalidade, coordenação), pois o cuidado sequer começa. Além disso, a saúde baseada em evidências desmistifica contraindicações clássicas (como o DIU em nulíparas), que muitas vezes são usadas como barreiras ideológicas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Analise a conduta da enfermeira à luz dos atributos da APS, especificamente sobre o Acesso (Primeiro Contato).",
+				"correctAnswer": "A conduta da enfermeira criou uma **barreira de acesso**, violando o atributo do Primeiro Contato. O acesso não deve ser apenas geográfico, mas administrativo e psicossocial. Ao exigir um responsável e propagar mitos (que DIU só é para quem já teve filhos - nulíparas podem usar), a unidade de saúde deixa de ser a porta de entrada e empurra a paciente para o risco de uma gestação não planejada ou para o sistema privado/urgências.",
+				"keywords": ["Acesso / Primeiro Contato", "Barreiras de Acesso"],
+				"order": 1
+			},
+			{
+				"text": "De acordo com os preceitos éticos e as diretrizes de saúde do adolescente na APS, a adolescente tem direito à consulta e à prescrição de métodos contraceptivos sem a presença dos pais? Existe alguma exceção?",
+				"correctAnswer": "Sim, a adolescente tem direito ao **atendimento individualizado e ao sigilo**, desde que tenha capacidade de compreensão e discernimento (o que deve ser avaliado pelo profissional). O guia do Ministério da Saúde e o Código de Ética Médica garantem a prescrição de métodos contraceptivos e o atendimento sem responsáveis, exceto em situações onde haja risco de morte ou dano grave à saúde do adolescente (ex: ideação suicida, risco de violência grave), caso em que os responsáveis devem ser comunicados.",
+				"keywords": [
+					"Autonomia do Adolescente",
+					"Sigilo Médico/Profissional",
+					"Direitos Reprodutivos"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 310,
+		"title": "Prevenção Quaternária e a Coordenação do Cuidado na APS",
+		"vignette": "Dona Eunice, 70 anos, poliqueixosa, traz para a consulta de rotina uma lista de exames que ela fez por conta própria em um laboratório particular: 'Check-up completo' com marcadores tumorais, dosagens hormonais diversas, ressonância de coluna e densitometria óssea. Ela está ansiosa porque a ressonância mostrou 'abaulamentos discais' e um marcador tumoral veio levemente acima do valor de referência. Ela exige que o médico peça uma biópsia e a encaminhe para o oncologista e para o neurocirurgião.",
+		"explanation": "A APS deve ser o filtro do sistema. A **Prevenção Quaternária** é um dos pilares éticos da medicina de família e comunidade contemporânea. Ela se baseia no princípio do *Primum non nocere*. Em uma era de excesso de exames, o médico da APS deve saber explicar que 'mais medicina nem sempre é melhor saúde'. A **Coordenação do Cuidado** exige que o médico organize as informações vindas de diferentes fontes e decida, junto com o paciente (MCCP), o que é realmente relevante para a sua saúde e longevidade, evitando o 'labirinto' dos especialistas.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o conceito de Prevenção Quaternária e como ele se aplica ao desejo de Dona Eunice?",
+				"correctAnswer": "**Prevenção Quaternária** é a detecção de indivíduos em risco de intervenções médicas excessivas (overmedicalization) para protegê-los de intervenções desnecessárias e reduzir o dano médico (iatrogenia). No caso de Dona Eunice, os exames feitos sem indicação clínica geraram achados incidentais (incidentalomas) e resultados falso-positivos (marcador tumoral levemente alterado), que podem levar a procedimentos invasivos desnecessários (biópsias) que trazem mais riscos que benefícios.",
+				"keywords": ["Prevenção Quaternária", "Iatrogenia", "Incidentaloma"],
+				"order": 1
+			},
+			{
+				"text": "No manejo deste caso, como o médico deve utilizar a Coordenação do Cuidado para evitar a iatrogenia sem quebrar o vínculo com a paciente?",
+				"correctAnswer": "O médico deve exercer a **Coordenação do Cuidado** filtrando as informações e centrando o cuidado na paciente, não nos exames. Ele deve explicar o conceito de 'ruído' nos exames (falso-positivos), contextualizar que abaulamentos discais são achados normais do envelhecimento e reavaliar a clínica. Coordenar é orientar o fluxo: em vez de encaminhar para especialistas precocemente, o médico retoma a gestão do caso, evita a fragmentação do cuidado e protege a paciente de intervenções em cascata.",
+				"keywords": [
+					"Coordenação do Cuidado",
+					"Overmedicalization (Sobremedicalização)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 311,
+		"title": "Princípios vs. Diretrizes da PNAB: Equidade e Igualdade",
+		"vignette": "O Secretário de Saúde de um município decide que todas as Unidades Básicas de Saúde (UBS) devem receber exatamente o mesmo valor de repasse financeiro e a mesma quantidade de insumos, independentemente do bairro onde estejam localizadas, sob o argumento de que 'todos os cidadãos são iguais perante o SUS'. No entanto, a UBS do bairro 'Vila Esperança' atende uma população com alto índice de vulnerabilidade social, maior prevalência de tuberculose e falta de saneamento básico, enquanto a UBS 'Jardim América' atende uma área nobre com infraestrutura completa.",
+		"explanation": "A PNAB 2017 reforça que a Atenção Básica deve ser o contato preferencial e a porta de entrada da Rede de Atenção à Saúde (RAS). Para que isso funcione, os conceitos de **Territorialização e Adscrição de clientela** são fundamentais. O território não é apenas um espaço geográfico, mas um espaço social. A gestão deve aplicar recursos de forma equânime, priorizando grupos de maior risco (vulnerabilidade biológica, social e ambiental).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual princípio do SUS e diretriz da PNAB está sendo ferido pela decisão do secretário? Diferencie esse conceito de 'Igualdade'.",
+				"correctAnswer": "Está sendo ferido o princípio da **Equidade**. Enquanto a Igualdade pressupõe oferecer o mesmo para todos (o que aprofunda as injustiças, pois quem precisa de mais continua em desvantagem), a **Equidade** consiste em tratar desigualmente os desiguais, investindo mais onde a carência é maior. No SUS, a equidade é a ferramenta para se alcançar a justiça social.",
+				"keywords": ["Equidade vs. Igualdade", "Vulnerabilidade"],
+				"order": 1
+			},
+			{
+				"text": "A PNAB estabelece uma população adscrita recomendada por equipe de Saúde da Família. Qual é esse número e por que ele não é rígido, devendo variar conforme a vulnerabilidade?",
+				"correctAnswer": "A população adscrita recomendada é de **2.000 a 3.500 pessoas** por equipe. No entanto, esse número não é rígido porque em áreas de maior vulnerabilidade (como a Vila Esperança), a carga de doença e a demanda psicossocial são maiores. Portanto, para garantir a **Integralidade** e o **Acesso**, as equipes em áreas vulneráveis devem ter um número menor de pessoas sob sua responsabilidade do que equipes em áreas de baixo risco.",
+				"keywords": [
+					"População Adscrita",
+					"Territorialização",
+					"Universalidade"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 312,
+		"title": "Níveis de Prevenção: Primária, Secundária e Terciária",
+		"vignette": "Durante um mutirão de saúde na praça central, três pacientes recebem orientações diferentes: 1. Lucas, 22 anos, saudável, recebe a vacina contra HPV. 2. Sr. Marcos, 55 anos, tabagista, realiza uma espirometria para rastreamento de DPOC após queixa de tosse leve. 3. Dona Sônia, 60 anos, já diagnosticada com sequela de AVC, inicia fisioterapia domiciliar para evitar novas contraturas e escaras.",
+		"explanation": "O domínio dos níveis de prevenção permite ao médico da APS organizar seu raciocínio clínico. A **Primária** evita o surgimento (incidência). A **Secundária** foca na detecção precoce (prevalência). A **Terciária** foca na autonomia e redução de sequelas. Vale lembrar que a **Quaternária** perpassa todas as outras, evitando o excesso de intervenção em qualquer nível.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Classifique as intervenções feitas em Lucas, Sr. Marcos e Dona Sônia de acordo com os **Níveis de Prevenção** (Primária, Secundária e Terciária).",
+				"correctAnswer": "**Lucas:** Prevenção **Primária** (age sobre os fatores de risco ou proteção antes da doença surgir, ex: vacina). **Sr. Marcos:** Prevenção **Secundária** (diagnóstico precoce de uma doença já existente, mas em estágio inicial ou assintomático). **Dona Sônia:** Prevenção **Terciária** (redução de danos e reabilitação de uma doença já estabelecida para evitar complicações e melhorar a qualidade de vida).",
+				"keywords": [
+					"Prevenção Primária, Secundária e Terciária",
+					"História Natural da Doença"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o rastreamento (Screening) é classificado como Prevenção Secundária e qual a condição fundamental para que ele seja ético e recomendado na APS?",
+				"correctAnswer": "O rastreamento é **Prevenção Secundária** porque busca detectar a doença em sua fase pré-clínica. Para ser ético, ele deve seguir os critérios de Wilson e Jungner: a doença deve ser um problema de saúde importante, deve haver um estágio inicial reconhecível, o teste deve ser aceitável pela população e, crucialmente, deve haver um **tratamento/intervenção que mude o desfecho** se aplicado precocemente (não adianta diagnosticar cedo se isso não mudar o prognóstico).",
+				"keywords": ["Rastreamento (Screening)", "Reabilitação"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 313,
+		"title": "MCCP: Elaboração de Plano Conjunto e Terreno Comum",
+		"vignette": "Dra. Júlia está atendendo o Sr. Pedro, que tem insuficiência cardíaca e continua fumando. Após explorar a experiência da doença (SIFE), Dra. Júlia propõe que ele pare de fumar imediatamente. Sr. Pedro balança a cabeça negativamente e diz: 'Doutora, meu cigarro é o meu único prazer nessa vida difícil'. Dra. Júlia então insiste, dizendo que se ele não parar, vai morrer em breve. O paciente sai da consulta e não retorna mais.",
+		"explanation": "O MCCP não é apenas 'ser legal' com o paciente. É uma técnica estruturada para aumentar a eficácia clínica. Se o plano não é conjunto, o paciente simplesmente não o executa (baixa adesão). A quarta etapa do MCCP, **'Fortalecer a Relação Médico-Pessoa'**, depende diretamente do sucesso da pactuação. Na APS, trabalhamos com doenças crônicas onde o paciente é o principal agente do seu tratamento; sem pactuação, não há controle de doenças.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual etapa do **Método Clínico Centrado na Pessoa (MCCP)** a Dra. Júlia negligenciou ao tentar impor a cessação do tabagismo?",
+				"correctAnswer": "Ela negligenciou a **Terceira Etapa: Elaboração de um Plano Conjunto (ou pactuação)**. O MCCP exige que o médico e o paciente cheguem a um acordo sobre a definição do problema, as metas do tratamento e as prioridades. Ao ignorar a resistência do Sr. Pedro, a médica agiu de forma centrada na doença (biomédica) e não na pessoa.",
+				"keywords": ["MCCP (4 etapas)", "Autonomia do Paciente"],
+				"order": 1
+			},
+			{
+				"text": "Como essa etapa deveria ter sido conduzida para garantir a adesão do paciente, seguindo o conceito de 'Elaboração de um plano conjunto'?",
+				"correctAnswer": "Dra. Júlia deveria ter buscado um **'terreno comum' (Finding common ground)**. Em vez de impor a parada total, ela poderia ter negociado uma redução gradual ou focado, naquele momento, em outras metas que o Sr. Pedro estivesse disposto a aceitar (como o ajuste da medicação para ele cansar menos), fortalecendo o vínculo para abordar o tabagismo em consultas futuras. O plano deve ser realista e compartilhado.",
+				"keywords": [
+					"Elaboração de Plano Conjunto",
+					"Terreno Comum (Common Ground)",
+					"Aliança Terapêutica"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 314,
+		"title": "Vulnerabilidade e Estratificação de Risco (Escala de Coelho-Savassi)",
+		"vignette": "A Agente Comunitária de Saúde (ACS) traz para a reunião de equipe duas fichas de famílias recém-cadastradas na microárea: - Família A: Casal jovem, ambos empregados, um filho com vacinação em dia. Moram em casa de alvenaria com saneamento. - Família B: Idosa que mora sozinha, hipertensa e com mobilidade reduzida; a casa é de madeira, o esgoto é a céu aberto e ela depende da ajuda de vizinhos para se alimentar. O médico e o enfermeiro precisam decidir qual família receberá a Visita Domiciliar (VD) prioritária da semana.",
+		"explanation": "Na APS, a gestão do tempo é fundamental. Como a demanda é infinita e o recurso é finito, a equipe utiliza escalas (como a de Coelho-Savassi) para priorizar as VDs. A pontuação ajuda a definir a periodicidade das visitas: famílias de \"Risco Máximo\" recebem visitas mais frequentes do que famílias de \"Risco Menor\". Isso evita que o médico atenda apenas quem \"grita mais alto\" na recepção, focando em quem realmente precisa, mas muitas vezes não consegue chegar à unidade.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual instrumento de estratificação de risco familiar é amplamente utilizado na APS brasileira para transformar dados subjetivos em uma pontuação de risco (Sentinela, Risco Menor, Médio ou Máximo)? Cite três critérios considerados por esse instrumento.",
+				"correctAnswer": "Trata-se da **Escala de Risco Familiar de Coelho-Savassi**. Ela utiliza dados da Ficha de Cadastro para pontuar as famílias. Três critérios comuns são: **Condições de Saneamento** (esgoto, abastecimento de água), **Situação de Saúde** (hipertensão, diabetes, acamados) e **Condição Habitacional/Social** (analfabetismo, desemprego, moradia).",
+				"keywords": [
+					"Escala de Coelho-Savassi",
+					"Estratificação de Risco Familiar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que a visita à Família B é prioritária sob a ótica da **Equidade**, mesmo que o filho da Família A esteja com uma gripe leve no dia?",
+				"correctAnswer": "A visita à Família B é prioritária porque ela apresenta **Vulnerabilidade Multidimensional** (biológica pela hipertensão/mobilidade, ambiental pelo esgoto e social pelo isolamento). A Equidade exige que o recurso \"tempo da equipe\" seja direcionado primeiro a quem tem maior risco de desfechos negativos (morte, internação, queda). A gripe leve na Família A é um evento autolimitado em um contexto de baixa vulnerabilidade.",
+				"keywords": [
+					"Vulnerabilidade Social vs. Biológica",
+					"Visita Domiciliar (VD)",
+					"Equidade Operacional"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 315,
+		"title": "Indicadores de Qualidade e Internações por Condições Sensíveis à Atenção Primária (ICSAP)",
+		"vignette": "O Secretário de Saúde observa que o hospital municipal está superlotado com pacientes internados por crises hipertensivas, descompensações de Diabetes Mellitus e pneumonias em idosos. O coordenador da Atenção Básica afirma: \"Nossa rede de APS não está sendo resolutiva; isso é refletido no aumento das ICSAP\".",
+		"explanation": "O indicador ICSAP é uma ferramenta de gestão. Ele separa o que é \"culpa\" de um sistema de saúde primário fraco do que são doenças cuja evolução independe da atenção básica. Uma UBS de alta qualidade mantém seus diabéticos controlados na comunidade, evitando que eles ocupem leitos hospitalares com cetoacidose ou pé diabético. É a prova cabal de que a APS, quando funciona, economiza recursos para o sistema e evita sofrimento ao paciente.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "O que significa a sigla **ICSAP** e por que ela é considerada o principal indicador de efetividade da Atenção Primária em uma região?",
+				"correctAnswer": "**ICSAP** significa **Internações por Condições Sensíveis à Atenção Primária**. É um indicador que mapeia internações hospitalares por doenças que, se tivessem sido bem acompanhadas e tratadas na UBS (com diagnóstico precoce e manejo ambulatorial correto), não deveriam ter evoluído para a necessidade de hospitalização. Se a taxa de ICSAP está alta, a APS está falhando em sua função de filtro e cuidado preventivo.",
+				"keywords": ["ICSAP", "Indicadores de Saúde", "Efetividade Clínica"],
+				"order": 1
+			},
+			{
+				"text": "Cite dois exemplos de condições que fazem parte da lista brasileira de ICSAP. Se um paciente interna por uma apendicite aguda, isso é considerado uma falha da APS (ICSAP)? Justifique.",
+				"correctAnswer": "Exemplos: **Diabetes Mellitus, Hipertensão Arterial, Asma e Insuficiência Cardíaca**. A internação por **apendicite aguda NÃO é uma ICSAP**, pois trata-se de uma urgência cirúrgica cujo tratamento primário é hospitalar/terciário e não depende do manejo preventivo na UBS para ser evitada.",
+				"keywords": ["Condições Sensíveis à APS", "Resolutividade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 316,
+		"title": "Participação Social e Atributos da APS no Território",
+		"vignette": "Durante uma reunião de equipe, a Agente Comunitária de Saúde (ACS) relata que os moradores da Rua B estão muito revoltados porque a UBS fecha às 17h, justamente o horário em que eles chegam do trabalho. Eles organizaram um abaixo-assinado e pretendem levar a queixa para a próxima reunião do Conselho Local de Saúde. O médico da equipe comenta: 'Isso é perda de tempo, quem decide o horário é a Secretaria de Saúde'.",
+		"explanation": "A APS não existe no vácuo. A Orientação Comunitária e a Competência Cultural são os atributos que garantem que o serviço seja relevante para aquele território específico. O Controle Social (Lei 8.142/90) é a ferramenta democrática que dá voz ao cidadão. O estudante de medicina deve entender que o Conselho de Saúde é uma instância deliberativa e que o diálogo com a comunidade é parte do trabalho clínico-gestor da equipe.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual atributo derivado da APS o médico está negligenciando ao desvalorizar a queixa da comunidade? Explique esse atributo.",
+				"correctAnswer": "O médico está negligenciando a Orientação Comunitária. Este atributo estabelece que a APS deve reconhecer as necessidades de saúde da comunidade em função do seu contexto epidemiológico e social, e não apenas oferecer serviços padronizados. A saúde não é feita para a comunidade, mas com a comunidade.",
+				"keywords": ["Orientação Comunitária", "Participação Popular"],
+				"order": 1
+			},
+			{
+				"text": "Explique o papel do Conselho de Saúde no que diz respeito à paridade. Quem deve compor os 50% majoritários do conselho e por quê?",
+				"correctAnswer": "O Conselho de Saúde deve ser paritário. Isso significa que 50% dos membros devem ser Representantes dos Usuários. Os outros 50% são divididos entre trabalhadores de saúde (25%) e gestores/prestadores de serviço (25%). Essa maioria de usuários garante o Controle Social, permitindo que a população fiscalize, planeje e ajude a decidir as prioridades das políticas de saúde locais.",
+				"keywords": [
+					"Controle Social",
+					"Conselhos de Saúde (Lei 8.142/90)",
+					"Paridade"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 317,
+		"title": "Vigilância em Saúde e Determinantes Sociais na APS",
+		"vignette": "Nas últimas duas semanas, o médico da ESF percebeu um aumento inusitado de casos de diarreia aguda em crianças de uma microárea específica, próxima a um terreno baldio onde houve um vazamento de esgoto. No mesmo período, a ACS relatou que muitas famílias daquela área estão usando água de um poço artesiano não tratado.",
+		"explanation": "O aluno do 3º/4º ano deve diferenciar o modelo preventivista (focado no risco de doença) do modelo promocional (focado na saúde e qualidade de vida). A Vigilância em Saúde na APS é o 'radar' da equipe. Ela se baseia no uso da epidemiologia local para guiar as ações clínicas e coletivas. Um médico que apenas trata a diarreia e não investiga o poço está praticando uma medicina curativa, não uma Medicina de Família e Comunidade.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "No contexto da APS, qual a diferença prática entre Promoção da Saúde e Prevenção de Doenças aplicada a este cenário?",
+				"correctAnswer": "Prevenção de Doenças foca no patógeno e no indivíduo: seria orientar a ferver a água ou vacinar contra o Rotavírus para evitar que aquela doença específica ocorra. Promoção da Saúde foca nos determinantes sociais e na autonomia: seria lutar pelo saneamento básico e educar a comunidade sobre seus direitos a um ambiente saudável, aumentando o bem-estar geral, independentemente de uma doença específica.",
+				"keywords": [
+					"Promoção vs. Prevenção",
+					"Determinantes Sociais de Saúde (DSS)"
+				],
+				"order": 1
+			},
+			{
+				"text": "A equipe decide realizar uma ação educativa na escola local e notificar a vigilância ambiental. Essa capacidade da equipe de olhar para os dados do território e agir sobre os determinantes sociais é chamada de quê?",
+				"correctAnswer": "Chama-se Territorialização com foco em Vigilância em Saúde. A vigilância na APS não é apenas preencher fichas de notificação, mas sim a capacidade de identificar precocemente riscos ambientais, sanitários e epidemiológicos no território (análise de situação de saúde) e intervir antes que se tornem surtos maiores.",
+				"keywords": [
+					"Vigilância em Saúde",
+					"Análise de Situação de Saúde (ASIS)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 318,
+		"title": "Ética Médica e Sigilo no Contexto da Atenção Primária",
+		"vignette": "O Dr. Ricardo, médico da UBS, está no supermercado no sábado à tarde quando é abordado por Dona Maria, sua paciente. Ela diz: 'Doutor, aproveitando que te encontrei, minha pressão deu 15 por 9 hoje cedo, será que aumento o remédio?'. Dr. Ricardo fica desconfortável, pois há outras pessoas ouvindo e ele não tem o prontuário em mãos.",
+		"explanation": "A ética na APS tem nuances diferentes da ética hospitalar. O médico é uma figura pública no território. O Vínculo é potente, mas pode gerar invasão de privacidade. O aluno precisa aprender a técnica do 'Acolhimento com Limite'. Sobre o sigilo, a APS é o local onde mais se detecta violência doméstica; saber quando a ética o obriga a falar (notificação) é uma competência fundamental para o médico generalista.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Este cenário descreve um conflito comum na APS entre o atributo da Longitudinalidade/Vínculo e os limites éticos. Qual deve ser a conduta do médico para preservar o vínculo sem comprometer a segurança clínica e o sigilo?",
+				"correctAnswer": "O médico deve acolher a dúvida (preservando o vínculo), mas estabelecer o limite do cenário. Ele pode dizer: 'Dona Maria, que bom te ver. Como essa é uma alteração importante, eu preciso ver seu histórico no prontuário para decidir com segurança. Por favor, vá à UBS na segunda-feira pela manhã que eu te encaixo para conversarmos adequadamente'. Isso evita a 'consulta de corredor' (imprecisa e sem sigilo) e reitera a importância do espaço clínico.",
+				"keywords": [
+					"Acolhimento",
+					"Vínculo vs. Intimidade",
+					"Limites Éticos no Território"
+				],
+				"order": 1
+			},
+			{
+				"text": "Durante as Visitas Domiciliares (VD), o médico frequentemente entra em lares onde observa situações de maus-tratos ou uso de drogas, mas o paciente pede 'segredo'. Em que situação o sigilo profissional deve ser quebrado na APS?",
+				"correctAnswer": "O sigilo deve ser quebrado em situações de notificação compulsória (doenças infectocontagiosas graves), risco iminente de vida para o próprio paciente (ex: ideação suicida) ou risco para terceiros (ex: violência contra crianças, idosos ou vulneráveis). Nestes casos, o dever de proteção social e legal sobrepõe-se ao dever ético de confidencialidade.",
+				"keywords": ["Sigilo Profissional", "Notificação Compulsória"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 319,
+		"title": "Gestão de Agenda e Acesso Avançado na APS",
+		"vignette": "A UBS 'Bons Ventos' funciona com uma agenda rígida: o médico atende 12 pacientes agendados por turno, e as consultas são marcadas com 3 meses de antecedência. Toda manhã, forma-se uma fila na porta de pacientes com queixas agudas (dor de garganta, febre, dor lombar), que são dispensados pela recepção com a frase: 'Não temos vaga para hoje, procure a UPA'.",
+		"explanation": "A gestão da agenda é um dos maiores gargalos da APS. O modelo tradicional de 'filas de espera' é ineficiente. O Acesso Avançado não significa que não existam agendamentos (pré-natal, puericultura ainda são agendados), mas que a equipe reserva tempo para o imprevisto. Isso aumenta a satisfação do paciente e a resolutividade da equipe.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Este modelo de gestão de agenda é focado na 'Oferta' ou na 'Demanda'? Qual o impacto disso no atributo do Acesso?",
+				"correctAnswer": "Este modelo é focado na **Oferta** (a equipe decide quando e como vai atender, ignorando a necessidade real). O impacto é a destruição do atributo do **Acesso/Primeiro Contato**. Quando a UBS empurra casos agudos para a UPA, ela perde a oportunidade de diagnóstico precoce e sobrecarrega o sistema de urgência com casos que poderiam ser resolvidos na atenção básica.",
+				"keywords": ["Gestão de Agenda", "Barreira Administrativa"],
+				"order": 1
+			},
+			{
+				"text": "O que é o modelo de Acesso Avançado (Advanced Access) e como ele inverte a lógica do 'Trabalho de Hoje para Hoje'?",
+				"correctAnswer": "O **Acesso Avançado** é um modelo onde a maior parte da agenda (ex: 60-80%) fica aberta para a **Demanda Espontânea**. O princípio é: 'Atenda hoje o paciente que ligou ou apareceu hoje'. Isso elimina as filas de espera e as consultas agendadas para meses depois (que geram absenteísmo alto), garantindo que o paciente veja o *seu* médico de família no momento em que ele mais precisa.",
+				"keywords": ["Acesso Avançado", "Demanda Espontânea vs. Programada"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 320,
+		"title": "Intersetorialidade e Determinantes Sociais de Saúde",
+		"vignette": "Durante o acompanhamento de uma criança com baixo ganho de peso, a equipe de saúde percebe que a causa não é uma patologia, mas a insegurança alimentar severa da família. O pai está preso e a mãe não tem acesso ao Bolsa Família porque não possui os documentos necessários. O médico percebe que a 'receita médica' de suplementos não será suficiente.",
+		"explanation": "A saúde é determinada por fatores que fogem ao estetoscópio. A intersetorialidade é a prática de conectar diferentes políticas públicas para cuidar da pessoa de forma integral. Sem a assistência social (CRAS/CREAS) e a educação, a APS se torna uma 'enxugadora de gelo', tratando as consequências biológicas de problemas sociais.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Diferencie Intrasetorialidade de Intersetorialidade neste caso.",
+				"correctAnswer": "**Intrasetorialidade** é a colaboração dentro da própria saúde (ex: médico da UBS falando com o pediatra do hospital). **Intersetorialidade** é a articulação da saúde com outros setores (Educação, Assistência Social, Justiça). Neste caso, a saúde sozinha não resolve o problema, pois a causa é social (determinante social de saúde).",
+				"keywords": [
+					"Intersetorialidade",
+					"Determinantes Sociais de Saúde (DSS)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Com qual equipamento da Rede de Proteção Social a UBS deve se articular para resolver o problema documental e alimentar desta família?",
+				"correctAnswer": "A UBS deve articular-se com o **CRAS (Centro de Referência de Assistência Social)**. O CRAS é a porta de entrada da assistência social e pode auxiliar na regularização de documentos, inserção em programas de transferência de renda (Cadastro Único) e auxílio-alimentação.",
+				"keywords": ["CRAS / CREAS", "Rede de Proteção Social"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 321,
+		"title": "Letramento em Saúde e a Técnica de Teach-back",
+		"vignette": "Seu João, 65 anos, é analfabeto funcional e diabético. O médico explica detalhadamente o uso da insulina NPH e da regular. Ao final, o médico pergunta: 'O senhor entendeu?'. Seu João, envergonhado, responde: 'Sim, doutor'. No mês seguinte, Seu João interna com hipoglicemia grave porque trocou as doses das insulinas.",
+		"explanation": "Letramento em saúde é a capacidade de um indivíduo obter, processar e entender informações básicas de saúde para tomar decisões adequadas. O 'Teach-back' é uma evidência de segurança do paciente. Na APS, onde o cuidado é contínuo e domiciliar, o letramento é a ferramenta que dá autonomia ao paciente para gerir sua doença crônica.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual o erro de comunicação do médico em relação ao Letramento em Saúde do paciente?",
+				"correctAnswer": "O médico assumiu que a ausência de perguntas significava compreensão. Pacientes com baixo letramento em saúde frequentemente sentem vergonha de admitir que não entenderam termos técnicos ou instruções complexas. Perguntar 'Entendeu?' é uma pergunta fechada que induz à resposta positiva, mas não verifica a retenção da informação.",
+				"keywords": [
+					"Letramento em Saúde (Health Literacy)",
+					"Comunicação Não-Violenta"
+				],
+				"order": 1
+			},
+			{
+				"text": "Descreva a técnica do 'Teach-back' e como ela poderia ter evitado este desfecho.",
+				"correctAnswer": "O **Teach-back** consiste em pedir que o paciente explique, com suas próprias palavras, o que ele acabou de aprender. O médico diria: 'Seu João, para eu ter certeza de que expliquei bem e não esqueci nada, como o senhor explicaria para sua esposa como deve tomar essa insulina quando chegar em casa?'. Se o paciente não souber explicar, o médico identifica a lacuna e reorienta.",
+				"keywords": ["Técnica de Teach-back", "Autocuidado Apoiado"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 322,
+		"title": "Competência Cultural e Negociação Terapêutica",
+		"vignette": "Uma família de imigrantes haitianos chega à UBS com um bebê apresentando febre. Durante a consulta, a mãe explica que acredita que a doença é causada por um 'mau olhado' e que já iniciou um tratamento com um amuleto e um chá tradicional da sua cultura. O médico, irritado, diz que 'isso é superstição perigosa' e manda a mãe jogar o amuleto fora e dar apenas o antitérmico.",
+		"explanation": "A Competência Cultural é essencial em um país diverso como o Brasil. Ela não exige que o médico concorde com tudo, mas que ele seja capaz de transitar entre o saber científico e o saber popular para garantir o tratamento. O conflito direto geralmente leva ao abandono do tratamento médico em favor do tratamento tradicional isolado.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Atenção Básica"
+		],
+		"questions": [
+			{
+				"text": "Qual atributo derivado da APS foi violado e qual o conceito de Competência Cultural que o médico deveria aplicar?",
+				"correctAnswer": "Foi violada a **Competência Cultural** (ou Orientação Cultural). Este conceito exige que o profissional reconheça e respeite as diferentes crenças, valores e práticas de saúde dos pacientes, entendendo que a cultura molda a experiência do adoecer. Ao ridicularizar a crença, o médico quebra o vínculo e a confiança.",
+				"keywords": ["Competência Cultural", "Vínculo Terapêutico"],
+				"order": 1
+			},
+			{
+				"text": "Como o médico poderia realizar uma Negociação Terapêutica sem desrespeitar a cultura da mãe, mas garantindo a segurança clínica do bebê?",
+				"correctAnswer": "O médico deveria usar a técnica de **Sustentabilidade Cultural/Negociação**: validar a preocupação da mãe ('Entendo que esse amuleto é importante para a proteção dele'), explicar a necessidade do remédio sob a ótica da ciência ('O remédio vai ajudar o corpo dele a baixar a quentura') e negociar: 'A senhora pode manter o amuleto, mas vamos usar o antitérmico juntos? E sobre o chá, gostaria de saber quais ervas tem, para garantir que não interfira no remédio'.",
+				"keywords": [
+					"Negociação Terapêutica",
+					"Medicina Popular vs. Científica"
+				],
+				"order": 2
+			}
+		]
+	}
+]

@@ -908,5 +908,117 @@
 			"04 Tuberculose": {},
 			"05 Vacinação em Adultos": {}
 		}
+	},
+	"ENAMED 4º Ano": {
+		"Medicina Preventiva e Social": {
+			"Sistema de Saúde e Políticas": {
+				"Atenção Básica": {},
+				"Legislação e Estrutura do SUS": {},
+				"Processo Saúde-Doença e Níveis de Prevenção": {}
+			},
+			"Saúde Coletiva e do Trabalho": {
+				"Indicadores de Saúde": {},
+				"Medicina do Trabalho": {},
+				"Notificação Compulsória": {}
+			},
+			"Vigilância em Saúde": {
+				"Vacinação e PNI": {}
+			},
+			"Ética Médica": {
+				"Código de Ética, Sigilo e Atestados": {}
+			}
+		},
+		"Clínica Médica": {
+			"Fisiologia e Distúrbios Metabólicos": {
+				"Distúrbios Hidroeletrolíticos": {},
+				"Distúrbios Ácido-Básicos": {}
+			},
+			"Endocrinologia e Metabologia": {
+				"Diabetes Mellitus": {},
+				"Obesidade": {}
+			},
+			"Cardiologia": {
+				"Hipertensão Arterial Sistêmica": {},
+				"Síndrome Coronariana Aguda": {},
+				"Insuficiência Cardíaca": {}
+			},
+			"Pneumologia": {
+				"Asma": {},
+				"DPOC": {},
+				"Pneumonia Adquirida na Comunidade": {}
+			},
+			"Infectologia": {
+				"Tuberculose": {},
+				"Arboviroses": {},
+				"HIV": {},
+				"Sífilis": {},
+				"Hepatites Virais": {},
+				"Antibioticoterapia": {}
+			},
+			"Nefrologia": {
+				"Doenças Glomerulares": {},
+				"Injúria Renal Aguda": {}
+			},
+			"Neurologia e Psiquiatria": {
+				"Cefaleias": {},
+				"AVC": {},
+				"Transtornos de Ansiedade e Humor": {}
+			}
+		},
+		"Cirurgia Geral e Emergência": {
+			"Fundamentos em Cirurgia": {
+				"Perioperatório": {},
+				"Resposta Metabólica ao Trauma": {},
+				"Fluidos e Nutrição": {}
+			},
+			"Gastroenterologia Cirúrgica": {
+				"Doenças das Vias Biliares": {},
+				"Hérnias da Parede Abdominal": {},
+				"Abdome Agudo": {},
+				"Câncer Colorretal": {}
+			},
+			"Trauma e Urgência": {
+				"Atendimento Inicial ao Trauma": {},
+				"Trauma de Tórax": {},
+				"Trauma de Abdome": {},
+				"Queimados": {},
+				"Suporte Avançado de Vida": {}
+			},
+			"Especialidades Cirúrgicas": {
+				"Urologia": {},
+				"Ortopedia": {},
+				"Oftalmologia": {}
+			}
+		},
+		"Ginecologia e Obstetrícia": {
+			"Ginecologia": {
+				"Ciclo Menstrual e Anticoncepção": {},
+				"Câncer de Colo do Útero e HPV": {},
+				"Câncer de Mama": {},
+				"Sangramento Uterino Anormal": {}
+			},
+			"Obstetrícia": {
+				"Assistência Pré-Natal": {},
+				"Mecanismo de Parto": {},
+				"Doença Hipertensiva Específica da Gestação": {},
+				"Hemorragias da Gestação": {}
+			}
+		},
+		"Pediatria": {
+			"Crescimento e Desenvolvimento": {
+				"Puericultura": {},
+				"Aleitamento Materno e Introdução Alimentar": {},
+				"Marcos do Desenvolvimento": {}
+			},
+			"Doenças Prevalentes na Infância": {
+				"Diarreia": {},
+				"Pneumonia e Infecções de Vias Aéreas Superiores": {}
+			},
+			"Neonatologia": {
+				"Icterícia Neonatal": {},
+				"Triagem Neonatal": {},
+				"Reanimação Neonatal": {}
+			}
+		}
 	}
 }

@@ -9,7 +9,7 @@ export const StrictQuestionSchema = z.object({
 });
 
 const tagPattern =
-	/^(?:[A-Za-z0-9\u00C0-\u00FF\-\(\)\.\/\,\:\s_&]+)(?:::[A-Za-z0-9\u00C0-\u00FF\-\(\)\.\/\,\:\s_&]+)*$/;
+	/^(?:[A-Za-z0-9\u00C0-\u00FF\u00BA\-\(\)\.\/\,\:\s_&]+)(?:::[A-Za-z0-9\u00C0-\u00FF\-\(\)\.\/\,\:\s_&]+)*$/;
 
 export const StrictCaseSchema = z
 	.object({
