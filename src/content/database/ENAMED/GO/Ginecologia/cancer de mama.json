@@ -228,7 +228,7 @@
 				"order": 1
 			},
 			{
-				"text": "Para a Paciente H (BRCA1 positivo), além do câncer de mama, qual outro câncer ginecológico tem risco muito aumentado e qual a estratégia de redução de risco cirúrgico (profilaxia) mais aceita para mama e ovário?",
+				"text": "Para a Paciente H (BRCA1 positivo), além do câncer de mama, qual outro câncer ginecológico tem risco muito aumentado e qual a estratégia de redução de risco cirúrgico (profilaxia) mais aceita para cada um?",
 				"correctAnswer": "Pacientes com mutação BRCA1 têm alto risco para Câncer de Ovário. As estratégias de redução de risco incluem a Mastectomia Bilateral Redutora de Risco e a Salpingo-oforectomia Bilateral Redutora de Risco (geralmente após a prole estar constituída).",
 				"keywords": ["Mutação BRCA 1 e 2", "Mastectomia profilática"],
 				"order": 2
