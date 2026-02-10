@@ -51,10 +51,10 @@
 			},
 			{
 				"text": "Qual o principal tumor benigno causador de derrame papilar sanguinolento/seroso e qual a conduta frente ao caso da Paciente B?",
-				"correctAnswer": "O principal causador benigno é o Papiloma Intraductal. No entanto, devido à idade da paciente (pós-menopausa) e às características do fluxo, deve-se afastar carcinoma (como o ductal in situ). A conduta é a investigação por imagem (USG e Mamografia) e a exérese do ducto principal (microdococtomia) para análise histopatológica, mesmo que a imagem seja negativa.",
+				"correctAnswer": "O principal causador benigno é o Papiloma Intraductal. No entanto, devido à idade da paciente (pós-menopausa) e às características do fluxo, deve-se afastar carcinoma (como o ductal in situ). A conduta é a investigação por imagem (USG e Mamografia) e a exérese do ducto principal (microductectomia) para análise histopatológica, mesmo que a imagem seja negativa.",
 				"keywords": [
 					"Papiloma intraductal",
-					"Microdococtomia",
+					"Microductectomia",
 					"Água de rocha (seroso)"
 				],
 				"order": 2
