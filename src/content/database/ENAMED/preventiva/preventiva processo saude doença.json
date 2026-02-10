@@ -1,0 +1,505 @@
+[
+	{
+		"id": 341,
+		"title": "Níveis de Prevenção e História Natural da Doença",
+		"vignette": "Um homem de 52 anos, tabagista (30 maços/ano), obeso e sedentário, procura a Unidade Básica de Saúde para \"fazer um check-up\". Ele não apresenta sintomas no momento. O médico solicita glicemia de jejum, que revela 128 mg/dL (confirmando Diabetes Mellitus tipo 2 em segunda coleta), e inicia orientações sobre cessação do tabagismo. Durante a consulta, o paciente menciona que leu na internet que deveria realizar uma \"tomografia de corpo inteiro\" para rastrear precocemente qualquer câncer, mesmo sem queixas.",
+		"explanation": "A História Natural da Doença divide-se em: Período Pré-Patogênico (interação entre agente, hospedeiro e ambiente; a doença ainda não existe) e Período Patogênico (a doença se instala, passando pelas fases clínica e subclínica). Os níveis de prevenção acompanham essa evolução: 1. Primária: Age no período pré-patogênico (vacinas, educação em saúde). 2. Secundária: Age na fase inicial da patogênese (rastreamento/screening, diagnóstico precoce). 3. Terciária: Age na fase avançada ou sequelar (reabilitação, fisioterapia pós-AVC). 4. Quaternária: É uma atitude ética de evitar o dano iatrogênico. Não se trata de \"fazer menos\", mas de \"fazer o necessário\", evitando o sobre-diagnóstico (overdiagnosis) e o sobre-tratamento (overtreatment).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Classifique a orientação de cessação do tabagismo e o diagnóstico do Diabetes quanto aos níveis de prevenção (Primária, Secundária, Terciária ou Quaternária), justificando a diferença entre eles.",
+				"correctAnswer": "A orientação de cessação do tabagismo é Prevenção Primária, pois visa remover o fator de risco (fumo) para evitar o surgimento de doenças (como CA de pulmão ou IAM) no período pré-patogênico. O diagnóstico do Diabetes é Prevenção Secundária, pois o objetivo é detectar uma patologia já instalada, porém em estágio inicial/assintomático, para realizar o tratamento precoce e evitar complicações.",
+				"keywords": ["Rastreamento (Screening)"],
+				"order": 1
+			},
+			{
+				"text": "Como o conceito de Prevenção Quaternária se aplica ao desejo do paciente de realizar uma tomografia de corpo inteiro?",
+				"correctAnswer": "A Prevenção Quaternária consiste em detectar indivíduos em risco de supermedicalização ou de intervenções diagnósticas/terapêuticas excessivas e protegê-los de intervenções médicas inapropriadas. A tomografia de corpo inteiro em paciente assintomático apresenta alto risco de \"incidentalomas\" (achados irrelevantes que geram biópsias desnecessárias) e exposição à radiação, sem evidência de benefício populacional.",
+				"keywords": ["Prevenção Quaternária", "Iatrogenia"],
+				"order": 2
+			},
+			{
+				"text": "No modelo de Leavell & Clark (História Natural da Doença), em qual período o paciente se encontrava antes do diagnóstico do Diabetes e em qual nível de prevenção o médico atuou ao solicitar os exames diagnósticos?",
+				"correctAnswer": "Antes do diagnóstico, o paciente estava no Período Patogênico, especificamente na fase de Patogênese Precoce (Subclínica), onde a doença já existe no organismo (alteração metabólica), mas não há sinais ou sintomas. Ao solicitar os exames, o médico atuou no nível de Prevenção Secundária (Diagnóstico Precoce).",
+				"keywords": [
+					"Período Pré-Patogênico vs. Patogênico",
+					"Horizonte Clínico"
+				],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 342,
+		"title": "Determinantes Sociais de Saúde e Modelo de Dahlgren e Whitehead",
+		"vignette": "Uma criança de 4 anos apresenta episódios recorrentes de diarreia e infecções respiratórias. Durante a anamnese, a mãe relata que a família reside em um assentamento sem saneamento básico, a água consumida não é filtrada e os pais estão desempregados. O médico prescreve os antibióticos e antiparasitários necessários, mas reconhece que o tratamento clínico isolado será paliativo diante do contexto.",
+		"explanation": "A saúde não é apenas a ausência de doença, mas um fenômeno multicausal influenciado pelos Determinantes Sociais de Saúde (DSS). O modelo de Dahlgren e Whitehead organiza esses determinantes em níveis: 1. Centro: Idade, sexo e fatores genéticos (imutáveis). 2. Primeira camada: Estilo de vida individual. 3. Segunda camada: Redes sociais e comunitárias. 4. Terceira camada: Condições de vida e de trabalho (habitação, saneamento, educação, saúde). 5. Camada distal: Condições socioeconômicas, culturais e ambientais gerais. Entender isso permite ao médico realizar a Promoção da Saúde, que vai além da prevenção, buscando autonomia e transformação das condições de vida.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Diferencie o conceito de \"Fatores de Risco\" do conceito de \"Determinantes Sociais de Saúde (DSS)\" com base no caso clínico apresentado.",
+				"correctAnswer": "Fatores de Risco são características individuais ou exposições (ex: não lavar as mãos, beber água contaminada) que aumentam a probabilidade de doença. Já os Determinantes Sociais de Saúde são as condições sociais em que as pessoas vivem e trabalham (ex: desemprego dos pais, ausência de políticas públicas de saneamento) que geram esses riscos. O DSS explica a causa da causa.",
+				"keywords": ["Causa da Causa"],
+				"order": 1
+			},
+			{
+				"text": "Utilizando o modelo de Dahlgren e Whitehead, em qual camada dos determinantes sociais se encontram as condições de moradia e saneamento da criança? Por que a abordagem médica tradicional muitas vezes falha ao ignorar essas camadas?",
+				"correctAnswer": "Encontram-se na camada de Condições de Vida e de Trabalho. A abordagem tradicional falha porque foca apenas na camada micro (biologia e estilo de vida individual), tratando a consequência biológica (infecção), mas não a causa estrutural (saneamento), o que leva ao ciclo de recidivas.",
+				"keywords": ["Modelo de Dahlgren e Whitehead", "Promoção da Saúde"],
+				"order": 2
+			},
+			{
+				"text": "O que significa dizer que existe um \"Gradiente Social\" na saúde desta população?",
+				"correctAnswer": "O Gradiente Social refere-se à evidência de que, na escala socioeconômica, quanto mais baixa a posição social, pior é o estado de saúde. Não é apenas uma diferença entre \"ricos e pobres\", mas uma relação contínua onde cada degrau de melhora na renda ou educação reflete em melhores indicadores de saúde.",
+				"keywords": ["Gradiente Social", "Iniquidades em Saúde"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 343,
+		"title": "Promoção da Saúde e Prevenção de Doenças na Atenção Primária",
+		"vignette": "A equipe de uma Unidade Básica de Saúde (UBS) decide implementar duas estratégias distintas para lidar com as doenças cardiovasculares no bairro. A primeira estratégia consiste em reformar uma praça local e instalar equipamentos de ginástica, além de promover oficinas de culinária saudável para toda a comunidade. A segunda estratégia foca em convocar todos os homens acima de 50 anos para a realização de um eletrocardiograma de repouso e aferição de pressão arterial sistemática.",
+		"explanation": "Embora usados como sinônimos, **Promoção** e **Prevenção** têm origens conceituais distintas. A Promoção da Saúde (Carta de Ottawa) busca o empoderamento da comunidade e a mudança nos determinantes (moradia, lazer, alimentação, educação). Ela não \"foge\" da doença, ela \"busca\" a saúde. Já a Prevenção é orientada pela doença: seu objetivo é evitar que uma patologia específica surja (Primária) ou progrida (Secundária/Terciária). O médico do 3º/4º ano deve entender que tratar o paciente individualmente é prevenção, mas articular melhorias no território é promoção.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Diferencie as duas estratégias utilizando os conceitos de **Promoção da Saúde** e **Prevenção de Doenças**. Qual o foco principal de cada uma?",
+				"correctAnswer": "A primeira estratégia é de **Promoção da Saúde**, pois foca em medidas genéricas que visam aumentar o bem-estar e a saúde global, atuando sobre o estilo de vida e o ambiente, sem focar em uma patologia específica. A segunda é de **Prevenção de Doenças** (especificamente Prevenção Secundária), pois o objetivo é detectar precocemente uma doença específica (Hipertensão ou arritmias) em indivíduos que podem estar assintomáticos, visando reduzir a morbidade daquela condição.",
+				"keywords": ["Promoção vs. Prevenção", "Carta de Ottawa"],
+				"order": 1
+			},
+			{
+				"text": "Por que a reforma da praça e as oficinas de culinária são consideradas intervenções sobre os **Determinantes Sociais de Saúde (DSS)**, enquanto o eletrocardiograma é uma intervenção clínica tradicional?",
+				"correctAnswer": "As intervenções na praça e na culinária atuam nas **causas estruturais e ambientais** que facilitam escolhas saudáveis (acesso ao lazer e ao conhecimento nutricional), modificando o contexto em que o indivíduo vive. O eletrocardiograma foca na **biologia individual** e na detecção de alterações fisiopatológicas já presentes, agindo na ponta final do processo saúde-doença.",
+				"keywords": ["Empoderamento (Empowerment)", "Intersetorialidade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 344,
+		"title": "Níveis de Prevenção Terciária e Quaternária em Paciente com Sequelas de AVE",
+		"vignette": "Um paciente de 68 anos, portador de sequelas motoras graves após um Acidente Vascular Encefálico (AVE) isquêmico ocorrido há dois anos, é levado à consulta por sua cuidadora. Ele apresenta atrofia muscular por desuso e início de uma úlcera por pressão em região sacral. O médico prescreve fisioterapia intensiva, orienta mudanças de decúbito e decide suspender o rastreamento de câncer de próstata (PSA e toque retal) que o paciente solicitava anualmente, devido à sua baixa expectativa de vida e fragilidade clínica.",
+		"explanation": "O modelo de Leavell & Clark expandido ajuda a entender que a medicina não para quando a doença vence. **Prevenção Terciária:** É o domínio da reabilitação. O foco é a funcionalidade e a prevenção de danos colaterais da doença crônica. **Prevenção Quaternária:** É um conceito de vigilância ética do próprio médico. Baseia-se no princípio da *Primum non nocere*. Deve-se considerar a expectativa de vida e o impacto na qualidade de vida antes de solicitar exames de rastreio em idosos frágeis ou pacientes terminais.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Como se classifica a indicação de fisioterapia para este paciente quanto aos níveis de prevenção? Qual o objetivo central deste nível?",
+				"correctAnswer": "Classifica-se como **Prevenção Terciária**. O objetivo central não é mais evitar a doença ou diagnosticá-la precocemente, mas sim reduzir os prejuízos causados por uma patologia já instalada e avançada, focando na reabilitação, na prevenção de complicações (como escaras e pneumonias aspirativas) e na reintegração funcional do indivíduo.",
+				"keywords": ["Reabilitação", "Prevenção Terciária"],
+				"order": 1
+			},
+			{
+				"text": "A decisão de interromper o rastreamento do câncer de próstata neste contexto específico exemplifica qual nível de prevenção? Justifique o raciocínio clínico por trás dessa escolha.",
+				"correctAnswer": "Exemplifica a **Prevenção Quaternária**. O médico avaliou que o rastreamento (screening) em um paciente com fragilidade extrema e sequelas graves traria mais riscos do que benefícios (overdiagnosis e possíveis tratamentos invasivos desnecessários para uma doença de progressão lenta que não seria a causa de morte principal). A prevenção quaternária aqui atua protegendo o paciente de uma intervenção médica iatrogênica/excessiva.",
+				"keywords": [
+					"Prevenção Quaternária",
+					"Overdiagnosis/Overtreatment",
+					"Princípio da Não-Maleficência"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 345,
+		"title": "História Natural da Doença: Horizonte Clínico e Período Patogênico",
+		"vignette": "Dois pacientes procuram o serviço de saúde. Paciente A: 25 anos, assintomático, realizou teste rápido para HIV após exposição de risco há 2 meses. O teste foi positivo. Paciente B: 25 anos, apresenta perda de peso, febre vespertina e tosse produtiva há 3 semanas. A baciloscopia de escarro confirmou Tuberculose.",
+		"explanation": "A linha imaginária que divide o período de alterações patológicas imperceptíveis da fase de sinais e sintomas é chamada de **Horizonte Clínico**. 1. **Período de Incubação:** Termo usado para doenças infecciosas (tempo entre infecção e sintomas). 2. **Período de Latência:** Termo usado para doenças crônicas ou tempo entre infecção e transmissibilidade. O grande objetivo da **Prevenção Secundária** é \"caçar\" o paciente que está abaixo do horizonte clínico, pois é onde o tratamento geralmente apresenta melhor prognóstico e custo-efetividade.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Utilizando o conceito de **História Natural da Doença**, diferencie o estado dos dois pacientes em relação ao **Horizonte Clínico**.",
+				"correctAnswer": "O **Paciente A** está **abaixo do horizonte clínico**, ou seja, ele tem a patologia instalada (período patogênico), mas ainda não apresenta sinais ou sintomas perceptíveis. O **Paciente B** já cruzou o **horizonte clínico**, encontrando-se na fase de doença clínica manifesta.",
+				"keywords": [
+					"Horizonte Clínico",
+					"História Natural da Doença (Leavell & Clark)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Em qual fase do **Período Patogênico** cada paciente se encontra?",
+				"correctAnswer": "O Paciente A está na fase de **Patogênese Precoce** (ou período de latência/subclínico). O Paciente B está na fase de **Doença Manifesta/Clínica**.",
+				"keywords": ["Fase Subclínica vs. Fase Clínica"],
+				"order": 2
+			},
+			{
+				"text": "Por que o diagnóstico do Paciente A é considerado mais eficaz sob o ponto de vista da Saúde Coletiva, mesmo ele não apresentando sintomas?",
+				"correctAnswer": "O diagnóstico do Paciente A permite a intervenção no período de **latência**, o que possibilita o tratamento precoce antes que ocorra dano imunológico severo (benefício individual) e, crucialmente, interrompe a cadeia de transmissão mais cedo (benefício coletivo). Na Tuberculose (Paciente B), o diagnóstico tardio (após o horizonte clínico) significa que o indivíduo provavelmente já transmitiu o bacilo para outros contatos por semanas.",
+				"keywords": ["Período de Latência"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 346,
+		"title": "Risco Individual vs. Vulnerabilidade Social e Programática",
+		"vignette": "Dois jovens de 19 anos procuram a UBS para aconselhamento sobre Infecções Sexualmente Transmissíveis (ISTs). O jovem A relata ter tido múltiplos parceiros sexuais no último mês sem o uso consistente de preservativos. O jovem B é um homem trans, expulso de casa pela família, que vive em situação de rua e, ocasionalmente, troca sexo por moradia ou comida. Ele relata que, embora queira usar preservativo, muitas vezes os parceiros se recusam e ele não se sente em posição de exigir.",
+		"explanation": "Enquanto o **Risco** foca no comportamento (muitas vezes culpabilizando o indivíduo), a **Vulnerabilidade** olha para o contexto. No 3º/4º ano, o aluno deve entender que orientar 'use camisinha' (prevenção primária baseada no risco) é insuficiente para pacientes com alta vulnerabilidade social, exigindo uma abordagem intersetorial (assistência social, direitos humanos).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Qual dos dois pacientes melhor exemplifica o conceito de **Risco Individual** e qual exemplifica o conceito de **Vulnerabilidade**? Explique a diferença teórica entre os termos.",
+				"correctAnswer": "O **Jovem A** exemplifica o **Risco**, que é uma probabilidade estatística baseada em comportamentos individuais (uso de preservativo, número de parceiros). É um conceito clínico-epidemiológico. O **Jovem B** exemplifica a **Vulnerabilidade**, que é um conceito mais amplo e multidimensional. Ele não apenas 'se expõe' (risco), mas tem sua capacidade de autodeterminação e proteção limitada por fatores estruturais que fogem ao seu controle individual.",
+				"keywords": ["Risco vs. Vulnerabilidade", "Dimensão Social do Adoecer"],
+				"order": 1
+			},
+			{
+				"text": "A vulnerabilidade é dividida em três dimensões (Individual, Social e Programática). Identifique elementos da **Vulnerabilidade Social** e **Programática** que podem estar afetando o Jovem B.",
+				"correctAnswer": "**Social:** A falta de apoio familiar, a situação de rua e o preconito (transfobia) que o empurra para a marginalidade. **Programática:** Seria, por exemplo, a dificuldade de acesso à UBS (pelo horário de funcionamento ou falta de acolhimento à população trans) ou a ausência de políticas públicas de habitação e assistência social que permitam a ele sair da situação de exploração.",
+				"keywords": ["Vulnerabilidade Programática", "Intersetorialidade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 347,
+		"title": "Vigilância Epidemiológica e Notificação Compulsória no Processo Saúde-Doença",
+		"vignette": "Um médico recém-formado atende um paciente com febre, mialgia e cefaleia retro-orbitária (suspeita de Dengue). Ele preenche a ficha de notificação compulsória, mas murmura: 'Não sei para que perder tempo com papel, isso não ajuda no tratamento do meu paciente agora'.",
+		"explanation": "A Vigilância em Saúde é o braço operacional do estudo do processo saúde-doença. Ela utiliza os casos clínicos (evento sentinela) para entender onde a prevenção primária falhou e onde é preciso intervir no ambiente ou no vetor para que a História Natural da Doença não se repita em outros indivíduos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Como a notificação compulsória se conecta ao conceito de **Vigilância Epidemiológica** e qual o objetivo final dessa ação dentro do Processo Saúde-Doença coletivo?",
+				"correctAnswer": "A notificação não serve para o tratamento individual (clínica), mas para a **Vigilância Epidemiológica**, que permite monitorar o comportamento da doença na população. O objetivo é gerar informação para a ação: identificar surtos, planejar a alocação de recursos e interromper a cadeia de transmissão, protegendo os 'sadios' que ainda estão no período pré-patogênico.",
+				"keywords": ["Vigilância Epidemiológica", "Notificação Compulsória"],
+				"order": 1
+			},
+			{
+				"text": "No modelo da História Natural da Doença, por que a intervenção do Estado (ex: fumacê ou eliminação de criadouros) é considerada uma atuação no **Período Pré-Patogênico**, mesmo que desencadeada por um caso já no Período Patogênico?",
+				"correctAnswer": "Porque, embora o 'caso índice' já esteja doente (período patogênico), as medidas de controle de vetores visam remover o **Agente** ou modificar o **Ambiente** (dois pilares da Tríade Ecológica). Ao fazer isso, o Estado impede que novos indivíduos suscetíveis saiam do Período Pré-Patogênico para o Patogênico. É a Prevenção Primária em nível coletivo.",
+				"keywords": [
+					"Tríade Ecológica (Agente, Hospedeiro, Ambiente)",
+					"Evento Sentinela"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 348,
+		"title": "Transição Epidemiológica e Redes de Causalidade",
+		"vignette": "O Brasil passou, nas últimas décadas, por uma mudança drástica: deixamos de ter uma mortalidade predominantemente causada por doenças infectocontagiosas (como diarreia e pneumonia infantil) para uma predominância de Causas Externas (violência/acidentes) e Doenças Crônicas Não Transmissíveis (DCNTs).",
+		"explanation": "A **Transição Epidemiológica** e a **Transição Demográfica** (envelhecimento da população) mudaram o foco da medicina. O médico do século XXI lida menos com 'curas' rápidas de processos patogênicos agudos e mais com o gerenciamento crônico da História Natural da Doença, tentando retardar ao máximo o horizonte clínico e as sequelas (prevenção secundária e terciária).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Como essa **Transição Epidemiológica** impacta a aplicação prática dos Níveis de Prevenção de Leavell & Clark no dia a dia do médico?",
+				"correctAnswer": "Com a predominância das DCNTs, o período de latência (fase subclínica) tornou-se muito longo. Isso exige que o médico foque muito mais em **Prevenção Secundária** (rastreamentos de longa duração) e **Terciária** (manejo de sequelas), já que muitas vezes a prevenção primária (mudança de estilo de vida) enfrenta barreiras sociais sólidas (determinantes sociais).",
+				"keywords": [
+					"Transição Epidemiológica",
+					"Doenças Crônicas Não Transmissíveis (DCNT)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o conceito de **Causalidade** em doenças como a Hipertensão Arterial é mais complexo do que na Tuberculose?",
+				"correctAnswer": "A Tuberculose segue um modelo de **causalidade infecciosa** (biomédica), onde o bacilo é causa necessária (embora não suficiente). A Hipertensão segue um modelo de **Multicausalidade** ou 'Rede de Causalidade', onde não há um único agente, mas uma interação complexa de genética, dieta, estresse, sedentarismo e determinantes sociais, tornando o 'corte' da cadeia de transmissão impossível e exigindo o controle de múltiplos fatores.",
+				"keywords": ["Multicausalidade", "Rede de Causalidade"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 349,
+		"title": "Dimensões do Adoecer: Disease, Illness e Sickness",
+		"vignette": "Dona Maria, 55 anos, procura o ambulatório de clínica médica com queixa de \"dor no corpo todo, cansaço e um aperto no peito\" que duram meses. Após uma investigação minuciosa com exames laboratoriais, de imagem e testes ergométricos, o estudante de medicina conclui: \"Dona Maria, a senhora não tem nada. Todos os seus exames estão normais. Pode ficar tranquila\". A paciente sai da consulta frustrada, sentindo que sua dor foi deslegitimizada.",
+		"explanation": "No 3º ano, o aluno deve transitar do modelo puramente biomédico para o **biopsicossocial**. 1. **Disease:** O diagnóstico nosológico (Ex: Diabetes, Infarto). 2. **Illness:** O sofrimento, o medo, a percepção do paciente. É o que o faz buscar o médico. 3. **Sickness:** Como a sociedade vê o doente (Ex: o estigma da Hanseníase ou o direito ao auxílio-doença). O médico de excelência trata a *Disease*, mas cuida da *Illness*.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Utilizando os conceitos de **Disease** (Doença), **Illness** (Enfermidade) e **Sickness** (Patologia Social), explique por que a afirmação do estudante \"a senhora não tem nada\" está tecnicamente incorreta no modelo biopsicossocial.",
+				"correctAnswer": "O estudante focou apenas na **Disease**, que é a alteração biológica, fisiopatológica ou estrutural mensurável (o \"defeito na máquina\"). No entanto, a paciente apresenta uma **Illness**, que é a experiência subjetiva do sujeito, como ele sente e interpreta seu mal-estar, influenciada por sua cultura e psiquismo. Há também a **Sickness**, que é o papel social que a pessoa doente assume na sociedade. Dizer que ela \"não tem nada\" ignora a Illness, que é real e demanda cuidado, mesmo na ausência de Disease.",
+				"keywords": [
+					"Modelo Biopsicossocial",
+					"Disease vs. Illness vs. Sickness"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como a falha em reconhecer a **Illness** da paciente pode levar a um ciclo vicioso que resulta em falha na **Prevenção Quaternária**?",
+				"correctAnswer": "Quando o médico não acolhe a *Illness* (sofrimento subjetivo), a tendência é que o paciente continue buscando respostas, o que leva ao \"doctor shopping\" (ir a vários médicos). Isso gera uma cascata de exames desnecessários, polifarmácia e intervenções iatrogênicas na tentativa de encontrar uma *Disease* que não existe, violando o princípio da **Prevenção Quaternária**.",
+				"keywords": ["Abordagem Centrada na Pessoa", "Iatrogenia diagnóstica"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 350,
+		"title": "Equidade e Determinantes Sociais de Saúde",
+		"vignette": "A Secretaria de Saúde de um município dispõe de um recurso extra e precisa decidir como investir em prevenção. O Conselheiro A sugere distribuir o recurso igualmente entre todos os bairros (valor per capita igual), alegando que todos os cidadãos são iguais perante a lei (**Igualdade**). O Conselheiro B sugere concentrar 80% do recurso nos bairros com menores índices de alfabetização e sem rede de esgoto, alegando que ali o impacto na saúde será maior (**Equidade**).",
+		"explanation": "A **Equidade** é a ferramenta de justiça social do sistema de saúde. Ela reconhece que a História Natural da Doença é acelerada pela pobreza e pela falta de infraestrutura. No 3º/4º ano, entender que a clínica é influenciada pela macroeconomia e pela justiça social é vital para a formação de um raciocínio epidemiológico robusto.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Qual dos dois conselheiros aplica corretamente o conceito de **Equidade** do SUS e como isso se relaciona com os Determinantes Sociais de Saúde?",
+				"correctAnswer": "O **Conselheiro B** aplica o conceito de **Equidade**. Enquanto a igualdade trata todos da mesma forma, a equidade reconhece que as pessoas têm necessidades diferentes devido aos seus Determinantes Sociais (como falta de esgoto e baixa escolaridade). Para alcançar resultados de saúde semelhantes, é preciso oferecer \"mais para quem precisa de mais\".",
+				"keywords": ["Equidade vs. Igualdade", "Justiça Social na Saúde"],
+				"order": 1
+			},
+			{
+				"text": "O que é a **\"Lei do Cuidado Inverso\"** e como o Conselheiro B está tentando evitá-la?",
+				"correctAnswer": "A **Lei do Cuidado Inverso** descreve o fenômeno onde a disponibilidade de bons cuidados médicos tende a variar inversamente com a necessidade da população atendida (quem mais precisa de médico é quem menos tem acesso a ele). O Conselheiro B tenta evitar isso direcionando recursos exatamente para onde a carga de doença é maior e o acesso é menor.",
+				"keywords": ["Lei do Cuidado Inverso (Julian Tudor Hart)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 351,
+		"title": "Paradoxo da Prevenção e Estratégias de Intervenção de Geoffrey Rose",
+		"vignette": "O Secretário de Saúde de uma cidade observa que a maioria dos infartos (IAM) ocorre em pessoas com \"risco moderado\" (hipertensão leve, sobrepeso), simplesmente porque elas são a vasta maioria da população. No entanto, o hospital da cidade foca todo o seu recurso em um programa de alta tecnologia para tratar apenas os pacientes de \"altíssimo risco\" (obeso mórbido + tabagista pesado + diabético descompensado).",
+		"explanation": "Geoffrey Rose revolucionou a saúde pública ao mostrar que a medicina não deve olhar apenas para o \"doente\", mas para a \"distribuição do risco\" na população. Se a curva de pressão arterial de toda a população se desloca 2 mmHg para a esquerda, o número de AVCs cai drasticamente, mais do que se tratássemos apenas os hipertensos graves com remédios caros.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Explique o **\"Paradoxo da Prevenção\" de Geoffrey Rose**. Por que uma medida aplicada a toda a população (ex: reduzir 1g de sal de todos os pães da cidade) pode salvar mais vidas do que tratar apenas os indivíduos no topo da curva de risco?",
+				"correctAnswer": "O **Paradoxo da Prevenção** afirma que \"uma medida preventiva que traz muito benefício para a comunidade oferece pouco a cada indivíduo isolado\". Embora o risco individual de um hipertenso leve ter um infarto seja pequeno, como existem milhões de hipertensos leves, a maioria absoluta dos infartos virá desse grupo. Reduzir um pouco o risco de muitos (estratégia populacional) tem um impacto maior na saúde pública do que reduzir muito o risco de poucos (estratégia de alto risco).",
+				"keywords": ["Paradoxo da Prevenção", "Geoffrey Rose"],
+				"order": 1
+			},
+			{
+				"text": "Diferencie a **Estratégia de Alto Risco** da **Estratégia Populacional**. Qual delas é mais eficaz para mudar a História Natural da Doença em nível coletivo?",
+				"correctAnswer": "A **Estratégia de Alto Risco** é clínica e foca no indivíduo (ex: prescrever estatina para quem já infartou). Ela é paliativa, pois não remove a causa da incidência. A **Estratégia Populacional** foca nos determinantes (ex: taxar bebidas açucaradas ou criar ciclovias). Esta última é mais eficaz para mudar a História Natural da Doença coletiva, pois atua \"antes\" do período pré-patogênico, alterando o ambiente para que as pessoas nem cheguem a desenvolver os fatores de risco.",
+				"keywords": [
+					"Estratégia Populacional vs. Estratégia de Alto Risco",
+					"Deslocamento da Curva de Distribuição"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 352,
+		"title": "Evolução Histórica e Modelos do Processo Saúde-Doença",
+		"vignette": "Ao longo da história, o Processo Saúde-Doença foi interpretado de várias formas: 1. No século XIV, acreditava-se que a Peste Negra era um castigo divino ou influência dos astros. 2. No século XIX, acreditava-se que a cólera vinha do \"mau cheiro\" (miasmis) de lixos e pântanos. 3. No final do século XIX, com Pasteur e Koch, acreditava-se que \"um micro-organismo causa uma doença\". 4. Hoje, entendemos que o estresse e a falta de lazer influenciam a imunidade e o surgimento de doenças.",
+		"explanation": "O estudante deve entender que o conceito de saúde é histórico. Saímos do pensamento mágico para o biológico e, finalmente, para o social. A definição da Lei 8.080/90 (Lei Orgânica da Saúde) é o reflexo jurídico dessa evolução, colocando a saúde como um direito fundamental resultante de políticas sociais.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Como a mudança do **Modelo Unicausal** (Teoria Germânica) para o **Modelo Multicausal** alterou a forma como o médico faz a anamnese hoje?",
+				"correctAnswer": "O **Modelo Unicausal** buscava apenas o agente etiológico (ex: o bacilo da TB). A anamnese era focada apenas no sintoma biológico. O **Modelo Multicausal** exige que o médico investigue fatores biológicos, ambientais, comportamentais e sociais. Hoje, a anamnese deve incluir hábitos de vida, rede de apoio e condições de trabalho, pois entende-se que a doença é o desfecho de uma rede complexa de causas, e não apenas o encontro com um vírus/bactéria.",
+				"keywords": ["Modelo Unicausal vs. Multicausal", "Teoria Miasmática"],
+				"order": 1
+			},
+			{
+				"text": "O que foi a **Reforma Sanitária** no Brasil em termos de mudança do conceito de saúde? Como ela se afasta do conceito da OMS de 1948 (\"completo bem-estar físico, mental e social\")?",
+				"correctAnswer": "A Reforma Sanitária brasileira (expressa na 8ª Conferência Nacional de Saúde) definiu saúde como o **resultado das formas de organização social e econômica**. Ela critica o conceito da OMS de 1948 por ser \"utópico e estático\" (ninguém tem completo bem-estar o tempo todo). O conceito brasileiro é **dialético**: saúde é a capacidade de luta contra as doenças e a garantia de direitos básicos (moradia, renda, educação).",
+				"keywords": [
+					"Determinação Social da Saúde",
+					"Reforma Sanitária Brasileira"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 353,
+		"title": "Método Clínico Centrado na Pessoa (MCCP) e o Componente SIFE",
+		"vignette": "Um estudante de medicina atende um paciente com asma exacerbada. Ele segue o protocolo perfeitamente: prescreve corticoide e broncodilatador. No entanto, ele não pergunta como a asma afeta o trabalho do paciente (que é marceneiro) nem o que o paciente acha que está causando as crises (o paciente acredita que é \"nervoso\" por causa do divórcio).",
+		"explanation": "O MCCP é a ferramenta prática que une a Clínica à Saúde Coletiva. O **SIFE** transforma o conceito abstrato de *Illness* em perguntas clínicas. Sem explorar o SIFE, o médico trata o pulmão (órgão), mas não o paciente (pessoa), o que é a maior causa de baixa adesão terapêutica.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "O **Método Clínico Centrado na Pessoa (MCCP)** utiliza o componente **SIFE** para explorar a experiência da enfermidade (*Illness*). O que significa cada letra dessa sigla e como elas se aplicam a este caso?",
+				"correctAnswer": "**S (Sentimentos):** Como o paciente se sente em relação à asma (ex: medo de morrer sufocado). **I (Ideias):** O que ele acha que causa a doença (ex: ele acha que é emocional/divórcio). **F (Função):** Como a doença limita sua vida (ex: não consegue trabalhar na marcenaria). **E (Expectativas):** O que ele espera do médico (ex: que o médico resolva o problema emocional ou dê um atestado). No caso, o estudante focou na *Disease*, mas ignorou o SIFE.",
+				"keywords": [
+					"Método Clínico Centrado na Pessoa (MCCP)",
+					"SIFE (Sentimento, Ideia, Função, Expectativa)",
+					"Experiência do Adoecer"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que ignorar o SIFE prejudica o sucesso da **Prevenção Terciária** neste paciente?",
+				"correctAnswer": "A **Prevenção Terciária** foca na reabilitação e na prevenção de recidivas graves. Se o médico não abordar a **Função** (o pó da marcenaria como gatilho) e a **Ideia** (o fator emocional), o paciente não terá adesão ao tratamento a longo prazo, voltará a se expor aos gatilhos ambientais e sofrerá novas exacerbações, falhando no objetivo de limitar a incapacidade.",
+				"keywords": ["Adesão Terapêutica"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 354,
+		"title": "Perspectiva do Curso de Vida e Programação Fetal",
+		"vignette": "Um paciente de 45 anos apresenta Hipertensão Arterial, Dislipidemia e intolerância à glicose (Síndrome Metabólica). Ao colher a história pregressa, o estudante descobre que o paciente nasceu com baixo peso (Restrição de Crescimento Intrauterino) e viveu em insegurança alimentar severa até os 7 anos de idade. O estudante comenta: 'O problema dele é puramente o sedentarismo e a dieta atual de adulto'.",
+		"explanation": "O Processo Saúde-Doença não é um 'fotografia' do momento atual, mas um 'filme' que começa na gestação. A **Epidemiologia do Curso de Vida** estuda como as condições sociais e biológicas de etapas anteriores (infância, adolescência) moldam a saúde do adulto e do idoso. Isso muda a anamnese: o médico deve perguntar sobre o nascimento e a infância para entender o risco cardiovascular atual.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Explique por que a afirmação do estudante é limitada utilizando o conceito de Perspectiva do Curso de Vida (especificamente a Hipótese de Barker ou Programação Fetal).",
+				"correctAnswer": "A afirmação é limitada porque ignora a **Programação Fetal (Hipótese de Barker)**. Eventos ocorridos no início da vida (insultos nutricionais intrauterinos ou na infância precoce) provocam adaptações metabólicas e epigenéticas permanentes. O organismo 'se programa' para um ambiente de escassez; quando exposto à dieta hipercalórica na vida adulta, esse organismo desenvolve doenças metabólicas com muito mais facilidade do que alguém que teve nutrição adequada no início da vida.",
+				"keywords": [
+					"Hipótese de Barker (Programação Fetal)",
+					"Epigenética",
+					"Janelas de Desenvolvimento"
+				],
+				"order": 1
+			},
+			{
+				"text": "Como o acúmulo de riscos ao longo da vida (Modelo de Acúmulo) difere do Modelo de Período Crítico no processo de adoecimento deste paciente?",
+				"correctAnswer": "O **Modelo de Período Crítico** sugere que exposições em janelas específicas (ex: gestação) têm efeitos permanentes. O **Modelo de Acúmulo de Riscos** sugere que o dano à saúde é o resultado do somatório de agressões ao longo do tempo (ex: pobreza na infância + trabalho estressante na juventude + sedentarismo na vida adulta). No caso do paciente, ambos os modelos se complementam para explicar sua condição atual.",
+				"keywords": ["Modelo de Acúmulo de Riscos"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 355,
+		"title": "Violência Estrutural e Adesão ao Tratamento",
+		"vignette": "Um paciente com Tuberculose (TB) abandona o tratamento pela terceira vez. O estudante de medicina anota no prontuário: 'Paciente não aderente e pouco cooperativo'. Ao investigar melhor, descobre-se que o paciente trabalha na economia informal, não tem direito a auxílio-doença, e os efeitos colaterais das drogas o impedem de carregar peso, o que o faz passar fome. Além disso, a UBS exige que ele compareça no horário em que ele está tentando conseguir bicos.",
+		"explanation": "Violência Estrutural refere-se a danos causados por estruturas sociais (racismo, pobreza, sexismo) que impedem os indivíduos de atingir seu pleno potencial de saúde. No processo saúde-doença, ela atua como uma barreira invisível que anula a eficácia de tratamentos tecnicamente corretos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Utilize o conceito de Violência Estrutural (proposto por Paul Farmer) para reinterpretar o 'abandono' do paciente.",
+				"correctAnswer": "O abandono não é uma escolha individual livre, mas o resultado de uma **Violência Estrutural**. A estrutura social, econômica e política do país impede que este indivíduo exerça seu direito ao tratamento. A pobreza, a precarização do trabalho e a rigidez do sistema de saúde 'agridem' o paciente, tornando o tratamento biologicamente possível, mas socialmente impossível. O sistema é que é 'não aderente' à vida do paciente.",
+				"keywords": [
+					"Violência Estrutural (Paul Farmer)",
+					"Determinação Social Crítica"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que o foco exclusivo na 'autonomia do paciente' e na 'mudança de comportamento' pode ser uma armadilha ideológica neste caso?",
+				"correctAnswer": "Porque focar apenas na autonomia pressupõe que todos têm o mesmo poder de escolha. Ignorar as barreiras estruturais leva à **Culpabilização da Vítima (Victim Blaming)**. O médico passa a ver o paciente como 'difícil' ou 'irresponsável', em vez de identificar que a falha está na falta de suporte social e na organização do serviço de saúde (Vulnerabilidade Programática).",
+				"keywords": ["Culpabilização da Vítima", "Agência vs. Estrutura"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 356,
+		"title": "Salutogênese e o Senso de Coerência",
+		"vignette": "Dois vizinhos vivem no mesmo bairro violento e insalubre. O Vizinho A está sempre doente, deprimido e sente-se impotente. O Vizinho B, apesar das mesmas dificuldades, participa de uma associação de moradores, tem uma rede de apoio sólida e consegue manter hábitos saudáveis e estabilidade emocional.",
+		"explanation": "Salutogênese é um modelo que complementa a medicina. Enquanto a clínica trata a doença, a salutogênese busca fortalecer os **Recursos Gerais de Resistência** do indivíduo. Isso é fundamental para entender por que os Determinantes Sociais não afetam todos da mesma maneira e como podemos promover saúde fortalecendo a resiliência comunitária.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Diferencie o foco da Patogênese (modelo tradicional) do foco da Salutogênese (Aaron Antonovsky).",
+				"correctAnswer": "A **Patogênese** foca no que causa a doença (por que as pessoas ficam doentes?). A **Salutogênese** inverte a pergunta: por que, mesmo expostas a estressores e riscos, algumas pessoas conseguem se manter saudáveis? O foco sai da 'doença' e vai para as origens da saúde e dos recursos de resistência.",
+				"keywords": ["Salutogênese"],
+				"order": 1
+			},
+			{
+				"text": "O que é o Senso de Coerência e como ele influencia o processo saúde-doença do Vizinho B?",
+				"correctAnswer": "O **Senso de Coerência** é a capacidade de perceber a vida como Compreensível (os desafios fazem sentido), Gerenciável (existem recursos para lidar com eles) e Significativa (vale a pena lutar). O Vizinho B tem um alto Senso de Coerência, o que lhe permite usar recursos (apoio social, espiritualidade, resiliência) para neutralizar os estressores do ambiente, evitando que eles se traduzam em patologia física ou mental.",
+				"keywords": [
+					"Senso de Coerência",
+					"Recursos Gerais de Resistência",
+					"Resiliência"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 357,
+		"title": "Saúde Única (One Health) e Dinâmicas de Surto",
+		"vignette": "Um surto de febre amarela atinge uma região periurbana. A investigação mostra que o desmatamento para a construção de novos condomínios expulsou primatas de seu habitat, aumentando o contato de mosquitos silvestres com humanos. Simultaneamente, o acúmulo de lixo e a falta de saneamento favoreceram a proliferação de vetores.",
+		"explanation": "A Saúde Única é a visão mais moderna do processo saúde-doença no 3º/4º ano. Ela reconhece que 75% das doenças emergentes são zoonoses. O médico não pode mais ignorar a ecologia e a veterinária, pois o processo de adoecer humano está conectado ao uso da terra e ao bem-estar animal.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Processo Saúde-Doença e Níveis de Prevenção"
+		],
+		"questions": [
+			{
+				"text": "Explique como o conceito de Saúde Única (One Health) altera a visão tradicional do Processo Saúde-Doença neste cenário.",
+				"correctAnswer": "O conceito de **Saúde Única** integra a saúde humana, a saúde animal e a saúde ambiental como um único processo indissociável. No caso da Febre Amarela, a doença no humano é apenas o desfecho final de um desequilíbrio que começou no ambiente (desmatamento) e passou pelos animais (epizootia em primatas). Não há separação entre a ecologia e a clínica.",
+				"keywords": [
+					"Saúde Única (One Health)",
+					"Antropoceno (impacto humano no ambiente)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que a solução para este surto não pode ser apenas a vacinação de humanos?",
+				"correctAnswer": "Porque a vacinação é uma prevenção secundária/primária focada apenas no hospedeiro humano. Sem abordar a saúde animal (vigilância de sentinelas) e a saúde ambiental (controle do desmatamento e saneamento), o 'reservatório' e as 'causas estruturais' do surto permanecem ativos, garantindo que a doença continue circulando ou retorne no futuro.",
+				"keywords": ["Zoonoses", "Vigilância de Epizootias"],
+				"order": 2
+			}
+		]
+	}
+]

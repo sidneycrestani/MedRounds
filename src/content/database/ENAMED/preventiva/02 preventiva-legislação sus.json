@@ -1,0 +1,560 @@
+[
+	{
+		"id": 323,
+		"title": "Princípios Doutrinários do SUS: Universalidade, Integralidade e Equidade",
+		"vignette": "Um gestor municipal de saúde decide que, para economizar recursos, a Unidade Básica de Saúde (UBS) de um bairro periférico passará a atender apenas cidadãos que comprovem baixa renda e que não possuam plano de saúde privado. Além disso, determina que procedimentos de alta complexidade (como quimioterapia) não serão oferecidos pelo município, sob a justificativa de que a 'saúde básica é o foco'.",
+		"explanation": "Os Princípios Doutrinários (ou Éticos) do SUS, estabelecidos na Lei 8.080/90, formam a base ideológica do sistema: 1. **Universalidade:** A saúde é um direito fundamental do ser humano e o Estado deve prover as condições indispensáveis ao seu pleno exercício para **todos**. 2. **Integralidade:** O sistema deve considerar o indivíduo como um todo, atendendo a todas as suas necessidades, desde a prevenção até a reabilitação, passando por todos os níveis de complexidade tecnológica. 3. **Equidade:** Justiça social no atendimento. Significa que, embora todos tenham direito, os recursos e esforços devem ser priorizados para aqueles que têm maiores necessidades ou menores chances de sobrevivência/saúde.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Quais princípios doutrinários do SUS estão sendo violados pela decisão do gestor ao restringir o atendimento por renda e ao negar o acesso à alta complexidade?",
+				"correctAnswer": "Estão sendo violados os princípios da **Universalidade** e da **Integralidade**. A Universalidade garante que o acesso às ações e serviços de saúde seja um direito de todos os cidadãos, independentemente de renda, classe social ou vínculo com planos privados (o SUS é um sistema de acesso universal, não focado apenas nos 'pobres'). A Integralidade é violada porque o sistema deve garantir assistência em todos os níveis de complexidade (primário, secundário e terciário) conforme a necessidade do paciente; o gestor não pode fragmentar o cuidado e eximir o Estado de prover a alta complexidade se houver demanda clínica.",
+				"keywords": [
+					"Universalidade (Acesso de todos)",
+					"Integralidade (Articulação de ações preventivas e curativas)",
+					"Lei 8.080/90",
+					"Direito à Saúde"
+				],
+				"order": 1
+			},
+			{
+				"text": "Diferencie o conceito de **Universalidade** do conceito de **Equidade** no contexto deste cenário.",
+				"correctAnswer": "A **Universalidade** refere-se ao direito de **todos** acessarem o sistema (porta aberta para o cidadão). Já a **Equidade** refere-se a tratar 'desigualmente os desiguais' para reduzir disparidades. No cenário, ao tentar tratar todos como 'iguais' ou restringir por renda, o gestor ignora que a equidade exigiria oferecer mais recursos para quem mais precisa (ex: populações vulneráveis na periferia), sem, contudo, excluir os demais do sistema.",
+				"keywords": [
+					"Universalidade (Acesso de todos)",
+					"Equidade (Justiça distributiva)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 324,
+		"title": "Princípios Organizativos do SUS: Descentralização, Regionalização e Hierarquização",
+		"vignette": "Durante uma epidemia de arboviroses em uma região metropolitana, o Secretário Estadual de Saúde exige que o Ministério da Saúde assuma a execução direta das ações de combate ao mosquito e o atendimento clínico em todas as UPAs da região, alegando que o Estado e os Municípios não possuem recursos técnicos. O Ministério recusa, afirmando que a gestão direta não é sua responsabilidade primordial.",
+		"explanation": "Os Princípios Organizativos (ou Operativos) definem como o SUS deve ser estruturado na prática: **Descentralização:** Redistribuição de poder e responsabilidades entre as três esferas de governo (União, Estados e Municípios). O município é o principal executor. **Regionalização:** Agrupamento de municípios limítrofes com características semelhantes para compartilhar recursos e garantir acesso a serviços que um município isolado não conseguiria manter. **Hierarquização:** Organização dos serviços em níveis de complexidade. A Atenção Primária é a base e o centro coordenador do cuidado.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Qual princípio organizativo do SUS define que a execução das ações de saúde deve estar o mais próximo possível do cidadão (ênfase municipal)?",
+				"correctAnswer": "O princípio da **Descentralização**, com ênfase na **Municipalização**. A Lei 8.080/90 estabelece que a responsabilidade pela execução dos serviços de saúde é predominantemente municipal. A União (Ministério da Saúde) tem papel de normatização, vigilância estratégica, avaliação e fomento, mas não deve, como regra, substituir o município na execução direta do cuidado assistencial ou do controle de vetores local.",
+				"keywords": ["Descentralização (Municipalização)", "Lei 8.080/90"],
+				"order": 1
+			},
+			{
+				"text": "Como o conceito de **Regionalização e Hierarquização** se aplica para organizar o fluxo de um paciente que inicia o atendimento em uma UBS com sintomas de Dengue e evolui para a necessidade de uma UTI por choque?",
+				"correctAnswer": "A **Hierarquização** organiza os serviços por níveis de complexidade tecnológica crescente (Atenção Primária -> Secundária -> Terciária). O paciente entra pela 'porta de entrada' preferencial (UBS), que tem menor densidade tecnológica, e, através da **Regionalização**, o sistema garante o fluxo para um serviço de maior complexidade (UTI) dentro de uma rede de cuidados pactuada entre os municípios da mesma região de saúde, garantindo a continuidade do tratamento sem que cada cidade precise ter sua própria UTI.",
+				"keywords": [
+					"Regionalização (Região de Saúde)",
+					"Hierarquização (Níveis de complexidade)",
+					"Porta de Entrada"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 325,
+		"title": "Participação Social e Instâncias Colegiadas: Lei 8.142/90",
+		"vignette": "Um Prefeito decide utilizar as verbas repassadas pelo Governo Federal para a saúde para realizar uma grande reforma em uma praça pública e comprar novos computadores para a Secretaria de Educação, alegando que 'mais lazer e educação também trazem saúde'. O Conselho Municipal de Saúde (CMS) vota contra essa decisão, mas o Prefeito ignora a votação, afirmando que o Conselho é apenas um órgão consultivo sem poder real de decisão.",
+		"explanation": "A Lei 8.142/90 foi criada para preencher a lacuna da participação social e do financiamento no SUS, que não foram detalhados na 8.080. Ela estabelece duas instâncias colegiadas: 1. **Conselhos:** Atuam no dia a dia, fiscalizando gastos e deliberando políticas. 2. **Conferências:** Grandes eventos quadrienais para definir o rumo da saúde para os próximos anos. Ambos obedecem à regra da **Paridade**: 50% de usuários (população), 25% de profissionais de saúde e 25% de gestores/prestadores de serviço.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Com base na Lei 8.142/90, a afirmação do Prefeito sobre o Conselho Municipal de Saúde está correta? Explique o caráter desse órgão.",
+				"correctAnswer": "Não, a afirmação está incorreta. De acordo com a Lei 8.142/90, o Conselho de Saúde possui caráter **permanente e deliberativo**. Isso significa que suas decisões têm força de lei no âmbito da gestão da saúde e o conselho atua na formulação de estratégias e no controle da execução da política de saúde, inclusive nos aspectos econômicos e financeiros. Suas decisões devem ser homologadas pelo chefe do poder executivo, mas ele não pode simplesmente ignorar o caráter deliberativo do órgão.",
+				"keywords": [
+					"Lei 8.142/90",
+					"Controle Social (Participação da Comunidade)",
+					"Caráter Deliberativo"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a diferença fundamental entre as **Conferências de Saúde** e os **Conselhos de Saúde** em termos de periodicidade e função?",
+				"correctAnswer": "As **Conferências de Saúde** ocorrem a cada quatro anos, com representação de vários segmentos sociais, para avaliar a situação de saúde e propor as diretrizes para a formulação da política de saúde. Os **Conselhos de Saúde** são órgãos permanentes, que se reúnem mensalmente para fiscalizar, acompanhar e deliberar sobre as ações de saúde e a movimentação financeira (Fundo de Saúde) de forma contínua.",
+				"keywords": [
+					"Conselhos vs. Conferências",
+					"Paridade (50% Usuários)",
+					"Lei 8.142/90"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 326,
+		"title": "Vigilância em Saúde e Determinantes Sociais",
+		"vignette": "Um surto de gastroenterite aguda atinge uma pequena cidade. Ao mesmo tempo, o Ministério da Saúde emite um alerta nacional sobre a circulação de um lote de medicamento anti-hipertensivo contaminado com impurezas carcinogênicas. O Secretário Municipal de Saúde precisa mobilizar suas equipes para conter o surto local e retirar o medicamento das farmácias da cidade.",
+		"explanation": "A Lei 8.080/90 redefine o conceito de saúde para além do modelo biomédico. \n1. **Vigilância Epidemiológica:** Conjunto de ações que proporciona o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes e condicionantes de saúde individual ou coletiva, com a finalidade de recomendar e adotar as medidas de prevenção e controle das doenças ou agravos.\n2. **Vigilância Sanitária:** Conjunto de ações capaz de eliminar, diminuir ou prevenir riscos à saúde e de intervir nos problemas sanitários decorrentes do meio ambiente, da produção e circulação de bens e da prestação de serviços de interesse da saúde.\n3. **Determinantes Sociais:** A saúde tem como fatores determinantes e condicionantes, entre outros, a alimentação, a moradia, o saneamento básico, o meio ambiente, o trabalho, a renda, a educação, a atividade física, o transporte, o lazer e o acesso aos bens e serviços essenciais.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Qual a diferença prática entre as ações de Vigilância Epidemiológica e Vigilância Sanitária neste cenário?",
+				"correctAnswer": "A **Vigilância Epidemiológica** foca no controle do surto de gastroenterite: ela detecta os casos, investiga a fonte de infecção (ex: água contaminada), acompanha a propagação da doença e propõe medidas de controle para os indivíduos e a coletividade. A **Vigilância Sanitária** foca no objeto e no consumo: ela é a responsável por fiscalizar as farmácias e garantir a retirada do lote de medicamento contaminado, intervindo sobre riscos decorrentes da produção e circulação de bens que se relacionam com a saúde.",
+				"keywords": [
+					"Vigilância Epidemiológica (Controle de agravos/doenças)",
+					"Vigilância Sanitária (Controle de bens/serviços/risco)"
+				],
+				"order": 1
+			},
+			{
+				"text": "No SUS, a saúde não é entendida apenas como a ausência de doença. Com base na Lei 8.080/90, cite três \"fatores determinantes e condicionantes\" da saúde que o médico deve considerar ao analisar por que o surto de gastroenterite atingiu apenas o bairro periférico.",
+				"correctAnswer": "Os determinantes e condicionantes (Art. 3º da Lei 8.080) incluem: **saneamento básico, moradia, renda, alimentação, educação, transporte, lazer e acesso aos bens e serviços essenciais**. No caso do bairro periférico, o médico deve entender que a causa da gastroenterite pode estar na falta de esgotamento sanitário ou água tratada (saneamento) e não apenas na biologia do patógeno.",
+				"keywords": [
+					"Determinantes e Condicionantes Sociais",
+					"Conceito Ampliado de Saúde",
+					"Lei 8.080/90"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 327,
+		"title": "Iniciativa Privada e Princípios Éticos no SUS",
+		"vignette": "Um hospital filantrópico de grande porte assina um convênio com a Secretaria de Saúde para realizar cirurgias cardíacas pelo SUS, já que a rede própria do estado está sobrecarregada. O diretor do hospital decide que, para compensar os baixos valores da tabela SUS, cobrará dos pacientes uma \"taxa de material especial\" por fora, além de reservar 50% dos leitos exclusivos para pacientes de convênios particulares, mesmo que a fila do SUS seja maior.",
+		"explanation": "O setor privado pode atuar de duas formas: \n1. **Saúde Suplementar:** Planos de saúde e seguros (regidos pela ANS), onde o cidadão paga e o Estado regula. \n2. **Saúde Complementar:** Quando o Estado contrata o privado para prestar serviços ao SUS (regido pela Lei 8.080/90). \nNeste segundo caso, o ente privado atua *como se fosse SUS*, devendo seguir todos os seus princípios. O contrato deve ser formalizado por meio de convênio (para filantrópicos) ou contrato administrativo (para lucrativos).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "A participação da iniciativa privada no SUS é permitida? Se sim, em que caráter e qual o critério de prioridade para a contratação?",
+				"correctAnswer": "Sim, é permitida em caráter **complementar** (quando a rede pública é insuficiente para garantir a assistência à população). A Lei 8.080/90 estabelece que, na seleção desses serviços, as entidades **filantrópicas e as sem fins lucrativos** têm preferência sobre as empresas privadas mercantis.",
+				"keywords": [
+					"Iniciativa Privada Complementar",
+					"Entidades Filantrópicas (Preferência)",
+					"Contratualização"
+				],
+				"order": 1
+			},
+			{
+				"text": "A prática de cobrar \"taxas por fora\" ou diferenciar o atendimento entre pacientes do SUS e de convênios dentro da mesma estrutura conveniada é legal? Justifique com base nos princípios do sistema.",
+				"correctAnswer": "Não, é ilegal. Ao assinar um convênio com o SUS, a entidade privada deve seguir as normas do sistema. A cobrança de qualquer valor adicional (\"taxa por fora\") fere a **Gratuidade** e a **Equidade**. Além disso, o hospital não pode segregar o atendimento ou oferecer privilégios de hotelaria/acesso para pacientes privados em detrimento dos pacientes do SUS dentro da cota contratualizada, pois o sistema deve ser regido pela necessidade clínica (Integralidade/Equidade) e não pelo poder de compra.",
+				"keywords": [
+					"Vedação de Pagamento Direto (Gratuidade)",
+					"Equidade no Atendimento"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 328,
+		"title": "Redes de Atenção à Saúde e Atenção Primária",
+		"vignette": "A Secretaria de Saúde de um municipio percebe que 70% das internações hospitalares na cidade são por \"Condições Sensíveis à Atenção Primária\" (CSAP), como crises hipertensivas, descompensações de Diabetes e complicações de asma. O município possui várias UPAs (Unidade de Pronto Atendimento), mas as Unidades Básicas de Saúde (UBS) estão com poucos médicos e funcionam apenas em horários restritos.",
+		"explanation": "As Redes de Atenção à Saúde (RAS) surgiram para superar a fragmentação do sistema. Em vez de pontos isolados, o SUS deve funcionar como uma rede integrada. \n- **Portas de Entrada:** UBS (preferencial), UPAs, CAPS e serviços de urgência. \n- **Centro Ordenador:** A Atenção Primária à Saúde (APS). \n- **Referência e Contrarreferência:** O fluxo de ida para a densidade tecnológica superior e o retorno para a unidade de origem.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Explique por que investir apenas em UPAs e hospitais, negligenciando a Atenção Primária, falha em atender ao princípio da Integralidade.",
+				"correctAnswer": "A **Integralidade** pressupõe um conjunto articulado de ações preventivas e curativas. Quando o foco é apenas na urgência (UPA) e no hospital, o sistema está agindo de forma puramente reativa e curativa (fragmentada). A Integralidade exige que o paciente tenha acompanhamento contínuo para que as doenças crônicas não agudizem. O alto índice de internações por CSAP é a prova de que a falta de prevenção e manejo na atenção básica está gerando sofrimento e custos hospitalares evitáveis.",
+				"keywords": [
+					"Condições Sensíveis à Atenção Primária (CSAP)",
+					"Integralidade (Prevenção + Cura)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual o papel da Atenção Básica na estrutura das Redes de Atenção à Saúde (RAS)?",
+				"correctAnswer": "Na estrutura das RAS, a Atenção Básica (ou Primária) deve ser o **centro comunicador** e a **ordenadora da rede**. Ela funciona como o \"filtro\" e o guia do paciente pelo sistema. É ela quem deve encaminhar para o especialista e, após o atendimento especializado, receber o paciente de volta para a continuidade do cuidado (contrarreferência). Sem uma atenção básica forte, a rede fica \"decapitada\", sobrecarregando os níveis secundário e terciário com casos que poderiam ser resolvidos na base.",
+				"keywords": [
+					"Ordenadora da Rede",
+					"Centro Comunicador",
+					"Referência e Contrarreferência"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 329,
+		"title": "Regiões de Saúde e Decreto nº 7.508/2011",
+		"vignette": "O prefeito de um município de pequeno porte deseja construir um hospital de oncologia de alta tecnologia. O Secretário Estadual de Saúde intervém, explicando que, pelo Decreto nº 7.508/2011, o planejamento não deve ser isolado por cidade, mas sim pensado dentro de uma Região de Saúde. O prefeito argumenta que, como o município é autônomo, ele pode decidir sozinho onde colocar o hospital.",
+		"explanation": "O Decreto 7.508/2011 veio para modernizar a Lei 8.080/90. Ele introduziu ferramentas de gestão como:\n\n- **Mapa da Saúde:** Descrição geográfica da distribuição de recursos e serviços.\n- **Portas de Entrada:** Serviços de atendimento inicial (UBS, UPA, Atenção Psicossocial e Especiais de Acesso Aberto).\n- **Contrato Organizativo de Ação Pública (COAP):** Acordo entre entes federativos para organizar a rede.\n- **Relação Nacional de Ações e Serviços de Saúde (RENASES):** Lista de tudo que o SUS oferece.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Segundo o Decreto 7.508/2011, o que define uma 'Região de Saúde' e qual o objetivo de sua criação?",
+				"correctAnswer": "A Região de Saúde é um espaço geográfico contínuo constituído por agrupamentos de municípios limítrofes, delimitado a partir de identidades culturais, econômicas e sociais e de redes de comunicação e infraestrutura de transportes compartilhadas. O objetivo é integrar a organização, o planejamento e a execução de ações e serviços de saúde, otimizando recursos e garantindo a integralidade (nem todo município pequeno precisa de um hospital de câncer, mas a região deve ter acesso a um).",
+				"keywords": [
+					"Decreto 7.508/2011",
+					"Região de Saúde",
+					"Planejamento Regionalizado"
+				],
+				"order": 1
+			},
+			{
+				"text": "Para que uma Região de Saúde seja instituída, ela deve conter, no mínimo, quais tipos de ações e serviços de saúde?",
+				"correctAnswer": "Para ser considerada uma Região de Saúde, o território deve oferecer, no mínimo, cinco serviços: I - Atenção Primária; II - Urgência e Emergência; III - Atenção Psicossocial; IV - Atenção Ambulatorial Especializada e Hospitalar; V - Vigilância em Saúde. Sem essa estrutura mínima, não se consolida a autonomia da região para resolver os problemas de sua população.",
+				"keywords": ["Mapa da Saúde", "RENASES / RENAME"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 330,
+		"title": "Territorialização e Estratégia Saúde da Família (ESF)",
+		"vignette": "Um estudante de medicina observa que a UBS onde ele estuda faz o mapeamento das famílias, dividindo o bairro em microáreas sob responsabilidade de Agentes Comunitários de Saúde (ACS). Ele percebe que pessoas de outros bairros são orientadas a procurar a UBS de sua própria vizinhança, exceto em casos de urgência.",
+		"explanation": "A Política Nacional de Atenção Básica (PNAB) define as diretrizes para o funcionamento das UBS. Os elementos-chave são:\n\n1. **Adstrição:** Definir o público-alvo (geralmente 2.000 a 3.500 pessoas por equipe de saúde da família).\n2. **Longitudinalidade:** Cuidar da pessoa ao longo da vida, e não apenas no episódio da doença.\n3. **Coordenação do Cuidado:** A UBS deve saber onde o paciente está no sistema (se está no hospital ou no especialista).\n4. **Primeiro Contato:** Ser o serviço mais acessível e a primeira escolha do cidadão.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Quais são os conceitos de Territorialização e Adstrição de Clientela aplicados nesse cenário?",
+				"correctAnswer": "Territorialização é o processo de delimitação de uma área geográfica específica onde a equipe de saúde irá atuar, reconhecendo as condições de vida e riscos daquela população. A Adstrição de Clientela é o vínculo formal entre as pessoas que moram nesse território e a equipe de saúde. Isso permite o acompanhamento longitudinal (ao longo do tempo) e a responsabilização da equipe pelo cuidado daqueles indivíduos.",
+				"keywords": ["Territorialização", "Adstrição de Clientela"],
+				"order": 1
+			},
+			{
+				"text": "Por que a Estratégia Saúde da Família (ESF) é considerada o modelo prioritário de organização da Atenção Primária no Brasil, em contraste com o modelo tradicional de 'postinho de saúde' focado apenas em consultas agendadas?",
+				"correctAnswer": "A ESF é prioritária porque trabalha com a lógica da Proatividade e Vínculo. Enquanto o modelo tradicional é passivo (espera o doente chegar para tratar a queixa), a ESF vai até a comunidade (visitas domiciliares), foca na família e no contexto social, e atua na prevenção antes da doença agudizar. Ela busca a integralidade e a coordenação do cuidado, sendo a base das Redes de Atenção à Saúde.",
+				"keywords": [
+					"Longitudinalidade",
+					"PNAB (Política Nacional de Atenção Básica)",
+					"ESF (Estratégia Saúde da Família)"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 331,
+		"title": "Financiamento e Gestão de Recursos no SUS",
+		"vignette": "Um Secretário Municipal de Saúde recebe um repasse de verba federal. Ele fica em dúvida se o dinheiro vem carimbado para 'gastar apenas com soro fisiológico' ou se ele tem autonomia para decidir. Ao mesmo tempo, ele é informado que o município não receberá a verba do mês seguinte porque não enviou o relatório de gestão ao Conselho de Saúde e não aplicou o mínimo constitucional de recursos próprios na saúde.",
+		"explanation": "O financiamento do SUS é regido por diretrizes que garantem a descentralização e a autonomia controlada:\n\n- **Financiamento:** É regido pela Lei Complementar 141/2012.\n- **Mínimos Constitucionais:** Municípios e Estados devem aplicar porcentagens mínimas de sua receita de impostos na saúde (Municípios: 15%; Estados: 12%). A União aplica o valor do ano anterior corrigido pelo IPCA.\n- **O repasse é automático:** Se o município cumpre os requisitos da Lei 8.142, ele recebe o dinheiro sem necessidade de intermediação política direta.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Como funciona o repasse de recursos do Fundo Nacional de Saúde para os Fundos Municipais (transferência 'Fundo a Fundo') em termos de blocos de financiamento?",
+				"correctAnswer": "O financiamento do SUS ocorre de forma tripartite (União, Estados e Municípios). A União repassa os recursos de forma regular e automática, do Fundo Nacional para o Fundo Municipal (Fundo a Fundo). Atualmente, os recursos são organizados em dois grandes blocos: Bloco de Custeio (manutenção dos serviços já existentes) e Bloco de Investimento (obras e compra de equipamentos). Isso dá ao gestor autonomia para aplicar o recurso de custeio onde houver maior necessidade dentro daquela categoria.",
+				"keywords": [
+					"Fundo a Fundo",
+					"Bloco de Custeio vs. Bloco de Investimento",
+					"Regular e Automático"
+				],
+				"order": 1
+			},
+			{
+				"text": "Quais são as condições obrigatórias para que um município receba os recursos da União, segundo a Lei 8.142/90?",
+				"correctAnswer": "Para receber os recursos, o município deve ter obrigatoriamente: I - Fundo de Saúde; II - Conselho de Saúde (com composição paritária); III - Plano de Saúde; IV - Relatórios de Gestão; V - Contrapartida de recursos no orçamento próprio; VI - Comissão de elaboração do Plano de Carreira, Cargos e Salários (PCCS). Se o gestor não cumprir esses requisitos de transparência e estrutura, o repasse pode ser suspenso.",
+				"keywords": ["Contrapartida Orçamentária", "Lei Complementar 141/2012"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 332,
+		"title": "Política Nacional de Humanização (PNH) - HumanizaSUS",
+		"vignette": "Durante o atendimento em uma Unidade Básica de Saúde, um estudante de medicina observa que a recepção é fria, não há identificação dos profissionais e os pacientes aguardam em filas desorganizadas. Ao entrar no consultório, o médico assistente mal olha para o paciente, utiliza termos técnicos incompreensíveis e decide a conduta sem ouvir as preferências do indivíduo. O estudante lembra-se da Política Nacional de Humanização (PNH) - HumanizaSUS.",
+		"explanation": "A PNH busca alterar a relação entre gestores, trabalhadores e usuários. \n- **Diretrizes principais:** Acolhimento, Gestão Participativa (Cogestão), Ambiência (espaços saudáveis), Clínica Ampliada (olhar para além da doença) e Valorização do Trabalhador.\n- **Objetivo:** Combater a precarização do trabalho e o distanciamento afetivo/ético no cuidado à saúde.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Explique o conceito de Acolhimento na PNH. Ele se resume a uma recepção gentil ou a uma triagem de enfermagem?",
+				"correctAnswer": "O Acolhimento não é um espaço físico nem apenas uma recepção gentil; é uma postura ética e técnica de escuta qualificada. Ele deve ocorrer em todos os momentos do atendimento, por todos os profissionais. Diferente da triagem (que apenas classifica), o acolhimento pressupõe dar uma resposta resolutiva à demanda do paciente, responsabilizando-se pelo seu fluxo no sistema.",
+				"keywords": ["Acolhimento (Escuta qualificada)"],
+				"order": 1
+			},
+			{
+				"text": "O que significa a Transversalidade, um dos princípios da PNH, e como a Gestão Compartilhada (cogestão) mudaria a dinâmica dessa unidade?",
+				"correctAnswer": "A Transversalidade significa que a humanização não deve ser um \"setor\" isolado, mas deve atravessar todas as políticas e práticas do hospital ou UBS. A Gestão Compartilhada propõe que as decisões não sejam apenas \"de cima para baixo\" (do diretor/médico), mas incluam a participação dos trabalhadores e dos usuários na organização do serviço, gerando corresponsabilidade e autonomia.",
+				"keywords": [
+					"Transversalidade",
+					"Cogestão / Gestão Participativa",
+					"Protagonismo e Autonomia dos sujeitos",
+					"Clínica Ampliada"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 333,
+		"title": "Equipe Multiprofissional e Apoio Matricial na Atenção Primária",
+		"vignette": "Uma equipe da Estratégia Saúde da Família (ESF) está enfrentando dificuldades para manejar um grupo de pacientes com obesidade grave e transtornos mentais leves, que não melhoram apenas com a consulta médica tradicional. O médico da equipe solicita o apoio de profissionais de outras áreas (psicólogo, nutricionista, fisioterapeuta) que atendem várias unidades da região.",
+		"explanation": "A Atenção Primária não é feita apenas por médicos. \n- **Equipe Mínima da ESF:** Médico (preferencialmente de Família e Comunidade), Enfermeiro, Técnico de Enfermagem e Agentes Comunitários de Saúde (ACS). Pode incluir Dentista e Auxiliar de Saúde Bucal.\n- **eMulti (antigo NASF):** Apoia várias equipes de ESF. Não é \"porta aberta\" (o paciente não vai direto no nutricionista do NASF), ele precisa ser referenciado pela equipe de saúde da família para uma discussão de caso ou atendimento conjunto.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Como se chama a estratégia de apoio onde profissionais de diferentes núcleos de saber auxiliam as equipes de referência da ESF para aumentar sua resolutividade?",
+				"correctAnswer": "Chama-se Apoio Matricial (historicamente realizado pelo NASF - Núcleo de Apoio à Saúde da Família, hoje reorganizado em equipes multiprofissionais como a eMulti).",
+				"keywords": ["Apoio Matricial", "Resolutividade"],
+				"order": 1
+			},
+			{
+				"text": "Explique a diferença entre a responsabilidade da Equipe de Referência (médico/enfermeiro da família) e o papel do Apoio Matricial realizado pelos outros profissionais.",
+				"correctAnswer": "A Equipe de Referência possui a responsabilidade direta e longitudinal pelo paciente (vínculo principal). O Apoio Matricial oferece retaguarda assistencial e suporte técnico-pedagógico. Ou seja, o especialista não apenas atende o paciente (atendimento compartilhado), mas também discute o caso com o médico da família para que este aprenda a manejar situações semelhantes no futuro (educação permanente).",
+				"keywords": [
+					"Equipe de Referência",
+					"Interdisciplinaridade",
+					"Educação Permanente"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 334,
+		"title": "Sistemas de Informação em Saúde e Vigilância Epidemiológica",
+		"vignette": "Você é o médico de uma Unidade Básica de Saúde e percebe um aumento atípico de casos de exantema e febre em crianças na sua área de abrangência. Ao mesmo tempo, um bebê nasce em domicílio na mesma rua e a família o leva à unidade para o primeiro atendimento. Você precisa registrar esses eventos para que o Ministério da Saúde possa planejar a compra de vacinas e entender a taxa de natalidade da região.",
+		"explanation": "Os Sistemas de Informação em Saúde (SIS) são o \"cérebro\" do SUS. Sem dados confiáveis, não há planejamento. \n- **SINAN:** Alimenta a Vigilância Epidemiológica.\n- **SINASC:** Baseado na Declaração de Nascido Vivo (DNV).\n- **SIM:** Baseado na Declaração de Óbito (DO).\n- **SIA e SIH:** Sistemas focados no faturamento e na produção de serviços (Ambulatorial vs. Hospitalar).\n- **SISVAN:** Monitoramento Nutricional.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Diferencie a finalidade do **SINAN**, do **SINASC** e do **SIM**. Qual deles seria utilizado para cada uma das situações descritas (surto e nascimento)?",
+				"correctAnswer": "O **SINAN (Sistema de Informação de Agravos de Notificação)** é usado para registrar doenças e agravos de notificação compulsória (como o surto de exantema), permitindo a vigilância epidemiológica. O **SINASC (Sistema de Informação sobre Nascidos Vivos)** registra os dados do nascimento (como o bebê nascido em domicílio), gerando estatísticas vitais sobre natalidade e pré-natal. O **SIM (Sistema de Informações sobre Mortalidade)** coleta dados dos óbitos (Declaração de Óbito) para analisar as causas de morte na população.",
+				"keywords": [
+					"SINAN (Notificação Compulsória)",
+					"SINASC (DNV)",
+					"SIM (Estatísticas de Mortalidade)"
+				],
+				"order": 1
+			},
+			{
+				"text": "Um gestor afirma que o **SIH (Sistema de Informações Hospitalares)** é a melhor fonte para saber quantas consultas de rotina foram feitas na rede básica. Por que essa afirmação está tecnicamente errada e qual seria o sistema correto para essa análise?",
+				"correctAnswer": "Está errada porque o **SIH** coleta dados exclusivamente da **assistência hospitalar** (internações via AIH). Para monitorar consultas, procedimentos e a produção da rede ambulatorial e básica (UBS), o sistema correto é o **SIA (Sistema de Informações Ambulatoriais)** ou, na atenção básica atualizada, o **e-SUS AB (SISAB)**. Confundir esses sistemas impede que o gestor saiba onde a demanda realmente está sobrecarregada.",
+				"keywords": ["SIA vs. SIH", "Indicadores de Saúde"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 335,
+		"title": "Planejamento Estratégico e Intersetorialidade no SUS",
+		"vignette": "Um novo prefeito assume a cidade e quer mudar todas as metas de saúde do mês para o próximo. O Conselho Municipal de Saúde o adverte que o planejamento do SUS não é errático e deve seguir instrumentos legais que vinculam o orçamento à execução, para evitar que obras fiquem inacabadas ou programas sejam interrompidos por capricho político.",
+		"explanation": "O planejamento do SUS é cíclico e ascendente:\n1. **Plano de Saúde (Quadrienal):** A visão de longo prazo.\n2. **Programação Pactuada e Integrada (PPI):** Define quem faz o quê e quanto cada um recebe para isso (referência entre municípios).\n3. **Intersetorialidade:** O reconhecimento de que o SUS sozinho não resolve a saúde (precisa de água tratada, escola, segurança e emprego).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "O que são o **Plano de Saúde** e o **Relatório Anual de Gestão (RAG)**? Qual a relação entre eles?",
+				"correctAnswer": "O **Plano de Saúde** é o documento de diretrizes e metas para um período de 4 anos (base para a execução), detalhando o que será feito. O **Relatório Anual de Gestão (RAG)** é o instrumento que o gestor apresenta ao final de cada ano ao Conselho de Saúde para prestar contas, demonstrando se as metas do Plano foram atingidas e como o dinheiro foi gasto. O RAG é a prova de transparência e controle social.",
+				"keywords": [
+					"Plano de Saúde",
+					"Relatório Anual de Gestão (RAG)",
+					"Transparência e Controle"
+				],
+				"order": 1
+			},
+			{
+				"text": "No SUS, fala-se muito em \"Intersetorialidade\". Como o **Programa Saúde na Escola (PSE)** exemplifica esse conceito e por que ele é mais eficiente do que o médico agir sozinho dentro do consultório?",
+				"correctAnswer": "**Intersetorialidade** é a articulação da saúde com outros setores (Educação, Assistência Social, Meio Ambiente). O **PSE** exemplifica isso ao levar a saúde para dentro da escola (Educação). É mais eficiente porque atua nos determinantes sociais: o médico no consultório trata a verminose, mas o PSE trabalha com a escola a higiene e o saneamento, evitando que a criança reinfecte, além de detectar precocemente problemas de visão ou audição que prejudicam o aprendizado.",
+				"keywords": ["Intersetorialidade", "Programa Saúde na Escola (PSE)"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 336,
+		"title": "Ética, Autonomia e Vigilância em Saúde",
+		"vignette": "Um paciente com tuberculose abandona o tratamento e se recusa a voltar à unidade. A enfermeira da família diz que \"não podemos fazer nada, pois o paciente tem autonomia\". O médico, porém, lembra que a Tuberculose é uma doença de notificação compulsória e que o abandono gera um risco para toda a comunidade.",
+		"explanation": "A Vigilância em Saúde é composta por quatro pilares que o estudante deve dominar:\n1. **Epidemiológica:** Doenças, surtos e agravos.\n2. **Sanitária:** Riscos no consumo e serviços.\n3. **Ambiental:** Água, ar, vetores e desastres.\n4. **Do Trabalhador:** Riscos ocupacionais.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "O direito à autonomia individual é absoluto no SUS? Como a **Vigilância em Saúde** justifica a intervenção do Estado em casos de doenças transmissíveis?",
+				"correctAnswer": "Não, o direito à autonomia não é absoluto quando entra em conflito com a **Saúde Pública**. O princípio da supremacia do interesse público sobre o privado permite que o Estado intervenha (busca ativa, isolamento ou tratamento supervisionado - TDO) para proteger a coletividade de um surto ou epidemia. A Vigilância em Saúde tem o poder-dever de agir para quebrar a cadeia de transmissão.",
+				"keywords": [
+					"Saúde Pública vs. Autonomia Individual",
+					"Busca Ativa",
+					"Quebra da Cadeia de Transmissão"
+				],
+				"order": 1
+			},
+			{
+				"text": "O que é a **Notificação Compulsória** e quem é o responsável por fazê-la? (Apenas o médico ou outros profissionais/cidadãos?)",
+				"correctAnswer": "A Notificação Compulsória é a comunicação obrigatória às autoridades de saúde sobre a ocorrência de determinadas doenças ou eventos de saúde pública. Ela é obrigatória para **médicos e outros profissionais de saúde**, mas a lei estende a responsabilidade também aos **responsáveis por estabelecimentos públicos ou privados de saúde e ensino**, e até a qualquer cidadão que tenha conhecimento do agravo.",
+				"keywords": [
+					"Notificação Compulsória",
+					"Vigilância Ambiental e do Trabalhador"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 337,
+		"title": "Assistência Farmacêutica e Judicialização no SUS",
+		"vignette": "Um paciente com diabetes tipo 2 comparece à UBS com uma receita de um endocrinologista particular prescrevendo uma insulina análoga de última geração e um monitor de glicose de marca específica, ambos de alto custo. O médico da UBS explica que esses itens não estão na lista de medicamentos distribuídos pelo município. O paciente ameaça entrar na justiça, alegando que 'o SUS é integral e deve fornecer tudo o que o médico prescreve'.",
+		"explanation": "A assistência farmacêutica no SUS é dividida em três componentes: 1. **Básico:** Medicamentos da atenção primária (financiado por Município e União). 2. **Estratégico:** Para doenças de relevância epidemiológica (Tuberculose, HIV, Hanseníase - financiado pela União). 3. **Especializado (Alto Custo):** Medicamentos para doenças raras ou crônicas graves (financiado pela União e Estado).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Diferencie RENAME de RENASES. Como esses instrumentos garantem a sustentabilidade do SUS frente ao princípio da Integralidade?",
+				"correctAnswer": "A RENAME (Relação Nacional de Medicamentos Essenciais) é a lista de fármacos que o Estado se compromete a fornecer. A RENASES (Relação Nacional de Ações e Serviços de Saúde) é o catálogo de todos os serviços e procedimentos oferecidos pelo SUS. A Integralidade não significa 'oferta ilimitada', mas sim que o sistema deve oferecer tudo o que foi pactuado como eficaz e seguro para a população, garantindo que o recurso público seja usado para o que traz maior benefício coletivo (Equidade).",
+				"keywords": ["RENAME", "RENASES", "Assistência Farmacêutica"],
+				"order": 1
+			},
+			{
+				"text": "O SUS deve fornecer qualquer medicamento prescrito por um médico, mesmo que esteja fora da lista oficial? Explique o conceito de 'Uso Racional de Medicamentos' nesse contexto.",
+				"correctAnswer": "Não. O fornecimento de medicamentos fora da RENAME deve ser excepcional e justificado por evidências científicas de que as opções da lista oficial falharam ou são contraindicadas para aquele paciente específico. O Uso Racional preconiza que o paciente receba o medicamento apropriado à sua necessidade clínica, na dose correta, por um período adequado e ao menor custo para ele e para a sociedade. A 'judicialização da saúde' sem critérios técnicos fere a equidade, pois retira recursos do coletivo para beneficiar indivíduos isolados.",
+				"keywords": ["Judicialização da Saúde", "Uso Racional de Medicamentos"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 338,
+		"title": "Regulação em Saúde e o Complexo Regulador",
+		"vignette": "Uma paciente é diagnosticada com uma colelitíase sintomática na UBS. O médico generalista indica cirurgia e insere o pedido no sistema de computador. A paciente pergunta: 'Doutor, vou sair daqui com o dia da cirurgia marcado?'. O médico explica que o pedido passará por um médico regulador que avaliará a prioridade do caso em relação a todos os outros pacientes da cidade.",
+		"explanation": "A Regulação no SUS é o que organiza o fluxo das Redes de Atenção à Saúde (RAS). Ela evita que os hospitais fiquem superlotados com casos leves e que pacientes graves fiquem 'esquecidos' na atenção básica. O médico regulador é quem tem a visão macro da disponibilidade de recursos da região.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Qual o papel do Complexo Regulador (ou Sistema de Regulação - SISREG) no SUS e como ele aplica o princípio da Equidade?",
+				"correctAnswer": "O Complexo Regulador é a 'central de inteligência' que faz a mediação entre a necessidade do paciente (UBS) e a oferta de leitos ou exames (Hospitais/Clínicas). Ele aplica a Equidade ao classificar os riscos: um paciente com suspeita de câncer terá prioridade na fila de biópsia sobre um paciente com uma condição benigna, garantindo que o recurso chegue primeiro a quem corre mais risco de morte ou sequela.",
+				"keywords": [
+					"SISREG (Sistema de Regulação)",
+					"Equidade (Classificação de Risco)",
+					"Complexo Regulador"
+				],
+				"order": 1
+			},
+			{
+				"text": "O que é o Protocolo de Acesso e por que ele é fundamental para evitar o 'fura-fila' por influência política?",
+				"correctAnswer": "O Protocolo de Acesso é o conjunto de critérios técnicos e clínicos objetivos que definem a prioridade de cada caso (ex: escala de cores ou pontuação). Ele é fundamental para garantir a transparência e a impessoalidade na gestão das filas, assegurando que o acesso seja determinado pela gravidade clínica e não por amizades ou indicações políticas.",
+				"keywords": ["Protocolos Clínicos de Acesso", "Transparência"],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 339,
+		"title": "Financiamento da Atenção Primária: Modelo Previne Brasil",
+		"vignette": "O Secretário de Saúde de um município convoca os médicos das UBS para uma reunião. Ele explica que, a partir de agora, o repasse de verbas federais para a cidade não será mais baseado apenas no número de habitantes (PAB Fixo), mas sim no desempenho da equipe em indicadores como: percentual de gestantes com pré-natal iniciado no 1º trimestre e controle de hemoglobina glicada em diabéticos.",
+		"explanation": "O Previne Brasil mudou a lógica do financiamento: agora o 'dinheiro segue o paciente cadastrado'. Isso força as equipes a buscarem a população (territorialização) e a melhorarem a qualidade do atendimento para atingir as metas. É um modelo focado em resultados clínicos e não apenas na existência da unidade de saúde.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Qual o nome do atual modelo de financiamento da Atenção Primária no Brasil (instituído em 2019)?",
+				"correctAnswer": "O modelo chama-se Previne Brasil.",
+				"keywords": ["Previne Brasil"],
+				"order": 1
+			},
+			{
+				"text": "Quais são os três pilares que definem quanto recurso uma equipe de Saúde da Família receberá conforme esse modelo?",
+				"correctAnswer": "Os três pilares são: 1. Capitação Ponderada: Valor baseado no número de pessoas cadastradas na equipe, com maior peso para populações vulneráveis (crianças, idosos, beneficiários de auxílios sociais). 2. Pagamento por Desempenho: Valor variável conforme o alcance de metas em indicadores de saúde (ex: vacinação, citopatológico, pré-natal). 3. Incentivo para Ações Estratégicas: Verba extra para programas específicos (ex: Saúde na Hora, equipes de consultório na rua, residência médica).",
+				"keywords": [
+					"Capitação Ponderada",
+					"Pagamento por Desempenho",
+					"Indicadores de Saúde",
+					"Cadastro de Usuários"
+				],
+				"order": 2
+			}
+		]
+	},
+	{
+		"id": 340,
+		"title": "Níveis de Prevenção de Leavell & Clark",
+		"vignette": "Um médico do 4º ano, durante seu estágio, atende três pacientes: 1. Um jovem que veio tomar a vacina contra HPV; 2. Um homem de 50 anos, assintomático, que veio realizar rastreio de câncer colorretal; 3. Uma idosa com insuficiência cardíaca que já usa 5 medicações e o médico decide retirar duas que estão causando tontura e queda, sem benefício comprovado.",
+		"explanation": "- **Primária:** Reduz a incidência (Vacina, camisinha, saneamento). - **Secundária:** Diagnóstico precoce (Mamografia, Papanicolau). - **Terciária:** Reabilitação e redução de sequelas (Fisioterapia pós-AVC, controle de diabetes para evitar amputação). - **Quaternária:** Identificar pacientes em risco de sobremedicalização e protegê-los de intervenções desnecessárias.",
+		"status": "published",
+		"difficulty": "student",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Medicina Preventiva e Social::Sistema de Saúde e Políticas::Legislação e Estrutura do SUS"
+		],
+		"questions": [
+			{
+				"text": "Classifique a ação do médico em cada caso de acordo com os Níveis de Prevenção de Leavell & Clark (Primária, Secundária, Terciária ou Quaternária).",
+				"correctAnswer": "1. Prevenção Primária: A vacina age antes da doença existir, removendo causas ou aumentando a resistência (evita a incidência). 2. Prevenção Secundária: O rastreio busca detectar a doença em fase inicial/assintomática para tratamento precoce (evita a prevalência/mortalidade). 3. Prevenção Quaternária: A retirada de medicamentos desnecessários ou prejudiciais visa evitar a iatrogenia (dano causado pelo excesso de intervenção médica).",
+				"keywords": [
+					"Prevenção Primária, Secundária e Terciária",
+					"Rastreamento (Screening)",
+					"Promoção da Saúde"
+				],
+				"order": 1
+			},
+			{
+				"text": "Por que a Prevenção Quaternária é considerada um princípio ético fundamental para o médico que atua no SUS?",
+				"correctAnswer": "No SUS, a Prevenção Quaternária é vital pois protege o paciente de intervenções médicas excessivas ou desnecessárias (excesso de exames, 'medicalização da vida') e, ao mesmo tempo, evita o desperdício de recursos públicos, garantindo que o sistema seja sustentável e seguro.",
+				"keywords": ["Prevenção Quaternária", "Iatrogenia"],
+				"order": 2
+			}
+		]
+	}
+]
