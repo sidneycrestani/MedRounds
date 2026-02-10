@@ -1005,9 +1005,9 @@
 		],
 		"questions": [
 			{
-				"text": "É recomendado suspender o tratamento no 7º ou 10º dia, seguindo o protocolo de uma Pneumonia Adquirida na Comunidade (PAC) não complicada?",
+				"text": "É recomendado suspender o tratamento no 7º dia, seguindo o protocolo de uma Pneumonia Adquirida na Comunidade (PAC) não complicada?",
 				"correctAnswer": "Não.",
-				"keywords": ["Má vascularização do abscesso"],
+				"keywords": ["Não"],
 				"order": 1
 			},
 			{
