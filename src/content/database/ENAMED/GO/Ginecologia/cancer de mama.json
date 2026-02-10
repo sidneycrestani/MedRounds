@@ -1,0 +1,509 @@
+[
+	{
+		"id": 358,
+		"title": "Manejo Clínico e Classificação BI-RADS em Mastologia",
+		"vignette": "Uma paciente de 52 anos, assintomática, realiza mamografia de rastreamento anual. O laudo descreve um nódulo de contornos levemente irregulares em quadrante superior externo da mama direita, medindo 1,2 cm, associado a microcalcificações pleomórficas agrupadas. O radiologista classifica o achado como BI-RADS 4. Em contrapartida, uma segunda paciente de 45 anos apresenta um nódulo de limites precisos, ovalado e circunscrito, classificado como BI-RADS 3.",
+		"explanation": "O sistema BI-RADS (*Breast Imaging-Reporting and Data System*) padroniza a comunicação entre o radiologista e o clínico. A regra de ouro é: \n- **BI-RADS 1 e 2:** Seguimento de rotina (anual após os 40 anos pela FEBRASGO/SBM ou bienal dos 50-69 anos pelo Ministério da Saúde). \n- **BI-RADS 3:** Risco baixo (<2%), acompanhamento semestral por 2 a 3 anos para confirmar estabilidade. \n- **BI-RADS 4 e 5:** Suspeitos (>2% e >95% respectivamente), exigem diagnóstico tecidual. \n- **BI-RADS 6:** Câncer já comprovado por biópsia (usado para controle de quimioterapia neoadjuvante).",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual a conduta imediata para a paciente BI-RADS 4 e qual a probabilidade teórica de malignidade que justifica essa ação?",
+				"correctAnswer": "A conduta é a biópsia tecidual (preferencialmente por agulha grossa/Core Biopsy). A classificação BI-RADS 4 indica uma suspeita de malignidade que varia de 2% a 95%. Como o risco de câncer é não desprezível, a confirmação histopatológica é mandatória antes de qualquer definição terapêutica.",
+				"keywords": ["Core Biopsy", "Valor Preditivo Positivo (VPP)"],
+				"order": 1
+			},
+			{
+				"text": "Para a paciente BI-RADS 3, qual o manejo recomendado e por que não se indica biópsia imediata neste caso?",
+				"correctAnswer": "O manejo é o controle radiológico em curto prazo (repetir o exame em 6 meses). Não se indica biópsia imediata porque lesões BI-RADS 3 possuem um risco de malignidade menor que 2%. O objetivo do seguimento é observar a estabilidade da lesão; se houver alteração de forma, tamanho ou densidade, a categoria é reclassificada para 4 e a biópsia é realizada.",
+				"keywords": ["Estabilidade radiológica", "Rastreamento populacional"],
+				"order": 2
+			},
+			{
+				"text": "Se o laudo da primeira paciente fosse BI-RADS 0, qual seria o significado técnico e qual a conduta necessária?",
+				"correctAnswer": "BI-RADS 0 significa um exame incompleto ou inconclusivo. A conduta é realizar exames complementares (incidências mamográficas adicionais, compressão focal, magnificação ou ultrassonografia) ou comparar com exames anteriores para que a lesão possa ser adequadamente categorizada entre 1 e 5.",
+				"keywords": ["Incidências complementares"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 359,
+		"title": "Diagnóstico Diferencial e Conduta no Derrame Papilar",
+		"vignette": "Duas pacientes procuram o mastologista com queixa de fluxo papilar. Paciente A: 32 anos, saída de secreção bilateral por múltiplos ductos, de aspecto lácteo, desencadeada por expressão. Paciente B: 58 anos, saída de secreção unilateral, espontânea, por um único poro (uniductal), de aspecto 'água de rocha' (seroso/cristalino).",
+		"explanation": "O diagnóstico diferencial do derrame papilar é crucial para evitar biópsias desnecessárias em derrames fisiológicos e não negligenciar cânceres iniciais. Fluxos bilaterais e multiductais raramente são cirúrgicos. Fluxos 'suspeitos' (unilaterais, espontâneos, coloração hemática ou cristalina) exigem propedêutica armada. Lembre-se: citologia do líquido papilar tem baixo valor preditivo negativo; se o fluxo é suspeito, a exploração cirúrgica é o padrão-ouro.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual das duas pacientes apresenta um derrame papilar patológico e quais características clínicas definem essa gravidade?",
+				"correctAnswer": "A Paciente B apresenta o derrame patológico. Las características que definem o risco de malignidade são: ser espontâneo, unilateral, uniductal (um único poro) e com aspecto serossanguinolento ou cristalino ('água de rocha').",
+				"keywords": ["Derrame papilar espontâneo", "Uniductal vs. Multiductal"],
+				"order": 1
+			},
+			{
+				"text": "Qual o principal tumor benigno causador de derrame papilar sanguinolento/seroso e qual a conduta frente ao caso da Paciente B?",
+				"correctAnswer": "O principal causador benigno é o Papiloma Intraductal. No entanto, devido à idade da paciente (pós-menopausa) e às características do fluxo, deve-se afastar carcinoma (como o ductal in situ). A conduta é a investigação por imagem (USG e Mamografia) e a exérese do ducto principal (microdococtomia) para análise histopatológica, mesmo que a imagem seja negativa.",
+				"keywords": [
+					"Papiloma intraductal",
+					"Microdococtomia",
+					"Água de rocha (seroso)"
+				],
+				"order": 2
+			},
+			{
+				"text": "Explique o mecanismo fisiológico ou sistêmico que provavelmente justifica o quadro da Paciente A.",
+				"correctAnswer": "O quadro da Paciente A sugere galactorreia, geralmente causada por hiperprolactinemia. Isso pode ocorrer por uso de medicamentos (neurolépticos, anti-hipertensivos), estímulo mecânico excessivo, hipotireoidismo ou adenomas de hipófise. Não é uma doença primária da mama, mas uma manifestação sistêmica/endócrina.",
+				"keywords": ["Derrame papilar espontâneo"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 360,
+		"title": "Biologia Tumoral: Lesões Benignas, In Situ e Invasoras",
+		"vignette": "Um médico avalia dois laudos de biópsia (Core Biopsy) de nódulos mamários: 1. Paciente X (30 anos): Proliferação de estroma e epitélio, bem delimitada, sem atipias, compatível com Fibroadenoma. 2. Paciente Y (48 anos): Células epiteliais malignas que não ultrapassam a membrana basal, classificadas como Carcinoma Ductal In Situ (CDIS).",
+		"explanation": "A biologia do câncer de mama divide as lesões em não invasivas (in situ) e invasivas. O tratamento moderno é guiado pela imuno-histoquímica: \n- **Luminal:** Receptores hormonais positivos (melhor prognóstico, responde à hormonioterapia). \n- **HER2 positivo:** Super-expressão da proteína HER2 (tratamento com anticorpos monoclonais como Trastuzumabe). \n- **Triplo-negativo:** Negativo para receptores e HER2 (mais agressivo, restrito à quimioterapia).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Com base no mecanismo de disseminação, por que o diagnóstico da Paciente Y (CDIS) é considerado um 'pré-câncer' e qual o risco de não tratá-lo?",
+				"correctAnswer": "O CDIS é considerado 'in situ' porque as células malignas estão confinadas ao sistema ductal, sem invadir o estroma e, portanto, sem acesso aos vasos sanguíneos e linfáticos (risco zero de metástase nesse estágio). No entanto, se não tratado, ele é um precursor direto que pode evoluir para Carcinoma Ductal Invasor em cerca de 30-50% dos casos.",
+				"keywords": [
+					"Membrana basal",
+					"Precursor neoplásico",
+					"Microcalcificações (achado comum no CDIS)"
+				],
+				"order": 1
+			},
+			{
+				"text": "O Fibroadenoma da Paciente X tem potencial de malignização? Qual a conduta padrão para este nódulo se ele for pequeno e estável?",
+				"correctAnswer": "O Fibroadenoma é uma lesão benigna e não tem potencial de malignização significativo. A conduta padrão é a observação clínica e ultrassonográfica (expectante). A cirurgia só é indicada se houver crescimento rápido, dor ou desejo da paciente por razões estéticas/ansiedade.",
+				"keywords": [],
+				"order": 2
+			},
+			{
+				"text": "No caso de um diagnóstico de Carcinoma Invasor, quais são os três marcadores da imuno-histoquímica essenciais para definir o prognóstico e o tratamento sistêmico?",
+				"correctAnswer": "Os marcadores são: Receptores Hormonais (Estrogênio e Progesterona), HER2 (receptor do fator de crescimento epidérmico humano 2) e o marcador de proliferação celular Ki-67.",
+				"keywords": ["Receptores Hormonais", "HER2"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 361,
+		"title": "Mastalgia Cíclica e Alterações Funcionais Benignas da Mama",
+		"vignette": "Uma paciente de 32 anos procura o ambulatório queixando-se de dor mamária bilateral (\"pontadas\"), que piora significativamente na semana que antecede a menstruação e melhora logo após o fluxo. Ao exame físico, você palpa áreas de adensamento difuso, levemente nodulares e móveis em ambos os quadrantes superiores externos, sem linfonodomegalias axilares.",
+		"explanation": "A AFBM (antigamente chamada de \"displasia mamária\") é a causa mais comum de consulta por mastologia. O médico deve saber diferenciar a dor cíclica (hormonal) da dor acíclica (que pode ser muscular, costocondrite ou, raramente, patologia mamária focal). O manejo é majoritariamente expectante, reservando fármacos como o Tamoxifeno apenas para casos de dor grave e refratária que impactam a qualidade de vida.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico clínico mais provável e qual a fisiopatologia por trás desse quadro de dor e nodularidade cíclica?",
+				"correctAnswer": "O diagnóstico é Alterações Funcionais Benignas da Mama (AFBM), especificamente a Mastalgia Cíclica. A fisiopatologia está ligada ao desequilíbrio hormonal ou sensibilidade aumentada dos receptores mamários ao estrogênio e à progesterona durante o ciclo menstrual, causando edema do estroma e distensão dos ductos.",
+				"keywords": ["Mastalgia cíclica", "Adensamentos"],
+				"order": 1
+			},
+			{
+				"text": "Diante da idade da paciente e das características do exame físico, qual o primeiro exame de imagem a ser solicitado e por que a mamografia não é a primeira escolha aqui?",
+				"correctAnswer": "O primeiro exame é a Ultrassonografia (USG) de mamas. Em mulheres jovens (geralmente abaixo dos 35-40 anos), o parênquima mamário é muito denso (muito tecido glandular e pouco gorduroso), o que torna a mamografia pouco sensível (\"branca demais\"), dificultando a identificação de lesões. A USG é superior para distinguir massas sólidas de císticas em mamas densas.",
+				"keywords": ["Mama densa", "Ultrassonografia mamária"],
+				"order": 2
+			},
+			{
+				"text": "Qual a orientação terapêutica inicial e o que deve ser dito à paciente sobre o risco de câncer de mama associado a essa condição?",
+				"correctAnswer": "A orientação inicial é o esclarecimento e suporte (medidas comportamentais): uso de sutiãs com melhor sustentação, dieta hipolipídica e redução de cafeína (embora a evidência seja variável). Deve-se tranquilizar a paciente informando que a AFBM não é uma lesão pré-neoplásica e não aumenta o risco de desenvolvimento de câncer de mama.",
+				"keywords": ["Suporte clínico"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 362,
+		"title": "Diagnóstico Diferencial de Mastites e Carcinoma Inflamatório",
+		"vignette": "Uma paciente de 38 anos apresenta uma área inflamatória na mama esquerda, com calor, rubor, edema cutâneo difuso e aspecto de \"casca de laranja\" (peau d'orange), sem flutuação (abscesso). Ela não está amamentando. O médico prescreveu cefalexina por 10 dias, mas a paciente retorna após duas semanas sem nenhuma melhora dos sintomas.",
+		"explanation": "A regra de ouro na mastologia é: \"toda mastite que não responde à antibioticoterapia em 7 a 10 dias deve ser biopsiada\". O carcinoma inflamatório é um diagnóstico clínico-patológico. Ele já é classificado, no mínimo, como estágio T4d (estadiamento localmente avançado), independentemente do tamanho do tumor, devido ao comprometimento cutâneo extenso.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual o principal diagnóstico diferencial que deve ser investigado diante da falha do tratamento para mastite em uma paciente fora do ciclo puerperal?",
+				"correctAnswer": "O principal diagnóstico a ser afastado é o Carcinoma Inflamatório. É uma forma agressiva de câncer de mama que mimetiza clinicamente uma mastite.",
+				"keywords": ["Carcinoma Inflamatório", "Mastite não-puerperal"],
+				"order": 1
+			},
+			{
+				"text": "Qual o mecanismo fisiopatológico que explica o aspecto de \"casca de laranja\" na pele da mama nesse contexto?",
+				"correctAnswer": "O aspecto de \"casca de laranja\" ocorre devido à obstrução dos vasos linfáticos dérmicos por êmbolos de células tumorais. Isso causa edema da derme, mas como a pele está ancorada pelos folículos pilosos e ligamentos de Cooper, ela sofre depressões pontuais, criando a textura característica.",
+				"keywords": [
+					"Peau d'orange (casca de laranja)",
+					"Êmbolos linfáticos tumorais"
+				],
+				"order": 2
+			},
+			{
+				"text": "Qual o procedimento diagnóstico definitivo a ser realizado imediatamente?",
+				"correctAnswer": "A conduta é a biópsia de pele (punch) associada à biópsia do parênquima mamário (se houver nódulo visível) e exames de imagem (mamografia/USG) para estadiamento.",
+				"keywords": ["Biópsia de pele (Punch)"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 363,
+		"title": "Rastreamento de Câncer de Mama: Risco Habitual vs. Alto Risco",
+		"vignette": "Você está atendendo duas mulheres sobre rastreamento de câncer de mama: 1. Ana (42 anos): Sem histórico familiar de câncer, exame físico normal. 2. Bia (32 anos): Cuja mãe teve câncer de mama aos 38 anos e a irmã aos 35 anos.",
+		"explanation": "Existem divergências entre o Ministério da Saúde (MS) e as Sociedades Médicas (SBM). O MS preconiza rastreamento bienal dos 50 aos 69 anos. Para provas de residência e prática clínica de excelência, segue-se a SBM: anual a partir dos 40 anos. O alto risco (BRCA positivo, radioterapia prévia de tórax, histórico familiar forte) exige um \"rastreamento individualizado\", muitas vezes incluindo RM.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Seguindo as recomendações da Sociedade Brasileira de Mastologia (SBM/FEBRASGO), qual a conduta de rastreamento para a Ana?",
+				"correctAnswer": "Para Ana (risco habitual), a recomendação é mamografia anual a partir dos 40 anos.",
+				"keywords": ["Rastreamento anual", "Risco habitual vs. Alto risco"],
+				"order": 1
+			},
+			{
+				"text": "Para a Bia, considerada paciente de alto risco, quando deve iniciar o rastreamento e qual exame adicional à mamografia pode ser indicado?",
+				"correctAnswer": "Para pacientes com parente de primeiro grau com câncer de mama pré-menopausa, o rastreamento deve começar 10 anos antes da idade do diagnóstico do parente mais jovem (no caso da Bia, aos 25 anos), mas geralmente não antes dos 25 anos. Além da mamografia (ou USG se muito jovem), indica-se frequentemente a Ressonância Magnética (RM) com contraste anual devido à alta sensibilidade em mamas densas e alto risco genético.",
+				"keywords": [
+					"Ressonância Magnética (RM)",
+					"Critérios de Anderson (10 anos antes)"
+				],
+				"order": 2
+			},
+			{
+				"text": "Por que o rastreamento para a população geral (risco habitual) não começa antes dos 40 anos? Justifique com base na biologia tecidual e epidemiologia.",
+				"correctAnswer": "Antes dos 40 anos, a incidência de câncer de mama na população geral é baixa, o que geraria muitos resultados falso-positivos. Além disso, a mama jovem é mais sensível à radiação ionizante (radiossensibilidade) e a densidade glandular prejudica a acurácia da mamografia, reduzindo o benefício do rastreamento populacional precoce.",
+				"keywords": ["Radiossensibilidade"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 364,
+		"title": "Fatores de Risco Hormonais e Genética Molecular no Câncer de Mama",
+		"vignette": "Considere duas pacientes que desejam discutir prevenção e risco: 1. Paciente G: 55 anos, obesa, menarca aos 9 anos, nulípara (nunca engravidou), em terapia de reposição hormonal (TRH) há 7 anos. 2. Paciente H: 28 anos, cuja mãe e tia materna tiveram câncer de mama e ovário. O teste genético confirmou mutação no gene BRCA1.",
+		"explanation": "Cerca de 90% dos cânceres de mama são esporádicos. O médico deve identificar o grupo de 5-10% (hereditário) para oferecer vigilância rigorosa. Os principais fatores de risco são: ser mulher, idade avançada e exposição estrogênica. Lembre-se: amamentar é um fator protetor, pois reduz o número de ciclos ovulatórios e promove a diferenciação do epitélio mamário.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Explique por que a história reprodutiva e a obesidade da Paciente G aumentam o seu risco para câncer de mama. Qual o 'vilão' comum nesses cenários?",
+				"correctAnswer": "O 'vilão' é a exposição prolongada e cumulativa ao estrogênio sem o contraponto da progesterona da gestação/lactação. A menarca precoce aumenta o tempo de exposição hormonal. A nuliparidade priva a mama da diferenciação celular completa que ocorre na gravidez. A obesidade na pós-menopausa é fator de risco porque o tecido adiposo converte precursores em estrogênio (via enzima aromatase).",
+				"keywords": [
+					"Janela estrogênica",
+					"Conversão periférica (Aromatase)",
+					"Nuliparidade"
+				],
+				"order": 1
+			},
+			{
+				"text": "Para a Paciente H (BRCA1 positivo), além do câncer de mama, qual outro câncer ginecológico tem risco muito aumentado e qual a estratégia de redução de risco cirúrgico (profilaxia) mais aceita para mama e ovário?",
+				"correctAnswer": "Pacientes com mutação BRCA1 têm alto risco para Câncer de Ovário. As estratégias de redução de risco incluem a Mastectomia Bilateral Redutora de Risco e a Salpingo-oforectomia Bilateral Redutora de Risco (geralmente após a prole estar constituída).",
+				"keywords": ["Mutação BRCA 1 e 2", "Mastectomia profilática"],
+				"order": 2
+			},
+			{
+				"text": "O que caracteriza uma 'mutação germinativa' (como a do BRCA) em contraste com as mutações que ocorrem na maioria dos casos de câncer de mama esporádico?",
+				"correctAnswer": "Uma mutação germinativa está presente em todas as células do indivíduo (herdada dos pais), conferindo suscetibilidade em todo o tecido. O câncer esporádico (90% dos casos) resulta de mutações somáticas, que ocorrem ao longo da vida apenas naquela célula específica da mama, geralmente por fatores ambientais ou erros de replicação.",
+				"keywords": ["Mutação BRCA 1 e 2"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 365,
+		"title": "Planejamento Terapêutico: Cirurgia, Neoadjuvância e Linfonodo Sentinela",
+		"vignette": "No ambulatório de oncologia mamária, você avalia dois casos para planejamento terapêutico: - Caso 1: Nódulo de 1,5 cm, sem linfonodos palpáveis na axila (estádio clínico inicial). - Caso 2: Nódulo de 6,0 cm, fixo à parede torácica, com linfonodos axilares endurecidos e fixos entre si (estádio localmente avançado).",
+		"explanation": "O tratamento do câncer de mama é um tripé: Cirurgia, Radioterapia e Terapia Sistêmica (Quimio/Hormono/Alvo). Cirurgia Conservadora: Exige tumor pequeno em relação à mama + Radioterapia obrigatória. Mastectomia: Indicada para tumores grandes, multicêntricos ou desejo da paciente. Terapia Sistêmica: Definida pela Imuno-histoquímica (ex: Tamoxifeno para Receptores Hormonais positivos; Trastuzumabe para HER2 positivo).",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "No Caso 1, se a paciente optar por cirurgia conservadora (quadrantectomia), qual tratamento adjuvante é obrigatório para reduzir o risco de recidiva local?",
+				"correctAnswer": "A Radioterapia é obrigatória após qualquer cirurgia conservadora da mama. O objetivo é esterilizar possíveis focos microscópicos de doença remanescente no tecido mamário preservado.",
+				"keywords": ["Radioterapia adjuvante"],
+				"order": 1
+			},
+			{
+				"text": "No Caso 2, qual a sequência lógica do tratamento: operamos primeiro ou iniciamos com quimioterapia? Justifique o nome e o objetivo dessa estratégia.",
+				"correctAnswer": "Iniciamos com Quimioterapia Neoadjuvante (antes da cirurgia). O objetivo é reduzir o volume tumoral ('downstaging') para tentar tornar uma lesão inoperável em operável, ou permitir uma cirurgia menos mutilante, além de tratar precocemente a doença micrometastática sistêmica.",
+				"keywords": ["Quimioterapia neoadjuvante", "Downstaging"],
+				"order": 2
+			},
+			{
+				"text": "O que é a técnica do Linfonodo Sentinela e por que ela revolucionou a cirurgia do câncer de mama em relação ao esvaziamento axilar radical?",
+				"correctAnswer": "O Linfonodo Sentinela é o primeiro linfonodo a receber a drenagem linfática do tumor. Se ele estiver livre de câncer (negativo na biópsia por congelamento), a chance de outros linfonodos estarem comprometidos é mínima, permitindo poupar a paciente do esvaziamento axilar radical, evitando complicações como o linfedema (braço inchado).",
+				"keywords": ["Linfonodo Sentinela", "Linfedema"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 366,
+		"title": "Subtipos Moleculares e Personalização da Terapia Sistêmica",
+		"vignette": "Uma paciente de 62 anos, com diagnóstico de Carcinoma Ductal Invasor, apresenta receptores de estrogênio e progesterona fortemente positivos (90%) e HER2 negativo. O tumor mede 2 cm e a axila é negativa.",
+		"explanation": "A oncologia moderna é personalizada. Não tratamos apenas 'câncer de mama', tratamos o perfil biológico. O subtipo Luminal tem melhor prognóstico. O HER2 era muito agressivo, mas hoje tem tratamento alvo efetivo. O Triplo-Negativo permanece como o desafio biológico pela falta de alvos específicos e comportamento agressivo.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual o subtipo molecular desse tumor (classificação simplificada) e qual a principal modalidade de tratamento sistêmico indicada?",
+				"correctAnswer": "O subtipo é Luminal (A ou B). A principal modalidade é a Hormonioterapia (bloqueio hormonal), já que o crescimento do tumor é dependente de estrogênio.",
+				"keywords": ["Subtipo Luminal", "Hormonioterapia"],
+				"order": 1
+			},
+			{
+				"text": "Se essa mesma paciente apresentasse metástases ósseas, o tratamento teria intuito curativo ou paliativo? Qual a diferença fundamental de objetivo nesses dois cenários?",
+				"correctAnswer": "O intuito seria Paliativo. No câncer de mama, a presença de metástases à distância (estádio IV) geralmente indica que a doença não é mais passível de cura. O objetivo passa a ser o controle da progressão, melhora da qualidade de vida e aumento da sobrevida, mas não a eliminação total da doença.",
+				"keywords": ["Intuito paliativo vs. curativo"],
+				"order": 2
+			},
+			{
+				"text": "Por que pacientes com tumores 'Triplo-Negativos' não podem ser tratadas com bloqueio hormonal (como Tamoxifeno ou Anastrozol)?",
+				"correctAnswer": "Porque o tumor Triplo-Negativo não expressa os receptores de estrogênio e progesterona (e nem o HER2). Sem o receptor ('o alvo'), a droga ('a flecha') não tem onde agir, tornando o bloqueio hormonal totalmente ineficaz. Esses tumores dependem exclusivamente de quimioterapia citotóxica.",
+				"keywords": ["Triplo-negativo", "Terapia-alvo"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 367,
+		"title": "Diagnóstico Diferencial e Conduta no Tumor Filodes",
+		"vignette": "Uma paciente de 42 anos apresenta um nódulo na mama esquerda que surgiu há 4 meses e vem crescendo rapidamente. Ao exame, o nódulo é volumoso (6 cm), móvel, de consistência fibroelástica, sem sinais inflamatórios na pele ou linfonodos palpáveis. Ela trouxe uma biópsia de outro serviço que descreve: 'Proliferação bifásica de elementos epiteliais e estromais, com estroma apresentando alta celularidade e projeções em forma de folha'.",
+		"explanation": "O Tumor Filodes pode ser benigno, borderline ou maligno. O diagnóstico diferencial histológico com o fibroadenoma é difícil em biópsias por agulha (Core Biopsy), por isso o quadro clínico de **crescimento rápido** é o que deve acender o alerta para o médico.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico mais provável para essa lesão de crescimento rápido e aparência 'folheada'?",
+				"correctAnswer": "O diagnóstico mais provável é o **Tumor Filodes**. Ele é o principal diagnóstico diferencial do fibroadenoma, especialmente quando há crescimento rápido em mulheres com mais de 35-40 anos.",
+				"keywords": ["Crescimento rápido", "Projeções em folha"],
+				"order": 1
+			},
+			{
+				"text": "Esse tumor é considerado um tipo de carcinoma (epitelial) ou um sarcoma (estromal)? Qual a principal via de disseminação se ele for maligno?",
+				"correctAnswer": "O Tumor Filodes é um **tumor fibroepitelial**, mas seu componente de agressividade reside no **estroma** (tecido conjuntivo). Quando maligno, ele se comporta como um sarcoma, tendo como principal via de disseminação a **via hematogênica** (pulmão é o sítio mais comum), e não a via linfática. Por isso, raramente há linfonodos axilares comprometidos.",
+				"keywords": ["Disseminação hematogênica"],
+				"order": 2
+			},
+			{
+				"text": "Por que a simples enucleação (como se faz no fibroadenoma) não é recomendada para este caso?",
+				"correctAnswer": "Porque o Tumor Filodes tem uma alta taxa de **recidiva local** se não for retirado com uma **margem de segurança** (geralmente 1 cm). A enucleação simples (apenas retirar o nódulo da 'cápsula') deixa resíduos microscópicos que levam ao ressurgimento do tumor, muitas vezes mais agressivo que o original.",
+				"keywords": ["Margem de segurança"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 368,
+		"title": "Câncer de Mama Masculino: Diagnóstico e Genética",
+		"vignette": "Um homem de 68 anos procura atendimento por notar um nódulo endurecido atrás da aréola esquerda, indolor, associado a uma leve retração do mamilo. Ele nega uso de medicações hormonais.",
+		"explanation": "O câncer de mama masculino representa menos de 1% dos casos. O tratamento segue os princípios do câncer feminino (cirurgia, quimio e tamoxifeno, já que a maioria é receptor hormonal positivo), mas a mastectomia é quase sempre a regra devido à escassez de parênquima para cirurgia conservadora.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Diferencie clinicamente a Ginecomastia do Câncer de Mama Masculino com base na palpação.",
+				"correctAnswer": "A **Ginecomastia** costuma ser uma massa concêntrica, retroareolar, móvel e muitas vezes bilateral ou dolorosa. O **Câncer de Mama** no homem costuma ser uma massa **excêntrica** (fora do centro da aréola), endurecida, fixa, unilateral e frequentemente associada a alterações cutâneas (retração ou ulceração).",
+				"keywords": ["Massa excêntrica"],
+				"order": 1
+			},
+			{
+				"text": "Qual a mutação genética mais associada ao câncer de mama em homens?",
+				"correctAnswer": "Mutação no gene **BRCA2**. Homens com câncer de mama devem sempre ser encaminhados para aconselhamento genético.",
+				"keywords": ["BRCA2"],
+				"order": 2
+			},
+			{
+				"text": "O prognóstico do câncer de mama no homem costuma ser pior do que na mulher. Isso se deve a uma maior agressividade biológica do tumor masculino ou a outro fator clínico?",
+				"correctAnswer": "O pior prognóstico deve-se primordialmente ao **atraso no diagnóstico**. Como há pouco tecido mamário no homem, o tumor atinge a pele e os músculos peitorais muito mais rápido do que na mulher. Além disso, a falta de rastreamento e o estigma fazem com que o homem procure o médico em estádios muito avançados.",
+				"keywords": ["Diagnóstico tardio"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 369,
+		"title": "Importância do Status Axilar e Prognóstico Oncológico",
+		"vignette": "Durante a discussão de um caso clínico, um preceptor afirma: 'O tamanho do tumor é importante, mas o status da axila ainda é o fator isolado mais importante para o prognóstico de longo prazo nesta paciente'.",
+		"explanation": "O estadiamento TNM (Tumor, Node, Metastasis) é a linguagem universal da oncologia. No 3º e 4º ano, o aluno não precisa decorar cada subgrupo, mas deve entender que: **N positivo = maior risco sistêmico = maior indicação de quimioterapia adjuvante.**",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Por que o comprometimento linfonodal axilar é tão determinante no prognóstico do câncer de mama?",
+				"correctAnswer": "Porque a axila funciona como um 'filtro' e um sinalizador. A presença de células neoplásicas nos linfonodos indica que o tumor adquiriu capacidade de invasão e migração, aumentando drasticamente a probabilidade de **doença micrometastática sistêmica** (células circulantes que a quimioterapia tentará destruir).",
+				"keywords": ["Fator prognóstico isolado", "Doença micrometastática"],
+				"order": 1
+			},
+			{
+				"text": "Se uma paciente tem um tumor de 2 cm (T1) e 4 linfonodos positivos (N2), e outra tem um tumor de 6 cm (T3) e 0 linfonodos positivos (N0), qual delas, estatisticamente, tem maior risco de metástase à distância?",
+				"correctAnswer": "A paciente com **4 linfonodos positivos (N2)**. O status linfonodal pesa mais no estadiamento e no prognóstico do que o tamanho do tumor isoladamente. O acometimento axilar é o principal preditor de sobrevida livre de doença.",
+				"keywords": ["Fator prognóstico isolado"],
+				"order": 2
+			},
+			{
+				"text": "Qual o nome da síndrome dolorosa/neurológica comum após o esvaziamento axilar radical, causada pela lesão do nervo intercostobraquial?",
+				"correctAnswer": "**Síndrome de dor pós-mastectomia** ou parestesia da face interna do braço, por lesão ou manipulação do **nervo intercostobraquial**.",
+				"keywords": ["Nervo intercostobraquial"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 370,
+		"title": "Tríade Diagnóstica e Discordância Clínico-Radiológica",
+		"vignette": "Uma paciente de 45 anos apresenta um nódulo palpável no quadrante superior externo da mama direita. Ao exame físico, o nódulo é endurecido, de contornos imprecisos e apresenta mobilidade reduzida. Você solicita uma mamografia e uma ultrassonografia. O resultado da imagem é BI-RADS 2 (achados benignos - gordura e tecido glandular normal).",
+		"explanation": "Este é o erro mais comum do médico generalista: dar alta para uma paciente com nódulo palpável suspeito porque a mamografia veio normal. O BI-RADS só é 100% confiável para lesões não palpáveis (rastreamento). Se o nódulo é palpável, a investigação só para com a histopatologia.",
+		"status": "published",
+		"difficulty": "specialist",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "O que é o conceito de 'Tríade Diagnóstica' (ou Triple Assessment) e por que ele é aplicado neste caso?",
+				"correctAnswer": "A Tríade Diagnóstica consiste na correlação entre: 1. Exame Clínico, 2. Exame de Imagem e 3. Histopatologia/Citologia. O diagnóstico só é considerado sólido quando há concordância entre esses três pilares.",
+				"keywords": ["Triple Assessment (Tríade Diagnóstica)"],
+				"order": 1
+			},
+			{
+				"text": "Diante de um exame físico altamente suspeito ('clínica positiva'), mas com exames de imagem negativos, qual deve ser a conduta do médico?",
+				"correctAnswer": "A conduta é prosseguir com a investigação (biópsia). Um exame de imagem negativo não anula um exame físico suspeito. Existe a possibilidade de falsos-negativos na mamografia (especialmente em mamas densas ou tumores lobulares). O médico nunca deve ignorar a 'mão' em favor do 'laudo'.",
+				"keywords": [
+					"Discordância clínico-radiológica",
+					"Falso-negativo radiológico"
+				],
+				"order": 2
+			},
+			{
+				"text": "No caso de uma biópsia por agulha grossa (Core Biopsy) retornar como 'material insuficiente' ou 'inconclusivo' em um nódulo suspeito, qual o próximo passo?",
+				"correctAnswer": "Quando há discordância ou resultado inconclusivo na Core Biopsy em lesão suspeita, deve-se realizar uma Biópsia Excisional (cirúrgica), retirando toda a lesão para garantir que não houve erro de amostragem.",
+				"keywords": ["Biópsia Excisional"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 371,
+		"title": "Doença de Paget da Mama: Diagnóstico e Semiologia",
+		"vignette": "Uma paciente de 50 anos queixa-se de uma 'descamação' no mamilo esquerdo há 6 meses. Ela já usou pomadas de corticoide e antifúngicos por conta própria, sem melhora. Ao exame, você observa uma lesão eczematosa, com crostas, que começou no mamilo e se estende para a aréola. O mamilo apresenta uma leve erosão.",
+		"explanation": "A Doença de Paget é frequentemente subdiagnosticada como 'alergia' ou 'micose'. No 3º e 4º ano, o aluno deve aprender que: lesão de mamilo que não cicatriza em 2 semanas com medidas habituais exige biópsia. É uma forma de apresentação do câncer de mama que não necessariamente cursa com nódulo palpável.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual o diagnóstico principal que deve ser suspeitado e qual o sinal semiológico que diferencia essa patologia de um Eczema Mamário comum?",
+				"correctAnswer": "Doença de Paget da Mama. A principal diferença semiológica é que a Doença de Paget destrói a arquitetura do mamilo (erosão/ulceração) e é geralmente unilateral, enquanto o eczema costuma ser bilateral, preserva o mamilo e melhora com corticoides.",
+				"keywords": [
+					"Doença de Paget",
+					"Destruição do complexo aréolo-mamilar"
+				],
+				"order": 1
+			},
+			{
+				"text": "Qual a patologia mamária subjacente que geralmente está associada a esse achado cutâneo?",
+				"correctAnswer": "A Doença de Paget é a manifestação externa de um câncer de mama subjacente, geralmente um Carcinoma Ductal In Situ (CDIS) ou um Carcinoma Invasor que migrou pelos ductos até a epiderme do mamilo.",
+				"keywords": ["Lesão eczematosa unilateral"],
+				"order": 2
+			},
+			{
+				"text": "Como é feito o diagnóstico definitivo dessa lesão?",
+				"correctAnswer": "Através de uma biópsia de pele (Punch) do complexo aréolo-mamilar, que identificará as 'Células de Paget' (células malignas com citoplasma claro na epiderme).",
+				"keywords": ["Biópsia por Punch"],
+				"order": 3
+			}
+		]
+	},
+	{
+		"id": 372,
+		"title": "Cistos Mamários e Punção Aspirativa",
+		"vignette": "Uma paciente de 40 anos realiza ultrassonografia que revela uma imagem anecoica, arredondada, de paredes finas e com reforço acústico posterior, medindo 2,5 cm (compatível com Cisto Simples). Ela relata dor local.",
+		"explanation": "Cistos são as lesões mais comuns na pré-menopausa. O aluno deve diferenciar o cisto simples (água) do cisto complexo (carne + água). A PAAF é a ferramenta de escolha para cistos, enquanto a Core Biopsy é para nódulos sólidos.",
+		"status": "published",
+		"difficulty": "general_practitioner",
+		"mainImageUrl": null,
+		"tags": [
+			"ENAMED 4º Ano::Ginecologia e Obstetrícia::Ginecologia::Câncer de Mama"
+		],
+		"questions": [
+			{
+				"text": "Qual a diferença de manejo entre um Cisto Simples e um Cisto Complexo (com conteúdo sólido ou septos espessos) à ultrassonografia?",
+				"correctAnswer": "O Cisto Simples é BI-RADS 2 (benigno) e não exige conduta, exceto se houver dor. O Cisto Complexo (com áreas sólidas) é BI-RADS 4 e exige biópsia (Core Biopsy ou Punção dirigida), pois pode ser um carcinoma com componente cístico.",
+				"keywords": [
+					"Cisto simples vs. Complexo",
+					"Reforço acústico posterior"
+				],
+				"order": 1
+			},
+			{
+				"text": "Se o cisto for palpável e doloroso, qual o procedimento simples que pode ser feito no consultório para alívio e diagnóstico?",
+				"correctAnswer": "Punção Aspirativa por Agulha Fina (PAAF). É um procedimento tanto diagnóstico quanto terapêutico (esvaziamento do cisto).",
+				"keywords": ["PAAF (Punção Aspirativa por Agulha Fina)"],
+				"order": 2
+			},
+			{
+				"text": "Quais são os dois critérios que tornam o líquido aspirado do cisto 'suspeito', exigindo análise citológica e investigação adicional?",
+				"correctAnswer": "O líquido deve ser enviado para análise se for hemático (sanguinolento) ou se o cisto recidivar em curto período (geralmente após 2 ou 3 punções) ou se houver massa residual após a aspiração. Se o líquido for esverdeado, amarelado ou citrino, pode ser descartado.",
+				"keywords": ["Líquido hemático"],
+				"order": 3
+			}
+		]
+	}
+]
