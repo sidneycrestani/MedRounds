@@ -444,7 +444,7 @@
 				"order": 1
 			},
 			{
-				"text": "O que é o modelo de Acesso Avançado (Advanced Access) e como ele inverte a lógica do 'Trabalho de Hoje para Hoje'?",
+				"text": "O que é o modelo de Acesso Avançado (Advanced Access) e como ele inverte a lógica do agendamento tradicional?",
 				"correctAnswer": "O **Acesso Avançado** é um modelo onde a maior parte da agenda (ex: 60-80%) fica aberta para a **Demanda Espontânea**. O princípio é: 'Atenda hoje o paciente que ligou ou apareceu hoje'. Isso elimina as filas de espera e as consultas agendadas para meses depois (que geram absenteísmo alto), garantindo que o paciente veja o *seu* médico de família no momento em que ele mais precisa.",
 				"keywords": ["Acesso Avançado", "Demanda Espontânea vs. Programada"],
 				"order": 2
